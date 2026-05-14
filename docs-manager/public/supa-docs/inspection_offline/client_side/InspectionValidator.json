@@ -1,0 +1,164 @@
+{
+  "Inspection": {
+    "Id": {
+      "IdNotExisted": {
+        "en": "Object does not exist.",
+        "id": "Objek tidak ditemukan.",
+        "vi": "Đối tượng không tồn tại."
+      }
+    },
+    "InspectionEvaluationType": {
+      "InspectionEvaluationTypeEmpty": {
+        "en": "Cannot be empty.",
+        "id": "Tidak boleh kosong.",
+        "vi": "Không được để trống."
+      }
+    },
+    "ScheduleId": {
+      "DistanceTooFar": {
+        "en": "You are currently too far from the inspection site, please proceed closer within a radius of <strong>{Distance}</strong>.<br>Current distance to inspection site: <strong>{CurrentDistance}</strong>.",
+        "id": "Anda saat ini terlalu jauh dari lokasi inspeksi, silakan mendekat dalam radius <strong>{Distance}</strong>.<br>Jarak saat ini ke lokasi inspeksi: <strong>{CurrentDistance}</strong>.",
+        "vi": "Hiện tại bạn đang ở quá xa địa điểm cần thực hiện kiểm tra, hay tới gần hơn trong khoảng <strong>{Distance}</strong> để có thể thực hiện.<br>Khoảng cách hiện tại: <strong>{CurrentDistance}</strong>."
+      }
+    },
+    "AppUser": {
+      "AppUserEmpty": {
+        "en": "Cannot be empty.",
+        "id": "Tidak boleh kosong.",
+        "vi": "Không được để trống."
+      },
+      "AppUserNotExisted": {
+        "en": "AppUser does not exist.",
+        "id": "Pengguna tidak ditemukan.",
+        "vi": "AppUser không tồn tại."
+      }
+    },
+    "Date": {
+      "DateEmpty": {
+        "en": "Cannot be empty.",
+        "id": "Tidak boleh kosong.",
+        "vi": "Không được để trống."
+      },
+      "DateNotExisted": {
+        "en": "Date does not exist.",
+        "id": "Tanggal tidak ditemukan.",
+        "vi": "Date không tồn tại."
+      }
+    },
+    "Questionnaire": {
+      "ObjectUsed": {
+        "en": "Object has been used.",
+        "id": "Objek sudah digunakan.",
+        "vi": "Đối tượng đã được sử dụng."
+      },
+      "QuestionnaireEmpty": {
+        "en": "Cannot be empty.",
+        "id": "Tidak boleh kosong.",
+        "vi": "Không được để trống."
+      },
+      "QuestionnaireNotExisted": {
+        "en": "Questionnaire does not exist.",
+        "id": "Kuesioner tidak ditemukan.",
+        "vi": "Questionnaire không tồn tại."
+      }
+    },
+    "Site": {
+      "SiteEmpty": {
+        "en": "Cannot be empty.",
+        "id": "Tidak boleh kosong.",
+        "vi": "Không được để trống."
+      },
+      "SiteNotExisted": {
+        "en": "This location does not exist or is no longer in service. Please verify the information.",
+        "id": "Lokasi ini tidak ada atau tidak lagi beroperasi. Silakan verifikasi informasinya.",
+        "vi": "Địa điểm không tồn tại hoặc ngừng hoạt động, vui lòng kiểm tra lại."
+      }
+    },
+    "TimeUnit": {
+      "TimeUnitEmpty": {
+        "en": "Cannot be empty.",
+        "id": "Tidak boleh kosong.",
+        "vi": "Không được để trống."
+      },
+      "TimeUnitNotExisted": {
+        "en": "TimeUnit does not exist.",
+        "id": "Satuan waktu tidak ditemukan.",
+        "vi": "TimeUnit không tồn tại."
+      }
+    },
+    "RejectionReason": {
+      "RejectionReasonNotEmpty": {
+        "en": "Rejection reason cannot be empty.",
+        "id": "Alasan penolakan tidak boleh kosong.",
+        "vi": "Lý do từ chối không được bỏ trống."
+      }
+    },
+    "InspectionPage": {
+      "Id": {
+        "InspectionPageHasError": {
+          "en": "Page {page} has errors",
+          "id": "Halaman {page} memiliki kesalahan",
+          "vi": "Trang {page} có lỗi"
+        }
+      },
+      "InspectionQuestion": {
+        "Id": {
+          "InspectionQuestionAnswer_QuestionNotAnswered": {
+            "en": "Question {question} on page {page} has not been answered.",
+            "id": "Pertanyaan {question} pada halaman {page} belum dijawab.",
+            "vi": "Câu hỏi {question} tại page {page} chưa được trả lời."
+          },
+          "InspectionQuestionAnswer_RequireAction": {
+            "en": "You're required create a task assignment.",
+            "id": "Anda harus membuat penugasan tugas.",
+            "vi": "Bạn được yêu cầu thêm công việc."
+          },
+          "InspectionQuestionAnswer_RequireEvidenceNote": {
+            "en": "You're required to add notes.",
+            "id": "Anda harus menambahkan catatan.",
+            "vi": "Bạn được yêu cầu thêm ghi chú."
+          },
+          "InspectionQuestionAnswer_RequireEvidenceAttachment": {
+            "en": "You are required to add an image/video or attachment.",
+            "id": "Anda diwajibkan menambahkan gambar/video atau lampiran.",
+            "vi": "Bạn được yêu cầu thêm ảnh/video hoặc tệp đính kèm."
+          },
+          "InspectionQuestionAnswer_RequireEvidenceAttachmentAndNote": {
+            "en": "You're required to add notes, media.",
+            "id": "Anda harus menambahkan catatan, media.",
+            "vi": "Bạn được yêu cầu thêm tệp đính kèm, ghi chú."
+          }
+        },
+        "InspectionQuestion": {
+          "Id": {
+            "InspectionQuestionAnswer_QuestionNotAnswered": {
+              "en": "Question {question} on page {page} has not been answered.",
+              "id": "Pertanyaan {question} pada halaman {page} belum dijawab.",
+              "vi": "Câu hỏi {question} tại page {page} chưa được trả lời."
+            },
+            "InspectionQuestionAnswer_RequireAction": {
+              "en": "You're required create a task assignment.",
+              "id": "Anda harus membuat penugasan tugas.",
+              "vi": "Bạn được yêu cầu thêm công việc."
+            },
+            "InspectionQuestionAnswer_RequireEvidenceNote": {
+              "en": "You're required to add notes.",
+              "id": "Anda harus menambahkan catatan.",
+              "vi": "Bạn được yêu cầu thêm ghi chú."
+            },
+            "InspectionQuestionAnswer_RequireEvidenceAttachment": {
+              "en": "You are required to add an image/video or attachment.",
+              "id": "Anda diwajibkan menambahkan gambar/video atau lampiran.",
+              "vi": "Bạn được yêu cầu thêm ảnh/video hoặc tệp đính kèm."
+            },
+            "InspectionQuestionAnswer_RequireEvidenceAttachmentAndNote": {
+              "en": "You're required to add notes, media.",
+              "id": "Anda harus menambahkan catatan, media.",
+              "vi": "Bạn được yêu cầu thêm tệp đính kèm, ghi chú."
+            }
+          }
+        }
+      }
+    }
+  }
+}

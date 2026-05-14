@@ -1,0 +1,129 @@
+.doc-viewer-container {
+  padding: 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.doc-viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 12px !important;
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+/* Markdown styles */
+.markdown-body {
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3,
+.markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  color: #fff;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  font-family: 'Outfit', sans-serif;
+}
+
+.markdown-body h1 { font-size: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px; }
+.markdown-body h2 { font-size: 1.5rem; }
+.markdown-body h3 { font-size: 1.2rem; color: #60a5fa; }
+
+.markdown-body p { margin-bottom: 1em; }
+
+.markdown-body code {
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.88em;
+  color: #93c5fd;
+  font-family: monospace;
+}
+
+.markdown-body pre {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #e2e8f0;
+  font-size: 0.9em;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 16px;
+  color: rgba(255,255,255,0.5);
+  margin: 1.2em 0;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.markdown-body th {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+  font-weight: 600;
+}
+
+.markdown-body td {
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.markdown-body tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+.markdown-body ul, .markdown-body ol {
+  padding-left: 24px;
+  margin-bottom: 1em;
+}
+
+.markdown-body li { margin-bottom: 4px; }
+
+.markdown-body a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 12px;
+}

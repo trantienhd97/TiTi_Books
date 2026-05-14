@@ -3,6 +3,8 @@ import { Layout, ConfigProvider, theme } from 'antd';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { Dashboard } from './components/Dashboard/Dashboard';
 import { SupaDocs } from './components/SupaDocs/SupaDocs';
+import { SupaFolderView } from './components/SupaFolderView/SupaFolderView';
+import { DocViewer } from './components/DocViewer/DocViewer';
 import './App.css';
 
 const { Content } = Layout;
@@ -27,6 +29,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/supa" element={<SupaDocs />} />
+                <Route path="/supa/:folderId" element={<SupaFolderView />} />
+                <Route path="/supa/:folderId/doc" element={<DocViewer />} />
               </Routes>
             </Content>
           </Layout>
