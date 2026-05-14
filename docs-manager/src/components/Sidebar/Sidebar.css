@@ -1,0 +1,47 @@
+.app-sidebar {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.ant-menu-item {
+  margin: 8px 16px !important;
+  width: calc(100% - 32px) !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  border-radius: 12px !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ant-menu-item .anticon {
+  font-size: 20px;
+}

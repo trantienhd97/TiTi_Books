@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "title": "My Docs Manager",
+    "welcome": "Welcome to your personal documentation hub",
+    "sections": {
+      "docs": "Documentation",
+      "supa": "Supa Project",
+      "projects": "Other Projects",
+      "personal": "Personal Notes"
+    },
+    "cards": {
+      "docs_desc": "Manage and view all your general documentation sites.",
+      "supa_desc": "Access the Supa project documentation and resources.",
+      "open": "Open Now",
+      "last_updated": "Last updated"
+    }
+  },
+  "sidebar": {
+    "home": "Home",
+    "all_docs": "All Docs",
+    "settings": "Settings"
+  }
+}
