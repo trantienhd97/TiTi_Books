@@ -1,0 +1,562 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hướng dẫn kiểm tra GA4 Analytics - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#huong-dan-kiem-tra-ga4-analytics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hướng dẫn kiểm tra GA4 Analytics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="huong-dan-kiem-tra-ga4-analytics">Hướng dẫn kiểm tra GA4 Analytics<a class="headerlink" href="#huong-dan-kiem-tra-ga4-analytics" title="Permanent link">&para;</a></h1>
+<h2 id="quan-trong-automatic-screen-tracking-a-bi-tat">⚠️ QUAN TRỌNG: Automatic Screen Tracking đã bị TẮT<a class="headerlink" href="#quan-trong-automatic-screen-tracking-a-bi-tat" title="Permanent link">&para;</a></h2>
+<p>App đã <strong>TẮT automatic screen tracking</strong> từ native platform và <strong>CHỈ dùng manual tracking từ Flutter</strong>.</p>
+<h3 id="ly-do">Lý do:<a class="headerlink" href="#ly-do" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Native automatic tracking ghi nhận tên class (FlutterViewController, MainActivity) thay vì route paths</li>
+<li>Manual tracking từ Flutter cung cấp tên màn hình có ý nghĩa hơn (như <code>/work-new/inspection/list</code>)</li>
+</ul>
+<h3 id="cau-hinh-a-them">Cấu hình đã thêm:<a class="headerlink" href="#cau-hinh-a-them" title="Permanent link">&para;</a></h3>
+<p><strong>iOS (Info.plist):</strong></p>
+<pre><code class="language-xml">&lt;key&gt;FirebaseAutomaticScreenReportingEnabled&lt;/key&gt;
+&lt;false/&gt;
+</code></pre>
+<p><strong>Android (AndroidManifest.xml):</strong></p>
+<pre><code class="language-xml">&lt;meta-data
+    android:name=&quot;google_analytics_automatic_screen_reporting_enabled&quot;
+    android:value=&quot;false&quot; /&gt;
+</code></pre>
+<h2 id="tong-quan">Tổng quan<a class="headerlink" href="#tong-quan" title="Permanent link">&para;</a></h2>
+<p>App đã được tích hợp Firebase Analytics (GA4) tự động cho tất cả màn hình thông qua <code>GA4AnalyticsObserver</code>.</p>
+<h2 id="cach-hoat-ong">Cách hoạt động<a class="headerlink" href="#cach-hoat-ong" title="Permanent link">&para;</a></h2>
+<h3 id="1-tu-ong-tracking">1. Tự động tracking<a class="headerlink" href="#1-tu-ong-tracking" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>GA4AnalyticsObserver</strong> được thêm vào <code>routerObservers</code> trong <code>create_router_config.dart</code></li>
+<li>Tự động log mỗi khi:</li>
+<li>Push màn hình mới (<code>didPush</code>)</li>
+<li>Thay thế màn hình (<code>didReplace</code>)</li>
+<li>Pop về màn hình trước (<code>didPop</code>)</li>
+</ul>
+<h3 id="2-screen-name">2. Screen name<a class="headerlink" href="#2-screen-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lấy từ <code>route.settings.name</code> (= path của GoRouter)</li>
+<li>Ví dụ: <code>/work-new/inspection/detail/:id</code></li>
+<li>Skip route <code>/</code> (redirect route)</li>
+</ul>
+<h3 id="3-cau-hinh">3. Cấu hình<a class="headerlink" href="#3-cau-hinh" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">GA4AnalyticsObserver({
+  FirebaseAnalytics? analytics,
+  this.verboseLogging = true, // Bật log chi tiết
+})
+</code></pre>
+<h2 id="kiem-tra-ga4-trong-dev-mode">Kiểm tra GA4 trong Dev Mode<a class="headerlink" href="#kiem-tra-ga4-trong-dev-mode" title="Permanent link">&para;</a></h2>
+<h3 id="1-xem-logs-trong-console">1. Xem logs trong Console<a class="headerlink" href="#1-xem-logs-trong-console" title="Permanent link">&para;</a></h3>
+<p>Khi chạy app ở debug mode, bạn sẽ thấy các log sau:</p>
+<pre><code>✅ [GA4] Analytics collection enabled
+📊 [GA4] Screen view logged: /work-new/inspection/list
+📊 [GA4] Screen view logged: /work-new/inspection/detail/123
+⚠️ [GA4] Failed to log screen view &quot;/some/path&quot;: &lt;error&gt;
+</code></pre>
+<h3 id="2-kiem-tra-trong-firebase-console">2. Kiểm tra trong Firebase Console<a class="headerlink" href="#2-kiem-tra-trong-firebase-console" title="Permanent link">&para;</a></h3>
+<h4 id="buoc-1-bat-debug-view">Bước 1: Bật Debug View<a class="headerlink" href="#buoc-1-bat-debug-view" title="Permanent link">&para;</a></h4>
+<p><strong>iOS:</strong></p>
+<pre><code class="language-bash"># Enable debug mode
+adb shell setprop debug.firebase.analytics.app com.supabase.app
+
+# Hoặc thêm vào schema arguments trong Xcode:
+-FIRDebugEnabled
+</code></pre>
+<p><strong>Android:</strong></p>
+<pre><code class="language-bash"># Enable debug mode
+adb shell setprop debug.firebase.analytics.app com.supabase.app
+
+# Disable debug mode
+adb shell setprop debug.firebase.analytics.app .none.
+</code></pre>
+<h4 id="buoc-2-truy-cap-firebase-console">Bước 2: Truy cập Firebase Console<a class="headerlink" href="#buoc-2-truy-cap-firebase-console" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Vào <a href="https://console.firebase.google.com/">Firebase Console</a></li>
+<li>Chọn project: <strong>truesight-cloud-apps</strong></li>
+<li>Vào <strong>Analytics</strong> &gt; <strong>DebugView</strong></li>
+<li>Chạy app trên thiết bị/emulator</li>
+<li>Bạn sẽ thấy events realtime:</li>
+<li><code>screen_view</code> events</li>
+<li><code>screen_name</code> parameter</li>
+<li><code>screen_class</code> = "FlutterPage"</li>
+</ol>
+<h3 id="3-xac-minh-tat-ca-routes-uoc-track">3. Xác minh tất cả routes được track<a class="headerlink" href="#3-xac-minh-tat-ca-routes-uoc-track" title="Permanent link">&para;</a></h3>
+<h4 id="tong-so-routes-trong-he-thong-204-routes">Tổng số routes trong hệ thống: ~204 routes<a class="headerlink" href="#tong-so-routes-trong-he-thong-204-routes" title="Permanent link">&para;</a></h4>
+<p><strong>Modules chính:</strong></p>
+<ul>
+<li><code>/work-new/*</code> - Supa Work (68+ routes)</li>
+<li><code>/training/*</code> - Supa Training (25+ routes)</li>
+<li><code>/bibs/*</code> - Supa Bibs (14+ routes)</li>
+<li><code>/communication/*</code> - Supa Communication (12+ routes)</li>
+<li><code>/spend/*</code> - Supa Spend (21+ routes)</li>
+<li><code>/serving/*</code> - Supa Serving (14+ routes)</li>
+<li><code>/attendance/*</code> - Supa Attendance (17+ routes)</li>
+<li><code>/project/*</code> - Supa Project (20+ routes)</li>
+</ul>
+<h2 id="kiem-tra-trong-production">Kiểm tra trong Production<a class="headerlink" href="#kiem-tra-trong-production" title="Permanent link">&para;</a></h2>
+<h3 id="1-firebase-console-realtime-view">1. Firebase Console - Realtime View<a class="headerlink" href="#1-firebase-console-realtime-view" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Analytics</strong> &gt; <strong>Realtime</strong></li>
+<li>Xem số users đang active</li>
+<li>Xem screens hiện tại</li>
+</ol>
+<h3 id="2-firebase-console-events">2. Firebase Console - Events<a class="headerlink" href="#2-firebase-console-events" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Analytics</strong> &gt; <strong>Events</strong></li>
+<li>Tìm event: <code>screen_view</code></li>
+<li>Xem số lượng events trong 30 ngày qua</li>
+<li>Xem breakdown theo <code>screen_name</code></li>
+</ol>
+<h3 id="3-bigquery-neu-a-enable">3. BigQuery (nếu đã enable)<a class="headerlink" href="#3-bigquery-neu-a-enable" title="Permanent link">&para;</a></h3>
+<pre><code class="language-sql">SELECT
+  event_name,
+  user_pseudo_id,
+  event_timestamp,
+  (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'screen_name') as screen_name,
+  (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'screen_class') as screen_class
+FROM `truesight-cloud-apps.analytics_XXXXXX.events_*`
+WHERE event_name = 'screen_view'
+  AND _TABLE_SUFFIX BETWEEN FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY))
+  AND FORMAT_DATE('%Y%m%d', CURRENT_DATE())
+ORDER BY event_timestamp DESC
+LIMIT 100
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="van-e-khong-thay-events-trong-firebase-console">Vấn đề: Không thấy events trong Firebase Console<a class="headerlink" href="#van-e-khong-thay-events-trong-firebase-console" title="Permanent link">&para;</a></h3>
+<p><strong>Giải pháp:</strong></p>
+<ol>
+<li>Kiểm tra Firebase có được khởi tạo:</li>
+</ol>
+<p><code>dart
+   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);</code></p>
+<ol>
+<li>Kiểm tra Analytics collection đã enable:</li>
+</ol>
+<p><code>dart
+   await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);</code></p>
+<p>✅ Code đã tự động enable trong <code>GA4AnalyticsObserver._initialize()</code></p>
+<ol>
+<li>Kiểm tra logs trong console:</li>
+<li>✅ <code>[GA4] Analytics collection enabled</code></li>
+<li>⚠️ Nếu thấy error, xem chi tiết lỗi</li>
+</ol>
+<h3 id="van-e-events-bi-delay">Vấn đề: Events bị delay<a class="headerlink" href="#van-e-events-bi-delay" title="Permanent link">&para;</a></h3>
+<p><strong>Lý do:</strong></p>
+<ul>
+<li>Firebase Analytics gửi events theo batch (không realtime)</li>
+<li>Debug view: realtime</li>
+<li>Events view: delay 24-48h</li>
+</ul>
+<p><strong>Giải pháp:</strong></p>
+<ul>
+<li>Dùng DebugView để test realtime</li>
+<li>Đợi 24-48h để xem data trong Events</li>
+</ul>
+<h3 id="van-e-thieu-screen_view-events">Vấn đề: Thiếu screen_view events<a class="headerlink" href="#van-e-thieu-screen_view-events" title="Permanent link">&para;</a></h3>
+<p><strong>Kiểm tra:</strong></p>
+<ol>
+<li>Route có path name không?</li>
+</ol>
+<p><code>dart
+   GoRoute(
+     path: '/some/path', // ✅ Có path
+     builder: ...
+   )</code></p>
+<ol>
+<li>Route có bị skip không?</li>
+</ol>
+<p><code>dart
+   if (name == '/') return null; // ❌ Root route bị skip</code></p>
+<ol>
+<li>Check logs:
+   <code>📊 [GA4] Screen view logged: /some/path</code></li>
+</ol>
+<h2 id="tuy-chinh">Tùy chỉnh<a class="headerlink" href="#tuy-chinh" title="Permanent link">&para;</a></h2>
+<h3 id="tat-verbose-logging-trong-production">Tắt verbose logging trong production<a class="headerlink" href="#tat-verbose-logging-trong-production" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// In create_router_config.dart
+final routerObservers = observers ?? [
+  SupaRouterObserver(),
+  GA4AnalyticsObserver(
+    verboseLogging: kDebugMode, // Chỉ log trong debug mode
+  ),
+];
+</code></pre>
+<h3 id="them-custom-parameters">Thêm custom parameters<a class="headerlink" href="#them-custom-parameters" title="Permanent link">&para;</a></h3>
+<p>Nếu cần thêm parameters cho screen_view:</p>
+<pre><code class="language-dart">Future&lt;void&gt; _sendScreenView(Route&lt;dynamic&gt; route) async {
+  // ... existing code ...
+
+  await _analytics.logEvent(
+    name: 'screen_view',
+    parameters: {
+      'screen_name': screenName,
+      'screen_class': 'FlutterPage',
+      'firebase_screen': screenName,
+      'firebase_screen_class': 'FlutterPage',
+      // Add custom params here
+      'app_version': packageInfo.version,
+      'build_number': packageInfo.buildNumber,
+    },
+  );
+}
+</code></pre>
+<h2 id="thong-ke-hien-tai">Thống kê hiện tại<a class="headerlink" href="#thong-ke-hien-tai" title="Permanent link">&para;</a></h2>
+<ul>
+<li>✅ <strong>204+ routes</strong> đã được config</li>
+<li>✅ <strong>Tất cả routes tự động tracked</strong> via NavigatorObserver</li>
+<li>✅ <strong>Analytics collection enabled</strong> mặc định</li>
+<li>✅ <strong>Debug logs</strong> để verify</li>
+<li>✅ <strong>Error handling</strong> khi log fail</li>
+</ul>
+<h2 id="links-tham-khao">Links tham khảo<a class="headerlink" href="#links-tham-khao" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://firebase.google.com/docs/analytics/events">Firebase Analytics Events</a></li>
+<li><a href="https://firebase.google.com/docs/analytics/debugview">Debug View</a></li>
+<li><a href="https://firebase.google.com/docs/analytics/screenviews">Screen View Event</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

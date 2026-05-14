@@ -1,0 +1,794 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Quy tắc Styling - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quy-tac-styling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quy tắc Styling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quy-tac-styling">Quy tắc Styling<a class="headerlink" href="#quy-tac-styling" title="Permanent link">&para;</a></h1>
+<p>Tài liệu này mô tả các quy tắc styling cho dự án SupaMobileApp, bao gồm thông tin về kích thước font, border radius, màu sắc, spacing và typography.</p>
+<p>Các quy tắc styling được định nghĩa trong thư mục <code>packages/supa_foundation/lib/theme</code>.</p>
+<h2 id="typography">Typography<a class="headerlink" href="#typography" title="Permanent link">&para;</a></h2>
+<h3 id="kich-thuoc-font">Kích thước Font<a class="headerlink" href="#kich-thuoc-font" title="Permanent link">&para;</a></h3>
+<p>Ứng dụng sử dụng một bộ kích thước font được định nghĩa trước, được định nghĩa trong class <code>FontSize</code> tại <code>packages/supa_foundation/lib/theme/theme.dart</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Kích thước</th>
+<th>Cách sử dụng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xSmall</code></td>
+<td>10.0</td>
+<td>Badge text, nhãn nhỏ</td>
+</tr>
+<tr>
+<td><code>small</code></td>
+<td>12.0</td>
+<td>Text phụ, chú thích</td>
+</tr>
+<tr>
+<td><code>medium</code></td>
+<td>14.0</td>
+<td>Body text, list items</td>
+</tr>
+<tr>
+<td><code>large</code></td>
+<td>16.0</td>
+<td>Primary body text</td>
+</tr>
+<tr>
+<td><code>xLarge</code></td>
+<td>18.0</td>
+<td>App bar titles, section headers</td>
+</tr>
+<tr>
+<td><code>xxLarge</code></td>
+<td>20.0</td>
+<td>Page titles</td>
+</tr>
+<tr>
+<td><code>xxxLarge</code></td>
+<td>22.0</td>
+<td>Large headings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="font-weights">Font Weights<a class="headerlink" href="#font-weights" title="Permanent link">&para;</a></h3>
+<p>Ứng dụng sử dụng font weights chuẩn của Material:</p>
+<ul>
+<li><code>FontWeight.w400</code> (normal) - Mặc định cho body text</li>
+<li><code>FontWeight.w500</code> (medium) - Selected items, text được nhấn mạnh</li>
+<li><code>FontWeight.w600</code> (semi-bold) - Titles, headers, nhãn quan trọng</li>
+</ul>
+<h3 id="text-styles">Text Styles<a class="headerlink" href="#text-styles" title="Permanent link">&para;</a></h3>
+<p>Các text styles chuẩn có sẵn thông qua <code>Theme.of(context).textTheme</code>:</p>
+<ul>
+<li><code>labelSmall</code> - Nhãn nhỏ (10-12px)</li>
+<li><code>labelMedium</code> - Nhãn trung bình (12-14px)</li>
+<li><code>labelLarge</code> - Nhãn lớn (14-16px), dùng cho app bar titles</li>
+<li><code>bodySmall</code> - Body text nhỏ (12px)</li>
+<li><code>bodyMedium</code> - Body text trung bình (14px), mặc định cho hầu hết nội dung</li>
+<li><code>bodyLarge</code> - Body text lớn (16px)</li>
+<li><code>titleSmall</code> - Tiêu đề nhỏ (14px)</li>
+<li><code>titleMedium</code> - Tiêu đề trung bình (16px)</li>
+<li><code>titleLarge</code> - Tiêu đề lớn (20-22px)</li>
+</ul>
+<h2 id="spacing">Spacing<a class="headerlink" href="#spacing" title="Permanent link">&para;</a></h2>
+<p>Ứng dụng sử dụng hệ thống spacing grid 8px để đảm bảo khoảng cách layout nhất quán.</p>
+<h3 id="gia-tri-spacing-thuong-dung">Giá trị Spacing thường dùng<a class="headerlink" href="#gia-tri-spacing-thuong-dung" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Giá trị</th>
+<th>Cách sử dụng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4px</td>
+<td>Khoảng cách chặt giữa các phần tử liên quan</td>
+</tr>
+<tr>
+<td>8px</td>
+<td>Khoảng cách chuẩn giữa các phần tử</td>
+</tr>
+<tr>
+<td>12px</td>
+<td>Padding cho các components nhỏ</td>
+</tr>
+<tr>
+<td>16px</td>
+<td>Padding chuẩn, khoảng cách giữa các sections</td>
+</tr>
+<tr>
+<td>24px</td>
+<td>Khoảng cách lớn, margins của sections</td>
+</tr>
+<tr>
+<td>32px</td>
+<td>Khoảng cách rất lớn, margins của pages</td>
+</tr>
+</tbody>
+</table>
+<h3 id="component-padding">Component Padding<a class="headerlink" href="#component-padding" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>List Tiles</strong>: 16px ngang, 0px dọc (minVerticalPadding: 16px)</li>
+<li><strong>Cards</strong>: 8px margin tất cả các phía</li>
+<li><strong>Chips</strong>: 8px ngang, 4px dọc</li>
+<li><strong>Buttons</strong>: Thay đổi theo loại button (xem Button Styles)</li>
+<li><strong>Input Fields</strong>: 12px padding dưới, padding trái thay đổi</li>
+</ul>
+<h2 id="border-radius">Border Radius<a class="headerlink" href="#border-radius" title="Permanent link">&para;</a></h2>
+<p>Border radius chuẩn được sử dụng trong toàn bộ ứng dụng để đảm bảo giao diện nhất quán.</p>
+<ul>
+<li><strong>Standard Border Radius:</strong> 8px (dùng cho cards, buttons, input fields, bottom sheets)</li>
+<li><strong>Chip Border Radius:</strong> 28px (chips tròn)</li>
+<li><strong>Badge Border Radius:</strong> 10px</li>
+</ul>
+<p>Các giá trị này được định nghĩa trong <code>SupaThemeExtension</code> tại <code>packages/supa_foundation/lib/theme/supa_theme_extension.dart</code>.</p>
+<h2 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">&para;</a></h2>
+<p>Ứng dụng sử dụng <code>ColorScheme</code> chuẩn của Material và mở rộng với một color scheme tùy chỉnh gọi là <code>SupaExtendedColorScheme</code>. Điều này cho phép một bảng màu nhất quán trong toàn bộ ứng dụng.</p>
+<p>Color scheme được cấu hình trong method <code>withValues</code> của <code>SupaThemeExtension</code>.</p>
+<h3 id="material-colorscheme">Material ColorScheme<a class="headerlink" href="#material-colorscheme" title="Permanent link">&para;</a></h3>
+<p>Ứng dụng sử dụng Material 3 color schemes với các biến thể light và dark. Các màu chính bao gồm:</p>
+<ul>
+<li><strong>Primary</strong>: <code>#6D14E0</code> (light) / <code>#D4BBFF</code> (dark) - Màu brand chính</li>
+<li><strong>Secondary</strong>: <code>#5C00C4</code> (light) / <code>#F6EEFF</code> (dark) - Các hành động phụ</li>
+<li><strong>Tertiary</strong>: <code>#71585D</code> (light) / <code>#FFFFFF</code> (dark) - Màu accent</li>
+<li><strong>Error</strong>: <code>#BA1A1A</code> (light) / <code>#FFB4AB</code> (dark) - Trạng thái lỗi</li>
+<li><strong>Surface</strong>: <code>#FCF8F8</code> (light) / <code>#262628</code> (dark) - Background surfaces</li>
+</ul>
+<h3 id="supaextendedcolorscheme">SupaExtendedColorScheme<a class="headerlink" href="#supaextendedcolorscheme" title="Permanent link">&para;</a></h3>
+<p>Extended color scheme cung cấp thêm các màu semantic cho status indicators, tags, và thông báo thông tin.</p>
+<h4 id="status-colors">Status Colors<a class="headerlink" href="#status-colors" title="Permanent link">&para;</a></h4>
+<p>Mỗi status color có ba biến thể: text, background, và border.</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Text Color</th>
+<th>Background Color</th>
+<th>Border Color</th>
+<th>Cách sử dụng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Warning</strong></td>
+<td><code>#FAAD14</code></td>
+<td><code>#FFFBE6</code></td>
+<td><code>#FFE58F</code></td>
+<td>Thông báo cảnh báo, alerts</td>
+</tr>
+<tr>
+<td><strong>Information</strong></td>
+<td><code>#1677FF</code></td>
+<td><code>#E6F4FF</code></td>
+<td><code>#91CAFF</code></td>
+<td>Thông báo thông tin</td>
+</tr>
+<tr>
+<td><strong>Success</strong></td>
+<td><code>#52C41A</code></td>
+<td><code>#F6FFED</code></td>
+<td><code>#B7EB8F</code></td>
+<td>Thông báo thành công, xác nhận</td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td><code>#FF4D4F</code></td>
+<td><code>#FFF2F0</code></td>
+<td><code>#FFCCC7</code></td>
+<td>Thông báo lỗi, lỗi validation</td>
+</tr>
+<tr>
+<td><strong>Default</strong></td>
+<td><code>#000000</code></td>
+<td><code>#F0F0F0</code></td>
+<td><code>#D9D9D9</code></td>
+<td>Trạng thái mặc định/trung tính</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tag-colors">Tag Colors<a class="headerlink" href="#tag-colors" title="Permanent link">&para;</a></h4>
+<p>Tag colors được sử dụng để phân loại và gắn nhãn nội dung. Mỗi tag color có các biến thể text, background, và border.</p>
+<table>
+<thead>
+<tr>
+<th>Tag Color</th>
+<th>Text</th>
+<th>Background</th>
+<th>Border</th>
+<th>Cách sử dụng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blue</strong></td>
+<td><code>#1668DC</code></td>
+<td><code>#E6F4FF</code></td>
+<td><code>#91CAFF</code></td>
+<td>Tags chung</td>
+</tr>
+<tr>
+<td><strong>Cyan</strong></td>
+<td><code>#13A8A8</code></td>
+<td><code>#E6FFFB</code></td>
+<td><code>#87E8DE</code></td>
+<td>Tags phụ</td>
+</tr>
+<tr>
+<td><strong>Geekblue</strong></td>
+<td><code>#2B4ACB</code></td>
+<td><code>#F0F5FF</code></td>
+<td><code>#ADC6FF</code></td>
+<td>Tags kỹ thuật</td>
+</tr>
+<tr>
+<td><strong>Gold</strong></td>
+<td><code>#D89614</code></td>
+<td><code>#FFFBE6</code></td>
+<td><code>#FFD666</code></td>
+<td>Tags premium/ưu tiên</td>
+</tr>
+<tr>
+<td><strong>Green</strong></td>
+<td><code>#49AA19</code></td>
+<td><code>#F6FFED</code></td>
+<td><code>#B7EB8F</code></td>
+<td>Tags tích cực/đã duyệt</td>
+</tr>
+<tr>
+<td><strong>Lime</strong></td>
+<td><code>#8BBB11</code></td>
+<td><code>#FCFFE6</code></td>
+<td><code>#EAFF8F</code></td>
+<td>Tags đang hoạt động</td>
+</tr>
+<tr>
+<td><strong>Magenta</strong></td>
+<td><code>#CB2B83</code></td>
+<td><code>#FFF0F6</code></td>
+<td><code>#FFADD2</code></td>
+<td>Tags đặc biệt</td>
+</tr>
+<tr>
+<td><strong>Orange</strong></td>
+<td><code>#D87A16</code></td>
+<td><code>#FFF7E6</code></td>
+<td><code>#FFD591</code></td>
+<td>Tags cảnh báo</td>
+</tr>
+<tr>
+<td><strong>Purple</strong></td>
+<td><code>#722ED1</code></td>
+<td><code>#F9F0FF</code></td>
+<td><code>#D3ADF7</code></td>
+<td>Tags danh mục</td>
+</tr>
+<tr>
+<td><strong>Red</strong></td>
+<td><code>#D32029</code></td>
+<td><code>#FFF2F0</code></td>
+<td><code>#FFCCC7</code></td>
+<td>Tags khẩn cấp/quan trọng</td>
+</tr>
+<tr>
+<td><strong>Volcano</strong></td>
+<td><code>#D84A1B</code></td>
+<td><code>#FFF2E8</code></td>
+<td><code>#FFBB96</code></td>
+<td>Tags nghiêm trọng</td>
+</tr>
+</tbody>
+</table>
+<h3 id="truy-cap-extended-colors">Truy cập Extended Colors<a class="headerlink" href="#truy-cap-extended-colors" title="Permanent link">&para;</a></h3>
+<p>Extended colors có thể được truy cập thông qua theme extension:</p>
+<pre><code class="language-dart">final theme = Theme.of(context);
+final extendedColors = theme.extension&lt;SupaExtendedColorScheme&gt;();
+
+// Truy cập status colors
+final warningColor = extendedColors?.warningText;
+final successBg = extendedColors?.successBackground;
+
+// Truy cập tag colors
+final blueTagText = extendedColors?.blueTagText;
+final greenTagBg = extendedColors?.greenTagBackground;
+</code></pre>
+<h2 id="component-styles">Component Styles<a class="headerlink" href="#component-styles" title="Permanent link">&para;</a></h2>
+<p><code>SupaThemeExtension</code> định nghĩa các styles mặc định cho các UI components khác nhau để đảm bảo giao diện nhất quán trong toàn bộ ứng dụng.</p>
+<h3 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h3>
+<h4 id="filled-buttons">Filled Buttons<a class="headerlink" href="#filled-buttons" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Border Radius</strong>: 8px</li>
+<li><strong>Shape</strong>: RoundedRectangleBorder</li>
+<li><strong>Alignment</strong>: Center</li>
+<li><strong>Background</strong>: Sử dụng <code>colorScheme.primary</code> theo mặc định</li>
+<li><strong>Types</strong>: primary, secondary, tertiary, danger, warning, success, info, primaryContainer, secondaryContainer, tertiaryContainer, errorContainer</li>
+</ul>
+<h4 id="outlined-buttons">Outlined Buttons<a class="headerlink" href="#outlined-buttons" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Border Radius</strong>: 8px</li>
+<li><strong>Border Width</strong>: 1px</li>
+<li><strong>Border Color</strong>: <code>colorScheme.primary</code></li>
+<li><strong>Shape</strong>: RoundedRectangleBorder</li>
+</ul>
+<h4 id="elevated-buttons">Elevated Buttons<a class="headerlink" href="#elevated-buttons" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Border Radius</strong>: 8px</li>
+<li><strong>Border Width</strong>: 1px</li>
+<li><strong>Border Color</strong>: <code>colorScheme.primary</code></li>
+<li><strong>Shape</strong>: RoundedRectangleBorder</li>
+</ul>
+<h3 id="chips">Chips<a class="headerlink" href="#chips" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Background</strong>: <code>colorScheme.surfaceContainerLowest</code></li>
+<li><strong>Padding</strong>: 8px ngang, 4px dọc</li>
+<li><strong>Border Radius</strong>: 28px (tròn)</li>
+<li><strong>Border</strong>: 1px solid với <code>borderColor</code> (outlineVariant với 16% opacity)</li>
+</ul>
+<h3 id="search-bars">Search Bars<a class="headerlink" href="#search-bars" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Background</strong>: <code>colorScheme.surfaceContainerLowest</code></li>
+<li><strong>Elevation</strong>: 0 (shadows tùy chỉnh được áp dụng)</li>
+<li><strong>Border Radius</strong>: 8px</li>
+<li><strong>Shape</strong>: RoundedRectangleBorder</li>
+</ul>
+<h3 id="list-tiles">List Tiles<a class="headerlink" href="#list-tiles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Min Vertical Padding</strong>: 16px</li>
+<li><strong>Content Padding</strong>: 16px ngang, 0px dọc</li>
+<li><strong>Border Radius</strong>: 0px (vuông)</li>
+<li><strong>Title Text Style</strong>: </li>
+<li>Font size: 14px</li>
+<li>Font weight: 400 (normal)</li>
+<li>Color: <code>colorScheme.onSurface</code></li>
+</ul>
+<h3 id="app-bars">App Bars<a class="headerlink" href="#app-bars" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Background</strong>: <code>colorScheme.surface</code></li>
+<li><strong>Foreground</strong>: <code>colorScheme.onSurface</code></li>
+<li><strong>Elevation</strong>: 0 (không có shadow)</li>
+<li><strong>Scrolled Under Elevation</strong>: 0</li>
+<li><strong>Center Title</strong>: true (mặc định)</li>
+<li><strong>Title Spacing</strong>: 4px</li>
+<li><strong>Title Text Style</strong>:</li>
+<li>Font size: 18px</li>
+<li>Font weight: 600 (semi-bold)</li>
+<li>Color: <code>colorScheme.onSurface</code></li>
+</ul>
+<h3 id="cards">Cards<a class="headerlink" href="#cards" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Elevation</strong>: 1</li>
+<li><strong>Shadow Color</strong>: <code>colorScheme.onSurface</code></li>
+<li><strong>Margin</strong>: 8px tất cả các phía</li>
+<li><strong>Background</strong>: <code>colorScheme.surface</code></li>
+<li><strong>Border Radius</strong>: 8px</li>
+<li><strong>Shape</strong>: RoundedRectangleBorder</li>
+</ul>
+<h3 id="bottom-sheets">Bottom Sheets<a class="headerlink" href="#bottom-sheets" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Background</strong>: <code>colorScheme.surfaceContainer</code></li>
+<li><strong>Border Radius</strong>: 8px (góc trên)</li>
+<li><strong>Shape</strong>: RoundedRectangleBorder</li>
+<li><strong>Show Drag Handle</strong>: false</li>
+</ul>
+<h3 id="drawers">Drawers<a class="headerlink" href="#drawers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Shape</strong>: RoundedRectangleBorder với zero radius (góc vuông)</li>
+<li><strong>Background</strong>: Sử dụng drawer theme của theme</li>
+</ul>
+<h3 id="badges">Badges<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Padding</strong>: 0 (không có padding)</li>
+<li><strong>Offset</strong>: (4, 4) - Đặt cách 4px bên phải và 4px xuống dưới từ anchor</li>
+</ul>
+<h3 id="navigation-bars">Navigation Bars<a class="headerlink" href="#navigation-bars" title="Permanent link">&para;</a></h3>
+<h4 id="bottom-navigation-bar">Bottom Navigation Bar<a class="headerlink" href="#bottom-navigation-bar" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Type</strong>: Fixed (luôn hiển thị labels)</li>
+<li><strong>Background</strong>: <code>colorScheme.surfaceContainer</code></li>
+<li><strong>Selected Item Color</strong>: <code>colorScheme.onSurface</code></li>
+<li><strong>Unselected Item Color</strong>: <code>colorScheme.onSurfaceVariant</code></li>
+<li><strong>Icon Size</strong>: 24px</li>
+<li><strong>Selected Label Style</strong>: Font weight 600 (semi-bold)</li>
+<li><strong>Unselected Label Style</strong>: Font weight normal</li>
+<li><strong>Elevation</strong>: 0 (sử dụng border thay vì)</li>
+</ul>
+<h4 id="material-3-navigation-bar">Material 3 Navigation Bar<a class="headerlink" href="#material-3-navigation-bar" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Background</strong>: <code>colorScheme.surfaceContainerLow</code></li>
+<li><strong>Indicator Color</strong>: <code>colorScheme.secondaryContainer</code></li>
+<li><strong>Icon Theme</strong>: <code>colorScheme.onSecondaryContainer</code></li>
+<li><strong>Height</strong>: 80px</li>
+<li><strong>Surface Tint</strong>: Transparent</li>
+<li><strong>Shadow</strong>: Transparent</li>
+</ul>
+<h3 id="dividers">Dividers<a class="headerlink" href="#dividers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Color</strong>: <code>outlineVariant</code> với 16% opacity</li>
+<li><strong>Thickness</strong>: 0.5px</li>
+<li><strong>Indent</strong>: 0</li>
+<li><strong>End Indent</strong>: 0</li>
+<li><strong>Space</strong>: 0</li>
+</ul>
+<h3 id="date-pickers">Date Pickers<a class="headerlink" href="#date-pickers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Background</strong>: <code>colorScheme.surface</code></li>
+<li>Sử dụng Material 3 date picker theme</li>
+</ul>
+<h3 id="tab-bars">Tab Bars<a class="headerlink" href="#tab-bars" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Divider Height</strong>: 0.5px</li>
+<li>Sử dụng Material 3 tab bar theme</li>
+</ul>
+<h2 id="shadows-and-elevation">Shadows and Elevation<a class="headerlink" href="#shadows-and-elevation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Shadow Color</strong>: <code>colorScheme.outlineVariant</code></li>
+<li><strong>Card Elevation</strong>: 1</li>
+<li><strong>Button Elevation</strong>: 0 (sử dụng borders để định nghĩa)</li>
+<li><strong>App Bar Elevation</strong>: 0</li>
+</ul>
+<h2 id="page-transitions">Page Transitions<a class="headerlink" href="#page-transitions" title="Permanent link">&para;</a></h2>
+<p>Ứng dụng sử dụng page transitions theo platform:</p>
+<ul>
+<li><strong>Android</strong>: ZoomPageTransitionsBuilder</li>
+<li><strong>iOS</strong>: CupertinoPageTransitionsBuilder</li>
+</ul>
+<h2 id="border-widths">Border Widths<a class="headerlink" href="#border-widths" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Standard Border</strong>: 0.5px (dùng cho input fields, dividers)</li>
+<li><strong>Button Border</strong>: 1px (dùng cho outlined và elevated buttons)</li>
+<li><strong>Chip Border</strong>: 1px</li>
+</ul>
+<h2 id="dark-mode">Dark Mode<a class="headerlink" href="#dark-mode" title="Permanent link">&para;</a></h2>
+<p>Ứng dụng hỗ trợ đầy đủ dark mode với các color schemes chuyên dụng. Tất cả màu sắc có các biến thể light và dark được định nghĩa trong <code>supa_material_theme.dart</code>. Dark mode color scheme cung cấp độ tương phản và khả năng đọc phù hợp cho môi trường ánh sáng yếu.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,908 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Inspection Architecture Overview - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inspection-architecture-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inspection Architecture Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inspection-architecture-overview">Inspection Architecture Overview<a class="headerlink" href="#inspection-architecture-overview" title="Permanent link">&para;</a></h1>
+<h2 id="component-hierarchy">Component Hierarchy<a class="headerlink" href="#component-hierarchy" title="Permanent link">&para;</a></h2>
+<pre><code>InspectionAnswerPage (Stateful Page)
+├── InspectionHeader (Header với info/actions)
+├── TabBarView (Pages/Sections)
+│   └── ListView (Questions)
+│       └── buildInspectionQuestion() → Chọn widget type
+│           ├── InspectionQuestionTypeTextAndNumber
+│           ├── InspectionQuestionTypeSelectOptions
+│           ├── InspectionQuestionResponseSetTypeSelectOptions
+│           ├── InspectionQuestionTypeMedia
+│           ├── InspectionQuestionTypeDateTime
+│           ├── InspectionQuestionTypeLocation
+│           └── InspectionQuestionTypeInstruction
+└── InspectionAnswerFooter (Actions: Complete, Export)
+</code></pre>
+<h2 id="widget-type-selection-logic">Widget Type Selection Logic<a class="headerlink" href="#widget-type-selection-logic" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">Widget buildInspectionQuestion(InspectionQuestion question) {
+  final answerTypeId = question.answerTypeId.value;
+
+  // TEXT (1) hoặc NUMBER (2)
+  if (answerTypeId == AnswerTypeEnum.TEXT.value ||
+      answerTypeId == AnswerTypeEnum.NUMBER.value) {
+    return InspectionQuestionTypeTextAndNumber(...);
+  }
+
+  // SINGLE_CHOICE (5) hoặc MULTIPLE_CHOICE (6)
+  if (answerTypeId == AnswerTypeEnum.SINGLE_CHOICE.value ||
+      answerTypeId == AnswerTypeEnum.MULTIPLE_CHOICE.value) {
+    // Có ResponseSet → dùng ResponseSet widget
+    if (question.questionnaireResponseSetId.value != 0) {
+      return InspectionQuestionResponseSetTypeSelectOptions(...);
+    }
+    // Không có → dùng Options widget
+    return InspectionQuestionTypeSelectOptions(...);
+  }
+
+  // IMAGE (3)
+  if (answerTypeId == AnswerTypeEnum.IMAGE.value) {
+    return InspectionQuestionTypeMedia(...);
+  }
+
+  // DATETIME (4)
+  if (answerTypeId == AnswerTypeEnum.DATETIME.value) {
+    return InspectionQuestionTypeDateTime(...);
+  }
+
+  // LOCATION (8)
+  if (answerTypeId == AnswerTypeEnum.LOCATION.value) {
+    return InspectionQuestionTypeLocation(...);
+  }
+
+  // INSTRUCTION (7)
+  if (answerTypeId == AnswerTypeEnum.INSTRUCTION.value) {
+    return InspectionQuestionTypeInstruction(...);
+  }
+}
+</code></pre>
+<h2 id="data-flow">Data Flow<a class="headerlink" href="#data-flow" title="Permanent link">&para;</a></h2>
+<h3 id="1-answer-input-flow">1. Answer Input Flow<a class="headerlink" href="#1-answer-input-flow" title="Permanent link">&para;</a></h3>
+<pre><code>User Input/Selection
+  ↓
+InspectionQuestionType[X] Widget
+  ↓
+AnswerTypeItem (Wrapper)
+  ↓
+AnswerField (Input component)
+  ↓
+onChanged/onSelectOption callback
+  ↓
+InspectionAnswerPage state update
+  ↓
+currentInspectionQuestion = updated question
+  ↓
+_handleUpdateInspectionQuestionAnswer()
+  ↓
+MobileInspectionRepository.syncQuestionAnswer()
+  ↓
+Fire-and-forget API call
+</code></pre>
+<h3 id="2-media-upload-flow">2. Media Upload Flow<a class="headerlink" href="#2-media-upload-flow" title="Permanent link">&para;</a></h3>
+<pre><code>User picks images
+  ↓
+AbstractInspectionMediaState.onImagesPicked()
+  ↓
+Create placeholders (imageId = -1, uploadProgress = 0.0)
+  ↓
+Update UI với placeholders
+  ↓
+WorkFileRepository.uploadInspectionFiles()
+  ├─&gt; onUploadProgress callback (0% → 100%)
+  │   └─&gt; onUpdateUploadProgress() → setState()
+  └─&gt; Returns uploaded files
+  ↓
+onNewAttachmentAdded(files)
+  ├─&gt; Remove placeholders
+  └─&gt; Add real answers/mappings
+  ↓
+syncQuestionAnswer() hoặc syncQuestion()
+</code></pre>
+<h3 id="3-file-attachment-flow">3. File Attachment Flow<a class="headerlink" href="#3-file-attachment-flow" title="Permanent link">&para;</a></h3>
+<pre><code>User adds note/files to question
+  ↓
+AnswerTypeItem footer actions
+  ↓
+onUpdateNote() / updateFiles()
+  ↓
+Update question.note / question.inspectionQuestionFileMappings
+  ↓
+_handleUpdateQuestion()
+  ↓
+MobileInspectionRepository.syncQuestion()
+  ↓
+Fire-and-forget API call
+</code></pre>
+<h2 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h2>
+<h3 id="inspectionanswerpage">InspectionAnswerPage<a class="headerlink" href="#inspectionanswerpage" title="Permanent link">&para;</a></h3>
+<p><strong>Path</strong>: <code>lib/pages/inspection/inspection_answer_page.dart</code></p>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>Quản lý toàn bộ inspection state</li>
+<li>Build question widgets theo type</li>
+<li>Handle validation và scoring</li>
+<li>Coordinate API calls</li>
+<li>Manage page/section navigation</li>
+</ul>
+<p><strong>Key State</strong>:</p>
+<pre><code class="language-dart">Inspection? inspectionDetail;
+InspectionQuestion? currentInspectionQuestion;
+Map&lt;int, GlobalKey&gt; _questionKeys;
+final InspectionValidator _validator;
+final InspectionScoreCalculator _scoreCalculator;
+</code></pre>
+<p><strong>Key Methods</strong>:</p>
+<ul>
+<li><code>buildInspectionQuestion()</code> - Chọn widget type theo answerTypeId</li>
+<li><code>_handleUpdateInspectionQuestionAnswer()</code> - Sync answer to server</li>
+<li><code>_handleUpdateQuestion()</code> - Sync note/files to server</li>
+<li><code>_addAttachment()</code> - Add uploaded files to question</li>
+<li><code>_pickImageFromGallery()</code> - Trigger image picker</li>
+</ul>
+<h3 id="answertypeitem">AnswerTypeItem<a class="headerlink" href="#answertypeitem" title="Permanent link">&para;</a></h3>
+<p><strong>Path</strong>: <code>lib/pages/inspection/widgets/inspection_answer/answer_type_item.dart</code></p>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>Wrapper chung cho tất cả answer types</li>
+<li>Render title, required badge, error/warning messages</li>
+<li>Footer với note input, file attachments, task list</li>
+<li>Media display grid</li>
+<li>Handle file upload/delete actions</li>
+</ul>
+<p><strong>Props</strong>:</p>
+<pre><code class="language-dart">final Widget child;                 // Actual input widget (AnswerField, etc)
+final String title;                 // Question content
+final bool isRequired;              // Show required badge
+final bool isAnswered;              // Show answered badge
+final bool isError;                 // Show error state
+final String textError;             // Error message
+final String textWarning;           // Warning message
+final List&lt;InspectionQuestionFileMapping&gt; files;  // Attached files
+final String note;                  // Question note
+final InspectionType type;          // Answer vs Question vs Information
+</code></pre>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li>Conditional rendering (show/hide based on answer logic)</li>
+<li>Task assignment integration</li>
+<li>Media grid display</li>
+<li>Note editing</li>
+<li>File upload/delete</li>
+</ul>
+<h3 id="answerfield">AnswerField<a class="headerlink" href="#answerfield" title="Permanent link">&para;</a></h3>
+<p><strong>Path</strong>: <code>lib/pages/inspection/widgets/inspection_answer/answer_field.dart</code></p>
+<p><strong>Extends</strong>: <code>AbstractInspectionMediaState</code></p>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>Render actual input field theo answerTypeId</li>
+<li>Handle text/number input</li>
+<li>Handle single/multiple choice selection</li>
+<li>Handle date/time picker</li>
+<li>Handle image upload với progress</li>
+<li>Location picker integration</li>
+</ul>
+<p><strong>Answer Type Rendering</strong>:</p>
+<pre><code class="language-dart">// TEXT (1)
+TextField(
+  controller: _textController,
+  onChanged: widget.onChanged,
+  decoration: InputDecoration(hintText: translate.general.pleaseInput),
+)
+
+// NUMBER (2)
+TextField(
+  controller: _textController,
+  keyboardType: TextInputType.number,
+  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]'))],
+)
+
+// SINGLE_CHOICE (5) / MULTIPLE_CHOICE (6)
+InkWell(
+  onTap: _selectOptions,
+  child: Text(selectedOptions display),
+)
+
+// IMAGE (3)
+MediaViewWidgetControl(
+  files: fileMappings,
+  onUploadProgress: ...,
+)
+
+// DATETIME (4)
+InkWell(
+  onTap: widget.onTapDate,
+  child: Text(formatted date),
+)
+
+// LOCATION (8)
+InkWell(
+  onTap: _showLocationPicker,
+  child: Text(address or coordinates),
+)
+</code></pre>
+<p><strong>Media Upload Integration</strong>:</p>
+<pre><code class="language-dart">@override
+Future&lt;void&gt; onUpdateUploadProgress(double progress) async {
+  if (mounted) {
+    setState(() {
+      // Update placeholders (imageId == -1)
+      for (var answer in widget.inspectionQuestion!.inspectionQuestionAnswers.value) {
+        if (answer.imageId.value == -1) {
+          answer.uploadProgress.value = progress;
+        }
+      }
+    });
+  }
+}
+
+@override
+FutureOr&lt;void&gt; onNewAttachmentAdded(List&lt;File&gt; files) async {
+  // Remove placeholders
+  final withoutPlaceholders = widget.inspectionQuestion!
+      .inspectionQuestionAnswers.value
+      .where((a) =&gt; a.imageId.value != -1)
+      .toList();
+
+  // Create real answers from uploaded files
+  final newAnswers = files.map((file) {
+    final answer = InspectionQuestionAnswer();
+    answer.imageId.value = file.id.value;
+    answer.image.value = file;
+    answer.uploadProgress.value = 1.0;
+    return answer;
+  }).toList();
+
+  // Update state
+  await widget.onUpdateInspectionQuestionAnswer!([
+    ...withoutPlaceholders,
+    ...newAnswers
+  ]);
+}
+</code></pre>
+<h3 id="inspectionquestiontype-widgets">InspectionQuestionType Widgets<a class="headerlink" href="#inspectionquestiontype-widgets" title="Permanent link">&para;</a></h3>
+<p>Mỗi answer type có widget riêng kế thừa pattern chung:</p>
+<p><strong>Common Structure</strong>:</p>
+<pre><code class="language-dart">class InspectionQuestionType[X] extends StatefulWidget {
+  final InspectionQuestion inspectionQuestion;
+  final Inspection inspectionDetail;
+  final int answerTypeId;
+  final String nameImageCustom;
+
+  // Callbacks
+  final Future&lt;void&gt; Function(InspectionQuestion) updateInspectionQuestion;
+  final Future&lt;void&gt; Function(InspectionQuestion) onUpdateInspectionFileMapping;
+  final Future&lt;void&gt; Function(List&lt;File&gt;) updateFiles;
+  final Future&lt;void&gt; Function(InspectionQuestionFileMapping) onDelete;
+  // ... more callbacks
+}
+
+class _InspectionQuestionType[X]State extends State&lt;...&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return AnswerTypeItem(
+      // Common props
+      title: widget.inspectionQuestion.content.value,
+      isRequired: widget.inspectionQuestion.isRequired.value,
+      isAnswered: /* check if has answer */,
+      isError: widget.inspectionQuestion.errors.isNotEmpty,
+      textError: widget.inspectionQuestion.errors['id'] ?? '',
+      textWarning: widget.inspectionQuestion.warnings['id'] ?? '',
+      files: widget.inspectionQuestion.inspectionQuestionFileMappings.value,
+      note: widget.inspectionQuestion.note.value,
+      type: InspectionType.InsoectionQuestionAnswer,
+
+      // Specific child widget
+      child: AnswerField(
+        answerTypeId: widget.answerTypeId,
+        // Type-specific props
+        ...
+      ),
+    );
+  }
+}
+</code></pre>
+<p><strong>Widget List</strong>:</p>
+<ol>
+<li><strong>InspectionQuestionTypeTextAndNumber</strong> - TEXT (1) + NUMBER (2)</li>
+<li><strong>InspectionQuestionTypeSelectOptions</strong> - SINGLE/MULTIPLE_CHOICE (5,6) với options</li>
+<li><strong>InspectionQuestionResponseSetTypeSelectOptions</strong> - SINGLE/MULTIPLE_CHOICE với ResponseSet</li>
+<li><strong>InspectionQuestionTypeMedia</strong> - IMAGE (3)</li>
+<li><strong>InspectionQuestionTypeDateTime</strong> - DATETIME (4)</li>
+<li><strong>InspectionQuestionTypeLocation</strong> - LOCATION (8)</li>
+<li><strong>InspectionQuestionTypeInstruction</strong> - INSTRUCTION (7)</li>
+</ol>
+<h2 id="state-management">State Management<a class="headerlink" href="#state-management" title="Permanent link">&para;</a></h2>
+<h3 id="question-state">Question State<a class="headerlink" href="#question-state" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">InspectionQuestion {
+  // Metadata
+  id, content, answerTypeId, isRequired
+
+  // Answers
+  inspectionQuestionAnswers: List&lt;InspectionQuestionAnswer&gt;
+
+  // Attachments (note/files)
+  note: String
+  inspectionQuestionFileMappings: List&lt;InspectionQuestionFileMapping&gt;
+
+  // Validation
+  errors: Map&lt;String, String&gt;
+  warnings: Map&lt;String, String&gt;
+
+  // Options (cho choice questions)
+  inspectionAnswerOptions: List&lt;InspectionAnswerOption&gt;
+
+  // Response set (cho choice questions with response set)
+  questionnaireResponseSetId: int
+  inspectionQuestionResponseContents: List&lt;InspectionQuestionResponseContent&gt;
+}
+</code></pre>
+<h3 id="answer-state">Answer State<a class="headerlink" href="#answer-state" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  // Reference
+  inspectionQuestionId: int
+  inspectionId: int
+
+  // Answer data (based on type)
+  textValue: String        // TEXT
+  numberValue: double      // NUMBER
+  date: DateTime          // DATETIME
+  latitude: double        // LOCATION
+  longitude: double       // LOCATION
+  address: String         // LOCATION
+
+  // Choice answer
+  inspectionAnswerOptionId: int
+  inspectionAnswerOption: InspectionAnswerOption
+
+  // Image answer (IMAGE type)
+  imageId: int
+  image: File
+  uploadProgress: double  // 0.0 - 1.0
+}
+</code></pre>
+<h3 id="file-mapping-state">File Mapping State<a class="headerlink" href="#file-mapping-state" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">InspectionQuestionFileMapping {
+  fileId: int
+  file: File
+  uploadProgress: double    // 0.0 - 1.0
+  isLoading: bool          // true when uploading
+  isSuccess: bool          // true when uploaded
+}
+</code></pre>
+<h2 id="validation-scoring">Validation &amp; Scoring<a class="headerlink" href="#validation-scoring" title="Permanent link">&para;</a></h2>
+<h3 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// InspectionValidator service
+final validationResult = _validator.validateQuestionAnswer(question);
+
+// Result
+ValidationResult {
+  errors: List&lt;ValidationError&gt;    // Blocking errors
+  warnings: List&lt;ValidationWarning&gt; // Non-blocking warnings
+}
+
+// Update question state
+question.errors = {
+  for (var e in validationResult.errors) e.field: e.message,
+};
+question.warnings = {
+  for (var w in validationResult.warnings) w.field: w.message,
+};
+</code></pre>
+<h3 id="scoring">Scoring<a class="headerlink" href="#scoring" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// InspectionScoreCalculator service
+await _scoreCalculator.calculatePageScore(inspectionPage);
+await _scoreCalculator.calculateTotalScore(inspection);
+
+// Updates
+inspectionPage.score.value = calculatedScore;
+inspection.score.value = totalScore;
+</code></pre>
+<h2 id="api-integration">API Integration<a class="headerlink" href="#api-integration" title="Permanent link">&para;</a></h2>
+<h3 id="sync-apis-event-sourced">Sync APIs (Event-Sourced)<a class="headerlink" href="#sync-apis-event-sourced" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Answer change
+await MobileInspectionRepository().syncQuestionAnswer(
+  question.toAnswerHistory()
+);
+
+// Note/file change
+await MobileInspectionRepository().syncQuestion(
+  question.toNoteFileHistory()
+);
+
+// Information change
+await MobileInspectionRepository().syncInspectionInformation(
+  information.toHistory()
+);
+</code></pre>
+<p><strong>Fire-and-Forget Pattern</strong>:</p>
+<ul>
+<li>API calls không block UI</li>
+<li>Optimistic updates</li>
+<li>Server processes async</li>
+<li>No waiting for response</li>
+</ul>
+<h3 id="legacy-apis-being-replaced">Legacy APIs (Being Replaced)<a class="headerlink" href="#legacy-apis-being-replaced" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// ❌ Deprecated
+await MobileInspectionRepository().updateInspectionQuestionAnswer(question);
+await MobileInspectionRepository().updateInspectionQuestion(question);
+await MobileInspectionRepository().updateInspectionInformation(information);
+</code></pre>
+<h2 id="conditional-logic">Conditional Logic<a class="headerlink" href="#conditional-logic" title="Permanent link">&para;</a></h2>
+<h3 id="question-visibility">Question Visibility<a class="headerlink" href="#question-visibility" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// AnswerTypeItem checks conditionals
+bool _shouldShowQuestion() {
+  if (widget.inspectionQuestion.inspectionQuestionConditionals.value.isEmpty) {
+    return true; // No conditions = always show
+  }
+
+  // Check if parent question answered correctly
+  for (var conditional in conditionals) {
+    final parentQuestion = _findQuestion(conditional.parentQuestionId);
+    final hasMatchingAnswer = _checkAnswer(parentQuestion, conditional);
+    if (!hasMatchingAnswer) return false;
+  }
+
+  return true;
+}
+</code></pre>
+<h3 id="score-conditions">Score Conditions<a class="headerlink" href="#score-conditions" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Based on selected answer options
+for (var answer in question.inspectionQuestionAnswers.value) {
+  if (answer.inspectionAnswerOption.value.score != null) {
+    totalScore += answer.inspectionAnswerOption.value.score.value;
+  }
+}
+</code></pre>
+<h3 id="task-auto-creation">Task Auto-Creation<a class="headerlink" href="#task-auto-creation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// When answer matches condition
+if (shouldCreateTask(answer)) {
+  await MobileInspectionRepository().createTaskAssignment(
+    TaskAssignment()../* task details */
+  );
+}
+</code></pre>
+<h2 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="widget-keys">Widget Keys<a class="headerlink" href="#widget-keys" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// InspectionAnswerPage maintains GlobalKeys for questions
+Map&lt;int, GlobalKey&gt; _questionKeys = {};
+
+// Used for scrolling to specific questions
+_questionKeys[question.id.value] = GlobalKey();
+
+Widget buildInspectionQuestion(InspectionQuestion question) {
+  return Container(
+    key: _questionKeys[question.id.value],
+    child: /* question widget */,
+  );
+}
+</code></pre>
+<h3 id="state-updates">State Updates<a class="headerlink" href="#state-updates" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Only update affected questions
+void _updateQuestionInPage(InspectionQuestion updatedQuestion) {
+  setState(() {
+    final pageIndex = /* find page */;
+    final questionIndex = /* find question */;
+    currentInspectionPage!.inspectionQuestions.value[questionIndex] = updatedQuestion;
+  });
+}
+</code></pre>
+<h3 id="lazy-loading">Lazy Loading<a class="headerlink" href="#lazy-loading" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Questions rendered on-demand trong ListView</li>
+<li>TabBarView loads pages khi switch</li>
+<li>Images lazy-loaded trong MediaViewWidget</li>
+</ul>
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<h3 id="validation-errors">Validation Errors<a class="headerlink" href="#validation-errors" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Display in AnswerTypeItem
+if (widget.isError) {
+  Container(
+    padding: EdgeInsets.all(8),
+    decoration: BoxDecoration(
+      color: Colors.red.withOpacity(0.1),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Text(widget.textError, style: TextStyle(color: Colors.red)),
+  )
+}
+</code></pre>
+<h3 id="upload-errors">Upload Errors<a class="headerlink" href="#upload-errors" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// AbstractInspectionMediaState
+catch (error) {
+  setState(() {
+    // Remove placeholders
+    question.inspectionQuestionAnswers.value =
+      question.inspectionQuestionAnswers.value
+        .where((a) =&gt; a.imageId.value != -1)
+        .toList();
+  });
+
+  // Show error toast
+  toastification.show(
+    context: context,
+    title: Text('Upload failed'),
+    type: ToastificationType.error,
+  );
+}
+</code></pre>
+<h2 id="testing-points">Testing Points<a class="headerlink" href="#testing-points" title="Permanent link">&para;</a></h2>
+<h3 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Answer type logic</li>
+<li>Validation rules</li>
+<li>Score calculation</li>
+<li>Conditional logic</li>
+</ul>
+<h3 id="widget-tests">Widget Tests<a class="headerlink" href="#widget-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Question rendering</li>
+<li>Input handling</li>
+<li>State updates</li>
+<li>Error display</li>
+</ul>
+<h3 id="integration-tests">Integration Tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Full answer flow</li>
+<li>Upload flow</li>
+<li>Page navigation</li>
+<li>API integration</li>
+</ul>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../answer-types-system/">Answer Types System</a></li>
+<li><a href="../upload-progress-implementation/">Upload Progress Implementation</a></li>
+<li><a href="./models-overview.md">Models Overview</a></li>
+<li><a href="./sync-apis.md">Sync APIs</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

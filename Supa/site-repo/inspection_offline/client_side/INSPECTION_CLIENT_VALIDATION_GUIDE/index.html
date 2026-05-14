@@ -1,0 +1,1162 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>INSPECTION CLIENT VALIDATION GUIDE - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tai-lieuu-validation-client-side-cho-inspection-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              INSPECTION CLIENT VALIDATION GUIDE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<ol>
+<li>
+<p>SyncInspectionInformation: 
+•   Endpoint: POST /rpc/work/inspection/sync-inspection-information
+•   Mục đích: thay đổi thông tin ở tab Thông tin chung
+•   Request body: object DTO Inspection_InspectionInformationHistoryDTO cần tối thiểu:</p>
+<ul>
+<li>InspectionId (long) — id của Inspection</li>
+<li>InspectionInformationId (long) — id của mục information</li>
+<li>EventId (GUID) — duy nhất cho mỗi thay đổi, client gen GUID</li>
+<li>ModifiedAt (DateTime) — thời điểm sửa nội dung (UTC), client action time, không phải call API time</li>
+<li>Các field thay đổi: Note, SiteId, Date, AppUserId tùy loại</li>
+<li>InspectionInformationHistoryFileMappings: nếu xóa file, set IsDeleted = true</li>
+</ul>
+</li>
+<li>
+<p>SyncQuestion
+•   Endpoint: POST /rpc/work/inspection/sync-question
+•   Mục đích: Cập nhật giá trị Ghi chú/File đính kèm trong câu hỏi
+•   Request body: object DTO Inspection_InspectionQuestionHistoryDTO. Cần tối thiểu:</p>
+<ul>
+<li>InspectionId (long)</li>
+<li>InspectionQuestionId (long)</li>
+<li>EventId: client gen GUID</li>
+<li>ModifiedAt (DateTime): thời điểm sửa nội dung (UTC), client action time, không phải call API time</li>
+<li>Note (string) (nếu thay đổi)</li>
+<li>InspectionQuestionHistoryFileMappings: nếu xóa file, set IsDeleted = true</li>
+</ul>
+</li>
+<li>
+<p>SyncQuestionAnswer
+•   Endpoint: POST /rpc/work/inspection/sync-question-answer
+•   Mục đích: Đồng bộ lịch sử trả lời câu hỏi.
+•   Request body: object DTO Inspection_InspectionQuestionHistoryDTO:</p>
+<ul>
+<li>InspectionId (long)</li>
+<li>InspectionQuestionId (long)</li>
+<li>EventId (GUID)</li>
+<li>ModifiedAt (DateTime UTC)</li>
+<li>InspectionQuestionAnswerHistories: tương tự mảng InspectionQuestionAnswers, mỗi object chứa:</li>
+<li>InspectionAnswerOptionId (nullable)</li>
+<li>InspectionQuestionResponseContentId (nullable)</li>
+<li>ImageId (nullable) — nếu image kèm theo</li>
+<li>Date, TextValue, NumberValue, Latitude, Longitude, Address</li>
+</ul>
+</li>
+</ol>
+<p>Lưu ý quan trọng cho client
+•   Luôn tạo EventId duy nhất cho mỗi thay đổi (UUID/GUID). Khi retry do mạng lỗi, sử dụng lại cùng EventId để tránh duplicate.
+•   ModifiedAt phải chính xác và ở UTC. Server dùng ModifiedAt để so sánh thứ tự sự kiện.
+•   Nếu client muốn gửi nhiều thay đổi offline, gửi thành các event riêng biệt với EventId khác nhau; server sẽ sắp xếp theo ModifiedAt.</p>
+<h1 id="tai-lieuu-validation-client-side-cho-inspection-system">TÀI LIỆUU VALIDATION CLIENT-SIDE CHO INSPECTION SYSTEM<a class="headerlink" href="#tai-lieuu-validation-client-side-cho-inspection-system" title="Permanent link">&para;</a></h1>
+<h2 id="i-tong-quan">I. TỔNG QUAN<a class="headerlink" href="#i-tong-quan" title="Permanent link">&para;</a></h2>
+<p>Hệ thống Inspection có 2 loại validation chính cần client thực hiện:
+1. <strong>Validation khi trả lời câu hỏi</strong> (<code>UpdateQuestionAnswer</code>)
+2. <strong>Validation khi hoàn thành Inspection</strong> (<code>Finish</code>)</p>
+<p>Cả hai đều dựa trên:
+- <strong>Required validation</strong>: Câu hỏi bắt buộc phải trả lời
+- <strong>Conditional validation</strong>: Kiểm tra điều kiện logic dựa trên câu trả lời (Question Conditionals)</p>
+<hr />
+<h2 id="ii-cau-truc-du-lieu-quan-trng">II. CẤU TRÚC DỮ LIỆU QUAN TR?NG<a class="headerlink" href="#ii-cau-truc-du-lieu-quan-trng" title="Permanent link">&para;</a></h2>
+<h3 id="1-answertype-loaii-cau-tra-loi">1. AnswerType (Loạii câu trả lời)<a class="headerlink" href="#1-answertype-loaii-cau-tra-loi" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">enum AnswerType {
+    SINGLE_CHOICE = 1,      // Chọn 1
+    MULTIPLE_CHOICE = 2,    // Chọn nhiều
+    TEXT = 3,               // Văn bản
+    NUMBER = 4,             // Số
+    DATETIME = 5,           // Ngày giờ
+    IMAGE = 6,              // Hình ảnh
+    // ... các loại khác
+}
+</code></pre>
+<h3 id="2-conditionaloperator-toan-tu-ieu-kien">2. ConditionalOperator (Toán tử điều kiện)<a class="headerlink" href="#2-conditionaloperator-toan-tu-ieu-kien" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">enum ConditionalOperator {
+    // SINGLE CHOICE
+    SINGLE_CHOICE_IS = 1,
+    SINGLE_CHOICE_IS_NOT = 2,
+    SINGLE_CHOICE_IS_ONE_OF = 3,
+    SINGLE_CHOICE_IS_NOT_ONE_OF = 4,
+    SINGLE_CHOICE_IS_SELECTED = 5,
+    SINGLE_CHOICE_IS_NOT_SELECTED = 6,
+
+    // MULTIPLE CHOICE
+    MULTIPLE_CHOICE_IS = 7,
+    MULTIPLE_CHOICE_IS_NOT = 8,
+    MULTIPLE_CHOICE_IS_ONE_OF = 9,
+    MULTIPLE_CHOICE_IS_NOT_ONE_OF = 10,
+    MULTIPLE_CHOICE_IS_SELECTED = 11,
+    MULTIPLE_CHOICE_IS_NOT_SELECTED = 12,
+
+    // TEXT
+    TEXT_IS = 13,
+    TEXT_IS_NOT = 14,
+
+    // NUMBER
+    NUMBER_LESS = 15,
+    NUMBER_LESS_EQUAL = 16,
+    NUMBER_GREATER = 17,
+    NUMBER_GREATER_EQUAL = 18,
+    NUMBER_EQUAL = 19,
+    NUMBER_NOT_EQUAL = 20,
+    NUMBER_BETWEEN = 21,
+    NUMBER_NOT_BETWEEN = 22,
+}
+</code></pre>
+<h3 id="3-conditionaltrigger-hanh-ong-kich-hoat">3. ConditionalTrigger (Hành động kích hoạt)<a class="headerlink" href="#3-conditionaltrigger-hanh-ong-kich-hoat" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">enum ConditionalTrigger {
+    REQUIRE_ACTION = 1,         // Yêu cầu tạo task
+    REQUIRE_EVIDENCE = 2,       // Yêu cầu bằng chứng (note/file)
+    AUTO_CREATE_ACTION = 3,     // Tự động tạo task (server-side)
+    NOTIFY = 4,                 // Gửi thông báo (server-side)
+    DEDUCT_PAGE_POINT = 5,      // Trừ điểm trang
+    DEDUCT_SECTION_POINT = 6,   // Trừ điểm section
+    DEDUCT_FORM_POINT = 7,      // Trừ điểm form
+    IGNORE_POINT = 8,           // Bỏ qua tính điểm
+}
+</code></pre>
+<h3 id="4-questiontype">4. QuestionType<a class="headerlink" href="#4-questiontype" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">enum QuestionType {
+    QUESTION = 1,           // Câu hỏi thường
+    QUESTION_SECTION = 2,   // Section chứa câu hỏi con
+}
+</code></pre>
+<hr />
+<h2 id="iii-interfaces-du-lieu">III. INTERFACES DỮ LIỆU<a class="headerlink" href="#iii-interfaces-du-lieu" title="Permanent link">&para;</a></h2>
+<pre><code class="language-typescript">interface InspectionQuestion {
+    id: number;
+    answerTypeId: number;
+    questionTypeId: number;
+    isRequired: boolean;
+    useFlag: boolean;
+    note?: string;
+    content: string;
+    questionnaireResponseSetId?: number;
+    inspectionQuestionAnswers: InspectionQuestionAnswer[];
+    inspectionQuestionFileMappings: InspectionQuestionFileMapping[];
+    inspectionQuestionConditionals: InspectionQuestionConditional[];
+    inspectionQuestions?: InspectionQuestion[]; // Cho QUESTION_SECTION
+    taskAssignments?: TaskAssignment[];
+}
+
+interface InspectionQuestionAnswer {
+    inspectionAnswerOptionId?: number;
+    inspectionQuestionResponseContentId?: number;
+    textValue?: string;
+    numberValue?: number;
+    date?: Date;
+    imageId?: number;
+}
+
+interface InspectionQuestionConditional {
+    conditionalOperatorId: number;
+    textValue?: string;
+    numberValue?: number;
+    numberFromValue?: number;
+    numberToValue?: number;
+    inspectionQuestionConditionalAnswerOptions: Array&lt;{
+        inspectionAnswerOptionId: number;
+    }&gt;;
+    inspectionQuestionConditionalResponseContents: Array&lt;{
+        inspectionQuestionResponseContentId: number;
+    }&gt;;
+    inspectionQuestionConditionalContents: InspectionQuestionConditionalContent[];
+}
+
+interface InspectionQuestionConditionalContent {
+    conditionalTriggerId: number;
+    isRequireNote: boolean;
+    isRequireMedia: boolean;
+}
+
+interface ValidationResult {
+    isValid: boolean;
+    warnings?: Warning[];
+    errors?: Error[];
+}
+
+interface Warning {
+    field: string;
+    questionId?: number;
+    questionContent?: string;
+    page?: string;
+    code: string;
+    message: string;
+}
+
+interface Error {
+    field: string;
+    questionId?: number;
+    questionContent?: string;
+    page?: string;
+    code: string;
+    message: string;
+}
+</code></pre>
+<hr />
+<h2 id="iv-code-mau-hoan-chinh-typescriptjavascript">IV. CODE MẪU HOÀN CHỈNH (TypeScript/JavaScript)<a class="headerlink" href="#iv-code-mau-hoan-chinh-typescriptjavascript" title="Permanent link">&para;</a></h2>
+<h3 id="file-inspectionvalidatorts">File: InspectionValidator.ts<a class="headerlink" href="#file-inspectionvalidatorts" title="Permanent link">&para;</a></h3>
+<pre><code class="language-typescript">// ============================================
+// FILE: InspectionValidator.ts
+// ============================================
+
+export class InspectionValidator {
+
+    /**
+     * Validate khi user trả lời câu hỏi (real-time)
+     * Trả về WARNING (không chặn, chỉ cảnh báo)
+     */
+    validateQuestionAnswer(
+        question: InspectionQuestion,
+        taskAssignments: TaskAssignment[]
+    ): ValidationResult {
+        const warnings: Warning[] = [];
+
+        if (!question.inspectionQuestionConditionals || 
+            question.inspectionQuestionConditionals.length === 0) {
+            return { isValid: true, warnings };
+        }
+
+        const taskAssignment = taskAssignments.find(
+            t =&gt; t.inspectionQuestionId === question.id
+        );
+
+        for (const conditional of question.inspectionQuestionConditionals) {
+            const isConditionMet = this.evaluateConditional(question, conditional);
+
+            if (isConditionMet) {
+                for (const content of conditional.inspectionQuestionConditionalContents || []) {
+
+                    if (content.conditionalTriggerId === ConditionalTrigger.REQUIRE_ACTION) {
+                        if (!taskAssignment) {
+                            warnings.push({
+                                field: 'id',
+                                questionId: question.id,
+                                questionContent: question.content,
+                                code: 'InspectionQuestionAnswer_RequireAction',
+                                message: 'Câu hỏi này yêu cầu tạo task xử lý'
+                            });
+                        }
+                    }
+
+                    if (content.conditionalTriggerId === ConditionalTrigger.REQUIRE_EVIDENCE) {
+                        const hasNote = question.note &amp;&amp; question.note.trim().length &gt; 0;
+                        const hasMedia = question.inspectionQuestionFileMappings &amp;&amp; 
+                                       question.inspectionQuestionFileMappings.length &gt; 0;
+
+                        if (content.isRequireNote &amp;&amp; content.isRequireMedia) {
+                            if (!hasNote &amp;&amp; !hasMedia) {
+                                warnings.push({
+                                    field: 'id',
+                                    questionId: question.id,
+                                    questionContent: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceAttachmentAndNote',
+                                    message: 'Câu hỏi này yêu cầu có ghi chú và tệp đính kèm'
+                                });
+                            }
+                            if (!hasNote) {
+                                warnings.push({
+                                    field: 'id',
+                                    questionId: question.id,
+                                    questionContent: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceNote',
+                                    message: 'Câu hỏi này yêu cầu ghi chú'
+                                });
+                            }
+                            if (!hasMedia) {
+                                warnings.push({
+                                    field: 'id',
+                                    questionId: question.id,
+                                    questionContent: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceAttachment',
+                                    message: 'Câu hỏi này yêu cầu tệp đính kèm'
+                                });
+                            }
+                        } else {
+                            if (content.isRequireNote &amp;&amp; !hasNote) {
+                                warnings.push({
+                                    field: 'id',
+                                    questionId: question.id,
+                                    questionContent: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceNote',
+                                    message: 'Câu hỏi này yêu cầu ghi chú'
+                                });
+                            }
+                            if (content.isRequireMedia &amp;&amp; !hasMedia) {
+                                warnings.push({
+                                    field: 'id',
+                                    questionId: question.id,
+                                    questionContent: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceAttachment',
+                                    message: 'Câu hỏi này yêu cầu tệp đính kèm'
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return { 
+            isValid: warnings.length === 0, 
+            warnings 
+        };
+    }
+
+    /**
+     * Validate toàn bộ inspection trước khi finish
+     * Trả về ERROR (chọn không cho finish nếu có lỗi)
+     */
+    validateBeforeFinish(
+        inspection: Inspection,
+        isAdmin: boolean = false
+    ): ValidationResult {
+        const errors: Error[] = [];
+
+        // 1. Validate Survey
+        if (inspection.isSurvey === true) {
+            if (!inspection.surveyId || inspection.surveyId === 0) {
+                errors.push({
+                    field: 'surveyId',
+                    code: 'SurveyNotExisted',
+                    message: 'Survey không tồn tại'
+                });
+            }
+        } else {
+            // 2. Validate Permission
+            if (!inspection.canUpdate &amp;&amp; !isAdmin) {
+                errors.push({
+                    field: 'questionnaireId',
+                    code: 'IdNotPermission',
+                    message: 'Không có quyền finish inspection này'
+                });
+            }
+        }
+
+        // 3. Validate tổng Page
+        for (const page of inspection.inspectionPages) {
+            let hasErrorInPage = false;
+
+            for (const question of page.inspectionQuestions) {
+
+                // Xử lý QUESTION_SECTION
+                if (question.questionTypeId === QuestionType.QUESTION_SECTION) {
+                    for (const subQuestion of question.inspectionQuestions || []) {
+                        const questionErrors = this.validateRequiredQuestion(
+                            subQuestion, 
+                            page.title
+                        );
+
+                        if (questionErrors.length &gt; 0) {
+                            hasErrorInPage = true;
+                            errors.push(...questionErrors);
+                        }
+
+                        // Validate conditionals (ch? cho non-survey)
+                        if (!inspection.isSurvey) {
+                            const conditionalErrors = this.validateQuestionConditionals(
+                                subQuestion,
+                                page.title
+                            );
+                            if (conditionalErrors.length &gt; 0) {
+                                hasErrorInPage = true;
+                                errors.push(...conditionalErrors);
+                            }
+                        }
+                    }
+                } 
+                // Xử lý QUESTION thường
+                else {
+                    const questionErrors = this.validateRequiredQuestion(
+                        question, 
+                        page.title
+                    );
+
+                    if (questionErrors.length &gt; 0) {
+                        hasErrorInPage = true;
+                        errors.push(...questionErrors);
+                    }
+
+                    // Validate conditionals (chỉ cho non-survey)
+                    if (!inspection.isSurvey) {
+                        const conditionalErrors = this.validateQuestionConditionals(
+                            question,
+                            page.title
+                        );
+                        if (conditionalErrors.length &gt; 0) {
+                            hasErrorInPage = true;
+                            errors.push(...conditionalErrors);
+                        }
+                    }
+                }
+            }
+
+            // Nếu page có lỗi, thêm error cho page
+            if (hasErrorInPage) {
+                errors.push({
+                    field: 'inspectionPageId',
+                    page: page.title,
+                    code: 'InspectionPageHasError',
+                    message: `Trang &quot;${page.title}&quot; có lỗi cần xử lý`
+                });
+            }
+        }
+
+        return {
+            isValid: errors.length === 0,
+            errors
+        };
+    }
+
+    /**
+     * Validate câu hỏi bắt buộc
+     */
+    private validateRequiredQuestion(
+        question: InspectionQuestion,
+        pageTitle: string
+    ): Error[] {
+        const errors: Error[] = [];
+
+        if (!question.isRequired) {
+            return errors;
+        }
+
+        const hasAnswer = question.inspectionQuestionAnswers &amp;&amp; 
+                         question.inspectionQuestionAnswers.length &gt; 0;
+
+        if (!hasAnswer) {
+            errors.push({
+                field: 'id',
+                page: pageTitle,
+                question: question.content,
+                code: 'InspectionQuestionAnswer_QuestionNotAnswered',
+                message: `Câu hỏi bắt buộc &quot;${question.content}&quot; chứa được trả lời`
+            });
+            return errors;
+        }
+
+        const answer = question.inspectionQuestionAnswers[0];
+
+        switch (question.answerTypeId) {
+            case AnswerType.DATETIME:
+                if (!answer.date) {
+                    errors.push({
+                        field: 'id',
+                        page: pageTitle,
+                        question: question.content,
+                        code: 'InspectionQuestionAnswer_QuestionNotAnswered',
+                        message: 'Câu hỏi yêu cầu chọn ngày giờ'
+                    });
+                }
+                break;
+
+            case AnswerType.NUMBER:
+                if (answer.numberValue === undefined || answer.numberValue === null) {
+                    errors.push({
+                        field: 'id',
+                        page: pageTitle,
+                        question: question.content,
+                        code: 'InspectionQuestionAnswer_QuestionNotAnswered',
+                        message: 'Câu hỏi yêu cầu nhập số'
+                    });
+                }
+                break;
+
+            case AnswerType.TEXT:
+                if (!answer.textValue || answer.textValue.trim().length === 0) {
+                    errors.push({
+                        field: 'id',
+                        page: pageTitle,
+                        question: question.content,
+                        code: 'InspectionQuestionAnswer_QuestionNotAnswered',
+                        message: 'Câu hỏi yêu cầu nhập văn bản'
+                    });
+                }
+                break;
+
+            case AnswerType.IMAGE:
+                if (!answer.imageId) {
+                    errors.push({
+                        field: 'id',
+                        page: pageTitle,
+                        question: question.content,
+                        code: 'InspectionQuestionAnswer_QuestionNotAnswered',
+                        message: 'Câu hỏi yêu cầu tải lên hình ảnh'
+                    });
+                }
+                break;
+
+            case AnswerType.SINGLE_CHOICE:
+            case AnswerType.MULTIPLE_CHOICE:
+                if (!answer.inspectionAnswerOptionId &amp;&amp; 
+                    !answer.inspectionQuestionResponseContentId) {
+                    errors.push({
+                        field: 'id',
+                        page: pageTitle,
+                        question: question.content,
+                        code: 'InspectionQuestionAnswer_QuestionNotAnswered',
+                        message: 'Câu hỏi yêu cầu chọn đáp án'
+                    });
+                }
+                break;
+        }
+
+        return errors;
+    }
+
+    /**
+     * Validate conditional rules (ERRORS - chặn finish)
+     */
+    private validateQuestionConditionals(
+        question: InspectionQuestion,
+        pageTitle: string
+    ): Error[] {
+        const errors: Error[] = [];
+
+        if (!question.inspectionQuestionConditionals) {
+            return errors;
+        }
+
+        for (const conditional of question.inspectionQuestionConditionals) {
+            const isConditionMet = this.evaluateConditional(question, conditional);
+
+            if (isConditionMet) {
+                for (const content of conditional.inspectionQuestionConditionalContents || []) {
+
+                    if (content.conditionalTriggerId === ConditionalTrigger.REQUIRE_ACTION) {
+                        if (!question.taskAssignments || question.taskAssignments.length === 0) {
+                            errors.push({
+                                field: 'id',
+                                page: pageTitle,
+                                question: question.content,
+                                code: 'InspectionQuestionAnswer_RequireAction',
+                                message: 'Câu hỏi này yêu cầu tạo task xử lý'
+                            });
+                        }
+                    }
+
+                    if (content.conditionalTriggerId === ConditionalTrigger.REQUIRE_EVIDENCE) {
+                        const hasNote = question.note &amp;&amp; question.note.trim().length &gt; 0;
+                        const hasMedia = question.inspectionQuestionFileMappings &amp;&amp; 
+                                       question.inspectionQuestionFileMappings.length &gt; 0;
+
+                        if (content.isRequireNote &amp;&amp; content.isRequireMedia) {
+                            if (!hasNote &amp;&amp; !hasMedia) {
+                                errors.push({
+                                    field: 'id',
+                                    page: pageTitle,
+                                    question: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceAttachmentAndNote',
+                                    message: 'Yêu cầu cả ghi chú và tệp đính kèm'
+                                });
+                            }
+                            if (!hasNote) {
+                                errors.push({
+                                    field: 'id',
+                                    page: pageTitle,
+                                    question: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceNote',
+                                    message: 'Yêu cầu ghi chú'
+                                });
+                            }
+                            if (!hasMedia) {
+                                errors.push({
+                                    field: 'id',
+                                    page: pageTitle,
+                                    question: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceAttachment',
+                                    message: 'Yêu cầu tệp đính kèm'
+                                });
+                            }
+                        } else {
+                            if (content.isRequireNote &amp;&amp; !hasNote) {
+                                errors.push({
+                                    field: 'id',
+                                    page: pageTitle,
+                                    question: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceNote',
+                                    message: 'Yêu cầu ghi chú'
+                                });
+                            }
+                            if (content.isRequireMedia &amp;&amp; !hasMedia) {
+                                errors.push({
+                                    field: 'id',
+                                    page: pageTitle,
+                                    question: question.content,
+                                    code: 'InspectionQuestionAnswer_RequireEvidenceAttachment',
+                                    message: 'Yêu cầu tệp đính kèm'
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return { 
+            isValid: warnings.length === 0, 
+            warnings 
+        };
+    }
+
+    /**
+     * Đánh giá điều kiện conditional
+     */
+    private evaluateConditional(
+        question: InspectionQuestion,
+        conditional: InspectionQuestionConditional
+    ): boolean {
+
+        if (question.answerTypeId === AnswerType.SINGLE_CHOICE) {
+            if (!question.questionnaireResponseSetId) {
+                const chosenId = question.inspectionQuestionAnswers
+                    .find(a =&gt; a.inspectionAnswerOptionId)
+                    ?.inspectionAnswerOptionId;
+
+                const conditionalIds = conditional.inspectionQuestionConditionalAnswerOptions
+                    .map(x =&gt; x.inspectionAnswerOptionId);
+
+                return this.evaluateSingleChoice(
+                    chosenId, 
+                    conditional.conditionalOperatorId, 
+                    conditionalIds
+                );
+            } else {
+                const chosenId = question.inspectionQuestionAnswers
+                    .find(a =&gt; a.inspectionQuestionResponseContentId)
+                    ?.inspectionQuestionResponseContentId;
+
+                const conditionalIds = conditional.inspectionQuestionConditionalResponseContents
+                    .map(x =&gt; x.inspectionQuestionResponseContentId);
+
+                return this.evaluateSingleChoice(
+                    chosenId, 
+                    conditional.conditionalOperatorId, 
+                    conditionalIds
+                );
+            }
+        }
+
+        else if (question.answerTypeId === AnswerType.MULTIPLE_CHOICE) {
+            if (!question.questionnaireResponseSetId) {
+                const chosenIds = question.inspectionQuestionAnswers
+                    .filter(a =&gt; a.inspectionAnswerOptionId)
+                    .map(a =&gt; a.inspectionAnswerOptionId!);
+
+                const conditionalIds = conditional.inspectionQuestionConditionalAnswerOptions
+                    .map(x =&gt; x.inspectionAnswerOptionId);
+
+                return this.evaluateMultipleChoice(
+                    chosenIds, 
+                    conditional.conditionalOperatorId, 
+                    conditionalIds
+                );
+            } else {
+                const chosenIds = question.inspectionQuestionAnswers
+                    .filter(a =&gt; a.inspectionQuestionResponseContentId)
+                    .map(a =&gt; a.inspectionQuestionResponseContentId!);
+
+                const conditionalIds = conditional.inspectionQuestionConditionalResponseContents
+                    .map(x =&gt; x.inspectionQuestionResponseContentId);
+
+                return this.evaluateMultipleChoice(
+                    chosenIds, 
+                    conditional.conditionalOperatorId, 
+                    conditionalIds
+                );
+            }
+        }
+
+        else if (question.answerTypeId === AnswerType.TEXT) {
+            const textValue = question.inspectionQuestionAnswers
+                .find(a =&gt; a.textValue)
+                ?.textValue;
+
+            return this.evaluateText(
+                textValue, 
+                conditional.conditionalOperatorId, 
+                conditional.textValue
+            );
+        }
+
+        else if (question.answerTypeId === AnswerType.NUMBER) {
+            const numberValue = question.inspectionQuestionAnswers
+                .find(a =&gt; a.numberValue !== undefined)
+                ?.numberValue;
+
+            if (numberValue === undefined) return false;
+
+            return this.evaluateNumber(
+                numberValue,
+                conditional.conditionalOperatorId,
+                conditional.numberValue,
+                conditional.numberFromValue,
+                conditional.numberToValue
+            );
+        }
+
+        return false;
+    }
+
+    private evaluateSingleChoice(
+        chosenId: number | undefined,
+        operatorId: number,
+        conditionalIds: number[]
+    ): boolean {
+        const conditionalId = conditionalIds[0];
+
+        switch (operatorId) {
+            case ConditionalOperator.SINGLE_CHOICE_IS:
+                return chosenId === conditionalId;
+            case ConditionalOperator.SINGLE_CHOICE_IS_NOT:
+                return chosenId !== conditionalId;
+            case ConditionalOperator.SINGLE_CHOICE_IS_ONE_OF:
+                return chosenId ? conditionalIds.includes(chosenId) : false;
+            case ConditionalOperator.SINGLE_CHOICE_IS_NOT_ONE_OF:
+                return chosenId ? !conditionalIds.includes(chosenId) : true;
+            case ConditionalOperator.SINGLE_CHOICE_IS_SELECTED:
+                return chosenId !== undefined &amp;&amp; chosenId !== null;
+            case ConditionalOperator.SINGLE_CHOICE_IS_NOT_SELECTED:
+                return chosenId === undefined || chosenId === null;
+            default:
+                return false;
+        }
+    }
+
+    private evaluateMultipleChoice(
+        chosenIds: number[],
+        operatorId: number,
+        conditionalIds: number[]
+    ): boolean {
+        switch (operatorId) {
+            case ConditionalOperator.MULTIPLE_CHOICE_IS:
+                const diff1 = chosenIds.filter(x =&gt; !conditionalIds.includes(x));
+                const diff2 = conditionalIds.filter(x =&gt; !chosenIds.includes(x));
+                return diff1.length === 0 &amp;&amp; diff2.length === 0;
+
+            case ConditionalOperator.MULTIPLE_CHOICE_IS_NOT:
+                const diff3 = chosenIds.filter(x =&gt; !conditionalIds.includes(x));
+                const diff4 = conditionalIds.filter(x =&gt; !chosenIds.includes(x));
+                return diff3.length &gt; 0 || diff4.length &gt; 0;
+
+            case ConditionalOperator.MULTIPLE_CHOICE_IS_ONE_OF:
+                const intersection1 = chosenIds.filter(x =&gt; conditionalIds.includes(x));
+                return intersection1.length &gt; 0;
+
+            case ConditionalOperator.MULTIPLE_CHOICE_IS_NOT_ONE_OF:
+                const intersection2 = chosenIds.filter(x =&gt; conditionalIds.includes(x));
+                return intersection2.length === 0;
+
+            case ConditionalOperator.MULTIPLE_CHOICE_IS_SELECTED:
+                return chosenIds.length &gt; 0;
+
+            case ConditionalOperator.MULTIPLE_CHOICE_IS_NOT_SELECTED:
+                return chosenIds.length === 0;
+
+            default:
+                return false;
+        }
+    }
+
+    private evaluateText(
+        textValue: string | undefined,
+        operatorId: number,
+        conditionalText: string | undefined
+    ): boolean {
+        switch (operatorId) {
+            case ConditionalOperator.TEXT_IS:
+                return !!(textValue &amp;&amp; conditionalText &amp;&amp; 
+                         textValue.includes(conditionalText));
+            case ConditionalOperator.TEXT_IS_NOT:
+                return !textValue || !conditionalText || 
+                       !textValue.includes(conditionalText);
+            default:
+                return false;
+        }
+    }
+
+    private evaluateNumber(
+        numberValue: number,
+        operatorId: number,
+        conditionalValue?: number,
+        fromValue?: number,
+        toValue?: number
+    ): boolean {
+        switch (operatorId) {
+            case ConditionalOperator.NUMBER_LESS:
+                return conditionalValue !== undefined &amp;&amp; numberValue &lt; conditionalValue;
+            case ConditionalOperator.NUMBER_LESS_EQUAL:
+                return conditionalValue !== undefined &amp;&amp; numberValue &lt;= conditionalValue;
+            case ConditionalOperator.NUMBER_GREATER:
+                return conditionalValue !== undefined &amp;&amp; numberValue &gt; conditionalValue;
+            case ConditionalOperator.NUMBER_GREATER_EQUAL:
+                return conditionalValue !== undefined &amp;&amp; numberValue &gt;= conditionalValue;
+            case ConditionalOperator.NUMBER_EQUAL:
+                return conditionalValue !== undefined &amp;&amp; numberValue === conditionalValue;
+            case ConditionalOperator.NUMBER_NOT_EQUAL:
+                return conditionalValue !== undefined &amp;&amp; numberValue !== conditionalValue;
+            case ConditionalOperator.NUMBER_BETWEEN:
+                return fromValue !== undefined &amp;&amp; toValue !== undefined &amp;&amp;
+                       fromValue &lt;= numberValue &amp;&amp; numberValue &lt;= toValue;
+            case ConditionalOperator.NUMBER_NOT_BETWEEN:
+                return fromValue !== undefined &amp;&amp; toValue !== undefined &amp;&amp;
+                       (numberValue &lt; fromValue || numberValue &gt; toValue);
+            default:
+                return false;
+        }
+    }
+}
+</code></pre>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

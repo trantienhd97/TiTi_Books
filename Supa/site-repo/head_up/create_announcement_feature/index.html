@@ -1,0 +1,462 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Create Announcement (Heads Up) Feature - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-announcement-heads-up-feature" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create Announcement (Heads Up) Feature
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="create-announcement-heads-up-feature">Create Announcement (Heads Up) Feature<a class="headerlink" href="#create-announcement-heads-up-feature" title="Permanent link">&para;</a></h1>
+<h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<p>The feature allows authorized users (Manager/Admin) to quickly access a task menu (Bottom Sheet) to draft and send instant announcements to the entire team or specific members in the system. The goal is to convey important information as quickly as possible.</p>
+<h2 id="2-ui-description">2. UI Description<a class="headerlink" href="#2-ui-description" title="Permanent link">&para;</a></h2>
+<h3 id="21-access-point">2.1. Access Point<a class="headerlink" href="#21-access-point" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Location</strong>: Inside the Quick Action Menu (Bottom Sheet) when the user clicks the "Create" (+) or "Menu" button.</li>
+<li><strong>Order</strong>: 2nd in the list (under "Perform Checklist").</li>
+</ul>
+<h3 id="22-ui-item-announcement">2.2. UI Item: Announcement<a class="headerlink" href="#22-ui-item-announcement" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Container</strong>: Tappable row with icon, title, description, and navigation arrow.</li>
+<li><strong>Icon</strong>: Megaphone icon (purple) on a light purple circular background.</li>
+<li><strong>Title</strong>: "Thông báo" (Bold).</li>
+<li><strong>Description</strong>: "Truyền tải thông tin nhanh chóng tới toàn bộ đội ngũ" (Regular, grey).</li>
+<li><strong>Action Icon</strong>: Right chevron (Chevron right).</li>
+</ul>
+<h2 id="3-business-flow-logic">3. Business Flow &amp; Logic<a class="headerlink" href="#3-business-flow-logic" title="Permanent link">&para;</a></h2>
+<h3 id="31-main-flow">3.1. Main Flow<a class="headerlink" href="#31-main-flow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>User opens the Quick Action Menu (Bottom Sheet).</li>
+<li>System displays the list of actions.</li>
+<li>User selects "Thông báo".</li>
+<li>System closes the Bottom Sheet and navigates to the "Create Announcement" screen.</li>
+</ol>
+<h3 id="32-detailed-logic">3.2. Detailed Logic<a class="headerlink" href="#32-detailed-logic" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Business Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Close Button</td>
+<td>Icon Button</td>
+<td>"X" icon at the top left.</td>
+<td>Triggers "Cancel Post" popup (See 3.3.A) if data is dirty.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Send Button</td>
+<td>Icon Button</td>
+<td>Paper plane icon at the top right.</td>
+<td>1. Validate (Title mandatory). 2. Trigger "Post Announcement" popup (See 3.3.B).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Attachment Area</td>
+<td>List/Button</td>
+<td>"+ Thêm nội dung" (Add Media) button. Supports: png, jpg, jpeg, mp4, doc, docx, xls, xlsx, ppt, pptx, pdf, zip, etc.</td>
+<td>1. Choose from gallery (Photo/Video). 2. Capture from camera (Take Photo / Record Video). 3. Choose File. <strong>Max video duration: 3 minutes</strong>. Horizontal preview scroll.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Title</td>
+<td>Text Input</td>
+<td>Label: "Tiêu đề thông báo *". Placeholder: "Nhập tên công việc".</td>
+<td>Mandatory. Max 550 characters.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Description</td>
+<td>Text Area</td>
+<td>Label: "Mô tả thông báo". Placeholder: "Thêm mô tả".</td>
+<td>Optional. Multi-line.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Recipients</td>
+<td>Tag Input</td>
+<td>Label: "Người nhận".</td>
+<td>Tags for individuals, groups, sites. Defaults to "All" or user config.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Acknowledgment</td>
+<td>Toggle</td>
+<td>Label: "Yêu cầu xác nhận".</td>
+<td>Default: ON.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-modals">3.3. Modals<a class="headerlink" href="#33-modals" title="Permanent link">&para;</a></h3>
+<h4 id="a-popup-huy-ang-bai-cancel-post">A. Popup "Hủy đăng bài" (Cancel Post)<a class="headerlink" href="#a-popup-huy-ang-bai-cancel-post" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Title</strong>: "Hủy đăng bài"</li>
+<li><strong>Content</strong>: "Bạn đang hủy bài đăng thông báo. Toàn bộ nội dung đã soạn sẽ bị mất. Tiếp tục?"</li>
+<li><strong>Left Button</strong>: "Đóng" -&gt; Close popup, keep editing.</li>
+<li><strong>Right Button</strong>: "Hủy đăng bài" -&gt; Close popup, close editor, discard data.</li>
+</ul>
+<h4 id="b-popup-ang-thong-bao-post-announcement">B. Popup "Đăng thông báo" (Post Announcement)<a class="headerlink" href="#b-popup-ang-thong-bao-post-announcement" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Title</strong>: "Đăng thông báo"</li>
+<li><strong>Content</strong>: "Thông báo được đăng sẽ hiển thị ngay lập tức trên bảng tin của những người được gán. Đăng thông báo ngay?"</li>
+<li><strong>Left Button</strong>: "Đóng" -&gt; Close popup, keep editing.</li>
+<li><strong>Right Button</strong>: "Đăng thông báo" -&gt; Call API, show success toast, navigate back.</li>
+</ul>
+<h2 id="4-technical-details">4. Technical Details<a class="headerlink" href="#4-technical-details" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>API Endpoint</strong>: <code>https://ndev.supa.vn/rpc/work/heads-up/create</code></li>
+<li><strong>Method</strong>: RPC (likely POST)</li>
+<li><strong>Data Model</strong>: <code>HeadsUp</code></li>
+<li><strong>Navigation</strong>: After posting, redirect to the Announcement List screen (accessible via "More" -&gt; "Bảng tin").</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

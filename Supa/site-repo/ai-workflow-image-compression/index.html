@@ -1,0 +1,468 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate) - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#huong-dan-kich-hoat-nen-anh-isolate" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="huong-dan-kich-hoat-nen-anh-isolate">Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)<a class="headerlink" href="#huong-dan-kich-hoat-nen-anh-isolate" title="Permanent link">&para;</a></h1>
+<p>Tài liệu này dùng để AI (Antigravity) hoặc lập trình viên đọc tham khảo và thực thi tự động khi chuyển sang một nhánh (branch) mới cần áp dụng lại cơ chế <strong>Nén Ảnh Bằng Base Dart (Isolate)</strong> (Bỏ qua lỗi văng RAM OutOfMemory từ thư viện).</p>
+<p><strong>Mục tiêu:</strong> Áp dụng xử lý nền (nén ảnh với độ phân giải <code>1280x1280</code> và quality <code>80%</code>) trên toàn bộ luồng chụp ảnh và tải file của dự án (<code>supa_foundation</code>, <code>supa_project</code>, <code>supa_work</code>).</p>
+<hr />
+<h2 id="cac-buoc-trien-khai-cho-ai">Các Bước Triển Khai Cho AI<a class="headerlink" href="#cac-buoc-trien-khai-cho-ai" title="Permanent link">&para;</a></h2>
+<p>Khi người dùng yêu cầu áp dụng lại tính năng này, AI Antigravity vui lòng <strong>đọc và làm chính xác từng bước sau</strong>:</p>
+<h3 id="buoc-1-cap-nhat-cau-hinh-imagepickerservice">BƯỚC 1. Cập Nhật Cấu Hình <code>ImagePickerService</code><a class="headerlink" href="#buoc-1-cap-nhat-cau-hinh-imagepickerservice" title="Permanent link">&para;</a></h3>
+<p><strong>File:</strong> <code>packages/supa_foundation/lib/services/image_picker_service.dart</code>
+<strong>Hành động:</strong> 
+- Đổi <code>ImagePickerService.maxWidth</code> thành <code>1280</code>
+- Đổi <code>ImagePickerService.maxHeight</code> thành <code>1280</code>
+- Đổi <code>ImagePickerService.imageQuality</code> thành <code>80</code></p>
+<h3 id="buoc-2-tao-file-tien-ich-imagecompressutils">BƯỚC 2. Tạo File Tiện Ích <code>ImageCompressUtils</code><a class="headerlink" href="#buoc-2-tao-file-tien-ich-imagecompressutils" title="Permanent link">&para;</a></h3>
+<p><strong>File:</strong> Tạo file mới tại <code>packages/supa_foundation/lib/utils/image_compress_utils.dart</code>
+<strong>Hành động:</strong> Viết mã lệnh sau vào file:</p>
+<pre><code class="language-dart">import 'dart:io';
+import 'package:flutter/foundation.dart';
+import 'package:image/image.dart' as img;
+import 'package:image_picker/image_picker.dart';
+import 'package:supa_foundation/services/image_picker_service.dart';
+
+class ImageCompressUtils {
+  /// Hàm nén ảnh chạy trên luồng phụ biệt lập để không block màn hình UI
+  static Future&lt;XFile&gt; compressImageBackground(String imagePath) async {
+    return compute(_resizeImageWorker, imagePath);
+  }
+}
+
+/// Isolate worker function
+XFile _resizeImageWorker(String imagePath) {
+  try {
+    final bytes = File(imagePath).readAsBytesSync();
+    var decoded = img.decodeImage(bytes);
+    if (decoded != null) {
+      if (decoded.width &gt; ImagePickerService.maxWidth ||
+          decoded.height &gt; ImagePickerService.maxHeight) {
+
+        int targetWidth = decoded.width;
+        int targetHeight = decoded.height;
+        final ratio = decoded.width / decoded.height;
+
+        if (decoded.width &gt; decoded.height) {
+          targetWidth = ImagePickerService.maxWidth.toInt();
+          targetHeight = (ImagePickerService.maxWidth / ratio).round();
+        } else {
+          targetHeight = ImagePickerService.maxHeight.toInt();
+          targetWidth = (ImagePickerService.maxHeight * ratio).round();
+        }
+
+        decoded = img.copyResize(decoded, width: targetWidth, height: targetHeight);
+        final resizedBytes = img.encodeJpg(decoded, quality: ImagePickerService.imageQuality);
+        File(imagePath).writeAsBytesSync(resizedBytes);
+      }
+    }
+  } catch (e) {
+    debugPrint('Error compressing image locally: \$e');
+  }
+  return XFile(imagePath);
+}
+</code></pre>
+<h3 id="buoc-3-ap-dung-cho-camera-loi-supa_foundation">BƯỚC 3. Áp Dụng Cho Camera Lõi (<code>supa_foundation</code>)<a class="headerlink" href="#buoc-3-ap-dung-cho-camera-loi-supa_foundation" title="Permanent link">&para;</a></h3>
+<p><strong>File:</strong> <code>packages/supa_foundation/lib/widgets/pages/camera_capture_page_new.dart</code>
+<strong>Hành động:</strong> 
+1. Import <code>package:supa_foundation/utils/image_compress_utils.dart</code> (Nếu cần).
+2. Xóa các parameters <code>maxWidth</code>, <code>maxHeight</code> và <code>imageQuality</code> đang nằm cắm cứng (Hard-code) bên trong đối tượng <code>MediaOptions</code>.
+3. Trong hàm <code>Future&lt;XFile&gt; _processImage(XFile originalImage)</code>, nén ảnh trước khi watermark:</p>
+<pre><code class="language-dart">      final compressedImage = await ImageCompressUtils.compressImageBackground(originalImage.path);
+      final processedPath = await MediaPickerPlus.addWatermarkToImage(
+        compressedImage.path,
+        options: MediaOptions(...
+</code></pre>
+<h3 id="buoc-4-ap-dung-cho-camera-project-supa_project">BƯỚC 4. Áp Dụng Cho Camera Project (<code>supa_project</code>)<a class="headerlink" href="#buoc-4-ap-dung-cho-camera-project-supa_project" title="Permanent link">&para;</a></h3>
+<p>Thực hiện tương tự Bước 3 nhưng trên file của <code>supa_project</code>:
+- <strong>File 1:</strong> <code>packages/supa_project/lib/pages/inspection/widgets/camera_capture_page.dart</code> (Sửa hàm <code>_processImage</code>)
+- <strong>File 2:</strong> <code>packages/supa_project/lib/pages/inspection/widgets/abstract_inspection_media_state.dart</code> (Sửa hàm xử lý hàng loạt <code>onImagesPicked</code> và <code>_applyWatermarkToImages</code> thay thế việc nén qua <code>ImageCompressUtils</code>). Loại bỏ <code>maxWidth</code>, <code>maxHeight</code>, <code>imageQuality</code> thừa ở trong <code>MediaOptions</code> nơi gọi watermark (như Bước 3).</p>
+<h3 id="buoc-5-ap-dung-cho-thu-thap-du-lieu-supa_work">BƯỚC 5. Áp Dụng Cho Thu Thập Dữ Liệu (<code>supa_work</code>)<a class="headerlink" href="#buoc-5-ap-dung-cho-thu-thap-du-lieu-supa_work" title="Permanent link">&para;</a></h3>
+<p><strong>File:</strong> <code>packages/supa_work/lib/pages/inspection/widgets/abstract_inspection_media_state.dart</code>
+<strong>Hành động:</strong> Sửa hai vùng (batch upload &amp; watermark) tương tự Bước 4. Lược bỏ <code>maxWidth</code> &amp; <code>imageQuality</code> trong <code>MediaOptions</code> nơi nào áp dụng watermark.</p>
+<h3 id="buoc-6-ap-dung-chan-inh-kem-taskassignment-supa_work">BƯỚC 6. Áp Dụng Chặn Đính Kèm TaskAssignment (<code>supa_work</code>)<a class="headerlink" href="#buoc-6-ap-dung-chan-inh-kem-taskassignment-supa_work" title="Permanent link">&para;</a></h3>
+<p>File TaskAssignment cho phép người dùng đính kèm file (PDF, MS Word) cho nên hàm upload phải lọc để <strong>CHỈ</strong> truyền isolate nén vào ảnh (<code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>).
+<strong>File 1: Tạo Task (Form)</strong> -&gt; <code>packages/supa_work/lib/pages/task_assignment/service/task_assignment_form_service.dart</code> 
+<strong>File 2: Cập Nhật Task (Utils)</strong> -&gt; <code>packages/supa_work/lib/pages/task_assignment/utils/task_assignment_edit_selectors.dart</code>
+Sửa đổi hàm <code>uploadFile()</code>:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/image_compress_utils.dart'; // [AI hãy nhớ chèn ngay hàng đầu]
+
+Future&lt;List&lt;TaskAssignmentFileMapping&gt;&gt; uploadFile(List&lt;XFile&gt; xfiles) async {
+  final List&lt;XFile&gt; compressedImages = [];
+  for (var file in xfiles) {
+    if (file.path.toLowerCase().endsWith('.png') ||
+        file.path.toLowerCase().endsWith('.jpg') ||
+        file.path.toLowerCase().endsWith('.jpeg')) {
+      compressedImages.add(
+          await ImageCompressUtils.compressImageBackground(file.path));
+    } else {
+      compressedImages.add(file);
+    }
+  }
+  // Đưa compressedImages vào luồng upload
+  final listFile = await WorkFileRepository().uploadFilesFromImagePicker(compressedImages);
+</code></pre>
+<p><strong>File 3: Cập nhật Trạng Thái Task (Trạng Thái Bắt Buộc Có Ảnh)</strong> -&gt; <code>packages/supa_work/lib/pages/task_assignment/task_assignment_edit_page.dart</code>
+Sửa đổi trong <code>_onUpdateStatus</code>, vị trí <code>onSubmit: (note, file)</code> khi chọn xong trạng thái đính kèm ảnh:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/image_compress_utils.dart';
+import 'package:image_picker/image_picker.dart';
+
+// ...
+if (file != null) {
+  XFile compressedFile = file;
+  if (file.path.toLowerCase().endsWith('.png') ||
+      file.path.toLowerCase().endsWith('.jpg') ||
+      file.path.toLowerCase().endsWith('.jpeg')) {
+    compressedFile = await ImageCompressUtils.compressImageBackground(file.path);
+  }
+  final uploadedFiles = await WorkFileRepository().uploadFilesFromImagePicker([compressedFile]);
+// ...
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
