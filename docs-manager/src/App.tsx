@@ -1,6 +1,8 @@
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout, ConfigProvider, theme } from 'antd';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { Dashboard } from './components/Dashboard/Dashboard';
+import { SupaDocs } from './components/SupaDocs/SupaDocs';
 import './App.css';
 
 const { Content } = Layout;
@@ -17,14 +19,19 @@ function App() {
         },
       }}
     >
-      <Layout style={{ minHeight: '100vh' }}>
-        <Sidebar />
-        <Layout style={{ marginLeft: 260 }}>
-          <Content>
-            <Dashboard />
-          </Content>
+      <Router>
+        <Layout style={{ minHeight: '100vh' }}>
+          <Sidebar />
+          <Layout style={{ marginLeft: 260 }}>
+            <Content>
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/supa" element={<SupaDocs />} />
+              </Routes>
+            </Content>
+          </Layout>
         </Layout>
-      </Layout>
+      </Router>
     </ConfigProvider>
   );
 }

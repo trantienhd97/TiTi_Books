@@ -1,7 +1,7 @@
-import React from 'react';
 import { Row, Col, Button, Typography } from 'antd';
 import { DocumentLink24Filled, Library24Filled, Flash24Filled, Person24Filled } from '@fluentui/react-icons';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { useTranslate } from '../../hooks/useTranslate';
 import './Dashboard.css';
 
@@ -9,6 +9,7 @@ const { Title, Paragraph } = Typography;
 
 export const Dashboard: React.FC = () => {
   const { translate } = useTranslate();
+  const navigate = useNavigate();
 
   const cards = [
     {
@@ -97,7 +98,7 @@ export const Dashboard: React.FC = () => {
                 <Title level={4} style={{ marginTop: 16 }}>{card.title}</Title>
                 <Paragraph className="card-desc">{card.description}</Paragraph>
                 <div className="card-footer">
-                  <Button type="primary" block>
+                  <Button type="primary" block onClick={() => navigate(card.link)}>
                     {translate('dashboard.cards.open')}
                   </Button>
                 </div>
