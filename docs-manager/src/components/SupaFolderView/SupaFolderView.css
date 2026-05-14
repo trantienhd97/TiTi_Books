@@ -1,6 +1,6 @@
 .folder-view-container {
   padding: 40px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .back-btn {
@@ -17,7 +17,7 @@
   color: rgba(255, 255, 255, 0.7) !important;
   border-radius: 12px !important;
   height: 40px !important;
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
@@ -28,46 +28,106 @@
   color: #fff !important;
 }
 
-.doc-list {
+.folder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #60a5fa;
+  margin-top: 6px;
+}
+
+/* Doc Cards Grid */
+.doc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.doc-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.doc-list .ant-list-item {
-  padding: 0 !important;
-  border: none !important;
+.doc-card:hover {
+  background: rgba(96, 165, 250, 0.06) !important;
+  border-color: rgba(96, 165, 250, 0.25) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
-.doc-list-item {
-  display: flex !important;
+.doc-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(96, 165, 250, 0.1);
+  border-radius: 12px;
+  display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 24px !important;
-  cursor: pointer;
-  border-radius: 16px !important;
-  transition: all 0.25s ease;
-}
-
-.doc-list-item:hover {
-  transform: translateX(6px);
-  border-color: rgba(96, 165, 250, 0.3) !important;
-}
-
-.doc-icon {
+  justify-content: center;
   flex-shrink: 0;
-  font-size: 24px;
 }
 
-.doc-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+.doc-card-title {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
   flex: 1;
 }
 
-.doc-path {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.3);
-  font-family: monospace;
+.doc-card-path {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doc-card-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(-6px);
+}
+
+.doc-card:hover .doc-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.doc-card-number {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+  font-family: 'Outfit', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .folder-view-container {
+    padding: 24px;
+  }
+  .doc-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }

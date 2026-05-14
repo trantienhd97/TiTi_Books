@@ -1,14 +1,17 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { List, Typography, Empty, Button } from 'antd';
-import { DocumentText24Filled, ArrowLeft24Filled, Folder24Filled } from '@fluentui/react-icons';
+import { Typography, Empty, Button } from 'antd';
+import {
+  DocumentText24Filled,
+  ArrowLeft24Filled,
+  Folder24Filled,
+  ArrowRight24Filled,
+} from '@fluentui/react-icons';
 import { motion } from 'framer-motion';
 import './SupaFolderView.css';
-import './../../index.css';
 
 const { Title, Text } = Typography;
 
-// Map folder -> list of md files (relative path from /supa-docs/)
 const FOLDER_FILES: Record<string, string[]> = {
   analytics: [
     'analytics/README.md',
@@ -78,56 +81,80 @@ function getDocTitle(filePath: string) {
   return name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
+};
+const itemVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
+
 export const SupaFolderView: React.FC = () => {
   const { folderId } = useParams<{ folderId: string }>();
   const navigate = useNavigate();
-
 
   const files = folderId ? (FOLDER_FILES[folderId] ?? []) : [];
 
   return (
     <div className="folder-view-container">
       <div className="folder-view-header">
-        <Button icon={<ArrowLeft24Filled />} onClick={() => navigate('/supa')} className="back-btn">
+        <Button
+          icon={<ArrowLeft24Filled />}
+          onClick={() => navigate('/supa')}
+          className="back-btn"
+        >
           Supa
         </Button>
         <div>
-          <Title className="premium-gradient-text" style={{ marginBottom: 0 }}>
-            <Folder24Filled style={{ marginRight: 10, verticalAlign: 'middle' }} />
+          <Title
+            className="premium-gradient-text"
+            style={{ marginBottom: 4, display: 'flex', alignItems: 'center', gap: 10 }}
+          >
+            <Folder24Filled style={{ fontSize: 28 }} />
             {folderId}
           </Title>
-          <Text style={{ color: 'rgba(255,255,255,0.4)' }}>{files.length} tài liệu</Text>
+          <span className="folder-badge">
+            <DocumentText24Filled style={{ fontSize: 14 }} />
+            {files.length} tài liệu
+          </span>
         </div>
       </div>
 
       {files.length === 0 ? (
-        <Empty description="Không có tài liệu nào" style={{ color: 'rgba(255,255,255,0.4)', marginTop: 80 }} />
+        <Empty
+          description="Không có tài liệu nào"
+          style={{ color: 'rgba(255,255,255,0.4)', marginTop: 80 }}
+        />
       ) : (
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+          className="doc-cards-grid"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <List
-            className="doc-list"
-            dataSource={files}
-            renderItem={(file, index) => (
-              <motion.div
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05 }}
-              >
-                <List.Item
-                  className="doc-list-item glass-card"
-                  onClick={() => navigate(`/supa/${folderId}/doc`, { state: { file } })}
-                >
-                  <DocumentText24Filled primaryFill="#60a5fa" className="doc-icon" />
-                  <span className="doc-title">{getDocTitle(file)}</span>
-                  <Text className="doc-path">{file}</Text>
-                </List.Item>
-              </motion.div>
-            )}
-          />
+          {files.map((file, index) => (
+            <motion.div
+              key={file}
+              variants={itemVariants}
+              className="doc-card"
+              onClick={() => navigate(`/supa/${folderId}/doc`, { state: { file } })}
+            >
+              <div className="doc-card-icon">
+                <DocumentText24Filled primaryFill="#60a5fa" style={{ fontSize: 22 }} />
+              </div>
+
+              <Text className="doc-card-title">{getDocTitle(file)}</Text>
+              <Text className="doc-card-path">{file}</Text>
+
+              <ArrowRight24Filled
+                className="doc-card-arrow"
+                primaryFill="rgba(96,165,250,0.6)"
+                style={{ fontSize: 18 }}
+              />
+              <span className="doc-card-number">{String(index + 1).padStart(2, '0')}</span>
+            </motion.div>
+          ))}
         </motion.div>
       )}
     </div>
