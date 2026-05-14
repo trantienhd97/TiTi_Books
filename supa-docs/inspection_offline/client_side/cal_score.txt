@@ -1,0 +1,482 @@
+public async Task<bool> CalculateScore(Inspection Inspection)
+{
+    var UseScore = await DataContext.InspectionQuestion.AsNoTracking()
+        .Where(x => x.TenantId == CurrentContext.TenantId)
+        .Where(x => x.InspectionId == Inspection.Id)
+        .Where(x => x.UseScore == true)
+        .AnyAsync();
+    if (UseScore == true)
+    {
+        var InspectionDAO = await DataContext.Inspection.AsNoTracking()
+            .Where(x => x.TenantId == CurrentContext.TenantId)
+            .Where(x => x.Id == Inspection.Id)
+            .FirstOrDefaultAsync();
+        var InspectionPageDAOs = await DataContext.InspectionPage.AsNoTracking()
+            .Where(x => x.TenantId == CurrentContext.TenantId)
+            .Where(x => x.InspectionId == Inspection.Id)
+            .ToListAsync();
+        var InspectionQuestionDAOs = await DataContext.InspectionQuestion.AsNoTracking()
+            .Where(x => x.TenantId == CurrentContext.TenantId)
+            .Where(x => x.InspectionId == Inspection.Id)
+            .ToListAsync();
+        var InspectionQuestionAnswerDAOs = await DataContext.InspectionQuestionAnswer.AsNoTracking()
+            .Where(x => x.TenantId == CurrentContext.TenantId)
+            .Where(x => x.InspectionId == Inspection.Id)
+            .Where(x => x.IsDeleted == false)
+            .ToListAsync();
+
+        var InspectionQuestionIds = InspectionQuestionDAOs.Select(x => x.Id).ToList();
+        var InspectionAnswerOptionDAOs = await DataContext.InspectionAnswerOption.AsNoTracking()
+            .Where(x => x.TenantId == CurrentContext.TenantId)
+            .Where(x => x.InspectionQuestionId, new IdFilter { In = InspectionQuestionIds })
+            .ToListAsync();
+        var InspectionQuestionResponseContentDAOs = await DataContext.InspectionQuestionResponseContent.AsNoTracking()
+            .Where(x => x.TenantId == CurrentContext.TenantId)
+            .Where(x => x.InspectionQuestionId, new IdFilter { In = InspectionQuestionIds })
+            .ToListAsync();
+
+        var InspectionQuestionConditionals = await GetConditionals(Inspection.Id, InspectionQuestionIds);
+
+        Parallel.ForEach(InspectionPageDAOs, InspectionPageDAO =>
+        {
+            var subInspectionQuestionDAOs = InspectionQuestionDAOs
+                .Where(x => x.InspectionPageId == InspectionPageDAO.Id && x.QuestionTypeId == QuestionType.QUESTION.Id)
+                .ToList();
+            foreach (var InspectionQuestionDAO in subInspectionQuestionDAOs)
+            {
+                if (InspectionQuestionDAO.UseScore == true)
+                {
+                    var subInspectionQuestionAnswerDAOs = InspectionQuestionAnswerDAOs.Where(x => x.InspectionQuestionId == InspectionQuestionDAO.Id).ToList();
+                    if (InspectionQuestionDAO.AnswerTypeId == AnswerType.SINGLE_CHOICE.Id)
+                    {
+                        if (InspectionQuestionDAO.QuestionnaireResponseSetId.HasValue == false)
+                        {
+                            var InspectionAnswerOptionIds = subInspectionQuestionAnswerDAOs
+                                .Where(x => x.InspectionAnswerOptionId.HasValue)
+                                .Select(x => x.InspectionAnswerOptionId.Value)
+                                .ToList();
+                            InspectionQuestionDAO.Score = InspectionAnswerOptionDAOs
+                                .Where(x => InspectionAnswerOptionIds.Contains(x.Id) && x.Score.HasValue)
+                                .Select(x => x.Score.Value)
+                                .DefaultIfEmpty(0).Max();
+                        }
+                        else
+                        {
+                            var InspectionQuestionResponseContentIds = subInspectionQuestionAnswerDAOs
+                                .Where(x => x.InspectionQuestionResponseContentId.HasValue)
+                                .Select(x => x.InspectionQuestionResponseContentId.Value)
+                                .ToList();
+                            InspectionQuestionDAO.Score = InspectionQuestionResponseContentDAOs
+                                .Where(x => InspectionQuestionResponseContentIds.Contains(x.Id) && x.Score.HasValue)
+                                .Select(x => x.Score.Value)
+                                .DefaultIfEmpty(0).Max();
+                        }
+                    }
+                    else
+                    {
+                        if (InspectionQuestionDAO.QuestionnaireResponseSetId.HasValue == false)
+                        {
+                            var InspectionAnswerOptionIds = subInspectionQuestionAnswerDAOs
+                                .Where(x => x.InspectionAnswerOptionId.HasValue)
+                                .Select(x => x.InspectionAnswerOptionId.Value)
+                                .ToList();
+                            InspectionQuestionDAO.Score = InspectionAnswerOptionDAOs
+                                .Where(x => InspectionAnswerOptionIds.Contains(x.Id) && x.Score.HasValue)
+                                .Select(x => x.Score.Value)
+                                .DefaultIfEmpty(0).Sum();
+                        }
+                        else
+                        {
+                            var InspectionQuestionResponseContentIds = subInspectionQuestionAnswerDAOs
+                                .Where(x => x.InspectionQuestionResponseContentId.HasValue)
+                                .Select(x => x.InspectionQuestionResponseContentId.Value)
+                                .ToList();
+                            InspectionQuestionDAO.Score = InspectionQuestionResponseContentDAOs
+                                .Where(x => InspectionQuestionResponseContentIds.Contains(x.Id) && x.Score.HasValue)
+                                .Select(x => x.Score.Value)
+                                .DefaultIfEmpty(0).Sum();
+                        }
+                    }
+
+                    #region Kiểm tra các logic để đánh dấu trừ điểm
+                    bool IsDeductedPageScore = false;
+                    bool IsDeductedSectionScore = false;
+                    bool IsDeductedInspectionScore = false;
+                    bool IsIgnoreScore = false;
+
+                    var subInspectionQuestionConditionals = InspectionQuestionConditionals.Where(x => x.InspectionQuestionId == InspectionQuestionDAO.Id).ToList();
+                    if (subInspectionQuestionConditionals.HasValue())
+                    {
+                        var InspectionQuestionConditionalContents = subInspectionQuestionConditionals
+                            .Where(x => x.InspectionQuestionConditionalContents.HasValue())
+                            .SelectMany(x => x.InspectionQuestionConditionalContents)
+                            .Where(x => x.ConditionalTriggerId == ConditionalTrigger.DEDUCT_PAGE_POINT.Id ||
+                                x.ConditionalTriggerId == ConditionalTrigger.DEDUCT_SECTION_POINT.Id ||
+                                x.ConditionalTriggerId == ConditionalTrigger.DEDUCT_FORM_POINT.Id ||
+                                x.ConditionalTriggerId == ConditionalTrigger.IGNORE_POINT.Id)
+                            .ToList();
+                        if (InspectionQuestionConditionalContents.HasValue())
+                        {
+                            foreach (var InspectionQuestionConditionalContent in InspectionQuestionConditionalContents)
+                            {
+                                bool IsValid = false;
+
+                                var InspectionQuestionConditional = subInspectionQuestionConditionals.Where(x => x.Id == InspectionQuestionConditionalContent.InspectionQuestionConditionalId).FirstOrDefault();
+                                if (InspectionQuestionDAO.AnswerTypeId == AnswerType.SINGLE_CHOICE.Id)
+                                {
+                                    if (InspectionQuestionDAO.QuestionnaireResponseSetId.HasValue == false)
+                                    {
+                                        var InspectionAnswerOptionChoicedId = subInspectionQuestionAnswerDAOs.Where(x => x.InspectionAnswerOptionId.HasValue).Select(x => x.InspectionAnswerOptionId).FirstOrDefault();
+                                        if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS.Id)
+                                        {
+                                            var InspectionAnswerOptionConditional = InspectionQuestionConditional.InspectionQuestionConditionalAnswerOptions?
+                                                .Select(x => x.InspectionAnswerOptionId)
+                                                .FirstOrDefault();
+                                            if (InspectionAnswerOptionChoicedId == InspectionAnswerOptionConditional)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_NOT.Id)
+                                        {
+                                            var InspectionAnswerOptionConditional = InspectionQuestionConditional.InspectionQuestionConditionalAnswerOptions?
+                                                .Select(x => x.InspectionAnswerOptionId)
+                                                .FirstOrDefault();
+                                            if (InspectionAnswerOptionChoicedId != InspectionAnswerOptionConditional)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_ONE_OF.Id)
+                                        {
+                                            var InspectionAnswerOptionConditionalIds = InspectionQuestionConditional.InspectionQuestionConditionalAnswerOptions?
+                                                .Select(x => x.InspectionAnswerOptionId)
+                                                .ToList();
+                                            if (InspectionAnswerOptionConditionalIds.Contains(InspectionAnswerOptionChoicedId ?? 0))
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_NOT_ONE_OF.Id)
+                                        {
+                                            var InspectionAnswerOptionConditionalIds = InspectionQuestionConditional.InspectionQuestionConditionalAnswerOptions?
+                                                .Select(x => x.InspectionAnswerOptionId)
+                                                .ToList();
+                                            if (InspectionAnswerOptionConditionalIds.Contains(InspectionAnswerOptionChoicedId ?? 0) == false)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_SELECTED.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedId != null)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_NOT_SELECTED.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedId == null)
+                                                IsValid = true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        var InspectionQuestionResponseContentChoicedId = subInspectionQuestionAnswerDAOs.Where(x => x.InspectionQuestionResponseContentId.HasValue).Select(x => x.InspectionQuestionResponseContentId).FirstOrDefault();
+                                        if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS.Id)
+                                        {
+                                            var InspectionQuestionResponseContentConditional = InspectionQuestionConditional.InspectionQuestionConditionalResponseContents?
+                                                .Select(x => x.InspectionQuestionResponseContentId)
+                                                .FirstOrDefault();
+                                            if (InspectionQuestionResponseContentChoicedId == InspectionQuestionResponseContentConditional)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_NOT.Id)
+                                        {
+                                            var InspectionQuestionResponseContentConditional = InspectionQuestionConditional.InspectionQuestionConditionalResponseContents?
+                                                .Select(x => x.InspectionQuestionResponseContentId)
+                                                .FirstOrDefault();
+                                            if (InspectionQuestionResponseContentChoicedId != InspectionQuestionResponseContentConditional)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_ONE_OF.Id)
+                                        {
+                                            var InspectionQuestionResponseContentConditionalIds = InspectionQuestionConditional.InspectionQuestionConditionalResponseContents?
+                                                .Select(x => x.InspectionQuestionResponseContentId)
+                                                .ToList();
+                                            if (InspectionQuestionResponseContentConditionalIds.Contains(InspectionQuestionResponseContentChoicedId ?? 0))
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_NOT_ONE_OF.Id)
+                                        {
+                                            var InspectionQuestionResponseContentConditionalIds = InspectionQuestionConditional.InspectionQuestionConditionalResponseContents?
+                                                .Select(x => x.InspectionQuestionResponseContentId)
+                                                .ToList();
+                                            if (InspectionQuestionResponseContentConditionalIds.Contains(InspectionQuestionResponseContentChoicedId ?? 0) == false)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_SELECTED.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedId != null)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.SINGLE_CHOICE_IS_NOT_SELECTED.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedId == null)
+                                                IsValid = true;
+                                        }
+                                    }
+                                }
+                                else if (InspectionQuestionDAO.AnswerTypeId == AnswerType.MULTIPLE_CHOICE.Id)
+                                {
+                                    if (InspectionQuestionDAO.QuestionnaireResponseSetId.HasValue == false)
+                                    {
+                                        var InspectionAnswerOptionChoicedIds = subInspectionQuestionAnswerDAOs
+                                            .Where(x => x.InspectionAnswerOptionId.HasValue)
+                                            .Select(x => x.InspectionAnswerOptionId.Value)
+                                            .ToList();
+                                        var InspectionAnswerOptionConditionalIds = InspectionQuestionConditional.InspectionQuestionConditionalAnswerOptions?
+                                                .Select(x => x.InspectionAnswerOptionId)
+                                                .ToList();
+                                        if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedIds.Except(InspectionAnswerOptionConditionalIds).HasValue() == false &&
+                                                InspectionAnswerOptionConditionalIds.Except(InspectionAnswerOptionChoicedIds).HasValue() == false)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_NOT.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedIds.Except(InspectionAnswerOptionConditionalIds).HasValue() == true ||
+                                                InspectionAnswerOptionConditionalIds.Except(InspectionAnswerOptionChoicedIds).HasValue() == true)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_ONE_OF.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedIds.Intersect(InspectionAnswerOptionConditionalIds).HasValue() == true)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_NOT_ONE_OF.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedIds.Intersect(InspectionAnswerOptionConditionalIds).HasValue() == false)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_SELECTED.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedIds.HasValue())
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_NOT_SELECTED.Id)
+                                        {
+                                            if (InspectionAnswerOptionChoicedIds.HasValue() == false)
+                                                IsValid = true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        var InspectionQuestionResponseContentChoicedIds = subInspectionQuestionAnswerDAOs
+                                            .Where(x => x.InspectionQuestionResponseContentId.HasValue)
+                                            .Select(x => x.InspectionQuestionResponseContentId.Value)
+                                            .ToList();
+                                        var InspectionQuestionResponseContentConditionalIds = InspectionQuestionConditional.InspectionQuestionConditionalResponseContents?
+                                                .Select(x => x.InspectionQuestionResponseContentId)
+                                                .ToList();
+                                        if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedIds.Except(InspectionQuestionResponseContentConditionalIds).HasValue() == false &&
+                                                InspectionQuestionResponseContentConditionalIds.Except(InspectionQuestionResponseContentChoicedIds).HasValue() == false)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_NOT.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedIds.Except(InspectionQuestionResponseContentConditionalIds).HasValue() == true ||
+                                                InspectionQuestionResponseContentConditionalIds.Except(InspectionQuestionResponseContentChoicedIds).HasValue() == true)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_ONE_OF.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedIds.Intersect(InspectionQuestionResponseContentConditionalIds).HasValue() == true)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_NOT_ONE_OF.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedIds.Intersect(InspectionQuestionResponseContentConditionalIds).HasValue() == false)
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_SELECTED.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedIds.HasValue())
+                                                IsValid = true;
+                                        }
+                                        else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.MULTIPLE_CHOICE_IS_NOT_SELECTED.Id)
+                                        {
+                                            if (InspectionQuestionResponseContentChoicedIds.HasValue() == false)
+                                                IsValid = true;
+                                        }
+                                    }
+
+                                }
+                                else if (InspectionQuestionDAO.AnswerTypeId == AnswerType.TEXT.Id)
+                                {
+                                    var TextValue = subInspectionQuestionAnswerDAOs
+                                        .Where(x => x.TextValue.HasValue())
+                                        .Select(x => x.TextValue)
+                                        .FirstOrDefault();
+                                    if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.TEXT_IS.Id)
+                                    {
+                                        if (TextValue != null && TextValue.Contains(InspectionQuestionConditional.TextValue))
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.TEXT_IS_NOT.Id)
+                                    {
+                                        if (TextValue == null || TextValue.Contains(InspectionQuestionConditional.TextValue) == false)
+                                            IsValid = true;
+                                    }
+                                }
+                                else if (InspectionQuestionDAO.AnswerTypeId == AnswerType.NUMBER.Id)
+                                {
+                                    var NumberValue = subInspectionQuestionAnswerDAOs
+                                        .Where(x => x.NumberValue.HasValue)
+                                        .Select(x => x.NumberValue.Value)
+                                        .FirstOrDefault();
+                                    if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_LESS.Id)
+                                    {
+                                        if (NumberValue < InspectionQuestionConditional.NumberValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_LESS_EQUAL.Id)
+                                    {
+                                        if (NumberValue <= InspectionQuestionConditional.NumberValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_GREATER.Id)
+                                    {
+                                        if (NumberValue > InspectionQuestionConditional.NumberValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_GREATER_EQUAL.Id)
+                                    {
+                                        if (NumberValue >= InspectionQuestionConditional.NumberValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_EQUAL.Id)
+                                    {
+                                        if (NumberValue == InspectionQuestionConditional.NumberValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_NOT_EQUAL.Id)
+                                    {
+                                        if (NumberValue != InspectionQuestionConditional.NumberValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_BETWEEN.Id)
+                                    {
+                                        if (InspectionQuestionConditional.NumberFromValue <= NumberValue && NumberValue <= InspectionQuestionConditional.NumberToValue)
+                                            IsValid = true;
+                                    }
+                                    else if (InspectionQuestionConditional.ConditionalOperatorId == ConditionalOperator.NUMBER_NOT_BETWEEN.Id)
+                                    {
+                                        if (NumberValue < InspectionQuestionConditional.NumberFromValue || NumberValue > InspectionQuestionConditional.NumberToValue)
+                                            IsValid = true;
+                                    }
+                                }
+
+                                if (IsValid)
+                                {
+                                    if (InspectionQuestionConditionalContent.ConditionalTriggerId == ConditionalTrigger.DEDUCT_PAGE_POINT.Id)
+                                    {
+                                        IsDeductedPageScore = true;
+                                    }
+                                    else if (InspectionQuestionConditionalContent.ConditionalTriggerId == ConditionalTrigger.DEDUCT_SECTION_POINT.Id)
+                                    {
+                                        IsDeductedSectionScore = true;
+                                    }
+                                    else if (InspectionQuestionConditionalContent.ConditionalTriggerId == ConditionalTrigger.DEDUCT_FORM_POINT.Id)
+                                    {
+                                        IsDeductedInspectionScore = true;
+                                    }
+                                    else if (InspectionQuestionConditionalContent.ConditionalTriggerId == ConditionalTrigger.IGNORE_POINT.Id)
+                                    {
+                                        IsIgnoreScore = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    InspectionQuestionDAO.IsDeductedPageScore = IsDeductedPageScore;
+                    InspectionQuestionDAO.IsDeductedSectionScore = IsDeductedSectionScore;
+                    InspectionQuestionDAO.IsDeductedInspectionScore = IsDeductedInspectionScore;
+                    if (IsIgnoreScore && InspectionQuestionDAO.MaxScore.HasValue)
+                    {
+                        InspectionQuestionDAO.Score = 0;
+                        InspectionQuestionDAO.MaxScore = 0;
+                    }
+                    #endregion
+                }
+                else
+                    InspectionQuestionDAO.Score = null;
+            }
+
+            var sections = InspectionQuestionDAOs
+                .Where(x => x.QuestionPageId == InspectionPageDAO.QuestionPageId && x.QuestionTypeId == QuestionType.QUESTION_SECTION.Id)
+
+                .ToList();
+            foreach (var section in sections)
+            {
+                var questions = subInspectionQuestionDAOs.Where(x => x.ParentId == section.Id).ToList();
+
+                if (questions.Any(x => x.IsDeductedSectionScore))
+                {
+                    section.Score = 0;
+                }
+                else
+                {
+                    section.Score = questions.Where(x => x.Score.HasValue).Select(x => x.Score.Value).DefaultIfEmpty(0).Sum();
+                    section.Score = section.Score < 0 ? 0 : section.Score;
+                    section.MaxScore = questions.Where(x => x.MaxScore.HasValue).Select(x => x.MaxScore.Value).DefaultIfEmpty(0).Sum();
+                    section.MaxScore = section.MaxScore < 0 ? 0 : section.MaxScore;
+                }
+            }
+
+            if (subInspectionQuestionDAOs.Any(x => x.IsDeductedPageScore))
+            {
+                InspectionPageDAO.Score = 0;
+            }
+            else
+            {
+                var score_of_question_in_page = subInspectionQuestionDAOs
+                    .Where(x => x.ParentId == null)
+                    .Where(x => x.Score.HasValue)
+                    .Select(x => x.Score.Value)
+                    .Sum();
+                var score_of_section_in_page = sections
+                    .Where(x => x.Score.HasValue)
+                    .Select(x => x.Score.Value)
+                    .Sum();
+                var page_score = score_of_question_in_page + score_of_section_in_page;
+                page_score = page_score < 0 ? 0 : page_score;
+                InspectionPageDAO.Score = page_score;
+
+                var max_score_of_question_in_page = subInspectionQuestionDAOs
+                    .Where(x => x.ParentId == null)
+                    .Where(x => x.MaxScore.HasValue)
+                    .Select(x => x.MaxScore.Value)
+                    .Sum();
+                var max_score_of_section_in_page = sections
+                    .Where(x => x.MaxScore.HasValue)
+                    .Select(x => x.MaxScore.Value)
+                    .Sum();
+                var page_max_score = max_score_of_question_in_page + max_score_of_section_in_page;
+                page_max_score = page_max_score < 0 ? 0 : page_max_score;
+                InspectionPageDAO.MaxScore = page_max_score;
+            }
+        });
+
+        if (InspectionQuestionDAOs.Any(x => x.IsDeductedInspectionScore))
+        {
+            InspectionDAO.Score = 0;
+        }
+        else
+        {
+            InspectionDAO.Score = InspectionPageDAOs.Where(x => x.Score.HasValue).Select(x => x.Score.Value).DefaultIfEmpty(0).Sum();
+            InspectionDAO.Score = InspectionDAO.Score < 0 ? 0 : InspectionDAO.Score;
+            InspectionDAO.MaxScore = InspectionPageDAOs.Where(x => x.MaxScore.HasValue).Select(x => x.MaxScore.Value).DefaultIfEmpty(0).Sum();
+            InspectionDAO.MaxScore = InspectionDAO.MaxScore < 0 ? 0 : InspectionDAO.MaxScore;
+        }
+
+        await DataContext.SingleMergeAsync(InspectionDAO);
+        await DataContext.BulkMergeAsync(InspectionPageDAOs);
+        await DataContext.BulkMergeAsync(InspectionQuestionDAOs);
+    }
+
+    return true;
+}
