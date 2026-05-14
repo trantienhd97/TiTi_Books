@@ -1,0 +1,24 @@
+{
+  "unversionedId": "dependency-injection",
+  "id": "dependency-injection",
+  "title": "Dependency Injection với GetIt và Injectable",
+  "description": "1. Tổng quan",
+  "source": "@site/docs/dependency-injection.md",
+  "sourceDirName": ".",
+  "slug": "/dependency-injection",
+  "permalink": "/docs/dependency-injection",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/dependency-injection.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Core Packages: supa_architecture và supa_foundation",
+    "permalink": "/docs/core-packages"
+  },
+  "next": {
+    "title": "Hướng dẫn Triển khai Ứng dụng",
+    "permalink": "/docs/deployment"
+  }
+}

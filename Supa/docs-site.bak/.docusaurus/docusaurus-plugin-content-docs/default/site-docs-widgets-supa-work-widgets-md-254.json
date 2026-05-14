@@ -1,0 +1,24 @@
+{
+  "unversionedId": "widgets/supa_work_widgets",
+  "id": "widgets/supa_work_widgets",
+  "title": "Supa Work Widgets",
+  "description": "This document provides an overview of the reusable widgets in the supa_work package, following an atomic design structure.",
+  "source": "@site/docs/widgets/supa_work_widgets.md",
+  "sourceDirName": "widgets",
+  "slug": "/widgets/supa_work_widgets",
+  "permalink": "/docs/widgets/supa_work_widgets",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_work_widgets.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Supa Training Widgets",
+    "permalink": "/docs/widgets/supa_training_widgets"
+  },
+  "next": {
+    "title": "VideoStreamingScreen",
+    "permalink": "/docs/widgets/video_streaming_screen"
+  }
+}

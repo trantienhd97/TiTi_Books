@@ -1,0 +1,24 @@
+{
+  "unversionedId": "widgets/video_streaming_screen",
+  "id": "widgets/video_streaming_screen",
+  "title": "VideoStreamingScreen",
+  "description": "Widget để stream video trực tiếp với authentication, sử dụng thư viện media_kit.",
+  "source": "@site/docs/widgets/video_streaming_screen.md",
+  "sourceDirName": "widgets",
+  "slug": "/widgets/video_streaming_screen",
+  "permalink": "/docs/widgets/video_streaming_screen",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/video_streaming_screen.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Supa Work Widgets",
+    "permalink": "/docs/widgets/supa_work_widgets"
+  },
+  "next": {
+    "title": "Inspection & Checklist Items",
+    "permalink": "/docs/widgets/work/inspection/checklist_item"
+  }
+}

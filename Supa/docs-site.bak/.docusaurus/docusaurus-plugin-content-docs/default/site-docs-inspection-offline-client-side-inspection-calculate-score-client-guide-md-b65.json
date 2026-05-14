@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+  "id": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+  "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+  "description": "I. T?NG QUAN",
+  "source": "@site/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE.md",
+  "sourceDirName": "inspection_offline/client_side",
+  "slug": "/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+  "permalink": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+    "permalink": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS"
+  },
+  "next": {
+    "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+    "permalink": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE"
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "ai-workflow-image-compression",
+              "path": "/docs/ai-workflow-image-compression",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "analytics_permissions_docs",
+              "path": "/docs/analytics_permissions_docs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "analytics/learning_overview_summary_by_site",
+              "path": "/docs/analytics/learning_overview_summary_by_site",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "analytics/README",
+              "path": "/docs/analytics/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "analytics/site_report_api_docs",
+              "path": "/docs/analytics/site_report_api_docs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "android-16kb-support",
+              "path": "/docs/android-16kb-support",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Animations/celebration-animation",
+              "path": "/docs/Animations/celebration-animation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Animations/streak-animation",
+              "path": "/docs/Animations/streak-animation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cau-truc-du-an-va-huong-dan",
+              "path": "/docs/cau-truc-du-an-va-huong-dan",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "CHANGELOG_QUICK_REF",
+              "path": "/docs/CHANGELOG_QUICK_REF",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "CHANGELOG_SUMMARY",
+              "path": "/docs/CHANGELOG_SUMMARY",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "core-packages",
+              "path": "/docs/core-packages",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dependency-injection",
+              "path": "/docs/dependency-injection",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "deployment",
+              "path": "/docs/deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "discussion-entity-adapters",
+              "path": "/docs/discussion-entity-adapters",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "entity-chat-integration-guide",
+              "path": "/docs/entity-chat-integration-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ga4-analytics-guide",
+              "path": "/docs/ga4-analytics-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "gitnexus-usage",
+              "path": "/docs/gitnexus-usage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "head_up/create_announcement_feature",
+              "path": "/docs/head_up/create_announcement_feature",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/docs/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/client_side/bieu_mau",
+              "path": "/docs/inspection_offline/client_side/bieu_mau",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+              "path": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "path": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/client_side/score",
+              "path": "/docs/inspection_offline/client_side/score",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+              "path": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/INSPECTION_LOGIC_SYSTEM",
+              "path": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+              "path": "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+              "path": "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/README",
+              "path": "/docs/inspection_offline/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+              "path": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspections/answer-types-system",
+              "path": "/docs/inspections/answer-types-system",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspections/architecture-overview",
+              "path": "/docs/inspections/architecture-overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspections/README",
+              "path": "/docs/inspections/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "inspections/upload-progress-implementation",
+              "path": "/docs/inspections/upload-progress-implementation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "localization",
+              "path": "/docs/localization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "media_picker_plus_integration",
+              "path": "/docs/media_picker_plus_integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "multi_selection_search_modal_usage",
+              "path": "/docs/multi_selection_search_modal_usage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "notification-handlers",
+              "path": "/docs/notification-handlers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "push_notification_lifecycle",
+              "path": "/docs/push_notification_lifecycle",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "questionnair/ai_gennerate",
+              "path": "/docs/questionnair/ai_gennerate",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "RELEASE_NOTES_GUIDE",
+              "path": "/docs/RELEASE_NOTES_GUIDE",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ROUTE_MIGRATION_GUIDE",
+              "path": "/docs/ROUTE_MIGRATION_GUIDE",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schedule/dat-lich",
+              "path": "/docs/schedule/dat-lich",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schedule/schedule_creation_form",
+              "path": "/docs/schedule/schedule_creation_form",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "search_tab_usage",
+              "path": "/docs/search_tab_usage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "STREAM_CHAT_LOCALIZATION",
+              "path": "/docs/STREAM_CHAT_LOCALIZATION",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "styling-rules",
+              "path": "/docs/styling-rules",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "sub-app-development",
+              "path": "/docs/sub-app-development",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "supa_bibs_push_notification_subscription_points",
+              "path": "/docs/supa_bibs_push_notification_subscription_points",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "supa_communication_chat",
+              "path": "/docs/supa_communication_chat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "supa_communication_integration",
+              "path": "/docs/supa_communication_integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TaskAssignment/quick-status-change-implementation",
+              "path": "/docs/TaskAssignment/quick-status-change-implementation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TaskAssignment/task-assignment-status-change-flow",
+              "path": "/docs/TaskAssignment/task-assignment-status-change-flow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TaskAssignment/trang-home",
+              "path": "/docs/TaskAssignment/trang-home",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TaskAssignment/visibility-and-filtering-logic",
+              "path": "/docs/TaskAssignment/visibility-and-filtering-logic",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "training/filter_sync_personal_report",
+              "path": "/docs/training/filter_sync_personal_report",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "training/location_answer_implementation",
+              "path": "/docs/training/location_answer_implementation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "training/personal_report_default_filter",
+              "path": "/docs/training/personal_report_default_filter",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ui-components",
+              "path": "/docs/ui-components",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/dashboard/dashboard_frame",
+              "path": "/docs/widgets/dashboard/dashboard_frame",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/index",
+              "path": "/docs/widgets/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/supa_attendance_widgets",
+              "path": "/docs/widgets/supa_attendance_widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/supa_bibs_widgets",
+              "path": "/docs/widgets/supa_bibs_widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/supa_serving_widgets",
+              "path": "/docs/widgets/supa_serving_widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/supa_spend_widgets",
+              "path": "/docs/widgets/supa_spend_widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/supa_training_widgets",
+              "path": "/docs/widgets/supa_training_widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/supa_work_widgets",
+              "path": "/docs/widgets/supa_work_widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/video_streaming_screen",
+              "path": "/docs/widgets/video_streaming_screen",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/work/inspection/checklist_item",
+              "path": "/docs/widgets/work/inspection/checklist_item",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "widgets/work/task_assignment/task_item",
+              "path": "/docs/widgets/work/task_assignment/task_item",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/Animations/celebration-animation",
+                "label": "Animations/celebration-animation"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

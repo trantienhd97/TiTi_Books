@@ -1,0 +1,24 @@
+{
+  "unversionedId": "TaskAssignment/quick-status-change-implementation",
+  "id": "TaskAssignment/quick-status-change-implementation",
+  "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+  "description": "Tài liệu hướng dẫn implementation cho tính năng chuyển trạng thái nhanh ở TaskAssignmentItem trong trang Home và danh sách công việc",
+  "source": "@site/docs/TaskAssignment/quick-status-change-implementation.md",
+  "sourceDirName": "TaskAssignment",
+  "slug": "/TaskAssignment/quick-status-change-implementation",
+  "permalink": "/docs/TaskAssignment/quick-status-change-implementation",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/quick-status-change-implementation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Stream Chat Localization Configuration",
+    "permalink": "/docs/STREAM_CHAT_LOCALIZATION"
+  },
+  "next": {
+    "title": "Task Assignment Status Change Flow",
+    "permalink": "/docs/TaskAssignment/task-assignment-status-change-flow"
+  }
+}

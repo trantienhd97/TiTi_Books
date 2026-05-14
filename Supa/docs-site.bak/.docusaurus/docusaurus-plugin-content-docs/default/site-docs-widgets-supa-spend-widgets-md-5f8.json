@@ -1,0 +1,24 @@
+{
+  "unversionedId": "widgets/supa_spend_widgets",
+  "id": "widgets/supa_spend_widgets",
+  "title": "Supa Spend Widgets",
+  "description": "This document provides an overview of the reusable widgets in the supa_spend package.",
+  "source": "@site/docs/widgets/supa_spend_widgets.md",
+  "sourceDirName": "widgets",
+  "slug": "/widgets/supa_spend_widgets",
+  "permalink": "/docs/widgets/supa_spend_widgets",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_spend_widgets.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Supa Serving Widgets",
+    "permalink": "/docs/widgets/supa_serving_widgets"
+  },
+  "next": {
+    "title": "Supa Training Widgets",
+    "permalink": "/docs/widgets/supa_training_widgets"
+  }
+}

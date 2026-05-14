@@ -1,0 +1,1061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inspection-logic-system-phan-tich-chi-tiet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inspection-logic-system-phan-tich-chi-tiet">INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT<a class="headerlink" href="#inspection-logic-system-phan-tich-chi-tiet" title="Permanent link">&para;</a></h1>
+<h2 id="nguon-du-lieu">📋 NGUỒN DỮ LIỆU<a class="headerlink" href="#nguon-du-lieu" title="Permanent link">&para;</a></h2>
+<p><strong>Google Sheets:</strong> <a href="https://docs.google.com/spreadsheets/d/1Dvza9nF_M0DVo7milYam8teOeexMuWe4r_BakTTWkbc/edit?gid=224356272#gid=224356272">Logic Specification</a></p>
+<p><strong>Sheet:</strong> Logic (Sheet thứ 3)</p>
+<p><strong>Ngày phân tích:</strong> 2026-01-26</p>
+<hr />
+<h2 id="tong-quan-he-thong-logic">🎯 TỔNG QUAN HỆ THỐNG LOGIC<a class="headerlink" href="#tong-quan-he-thong-logic" title="Permanent link">&para;</a></h2>
+<p>Inspection system có <strong>8 loại logic</strong> có thể được trigger khi user trả lời câu hỏi. Logic này áp dụng cho <strong>4 loại câu hỏi chính</strong> và <strong>KHÔNG</strong> áp dụng cho 4 loại câu hỏi còn lại.</p>
+<hr />
+<h2 id="logic-theo-loai-cau-hoi">📊 LOGIC THEO LOẠI CÂU HỎI<a class="headerlink" href="#logic-theo-loai-cau-hoi" title="Permanent link">&para;</a></h2>
+<h3 id="nhom-1-co-logic-ay-u-8-loai">✅ Nhóm 1: CÓ LOGIC ĐẦY ĐỦ (8 loại)<a class="headerlink" href="#nhom-1-co-logic-ay-u-8-loai" title="Permanent link">&para;</a></h3>
+<p>Áp dụng cho các loại câu hỏi:</p>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Loại Câu Trả Lời</th>
+<th>Answer Type Enum</th>
+<th>Hỗ trợ Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Chọn 1 đáp án</strong></td>
+<td>SINGLE_CHOICE</td>
+<td>✅ 8 loại</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Chọn nhiều đáp án</strong></td>
+<td>MULTIPLE_CHOICE</td>
+<td>✅ 8 loại</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Nhập chữ</strong></td>
+<td>TEXT</td>
+<td>✅ 8 loại</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Nhập số</strong></td>
+<td>NUMBER</td>
+<td>✅ 8 loại</td>
+</tr>
+</tbody>
+</table>
+<p><strong>8 loại Logic có thể trigger:</strong></p>
+<h4 id="1-bat-buoc-them-hanh-ong-required-task">1. <strong>Bắt buộc thêm hành động</strong> (Required Task)<a class="headerlink" href="#1-bat-buoc-them-hanh-ong-required-task" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> User BẮT BUỘC phải tạo một Task Assignment để có thể tiếp tục</p>
+<p><strong>Use case:</strong>
+- Khi chọn đáp án "Không đạt" → Phải tạo task "Khắc phục"
+- Khi nhập số &lt; 5 → Phải tạo task "Cải thiện điểm số"</p>
+<p><strong>UI Behavior:</strong>
+- Hiển thị nút "Thêm hành động"
+- Block navigation cho đến khi task được tạo
+- Task có thể được gán cho user khác</p>
+<p><strong>Implementation:</strong></p>
+<pre><code class="language-dart">class ConditionalLogic {
+  LogicType type = LogicType.REQUIRE_TASK;
+  bool isBlocking = true;  // Block until task created
+  String promptMessage = &quot;Bạn cần tạo hành động để tiếp tục&quot;;
+}
+</code></pre>
+<hr />
+<h4 id="2-bat-buoc-them-bang-chung-hinh-anh-hoacva-ghi-chu-required-evidence">2. <strong>Bắt buộc thêm bằng chứng: Hình ảnh hoặc/và ghi chú</strong> (Required Evidence)<a class="headerlink" href="#2-bat-buoc-them-bang-chung-hinh-anh-hoacva-ghi-chu-required-evidence" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> User BẮT BUỘC phải upload hình ảnh và/hoặc nhập ghi chú</p>
+<p><strong>Use case:</strong>
+- Chọn "Có sự cố" → Phải chụp hình + ghi chú mô tả
+- Nhập số ngoài range → Phải giải thích bằng ghi chú</p>
+<p><strong>UI Behavior:</strong>
+- Show required indicator (<em>) trên Note field
+- Show required indicator (</em>) trên Media section
+- Block navigation nếu chưa có evidence
+- Validate trước khi cho phép next page</p>
+<p><strong>Implementation:</strong></p>
+<pre><code class="language-dart">class ConditionalLogic {
+  LogicType type = LogicType.REQUIRE_EVIDENCE;
+  bool requirePhoto = true;
+  bool requireNote = true;
+  String notePrompt = &quot;Vui lòng giải thích chi tiết&quot;;
+  String photoPrompt = &quot;Vui lòng chụp hình bằng chứng&quot;;
+}
+</code></pre>
+<hr />
+<h4 id="3-tu-tao-hanh-ong-auto-create-task">3. <strong>Tự tạo hành động</strong> (Auto-Create Task) ⭐<a class="headerlink" href="#3-tu-tao-hanh-ong-auto-create-task" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> Hệ thống TỰ ĐỘNG tạo Task Assignment với template có sẵn</p>
+<p><strong>Use case:</strong>
+- Chọn "Kém" → Tự động tạo task "QC kiểm tra lại" assign cho QC Manager
+- Nhập nhiệt độ &gt; 30°C → Tự động tạo task "Kiểm tra hệ thống làm mát"</p>
+<p><strong>UI Behavior:</strong>
+- Task được tạo ngay lập tức
+- Task hiển thị trong danh sách tasks của question
+- User có thể view/edit task
+- Assignee nhận notification</p>
+<p><strong>Implementation:</strong></p>
+<pre><code class="language-dart">class ConditionalLogic {
+  LogicType type = LogicType.AUTO_CREATE_TASK;
+  int taskTemplateId = 100;
+  String taskName = &quot;Khắc phục sản phẩm kém chất lượng&quot;;
+  String taskDescription = &quot;Kiểm tra và sửa chữa...&quot;;
+  List&lt;int&gt; assignToUserIds = [5, 10];  // QC Manager, Supervisor
+  List&lt;int&gt; assignToGroupIds = [2];  // QC Team
+  bool requireNoteOnTask = true;
+  bool requireMediaOnTask = true;
+}
+</code></pre>
+<p><strong>Đây chính là logic ta đã phân tích trong TASK_ASSIGNMENT_TRIGGER_ANALYSIS.md!</strong></p>
+<hr />
+<h4 id="4-canh-bao-warning">4. <strong>Cảnh báo</strong> (Warning)<a class="headerlink" href="#4-canh-bao-warning" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> Hiển thị thông báo cảnh báo cho user</p>
+<p><strong>Use case:</strong>
+- Chọn "Tạm chấp nhận" → Warning: "Cần theo dõi trong lần kiểm tra tiếp theo"
+- Nhập số gần ngưỡng → Warning: "Giá trị gần vượt ngưỡng cho phép"</p>
+<p><strong>UI Behavior:</strong>
+- Show warning banner dưới question
+- Icon warning màu vàng/cam
+- User có thể tiếp tục nhưng được nhắc nhở</p>
+<p><strong>Implementation:</strong></p>
+<pre><code class="language-dart">class ConditionalLogic {
+  LogicType type = LogicType.WARNING;
+  String warningMessage = &quot;Giá trị này cần được theo dõi&quot;;
+  WarningLevel level = WarningLevel.MEDIUM;  // LOW, MEDIUM, HIGH
+  bool dismissable = true;
+}
+</code></pre>
+<hr />
+<h4 id="5-tru-toan-bo-iem-cua-trang-zero-page-score">5. <strong>Trừ toàn bộ điểm của trang</strong> (Zero Page Score)<a class="headerlink" href="#5-tru-toan-bo-iem-cua-trang-zero-page-score" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> Điểm của TOÀN BỘ TRANG hiện tại = 0</p>
+<p><strong>Use case:</strong>
+- Câu hỏi critical: "Có giấy phép hoạt động?" → Chọn "Không" → Trang = 0 điểm
+- Câu hỏi an toàn: "Có biển cảnh báo?" → Chọn "Không" → Trang an toàn = 0 điểm</p>
+<p><strong>UI Behavior:</strong>
+- Page score hiển thị 0/maxScore
+- Các câu hỏi khác trong page vẫn có thể trả lời
+- Điểm page được tính lại nếu user thay đổi answer</p>
+<p><strong>Scoring Logic:</strong></p>
+<pre><code class="language-dart">class ScoringService {
+  double calculatePageScore(InspectionPage page) {
+    // Check if any question has ZERO_PAGE logic triggered
+    for (final question in page.questions) {
+      if (hasTriggeredLogic(question, LogicType.ZERO_PAGE_SCORE)) {
+        return 0.0;  // Entire page = 0
+      }
+    }
+
+    // Normal scoring
+    return sumQuestionScores(page.questions);
+  }
+}
+</code></pre>
+<hr />
+<h4 id="6-tru-toan-bo-iem-cua-phan-oan-zero-section-score">6. <strong>Trừ toàn bộ điểm của phân đoạn</strong> (Zero Section Score)<a class="headerlink" href="#6-tru-toan-bo-iem-cua-phan-oan-zero-section-score" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> Điểm của TOÀN BỘ PHÂN ĐOẠN (section/segment) = 0</p>
+<p><strong>Use case:</strong>
+- Section "Vệ sinh" có câu hỏi critical → Không đạt → Section vệ sinh = 0 điểm
+- Section "An toàn lao động" → Vi phạm nghiêm trọng → Section = 0 điểm</p>
+<p><strong>UI Behavior:</strong>
+- Section score = 0/maxScore
+- Các section khác vẫn giữ điểm bình thường
+- Có thể có nhiều sections = 0</p>
+<p><strong>Scoring Logic:</strong></p>
+<pre><code class="language-dart">class ScoringService {
+  double calculateSectionScore(List&lt;InspectionQuestion&gt; sectionQuestions) {
+    // Check if any question has ZERO_SECTION logic triggered
+    for (final question in sectionQuestions) {
+      if (hasTriggeredLogic(question, LogicType.ZERO_SECTION_SCORE)) {
+        return 0.0;  // Entire section = 0
+      }
+    }
+
+    // Normal scoring
+    return sumQuestionScores(sectionQuestions);
+  }
+}
+</code></pre>
+<p><strong>Note:</strong> Section = Parent question có nested questions</p>
+<hr />
+<h4 id="7-tru-toan-bo-iem-cua-kiem-tra-zero-inspection-score">7. <strong>Trừ toàn bộ điểm của kiểm tra</strong> (Zero Inspection Score)<a class="headerlink" href="#7-tru-toan-bo-iem-cua-kiem-tra-zero-inspection-score" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> Điểm của TOÀN BỘ INSPECTION = 0</p>
+<p><strong>Use case:</strong>
+- Câu hỏi CRITICAL nhất: "Có vi phạm pháp luật?" → Chọn "Có" → Toàn bộ inspection = 0 điểm
+- Câu hỏi knockout: "Sản phẩm đạt tiêu chuẩn bắt buộc?" → "Không" → Inspection fail = 0 điểm</p>
+<p><strong>UI Behavior:</strong>
+- Total inspection score = 0/maxScore
+- Màu đỏ, icon fail
+- User vẫn có thể tiếp tục trả lời (để ghi nhận thông tin)
+- Inspection tự động đánh dấu "Failed"</p>
+<p><strong>Scoring Logic:</strong></p>
+<pre><code class="language-dart">class ScoringService {
+  double calculateInspectionScore(Inspection inspection) {
+    // Check ALL questions in ALL pages
+    for (final page in inspection.pages) {
+      for (final question in page.questions) {
+        if (hasTriggeredLogic(question, LogicType.ZERO_INSPECTION_SCORE)) {
+          return 0.0;  // ENTIRE INSPECTION = 0
+        }
+      }
+    }
+
+    // Normal scoring
+    return sumPageScores(inspection.pages);
+  }
+}
+</code></pre>
+<hr />
+<h4 id="8-khong-tinh-iem-cau-question-not-scored">8. <strong>Không tính điểm câu</strong> (Question Not Scored)<a class="headerlink" href="#8-khong-tinh-iem-cau-question-not-scored" title="Permanent link">&para;</a></h4>
+<p><strong>Mô tả:</strong> Câu hỏi này KHÔNG được tính vào tổng điểm (N/A)</p>
+<p><strong>Use case:</strong>
+- Câu hỏi thông tin: "Họ tên người kiểm tra?" → Không tính điểm
+- Câu hỏi optional: "Ghi chú bổ sung?" → Không tính điểm
+- Câu hỏi conditional: Chỉ tính điểm nếu điều kiện X thỏa mãn, nếu không thì N/A</p>
+<p><strong>UI Behavior:</strong>
+- Không hiển thị điểm cho question này
+- MaxScore của page/section không bao gồm question này
+- Score indicator show "N/A" hoặc "-"</p>
+<p><strong>Scoring Logic:</strong></p>
+<pre><code class="language-dart">class ScoringService {
+  double calculateQuestionScore(InspectionQuestion question) {
+    // Check if this question should be scored
+    if (hasTriggeredLogic(question, LogicType.NOT_SCORED)) {
+      return 0.0;  // But also maxScore = 0
+    }
+
+    // Normal scoring
+    return getScoreFromAnswer(question);
+  }
+
+  double getQuestionMaxScore(InspectionQuestion question) {
+    if (hasTriggeredLogic(question, LogicType.NOT_SCORED)) {
+      return 0.0;  // Max score also = 0 (not counted)
+    }
+
+    return question.maxScore;
+  }
+}
+</code></pre>
+<hr />
+<h3 id="nhom-2-khong-co-logic">❌ Nhóm 2: KHÔNG CÓ LOGIC<a class="headerlink" href="#nhom-2-khong-co-logic" title="Permanent link">&para;</a></h3>
+<p>Các loại câu hỏi sau <strong>KHÔNG</strong> hỗ trợ logic conditional:</p>
+<table>
+<thead>
+<tr>
+<th>STT</th>
+<th>Loại Câu Trả Lời</th>
+<th>Answer Type Enum</th>
+<th>Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td><strong>Đa phương tiện</strong></td>
+<td>IMAGE (MEDIA)</td>
+<td>❌ Không có logic</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Ngày giờ</strong></td>
+<td>DATETIME</td>
+<td>❌ Không có logic</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Hướng dẫn</strong></td>
+<td>INSTRUCTION</td>
+<td>❌ Không có logic</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Xác định vị trí</strong></td>
+<td>LOCATION</td>
+<td>❌ Không có logic</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lý do:</strong>
+- <strong>Đa phương tiện</strong>: Chỉ upload file, không có điều kiện logic
+- <strong>Ngày giờ</strong>: Chỉ chọn date/time, có thể có validation range nhưng không có logic phức tạp
+- <strong>Hướng dẫn</strong>: Chỉ hiển thị text, không nhận input
+- <strong>Xác định vị trí</strong>: Chỉ capture GPS coordinates</p>
+<p><strong>Note:</strong> Có thể có validation nhưng không có conditional logic như trừ điểm, tạo task, etc.</p>
+<hr />
+<h2 id="conditional-operator-types">🔧 CONDITIONAL OPERATOR TYPES<a class="headerlink" href="#conditional-operator-types" title="Permanent link">&para;</a></h2>
+<p>Để trigger logic, cần check điều kiện với các operators:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Operator</th>
+<th>Áp dụng cho</th>
+<th>Mô tả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>EQUALS</strong> (=)</td>
+<td>Text, Number, Options</td>
+<td>Giá trị bằng</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>NOT_EQUALS</strong> (≠)</td>
+<td>Text, Number, Options</td>
+<td>Giá trị khác</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>GREATER_THAN</strong> (&gt;)</td>
+<td>Number</td>
+<td>Lớn hơn</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>LESS_THAN</strong> (&lt;)</td>
+<td>Number</td>
+<td>Nhỏ hơn</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>GREATER_OR_EQUAL</strong> (≥)</td>
+<td>Number</td>
+<td>Lớn hơn hoặc bằng</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>LESS_OR_EQUAL</strong> (≤)</td>
+<td>Number</td>
+<td>Nhỏ hơn hoặc bằng</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>BETWEEN</strong></td>
+<td>Number</td>
+<td>Trong khoảng [from, to]</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>NOT_BETWEEN</strong></td>
+<td>Number</td>
+<td>Ngoài khoảng [from, to]</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>CONTAINS</strong></td>
+<td>Text</td>
+<td>Chứa chuỗi</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>NOT_CONTAINS</strong></td>
+<td>Text</td>
+<td>Không chứa chuỗi</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="config-structure-cho-inspection-local">📐 CONFIG STRUCTURE CHO INSPECTION LOCAL<a class="headerlink" href="#config-structure-cho-inspection-local" title="Permanent link">&para;</a></h2>
+<h3 id="conditionalrule-model">ConditionalRule Model<a class="headerlink" href="#conditionalrule-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">class ConditionalRule extends JsonModel {
+  // Target question
+  JsonInteger questionId;
+
+  // Condition
+  JsonInteger operatorId;  // EQUALS, GREATER_THAN, etc.
+  JsonString textValue;    // For text comparison
+  JsonDouble numberValue;  // For number comparison  
+  JsonDouble numberFrom;   // For BETWEEN operator
+  JsonDouble numberTo;     // For BETWEEN operator
+  JsonList&lt;int&gt; triggerAnswerOptionIds;  // For SINGLE/MULTIPLE_CHOICE
+
+  // Logic actions (có thể có nhiều logic cùng lúc)
+  JsonBoolean requireTask;
+  JsonBoolean requireEvidence;
+  JsonBoolean requirePhoto;
+  JsonBoolean requireNote;
+
+  JsonBoolean autoCreateTask;
+  JsonInteger taskTemplateId;
+  JsonString taskName;
+  JsonString taskDescription;
+  JsonList&lt;int&gt; assignToUserIds;
+  JsonList&lt;int&gt; assignToGroupIds;
+  JsonBoolean taskRequireNote;
+  JsonBoolean taskRequireMedia;
+
+  JsonBoolean showWarning;
+  JsonString warningMessage;
+  JsonString warningLevel;  // LOW, MEDIUM, HIGH
+
+  JsonBoolean zeroPageScore;
+  JsonBoolean zeroSectionScore;
+  JsonBoolean zeroInspectionScore;
+  JsonBoolean notScored;
+}
+</code></pre>
+<h3 id="example-configs">Example Configs<a class="headerlink" href="#example-configs" title="Permanent link">&para;</a></h3>
+<h4 id="example-1-chon-kem-auto-create-task-require-evidence-zero-page-score">Example 1: Chọn "Kém" → Auto-create task + Require evidence + Zero page score<a class="headerlink" href="#example-1-chon-kem-auto-create-task-require-evidence-zero-page-score" title="Permanent link">&para;</a></h4>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 50,
+  &quot;operatorId&quot;: 1,  // EQUALS
+  &quot;triggerAnswerOptionIds&quot;: [103],  // Option &quot;Kém&quot;
+
+  &quot;autoCreateTask&quot;: true,
+  &quot;taskName&quot;: &quot;Khắc phục sản phẩm kém chất lượng&quot;,
+  &quot;taskDescription&quot;: &quot;Kiểm tra và sửa chữa sản phẩm không đạt tiêu chuẩn&quot;,
+  &quot;assignToUserIds&quot;: [5],  // QC Manager
+  &quot;taskRequireNote&quot;: true,
+  &quot;taskRequireMedia&quot;: true,
+
+  &quot;requireEvidence&quot;: true,
+  &quot;requirePhoto&quot;: true,
+  &quot;requireNote&quot;: true,
+
+  &quot;zeroPageScore&quot;: true
+}
+</code></pre>
+<p><strong>Kết quả khi chọn "Kém":</strong>
+1. ✅ Task tự động được tạo, assign cho QC Manager
+2. ✅ Question bắt buộc phải upload ảnh + ghi chú
+3. ✅ Toàn bộ page = 0 điểm</p>
+<h4 id="example-2-nhap-nhiet-o-30c-warning-auto-create-task">Example 2: Nhập nhiệt độ &gt; 30°C → Warning + Auto-create task<a class="headerlink" href="#example-2-nhap-nhiet-o-30c-warning-auto-create-task" title="Permanent link">&para;</a></h4>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 75,
+  &quot;operatorId&quot;: 3,  // GREATER_THAN
+  &quot;numberValue&quot;: 30.0,
+
+  &quot;showWarning&quot;: true,
+  &quot;warningMessage&quot;: &quot;Nhiệt độ vượt ngưỡng cho phép (30°C)&quot;,
+  &quot;warningLevel&quot;: &quot;HIGH&quot;,
+
+  &quot;autoCreateTask&quot;: true,
+  &quot;taskName&quot;: &quot;Kiểm tra hệ thống điều hòa&quot;,
+  &quot;taskDescription&quot;: &quot;Nhiệt độ phòng vượt quá 30°C&quot;,
+  &quot;assignToGroupIds&quot;: [3]  // Maintenance Team
+}
+</code></pre>
+<p><strong>Kết quả khi nhập 35°C:</strong>
+1. ✅ Warning hiển thị: "Nhiệt độ vượt ngưỡng..."
+2. ✅ Task tự động tạo cho Maintenance Team</p>
+<h4 id="example-3-khong-co-giay-phep-zero-inspection-require-task">Example 3: Không có giấy phép → Zero inspection + Require task<a class="headerlink" href="#example-3-khong-co-giay-phep-zero-inspection-require-task" title="Permanent link">&para;</a></h4>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 10,
+  &quot;operatorId&quot;: 1,  // EQUALS
+  &quot;triggerAnswerOptionIds&quot;: [203],  // Option &quot;Không&quot;
+
+  &quot;requireTask&quot;: true,
+
+  &quot;zeroInspectionScore&quot;: true
+}
+</code></pre>
+<p><strong>Kết quả khi chọn "Không":</strong>
+1. ✅ Toàn bộ inspection = 0 điểm
+2. ✅ Phải tạo task để có thể tiếp tục</p>
+<hr />
+<h2 id="implementation-cho-phase-1">💻 IMPLEMENTATION CHO PHASE 1<a class="headerlink" href="#implementation-cho-phase-1" title="Permanent link">&para;</a></h2>
+<h3 id="1-conditionalservice-evaluate-logic">1. ConditionalService - Evaluate Logic<a class="headerlink" href="#1-conditionalservice-evaluate-logic" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">class InspectionLocalConditionalService {
+  ConditionalResult evaluateConditionals(
+    InspectionQuestion question,
+    List&lt;InspectionQuestionAnswer&gt; answers,
+    List&lt;ConditionalRule&gt; rules,
+  ) {
+    final result = ConditionalResult();
+
+    // Find rules for this question
+    final questionRules = rules.where((r) =&gt; r.questionId == question.id.value);
+
+    for (final rule in questionRules) {
+      if (_checkCondition(rule, answers)) {
+        // Condition matched, apply logic
+        _applyLogic(rule, result);
+      }
+    }
+
+    return result;
+  }
+
+  bool _checkCondition(ConditionalRule rule, List&lt;InspectionQuestionAnswer&gt; answers) {
+    switch (rule.operatorId) {
+      case 1: // EQUALS
+        if (rule.triggerAnswerOptionIds.isNotEmpty) {
+          return answers.any((a) =&gt; 
+            rule.triggerAnswerOptionIds.contains(a.inspectionAnswerOptionId.value)
+          );
+        }
+        if (rule.numberValue != null) {
+          return answers.any((a) =&gt; a.numberValue.value == rule.numberValue);
+        }
+        if (rule.textValue != null) {
+          return answers.any((a) =&gt; a.textValue.value == rule.textValue);
+        }
+        break;
+
+      case 3: // GREATER_THAN
+        return answers.any((a) =&gt; a.numberValue.value &gt; rule.numberValue);
+
+      case 4: // LESS_THAN
+        return answers.any((a) =&gt; a.numberValue.value &lt; rule.numberValue);
+
+      case 7: // BETWEEN
+        return answers.any((a) =&gt; 
+          a.numberValue.value &gt;= rule.numberFrom &amp;&amp;
+          a.numberValue.value &lt;= rule.numberTo
+        );
+
+      // ... other operators
+    }
+
+    return false;
+  }
+
+  void _applyLogic(ConditionalRule rule, ConditionalResult result) {
+    if (rule.requireTask) {
+      result.requireTask = true;
+    }
+
+    if (rule.requireEvidence) {
+      result.requirePhoto = rule.requirePhoto;
+      result.requireNote = rule.requireNote;
+    }
+
+    if (rule.autoCreateTask) {
+      final task = _createTask(rule);
+      result.tasksToCreate.add(task);
+    }
+
+    if (rule.showWarning) {
+      result.warnings.add(rule.warningMessage);
+    }
+
+    if (rule.zeroPageScore) {
+      result.zeroPageScore = true;
+    }
+
+    if (rule.zeroSectionScore) {
+      result.zeroSectionScore = true;
+    }
+
+    if (rule.zeroInspectionScore) {
+      result.zeroInspectionScore = true;
+    }
+
+    if (rule.notScored) {
+      result.notScored = true;
+    }
+  }
+
+  TaskAssignment _createTask(ConditionalRule rule) {
+    final task = TaskAssignment()
+      ..name.value = rule.taskName
+      ..description.value = rule.taskDescription
+      ..isIgnoreNote.value = !rule.taskRequireNote
+      ..isIgnoreAttachment.value = !rule.taskRequireMedia;
+
+    // Add assignees
+    final assignees = rule.assignToUserIds.map((userId) {
+      return TaskAssignmentAssignee()..appUserId.value = userId;
+    }).toList();
+
+    task.taskAssignmentAssignees.value = assignees;
+
+    return task;
+  }
+}
+
+class ConditionalResult {
+  bool requireTask = false;
+  bool requirePhoto = false;
+  bool requireNote = false;
+
+  List&lt;TaskAssignment&gt; tasksToCreate = [];
+  List&lt;String&gt; warnings = [];
+
+  bool zeroPageScore = false;
+  bool zeroSectionScore = false;
+  bool zeroInspectionScore = false;
+  bool notScored = false;
+}
+</code></pre>
+<h3 id="2-scoringservice-apply-logic-to-scores">2. ScoringService - Apply Logic to Scores<a class="headerlink" href="#2-scoringservice-apply-logic-to-scores" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">class InspectionLocalScoringService {
+  double calculatePageScore(
+    InspectionPage page,
+    Map&lt;int, ConditionalResult&gt; conditionalResults,
+  ) {
+    // Check if any question triggered ZERO_PAGE_SCORE
+    for (final question in page.questions) {
+      final result = conditionalResults[question.id.value];
+      if (result?.zeroPageScore == true) {
+        return 0.0;  // Entire page = 0
+      }
+    }
+
+    // Normal scoring
+    double totalScore = 0.0;
+    double totalMaxScore = 0.0;
+
+    for (final question in page.questions) {
+      final result = conditionalResults[question.id.value];
+
+      // Skip if NOT_SCORED
+      if (result?.notScored == true) {
+        continue;
+      }
+
+      totalScore += calculateQuestionScore(question);
+      totalMaxScore += question.maxScore.value;
+    }
+
+    return totalScore;
+  }
+
+  double calculateInspectionScore(
+    Inspection inspection,
+    Map&lt;int, ConditionalResult&gt; conditionalResults,
+  ) {
+    // Check if any question triggered ZERO_INSPECTION_SCORE
+    for (final page in inspection.pages) {
+      for (final question in page.questions) {
+        final result = conditionalResults[question.id.value];
+        if (result?.zeroInspectionScore == true) {
+          return 0.0;  // ENTIRE INSPECTION = 0
+        }
+      }
+    }
+
+    // Normal scoring - sum page scores
+    return inspection.pages
+      .map((page) =&gt; calculatePageScore(page, conditionalResults))
+      .fold(0.0, (sum, score) =&gt; sum + score);
+  }
+}
+</code></pre>
+<h3 id="3-integration-voi-bloc">3. Integration với Bloc<a class="headerlink" href="#3-integration-voi-bloc" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">Future&lt;void&gt; _onUpdateAnswer(
+  UpdateAnswerLocal event,
+  Emitter&lt;InspectionLocalState&gt; emit,
+) async {
+  final currentState = state as InspectionLocalLoaded;
+
+  // ... update answer
+
+  // ⭐ EVALUATE CONDITIONALS ⭐
+  final conditionalResult = conditionalService.evaluateConditionals(
+    question,
+    event.answers,
+    currentState.config.conditionalRules,
+  );
+
+  // Apply logic effects
+
+  // 1. Auto-create tasks
+  if (conditionalResult.tasksToCreate.isNotEmpty) {
+    question.taskAssignments.value.addAll(conditionalResult.tasksToCreate);
+  }
+
+  // 2. Set required fields
+  question.requireNote.value = conditionalResult.requireNote;
+  question.requireMedia.value = conditionalResult.requirePhoto;
+
+  // 3. Add warnings
+  question.warnings.value = conditionalResult.warnings;
+
+  // 4. Recalculate scores (với logic zero scores)
+  final allConditionalResults = &lt;int, ConditionalResult&gt;{};
+  // ... evaluate all questions to get all conditional results
+
+  final updatedScores = scoringService.calculateAllScores(
+    updatedInspection,
+    allConditionalResults,  // Pass conditional results
+  );
+
+  // ... save to DB, fire API
+}
+</code></pre>
+<hr />
+<h2 id="summary">📝 SUMMARY<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h3 id="cac-iem-quan-trong">Các Điểm Quan Trọng:<a class="headerlink" href="#cac-iem-quan-trong" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>8 loại logic</strong> cho 4 loại câu hỏi (SINGLE_CHOICE, MULTIPLE_CHOICE, TEXT, NUMBER)</p>
+</li>
+<li>
+<p><strong>4 loại câu hỏi không có logic</strong> (IMAGE, DATETIME, INSTRUCTION, LOCATION)</p>
+</li>
+<li>
+<p><strong>Logic có thể kết hợp:</strong> Một câu hỏi có thể trigger nhiều logic cùng lúc</p>
+</li>
+<li>
+<p>Ví dụ: Chọn "Kém" → Auto-create task + Require evidence + Zero page score</p>
+</li>
+<li>
+<p><strong>Priority scoring:</strong></p>
+</li>
+<li>
+<p>ZERO_INSPECTION_SCORE &gt; ZERO_SECTION_SCORE &gt; ZERO_PAGE_SCORE &gt; NOT_SCORED</p>
+</li>
+<li>
+<p><strong>Config-driven:</strong> Tất cả logic được config từ BE, client chỉ evaluate</p>
+</li>
+<li>
+<p><strong>Real-time:</strong> Phase 1 evaluate ngay lập tức, không chờ BE</p>
+</li>
+</ol>
+<hr />
+<p><strong>Document này là foundation cho Implementation Phase 1!</strong> 🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "analytics_permissions_docs",
+  "id": "analytics_permissions_docs",
+  "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+  "description": "Hệ thống phân quyền cho module Báo cáo được thiết kế dựa trên danh sách các đường dẫn (paths) được trả về từ Backend.",
+  "source": "@site/docs/analytics_permissions_docs.md",
+  "sourceDirName": ".",
+  "slug": "/analytics_permissions_docs",
+  "permalink": "/docs/analytics_permissions_docs",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics_permissions_docs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+    "permalink": "/docs/analytics/site_report_api_docs"
+  },
+  "next": {
+    "title": "Android 16KB Page Size Support",
+    "permalink": "/docs/android-16kb-support"
+  }
+}

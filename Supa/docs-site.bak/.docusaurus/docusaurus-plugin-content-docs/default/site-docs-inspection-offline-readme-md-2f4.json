@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/README",
+  "id": "inspection_offline/README",
+  "title": "INSPECTION OFFLINE - DOCUMENTATION",
+  "description": "This folder contains complete documentation for the Inspection Offline/Local feature implementation.",
+  "source": "@site/docs/inspection_offline/README.md",
+  "sourceDirName": "inspection_offline",
+  "slug": "/inspection_offline/",
+  "permalink": "/docs/inspection_offline/",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/"
+  },
+  "next": {
+    "title": "INSPECTION LOGIC - QUICK REFERENCE",
+    "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF"
+  }
+}

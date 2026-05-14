@@ -1,0 +1,24 @@
+{
+  "unversionedId": "notification-handlers",
+  "id": "notification-handlers",
+  "title": "Notification Handler System",
+  "description": "1. Tổng quan",
+  "source": "@site/docs/notification-handlers.md",
+  "sourceDirName": ".",
+  "slug": "/notification-handlers",
+  "permalink": "/docs/notification-handlers",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/notification-handlers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+    "permalink": "/docs/multi_selection_search_modal_usage"
+  },
+  "next": {
+    "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+    "permalink": "/docs/push_notification_lifecycle"
+  }
+}

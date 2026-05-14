@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspections/README",
+  "id": "inspections/README",
+  "title": "Inspection System Documentation",
+  "description": "Overview",
+  "source": "@site/docs/inspections/README.md",
+  "sourceDirName": "inspections",
+  "slug": "/inspections/",
+  "permalink": "/docs/inspections/",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "score",
+    "permalink": "/docs/inspection_offline/client_side/score"
+  },
+  "next": {
+    "title": "Answer Types System",
+    "permalink": "/docs/inspections/answer-types-system"
+  }
+}

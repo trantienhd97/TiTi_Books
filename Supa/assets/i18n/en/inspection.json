@@ -1,0 +1,20 @@
+{
+  "evaluation.evaluating": "Evaluating",
+  "evaluation.notEvaluate": "Not evaluated",
+  "evaluation.notPassed": "Not passed",
+  "evaluation.passed": "Passed",
+  "validation.noPermission": "No permission to finish this inspection",
+  "validation.requireAction": "You are required to create a task to complete this item",
+  "validation.requireEvidenceAttachment": "You are required to add image evidence to complete this item",
+  "validation.requireEvidenceAttachmentAndNote": "You are required to add a note and image evidence to complete this item",
+  "validation.requireEvidenceNote": "You are required to add a note to complete this item",
+  "validation.surveyNotExisted": "Survey does not exist",
+  "validation.pageHasError": "Page has errors, please check again",
+  "validation.questionNotAnswered": "Question has not been answered",
+  "empty.title": "Start Inspecting Now!",
+  "empty.description": "No checklists for today. Select a template from the library to begin your inspection.",
+  "empty.action": "Get Started",
+  "empty.hint": "Template Library",
+  "preview.finish.title": "Finished",
+  "preview.finish.description": "You have completed the inspection template preview"
+}

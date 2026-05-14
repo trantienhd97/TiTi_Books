@@ -1,0 +1,20 @@
+{
+  "evaluation.evaluating": "평가 중",
+  "evaluation.notEvaluate": "미평가",
+  "evaluation.notPassed": "불합격",
+  "evaluation.passed": "합격",
+  "validation.noPermission": "이 점검을 완료할 권한이 없습니다.",
+  "validation.requireAction": "이 항목을 완료하려면 작업을 생성해야 합니다",
+  "validation.requireEvidenceAttachment": "이 항목을 완료하려면 이미지 증거를 추가해야 합니다",
+  "validation.requireEvidenceAttachmentAndNote": "이 항목을 완료하려면 메모와 이미지 증거를 추가해야 합니다",
+  "validation.requireEvidenceNote": "이 항목을 완료하려면 메모를 추가해야 합니다",
+  "validation.surveyNotExisted": "설문조사가 존재하지 않습니다.",
+  "validation.pageHasError": "페이지에 오류가 있습니다. 다시 확인해 주세요",
+  "validation.questionNotAnswered": "질문에 응답하지 않았습니다",
+  "empty.description": "오늘 점검 목록이 없습니다. 라이브러리에서 템플릿을 선택하여 점검을 시작하세요.",
+  "empty.title": "지금 점검을 시작하세요!",
+  "empty.action": "지금 시작하기",
+  "empty.hint": "템플릿 라이브러리",
+  "preview.finish.title": "완료",
+  "preview.finish.description": "검사 템플릿 미리보기를 완료했습니다"
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "localization",
+  "id": "localization",
+  "title": "Localization",
+  "description": "Dự án này sử dụng supal10nmanager cho localization. Quy trình làm việc là \"code-first\", nghĩa là bạn định nghĩa translation keys trong code, sau đó extract chúng ra các file JSON.",
+  "source": "@site/docs/localization.md",
+  "sourceDirName": ".",
+  "slug": "/localization",
+  "permalink": "/docs/localization",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/localization.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Upload Progress Implementation - Inspection Media",
+    "permalink": "/docs/inspections/upload-progress-implementation"
+  },
+  "next": {
+    "title": "media_picker_plus Integration Guide",
+    "permalink": "/docs/media_picker_plus_integration"
+  }
+}

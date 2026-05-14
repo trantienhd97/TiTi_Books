@@ -1,0 +1,1168 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Cấu trúc dự án và hướng dẫn phát triển - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cau-truc-du-an-va-huong-dan-phat-trien" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cấu trúc dự án và hướng dẫn phát triển
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cau-truc-du-an-va-huong-dan-phat-trien">Cấu trúc dự án và hướng dẫn phát triển<a class="headerlink" href="#cau-truc-du-an-va-huong-dan-phat-trien" title="Permanent link">&para;</a></h1>
+<h2 id="1-cau-truc-chung-cua-du-an">1. Cấu trúc chung của dự án<a class="headerlink" href="#1-cau-truc-chung-cua-du-an" title="Permanent link">&para;</a></h2>
+<h3 id="11-tong-quan">1.1. Tổng quan<a class="headerlink" href="#11-tong-quan" title="Permanent link">&para;</a></h3>
+<p>SupaMobileApp là một <strong>super app</strong> được xây dựng bằng Flutter, cho phép tích hợp nhiều module (sub-app) độc lập vào một ứng dụng duy nhất. Mỗi sub-app có thể hoạt động độc lập hoặc được tích hợp vào app chính.</p>
+<h3 id="12-cau-truc-thu-muc">1.2. Cấu trúc thư mục<a class="headerlink" href="#12-cau-truc-thu-muc" title="Permanent link">&para;</a></h3>
+<pre><code>SupaMobileApp/
+├── lib/                          # Main app code
+│   ├── main.dart                # Entry point chính của app
+│   ├── main_&lt;sub_app&gt;.dart      # Entry point riêng cho từng sub-app
+│   ├── config/                  # Cấu hình chung
+│   ├── modules/                 # Modules của main app
+│   └── router/                  # Router chính
+│
+├── packages/                    # Các sub-packages (sub-apps)
+│   ├── supa_architecture/       # Core architecture package
+│   ├── supa_foundation/         # Foundation package (shared)
+│   ├── supa_work/               # Work sub-app
+│   ├── supa_project/            # Project sub-app
+│   ├── supa_attendance/         # Attendance sub-app
+│   ├── supa_spend/              # Spend sub-app
+│   ├── supa_training/           # Training sub-app
+│   ├── supa_serving/            # Serving sub-app
+│   ├── supa_bibs/               # BIBS sub-app
+│   ├── supa_chat/               # Chat sub-app
+│   ├── supa_discussion/         # Discussion package (shared)
+│   ├── supa_notification/       # Notification package (shared)
+│   └── supa_admin/              # Admin sub-app
+│
+├── assets/                      # Assets chung (images, fonts, i18n)
+├── scripts/                     # Utility scripts
+│   └── switch_sub_app.sh       # Script chuyển đổi sub-app
+├── .vscode/                     # VSCode configuration
+│   └── launch.json              # Debug configurations
+└── docs/                        # Tài liệu
+</code></pre>
+<h3 id="13-main-project-vs-sub-packages">1.3. Main Project vs Sub-Packages<a class="headerlink" href="#13-main-project-vs-sub-packages" title="Permanent link">&para;</a></h3>
+<p><strong>Main Project (<code>lib/</code>):</strong>
+- Chứa code chính của ứng dụng
+- Quản lý việc đăng ký và điều hướng giữa các sub-apps
+- Xử lý authentication, routing chính
+- Cung cấp dashboard và các tính năng chung</p>
+<p><strong>Sub-Packages (<code>packages/</code>):</strong>
+- Mỗi package là một sub-app độc lập
+- Có cấu trúc riêng: <code>lib/</code>, <code>pubspec.yaml</code>
+- Implement interface <code>SubApp</code> từ <code>supa_architecture</code>
+- Có thể chạy độc lập hoặc tích hợp vào main app</p>
+<p><strong>Shared Packages:</strong>
+- <code>supa_architecture</code>: Core architecture, models, utilities
+- <code>supa_foundation</code>: Shared widgets, services, themes
+- <code>supa_notification</code>: Notification handling
+- <code>supa_discussion</code>: Discussion features</p>
+<h3 id="14-cau-truc-main-application-lib">1.4. Cấu trúc Main Application (<code>lib/</code>)<a class="headerlink" href="#14-cau-truc-main-application-lib" title="Permanent link">&para;</a></h3>
+<p>Thư mục <code>lib/</code> chứa code chính của ứng dụng, được tổ chức thành các thư mục con:</p>
+<ul>
+<li><strong><code>config/</code></strong>: Chứa các file cấu hình, bao gồm dependency injection setup (<code>get_it.dart</code>)</li>
+<li><strong><code>modules/</code></strong>: Chứa các module logic nghiệp vụ chính, như <code>admin</code>, <code>discussion</code>, <code>general</code>, và <code>notifications</code></li>
+<li><strong><code>router/</code></strong>: Xử lý navigation và routing cho main application</li>
+<li><strong><code>theme/</code></strong>: Định nghĩa theme và styling của ứng dụng</li>
+</ul>
+<h3 id="15-dependency-graph-giua-cac-packages">1.5. Dependency Graph giữa các Packages<a class="headerlink" href="#15-dependency-graph-giua-cac-packages" title="Permanent link">&para;</a></h3>
+<h4 id="151-foundation-package-core">1.5.1. Foundation Package (Core)<a class="headerlink" href="#151-foundation-package-core" title="Permanent link">&para;</a></h4>
+<p><code>supa_foundation</code> là package cơ sở, không có internal dependencies. Package này chứa:
+- Shared utilities
+- UI components
+- Firebase integration
+- Media handling
+- Authentication</p>
+<h4 id="152-packages-phu-thuoc-vao-foundation">1.5.2. Packages phụ thuộc vào Foundation<a class="headerlink" href="#152-packages-phu-thuoc-vao-foundation" title="Permanent link">&para;</a></h4>
+<p>Tất cả các packages khác đều phụ thuộc vào <code>supa_foundation</code>:
+- <code>supa_training</code> → <code>supa_foundation</code>
+- <code>supa_attendance</code> → <code>supa_foundation</code>
+- <code>supa_serving</code> → <code>supa_foundation</code>
+- <code>supa_spend</code> → <code>supa_foundation</code>
+- <code>supa_work</code> → <code>supa_foundation</code>
+- <code>supa_project</code> → <code>supa_foundation</code>
+- <code>supa_bibs</code> → <code>supa_foundation</code>
+- <code>supa_chat</code> → <code>supa_foundation</code></p>
+<h4 id="153-cross-package-dependencies">1.5.3. Cross-Package Dependencies<a class="headerlink" href="#153-cross-package-dependencies" title="Permanent link">&para;</a></h4>
+<p>Một số packages có dependencies trên các feature packages khác:</p>
+<ol>
+<li><strong>supa_training:</strong></li>
+<li>
+<p>Depends on: <code>supa_foundation</code>, <code>supa_work</code>, <code>supa_project</code></p>
+</li>
+<li>
+<p><strong>supa_attendance:</strong></p>
+</li>
+<li>
+<p>Depends on: <code>supa_foundation</code>, <code>supa_work</code>, <code>supa_training</code></p>
+</li>
+<li>
+<p><strong>supa_work:</strong></p>
+</li>
+<li>
+<p>Depends on: <code>supa_foundation</code>, <code>supa_project</code>, <code>supa_spend</code></p>
+</li>
+<li>
+<p><strong>supa_project:</strong></p>
+</li>
+<li>Depends on: <code>supa_foundation</code>, <code>supa_work</code>, <code>supa_attendance</code></li>
+</ol>
+<h4 id="154-dependency-graph-visualization">1.5.4. Dependency Graph Visualization<a class="headerlink" href="#154-dependency-graph-visualization" title="Permanent link">&para;</a></h4>
+<pre><code>supa_foundation (Base)
+├── supa_training
+│   ├── depends on: supa_work
+│   └── depends on: supa_project
+├── supa_attendance
+│   ├── depends on: supa_work
+│   └── depends on: supa_training
+├── supa_serving
+├── supa_spend
+├── supa_work
+│   ├── depends on: supa_project
+│   └── depends on: supa_spend
+├── supa_project
+│   ├── depends on: supa_work
+│   └── depends on: supa_attendance
+└── supa_bibs
+</code></pre>
+<h4 id="155-circular-dependencies-canh-bao">1.5.5. Circular Dependencies (Cảnh báo)<a class="headerlink" href="#155-circular-dependencies-canh-bao" title="Permanent link">&para;</a></h4>
+<p><strong>⚠️ CẢNH BÁO:</strong> Có circular dependencies được phát hiện trong codebase:</p>
+<ol>
+<li><strong>supa_work ↔ supa_project</strong> (bidirectional)</li>
+<li><code>supa_work</code> depends on <code>supa_project</code></li>
+<li>
+<p><code>supa_project</code> depends on <code>supa_work</code></p>
+</li>
+<li>
+<p><strong>supa_attendance → supa_training → supa_project → supa_attendance</strong></p>
+</li>
+<li>Tạo thành một vòng phụ thuộc gián tiếp</li>
+</ol>
+<p><strong>Khuyến nghị:</strong>
+- Circular dependencies nên được giải quyết để cải thiện khả năng bảo trì và ổn định của codebase
+- Nên tách các phần chung ra thành shared packages hoặc refactor để loại bỏ circular dependencies</p>
+<h4 id="156-khuyen-nghi-ve-dependencies">1.5.6. Khuyến nghị về Dependencies<a class="headerlink" href="#156-khuyen-nghi-ve-dependencies" title="Permanent link">&para;</a></h4>
+<p>Nhiều sub-modules có danh sách dependencies lớn và trùng lặp. Để giảm duplication và đơn giản hóa việc bảo trì, nên:
+- Consolidate các dependencies chung vào <code>supa_foundation</code> package
+- Đảm bảo tất cả modules sử dụng cùng version của dependencies
+- Dễ dàng quản lý updates trong tương lai</p>
+<h3 id="16-navigation-va-routing-structure">1.6. Navigation và Routing Structure<a class="headerlink" href="#16-navigation-va-routing-structure" title="Permanent link">&para;</a></h3>
+<h4 id="161-router-configuration">1.6.1. Router Configuration<a class="headerlink" href="#161-router-configuration" title="Permanent link">&para;</a></h4>
+<p>Dự án sử dụng package <code>go_router</code> cho navigation. Cấu hình routing chính được tạo trong hàm <code>createRouterConfig</code> tại <code>packages/supa_foundation/lib/router/create_router_config.dart</code>.</p>
+<p>Hàm <code>createRouterConfig</code> tạo một instance <code>GoRouter</code> với các tính năng:</p>
+<ul>
+<li><strong>Error Handling</strong>: Bao gồm error builder để log lỗi 404 "Page Not Found", hữu ích cho debugging</li>
+<li><strong>Initial Location</strong>: Vị trí ban đầu được set là <code>/</code></li>
+<li><strong>Authentication-based Redirection</strong>: Redirect user dựa trên authentication status</li>
+<li>Nếu user <strong>đã authenticated</strong>, redirect đến <code>homePage</code> được cung cấp cho <code>createRouterConfig</code></li>
+<li>Nếu user <strong>chưa authenticated</strong>, redirect đến <code>LoginPage</code></li>
+<li><strong>Route Observers</strong>: Sử dụng <code>SupaRouterObserver</code> để track navigation events</li>
+</ul>
+<h4 id="162-route-types">1.6.2. Route Types<a class="headerlink" href="#162-route-types" title="Permanent link">&para;</a></h4>
+<p>Router được cấu hình với 3 loại routes:</p>
+<ol>
+<li><strong>Specific Routes</strong>: Routes cụ thể cho một sub-app. Được truyền vào <code>createRouterConfig</code> như parameter <code>specificRoutes</code></li>
+<li><strong>Common Routes</strong>: Routes chung cho tất cả sub-apps. Được định nghĩa trong file <code>common_routes.dart</code></li>
+<li><strong>App Registry Routes</strong>: Routes có thể được đăng ký trong <code>AppRegistry</code>. Cung cấp cách quản lý routes tập trung từ các phần khác nhau của ứng dụng</li>
+</ol>
+<h4 id="163-common-routes">1.6.3. Common Routes<a class="headerlink" href="#163-common-routes" title="Permanent link">&para;</a></h4>
+<p>Các routes sau đây có sẵn trong tất cả sub-apps:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Page</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/app-settings</code></td>
+<td><code>AppSettingsPage</code></td>
+<td>Trang cài đặt ứng dụng</td>
+</tr>
+<tr>
+<td><code>/app-information</code></td>
+<td><code>AppInformationPage</code></td>
+<td>Trang thông tin ứng dụng</td>
+</tr>
+<tr>
+<td><code>/change-password</code></td>
+<td><code>ChangePasswordPage</code></td>
+<td>Trang đổi mật khẩu</td>
+</tr>
+<tr>
+<td><code>/tenant-selection</code></td>
+<td><code>TenantSelectionPage</code></td>
+<td>Trang chọn tenant</td>
+</tr>
+<tr>
+<td><code>/file-preview</code></td>
+<td><code>FilePreviewPage</code></td>
+<td>Trang preview file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-cach-chay-app-chinh-va-cac-sub-app">2. Cách chạy app chính và các sub-app<a class="headerlink" href="#2-cach-chay-app-chinh-va-cac-sub-app" title="Permanent link">&para;</a></h2>
+<h3 id="21-chay-app-chinh">2.1. Chạy app chính<a class="headerlink" href="#21-chay-app-chinh" title="Permanent link">&para;</a></h3>
+<p><strong>Cách 1: Sử dụng terminal</strong></p>
+<pre><code class="language-bash">flutter run -t lib/main.dart
+</code></pre>
+<p><strong>Cách 2: Sử dụng VSCode Run &amp; Debug</strong></p>
+<ol>
+<li>Mở VSCode</li>
+<li>Nhấn <code>F5</code> hoặc vào menu <strong>Run and Debug</strong> (Ctrl+Shift+D / Cmd+Shift+D)</li>
+<li>Chọn configuration <strong>"supa_main"</strong> từ dropdown</li>
+<li>Nhấn nút <strong>Start Debugging</strong> (▶️)</li>
+</ol>
+<p>Hoặc sử dụng Command Palette:
+- <code>Cmd+Shift+P</code> (Mac) / <code>Ctrl+Shift+P</code> (Windows/Linux)
+- Gõ "Debug: Start Debugging"
+- Chọn "supa_main"</p>
+<h3 id="22-chay-cac-sub-app-oc-lap">2.2. Chạy các sub-app độc lập<a class="headerlink" href="#22-chay-cac-sub-app-oc-lap" title="Permanent link">&para;</a></h3>
+<p>Mỗi sub-app có một file <code>main_&lt;sub_app&gt;.dart</code> riêng trong thư mục <code>lib/</code>:</p>
+<p><strong>Các sub-app có sẵn:</strong>
+- <code>lib/main_work.dart</code> - Work app
+- <code>lib/main_project.dart</code> - Project app
+- <code>lib/main_attendance.dart</code> - Attendance app
+- <code>lib/main_spend.dart</code> - Spend app
+- <code>lib/main_training.dart</code> - Training app
+- <code>lib/main_serving.dart</code> - Serving app
+- <code>lib/main_bibs.dart</code> - BIBS app
+- <code>lib/main_chat.dart</code> - Chat app</p>
+<p><strong>Cách chạy:</strong></p>
+<p><strong>Terminal:</strong></p>
+<pre><code class="language-bash"># Ví dụ: Chạy Work app
+flutter run -t lib/main_work.dart
+
+# Ví dụ: Chạy Project app
+flutter run -t lib/main_project.dart
+</code></pre>
+<p><strong>VSCode Run &amp; Debug:</strong></p>
+<ol>
+<li>Mở VSCode</li>
+<li>Vào <strong>Run and Debug</strong> (Ctrl+Shift+D / Cmd+Shift+D)</li>
+<li>Chọn configuration tương ứng:</li>
+<li><code>supa_work</code> - cho Work app</li>
+<li><code>supa_project</code> - cho Project app</li>
+<li><code>supa_attendance</code> - cho Attendance app</li>
+<li><code>supa_spend</code> - cho Spend app</li>
+<li><code>supa_training</code> - cho Training app</li>
+<li><code>supa_serving</code> - cho Serving app</li>
+<li><code>supa_bibs</code> - cho BIBS app</li>
+<li><code>supa_chat</code> - cho Chat app</li>
+<li>Nhấn <strong>Start Debugging</strong> (▶️)</li>
+</ol>
+<h3 id="23-cau-hinh-debug-trong-vscode">2.3. Cấu hình Debug trong VSCode<a class="headerlink" href="#23-cau-hinh-debug-trong-vscode" title="Permanent link">&para;</a></h3>
+<p>File <code>.vscode/launch.json</code> chứa tất cả các debug configurations:</p>
+<pre><code class="language-json">{
+  &quot;configurations&quot;: [
+    {
+      &quot;name&quot;: &quot;supa_main&quot;,
+      &quot;request&quot;: &quot;launch&quot;,
+      &quot;type&quot;: &quot;dart&quot;,
+      &quot;program&quot;: &quot;lib/main.dart&quot;
+    },
+    {
+      &quot;name&quot;: &quot;supa_work&quot;,
+      &quot;request&quot;: &quot;launch&quot;,
+      &quot;type&quot;: &quot;dart&quot;,
+      &quot;program&quot;: &quot;lib/main_work.dart&quot;
+    },
+    // ... các configurations khác
+  ]
+}
+</code></pre>
+<p>Bạn có thể thêm configuration mới hoặc chỉnh sửa các configuration hiện có trong file này.</p>
+<h2 id="3-cach-ang-ky-them-mot-sub-app-moi">3. Cách đăng ký thêm một sub-app mới<a class="headerlink" href="#3-cach-ang-ky-them-mot-sub-app-moi" title="Permanent link">&para;</a></h2>
+<h3 id="31-tao-sub-app-package">3.1. Tạo Sub-App Package<a class="headerlink" href="#31-tao-sub-app-package" title="Permanent link">&para;</a></h3>
+<p><strong>Bước 1: Tạo package mới</strong></p>
+<p>Tạo thư mục mới trong <code>packages/</code> với tên <code>supa_&lt;app_name&gt;</code>:</p>
+<pre><code class="language-bash">mkdir -p packages/supa_&lt;app_name&gt;/lib
+</code></pre>
+<p><strong>Bước 2: Tạo <code>pubspec.yaml</code></strong></p>
+<p>Tạo file <code>packages/supa_&lt;app_name&gt;/pubspec.yaml</code>:</p>
+<pre><code class="language-yaml">name: supa_&lt;app_name&gt;
+description: &quot;&lt;App Name&gt; sub-app&quot;
+version: 1.0.0
+publish_to: &quot;none&quot;
+
+environment:
+  sdk: &quot;&gt;=3.2.0 &lt;4.0.0&quot;
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supa_architecture:
+    path: ../supa_architecture
+  supa_foundation:
+    path: ../supa_foundation
+  # ... các dependencies khác
+</code></pre>
+<p><strong>Bước 3: Implement SubApp interface</strong></p>
+<p>Tạo file <code>packages/supa_&lt;app_name&gt;/lib/&lt;app_name&gt;_app.dart</code>:</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_foundation/config/sub_system.dart';
+import 'package:supa_foundation/theme/supa_material_theme.dart' as supa_theme;
+import 'package:supa_foundation/theme/supa_theme_extension.dart';
+import 'package:supa_&lt;app_name&gt;/pages/home/&lt;app_name&gt;_home_page.dart';
+import 'package:supa_&lt;app_name&gt;/router/router.dart';
+
+class &lt;AppName&gt;App extends SubApp {
+  @override
+  String get homePage =&gt; &lt;AppName&gt;HomePage.location;
+
+  @override
+  String get label =&gt; '&lt;App Name&gt;';
+
+  @override
+  String? get appIcon =&gt; 'assets/images/&lt;app-name&gt;-icon.png';
+
+  @override
+  final List&lt;RouteBase&gt; routes = &lt;appName&gt;Routes;
+
+  @override
+  int? get subsystemId =&gt; AppSubSystem.&lt;app_name&gt;.id;
+
+  @override
+  String get routePrefix =&gt; '/&lt;app_name&gt;';
+
+  @override
+  final ThemeData lightTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.lightColorScheme,
+    extendedColorScheme: supa_theme.lightExtendedColorScheme,
+  );
+
+  @override
+  final ThemeData darkTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.darkColorScheme,
+    extendedColorScheme: supa_theme.darkExtendedColorScheme,
+  );
+}
+</code></pre>
+<p><strong>Lưu ý:</strong> Interface <code>SubApp</code> yêu cầu các thuộc tính sau:
+- <code>homePage</code>: Route path của trang chủ
+- <code>label</code>: Tên hiển thị của app
+- <code>appIcon</code>: Đường dẫn đến icon (optional)
+- <code>routes</code>: Danh sách routes của app
+- <code>subsystemId</code>: ID của subsystem (từ <code>AppSubSystem</code> enum)
+- <code>routePrefix</code>: Prefix cho tất cả routes (ví dụ: <code>/work</code>, <code>/project</code>)
+- <code>lightTheme</code> và <code>darkTheme</code>: Theme cho app</p>
+<h3 id="32-ang-ky-sub-app-trong-main-app">3.2. Đăng ký Sub-App trong Main App<a class="headerlink" href="#32-ang-ky-sub-app-trong-main-app" title="Permanent link">&para;</a></h3>
+<p><strong>Bước 1: Thêm vào <code>AppSubSystem</code> enum</strong></p>
+<p>Mở file <code>packages/supa_foundation/lib/config/sub_system.dart</code> và thêm:</p>
+<pre><code class="language-dart">enum AppSubSystem {
+  // ... existing subsystems
+  &lt;app_name&gt;(
+    id: &lt;next_id&gt;,
+    code: '&lt;APP_NAME&gt;',
+  ),
+}
+</code></pre>
+<p><strong>Bước 2: Import và đăng ký trong <code>main.dart</code></strong></p>
+<p>Mở file <code>lib/main.dart</code>:</p>
+<pre><code class="language-dart">// Thêm import
+import 'package:supa_&lt;app_name&gt;/&lt;app_name&gt;_app.dart';
+
+// Trong hàm _registerApps()
+void _registerApps() {
+  AppRegistry.registerApp('/supa', MainApp());
+
+  // ... existing registrations
+  AppRegistry.registerApp('/&lt;app_name&gt;', &lt;AppName&gt;App()); // Thêm dòng này
+}
+</code></pre>
+<p><strong>Bước 3: Cấu hình dependencies (nếu cần)</strong></p>
+<p>Nếu sub-app có dependencies riêng, thêm vào <code>lib/config/get_it.dart</code>:</p>
+<pre><code class="language-dart">import 'package:supa_&lt;app_name&gt;/config/get_it.dart';
+
+// Trong hàm configureDependencies()
+Future&lt;void&gt; configureDependencies() async {
+  // ... existing code
+  configure&lt;AppName&gt;Dependencies(); // Thêm dòng này
+  getIt.init();
+}
+</code></pre>
+<p><strong>Bước 4: Thêm vào <code>pubspec.yaml</code> chính</strong></p>
+<p>Mở <code>pubspec.yaml</code> ở root và thêm dependency:</p>
+<pre><code class="language-yaml">dependencies:
+  # ... existing dependencies
+  supa_&lt;app_name&gt;:
+    path: packages/supa_&lt;app_name&gt;
+</code></pre>
+<p><strong>Bước 5: Tạo entry point riêng (tùy chọn)</strong></p>
+<p>Nếu muốn chạy sub-app độc lập, tạo <code>lib/main_&lt;app_name&gt;.dart</code>:</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:supa/config/get_it.dart';
+import 'package:supa/config/notification_handlers.dart';
+import 'package:supa/firebase_options.dart';
+import 'package:supa_foundation/app_loader.dart';
+import 'package:supa_foundation/router/app_registry.dart';
+import 'package:supa_foundation/router/create_router_config.dart';
+import 'package:supa_foundation/router/page_not_found.dart';
+import 'package:supa_foundation/supa_app.dart';
+import 'package:supa_&lt;app_name&gt;/&lt;app_name&gt;_app.dart';
+
+Future&lt;void&gt; main() async {
+  final loader = AppLoader(
+    configureDependencies: configureDependencies,
+    firebaseOptionsProvider: () =&gt; DefaultFirebaseOptions.currentPlatform,
+  );
+
+  await loader.bootstrap();
+
+  final &lt;appName&gt;App = &lt;AppName&gt;App();
+  AppRegistry.registerApp(&lt;appName&gt;App.routePrefix, &lt;appName&gt;App);
+
+  registerNotificationHandlers();
+
+  runApp(
+    SupaApp(
+      routerConfig: createRouterConfig(
+        homePage: &lt;appName&gt;App.homePage,
+        errorBuilder: (context, state) {
+          return const PageNotFound();
+        },
+      ),
+    ),
+  );
+}
+</code></pre>
+<p><strong>Bước 6: Thêm vào VSCode launch.json (tùy chọn)</strong></p>
+<p>Thêm configuration vào <code>.vscode/launch.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;supa_&lt;app_name&gt;&quot;,
+  &quot;request&quot;: &quot;launch&quot;,
+  &quot;type&quot;: &quot;dart&quot;,
+  &quot;program&quot;: &quot;lib/main_&lt;app_name&gt;.dart&quot;
+}
+</code></pre>
+<h3 id="33-vi-du-hoan-chinh">3.3. Ví dụ hoàn chỉnh<a class="headerlink" href="#33-vi-du-hoan-chinh" title="Permanent link">&para;</a></h3>
+<p>Xem file <code>packages/supa_work/lib/work_app.dart</code> để tham khảo implementation mẫu:</p>
+<pre><code class="language-dart">class WorkApp extends SubApp {
+  @override
+  String get homePage =&gt; WorkHomePage.location;
+
+  @override
+  String get label =&gt; 'Work';
+
+  @override
+  String? get appIcon =&gt; 'assets/images/work-icon.png';
+
+  @override
+  final List&lt;RouteBase&gt; routes = workRoutes;
+
+  @override
+  int? get subsystemId =&gt; AppSubSystem.work.id;
+
+  @override
+  String get routePrefix =&gt; '/work';
+
+  @override
+  final ThemeData lightTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.lightColorScheme,
+    extendedColorScheme: supa_theme.lightExtendedColorScheme,
+  );
+
+  @override
+  final ThemeData darkTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.darkColorScheme,
+    extendedColorScheme: supa_theme.darkExtendedColorScheme,
+  );
+}
+</code></pre>
+<h2 id="4-cach-switch-sub-app-e-toi-uu-hieu-nang">4. Cách switch sub-app để tối ưu hiệu năng<a class="headerlink" href="#4-cach-switch-sub-app-e-toi-uu-hieu-nang" title="Permanent link">&para;</a></h2>
+<p>Khi phát triển trên một sub-app cụ thể, bạn có thể cấu hình Dart analyzer để chỉ tập trung vào module đó, giúp:
+- Cải thiện hiệu suất phân tích code
+- Giảm thời gian phản hồi của IDE
+- Giảm nhiễu từ các module khác
+- Đặc biệt hữu ích trên các máy cấu hình thấp</p>
+<h3 id="41-su-dung-script-chuyen-oi">4.1. Sử dụng Script chuyển đổi<a class="headerlink" href="#41-su-dung-script-chuyen-oi" title="Permanent link">&para;</a></h3>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-bash">./scripts/switch_sub_app.sh &lt;module-name&gt;
+</code></pre>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-bash"># Chuyển sang focus vào supa_work
+./scripts/switch_sub_app.sh supa_work
+
+# Chuyển sang focus vào supa_spend
+./scripts/switch_sub_app.sh supa_spend
+
+# Chuyển sang focus vào supa_attendance
+./scripts/switch_sub_app.sh supa_attendance
+</code></pre>
+<p><strong>Các module có sẵn:</strong>
+- <code>supa_attendance</code> - Module chấm công
+- <code>supa_bibs</code> - Module BIBS
+- <code>supa_project</code> - Module dự án
+- <code>supa_serving</code> - Module phục vụ
+- <code>supa_spend</code> - Module chi tiêu
+- <code>supa_training</code> - Module đào tạo
+- <code>supa_work</code> - Module công việc
+- <code>supa_chat</code> - Module chat
+- <code>supa_admin</code> - Module admin</p>
+<h3 id="42-script-lam-gi">4.2. Script làm gì?<a class="headerlink" href="#42-script-lam-gi" title="Permanent link">&para;</a></h3>
+<p>Script <code>switch_sub_app.sh</code> thực hiện các bước sau:</p>
+<ol>
+<li><strong>Copy backup file</strong>: Copy <code>analysis_options.backup.yaml</code> sang <code>analysis_options.yaml</code></li>
+<li><strong>Thêm exclude rules</strong>: Thêm section <code>analyzer.exclude</code> để loại trừ các package không cần thiết</li>
+<li><strong>Giữ các package quan trọng</strong>:</li>
+<li>Luôn giữ thư mục <code>lib/</code> được phân tích</li>
+<li>Không bao giờ loại trừ <code>packages/supa_foundation</code> (foundation dùng chung)</li>
+<li>Không bao giờ loại trừ <code>packages/supa_architecture</code> (core dependency)</li>
+<li>Không bao giờ loại trừ <code>packages/supa_notification</code> (dùng chung)</li>
+<li>Không bao giờ loại trừ <code>packages/supa_discussion</code> (dùng chung)</li>
+<li>Khi chọn <code>supa_work</code> hoặc <code>supa_project</code>, giữ cả hai được bao gồm (chúng phụ thuộc lẫn nhau)</li>
+</ol>
+<h3 id="43-khoi-ong-lai-analysis-server">4.3. Khởi động lại Analysis Server<a class="headerlink" href="#43-khoi-ong-lai-analysis-server" title="Permanent link">&para;</a></h3>
+<p><strong>⚠️ QUAN TRỌNG:</strong> Sau khi chạy script, bạn <strong>phải khởi động lại</strong> IDE/editor hoặc Dart analysis server để thay đổi có hiệu lực. Analyzer đọc <code>analysis_options.yaml</code> khi khởi động, nên thay đổi sẽ không được áp dụng cho đến khi khởi động lại.</p>
+<p><strong>Cách khởi động lại Dart analysis server:</strong></p>
+<p><strong>VSCode:</strong>
+1. Mở Command Palette: <code>Cmd+Shift+P</code> (Mac) / <code>Ctrl+Shift+P</code> (Windows/Linux)
+2. Gõ: <code>Dart: Restart Analysis Server</code>
+3. Nhấn Enter</p>
+<p><strong>Android Studio/IntelliJ:</strong>
+1. Menu: <code>File</code> → <code>Invalidate Caches...</code>
+2. Chọn <code>Invalidate and Restart</code></p>
+<p><strong>Hoặc đơn giản:</strong>
+- Khởi động lại IDE</p>
+<h3 id="44-vi-du-output">4.4. Ví dụ output<a class="headerlink" href="#44-vi-du-output" title="Permanent link">&para;</a></h3>
+<p>Sau khi chạy script:</p>
+<pre><code class="language-bash">$ ./scripts/switch_sub_app.sh supa_work
+✅ Analyzer configured for supa_work
+
+Excluded modules:
+  supa_attendance
+  supa_bibs
+  supa_chat
+  supa_project
+  supa_serving
+  supa_spend
+  supa_training
+</code></pre>
+<h3 id="45-khoi-phuc-ve-trang-thai-ban-au">4.5. Khôi phục về trạng thái ban đầu<a class="headerlink" href="#45-khoi-phuc-ve-trang-thai-ban-au" title="Permanent link">&para;</a></h3>
+<p>Để khôi phục về trạng thái phân tích tất cả modules:</p>
+<pre><code class="language-bash">cp analysis_options.backup.yaml analysis_options.yaml
+</code></pre>
+<p>Sau đó khởi động lại Dart analysis server.</p>
+<h2 id="5-cach-kiem-tra-phan-quyen-dua-vao-appuserprofile-va-list-paths">5. Cách kiểm tra phân quyền dựa vào AppUserProfile và list paths<a class="headerlink" href="#5-cach-kiem-tra-phan-quyen-dua-vao-appuserprofile-va-list-paths" title="Permanent link">&para;</a></h2>
+<p>Hệ thống phân quyền trong SupaMobileApp sử dụng <strong>paths</strong> (danh sách đường dẫn) để xác định quyền truy cập của người dùng vào các tính năng cụ thể. Mỗi path đại diện cho một quyền truy cập vào một tính năng hoặc trang.</p>
+<h3 id="51-appuserprofile-va-paths">5.1. AppUserProfile và Paths<a class="headerlink" href="#51-appuserprofile-va-paths" title="Permanent link">&para;</a></h3>
+<p><strong>AppUserProfile</strong> là class mở rộng từ <code>AppUser</code>, chứa thông tin profile của người dùng bao gồm danh sách paths mà người dùng có quyền truy cập:</p>
+<pre><code class="language-dart">class AppUserProfile extends AppUser {
+  // ... các fields khác
+  List&lt;String&gt; paths = []; // Danh sách paths mà user có quyền
+}
+</code></pre>
+<p><strong>Paths</strong> là danh sách các đường dẫn string, ví dụ:
+- <code>'work/report/site-report'</code> - Quyền truy cập báo cáo site
+- <code>'work/schedule/schedule-master'</code> - Quyền truy cập lịch trình
+- <code>'work/inspection/inspection-master'</code> - Quyền truy cập inspection</p>
+<h3 id="52-lay-danh-sach-paths">5.2. Lấy danh sách Paths<a class="headerlink" href="#52-lay-danh-sach-paths" title="Permanent link">&para;</a></h3>
+<p>Mỗi sub-app có một repository riêng để lấy paths của user. Ví dụ với Work app:</p>
+<p><strong>WorkProfileRepository:</strong></p>
+<pre><code class="language-dart">class WorkProfileRepository extends ApiClient {
+  @override
+  String get baseUrl =&gt; '${persistentStorage.baseApiUrl}/rpc/work/profile';
+
+  Future&lt;List&lt;String&gt;&gt; getPaths() async {
+    return dio.post(
+      '/get',
+      data: {},
+    ).then((response) {
+      if (response.data['paths'] is List) {
+        return List&lt;String&gt;.from(response.data['paths']);
+      }
+      return [];
+    });
+  }
+}
+</code></pre>
+<h3 id="53-su-dung-bloc-e-quan-ly-paths">5.3. Sử dụng Bloc để quản lý Paths<a class="headerlink" href="#53-su-dung-bloc-e-quan-ly-paths" title="Permanent link">&para;</a></h3>
+<p>Thông thường, paths được quản lý thông qua Bloc pattern. Ví dụ với <code>WorkProfileBloc</code>:</p>
+<p><strong>WorkProfileBloc:</strong></p>
+<pre><code class="language-dart">class WorkProfileBloc extends Bloc&lt;WorkProfileEvent, WorkProfileState&gt; {
+  final WorkProfileRepository _repository = WorkProfileRepository();
+
+  WorkProfileBloc() : super(WorkProfileInitial()) {
+    on&lt;FetchWorkProfileEvent&gt;(_onFetchWorkProfile);
+  }
+
+  Future&lt;void&gt; _onFetchWorkProfile(
+    FetchWorkProfileEvent event,
+    Emitter&lt;WorkProfileState&gt; emit,
+  ) async {
+    add(const WorkProfileLoadingEvent());
+    await _repository.getPaths().then((paths) {
+      add(WorkProfileLoadedEvent(paths: paths));
+    }).catchError((error) {
+      emit(WorkProfileInitial());
+    });
+  }
+}
+</code></pre>
+<p><strong>WorkProfileState:</strong></p>
+<pre><code class="language-dart">final class WorkProfileLoaded extends WorkProfileState {
+  final List&lt;String&gt; paths;
+
+  const WorkProfileLoaded({
+    required this.paths,
+  });
+}
+</code></pre>
+<h3 id="54-vi-du-cu-the-kiem-tra-phan-quyen-trong-worknavbar">5.4. Ví dụ cụ thể: Kiểm tra phân quyền trong WorkNavbar<a class="headerlink" href="#54-vi-du-cu-the-kiem-tra-phan-quyen-trong-worknavbar" title="Permanent link">&para;</a></h3>
+<p>File <code>packages/supa_work/lib/pages/work_navbar.dart</code> minh họa cách kiểm tra phân quyền dựa vào paths:</p>
+<pre><code class="language-dart">class WorkNavbar extends StatefulWidget {
+  // ...
+}
+
+class _WorkNavbarState extends State&lt;WorkNavbar&gt; {
+  final WorkProfileBloc _bloc = WorkProfileBloc();
+
+  @override
+  void initState() {
+    super.initState();
+    _bloc.add(const FetchWorkProfileEvent());
+  }
+
+  /// Builds navbar items dynamically to ensure labels update when language changes
+  List&lt;ScaffoldNavbarItem&gt; _buildNavbarItems(WorkProfileState state) {
+    // Kiểm tra quyền truy cập Analytics
+    final hasAnalyticPermission = state is WorkProfileLoaded &amp;&amp;
+        state.paths.any((path) =&gt; path == 'work/report/site-report');
+
+    // Kiểm tra quyền truy cập Schedule
+    final hasSchedulePermission = state is WorkProfileLoaded &amp;&amp;
+        state.paths.any((path) =&gt; path == 'work/schedule/schedule-master');
+
+    // Bắt đầu với các items cơ bản
+    final items = List&lt;ScaffoldNavbarItem&gt;.from(_buildBaseNavbarItems());
+
+    // Chỉ thêm Analytics item nếu user có quyền
+    if (hasAnalyticPermission) {
+      items.add(_buildAnalyticsNavbarItem());
+    }
+
+    // Chỉ thêm Others item nếu user có quyền Schedule
+    if (hasSchedulePermission) {
+      items.add(
+        ScaffoldNavbarItem(
+          path: WorkOthersPage.location,
+          icon: FluentIcons.app_folder_24_regular,
+          activeIcon: FluentIcons.app_folder_24_filled,
+          label: translate('work.navbar.others'),
+        ),
+      );
+    }
+
+    return items;
+  }
+
+  List&lt;ScaffoldNavbarItem&gt; _buildBaseNavbarItems() {
+    // Các items luôn hiển thị (không cần kiểm tra quyền)
+    return [
+      ScaffoldNavbarItem(
+        path: WorkHomePage.location,
+        icon: FluentIcons.home_24_regular,
+        activeIcon: FluentIcons.home_24_filled,
+        label: translate('work.navbar.home'),
+      ),
+      ScaffoldNavbarItem(
+        path: InspectionPageWidget.location,
+        icon: FluentIcons.clipboard_task_list_rtl_24_regular,
+        activeIcon: FluentIcons.clipboard_task_list_rtl_24_filled,
+        label: translate('work.navbar.inspection'),
+      ),
+      ScaffoldNavbarItem(
+        path: TaskAssignmentPage.location,
+        icon: FluentIcons.checkbox_person_24_regular,
+        activeIcon: FluentIcons.checkbox_person_24_filled,
+        label: translate('work.navbar.taskAssignment'),
+      ),
+    ];
+  }
+
+  ScaffoldNavbarItem _buildAnalyticsNavbarItem() {
+    return ScaffoldNavbarItem(
+      path: SiteReportPage.location,
+      icon: FluentIcons.chart_multiple_24_regular,
+      activeIcon: FluentIcons.chart_multiple_24_filled,
+      label: translate('work.navbar.analytics'),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider&lt;WorkProfileBloc&gt;(
+      create: (context) =&gt; _bloc,
+      child: BlocBuilder&lt;WorkProfileBloc, WorkProfileState&gt;(
+        bloc: _bloc,
+        builder: (context, state) {
+          return ScaffoldNavbar(
+            shouldShowNavbar: true,
+            buildItems: () =&gt; _buildNavbarItems(state), // Build items dựa vào state
+            child: widget.child,
+          );
+        },
+      ),
+    );
+  }
+}
+</code></pre>
+<h3 id="55-giai-thich-chi-tiet">5.5. Giải thích chi tiết<a class="headerlink" href="#55-giai-thich-chi-tiet" title="Permanent link">&para;</a></h3>
+<p><strong>1. Khởi tạo Bloc và fetch paths:</strong></p>
+<pre><code class="language-dart">final WorkProfileBloc _bloc = WorkProfileBloc();
+
+@override
+void initState() {
+  super.initState();
+  _bloc.add(const FetchWorkProfileEvent()); // Fetch paths khi widget khởi tạo
+}
+</code></pre>
+<p><strong>2. Kiểm tra quyền trong <code>_buildNavbarItems</code>:</strong></p>
+<pre><code class="language-dart">// Kiểm tra xem state có phải WorkProfileLoaded không
+// và paths có chứa path cần kiểm tra không
+final hasAnalyticPermission = state is WorkProfileLoaded &amp;&amp;
+    state.paths.any((path) =&gt; path == 'work/report/site-report');
+</code></pre>
+<p><strong>3. Điều kiện hiển thị:</strong></p>
+<pre><code class="language-dart">// Chỉ thêm item vào navbar nếu user có quyền
+if (hasAnalyticPermission) {
+  items.add(_buildAnalyticsNavbarItem());
+}
+</code></pre>
+<p><strong>4. Sử dụng BlocBuilder để rebuild khi state thay đổi:</strong></p>
+<pre><code class="language-dart">BlocBuilder&lt;WorkProfileBloc, WorkProfileState&gt;(
+  bloc: _bloc,
+  builder: (context, state) {
+    return ScaffoldNavbar(
+      buildItems: () =&gt; _buildNavbarItems(state), // Rebuild khi state thay đổi
+      // ...
+    );
+  },
+)
+</code></pre>
+<h3 id="56-pattern-chung-e-kiem-tra-phan-quyen">5.6. Pattern chung để kiểm tra phân quyền<a class="headerlink" href="#56-pattern-chung-e-kiem-tra-phan-quyen" title="Permanent link">&para;</a></h3>
+<p><strong>Bước 1: Fetch paths khi cần</strong></p>
+<pre><code class="language-dart">final bloc = WorkProfileBloc();
+bloc.add(const FetchWorkProfileEvent());
+</code></pre>
+<p><strong>Bước 2: Kiểm tra quyền trong BlocBuilder</strong></p>
+<pre><code class="language-dart">BlocBuilder&lt;WorkProfileBloc, WorkProfileState&gt;(
+  builder: (context, state) {
+    if (state is WorkProfileLoaded) {
+      final hasPermission = state.paths.any(
+        (path) =&gt; path == 'work/report/site-report'
+      );
+
+      if (hasPermission) {
+        // Hiển thị tính năng
+      }
+    }
+    return Widget();
+  },
+)
+</code></pre>
+<p><strong>Bước 3: Sử dụng điều kiện để hiển thị/ẩn UI</strong></p>
+<pre><code class="language-dart">if (hasPermission) {
+  return SomeWidget();
+} else {
+  return SizedBox.shrink(); // hoặc widget khác
+}
+</code></pre>
+<h3 id="57-best-practices">5.7. Best Practices<a class="headerlink" href="#57-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Luôn kiểm tra state type</strong>: Đảm bảo state là <code>WorkProfileLoaded</code> trước khi truy cập <code>paths</code></li>
+<li><strong>Sử dụng <code>any()</code> cho exact match</strong>: <code>state.paths.any((path) =&gt; path == 'exact-path')</code></li>
+<li><strong>Sử dụng <code>contains()</code> cho partial match</strong>: <code>state.paths.any((path) =&gt; path.contains('partial'))</code></li>
+<li><strong>Cache paths nếu cần</strong>: Tránh fetch nhiều lần không cần thiết</li>
+<li><strong>Handle loading state</strong>: Hiển thị loading indicator khi đang fetch paths</li>
+<li><strong>Handle error state</strong>: Xử lý trường hợp lỗi khi fetch paths</li>
+</ol>
+<h3 id="58-vi-du-khac-kiem-tra-quyen-trong-page">5.8. Ví dụ khác: Kiểm tra quyền trong Page<a class="headerlink" href="#58-vi-du-khac-kiem-tra-quyen-trong-page" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">class SomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder&lt;WorkProfileBloc, WorkProfileState&gt;(
+      builder: (context, state) {
+        if (state is WorkProfileLoaded) {
+          final canViewReports = state.paths.any(
+            (path) =&gt; path == 'work/report/site-report'
+          );
+
+          if (!canViewReports) {
+            return ForbiddenPage(); // Hoặc redirect
+          }
+
+          return ReportPage();
+        }
+
+        return LoadingIndicator();
+      },
+    );
+  }
+}
+</code></pre>
+<hr />
+<h2 id="6-tom-tat">6. Tóm tắt<a class="headerlink" href="#6-tom-tat" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Cấu trúc</strong>: Main app + sub-packages, mỗi sub-app là một package độc lập</li>
+<li><strong>Dependencies</strong>: Tất cả packages phụ thuộc vào <code>supa_foundation</code>; có circular dependencies cần được giải quyết</li>
+<li><strong>Navigation</strong>: Sử dụng <code>go_router</code> với 3 loại routes (Specific, Common, App Registry)</li>
+<li><strong>Chạy app</strong>: Sử dụng VSCode Run &amp; Debug hoặc terminal với các file <code>main*.dart</code></li>
+<li><strong>Đăng ký sub-app</strong>: Implement <code>SubApp</code> interface và đăng ký trong <code>AppRegistry</code></li>
+<li><strong>Tối ưu hiệu năng</strong>: Sử dụng script <code>switch_sub_app.sh</code> để giảm analysis scope</li>
+<li><strong>Phân quyền</strong>: Sử dụng paths từ <code>AppUserProfile</code> và kiểm tra bằng <code>state.paths.any()</code></li>
+</ol>
+<hr />
+<p><strong>Lưu ý quan trọng:</strong>
+- ⚠️ Có circular dependencies giữa <code>supa_work</code> và <code>supa_project</code> cần được giải quyết
+- Tất cả packages nên phụ thuộc vào <code>supa_foundation</code> như base layer
+- Common routes có sẵn trong tất cả sub-apps
+- Router tự động redirect dựa trên authentication status</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>VideoStreamingScreen - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#videostreamingscreen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VideoStreamingScreen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="videostreamingscreen">VideoStreamingScreen<a class="headerlink" href="#videostreamingscreen" title="Permanent link">&para;</a></h1>
+<p>Widget để stream video trực tiếp với authentication, sử dụng thư viện <code>media_kit</code>.</p>
+<h2 id="tong-quan">Tổng quan<a class="headerlink" href="#tong-quan" title="Permanent link">&para;</a></h2>
+<p><code>VideoStreamingScreen</code> cho phép người dùng xem video trực tiếp từ server mà không cần tải về trước. Widget hỗ trợ authentication thông qua cookies và cung cấp các action như tải video về máy hoặc xóa video.</p>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<pre><code class="language-yaml">dependencies:
+  media_kit: ^1.1.10+1
+  media_kit_video: ^2.0.0
+  media_kit_libs_video: ^1.0.4
+</code></pre>
+<h3 id="khoi-tao">Khởi tạo<a class="headerlink" href="#khoi-tao" title="Permanent link">&para;</a></h3>
+<p>Cần khởi tạo <code>MediaKit</code> trong <code>main.dart</code> trước khi sử dụng:</p>
+<pre><code class="language-dart">void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MediaKit.ensureInitialized();
+  // ...
+}
+</code></pre>
+<h2 id="cach-su-dung">Cách sử dụng<a class="headerlink" href="#cach-su-dung" title="Permanent link">&para;</a></h2>
+<h3 id="co-ban-chi-xem-video">Cơ bản - Chỉ xem video<a class="headerlink" href="#co-ban-chi-xem-video" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) =&gt; VideoStreamingScreen(
+      videoUrl: 'https://example.com/video.mp4',
+      title: 'My Video',
+    ),
+  ),
+);
+</code></pre>
+<h3 id="voi-url-relative-se-tu-ong-them-base-url">Với URL relative (sẽ tự động thêm base URL)<a class="headerlink" href="#voi-url-relative-se-tu-ong-them-base-url" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">VideoStreamingScreen(
+  videoUrl: '/api/files/video/123.mp4',
+  title: 'Video từ server',
+)
+</code></pre>
+<h3 id="voi-action-xoa-video">Với action xóa video<a class="headerlink" href="#voi-action-xoa-video" title="Permanent link">&para;</a></h3>
+<p>Nút xóa chỉ hiển thị khi <code>onDelete</code> callback được truyền vào. Điều này cho phép kiểm soát quyền xóa từ bên ngoài.</p>
+<pre><code class="language-dart">VideoStreamingScreen(
+  videoUrl: videoFile.url,
+  title: videoFile.name,
+  // Chỉ truyền onDelete khi user có quyền xóa
+  onDelete: canDelete
+      ? () async {
+          // Logic xóa và đóng màn hình
+          await deleteVideo(videoFile.id);
+          Navigator.pop(context);
+        }
+      : null, // null = không hiển thị nút xóa
+)
+</code></pre>
+<h3 id="vi-du-kiem-tra-quyen-truoc-khi-cho-phep-xoa">Ví dụ kiểm tra quyền trước khi cho phép xóa<a class="headerlink" href="#vi-du-kiem-tra-quyen-truoc-khi-cho-phep-xoa" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Chỉ cho xóa khi:
+// 1. Có callback onDelete từ widget cha
+// 2. Không phải chế độ view-only
+final allowDelete = widget.onDelete != null &amp;&amp; !widget.isView;
+
+VideoStreamingScreen(
+  videoUrl: videoFile.url,
+  title: videoFile.name,
+  onDelete: allowDelete ? () async { ... } : null,
+)
+</code></pre>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>videoUrl</code></td>
+<td><code>String</code></td>
+<td>✅</td>
+<td>URL của video. Có thể là full URL hoặc relative path</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>String?</code></td>
+<td>❌</td>
+<td>Tiêu đề hiển thị ở header. Cũng được dùng làm tên file khi download</td>
+</tr>
+<tr>
+<td><code>onDelete</code></td>
+<td><code>Future&lt;void&gt; Function()?</code></td>
+<td>❌</td>
+<td>Callback khi bấm nút xóa. Nếu null, nút xóa sẽ không hiển thị</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tinh-nang">Tính năng<a class="headerlink" href="#tinh-nang" title="Permanent link">&para;</a></h2>
+<h3 id="video-controls-built-in-tu-media_kit">Video Controls (built-in từ media_kit)<a class="headerlink" href="#video-controls-built-in-tu-media_kit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>advancement Play/Pause</li>
+<li>Seek (kéo thanh tiến trình)</li>
+<li>Fullscreen toggle</li>
+<li>Speed control (0.5x, 1x, 1.5x, 2x)</li>
+<li>Volume control</li>
+</ul>
+<h3 id="bottom-action-bar">Bottom Action Bar<a class="headerlink" href="#bottom-action-bar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tải về</strong>: Download video về thiết bị sử dụng <code>FileHandler</code></li>
+<li><strong>Xóa</strong>: Hiển thị khi <code>onDelete</code> được truyền vào</li>
+</ul>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
+<p>Video được stream với authentication thông qua cookies:</p>
+<ul>
+<li>Tự động lấy cookies từ <code>cookieManager</code></li>
+<li>Truyền cookies qua HTTP headers khi load video</li>
+</ul>
+<h2 id="ui-structure">UI Structure<a class="headerlink" href="#ui-structure" title="Permanent link">&para;</a></h2>
+<pre><code>┌─────────────────────────────────┐
+│ [X]  Video Title                │  ← Header
+├─────────────────────────────────┤
+│                                 │
+│                                 │
+│         Video Player            │  ← Video area với controls
+│                                 │
+│                                 │
+│   advancement advancement advancement ──●────────── ⛶  │  ← Video controls
+├─────────────────────────────────┤
+│    📥          🗑️              │  ← Bottom action bar
+│   Tải về       Xóa              │
+└─────────────────────────────────┘
+</code></pre>
+<h2 id="vi-du-tich-hop-voi-inspectionmediaviewwidget">Ví dụ tích hợp với InspectionMediaViewWidget<a class="headerlink" href="#vi-du-tich-hop-voi-inspectionmediaviewwidget" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">// Trong media_view_widget_control.dart
+void openMediaGallery({
+  required List&lt;File&gt; mediaFiles,
+  required int initialIndex,
+  required bool isVideo,
+  required List&lt;File&gt; remainingMediaFiles,
+}) {
+  if (isVideo &amp;&amp; mediaFiles.isNotEmpty) {
+    final videoFile = mediaFiles[initialIndex];
+
+    // Tìm mapping để có thể xóa
+    final fileMapping = widget.files.firstWhere(
+      (f) =&gt; f.file.value.id.value == videoFile.id.value,
+    );
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (screenContext) =&gt; VideoStreamingScreen(
+          videoUrl: videoFile.url.value,
+          title: videoFile.name.value,
+          onDelete: widget.onDelete != null &amp;&amp; !widget.isView
+              ? () async {
+                  await showDialog&lt;void&gt;(
+                    context: screenContext,
+                    builder: (_) =&gt; ConfirmationDialog(
+                      title: 'Xác nhận xóa',
+                      child: Text('Bạn có chắc muốn xóa video này?'),
+                      onConfirm: () async {
+                        await widget.onDelete!(fileMapping);
+                        if (screenContext.mounted) {
+                          Navigator.of(screenContext).pop();
+                        }
+                      },
+                    ),
+                  );
+                }
+              : null,
+        ),
+      ),
+    );
+    return;
+  }
+  // ... handle images
+}
+</code></pre>
+<h2 id="luu-y">Lưu ý<a class="headerlink" href="#luu-y" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Immersive Mode</strong>: Màn hình tự động chuyển sang immersive mode khi mở và restore khi đóng</li>
+<li><strong>Memory Management</strong>: Player được dispose tự động khi màn hình đóng</li>
+<li><strong>Error Handling</strong>: Download errors được hiển thị qua SnackBar</li>
+<li><strong>Platform Support</strong>: Hỗ trợ iOS, Android, macOS, Windows, Linux (không hỗ trợ Web)</li>
+</ol>
+<h2 id="xem-them">Xem thêm<a class="headerlink" href="#xem-them" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://pub.dev/packages/media_kit">media_kit documentation</a></li>
+<li><a href="./media_gallery_screen.md">MediaGalleryScreen</a> - Cho xem ảnh</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

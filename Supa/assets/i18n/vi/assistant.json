@@ -1,0 +1,5 @@
+{
+  "errors.fetchingBotsError": "Không lấy được danh sách bot",
+  "errors.fetchingBotsErrorDescription": "Vui lòng kiểm tra kết nối internet và thử lại",
+  "search.searchHint": "Tìm kiếm BOT"
+}

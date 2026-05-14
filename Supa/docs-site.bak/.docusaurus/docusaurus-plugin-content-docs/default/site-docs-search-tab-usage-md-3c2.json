@@ -1,0 +1,24 @@
+{
+  "unversionedId": "search_tab_usage",
+  "id": "search_tab_usage",
+  "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+  "description": "SearchTab và TabContent là bộ đôi widget mạnh mẽ dùng để tạo giao diện chọn nhiều đối tượng (Multi-selection) phân theo từng Tab dữ liệu khác nhau (ví dụ: Cá nhân, Nhóm, Địa điểm).",
+  "source": "@site/docs/search_tab_usage.md",
+  "sourceDirName": ".",
+  "slug": "/search_tab_usage",
+  "permalink": "/docs/search_tab_usage",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/search_tab_usage.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Form Tạo Lịch (Schedule Creation Form)",
+    "permalink": "/docs/schedule/schedule_creation_form"
+  },
+  "next": {
+    "title": "Quy tắc Styling",
+    "permalink": "/docs/styling-rules"
+  }
+}

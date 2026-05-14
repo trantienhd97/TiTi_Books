@@ -1,0 +1,24 @@
+{
+  "unversionedId": "discussion-entity-adapters",
+  "id": "discussion-entity-adapters",
+  "title": "Discussion Entity Adapter System",
+  "description": "1. Tổng quan",
+  "source": "@site/docs/discussion-entity-adapters.md",
+  "sourceDirName": ".",
+  "slug": "/discussion-entity-adapters",
+  "permalink": "/docs/discussion-entity-adapters",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/discussion-entity-adapters.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng dẫn Triển khai Ứng dụng",
+    "permalink": "/docs/deployment"
+  },
+  "next": {
+    "title": "Entity Chat UI/UX Integration Guide",
+    "permalink": "/docs/entity-chat-integration-guide"
+  }
+}

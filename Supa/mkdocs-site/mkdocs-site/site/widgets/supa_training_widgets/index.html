@@ -1,0 +1,663 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Supa Training Widgets - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supa-training-widgets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Supa Training Widgets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="supa-training-widgets">Supa Training Widgets<a class="headerlink" href="#supa-training-widgets" title="Permanent link">&para;</a></h1>
+<p>This document provides an overview of the reusable widgets in the <code>supa_training</code> package.</p>
+<h2 id="audioplayerwidget">AudioPlayerWidget<a class="headerlink" href="#audioplayerwidget" title="Permanent link">&para;</a></h2>
+<p>The <code>AudioPlayerWidget</code> provides a robust audio player with play/pause functionality, a progress bar that allows seeking, and comprehensive handling for loading and error states. It is designed to play audio from a given URL.</p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const AudioPlayerWidget({
+  super.key,
+  required this.audioUrl,
+  this.onPlaybackComplete,
+  required this.isProcessing,
+  this.audioName,
+  this.onPlayerCreated,
+});
+</code></pre>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">AudioPlayerWidget(
+  audioUrl: 'https://example.com/audio.mp3',
+  isProcessing: false,
+  audioName: 'My Audio Track',
+  onPlaybackComplete: () {
+    print('Playback completed!');
+  },
+)
+</code></pre>
+<h2 id="contentwidget">ContentWidget<a class="headerlink" href="#contentwidget" title="Permanent link">&para;</a></h2>
+<p>The <code>ContentWidget</code> is responsible for displaying HTML content fetched from a specified URL. It provides visual feedback for loading states and error conditions, with a retry mechanism.</p>
+<h3 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const ContentWidget({
+  super.key,
+  required this.title,
+  required this.fileUrl,
+  required this.fileName,
+});
+</code></pre>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">ContentWidget(
+  title: 'Lesson 1: Introduction',
+  fileUrl: 'https://example.com/lesson1.html',
+  fileName: 'lesson1.html',
+)
+</code></pre>
+<h2 id="coursecard">CourseCard<a class="headerlink" href="#coursecard" title="Permanent link">&para;</a></h2>
+<p>The <code>CourseCard</code> widget displays a compact overview of a training course, featuring its image, name, type, and (if applicable) end date. It's designed to be tappable for further interaction.</p>
+<h3 id="usage_2">Usage<a class="headerlink" href="#usage_2" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const CourseCard({
+  super.key,
+  required this.course,
+  required this.onTap,
+  this.itemHeight = 280,
+  this.isSmall,
+});
+</code></pre>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">CourseCard(
+  course: course,
+  onTap: () {
+    // Navigate to course details
+  },
+)
+</code></pre>
+<h2 id="customselectiongroup">CustomSelectionGroup<a class="headerlink" href="#customselectiongroup" title="Permanent link">&para;</a></h2>
+<p>The <code>CustomSelectionGroup</code> widget allows users to select one or multiple options from a provided list of <code>QuestionAnswer</code> objects. It supports both single and multi-selection modes and provides visual feedback for correct answers once the question has been answered.</p>
+<h3 id="usage_3">Usage<a class="headerlink" href="#usage_3" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const CustomSelectionGroup({
+  super.key,
+  required this.options,
+  required this.onChanged,
+  required this.answered,
+  required this.answerMappings,
+  this.isMultiSelect = false,
+});
+</code></pre>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">CustomSelectionGroup(
+  options: [
+    QuestionAnswer(id: 1, content: 'Option 1', isCorrectAnswer: false),
+    QuestionAnswer(id: 2, content: 'Option 2', isCorrectAnswer: true),
+  ],
+  onChanged: (selectedOptions) {
+    print('Selected options: $selectedOptions');
+  },
+  answered: false,
+  answerMappings: [],
+  isMultiSelect: false,
+)
+</code></pre>
+<h2 id="optionchoice">OptionChoice<a class="headerlink" href="#optionchoice" title="Permanent link">&para;</a></h2>
+<p>The <code>OptionChoice</code> widget is an interactive component designed for presenting multiple-choice or single-choice questions within training modules. It features a countdown timer, displays question content (including a title and an optional image), and allows users to select answers with visual feedback. It supports both single and multiple answer selections.</p>
+<h3 id="usage_4">Usage<a class="headerlink" href="#usage_4" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const OptionChoice({
+  super.key,
+  required this.contents,
+  this.file,
+  required this.title,
+  required this.time,
+  required this.selecteds,
+  this.onUpdateOption,
+  this.onTimeUp,
+  required this.courseSectionId,
+  required this.courseSectionContentId,
+  required this.isCompleted,
+  required this.isMultipleChoice,
+});
+</code></pre>
+<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">OptionChoice(
+  title: 'What is Flutter?',
+  time: 60,
+  contents: [
+    CourseSectionContentAnswerOption(id: 1, content: 'A bird', isCorrect: false),
+    CourseSectionContentAnswerOption(id: 2, content: 'A UI toolkit', isCorrect: true),
+  ],
+  selecteds: [],
+  courseSectionId: 1,
+  courseSectionContentId: 1,
+  isCompleted: false,
+  isMultipleChoice: false,
+  onUpdateOption: (selected) {
+    print('Selected: $selected');
+  },
+  onTimeUp: (timeUp) {
+    print('Time up: $timeUp');
+  },
+)
+</code></pre>
+<h2 id="pathcard">PathCard<a class="headerlink" href="#pathcard" title="Permanent link">&para;</a></h2>
+<p>The <code>PathCard</code> widget displays a card representing a training path, showcasing its image, name, and the total number of courses it encompasses. It is designed to be tappable for user interaction.</p>
+<h3 id="usage_5">Usage<a class="headerlink" href="#usage_5" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const PathCard({
+  super.key,
+  required this.trainingPath,
+  required this.onTap,
+  this.itemHeight = 132,
+});
+</code></pre>
+<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">PathCard(
+  trainingPath: trainingPath,
+  onTap: () {
+    // Navigate to training path details
+  },
+)
+</code></pre>
+<h2 id="questionanswerresult">QuestionAnswerResult<a class="headerlink" href="#questionanswerresult" title="Permanent link">&para;</a></h2>
+<p>The <code>QuestionAnswerResult</code> widget displays the outcome of a question and answer, visually indicating whether the answer was correct or incorrect through an icon and corresponding text.</p>
+<h3 id="usage_6">Usage<a class="headerlink" href="#usage_6" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const QuestionAnswerResult({
+  super.key,
+  required this.isCorrect,
+  required this.content,
+});
+</code></pre>
+<h3 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">QuestionAnswerResult(
+  isCorrect: true,
+)
+</code></pre>
+<h2 id="quizcard">QuizCard<a class="headerlink" href="#quizcard" title="Permanent link">&para;</a></h2>
+<p>The <code>QuizCard</code> widget displays a quiz entry, showing its name, deadline, and a visual indicator (lock icon) if prerequisite courses are not completed. It handles user interaction, including navigation to course previews when required.</p>
+<h3 id="usage_7">Usage<a class="headerlink" href="#usage_7" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const QuizCard({
+  super.key,
+  required this.quiz,
+  required this.onTap,
+  this.itemHeight = 240,
+});
+</code></pre>
+<h3 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">QuizCard(
+  quiz: quizPartition,
+  onTap: () {
+    // Navigate to quiz details
+  },
+)
+</code></pre>
+<h2 id="responsivegridview">ResponsiveGridView<a class="headerlink" href="#responsivegridview" title="Permanent link">&para;</a></h2>
+<p>The <code>ResponsiveGridView</code> widget arranges a list of items in a grid layout, dynamically adjusting the number of columns based on the available screen width to provide a responsive user interface.</p>
+<h3 id="usage_8">Usage<a class="headerlink" href="#usage_8" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const ResponsiveGridView({
+  super.key,
+  required this.items,
+  required this.itemHeight,
+  this.padding,
+});
+</code></pre>
+<h3 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">ResponsiveGridView(
+  items: const [
+    Card(child: Center(child: Text('Item 1'))),
+    Card(child: Center(child: Text('Item 2'))),
+    Card(child: Center(child: Text('Item 3'))),
+  ],
+  itemHeight: 150,
+)
+</code></pre>
+<h2 id="sidleimage">SidleImage<a class="headerlink" href="#sidleimage" title="Permanent link">&para;</a></h2>
+<p>The <code>SidleImage</code> widget presents a series of images as slides, optionally accompanied by notes. It provides a <code>PageView</code> for navigation, a page indicator, and functionality for full-screen image viewing, suitable for step-by-step training content.</p>
+<h3 id="usage_9">Usage<a class="headerlink" href="#usage_9" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const SidleImage({
+  super.key,
+  required this.contents,
+  required this.hasAudioFile,
+});
+</code></pre>
+<h3 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">SidleImage(
+  contents: [
+    CourseSectionContentSlide(
+      image: File(url: 'https://example.com/slide1.jpg'),
+      note: 'This is the first slide.',
+    ),
+    CourseSectionContentSlide(
+      image: File(url: 'https://example.com/slide2.jpg'),
+      note: 'This is the second slide.',
+    ),
+  ],
+)
+</code></pre>
+<h2 id="textborderbutton">TextBorderButton<a class="headerlink" href="#textborderbutton" title="Permanent link">&para;</a></h2>
+<p>The <code>TextBorderButton</code> widget provides a customizable button with a text label, a border, and optional features like an icon and a loading indicator.</p>
+<h3 id="usage_10">Usage<a class="headerlink" href="#usage_10" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const TextBorderButton({
+  super.key,
+  required this.text,
+  required this.onPressed,
+  this.isLoading = false,
+  this.mainAxisAlignment = MainAxisAlignment.start,
+  this.icon,
+  this.textStyle,
+});
+</code></pre>
+<h3 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">TextBorderButton(
+  text: 'Submit',
+  onPressed: () {
+    // Handle button press
+  },
+)
+</code></pre>
+<h2 id="trainingattachmentitem">TrainingAttachmentItem<a class="headerlink" href="#trainingattachmentitem" title="Permanent link">&para;</a></h2>
+<p>The <code>TrainingAttachmentItem</code> widget displays a single attachment, which can be either a file or a link. It shows an appropriate icon, the attachment name, and for files, it displays the file size and a download/open button. This widget is functionally identical to <code>AttachmentItem</code> in <code>supa_spend</code>.</p>
+<h3 id="usage_11">Usage<a class="headerlink" href="#usage_11" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const TrainingAttachmentItem({
+  super.key,
+  required this.item,
+});
+</code></pre>
+<h3 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">TrainingAttachmentItem(
+  item: attachment,
+)
+</code></pre>
+<h2 id="truefalsechoice">TrueFalseChoice<a class="headerlink" href="#truefalsechoice" title="Permanent link">&para;</a></h2>
+<p>The <code>TrueFalseChoice</code> widget is a specialized interactive component designed for presenting true/false questions within training modules. It shares similar functionalities with <code>OptionChoice</code> but is optimized for binary answer selections. It includes a timer, displays content (title, optional image), and allows users to make true/false selections.</p>
+<h3 id="usage_12">Usage<a class="headerlink" href="#usage_12" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const TrueFalseChoice({
+  super.key,
+  required this.contents,
+  this.file,
+  required this.title,
+  required this.time,
+  required this.selecteds,
+  this.onUpdateOption,
+  this.onTimeUp,
+  required this.courseSectionId,
+  required this.courseSectionContentId,
+  required this.isCompleted,
+  required this.isMultipleChoice,
+  required this.content,
+});
+</code></pre>
+<h3 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">TrueFalseChoice(
+  title: 'Is Flutter a UI framework?',
+  time: 30,
+  contents: [
+    CourseSectionContentAnswerOption(id: 1, content: 'True', isCorrect: true),
+    CourseSectionContentAnswerOption(id: 2, content: 'False', isCorrect: false),
+  ],
+  selecteds: [],
+  courseSectionId: 1,
+  courseSectionContentId: 1,
+  isCompleted: false,
+  isMultipleChoice: false,
+  content: 'Select true or false.',
+  onUpdateOption: (selected) {
+    print('Selected: $selected');
+  },
+)
+</code></pre>
+<h2 id="youtubevideoplayerwidget">YoutubeVideoPlayerWidget<a class="headerlink" href="#youtubevideoplayerwidget" title="Permanent link">&para;</a></h2>
+<p>The <code>YoutubeVideoPlayerWidget</code> embeds and plays YouTube videos, providing playback controls and handling various video states.</p>
+<h3 id="usage_13">Usage<a class="headerlink" href="#usage_13" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">const YoutubeVideoPlayerWidget({
+  super.key,
+  required this.videoUrl,
+  this.onVideoComplete,
+  this.isAutoplay = true,
+  this.isRewind = false,
+  this.isLandscape = false,
+});
+</code></pre>
+<h3 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">YoutubeVideoPlayerWidget(
+  videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Rick Astley - Never Gonna Give You Up
+  isAutoplay: true,
+  onVideoComplete: () {
+    print('Video playback completed!');
+  },
+)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

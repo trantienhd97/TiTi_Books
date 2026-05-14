@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspections/architecture-overview",
+  "id": "inspections/architecture-overview",
+  "title": "Inspection Architecture Overview",
+  "description": "Component Hierarchy",
+  "source": "@site/docs/inspections/architecture-overview.md",
+  "sourceDirName": "inspections",
+  "slug": "/inspections/architecture-overview",
+  "permalink": "/docs/inspections/architecture-overview",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/architecture-overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Answer Types System",
+    "permalink": "/docs/inspections/answer-types-system"
+  },
+  "next": {
+    "title": "Upload Progress Implementation - Inspection Media",
+    "permalink": "/docs/inspections/upload-progress-implementation"
+  }
+}

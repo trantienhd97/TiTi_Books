@@ -1,0 +1,24 @@
+{
+  "unversionedId": "training/personal_report_default_filter",
+  "id": "training/personal_report_default_filter",
+  "title": "Personal Report - Default Filter & Label Display",
+  "description": "Tóm Tắt Thay Đổi",
+  "source": "@site/docs/training/personal_report_default_filter.md",
+  "sourceDirName": "training",
+  "slug": "/training/personal_report_default_filter",
+  "permalink": "/docs/training/personal_report_default_filter",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/training/personal_report_default_filter.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+    "permalink": "/docs/training/location_answer_implementation"
+  },
+  "next": {
+    "title": "UI Components",
+    "permalink": "/docs/ui-components"
+  }
+}

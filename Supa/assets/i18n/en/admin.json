@@ -1,0 +1,12 @@
+{
+  "home.password": "Password",
+  "home.title": "Admin",
+  "resetPassword.completed": "Completed",
+  "resetPassword.emailList": "Email list",
+  "resetPassword.emailListExcelNotes": "You can copy the email list from Excel and paste it here",
+  "resetPassword.emailListHint": "Enter email list, one email per line",
+  "resetPassword.emailListRequired": "Email list is required",
+  "resetPassword.processing": "Processing",
+  "resetPassword.resetPassword": "Reset password",
+  "resetPassword.title": "Reset password"
+}

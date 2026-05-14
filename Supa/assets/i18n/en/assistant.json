@@ -1,0 +1,5 @@
+{
+  "errors.fetchingBotsError": "Can not get list of bots",
+  "errors.fetchingBotsErrorDescription": "Please check your internet connection and try again",
+  "search.searchHint": "Search for bots"
+}

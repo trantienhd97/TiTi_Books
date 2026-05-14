@@ -1,0 +1,12 @@
+{
+  "home.password": "Password",
+  "home.title": "Admin",
+  "resetPassword.completed": "Selesai",
+  "resetPassword.emailList": "Daftar email",
+  "resetPassword.emailListExcelNotes": "Anda dapat menyalin daftar email dari Excel dan menempelkannya di sini",
+  "resetPassword.emailListHint": "Masukkan daftar email, setiap email di baris yang berbeda",
+  "resetPassword.emailListRequired": "Daftar email diperlukan",
+  "resetPassword.processing": "Memproses",
+  "resetPassword.resetPassword": "Reset password",
+  "resetPassword.title": "Reset password"
+}

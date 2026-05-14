@@ -1,0 +1,24 @@
+{
+  "unversionedId": "RELEASE_NOTES_GUIDE",
+  "id": "RELEASE_NOTES_GUIDE",
+  "title": "Changelog & Release Notes Management",
+  "description": "This directory contains tools and workflows for managing release notes and changelogs.",
+  "source": "@site/docs/RELEASE_NOTES_GUIDE.md",
+  "sourceDirName": ".",
+  "slug": "/RELEASE_NOTES_GUIDE",
+  "permalink": "/docs/RELEASE_NOTES_GUIDE",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/RELEASE_NOTES_GUIDE.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Changelog Generation System - Summary",
+    "permalink": "/docs/CHANGELOG_SUMMARY"
+  },
+  "next": {
+    "title": "Route Migration Documentation (Supa Work)",
+    "permalink": "/docs/ROUTE_MIGRATION_GUIDE"
+  }
+}

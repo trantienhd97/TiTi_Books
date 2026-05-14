@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspections/answer-types-system",
+  "id": "inspections/answer-types-system",
+  "title": "Answer Types System",
+  "description": "Overview",
+  "source": "@site/docs/inspections/answer-types-system.md",
+  "sourceDirName": "inspections",
+  "slug": "/inspections/answer-types-system",
+  "permalink": "/docs/inspections/answer-types-system",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/answer-types-system.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Inspection System Documentation",
+    "permalink": "/docs/inspections/"
+  },
+  "next": {
+    "title": "Inspection Architecture Overview",
+    "permalink": "/docs/inspections/architecture-overview"
+  }
+}

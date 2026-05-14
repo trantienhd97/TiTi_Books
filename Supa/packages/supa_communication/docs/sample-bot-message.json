@@ -1,0 +1,60 @@
+{
+    "id": "14bca907-7673-4587-83eb-7ef0a5d2b5c0",
+    "text": "Công việc tat cv do Thanh Tùng Phạm vừa được gán cho bạn là người thực hiện mới vào 24/02/2026, 02:59. Vui lòng kiểm tra và thực hiện công việc được giao.",
+    "html": "<p>Công việc tat cv do Thanh Tùng Phạm vừa được gán cho bạn là người thực hiện mới vào 24/02/2026, 02:59. Vui lòng kiểm tra và thực hiện công việc được giao.</p>\n",
+    "type": "regular",
+    "user": {
+        "id": "system",
+        "name": "Thông báo Hệ thống",
+        "language": "",
+        "role": "admin",
+        "teams": [],
+        "created_at": "2026-02-11T11:58:14.394258Z",
+        "updated_at": "2026-02-12T03:39:50.070498Z",
+        "banned": false,
+        "online": false,
+        "blocked_user_ids": [],
+        "isBot": true,
+        "subSystemId": 0,
+        "translationName": {
+            "en": "System notification",
+            "id": "Notifikasi Sistem",
+            "vi": "Thông báo Hệ thống"
+        }
+    },
+    "member": {
+        "channel_role": "channel_member"
+    },
+    "attachments": [],
+    "latest_reactions": [],
+    "own_reactions": [],
+    "reaction_counts": {},
+    "reaction_scores": {},
+    "reply_count": 0,
+    "deleted_reply_count": 0,
+    "cid": "bot_notification:bot_notification_system_114_305601",
+    "created_at": "2026-02-24T07:59:40.296094Z",
+    "updated_at": "2026-02-24T07:59:40.296094Z",
+    "shadowed": false,
+    "mentioned_users": [],
+    "mentioned_channel": false,
+    "mentioned_here": false,
+    "silent": false,
+    "pinned": false,
+    "pinned_at": null,
+    "pinned_by": null,
+    "pin_expires": null,
+    "restricted_visibility": [],
+    "LinkWebsite": "work/task-assignment/task-assignment-master?filterUserCode=ALL&taskAssignmentId=277924979720192",
+    "TitleWebLang": {
+        "vi": "Công việc mới.",
+        "en": "New Task is created.",
+        "id": "Tugas baru dibuat."
+    },
+    "ContentWebLang": {
+        "en": "New task tat cv created by Thanh Tùng Phạm is assigned to you at 24/02/2026, 02:59.",
+        "id": "Tugas baru tat cv yang dibuat oleh Thanh Tùng Phạm telah ditugaskan kepada Anda pada 24/02/2026, 02:59.",
+        "vi": "Công việc tat cv do Thanh Tùng Phạm vừa được gán cho bạn là người thực hiện mới vào 24/02/2026, 02:59. Vui lòng kiểm tra và thực hiện công việc được giao."
+    },
+    "LinkMobile": "/work/task-assignment/task-assignment-master?filterUserCode=ALL&taskAssignmentId=277924979720192"
+}

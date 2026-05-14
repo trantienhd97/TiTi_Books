@@ -1,0 +1,24 @@
+{
+  "unversionedId": "deployment",
+  "id": "deployment",
+  "title": "Hướng dẫn Triển khai Ứng dụng",
+  "description": "1. Tổng quan",
+  "source": "@site/docs/deployment.md",
+  "sourceDirName": ".",
+  "slug": "/deployment",
+  "permalink": "/docs/deployment",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/deployment.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Dependency Injection với GetIt và Injectable",
+    "permalink": "/docs/dependency-injection"
+  },
+  "next": {
+    "title": "Discussion Entity Adapter System",
+    "permalink": "/docs/discussion-entity-adapters"
+  }
+}

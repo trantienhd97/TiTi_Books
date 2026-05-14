@@ -1,0 +1,339 @@
+{
+  "/__docusaurus/debug-597": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    }
+  },
+  "/__docusaurus/debug/config-b07": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    }
+  },
+  "/__docusaurus/debug/content-912": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-3e9": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    }
+  },
+  "/__docusaurus/debug/metadata-a28": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    }
+  },
+  "/__docusaurus/debug/registry-ad2": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    }
+  },
+  "/__docusaurus/debug/routes-454": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-147-b7e"
+    }
+  },
+  "/docs-db9": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-717-ebc"
+    },
+    "versionMetadata": "versionMetadata---docs-935-398"
+  },
+  "/docs/-a8c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-c-37-4d0"
+  },
+  "/docs/ai-workflow-image-compression-dfe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ai-workflow-image-compression-938-2a5"
+  },
+  "/docs/analytics_permissions_docs-678": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-analytics-permissions-docsa-9-a-06f"
+  },
+  "/docs/analytics/-aa3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-analytics-88-a-b41"
+  },
+  "/docs/analytics/learning_overview_summary_by_site-f80": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-analytics-learning-overview-summary-by-sitec-9-d-525"
+  },
+  "/docs/analytics/site_report_api_docs-f52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-analytics-site-report-api-docsde-2-99b"
+  },
+  "/docs/android-16kb-support-d28": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-android-16-kb-support-945-2f2"
+  },
+  "/docs/Animations/celebration-animation-79a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-animations-celebration-animation-3-a-0-064"
+  },
+  "/docs/Animations/streak-animation-51a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-animations-streak-animationf-0-e-363"
+  },
+  "/docs/cau-truc-du-an-va-huong-dan-513": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-cau-truc-du-an-va-huong-dan-885-ebd"
+  },
+  "/docs/CHANGELOG_QUICK_REF-677": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-changelog-quick-ref-319-e04"
+  },
+  "/docs/CHANGELOG_SUMMARY-513": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-changelog-summary-785-419"
+  },
+  "/docs/core-packages-0b2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-core-packages-5-c-5-0d8"
+  },
+  "/docs/dependency-injection-9fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-dependency-injectiona-66-e2a"
+  },
+  "/docs/deployment-aee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-deploymenta-37-88b"
+  },
+  "/docs/discussion-entity-adapters-546": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-discussion-entity-adapters-33-f-8ad"
+  },
+  "/docs/entity-chat-integration-guide-52a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-entity-chat-integration-guidedfe-646"
+  },
+  "/docs/ga4-analytics-guide-aac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ga-4-analytics-guide-2-e-8-150"
+  },
+  "/docs/gitnexus-usage-743": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-gitnexus-usagead-2-47f"
+  },
+  "/docs/head_up/create_announcement_feature-451": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-head-up-create-announcement-feature-127-ffd"
+  },
+  "/docs/inspection_offline/-7a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-2-f-4-8d4"
+  },
+  "/docs/inspection_offline/client_side/bieu_mau-a94": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-client-side-bieu-mauff-4-e68"
+  },
+  "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE-abc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-client-side-inspection-calculate-score-client-guid-eb-65-cdd"
+  },
+  "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE-6b2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-client-side-inspection-client-validation-guid-efc-8-c23"
+  },
+  "/docs/inspection_offline/client_side/score-eb4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-client-side-scoredf-5-d96"
+  },
+  "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF-bf8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-inspection-logic-quick-re-fabb-84f"
+  },
+  "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM-be4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-inspection-logic-system-211-37a"
+  },
+  "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS-d51": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-inspection-offline-analysis-6-d-6-574"
+  },
+  "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY-391": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-inspection-offline-summary-3-e-9-18d"
+  },
+  "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS-9e1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspection-offline-task-assignment-trigger-analysis-3-f-3-f30"
+  },
+  "/docs/inspections/-a92": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspections-830-990"
+  },
+  "/docs/inspections/answer-types-system-090": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspections-answer-types-system-541-abb"
+  },
+  "/docs/inspections/architecture-overview-dd7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspections-architecture-overviewf-50-2dc"
+  },
+  "/docs/inspections/upload-progress-implementation-66e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-inspections-upload-progress-implementationaa-9-724"
+  },
+  "/docs/localization-501": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-localizationdeb-b03"
+  },
+  "/docs/media_picker_plus_integration-a73": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-media-picker-plus-integration-360-7d1"
+  },
+  "/docs/multi_selection_search_modal_usage-a74": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-multi-selection-search-modal-usageb-4-b-c48"
+  },
+  "/docs/notification-handlers-184": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-notification-handlersa-86-f67"
+  },
+  "/docs/push_notification_lifecycle-f52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-push-notification-lifecycleb-69-382"
+  },
+  "/docs/questionnair/ai_gennerate-9e0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-questionnair-ai-gennerate-2-b-6-531"
+  },
+  "/docs/RELEASE_NOTES_GUIDE-aee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-release-notes-guid-eaea-d4e"
+  },
+  "/docs/ROUTE_MIGRATION_GUIDE-8d4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-route-migration-guid-ebaa-47a"
+  },
+  "/docs/schedule/dat-lich-195": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-schedule-dat-lich-8-f-3-56b"
+  },
+  "/docs/schedule/schedule_creation_form-bfb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-schedule-schedule-creation-formebe-b61"
+  },
+  "/docs/search_tab_usage-72a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-search-tab-usage-3-c-2-db8"
+  },
+  "/docs/STREAM_CHAT_LOCALIZATION-5e7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-stream-chat-localizatio-nc-70-1e7"
+  },
+  "/docs/styling-rules-324": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-styling-rulesec-6-585"
+  },
+  "/docs/sub-app-development-ead": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sub-app-developmentc-3-d-2cf"
+  },
+  "/docs/supa_bibs_push_notification_subscription_points-4b7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-supa-bibs-push-notification-subscription-points-795-156"
+  },
+  "/docs/supa_communication_chat-53e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-supa-communication-chat-972-cbb"
+  },
+  "/docs/supa_communication_integration-e96": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-supa-communication-integration-113-ab4"
+  },
+  "/docs/TaskAssignment/quick-status-change-implementation-8c7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-task-assignment-quick-status-change-implementation-970-a37"
+  },
+  "/docs/TaskAssignment/task-assignment-status-change-flow-3b4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-task-assignment-task-assignment-status-change-flow-724-660"
+  },
+  "/docs/TaskAssignment/trang-home-a31": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-task-assignment-trang-home-665-d14"
+  },
+  "/docs/TaskAssignment/visibility-and-filtering-logic-2a8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-task-assignment-visibility-and-filtering-logic-5-b-9-1e8"
+  },
+  "/docs/training/filter_sync_personal_report-8e0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-training-filter-sync-personal-report-8-b-1-e7b"
+  },
+  "/docs/training/location_answer_implementation-429": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-training-location-answer-implementation-928-055"
+  },
+  "/docs/training/personal_report_default_filter-ccf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-training-personal-report-default-filterd-78-b7b"
+  },
+  "/docs/ui-components-629": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-ui-components-749-a5c"
+  },
+  "/docs/widgets/-6f8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-c-8-a-8f0"
+  },
+  "/docs/widgets/dashboard/dashboard_frame-30e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-dashboard-dashboard-frameb-1-b-160"
+  },
+  "/docs/widgets/supa_attendance_widgets-354": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-supa-attendance-widgets-2-bb-a31"
+  },
+  "/docs/widgets/supa_bibs_widgets-3c2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-supa-bibs-widgets-6-a-4-912"
+  },
+  "/docs/widgets/supa_serving_widgets-946": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-supa-serving-widgetsde-0-370"
+  },
+  "/docs/widgets/supa_spend_widgets-f27": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-supa-spend-widgets-5-f-8-91d"
+  },
+  "/docs/widgets/supa_training_widgets-80c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-supa-training-widgetsdb-4-c9e"
+  },
+  "/docs/widgets/supa_work_widgets-a9f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-supa-work-widgets-254-5f8"
+  },
+  "/docs/widgets/video_streaming_screen-206": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-video-streaming-screen-602-1aa"
+  },
+  "/docs/widgets/work/inspection/checklist_item-673": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-work-inspection-checklist-item-7-ae-6c7"
+  },
+  "/docs/widgets/work/task_assignment/task_item-dc4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-widgets-work-task-assignment-task-item-787-902"
+  },
+  "/-45a": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---4-a-2-a52"
+    },
+    "config": "config---5-e-9-4f3"
+  }
+}

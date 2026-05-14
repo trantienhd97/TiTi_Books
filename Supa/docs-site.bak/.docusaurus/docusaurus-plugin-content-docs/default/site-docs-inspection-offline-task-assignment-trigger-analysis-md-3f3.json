@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+  "id": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+  "title": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+  "description": "📋 TÓM TẮT",
+  "source": "@site/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS.md",
+  "sourceDirName": "inspection_offline",
+  "slug": "/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+  "permalink": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "INSPECTION OFFLINE - QUICK SUMMARY",
+    "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY"
+  },
+  "next": {
+    "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+    "permalink": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/INSPECTION_LOGIC_SYSTEM",
+  "id": "inspection_offline/INSPECTION_LOGIC_SYSTEM",
+  "title": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+  "description": "📋 NGUỒN DỮ LIỆU",
+  "source": "@site/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM.md",
+  "sourceDirName": "inspection_offline",
+  "slug": "/inspection_offline/INSPECTION_LOGIC_SYSTEM",
+  "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "INSPECTION LOGIC - QUICK REFERENCE",
+    "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF"
+  },
+  "next": {
+    "title": "INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP",
+    "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS"
+  }
+}

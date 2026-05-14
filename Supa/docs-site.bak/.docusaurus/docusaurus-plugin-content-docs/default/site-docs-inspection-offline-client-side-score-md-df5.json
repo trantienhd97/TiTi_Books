@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/client_side/score",
+  "id": "inspection_offline/client_side/score",
+  "title": "score",
+  "description": "| STT | Loại câu trả lời  | Logic thì                                         | Hành động khi thực hiện check list                                                                                                                                            | Nội dung Cảnh báo dưới từng câu hỏi                                                                                                                                                                                                                                |",
+  "source": "@site/docs/inspection_offline/client_side/score.md",
+  "sourceDirName": "inspection_offline/client_side",
+  "slug": "/inspection_offline/client_side/score",
+  "permalink": "/docs/inspection_offline/client_side/score",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/score.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Biểu mẫu",
+    "permalink": "/docs/inspection_offline/client_side/bieu_mau"
+  },
+  "next": {
+    "title": "Inspection System Documentation",
+    "permalink": "/docs/inspections/"
+  }
+}

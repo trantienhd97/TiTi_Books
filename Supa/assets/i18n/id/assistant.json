@@ -1,0 +1,5 @@
+{
+  "errors.fetchingBotsError": "Tidak dapat mengambil daftar bot",
+  "errors.fetchingBotsErrorDescription": "Silakan periksa koneksi internet Anda dan coba lagi",
+  "search.searchHint": "Cari bot"
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "head_up/create_announcement_feature",
+  "id": "head_up/create_announcement_feature",
+  "title": "Create Announcement (Heads Up) Feature",
+  "description": "1. Overview",
+  "source": "@site/docs/head_up/create_announcement_feature.md",
+  "sourceDirName": "head_up",
+  "slug": "/head_up/create_announcement_feature",
+  "permalink": "/docs/head_up/create_announcement_feature",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/head_up/create_announcement_feature.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng dẫn sử dụng GitNexus",
+    "permalink": "/docs/gitnexus-usage"
+  },
+  "next": {
+    "title": "Getting started",
+    "permalink": "/docs/"
+  }
+}

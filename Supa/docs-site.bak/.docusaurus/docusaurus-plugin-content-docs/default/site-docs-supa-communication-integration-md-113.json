@@ -1,0 +1,24 @@
+{
+  "unversionedId": "supa_communication_integration",
+  "id": "supa_communication_integration",
+  "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+  "description": "Scope: Cherry-pick only supacommunication wiring. Excludes unreleased supawork/supaproject route changes. packages/supacommunication/ is copied verbatim.",
+  "source": "@site/docs/supa_communication_integration.md",
+  "sourceDirName": ".",
+  "slug": "/supa_communication_integration",
+  "permalink": "/docs/supa_communication_integration",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/supa_communication_integration.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+    "permalink": "/docs/supa_communication_chat"
+  },
+  "next": {
+    "title": "Filter Synchronization for Personal Report Pages",
+    "permalink": "/docs/training/filter_sync_personal_report"
+  }
+}

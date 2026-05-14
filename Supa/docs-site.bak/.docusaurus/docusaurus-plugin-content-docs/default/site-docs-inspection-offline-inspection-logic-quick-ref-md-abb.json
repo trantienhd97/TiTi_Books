@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+  "id": "inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+  "title": "INSPECTION LOGIC - QUICK REFERENCE",
+  "description": "📊 8 LOẠI LOGIC",
+  "source": "@site/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF.md",
+  "sourceDirName": "inspection_offline",
+  "slug": "/inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+  "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "INSPECTION OFFLINE - DOCUMENTATION",
+    "permalink": "/docs/inspection_offline/"
+  },
+  "next": {
+    "title": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+    "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM"
+  }
+}

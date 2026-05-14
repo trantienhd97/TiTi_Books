@@ -1,0 +1,24 @@
+{
+  "unversionedId": "entity-chat-integration-guide",
+  "id": "entity-chat-integration-guide",
+  "title": "Entity Chat UI/UX Integration Guide",
+  "description": "This guide explains how to replace legacy comment UI with the Stream-based entity chat UI for any business entity page (for example TaskAssignment, Inspection).",
+  "source": "@site/docs/entity-chat-integration-guide.md",
+  "sourceDirName": ".",
+  "slug": "/entity-chat-integration-guide",
+  "permalink": "/docs/entity-chat-integration-guide",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/entity-chat-integration-guide.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Discussion Entity Adapter System",
+    "permalink": "/docs/discussion-entity-adapters"
+  },
+  "next": {
+    "title": "Hướng dẫn kiểm tra GA4 Analytics",
+    "permalink": "/docs/ga4-analytics-guide"
+  }
+}

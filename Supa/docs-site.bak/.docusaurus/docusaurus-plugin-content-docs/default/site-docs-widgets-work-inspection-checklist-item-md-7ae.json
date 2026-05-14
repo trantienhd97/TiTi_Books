@@ -1,0 +1,24 @@
+{
+  "unversionedId": "widgets/work/inspection/checklist_item",
+  "id": "widgets/work/inspection/checklist_item",
+  "title": "Inspection & Checklist Items",
+  "description": "Thành phần hiển thị danh sách kiểm tra (Checklist) trong module Work.",
+  "source": "@site/docs/widgets/work/inspection/checklist_item.md",
+  "sourceDirName": "widgets/work/inspection",
+  "slug": "/widgets/work/inspection/checklist_item",
+  "permalink": "/docs/widgets/work/inspection/checklist_item",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/work/inspection/checklist_item.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "VideoStreamingScreen",
+    "permalink": "/docs/widgets/video_streaming_screen"
+  },
+  "next": {
+    "title": "Task Assignment Items",
+    "permalink": "/docs/widgets/work/task_assignment/task_item"
+  }
+}

@@ -1,0 +1,956 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "category",
+        "label": "Animations",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Celebration Animation Guide",
+            "href": "/docs/Animations/celebration-animation",
+            "docId": "Animations/celebration-animation"
+          },
+          {
+            "type": "link",
+            "label": "Streak Animation Guide",
+            "href": "/docs/Animations/streak-animation",
+            "docId": "Animations/streak-animation"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Quick Reference: Changelog Generation",
+        "href": "/docs/CHANGELOG_QUICK_REF",
+        "docId": "CHANGELOG_QUICK_REF"
+      },
+      {
+        "type": "link",
+        "label": "Changelog Generation System - Summary",
+        "href": "/docs/CHANGELOG_SUMMARY",
+        "docId": "CHANGELOG_SUMMARY"
+      },
+      {
+        "type": "link",
+        "label": "Changelog & Release Notes Management",
+        "href": "/docs/RELEASE_NOTES_GUIDE",
+        "docId": "RELEASE_NOTES_GUIDE"
+      },
+      {
+        "type": "link",
+        "label": "Route Migration Documentation (Supa Work)",
+        "href": "/docs/ROUTE_MIGRATION_GUIDE",
+        "docId": "ROUTE_MIGRATION_GUIDE"
+      },
+      {
+        "type": "link",
+        "label": "Stream Chat Localization Configuration",
+        "href": "/docs/STREAM_CHAT_LOCALIZATION",
+        "docId": "STREAM_CHAT_LOCALIZATION"
+      },
+      {
+        "type": "category",
+        "label": "TaskAssignment",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+            "href": "/docs/TaskAssignment/quick-status-change-implementation",
+            "docId": "TaskAssignment/quick-status-change-implementation"
+          },
+          {
+            "type": "link",
+            "label": "Task Assignment Status Change Flow",
+            "href": "/docs/TaskAssignment/task-assignment-status-change-flow",
+            "docId": "TaskAssignment/task-assignment-status-change-flow"
+          },
+          {
+            "type": "link",
+            "label": "Trang HOME",
+            "href": "/docs/TaskAssignment/trang-home",
+            "docId": "TaskAssignment/trang-home"
+          },
+          {
+            "type": "link",
+            "label": "Visibility and Filtering Logic",
+            "href": "/docs/TaskAssignment/visibility-and-filtering-logic",
+            "docId": "TaskAssignment/visibility-and-filtering-logic"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+        "href": "/docs/ai-workflow-image-compression",
+        "docId": "ai-workflow-image-compression"
+      },
+      {
+        "type": "category",
+        "label": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+            "href": "/docs/analytics/learning_overview_summary_by_site",
+            "docId": "analytics/learning_overview_summary_by_site"
+          },
+          {
+            "type": "link",
+            "label": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+            "href": "/docs/analytics/site_report_api_docs",
+            "docId": "analytics/site_report_api_docs"
+          }
+        ],
+        "href": "/docs/analytics/"
+      },
+      {
+        "type": "link",
+        "label": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+        "href": "/docs/analytics_permissions_docs",
+        "docId": "analytics_permissions_docs"
+      },
+      {
+        "type": "link",
+        "label": "Android 16KB Page Size Support",
+        "href": "/docs/android-16kb-support",
+        "docId": "android-16kb-support"
+      },
+      {
+        "type": "link",
+        "label": "Cấu trúc dự án và hướng dẫn phát triển",
+        "href": "/docs/cau-truc-du-an-va-huong-dan",
+        "docId": "cau-truc-du-an-va-huong-dan"
+      },
+      {
+        "type": "link",
+        "label": "Core Packages: supa_architecture và supa_foundation",
+        "href": "/docs/core-packages",
+        "docId": "core-packages"
+      },
+      {
+        "type": "link",
+        "label": "Dependency Injection với GetIt và Injectable",
+        "href": "/docs/dependency-injection",
+        "docId": "dependency-injection"
+      },
+      {
+        "type": "link",
+        "label": "Hướng dẫn Triển khai Ứng dụng",
+        "href": "/docs/deployment",
+        "docId": "deployment"
+      },
+      {
+        "type": "link",
+        "label": "Discussion Entity Adapter System",
+        "href": "/docs/discussion-entity-adapters",
+        "docId": "discussion-entity-adapters"
+      },
+      {
+        "type": "link",
+        "label": "Entity Chat UI/UX Integration Guide",
+        "href": "/docs/entity-chat-integration-guide",
+        "docId": "entity-chat-integration-guide"
+      },
+      {
+        "type": "link",
+        "label": "Hướng dẫn kiểm tra GA4 Analytics",
+        "href": "/docs/ga4-analytics-guide",
+        "docId": "ga4-analytics-guide"
+      },
+      {
+        "type": "link",
+        "label": "Hướng dẫn sử dụng GitNexus",
+        "href": "/docs/gitnexus-usage",
+        "docId": "gitnexus-usage"
+      },
+      {
+        "type": "category",
+        "label": "head_up",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Create Announcement (Heads Up) Feature",
+            "href": "/docs/head_up/create_announcement_feature",
+            "docId": "head_up/create_announcement_feature"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/docs/",
+        "docId": "index"
+      },
+      {
+        "type": "category",
+        "label": "INSPECTION OFFLINE - DOCUMENTATION",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "INSPECTION LOGIC - QUICK REFERENCE",
+            "href": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+            "docId": "inspection_offline/INSPECTION_LOGIC_QUICK_REF"
+          },
+          {
+            "type": "link",
+            "label": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+            "href": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM",
+            "docId": "inspection_offline/INSPECTION_LOGIC_SYSTEM"
+          },
+          {
+            "type": "link",
+            "label": "INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP",
+            "href": "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+            "docId": "inspection_offline/INSPECTION_OFFLINE_ANALYSIS"
+          },
+          {
+            "type": "link",
+            "label": "INSPECTION OFFLINE - QUICK SUMMARY",
+            "href": "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+            "docId": "inspection_offline/INSPECTION_OFFLINE_SUMMARY"
+          },
+          {
+            "type": "link",
+            "label": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+            "href": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+            "docId": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS"
+          },
+          {
+            "type": "category",
+            "label": "client_side",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+                "href": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+                "docId": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE"
+              },
+              {
+                "type": "link",
+                "label": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+                "href": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+                "docId": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE"
+              },
+              {
+                "type": "link",
+                "label": "Biểu mẫu",
+                "href": "/docs/inspection_offline/client_side/bieu_mau",
+                "docId": "inspection_offline/client_side/bieu_mau"
+              },
+              {
+                "type": "link",
+                "label": "score",
+                "href": "/docs/inspection_offline/client_side/score",
+                "docId": "inspection_offline/client_side/score"
+              }
+            ]
+          }
+        ],
+        "href": "/docs/inspection_offline/"
+      },
+      {
+        "type": "category",
+        "label": "Inspection System Documentation",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Answer Types System",
+            "href": "/docs/inspections/answer-types-system",
+            "docId": "inspections/answer-types-system"
+          },
+          {
+            "type": "link",
+            "label": "Inspection Architecture Overview",
+            "href": "/docs/inspections/architecture-overview",
+            "docId": "inspections/architecture-overview"
+          },
+          {
+            "type": "link",
+            "label": "Upload Progress Implementation - Inspection Media",
+            "href": "/docs/inspections/upload-progress-implementation",
+            "docId": "inspections/upload-progress-implementation"
+          }
+        ],
+        "href": "/docs/inspections/"
+      },
+      {
+        "type": "link",
+        "label": "Localization",
+        "href": "/docs/localization",
+        "docId": "localization"
+      },
+      {
+        "type": "link",
+        "label": "media_picker_plus Integration Guide",
+        "href": "/docs/media_picker_plus_integration",
+        "docId": "media_picker_plus_integration"
+      },
+      {
+        "type": "link",
+        "label": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+        "href": "/docs/multi_selection_search_modal_usage",
+        "docId": "multi_selection_search_modal_usage"
+      },
+      {
+        "type": "link",
+        "label": "Notification Handler System",
+        "href": "/docs/notification-handlers",
+        "docId": "notification-handlers"
+      },
+      {
+        "type": "link",
+        "label": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+        "href": "/docs/push_notification_lifecycle",
+        "docId": "push_notification_lifecycle"
+      },
+      {
+        "type": "category",
+        "label": "questionnair",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "ai_gennerate",
+            "href": "/docs/questionnair/ai_gennerate",
+            "docId": "questionnair/ai_gennerate"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "schedule",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "ĐẶT LỊCH",
+            "href": "/docs/schedule/dat-lich",
+            "docId": "schedule/dat-lich"
+          },
+          {
+            "type": "link",
+            "label": "Form Tạo Lịch (Schedule Creation Form)",
+            "href": "/docs/schedule/schedule_creation_form",
+            "docId": "schedule/schedule_creation_form"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Hướng dẫn sử dụng SearchTab và TabContent",
+        "href": "/docs/search_tab_usage",
+        "docId": "search_tab_usage"
+      },
+      {
+        "type": "link",
+        "label": "Quy tắc Styling",
+        "href": "/docs/styling-rules",
+        "docId": "styling-rules"
+      },
+      {
+        "type": "link",
+        "label": "Phát triển Sub-App",
+        "href": "/docs/sub-app-development",
+        "docId": "sub-app-development"
+      },
+      {
+        "type": "link",
+        "label": "PushNotificationBloc Subscription Points in supa_bibs",
+        "href": "/docs/supa_bibs_push_notification_subscription_points",
+        "docId": "supa_bibs_push_notification_subscription_points"
+      },
+      {
+        "type": "link",
+        "label": "Supa Communication Chat — Tài liệu kỹ thuật",
+        "href": "/docs/supa_communication_chat",
+        "docId": "supa_communication_chat"
+      },
+      {
+        "type": "link",
+        "label": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+        "href": "/docs/supa_communication_integration",
+        "docId": "supa_communication_integration"
+      },
+      {
+        "type": "category",
+        "label": "training",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Filter Synchronization for Personal Report Pages",
+            "href": "/docs/training/filter_sync_personal_report",
+            "docId": "training/filter_sync_personal_report"
+          },
+          {
+            "type": "link",
+            "label": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+            "href": "/docs/training/location_answer_implementation",
+            "docId": "training/location_answer_implementation"
+          },
+          {
+            "type": "link",
+            "label": "Personal Report - Default Filter & Label Display",
+            "href": "/docs/training/personal_report_default_filter",
+            "docId": "training/personal_report_default_filter"
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "UI Components",
+        "href": "/docs/ui-components",
+        "docId": "ui-components"
+      },
+      {
+        "type": "category",
+        "label": "Widgets",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "category",
+            "label": "dashboard",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "DashboardFrame",
+                "href": "/docs/widgets/dashboard/dashboard_frame",
+                "docId": "widgets/dashboard/dashboard_frame"
+              }
+            ]
+          },
+          {
+            "type": "link",
+            "label": "Supa Attendance Widgets",
+            "href": "/docs/widgets/supa_attendance_widgets",
+            "docId": "widgets/supa_attendance_widgets"
+          },
+          {
+            "type": "link",
+            "label": "Supa Bibs Widgets",
+            "href": "/docs/widgets/supa_bibs_widgets",
+            "docId": "widgets/supa_bibs_widgets"
+          },
+          {
+            "type": "link",
+            "label": "Supa Serving Widgets",
+            "href": "/docs/widgets/supa_serving_widgets",
+            "docId": "widgets/supa_serving_widgets"
+          },
+          {
+            "type": "link",
+            "label": "Supa Spend Widgets",
+            "href": "/docs/widgets/supa_spend_widgets",
+            "docId": "widgets/supa_spend_widgets"
+          },
+          {
+            "type": "link",
+            "label": "Supa Training Widgets",
+            "href": "/docs/widgets/supa_training_widgets",
+            "docId": "widgets/supa_training_widgets"
+          },
+          {
+            "type": "link",
+            "label": "Supa Work Widgets",
+            "href": "/docs/widgets/supa_work_widgets",
+            "docId": "widgets/supa_work_widgets"
+          },
+          {
+            "type": "link",
+            "label": "VideoStreamingScreen",
+            "href": "/docs/widgets/video_streaming_screen",
+            "docId": "widgets/video_streaming_screen"
+          },
+          {
+            "type": "category",
+            "label": "work",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "category",
+                "label": "inspection",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Inspection & Checklist Items",
+                    "href": "/docs/widgets/work/inspection/checklist_item",
+                    "docId": "widgets/work/inspection/checklist_item"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "task_assignment",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Task Assignment Items",
+                    "href": "/docs/widgets/work/task_assignment/task_item",
+                    "docId": "widgets/work/task_assignment/task_item"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "href": "/docs/widgets/"
+      }
+    ]
+  },
+  "docs": {
+    "ai-workflow-image-compression": {
+      "id": "ai-workflow-image-compression",
+      "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+      "description": "Tài liệu này dùng để AI (Antigravity) hoặc lập trình viên đọc tham khảo và thực thi tự động khi chuyển sang một nhánh (branch) mới cần áp dụng lại cơ chế Nén Ảnh Bằng Base Dart (Isolate) (Bỏ qua lỗi văng RAM OutOfMemory từ thư viện).",
+      "sidebar": "tutorialSidebar"
+    },
+    "analytics_permissions_docs": {
+      "id": "analytics_permissions_docs",
+      "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+      "description": "Hệ thống phân quyền cho module Báo cáo được thiết kế dựa trên danh sách các đường dẫn (paths) được trả về từ Backend.",
+      "sidebar": "tutorialSidebar"
+    },
+    "analytics/learning_overview_summary_by_site": {
+      "id": "analytics/learning_overview_summary_by_site",
+      "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+      "description": "Tài liệu này giải thích cấu trúc dữ liệu trả về từ API summary-by-site của backend và cách thiết kế Model tại các module liên quan (supatraining và supawork/analytics).",
+      "sidebar": "tutorialSidebar"
+    },
+    "analytics/README": {
+      "id": "analytics/README",
+      "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+      "description": "1. Mục đích là gì?",
+      "sidebar": "tutorialSidebar"
+    },
+    "analytics/site_report_api_docs": {
+      "id": "analytics/site_report_api_docs",
+      "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+      "description": "Tài liệu này mô tả chi tiết quá trình nâng cấp hệ thống báo cáo (Site Report) từ việc sử dụng một danh sách địa điểm cố định (flat array) sang Cấu trúc dữ liệu cây dẹt (Flat tree data structure). Điều này cho phép ứng dụng hỗ trợ tính năng nhóm địa điểm và hiển thị dữ liệu drill-down (khoan lồng) nhiều cấp bậc.",
+      "sidebar": "tutorialSidebar"
+    },
+    "android-16kb-support": {
+      "id": "android-16kb-support",
+      "title": "Android 16KB Page Size Support",
+      "description": "🎯 Status: CONFIGURED & READY",
+      "sidebar": "tutorialSidebar"
+    },
+    "Animations/celebration-animation": {
+      "id": "Animations/celebration-animation",
+      "title": "Celebration Animation Guide",
+      "description": "This document describes the implementation and usage of the full-screen celebration animation within the Super App.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Animations/streak-animation": {
+      "id": "Animations/streak-animation",
+      "title": "Streak Animation Guide",
+      "description": "This document describes the implementation and usage of the SupaStreakAnimation widget, used for providing visual feedback during state updates (e.g., successful task status changes).",
+      "sidebar": "tutorialSidebar"
+    },
+    "cau-truc-du-an-va-huong-dan": {
+      "id": "cau-truc-du-an-va-huong-dan",
+      "title": "Cấu trúc dự án và hướng dẫn phát triển",
+      "description": "1. Cấu trúc chung của dự án",
+      "sidebar": "tutorialSidebar"
+    },
+    "CHANGELOG_QUICK_REF": {
+      "id": "CHANGELOG_QUICK_REF",
+      "title": "Quick Reference: Changelog Generation",
+      "description": "🚀 Quick Start",
+      "sidebar": "tutorialSidebar"
+    },
+    "CHANGELOG_SUMMARY": {
+      "id": "CHANGELOG_SUMMARY",
+      "title": "Changelog Generation System - Summary",
+      "description": "✅ What Was Created",
+      "sidebar": "tutorialSidebar"
+    },
+    "core-packages": {
+      "id": "core-packages",
+      "title": "Core Packages: supa_architecture và supa_foundation",
+      "description": "1. Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "dependency-injection": {
+      "id": "dependency-injection",
+      "title": "Dependency Injection với GetIt và Injectable",
+      "description": "1. Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "deployment": {
+      "id": "deployment",
+      "title": "Hướng dẫn Triển khai Ứng dụng",
+      "description": "1. Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "discussion-entity-adapters": {
+      "id": "discussion-entity-adapters",
+      "title": "Discussion Entity Adapter System",
+      "description": "1. Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "entity-chat-integration-guide": {
+      "id": "entity-chat-integration-guide",
+      "title": "Entity Chat UI/UX Integration Guide",
+      "description": "This guide explains how to replace legacy comment UI with the Stream-based entity chat UI for any business entity page (for example TaskAssignment, Inspection).",
+      "sidebar": "tutorialSidebar"
+    },
+    "ga4-analytics-guide": {
+      "id": "ga4-analytics-guide",
+      "title": "Hướng dẫn kiểm tra GA4 Analytics",
+      "description": "⚠️ QUAN TRỌNG: Automatic Screen Tracking đã bị TẮT",
+      "sidebar": "tutorialSidebar"
+    },
+    "gitnexus-usage": {
+      "id": "gitnexus-usage",
+      "title": "Hướng dẫn sử dụng GitNexus",
+      "description": "GitNexus là công cụ tạo knowledge graph cho codebase, giúp AI agents hiểu sâu về kiến trúc, call chain và execution flow của project.",
+      "sidebar": "tutorialSidebar"
+    },
+    "head_up/create_announcement_feature": {
+      "id": "head_up/create_announcement_feature",
+      "title": "Create Announcement (Heads Up) Feature",
+      "description": "1. Overview",
+      "sidebar": "tutorialSidebar"
+    },
+    "index": {
+      "id": "index",
+      "title": "Getting started",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/client_side/bieu_mau": {
+      "id": "inspection_offline/client_side/bieu_mau",
+      "title": "Biểu mẫu",
+      "description": "Link thiết kế//www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17609-14177&amp;t=TZBwrrKSgFKbTvZw-4",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE": {
+      "id": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+      "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+      "description": "I. T?NG QUAN",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE": {
+      "id": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+      "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+      "description": "1.\tSyncInspectionInformation:",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/client_side/score": {
+      "id": "inspection_offline/client_side/score",
+      "title": "score",
+      "description": "| STT | Loại câu trả lời  | Logic thì                                         | Hành động khi thực hiện check list                                                                                                                                            | Nội dung Cảnh báo dưới từng câu hỏi                                                                                                                                                                                                                                |",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/INSPECTION_LOGIC_QUICK_REF": {
+      "id": "inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+      "title": "INSPECTION LOGIC - QUICK REFERENCE",
+      "description": "📊 8 LOẠI LOGIC",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/INSPECTION_LOGIC_SYSTEM": {
+      "id": "inspection_offline/INSPECTION_LOGIC_SYSTEM",
+      "title": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+      "description": "📋 NGUỒN DỮ LIỆU",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/INSPECTION_OFFLINE_ANALYSIS": {
+      "id": "inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+      "title": "INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP",
+      "description": "📋 MỤC TIÊU",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/INSPECTION_OFFLINE_SUMMARY": {
+      "id": "inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+      "title": "INSPECTION OFFLINE - QUICK SUMMARY",
+      "description": "🎯 2 PHASES STRATEGY",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/README": {
+      "id": "inspection_offline/README",
+      "title": "INSPECTION OFFLINE - DOCUMENTATION",
+      "description": "This folder contains complete documentation for the Inspection Offline/Local feature implementation.",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS": {
+      "id": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+      "title": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+      "description": "📋 TÓM TẮT",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspections/answer-types-system": {
+      "id": "inspections/answer-types-system",
+      "title": "Answer Types System",
+      "description": "Overview",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspections/architecture-overview": {
+      "id": "inspections/architecture-overview",
+      "title": "Inspection Architecture Overview",
+      "description": "Component Hierarchy",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspections/README": {
+      "id": "inspections/README",
+      "title": "Inspection System Documentation",
+      "description": "Overview",
+      "sidebar": "tutorialSidebar"
+    },
+    "inspections/upload-progress-implementation": {
+      "id": "inspections/upload-progress-implementation",
+      "title": "Upload Progress Implementation - Inspection Media",
+      "description": "Overview",
+      "sidebar": "tutorialSidebar"
+    },
+    "localization": {
+      "id": "localization",
+      "title": "Localization",
+      "description": "Dự án này sử dụng supal10nmanager cho localization. Quy trình làm việc là \"code-first\", nghĩa là bạn định nghĩa translation keys trong code, sau đó extract chúng ra các file JSON.",
+      "sidebar": "tutorialSidebar"
+    },
+    "media_picker_plus_integration": {
+      "id": "media_picker_plus_integration",
+      "title": "media_picker_plus Integration Guide",
+      "description": "Overview",
+      "sidebar": "tutorialSidebar"
+    },
+    "multi_selection_search_modal_usage": {
+      "id": "multi_selection_search_modal_usage",
+      "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+      "description": "MultiSelectionSearchModal là một widget Generic dùng để tạo modal tìm kiếm và chọn nhiều phần tử. Đây là giải pháp tiêu chuẩn trong ứng dụng cho các danh sách chọn như Người dùng, Địa điểm, Tags, hoặc loại thiết bị.",
+      "sidebar": "tutorialSidebar"
+    },
+    "notification-handlers": {
+      "id": "notification-handlers",
+      "title": "Notification Handler System",
+      "description": "1. Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "push_notification_lifecycle": {
+      "id": "push_notification_lifecycle",
+      "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+      "description": "Tài liệu này mô tả luồng hoạt động của hệ thống thông báo đẩy (FCM) trong ứng dụng, bao gồm quá trình đăng ký khi người dùng đăng nhập và xóa token khi người dùng đăng xuất.",
+      "sidebar": "tutorialSidebar"
+    },
+    "questionnair/ai_gennerate": {
+      "id": "questionnair/ai_gennerate",
+      "title": "ai_gennerate",
+      "description": "Dưới đây là tài liệu final để gửi team frontend, đã cập nhật theo bản bạn sửa: SignalR gửi theo Clients.User($\".{GlobalUserId}\") và event name mới ReceiveQuestionnaireAIGenerated.",
+      "sidebar": "tutorialSidebar"
+    },
+    "RELEASE_NOTES_GUIDE": {
+      "id": "RELEASE_NOTES_GUIDE",
+      "title": "Changelog & Release Notes Management",
+      "description": "This directory contains tools and workflows for managing release notes and changelogs.",
+      "sidebar": "tutorialSidebar"
+    },
+    "ROUTE_MIGRATION_GUIDE": {
+      "id": "ROUTE_MIGRATION_GUIDE",
+      "title": "Route Migration Documentation (Supa Work)",
+      "description": "Tài liệu chi tiết về việc thay đổi cấu trúc đường dẫn (route) từ /work sang /work-new và làm phẳng các sub-paths.",
+      "sidebar": "tutorialSidebar"
+    },
+    "schedule/dat-lich": {
+      "id": "schedule/dat-lich",
+      "title": "ĐẶT LỊCH",
+      "description": "https://www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17609-14166&amp;p=f&amp;t=HbmhJyk4P6KSO4pP-0",
+      "sidebar": "tutorialSidebar"
+    },
+    "schedule/schedule_creation_form": {
+      "id": "schedule/schedule_creation_form",
+      "title": "Form Tạo Lịch (Schedule Creation Form)",
+      "description": "Mục đích",
+      "sidebar": "tutorialSidebar"
+    },
+    "search_tab_usage": {
+      "id": "search_tab_usage",
+      "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+      "description": "SearchTab và TabContent là bộ đôi widget mạnh mẽ dùng để tạo giao diện chọn nhiều đối tượng (Multi-selection) phân theo từng Tab dữ liệu khác nhau (ví dụ: Cá nhân, Nhóm, Địa điểm).",
+      "sidebar": "tutorialSidebar"
+    },
+    "STREAM_CHAT_LOCALIZATION": {
+      "id": "STREAM_CHAT_LOCALIZATION",
+      "title": "Stream Chat Localization Configuration",
+      "description": "Overview",
+      "sidebar": "tutorialSidebar"
+    },
+    "styling-rules": {
+      "id": "styling-rules",
+      "title": "Quy tắc Styling",
+      "description": "Tài liệu này mô tả các quy tắc styling cho dự án SupaMobileApp, bao gồm thông tin về kích thước font, border radius, màu sắc, spacing và typography.",
+      "sidebar": "tutorialSidebar"
+    },
+    "sub-app-development": {
+      "id": "sub-app-development",
+      "title": "Phát triển Sub-App",
+      "description": "1. Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "supa_bibs_push_notification_subscription_points": {
+      "id": "supa_bibs_push_notification_subscription_points",
+      "title": "PushNotificationBloc Subscription Points in supa_bibs",
+      "description": "This document lists all the places in the supa_bibs sub-application where the PushNotificationBloc is subscribed to reload data when notifications are received.",
+      "sidebar": "tutorialSidebar"
+    },
+    "supa_communication_chat": {
+      "id": "supa_communication_chat",
+      "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+      "description": "Tổng quan kiến trúc",
+      "sidebar": "tutorialSidebar"
+    },
+    "supa_communication_integration": {
+      "id": "supa_communication_integration",
+      "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+      "description": "Scope: Cherry-pick only supacommunication wiring. Excludes unreleased supawork/supaproject route changes. packages/supacommunication/ is copied verbatim.",
+      "sidebar": "tutorialSidebar"
+    },
+    "TaskAssignment/quick-status-change-implementation": {
+      "id": "TaskAssignment/quick-status-change-implementation",
+      "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+      "description": "Tài liệu hướng dẫn implementation cho tính năng chuyển trạng thái nhanh ở TaskAssignmentItem trong trang Home và danh sách công việc",
+      "sidebar": "tutorialSidebar"
+    },
+    "TaskAssignment/task-assignment-status-change-flow": {
+      "id": "TaskAssignment/task-assignment-status-change-flow",
+      "title": "Task Assignment Status Change Flow",
+      "description": "Tài liệu mô tả luồng chuyển trạng thái nhanh (Quick Status Change) cho Task Assignment.",
+      "sidebar": "tutorialSidebar"
+    },
+    "TaskAssignment/trang-home": {
+      "id": "TaskAssignment/trang-home",
+      "title": "Trang HOME",
+      "description": "Link thiết kế https://www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17332-9867&amp;t=dP7ebSyjPiKduZBj-4",
+      "sidebar": "tutorialSidebar"
+    },
+    "TaskAssignment/visibility-and-filtering-logic": {
+      "id": "TaskAssignment/visibility-and-filtering-logic",
+      "title": "Visibility and Filtering Logic",
+      "description": "Tài liệu mô tả các quy tắc hiển thị và phương pháp tối ưu hóa danh sách công việc (Task Assignment) trên Dashboard và các trang danh sách cá nhân.",
+      "sidebar": "tutorialSidebar"
+    },
+    "training/filter_sync_personal_report": {
+      "id": "training/filter_sync_personal_report",
+      "title": "Filter Synchronization for Personal Report Pages",
+      "description": "Summary",
+      "sidebar": "tutorialSidebar"
+    },
+    "training/location_answer_implementation": {
+      "id": "training/location_answer_implementation",
+      "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+      "description": "Tổng quan",
+      "sidebar": "tutorialSidebar"
+    },
+    "training/personal_report_default_filter": {
+      "id": "training/personal_report_default_filter",
+      "title": "Personal Report - Default Filter & Label Display",
+      "description": "Tóm Tắt Thay Đổi",
+      "sidebar": "tutorialSidebar"
+    },
+    "ui-components": {
+      "id": "ui-components",
+      "title": "UI Components",
+      "description": "Tài liệu này cung cấp tổng quan về các UI components được sử dụng trong dự án SupaMobileApp. Dự án tuân theo các nguyên tắc của Atomic Design để tạo ra một thư viện component có thể mở rộng và dễ bảo trì.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/dashboard/dashboard_frame": {
+      "id": "widgets/dashboard/dashboard_frame",
+      "title": "DashboardFrame",
+      "description": "DashboardFrame là một component khung (frame) được thiết kế để hiển thị các danh sách item trên Dashboard với hỗ trợ phân trang ngang (horizontal paging) và tự động điều chỉnh chiều cao.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/index": {
+      "id": "widgets/index",
+      "title": "Widgets",
+      "description": "- Dashboard Components",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/supa_attendance_widgets": {
+      "id": "widgets/supa_attendance_widgets",
+      "title": "Supa Attendance Widgets",
+      "description": "This document provides an overview of the reusable widgets in the supa_attendance package.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/supa_bibs_widgets": {
+      "id": "widgets/supa_bibs_widgets",
+      "title": "Supa Bibs Widgets",
+      "description": "This document provides an overview of the reusable widgets in the supa_bibs package, following an atomic design structure.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/supa_serving_widgets": {
+      "id": "widgets/supa_serving_widgets",
+      "title": "Supa Serving Widgets",
+      "description": "This document provides an overview of the reusable widgets in the supa_serving package.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/supa_spend_widgets": {
+      "id": "widgets/supa_spend_widgets",
+      "title": "Supa Spend Widgets",
+      "description": "This document provides an overview of the reusable widgets in the supa_spend package.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/supa_training_widgets": {
+      "id": "widgets/supa_training_widgets",
+      "title": "Supa Training Widgets",
+      "description": "This document provides an overview of the reusable widgets in the supa_training package.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/supa_work_widgets": {
+      "id": "widgets/supa_work_widgets",
+      "title": "Supa Work Widgets",
+      "description": "This document provides an overview of the reusable widgets in the supa_work package, following an atomic design structure.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/video_streaming_screen": {
+      "id": "widgets/video_streaming_screen",
+      "title": "VideoStreamingScreen",
+      "description": "Widget để stream video trực tiếp với authentication, sử dụng thư viện media_kit.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/work/inspection/checklist_item": {
+      "id": "widgets/work/inspection/checklist_item",
+      "title": "Inspection & Checklist Items",
+      "description": "Thành phần hiển thị danh sách kiểm tra (Checklist) trong module Work.",
+      "sidebar": "tutorialSidebar"
+    },
+    "widgets/work/task_assignment/task_item": {
+      "id": "widgets/work/task_assignment/task_item",
+      "title": "Task Assignment Items",
+      "description": "Thành phần hiển thị danh sách nhiệm vụ (Tasks) trong module Work.",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "supa_bibs_push_notification_subscription_points",
+  "id": "supa_bibs_push_notification_subscription_points",
+  "title": "PushNotificationBloc Subscription Points in supa_bibs",
+  "description": "This document lists all the places in the supa_bibs sub-application where the PushNotificationBloc is subscribed to reload data when notifications are received.",
+  "source": "@site/docs/supa_bibs_push_notification_subscription_points.md",
+  "sourceDirName": ".",
+  "slug": "/supa_bibs_push_notification_subscription_points",
+  "permalink": "/docs/supa_bibs_push_notification_subscription_points",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/supa_bibs_push_notification_subscription_points.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Phát triển Sub-App",
+    "permalink": "/docs/sub-app-development"
+  },
+  "next": {
+    "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+    "permalink": "/docs/supa_communication_chat"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "cau-truc-du-an-va-huong-dan",
+  "id": "cau-truc-du-an-va-huong-dan",
+  "title": "Cấu trúc dự án và hướng dẫn phát triển",
+  "description": "1. Cấu trúc chung của dự án",
+  "source": "@site/docs/cau-truc-du-an-va-huong-dan.md",
+  "sourceDirName": ".",
+  "slug": "/cau-truc-du-an-va-huong-dan",
+  "permalink": "/docs/cau-truc-du-an-va-huong-dan",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/cau-truc-du-an-va-huong-dan.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Android 16KB Page Size Support",
+    "permalink": "/docs/android-16kb-support"
+  },
+  "next": {
+    "title": "Core Packages: supa_architecture và supa_foundation",
+    "permalink": "/docs/core-packages"
+  }
+}

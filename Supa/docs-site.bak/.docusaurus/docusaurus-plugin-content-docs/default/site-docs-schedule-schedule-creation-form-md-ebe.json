@@ -1,0 +1,24 @@
+{
+  "unversionedId": "schedule/schedule_creation_form",
+  "id": "schedule/schedule_creation_form",
+  "title": "Form Tạo Lịch (Schedule Creation Form)",
+  "description": "Mục đích",
+  "source": "@site/docs/schedule/schedule_creation_form.md",
+  "sourceDirName": "schedule",
+  "slug": "/schedule/schedule_creation_form",
+  "permalink": "/docs/schedule/schedule_creation_form",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/schedule/schedule_creation_form.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ĐẶT LỊCH",
+    "permalink": "/docs/schedule/dat-lich"
+  },
+  "next": {
+    "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+    "permalink": "/docs/search_tab_usage"
+  }
+}

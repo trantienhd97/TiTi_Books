@@ -1,0 +1,24 @@
+{
+  "unversionedId": "Animations/streak-animation",
+  "id": "Animations/streak-animation",
+  "title": "Streak Animation Guide",
+  "description": "This document describes the implementation and usage of the SupaStreakAnimation widget, used for providing visual feedback during state updates (e.g., successful task status changes).",
+  "source": "@site/docs/Animations/streak-animation.md",
+  "sourceDirName": "Animations",
+  "slug": "/Animations/streak-animation",
+  "permalink": "/docs/Animations/streak-animation",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/Animations/streak-animation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Celebration Animation Guide",
+    "permalink": "/docs/Animations/celebration-animation"
+  },
+  "next": {
+    "title": "Quick Reference: Changelog Generation",
+    "permalink": "/docs/CHANGELOG_QUICK_REF"
+  }
+}

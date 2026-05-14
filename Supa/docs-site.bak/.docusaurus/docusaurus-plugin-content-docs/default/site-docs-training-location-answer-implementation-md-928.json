@@ -1,0 +1,24 @@
+{
+  "unversionedId": "training/location_answer_implementation",
+  "id": "training/location_answer_implementation",
+  "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+  "description": "Tổng quan",
+  "source": "@site/docs/training/location_answer_implementation.md",
+  "sourceDirName": "training",
+  "slug": "/training/location_answer_implementation",
+  "permalink": "/docs/training/location_answer_implementation",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/training/location_answer_implementation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Filter Synchronization for Personal Report Pages",
+    "permalink": "/docs/training/filter_sync_personal_report"
+  },
+  "next": {
+    "title": "Personal Report - Default Filter & Label Display",
+    "permalink": "/docs/training/personal_report_default_filter"
+  }
+}

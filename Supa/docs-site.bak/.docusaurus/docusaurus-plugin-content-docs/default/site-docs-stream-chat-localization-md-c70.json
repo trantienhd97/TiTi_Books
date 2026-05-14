@@ -1,0 +1,24 @@
+{
+  "unversionedId": "STREAM_CHAT_LOCALIZATION",
+  "id": "STREAM_CHAT_LOCALIZATION",
+  "title": "Stream Chat Localization Configuration",
+  "description": "Overview",
+  "source": "@site/docs/STREAM_CHAT_LOCALIZATION.md",
+  "sourceDirName": ".",
+  "slug": "/STREAM_CHAT_LOCALIZATION",
+  "permalink": "/docs/STREAM_CHAT_LOCALIZATION",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/STREAM_CHAT_LOCALIZATION.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Route Migration Documentation (Supa Work)",
+    "permalink": "/docs/ROUTE_MIGRATION_GUIDE"
+  },
+  "next": {
+    "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+    "permalink": "/docs/TaskAssignment/quick-status-change-implementation"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "schedule/dat-lich",
+  "id": "schedule/dat-lich",
+  "title": "ĐẶT LỊCH",
+  "description": "https://www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17609-14166&amp;p=f&amp;t=HbmhJyk4P6KSO4pP-0",
+  "source": "@site/docs/schedule/dat-lich.md",
+  "sourceDirName": "schedule",
+  "slug": "/schedule/dat-lich",
+  "permalink": "/docs/schedule/dat-lich",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/schedule/dat-lich.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ai_gennerate",
+    "permalink": "/docs/questionnair/ai_gennerate"
+  },
+  "next": {
+    "title": "Form Tạo Lịch (Schedule Creation Form)",
+    "permalink": "/docs/schedule/schedule_creation_form"
+  }
+}

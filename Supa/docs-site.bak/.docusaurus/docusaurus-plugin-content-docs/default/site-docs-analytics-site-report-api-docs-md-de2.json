@@ -1,0 +1,24 @@
+{
+  "unversionedId": "analytics/site_report_api_docs",
+  "id": "analytics/site_report_api_docs",
+  "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+  "description": "Tài liệu này mô tả chi tiết quá trình nâng cấp hệ thống báo cáo (Site Report) từ việc sử dụng một danh sách địa điểm cố định (flat array) sang Cấu trúc dữ liệu cây dẹt (Flat tree data structure). Điều này cho phép ứng dụng hỗ trợ tính năng nhóm địa điểm và hiển thị dữ liệu drill-down (khoan lồng) nhiều cấp bậc.",
+  "source": "@site/docs/analytics/site_report_api_docs.md",
+  "sourceDirName": "analytics",
+  "slug": "/analytics/site_report_api_docs",
+  "permalink": "/docs/analytics/site_report_api_docs",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics/site_report_api_docs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+    "permalink": "/docs/analytics/learning_overview_summary_by_site"
+  },
+  "next": {
+    "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+    "permalink": "/docs/analytics_permissions_docs"
+  }
+}

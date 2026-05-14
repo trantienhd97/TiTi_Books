@@ -1,0 +1,800 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>media_picker_plus Integration Guide - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#media_picker_plus-integration-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              media_picker_plus Integration Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="media_picker_plus-integration-guide">media_picker_plus Integration Guide<a class="headerlink" href="#media_picker_plus-integration-guide" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><code>media_picker_plus</code> is a comprehensive Flutter plugin for media selection and processing with advanced features including timestamp watermarking, resizing, cropping, and quality control.</p>
+<p><strong>Current Version:</strong> 0.2.0+4</p>
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>✅ Pick/capture images and videos from gallery or camera</li>
+<li>✅ Multiple file selection support</li>
+<li>✅ Interactive image cropping (square, circle, freeform, etc.)</li>
+<li>✅ Image resizing with aspect ratio preservation</li>
+<li>✅ <strong>Customizable watermarking with 9 position options</strong> (Perfect for timestamps!)</li>
+<li>✅ Quality control for media files</li>
+<li>✅ FFmpeg integration for video processing</li>
+<li>✅ Smart permission handling</li>
+<li>✅ Cross-platform: Android, iOS, Web, macOS</li>
+</ul>
+<h2 id="platform-support-matrix">Platform Support Matrix<a class="headerlink" href="#platform-support-matrix" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Android</th>
+<th>iOS</th>
+<th>Web</th>
+<th>macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pick/Capture Image</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Crop Image</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Pick/Capture Video</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Watermark Video</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="1-add-dependency">1. Add Dependency<a class="headerlink" href="#1-add-dependency" title="Permanent link">&para;</a></h3>
+<p>Add to <code>pubspec.yaml</code>:</p>
+<pre><code class="language-yaml">dependencies:
+  media_picker_plus: ^0.2.0+4
+</code></pre>
+<p>Or via command:</p>
+<pre><code class="language-bash">flutter pub add media_picker_plus
+</code></pre>
+<h3 id="2-platform-configuration">2. Platform Configuration<a class="headerlink" href="#2-platform-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="android-api-21">Android (API 21+)<a class="headerlink" href="#android-api-21" title="Permanent link">&para;</a></h4>
+<p>Add permissions to <code>AndroidManifest.xml</code>:</p>
+<pre><code class="language-xml">&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.RECORD_AUDIO&quot; /&gt;
+&lt;!-- For API 33+ use granular permissions --&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_MEDIA_IMAGES&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_MEDIA_VIDEO&quot; /&gt;
+</code></pre>
+<p>Configure FileProvider in <code>AndroidManifest.xml</code>:</p>
+<pre><code class="language-xml">&lt;provider
+    android:name=&quot;androidx.core.content.FileProvider&quot;
+    android:authorities=&quot;${applicationId}.fileprovider&quot;
+    android:exported=&quot;false&quot;
+    android:grantUriPermissions=&quot;true&quot;&gt;
+    &lt;meta-data
+        android:name=&quot;android.support.FILE_PROVIDER_PATHS&quot;
+        android:resource=&quot;@xml/file_paths&quot; /&gt;
+&lt;/provider&gt;
+</code></pre>
+<p>Create <code>android/app/src/main/res/xml/file_paths.xml</code>:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;paths&gt;
+    &lt;external-path name=&quot;external_files&quot; path=&quot;.&quot; /&gt;
+    &lt;cache-path name=&quot;cache&quot; path=&quot;.&quot; /&gt;
+&lt;/paths&gt;
+</code></pre>
+<h4 id="ios-110">iOS (11.0+)<a class="headerlink" href="#ios-110" title="Permanent link">&para;</a></h4>
+<p>Add privacy descriptions to <code>Info.plist</code>:</p>
+<pre><code class="language-xml">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;
+&lt;string&gt;We need camera access to capture photos&lt;/string&gt;
+&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;
+&lt;string&gt;We need photo library access to select images&lt;/string&gt;
+&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;
+&lt;string&gt;We need microphone access to record videos&lt;/string&gt;
+</code></pre>
+<p>Set minimum deployment target in <code>ios/Podfile</code>:</p>
+<pre><code class="language-ruby">platform :ios, '11.0'
+</code></pre>
+<h4 id="macos-110">macOS (11.0+)<a class="headerlink" href="#macos-110" title="Permanent link">&para;</a></h4>
+<p>Add privacy descriptions to <code>macos/Runner/Info.plist</code>:</p>
+<pre><code class="language-xml">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;
+&lt;string&gt;We need camera access to capture photos&lt;/string&gt;
+&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;
+&lt;string&gt;We need microphone access to record videos&lt;/string&gt;
+</code></pre>
+<p>Configure entitlements in <code>macos/Runner/DebugProfile.entitlements</code> and <code>Release.entitlements</code>:</p>
+<pre><code class="language-xml">&lt;key&gt;com.apple.security.device.camera&lt;/key&gt;
+&lt;true/&gt;
+&lt;key&gt;com.apple.security.device.audio-input&lt;/key&gt;
+&lt;true/&gt;
+</code></pre>
+<h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="basic-image-capture-with-timestamp">Basic Image Capture with Timestamp<a class="headerlink" href="#basic-image-capture-with-timestamp" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">import 'package:media_picker_plus/media_picker_plus.dart';
+import 'package:intl/intl.dart';
+
+Future&lt;String?&gt; capturePhotoWithTimestamp(BuildContext context) async {
+  final timestamp = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+
+  final String? imagePath = await MediaPickerPlus.capturePhoto(
+    context: context,
+    options: MediaOptions(
+      imageQuality: 85,
+      watermark: timestamp,
+      watermarkPosition: WatermarkPosition.bottomRight,
+    ),
+  );
+
+  return imagePath;
+}
+</code></pre>
+<h3 id="pick-image-from-gallery-with-timestamp">Pick Image from Gallery with Timestamp<a class="headerlink" href="#pick-image-from-gallery-with-timestamp" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">Future&lt;String?&gt; pickImageWithTimestamp(BuildContext context) async {
+  final timestamp = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+
+  final String? imagePath = await MediaPickerPlus.pickImage(
+    context: context,
+    options: MediaOptions(
+      imageQuality: 85,
+      maxWidth: 1920,
+      maxHeight: 1080,
+      watermark: timestamp,
+      watermarkPosition: WatermarkPosition.bottomRight,
+    ),
+  );
+
+  return imagePath;
+}
+</code></pre>
+<h3 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">final String? imagePath = await MediaPickerPlus.capturePhoto(
+  context: context,
+  options: MediaOptions(
+    // Image quality (0-100)
+    imageQuality: 90,
+
+    // Resize constraints
+    maxWidth: 1920,
+    maxHeight: 1080,
+
+    // Timestamp watermark
+    watermark: 'Custom Text or Timestamp',
+    watermarkPosition: WatermarkPosition.bottomRight,
+
+    // Enable cropping
+    cropOptions: CropOptions.square, // or CropOptions.circle, CropOptions.free
+  ),
+);
+</code></pre>
+<h3 id="watermark-positions">Watermark Positions<a class="headerlink" href="#watermark-positions" title="Permanent link">&para;</a></h3>
+<p>The package supports 9 watermark positions:
+- <code>WatermarkPosition.topLeft</code>
+- <code>WatermarkPosition.topCenter</code>
+- <code>WatermarkPosition.topRight</code>
+- <code>WatermarkPosition.centerLeft</code>
+- <code>WatermarkPosition.center</code>
+- <code>WatermarkPosition.centerRight</code>
+- <code>WatermarkPosition.bottomLeft</code>
+- <code>WatermarkPosition.bottomCenter</code>
+- <code>WatermarkPosition.bottomRight</code></p>
+<h3 id="standalone-watermarking">Standalone Watermarking<a class="headerlink" href="#standalone-watermarking" title="Permanent link">&para;</a></h3>
+<p>The plugin provides dedicated methods to add watermarks to existing media files without going through the media picker workflow. These methods are perfect for post-processing or batch operations on your existing media library.</p>
+<h4 id="add-watermark-to-existing-image">Add Watermark to Existing Image<a class="headerlink" href="#add-watermark-to-existing-image" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// Add watermark to an existing image file
+final String? watermarkedImagePath = await MediaPickerPlus.addWatermarkToImage(
+  '/path/to/your/image.jpg',
+  options: const MediaOptions(
+    watermark: '© MyApp 2025',
+    watermarkPosition: WatermarkPosition.bottomRight,
+    watermarkFontSize: 32,
+    imageQuality: 90, // Output quality
+  ),
+);
+
+if (watermarkedImagePath != null) {
+  // Use the watermarked image
+  File watermarkedFile = File(watermarkedImagePath);
+}
+</code></pre>
+<h4 id="add-watermark-to-existing-video">Add Watermark to Existing Video<a class="headerlink" href="#add-watermark-to-existing-video" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// Add watermark to an existing video file
+final String? watermarkedVideoPath = await MediaPickerPlus.addWatermarkToVideo(
+  '/path/to/your/video.mp4',
+  options: const MediaOptions(
+    watermark: '🎬 MyApp Productions',
+    watermarkPosition: WatermarkPosition.topLeft,
+    watermarkFontSize: 28,
+  ),
+);
+
+if (watermarkedVideoPath != null) {
+  // Use the watermarked video
+  File watermarkedFile = File(watermarkedVideoPath);
+}
+</code></pre>
+<h4 id="batch-watermarking-example">Batch Watermarking Example<a class="headerlink" href="#batch-watermarking-example" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// Process multiple images with the same watermark
+Future&lt;List&lt;String&gt;&gt; batchWatermarkImages(List&lt;String&gt; imagePaths) async {
+  final List&lt;String&gt; watermarkedPaths = [];
+
+  const watermarkOptions = MediaOptions(
+    watermark: 'Batch Processed ${DateTime.now().year}',
+    watermarkPosition: WatermarkPosition.bottomCenter,
+    watermarkFontSize: 24,
+    imageQuality: 85,
+  );
+
+  for (final imagePath in imagePaths) {
+    try {
+      final watermarkedPath = await MediaPickerPlus.addWatermarkToImage(
+        imagePath,
+        options: watermarkOptions,
+      );
+      if (watermarkedPath != null) {
+        watermarkedPaths.add(watermarkedPath);
+      }
+    } catch (e) {
+      print('Failed to watermark $imagePath: $e');
+    }
+  }
+
+  return watermarkedPaths;
+}
+</code></pre>
+<h4 id="platform-support-for-standalone-watermarking">Platform Support for Standalone Watermarking<a class="headerlink" href="#platform-support-for-standalone-watermarking" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Android</th>
+<th style="text-align: center;">iOS</th>
+<th style="text-align: center;">macOS</th>
+<th style="text-align: center;">Web</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Image Watermarking</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><strong>Video Watermarking</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅*</td>
+</tr>
+</tbody>
+</table>
+<p>*Web video watermarking requires FFmpeg.js to be included in your project.</p>
+<h4 id="error-handling-for-watermarking">Error Handling for Watermarking<a class="headerlink" href="#error-handling-for-watermarking" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">try {
+  final watermarkedPath = await MediaPickerPlus.addWatermarkToImage(
+    '/path/to/image.jpg',
+    options: const MediaOptions(
+      watermark: 'Test Watermark',
+      watermarkPosition: WatermarkPosition.bottomRight,
+    ),
+  );
+
+  if (watermarkedPath != null) {
+    // Success - use the watermarked file
+    print('Watermarked image saved to: $watermarkedPath');
+  }
+} catch (e) {
+  // Handle specific errors
+  if (e.toString().contains('file does not exist')) {
+    print('Source file not found');
+  } else if (e.toString().contains('watermark text is required')) {
+    print('Please provide watermark text');
+  } else {
+    print('Watermarking failed: $e');
+  }
+}
+</code></pre>
+<h3 id="video-capture-with-timestamp">Video Capture with Timestamp<a class="headerlink" href="#video-capture-with-timestamp" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">Future&lt;String?&gt; captureVideoWithTimestamp() async {
+  final timestamp = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+
+  final String? videoPath = await MediaPickerPlus.captureVideo(
+    options: MediaOptions(
+      maxDuration: Duration(minutes: 5),
+      watermark: timestamp,
+      watermarkPosition: WatermarkPosition.topRight,
+    ),
+  );
+
+  return videoPath;
+}
+</code></pre>
+<h3 id="permission-handling">Permission Handling<a class="headerlink" href="#permission-handling" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Check camera permission
+bool hasCameraPermission = await MediaPickerPlus.hasCameraPermission();
+
+// Request camera permission
+if (!hasCameraPermission) {
+  await MediaPickerPlus.requestCameraPermission();
+}
+
+// Check gallery permission
+bool hasGalleryPermission = await MediaPickerPlus.hasGalleryPermission();
+
+// Request gallery permission
+if (!hasGalleryPermission) {
+  await MediaPickerPlus.requestGalleryPermission();
+}
+</code></pre>
+<h2 id="integration-with-existing-camera-widgets">Integration with Existing Camera Widgets<a class="headerlink" href="#integration-with-existing-camera-widgets" title="Permanent link">&para;</a></h2>
+<h3 id="replacing-simple_camera_capture_pagedart">Replacing simple_camera_capture_page.dart<a class="headerlink" href="#replacing-simple_camera_capture_pagedart" title="Permanent link">&para;</a></h3>
+<p>Instead of using the custom camera implementation, you can replace it with:</p>
+<pre><code class="language-dart">import 'package:media_picker_plus/media_picker_plus.dart';
+import 'package:intl/intl.dart';
+
+Future&lt;XFile?&gt; navigateToSimpleCameraCapturePage(
+  BuildContext context, {
+  CameraLensDirection initialLens = CameraLensDirection.back,
+  bool fullscreenDialog = false,
+  bool includeTimestamp = true,
+}) async {
+  final timestamp = includeTimestamp
+      ? DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now())
+      : null;
+
+  final String? imagePath = await MediaPickerPlus.capturePhoto(
+    context: context,
+    options: MediaOptions(
+      imageQuality: 85,
+      watermark: timestamp,
+      watermarkPosition: WatermarkPosition.bottomRight,
+    ),
+  );
+
+  return imagePath != null ? XFile(imagePath) : null;
+}
+</code></pre>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="1-timestamp-formatting">1. Timestamp Formatting<a class="headerlink" href="#1-timestamp-formatting" title="Permanent link">&para;</a></h3>
+<p>Use consistent timestamp formats across the app:</p>
+<pre><code class="language-dart">// Recommended formats
+final timestampDateTime = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
+final timestampDate = DateFormat('yyyy-MM-dd').format(DateTime.now());
+final timestampFull = DateFormat('yyyy-MM-dd HH:mm:ss.SSS').format(DateTime.now());
+</code></pre>
+<h3 id="2-image-quality-settings">2. Image Quality Settings<a class="headerlink" href="#2-image-quality-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>High quality</strong> (90-100): For important documentation</li>
+<li><strong>Medium quality</strong> (70-85): For general use</li>
+<li><strong>Low quality</strong> (50-70): For previews or bandwidth-constrained scenarios</li>
+</ul>
+<h3 id="3-error-handling">3. Error Handling<a class="headerlink" href="#3-error-handling" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">try {
+  final imagePath = await MediaPickerPlus.capturePhoto(
+    context: context,
+    options: MediaOptions(
+      imageQuality: 85,
+      watermark: DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now()),
+    ),
+  );
+
+  if (imagePath == null) {
+    // User cancelled
+    return;
+  }
+
+  // Process the image
+} catch (e) {
+  // Handle error
+  debugPrint('Error capturing photo: $e');
+}
+</code></pre>
+<h3 id="4-resource-management">4. Resource Management<a class="headerlink" href="#4-resource-management" title="Permanent link">&para;</a></h3>
+<p>The package handles file cleanup automatically, but ensure proper error handling to avoid orphaned files.</p>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Video watermarking not supported on Android</strong> - Only images can be watermarked on Android</li>
+<li><strong>Web camera access requires HTTPS</strong> in production</li>
+<li><strong>Minimum platform versions:</strong></li>
+<li>Android: API 21+</li>
+<li>iOS: 11.0+</li>
+<li>macOS: 11.0+</li>
+</ol>
+<h2 id="migration-guide">Migration Guide<a class="headerlink" href="#migration-guide" title="Permanent link">&para;</a></h2>
+<h3 id="from-camera-package-to-media_picker_plus">From camera package to media_picker_plus<a class="headerlink" href="#from-camera-package-to-media_picker_plus" title="Permanent link">&para;</a></h3>
+<p><strong>Before:</strong></p>
+<pre><code class="language-dart">final XFile photo = await controller.takePicture();
+</code></pre>
+<p><strong>After:</strong></p>
+<pre><code class="language-dart">final String? photo = await MediaPickerPlus.capturePhoto(
+  context: context,
+  options: MediaOptions(
+    imageQuality: 85,
+    watermark: DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now()),
+  ),
+);
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="camera-permission-denied-on-android">Camera permission denied on Android<a class="headerlink" href="#camera-permission-denied-on-android" title="Permanent link">&para;</a></h3>
+<p>Ensure all permissions are properly declared in <code>AndroidManifest.xml</code> and request them at runtime.</p>
+<h3 id="image-quality-issues">Image quality issues<a class="headerlink" href="#image-quality-issues" title="Permanent link">&para;</a></h3>
+<p>Adjust <code>imageQuality</code> parameter and <code>maxWidth</code>/<code>maxHeight</code> constraints based on your requirements.</p>
+<h3 id="watermark-not-visible">Watermark not visible<a class="headerlink" href="#watermark-not-visible" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check watermark text color contrasts with image background</li>
+<li>Try different <code>WatermarkPosition</code> values</li>
+<li>Ensure watermark text is not empty</li>
+</ul>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://pub.dev/packages/media_picker_plus">Package on pub.dev</a></li>
+<li><a href="https://github.com/example/media_picker_plus">GitHub Repository</a> <em>(Check pub.dev for actual link)</em></li>
+<li><a href="https://pub.dev/documentation/media_picker_plus/latest/">API Documentation</a></li>
+</ul>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>MIT License - See package documentation for details.</p>
+<hr />
+<p><strong>Last Updated:</strong> 2025-12-23
+<strong>Package Version:</strong> 0.2.0+4</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

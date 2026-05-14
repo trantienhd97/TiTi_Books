@@ -1,0 +1,24 @@
+{
+  "unversionedId": "TaskAssignment/task-assignment-status-change-flow",
+  "id": "TaskAssignment/task-assignment-status-change-flow",
+  "title": "Task Assignment Status Change Flow",
+  "description": "Tài liệu mô tả luồng chuyển trạng thái nhanh (Quick Status Change) cho Task Assignment.",
+  "source": "@site/docs/TaskAssignment/task-assignment-status-change-flow.md",
+  "sourceDirName": "TaskAssignment",
+  "slug": "/TaskAssignment/task-assignment-status-change-flow",
+  "permalink": "/docs/TaskAssignment/task-assignment-status-change-flow",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/task-assignment-status-change-flow.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+    "permalink": "/docs/TaskAssignment/quick-status-change-implementation"
+  },
+  "next": {
+    "title": "Trang HOME",
+    "permalink": "/docs/TaskAssignment/trang-home"
+  }
+}

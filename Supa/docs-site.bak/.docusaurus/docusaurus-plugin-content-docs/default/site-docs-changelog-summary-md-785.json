@@ -1,0 +1,24 @@
+{
+  "unversionedId": "CHANGELOG_SUMMARY",
+  "id": "CHANGELOG_SUMMARY",
+  "title": "Changelog Generation System - Summary",
+  "description": "✅ What Was Created",
+  "source": "@site/docs/CHANGELOG_SUMMARY.md",
+  "sourceDirName": ".",
+  "slug": "/CHANGELOG_SUMMARY",
+  "permalink": "/docs/CHANGELOG_SUMMARY",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/CHANGELOG_SUMMARY.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Reference: Changelog Generation",
+    "permalink": "/docs/CHANGELOG_QUICK_REF"
+  },
+  "next": {
+    "title": "Changelog & Release Notes Management",
+    "permalink": "/docs/RELEASE_NOTES_GUIDE"
+  }
+}

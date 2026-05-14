@@ -1,0 +1,557 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Changelog Generation System - Summary - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog-generation-system-summary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog Generation System - Summary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="changelog-generation-system-summary">Changelog Generation System - Summary<a class="headerlink" href="#changelog-generation-system-summary" title="Permanent link">&para;</a></h1>
+<h2 id="what-was-created">✅ What Was Created<a class="headerlink" href="#what-was-created" title="Permanent link">&para;</a></h2>
+<p>I've created a comprehensive system for automating changelog and release notes generation from git history. Here's what's included:</p>
+<h3 id="1-ai-command-workflow">1. <strong>AI Command Workflow</strong><a class="headerlink" href="#1-ai-command-workflow" title="Permanent link">&para;</a></h3>
+<p>📄 <code>.cursor/commands/generate-changelog.md</code></p>
+<p>A structured workflow guide that enables AI assistants to:
+- Read git tag history
+- Identify undocumented versions
+- Generate release notes for missing versions
+- Update RELEASE_NOTES.md with the latest version</p>
+<p><strong>Usage:</strong> Simply ask AI: <em>"generate changelog"</em> or <em>"update release notes"</em></p>
+<h3 id="2-automated-shell-script">2. <strong>Automated Shell Script</strong><a class="headerlink" href="#2-automated-shell-script" title="Permanent link">&para;</a></h3>
+<p>📄 <code>scripts/generate-release-notes.sh</code></p>
+<p>A fully automated bash script that:
+- ✅ Fetches all git tags
+- ✅ Detects undocumented versions
+- ✅ Generates release notes for each missing version
+- ✅ Updates RELEASE_NOTES.md with the latest version
+- ✅ Creates backups before overwriting
+- ✅ Provides colorful, informative output
+- ✅ Handles edge cases and errors gracefully</p>
+<p><strong>Usage:</strong> </p>
+<pre><code class="language-bash">./scripts/generate-release-notes.sh
+</code></pre>
+<h3 id="3-comprehensive-documentation">3. <strong>Comprehensive Documentation</strong><a class="headerlink" href="#3-comprehensive-documentation" title="Permanent link">&para;</a></h3>
+<p>📄 <code>docs/RELEASE_NOTES_GUIDE.md</code></p>
+<p>Complete guide covering:
+- System overview
+- Tool descriptions
+- Release notes format rules
+- Workflow instructions
+- Best practices
+- Troubleshooting tips
+- Examples</p>
+<h2 id="how-it-works">📋 How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<h3 id="the-process">The Process<a class="headerlink" href="#the-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Reads Git History</strong></li>
+<li>Fetches all tags sorted by version</li>
+<li>
+<p>Identifies which versions are missing release notes</p>
+</li>
+<li>
+<p><strong>Generates Release Notes</strong></p>
+</li>
+<li>
+<p>For each undocumented tag:</p>
+<ul>
+<li>Finds the previous tag</li>
+<li>Extracts commits between tags</li>
+<li>Creates formatted markdown file</li>
+<li>Includes human-readable commit messages</li>
+</ul>
+</li>
+<li>
+<p><strong>Updates Main File</strong></p>
+</li>
+<li>Copies latest version to <code>RELEASE_NOTES.md</code></li>
+<li>Creates backup of previous version</li>
+</ol>
+<h3 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h3>
+<pre><code>releases/
+├── v1.23.0+1230005.md    # Individual release notes
+├── v1.23.0+1230006.md
+├── v1.23.0+1230007.md
+└── ...
+
+RELEASE_NOTES.md           # Latest version only (for current release)
+</code></pre>
+<h3 id="format-example">Format Example<a class="headerlink" href="#format-example" title="Permanent link">&para;</a></h3>
+<pre><code class="language-markdown"># Release Notes - v1.24.0+1240006
+
+- feat: Add reply functionality to messages in chat
+- feat: Disable pin button in message replies
+- fix: Resolve issue with message timestamps
+</code></pre>
+<h2 id="use-cases">🎯 Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="1-creating-a-new-release">1. Creating a New Release<a class="headerlink" href="#1-creating-a-new-release" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash"># Tag the release
+git tag v1.24.0+1240007
+git push origin v1.24.0+1240007
+
+# Generate release notes
+./scripts/generate-release-notes.sh
+
+# Review and commit
+git add releases/ RELEASE_NOTES.md
+git commit -m &quot;docs: Add release notes for v1.24.0+1240007&quot;
+</code></pre>
+<h3 id="2-backfilling-missing-releases">2. Backfilling Missing Releases<a class="headerlink" href="#2-backfilling-missing-releases" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash"># Just run the script - it finds all missing versions
+./scripts/generate-release-notes.sh
+
+# Review all generated files
+git diff releases/
+
+# Commit everything
+git add releases/
+git commit -m &quot;docs: Backfill missing release notes&quot;
+</code></pre>
+<h3 id="3-using-ai-assistant">3. Using AI Assistant<a class="headerlink" href="#3-using-ai-assistant" title="Permanent link">&para;</a></h3>
+<pre><code>You: &quot;generate changelog&quot;
+
+AI: [Executes workflow, generates all missing release notes]
+</code></pre>
+<h2 id="features">✨ Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<h3 id="automation">Automation<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Automatic version detection</li>
+<li>✅ Automatic commit range calculation</li>
+<li>✅ Automatic file generation</li>
+<li>✅ Automatic backup creation</li>
+</ul>
+<h3 id="safety">Safety<a class="headerlink" href="#safety" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Never overwrites existing files</li>
+<li>✅ Creates backups before updates</li>
+<li>✅ Validates tags before processing</li>
+<li>✅ Handles edge cases gracefully</li>
+</ul>
+<h3 id="user-experience">User Experience<a class="headerlink" href="#user-experience" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Colorful console output</li>
+<li>✅ Progress indicators</li>
+<li>✅ Summary statistics</li>
+<li>✅ Clear error messages</li>
+</ul>
+<h3 id="consistency">Consistency<a class="headerlink" href="#consistency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Standardized format</li>
+<li>✅ Chronological ordering</li>
+<li>✅ Human-readable messages</li>
+<li>✅ Conventional structure</li>
+</ul>
+<h2 id="test-results">📊 Test Results<a class="headerlink" href="#test-results" title="Permanent link">&para;</a></h2>
+<p>The script was tested and successfully generated release notes for 7 undocumented versions:
+- v1.23.0+1230006 (30 commits)
+- v1.23.0+1230007 (31 commits)
+- v1.23.0+1230008 (8 commits)
+- v1.23.0+1230009 (25 commits)
+- v1.23.0+1230010 (11 commits)
+- v1.23.0+1230011 (11 commits)
+- v1.23.0+1230014 (5 commits)</p>
+<p>All files were generated with proper formatting and commit links.</p>
+<h2 id="configuration">🔧 Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="commit-url-format">Commit URL Format<a class="headerlink" href="#commit-url-format" title="Permanent link">&para;</a></h3>
+<pre><code>https://devops.supa.vn:7443/DefaultCollection/Mobile%20Team/_git/SupaMobileApp/commit/&lt;hash&gt;
+</code></pre>
+<h3 id="file-naming-convention">File Naming Convention<a class="headerlink" href="#file-naming-convention" title="Permanent link">&para;</a></h3>
+<pre><code>v&lt;version&gt;+&lt;build&gt;.md
+Example: v1.24.0+1240006.md
+</code></pre>
+<h3 id="git-log-format">Git Log Format<a class="headerlink" href="#git-log-format" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git log &lt;prev&gt;..&lt;current&gt; \
+  --pretty=format:&quot;- %s&quot; \
+  --reverse
+</code></pre>
+<h2 id="best-practices">📝 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Tag First</strong> - Always create git tags before generating notes</li>
+<li><strong>Review Generated Files</strong> - Check content before committing</li>
+<li><strong>Use Conventional Commits</strong> - Makes release notes more readable</li>
+<li><strong>Run After Each Release</strong> - Keep documentation up to date</li>
+<li><strong>Don't Edit Manually</strong> - Regenerate if changes needed</li>
+</ol>
+<h2 id="next-steps">🚀 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>You can now:</p>
+<ol>
+<li>
+<p><strong>Use the script</strong> to generate missing release notes:
+   <code>bash
+   ./scripts/generate-release-notes.sh</code></p>
+</li>
+<li>
+<p><strong>Ask AI</strong> to generate changelogs:
+   <code>"generate changelog for the latest version"</code></p>
+</li>
+<li>
+<p><strong>Integrate into CI/CD</strong> - Add to release pipeline:
+   ```yaml</p>
+</li>
+<li>
+<p>name: Generate Release Notes
+     run: ./scripts/generate-release-notes.sh
+   ```</p>
+</li>
+<li>
+<p><strong>Customize</strong> - Modify the script for your specific needs</p>
+</li>
+</ol>
+<h2 id="documentation-files">📚 Documentation Files<a class="headerlink" href="#documentation-files" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>.cursor/commands/generate-changelog.md</code> - AI workflow guide</li>
+<li><code>scripts/generate-release-notes.sh</code> - Automated script</li>
+<li><code>docs/RELEASE_NOTES_GUIDE.md</code> - Complete documentation</li>
+<li><code>docs/CHANGELOG_SUMMARY.md</code> - This file</li>
+</ul>
+<h2 id="summary">🎉 Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>You now have a complete, automated system for managing release notes that:
+- Saves time by automating the entire process
+- Ensures consistency across all releases
+- Maintains a complete history of all versions
+- Integrates seamlessly with your git workflow
+- Works with both manual and AI-assisted workflows</p>
+<p>The system is ready to use immediately!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

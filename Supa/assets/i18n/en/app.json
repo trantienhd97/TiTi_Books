@@ -1,0 +1,9 @@
+{
+  "update.ignore": "Ignore",
+  "update.oldVersionDescription": "You are using old version of this app. Please update to the latest version for better experience.",
+  "update.oldVersionTitle": "Update Notification",
+  "update.updateLaterDescription": "It looks like you are busy. Please update the app when you have time.",
+  "update.updateLaterTitle": "Please update later",
+  "update.updateNow": "Update now",
+  "work.title": "Supa Work"
+}

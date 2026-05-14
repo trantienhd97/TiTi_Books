@@ -1,0 +1,26 @@
+{
+  "unversionedId": "widgets/index",
+  "id": "widgets/index",
+  "title": "Widgets",
+  "description": "- Dashboard Components",
+  "source": "@site/docs/widgets/index.md",
+  "sourceDirName": "widgets",
+  "slug": "/widgets/",
+  "permalink": "/docs/widgets/",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "layout": "default"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "UI Components",
+    "permalink": "/docs/ui-components"
+  },
+  "next": {
+    "title": "DashboardFrame",
+    "permalink": "/docs/widgets/dashboard/dashboard_frame"
+  }
+}

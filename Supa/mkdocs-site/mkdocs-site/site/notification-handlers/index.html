@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Notification Handler System - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notification-handler-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notification Handler System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="notification-handler-system">Notification Handler System<a class="headerlink" href="#notification-handler-system" title="Permanent link">&para;</a></h1>
+<h2 id="1-tong-quan">1. Tổng quan<a class="headerlink" href="#1-tong-quan" title="Permanent link">&para;</a></h2>
+<p>Hệ thống Notification Handler trong SupaMobileApp cho phép xử lý các push notification một cách có tổ chức và mở rộng. Mỗi loại notification được route đến handler tương ứng dựa trên URL prefix của notification.</p>
+<h3 id="11-kien-truc">1.1. Kiến trúc<a class="headerlink" href="#11-kien-truc" title="Permanent link">&para;</a></h3>
+<pre><code>UserNotification (từ backend)
+    ↓
+NotificationHandlerFactory.create() → Tìm handler dựa trên linkMobile prefix
+    ↓
+NotificationHandler.handle() → Xử lý notification cụ thể
+    ↓
+Navigation/UI Update
+</code></pre>
+<h3 id="12-cac-thanh-phan-chinh">1.2. Các thành phần chính<a class="headerlink" href="#12-cac-thanh-phan-chinh" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>NotificationHandler</code></strong> (abstract class): Interface cho tất cả notification handlers</li>
+<li><strong><code>NotificationHandlerFactory</code></strong>: Factory để tạo và quản lý handlers</li>
+<li><strong><code>UserNotification</code></strong>: Model chứa thông tin notification từ backend</li>
+<li><strong>Các handler cụ thể</strong>: Implement <code>NotificationHandler</code> cho từng loại notification</li>
+</ul>
+<h2 id="2-notificationhandler-interface">2. NotificationHandler Interface<a class="headerlink" href="#2-notificationhandler-interface" title="Permanent link">&para;</a></h2>
+<h3 id="21-inh-nghia">2.1. Định nghĩa<a class="headerlink" href="#21-inh-nghia" title="Permanent link">&para;</a></h3>
+<p>File: <code>packages/supa_architecture/lib/services/notification_handler.dart</code></p>
+<pre><code class="language-dart">abstract class NotificationHandler {
+  final BuildContext context;
+
+  NotificationHandler(this.context);
+
+  FutureOr&lt;void&gt; handle(UserNotification userNofication);
+}
+</code></pre>
+<h3 id="22-yeu-cau">2.2. Yêu cầu<a class="headerlink" href="#22-yeu-cau" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>context</code></strong>: BuildContext để thực hiện navigation và hiển thị UI</li>
+<li><strong><code>handle()</code></strong>: Method xử lý notification, có thể return <code>FutureOr&lt;void&gt;</code> hoặc <code>FutureOr&lt;Object?&gt;</code> (cho navigation result)</li>
+</ul>
+<h3 id="23-vi-du-co-ban">2.3. Ví dụ cơ bản<a class="headerlink" href="#23-vi-du-co-ban" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">class MyNotificationHandler extends NotificationHandler {
+  MyNotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNofication) {
+    // Xử lý notification ở đây
+    // Ví dụ: Navigate đến một page
+    return GoRouter.of(context).push('/some-page');
+  }
+}
+</code></pre>
+<h2 id="3-notificationhandlerfactory">3. NotificationHandlerFactory<a class="headerlink" href="#3-notificationhandlerfactory" title="Permanent link">&para;</a></h2>
+<h3 id="31-inh-nghia">3.1. Định nghĩa<a class="headerlink" href="#31-inh-nghia" title="Permanent link">&para;</a></h3>
+<p>File: <code>packages/supa_notification/lib/src/notification_handler_factory.dart</code></p>
+<p><code>NotificationHandlerFactory</code> là một factory class quản lý việc đăng ký và tạo handlers dựa trên URL prefix.</p>
+<h3 id="32-cac-phuong-thuc-chinh">3.2. Các phương thức chính<a class="headerlink" href="#32-cac-phuong-thuc-chinh" title="Permanent link">&para;</a></h3>
+<p><strong><code>registerPrefix()</code></strong>: Đăng ký handler cho một URL prefix</p>
+<pre><code class="language-dart">static void registerPrefix(
+  String prefix,
+  NotificationHandlerBuilder builder,
+)
+</code></pre>
+<p><strong><code>create()</code></strong>: Tạo handler phù hợp cho một notification</p>
+<pre><code class="language-dart">static NotificationHandler? create(
+  BuildContext context,
+  UserNotification userNotification,
+)
+</code></pre>
+<h3 id="33-cach-hoat-ong">3.3. Cách hoạt động<a class="headerlink" href="#33-cach-hoat-ong" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Factory lưu trữ danh sách các registration với prefix và builder</li>
+<li>Khi nhận notification, factory kiểm tra <code>linkMobile</code> của notification</li>
+<li>Tìm registration có prefix khớp với <code>linkMobile</code> (sử dụng <code>startsWith()</code>)</li>
+<li>Tạo handler instance bằng builder và return</li>
+</ol>
+<p><strong>Lưu ý</strong>: Factory tự động normalize URL bằng cách thay thế <code>//</code> thành <code>/</code></p>
+<pre><code class="language-dart">userNotification.linkMobile.value =
+    userNotification.linkMobile.value.replaceAll('//', '/');
+</code></pre>
+<h2 id="4-ang-ky-notification-handler">4. Đăng ký Notification Handler<a class="headerlink" href="#4-ang-ky-notification-handler" title="Permanent link">&para;</a></h2>
+<h3 id="41-file-ang-ky-chinh">4.1. File đăng ký chính<a class="headerlink" href="#41-file-ang-ky-chinh" title="Permanent link">&para;</a></h3>
+<p>File: <code>lib/config/notification_handlers.dart</code></p>
+<p>Đây là nơi tập trung đăng ký tất cả notification handlers:</p>
+<pre><code class="language-dart">import 'package:supa_attendance/notification/clock_notification_handler.dart';
+import 'package:supa_notification/supa_notification.dart';
+import 'package:supa_project/notification/project_notification_handler.dart';
+import 'package:supa_serving/notification/serving_notification_handler.dart';
+import 'package:supa_training/notification/training_notification_handler.dart';
+import 'package:supa_work/notification/work_notification_handler.dart';
+
+void registerNotificationHandlers() {
+  NotificationHandlerFactory.registerPrefix(
+    '/project',
+    (context) =&gt; ProjectNotificationHandler(context),
+  );
+
+  NotificationHandlerFactory.registerPrefix(
+    '/work',
+    (context) =&gt; WorkNotificationHandler(context),
+  );
+
+  NotificationHandlerFactory.registerPrefix(
+    '/training',
+    (context) =&gt; TrainingNotificationHandler(context),
+  );
+
+  NotificationHandlerFactory.registerPrefix(
+    '/serving',
+    (context) =&gt; ServingNotificationHandler(context),
+  );
+
+  NotificationHandlerFactory.registerPrefix(
+    '/attendance',
+    (context) =&gt; ClockNotificationHandler(context),
+  );
+
+  NotificationHandlerFactory.registerPrefix(
+    '/clock',
+    (context) =&gt; ClockNotificationHandler(context),
+  );
+
+  NotificationHandlerFactory.registerPrefix(
+    '/spend',
+    (context) =&gt; DefaultNotificationHandler(context),
+  );
+}
+</code></pre>
+<h3 id="42-goi-ham-ang-ky">4.2. Gọi hàm đăng ký<a class="headerlink" href="#42-goi-ham-ang-ky" title="Permanent link">&para;</a></h3>
+<p>Trong <code>lib/main.dart</code> hoặc các file <code>main_&lt;app&gt;.dart</code>:</p>
+<pre><code class="language-dart">Future&lt;void&gt; main() async {
+  // ... bootstrap code ...
+
+  registerNotificationHandlers(); // Đăng ký handlers
+
+  runApp(SupaApp(...));
+}
+</code></pre>
+<h3 id="43-them-handler-moi-cho-sub-app">4.3. Thêm handler mới cho sub-app<a class="headerlink" href="#43-them-handler-moi-cho-sub-app" title="Permanent link">&para;</a></h3>
+<p><strong>Bước 1: Tạo handler class</strong></p>
+<p>Trong <code>packages/&lt;app_name&gt;/lib/notification/&lt;app_name&gt;_notification_handler.dart</code>:</p>
+<pre><code class="language-dart">import 'dart:async';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_&lt;app_name&gt;/pages/home/&lt;app_name&gt;_home_page.dart';
+
+class &lt;AppName&gt;NotificationHandler extends NotificationHandler {
+  &lt;AppName&gt;NotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNofication) {
+    final uri = Uri.parse(userNofication.linkMobile.value);
+
+    // Xử lý các routes cụ thể
+    if (uri.path == &lt;AppName&gt;HomePage.location) {
+      return _handleHomeNotification(userNofication);
+    }
+
+    // Fallback: Navigate đến link
+    return _goToLink(userNofication.linkMobile.value);
+  }
+
+  FutureOr&lt;void&gt; _handleHomeNotification(UserNotification userNofication) {
+    // Logic xử lý cụ thể
+    return GoRouter.of(context).push(&lt;AppName&gt;HomePage.location);
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<p><strong>Bước 2: Đăng ký trong <code>notification_handlers.dart</code></strong></p>
+<p>Thêm vào <code>lib/config/notification_handlers.dart</code>:</p>
+<pre><code class="language-dart">import 'package:supa_&lt;app_name&gt;/notification/&lt;app_name&gt;_notification_handler.dart';
+
+void registerNotificationHandlers() {
+  // ... existing registrations ...
+
+  NotificationHandlerFactory.registerPrefix(
+    '/&lt;app_name&gt;',
+    (context) =&gt; &lt;AppName&gt;NotificationHandler(context),
+  );
+}
+</code></pre>
+<h2 id="5-implement-notification-handler">5. Implement Notification Handler<a class="headerlink" href="#5-implement-notification-handler" title="Permanent link">&para;</a></h2>
+<h3 id="51-handler-on-gian-default-handler">5.1. Handler đơn giản (Default Handler)<a class="headerlink" href="#51-handler-on-gian-default-handler" title="Permanent link">&para;</a></h3>
+<p>Handler đơn giản nhất chỉ cần navigate đến URL:</p>
+<pre><code class="language-dart">import 'dart:async';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+
+class DefaultNotificationHandler extends NotificationHandler {
+  DefaultNotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNofication) {
+    return _goToLink(userNofication.linkMobile.value);
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<h3 id="52-handler-voi-routing-phuc-tap">5.2. Handler với routing phức tạp<a class="headerlink" href="#52-handler-voi-routing-phuc-tap" title="Permanent link">&para;</a></h3>
+<p>Handler có thể route đến các sub-handlers dựa trên path:</p>
+<pre><code class="language-dart">class WorkNotificationHandler extends NotificationHandler {
+  WorkNotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;Object?&gt; handle(UserNotification userNofication) {
+    final uri = Uri.parse(userNofication.linkMobile.value);
+
+    // Route đến handler cụ thể dựa trên path
+    if (uri.path == TaskAssignmentPage.location) {
+      return TaskAssignmentNotificationHandler(context).handle(userNofication);
+    }
+
+    if (uri.path == InspectionDetailNewPage.location) {
+      return InspectionNotificationHandler(context).handle(userNofication);
+    }
+
+    if (uri.path == WorkHomePage.location) {
+      return HomeInspectionNotificationHandler(context).handle(userNofication);
+    }
+
+    // Fallback: Navigate trực tiếp
+    return _goToLink(userNofication.linkMobile.value);
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<h3 id="53-handler-voi-validation-va-error-handling">5.3. Handler với validation và error handling<a class="headerlink" href="#53-handler-voi-validation-va-error-handling" title="Permanent link">&para;</a></h3>
+<p>Handler có thể validate parameters và hiển thị error:</p>
+<pre><code class="language-dart">class TaskAssignmentNotificationHandler extends NotificationHandler {
+  TaskAssignmentNotificationHandler(super.context);
+
+  @override
+  Future&lt;Object?&gt; handle(UserNotification userNofication) async {
+    userNofication.linkMobile.value =
+        userNofication.linkMobile.value.replaceAll('//', '/');
+    final uri = Uri.parse(userNofication.linkMobile.value);
+
+    // Extract và validate parameters
+    final String? id = uri.queryParameters['taskAssignmentId'];
+    final int? idInt = int.tryParse(id ?? '');
+
+    if (idInt == null) {
+      // Hiển thị error message
+      toastification.show(
+        title: Text(translate('work.taskAssignment.notification')),
+        description: Text(translate('work.taskAssignment.taskAssignmentNotFound')),
+        type: ToastificationType.warning,
+        autoCloseDuration: const Duration(seconds: 2),
+      );
+      return null;
+    }
+
+    // Navigate với validated parameter
+    return Navigator.of(context, rootNavigator: true).push(
+      MaterialPageRoute(
+        fullscreenDialog: true,
+        builder: (context) =&gt; TaskAssignmentEditPage(
+          id: idInt,
+        ),
+      ),
+    );
+  }
+}
+</code></pre>
+<h3 id="54-handler-voi-nested-routing">5.4. Handler với nested routing<a class="headerlink" href="#54-handler-voi-nested-routing" title="Permanent link">&para;</a></h3>
+<p>Handler có thể xử lý nested routes:</p>
+<pre><code class="language-dart">class TrainingNotificationHandler extends NotificationHandler {
+  TrainingNotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNofication) {
+    final uri = Uri.parse(userNofication.linkMobile.value);
+
+    // Handle quiz notifications
+    if (uri.path == QuizPreviewPage.location) {
+      return QuizNotificationHandler(context).handle(userNofication);
+    }
+
+    // Handle training routes với prefix check
+    if (uri.path.startsWith('/training')) {
+      if (uri.path == CoursePreviewPage.location) {
+        return CourseNotificationHandler(context).handle(userNofication);
+      }
+    }
+
+    // Fallback
+    return _goToLink(userNofication.linkMobile.value);
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<h2 id="6-su-dung-notification-handler">6. Sử dụng Notification Handler<a class="headerlink" href="#6-su-dung-notification-handler" title="Permanent link">&para;</a></h2>
+<h3 id="61-tu-ong-xu-ly-qua-pushnotificationbloc">6.1. Tự động xử lý qua PushNotificationBloc<a class="headerlink" href="#61-tu-ong-xu-ly-qua-pushnotificationbloc" title="Permanent link">&para;</a></h3>
+<p>Handlers được gọi tự động khi có push notification:</p>
+<pre><code class="language-dart">// Trong app_registry.dart
+BlocListener&lt;PushNotificationBloc, PushNotificationState&gt;(
+  listener: (context, state) async {
+    if (state is PushNotificationOpened) {
+      final userNotification = state.data.toUserNotification();
+      final notificationHandler =
+          NotificationHandlerFactory.create(context, userNotification);
+      await notificationHandler?.handle(userNotification);
+    }
+  },
+  // ...
+)
+</code></pre>
+<h3 id="62-xu-ly-thu-cong">6.2. Xử lý thủ công<a class="headerlink" href="#62-xu-ly-thu-cong" title="Permanent link">&para;</a></h3>
+<p>Bạn cũng có thể xử lý notification thủ công:</p>
+<pre><code class="language-dart">final userNotification = UserNotification(...);
+final notificationHandler = 
+    NotificationHandlerFactory.create(context, userNotification);
+await notificationHandler?.handle(userNotification);
+</code></pre>
+<h3 id="63-xu-ly-khi-tap-vao-notification">6.3. Xử lý khi tap vào notification<a class="headerlink" href="#63-xu-ly-khi-tap-vao-notification" title="Permanent link">&para;</a></h3>
+<p>Trong <code>PushNotificationWrapper</code>:</p>
+<pre><code class="language-dart">PushNotificationWrapper(
+  onNotificationTap: (userNotification) async {
+    final notificationHandler =
+        NotificationHandlerFactory.create(context, userNotification);
+    await notificationHandler?.handle(userNotification);
+  },
+  // ...
+)
+</code></pre>
+<h2 id="7-usernotification-model">7. UserNotification Model<a class="headerlink" href="#7-usernotification-model" title="Permanent link">&para;</a></h2>
+<h3 id="71-cau-truc">7.1. Cấu trúc<a class="headerlink" href="#71-cau-truc" title="Permanent link">&para;</a></h3>
+<p><code>UserNotification</code> chứa thông tin từ backend, quan trọng nhất là <code>linkMobile</code>:</p>
+<pre><code class="language-dart">class UserNotification extends JsonModel {
+  // ... các fields khác
+  JsonString linkMobile = JsonString('linkMobile');
+  // ...
+}
+</code></pre>
+<h3 id="72-linkmobile-format">7.2. linkMobile format<a class="headerlink" href="#72-linkmobile-format" title="Permanent link">&para;</a></h3>
+<p><code>linkMobile</code> thường có format:
+- <code>/work/task-assignment?taskAssignmentId=123</code>
+- <code>/project/task?projectId=456&amp;taskId=789</code>
+- <code>/training/course?courseId=101</code></p>
+<h3 id="73-query-parameters">7.3. Query parameters<a class="headerlink" href="#73-query-parameters" title="Permanent link">&para;</a></h3>
+<p>Bạn có thể extract query parameters từ <code>linkMobile</code>:</p>
+<pre><code class="language-dart">final uri = Uri.parse(userNofication.linkMobile.value);
+final taskId = uri.queryParameters['taskAssignmentId'];
+final projectId = uri.queryParameters['projectId'];
+</code></pre>
+<h2 id="8-best-practices">8. Best Practices<a class="headerlink" href="#8-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="81-to-chuc-code">8.1. Tổ chức code<a class="headerlink" href="#81-to-chuc-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Mỗi sub-app có handler riêng</strong> trong <code>packages/&lt;app_name&gt;/lib/notification/</code></li>
+<li><strong>Handler chính</strong> (<code>&lt;AppName&gt;NotificationHandler</code>) route đến các sub-handlers</li>
+<li><strong>Sub-handlers</strong> xử lý logic cụ thể cho từng loại notification</li>
+</ol>
+<p><strong>Cấu trúc thư mục:</strong></p>
+<pre><code>packages/&lt;app_name&gt;/lib/notification/
+├── &lt;app_name&gt;_notification_handler.dart      # Handler chính
+├── &lt;feature&gt;_notification_handler.dart     # Sub-handlers
+└── ...
+</code></pre>
+<h3 id="82-error-handling">8.2. Error handling<a class="headerlink" href="#82-error-handling" title="Permanent link">&para;</a></h3>
+<p>Luôn validate parameters và hiển thị error message phù hợp:</p>
+<pre><code class="language-dart">final id = uri.queryParameters['id'];
+final idInt = int.tryParse(id ?? '');
+
+if (idInt == null) {
+  // Hiển thị error message
+  toastification.show(
+    title: Text('Error'),
+    description: Text('Invalid ID'),
+    type: ToastificationType.error,
+  );
+  return null;
+}
+</code></pre>
+<h3 id="83-navigation">8.3. Navigation<a class="headerlink" href="#83-navigation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sử dụng <code>GoRouter</code> cho navigation thông thường</li>
+<li>Sử dụng <code>Navigator</code> với <code>rootNavigator: true</code> cho fullscreen dialogs</li>
+<li>Luôn có fallback navigation nếu không match route nào</li>
+</ul>
+<h3 id="84-url-normalization">8.4. URL normalization<a class="headerlink" href="#84-url-normalization" title="Permanent link">&para;</a></h3>
+<p>Factory tự động normalize URL, nhưng bạn cũng nên normalize trong handler nếu cần:</p>
+<pre><code class="language-dart">userNofication.linkMobile.value =
+    userNofication.linkMobile.value.replaceAll('//', '/');
+</code></pre>
+<h3 id="85-prefix-matching">8.5. Prefix matching<a class="headerlink" href="#85-prefix-matching" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prefix nên match với route prefix của sub-app</li>
+<li>Ví dụ: <code>/work</code> cho Work app, <code>/project</code> cho Project app</li>
+<li>Có thể đăng ký nhiều prefix cho cùng một handler (ví dụ: <code>/attendance</code> và <code>/clock</code>)</li>
+</ul>
+<h3 id="86-handler-hierarchy">8.6. Handler hierarchy<a class="headerlink" href="#86-handler-hierarchy" title="Permanent link">&para;</a></h3>
+<p>Tạo hierarchy handlers để tái sử dụng code:</p>
+<pre><code>MainHandler (WorkNotificationHandler)
+  ├── SubHandler1 (TaskAssignmentNotificationHandler)
+  ├── SubHandler2 (InspectionNotificationHandler)
+  └── SubHandler3 (HomeInspectionNotificationHandler)
+</code></pre>
+<h2 id="9-vi-du-hoan-chinh">9. Ví dụ hoàn chỉnh<a class="headerlink" href="#9-vi-du-hoan-chinh" title="Permanent link">&para;</a></h2>
+<h3 id="91-tao-handler-moi-cho-sub-app">9.1. Tạo handler mới cho sub-app<a class="headerlink" href="#91-tao-handler-moi-cho-sub-app" title="Permanent link">&para;</a></h3>
+<p><strong>File: <code>packages/supa_myapp/lib/notification/myapp_notification_handler.dart</code></strong></p>
+<pre><code class="language-dart">import 'dart:async';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_myapp/pages/home/myapp_home_page.dart';
+import 'package:supa_myapp/pages/detail/myapp_detail_page.dart';
+
+class MyAppNotificationHandler extends NotificationHandler {
+  MyAppNotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNofication) {
+    final uri = Uri.parse(userNofication.linkMobile.value);
+
+    // Handle home page
+    if (uri.path == MyAppHomePage.location) {
+      return _handleHome(userNofication);
+    }
+
+    // Handle detail page với ID
+    if (uri.path == MyAppDetailPage.location) {
+      return _handleDetail(userNofication);
+    }
+
+    // Fallback
+    return _goToLink(userNofication.linkMobile.value);
+  }
+
+  FutureOr&lt;void&gt; _handleHome(UserNotification userNofication) {
+    return GoRouter.of(context).push(MyAppHomePage.location);
+  }
+
+  FutureOr&lt;void&gt; _handleDetail(UserNotification userNofication) {
+    final uri = Uri.parse(userNofication.linkMobile.value);
+    final id = uri.queryParameters['id'];
+    final idInt = int.tryParse(id ?? '');
+
+    if (idInt == null) {
+      // Show error
+      return null;
+    }
+
+    return GoRouter.of(context).push(
+      '${MyAppDetailPage.location}?id=$idInt',
+    );
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<p><strong>File: <code>lib/config/notification_handlers.dart</code></strong></p>
+<pre><code class="language-dart">import 'package:supa_myapp/notification/myapp_notification_handler.dart';
+
+void registerNotificationHandlers() {
+  // ... existing registrations ...
+
+  NotificationHandlerFactory.registerPrefix(
+    '/myapp',
+    (context) =&gt; MyAppNotificationHandler(context),
+  );
+}
+</code></pre>
+<h3 id="92-handler-voi-sub-handlers">9.2. Handler với sub-handlers<a class="headerlink" href="#92-handler-voi-sub-handlers" title="Permanent link">&para;</a></h3>
+<p><strong>File: <code>packages/supa_myapp/lib/notification/myapp_notification_handler.dart</code></strong></p>
+<pre><code class="language-dart">import 'dart:async';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_myapp/notification/feature1_notification_handler.dart';
+import 'package:supa_myapp/notification/feature2_notification_handler.dart';
+import 'package:supa_myapp/pages/home/myapp_home_page.dart';
+
+class MyAppNotificationHandler extends NotificationHandler {
+  MyAppNotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNofication) {
+    final uri = Uri.parse(userNofication.linkMobile.value);
+
+    // Route đến sub-handlers
+    if (uri.path.startsWith('/myapp/feature1')) {
+      return Feature1NotificationHandler(context).handle(userNofication);
+    }
+
+    if (uri.path.startsWith('/myapp/feature2')) {
+      return Feature2NotificationHandler(context).handle(userNofication);
+    }
+
+    if (uri.path == MyAppHomePage.location) {
+      return GoRouter.of(context).push(MyAppHomePage.location);
+    }
+
+    return _goToLink(userNofication.linkMobile.value);
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<h2 id="10-troubleshooting">10. Troubleshooting<a class="headerlink" href="#10-troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="101-handler-khong-uoc-goi">10.1. Handler không được gọi<a class="headerlink" href="#101-handler-khong-uoc-goi" title="Permanent link">&para;</a></h3>
+<p><strong>Kiểm tra:</strong>
+1. Đã gọi <code>registerNotificationHandlers()</code> trong <code>main()</code> chưa?
+2. Prefix có match với <code>linkMobile</code> không?
+3. URL có được normalize đúng không?</p>
+<p><strong>Debug:</strong></p>
+<pre><code class="language-dart">// In ra linkMobile để debug
+print('linkMobile: ${userNotification.linkMobile.value}');
+</code></pre>
+<h3 id="102-navigation-khong-hoat-ong">10.2. Navigation không hoạt động<a class="headerlink" href="#102-navigation-khong-hoat-ong" title="Permanent link">&para;</a></h3>
+<p><strong>Kiểm tra:</strong>
+1. Context có valid không?
+2. Route có tồn tại trong router không?
+3. Có đang ở đúng navigator context không?</p>
+<p><strong>Sử dụng rootNavigator:</strong></p>
+<pre><code class="language-dart">Navigator.of(context, rootNavigator: true).push(...);
+</code></pre>
+<h3 id="103-handler-khong-match-prefix">10.3. Handler không match prefix<a class="headerlink" href="#103-handler-khong-match-prefix" title="Permanent link">&para;</a></h3>
+<p><strong>Kiểm tra:</strong>
+1. Prefix có đúng format không? (phải bắt đầu bằng <code>/</code>)
+2. <code>linkMobile</code> có đúng format không?
+3. Có nhiều handlers match không? (handler đầu tiên match sẽ được dùng)</p>
+<h2 id="11-tom-tat">11. Tóm tắt<a class="headerlink" href="#11-tom-tat" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>NotificationHandler</strong>: Abstract class cần implement method <code>handle()</code></li>
+<li><strong>NotificationHandlerFactory</strong>: Factory quản lý đăng ký và tạo handlers dựa trên prefix</li>
+<li><strong>Đăng ký</strong>: Sử dụng <code>NotificationHandlerFactory.registerPrefix()</code> trong <code>registerNotificationHandlers()</code></li>
+<li><strong>Prefix matching</strong>: Factory tìm handler dựa trên <code>linkMobile.startsWith(prefix)</code></li>
+<li><strong>Handler hierarchy</strong>: Handler chính route đến sub-handlers dựa trên path</li>
+<li><strong>Error handling</strong>: Luôn validate parameters và hiển thị error message</li>
+<li><strong>Navigation</strong>: Sử dụng <code>GoRouter</code> hoặc <code>Navigator</code> tùy vào use case</li>
+</ol>
+<hr />
+<p><strong>Lưu ý quan trọng:</strong>
+- Luôn normalize URL (<code>replaceAll('//', '/')</code>)
+- Prefix phải match với route prefix của sub-app
+- Handler được gọi tự động qua <code>PushNotificationBloc</code>
+- Mỗi sub-app nên có handler riêng trong <code>lib/notification/</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

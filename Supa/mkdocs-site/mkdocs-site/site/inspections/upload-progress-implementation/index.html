@@ -1,0 +1,743 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Upload Progress Implementation - Inspection Media - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#upload-progress-implementation-inspection-media" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upload Progress Implementation - Inspection Media
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="upload-progress-implementation-inspection-media">Upload Progress Implementation - Inspection Media<a class="headerlink" href="#upload-progress-implementation-inspection-media" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Triển khai hiển thị tiến trình tải ảnh/video theo thời gian thực (%) khi upload media trong inspection, thay vì chỉ hiển thị loading spinner.</p>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h3 id="1-data-model-layer">1. Data Model Layer<a class="headerlink" href="#1-data-model-layer" title="Permanent link">&para;</a></h3>
+<h4 id="inspectionquestionfilemapping">InspectionQuestionFileMapping<a class="headerlink" href="#inspectionquestionfilemapping" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// packages/supa_work/lib/entities/inspection_question_file_mapping.dart
+class InspectionQuestionFileMapping {
+  JsonDouble uploadProgress = JsonDouble('uploadProgress'); // 0.0 - 1.0
+  JsonBoolean isLoading = JsonBoolean('isLoading');
+  JsonBoolean isSuccess = JsonBoolean('isSuccess');
+}
+</code></pre>
+<h4 id="inspectionquestionanswer">InspectionQuestionAnswer<a class="headerlink" href="#inspectionquestionanswer" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// packages/supa_work/lib/core/models/inspection_question_answer.dart
+class InspectionQuestionAnswer {
+  JsonDouble uploadProgress = JsonDouble('uploadProgress'); // 0.0 - 1.0
+}
+</code></pre>
+<p><strong>Purpose</strong>: Lưu trữ progress value từ 0.0 (0%) đến 1.0 (100%) cho từng file đang upload.</p>
+<h3 id="2-repository-layer">2. Repository Layer<a class="headerlink" href="#2-repository-layer" title="Permanent link">&para;</a></h3>
+<h4 id="workfilerepository">WorkFileRepository<a class="headerlink" href="#workfilerepository" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// packages/supa_work/lib/repositories/work_file_repository.dart
+Future&lt;List&lt;File&gt;&gt; uploadInspectionFiles(
+  List&lt;XFile&gt; files, {
+  String uploadUrl = '/multi-upload-file',
+  void Function(int sent, int total)? onUploadProgress,
+})
+</code></pre>
+<p><strong>Key Implementation</strong>:</p>
+<ul>
+<li>Sử dụng Dio's <code>onSendProgress</code> callback để track upload progress</li>
+<li>FormData format: Tất cả files dùng key <code>"files"</code> (backend requirement)</li>
+<li>Support cả Web và Mobile/Desktop platforms</li>
+</ul>
+<p><strong>FormData Structure</strong>:</p>
+<pre><code class="language-dart">final formData = FormData();
+for (var file in files) {
+  formData.files.add(
+    MapEntry('files', MultipartFile.fromFile(...))
+  );
+}
+</code></pre>
+<h3 id="3-state-management-layer">3. State Management Layer<a class="headerlink" href="#3-state-management-layer" title="Permanent link">&para;</a></h3>
+<h4 id="abstractinspectionmediastate">AbstractInspectionMediaState<a class="headerlink" href="#abstractinspectionmediastate" title="Permanent link">&para;</a></h4>
+<p><strong>Callback Chain</strong>:</p>
+<pre><code class="language-dart">abstract class AbstractInspectionMediaState&lt;T&gt; extends State&lt;T&gt; {
+  // Override in child class to update progress
+  Future&lt;void&gt; onUpdateUploadProgress(double progress) async {}
+
+  Future&lt;void&gt; onImagesPicked(List&lt;XFile&gt; images) async {
+    final uploadedImages = await _fileRepository.uploadInspectionFiles(
+      watermarkedImages,
+      onUploadProgress: (sent, total) {
+        final progress = sent / total;
+        onUpdateUploadProgress(progress);
+      },
+    );
+  }
+}
+</code></pre>
+<p><strong>Flow</strong>:</p>
+<ol>
+<li>User picks images → Create placeholders với <code>uploadProgress = 0.0</code></li>
+<li>Start upload → Callback receives <code>(sent, total)</code> từ Dio</li>
+<li>Calculate progress → <code>sent / total</code></li>
+<li>Call <code>onUpdateUploadProgress(progress)</code> → Child widget updates state</li>
+<li>Widget rebuilds → UI shows percentage</li>
+</ol>
+<h4 id="answer-field-implementation">Answer Field Implementation<a class="headerlink" href="#answer-field-implementation" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// packages/supa_work/lib/pages/inspection/widgets/inspection_answer/answer_field.dart
+class _AnswerFieldState extends AbstractInspectionMediaState&lt;AnswerField&gt; {
+  @override
+  Future&lt;void&gt; onUpdateUploadProgress(double progress) async {
+    if (mounted) {
+      setState(() {
+        for (var answer in widget.inspectionQuestion!.inspectionQuestionAnswers.value) {
+          if (answer.imageId.value == -1) { // Placeholder
+            answer.uploadProgress.value = progress;
+          }
+        }
+      });
+    }
+  }
+
+  @override
+  FutureOr&lt;void&gt; onNewAttachmentAdded(List&lt;File&gt; files) async {
+    // Remove placeholders (imageId == -1)
+    final withoutPlaceholders = widget.inspectionQuestion!
+        .inspectionQuestionAnswers.value
+        .where((a) =&gt; a.imageId.value != -1)
+        .toList();
+
+    // Add real uploaded files
+    final newAnswers = files.map((file) {
+      final answer = InspectionQuestionAnswer();
+      answer.imageId.value = file.id.value;
+      answer.image.value = file;
+      answer.uploadProgress.value = 1.0; // Complete
+      return answer;
+    }).toList();
+
+    await widget.onUpdateInspectionQuestionAnswer!([
+      ...withoutPlaceholders,
+      ...newAnswers
+    ]);
+  }
+}
+</code></pre>
+<h3 id="4-ui-layer">4. UI Layer<a class="headerlink" href="#4-ui-layer" title="Permanent link">&para;</a></h3>
+<h4 id="data-conversion">Data Conversion<a class="headerlink" href="#data-conversion" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// inspection_question_type_select_options.dart
+Widget build(BuildContext context) {
+  // Convert InspectionQuestionAnswer → InspectionQuestionFileMapping
+  final fileMappings = widget.inspectionQuestion
+      .inspectionQuestionAnswers.value
+      .where((answer) =&gt; answer.imageId.value != 0) // Exclude empty
+      .map((answer) {
+    final mapping = InspectionQuestionFileMapping();
+    mapping.fileId.value = answer.imageId.value;
+    mapping.file.value = answer.image.value;
+    mapping.uploadProgress.value = answer.uploadProgress.value;
+    mapping.isLoading.value = answer.imageId.value == -1; // Placeholder
+    mapping.isSuccess.value = answer.imageId.value &gt; 0; // Uploaded
+    return mapping;
+  }).toList();
+
+  return AnswerTypeItem(files: fileMappings, ...);
+}
+</code></pre>
+<h4 id="progress-display-widget">Progress Display Widget<a class="headerlink" href="#progress-display-widget" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// media_view_widget_control.dart
+// Grid &quot;+N&quot; overlay - average progress của tất cả loading files
+final loadingFiles = widget.files.where((f) =&gt; f.fileId.value == -1).toList();
+final loadingProgress = loadingFiles.isEmpty
+    ? 0.0
+    : loadingFiles.map((f) =&gt; f.uploadProgress.value).reduce((a, b) =&gt; a + b) /
+      loadingFiles.length;
+
+if (hasLoadingItems)
+  Positioned(
+    bottom: 10,
+    right: 10,
+    child: Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+      decoration: BoxDecoration(
+        color: Colors.black.withOpacity(0.7),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Text(
+        '${(loadingProgress * 100).toInt()}%',
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 10,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+  )
+
+// Individual file - per-file progress
+Container(
+  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+  decoration: BoxDecoration(
+    color: Colors.black.withOpacity(0.8),
+    borderRadius: BorderRadius.circular(12),
+  ),
+  child: Text(
+    '${(file.uploadProgress.value * 100).toInt()}%',
+    style: const TextStyle(
+      color: Colors.white,
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+)
+</code></pre>
+<h2 id="upload-flow">Upload Flow<a class="headerlink" href="#upload-flow" title="Permanent link">&para;</a></h2>
+<h3 id="complete-upload-sequence">Complete Upload Sequence<a class="headerlink" href="#complete-upload-sequence" title="Permanent link">&para;</a></h3>
+<pre><code>1. User Action
+   └─&gt; pickImages() called
+       └─&gt; ImagePickerService returns List&lt;XFile&gt;
+
+2. Create Placeholders
+   └─&gt; onUpdateImageLocal(placeholderMappings)
+       ├─&gt; mapping.fileId = -1
+       ├─&gt; mapping.uploadProgress = 0.0
+       ├─&gt; mapping.isLoading = true
+       └─&gt; Convert to InspectionQuestionAnswer
+           └─&gt; Add to inspectionQuestionAnswers
+
+3. Start Upload
+   └─&gt; onImagesPicked(images)
+       ├─&gt; Apply watermark
+       └─&gt; uploadInspectionFiles(watermarkedImages)
+           ├─&gt; Build FormData
+           ├─&gt; dio.post(data: formData, onSendProgress: callback)
+           └─&gt; Callback fires: (sent, total) =&gt; {}
+
+4. Progress Updates (0% → 100%)
+   └─&gt; onUploadProgress: (sent, total)
+       ├─&gt; progress = sent / total
+       ├─&gt; onUpdateUploadProgress(progress)
+       └─&gt; setState(() {
+             for placeholders: uploadProgress = progress
+           })
+       └─&gt; Widget rebuilds
+           └─&gt; UI shows percentage
+
+5. Upload Complete
+   └─&gt; onNewAttachmentAdded(uploadedFiles)
+       ├─&gt; Remove placeholders: filter(imageId != -1)
+       ├─&gt; Create real answers from uploaded files
+       │   ├─&gt; imageId = file.id (&gt; 0)
+       │   ├─&gt; image = file
+       │   └─&gt; uploadProgress = 1.0
+       └─&gt; Update inspectionQuestionAnswers
+
+6. Final Render
+   └─&gt; Widget rebuild
+       ├─&gt; Convert answers → fileMappings
+       │   └─&gt; Only include imageId != 0
+       └─&gt; MediaViewWidget displays uploaded images
+</code></pre>
+<h2 id="file-states">File States<a class="headerlink" href="#file-states" title="Permanent link">&para;</a></h2>
+<h3 id="state-machine">State Machine<a class="headerlink" href="#state-machine" title="Permanent link">&para;</a></h3>
+<pre><code>EMPTY (imageId = 0)
+  ↓ User picks image
+PLACEHOLDER (imageId = -1, uploadProgress = 0.0, isLoading = true)
+  ↓ Upload starts
+UPLOADING (imageId = -1, uploadProgress = 0.0 → 1.0, isLoading = true)
+  ↓ Upload completes
+UPLOADED (imageId &gt; 0, uploadProgress = 1.0, isSuccess = true)
+</code></pre>
+<h3 id="state-indicators">State Indicators<a class="headerlink" href="#state-indicators" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>imageId == 0</strong>: No image, không hiển thị</li>
+<li><strong>imageId == -1</strong>: Placeholder đang upload, show progress %</li>
+<li><strong>imageId &gt; 0</strong>: Uploaded thành công, show image</li>
+</ul>
+<h2 id="key-design-decisions">Key Design Decisions<a class="headerlink" href="#key-design-decisions" title="Permanent link">&para;</a></h2>
+<h3 id="1-why-two-model-types">1. Why Two Model Types?<a class="headerlink" href="#1-why-two-model-types" title="Permanent link">&para;</a></h3>
+<p><strong>InspectionQuestionFileMapping</strong>:</p>
+<ul>
+<li>Used for file operations (upload, display)</li>
+<li>Has <code>isLoading</code>, <code>isSuccess</code>, <code>uploadProgress</code></li>
+<li>Generic file representation</li>
+</ul>
+<p><strong>InspectionQuestionAnswer</strong>:</p>
+<ul>
+<li>Business model for inspection answers</li>
+<li>Contains answer data (imageId, image, text, number, etc)</li>
+<li>Added <code>uploadProgress</code> for UI consistency</li>
+</ul>
+<p><strong>Conversion</strong>: Widget layer converts <code>Answer → Mapping</code> để reuse existing display components.</p>
+<h3 id="2-why-clone-uploadinspectionfiles">2. Why Clone uploadInspectionFiles?<a class="headerlink" href="#2-why-clone-uploadinspectionfiles" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Original <code>uploadFilesFromImagePicker</code> không có progress callback</li>
+<li>Tạo method mới để không affect existing code</li>
+<li>Có thể future merge khi stable</li>
+</ul>
+<h3 id="3-why-average-progress-for-grid-overlay">3. Why Average Progress for Grid Overlay?<a class="headerlink" href="#3-why-average-progress-for-grid-overlay" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Multiple files upload simultaneously</li>
+<li>Show overall progress instead of per-file</li>
+<li>Better UX for batch uploads</li>
+</ul>
+<h3 id="4-progress-callback-design">4. Progress Callback Design<a class="headerlink" href="#4-progress-callback-design" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Why use callback chain instead of direct access?
+onUploadProgress: (sent, total) {
+  onUpdateUploadProgress(progress); // Abstract method
+}
+
+// Benefits:
+// 1. Decoupling: AbstractState không cần biết concrete implementation
+// 2. Flexibility: Child widgets tự quyết định update logic
+// 3. Testability: Dễ mock và test
+</code></pre>
+<h2 id="testing-scenarios">Testing Scenarios<a class="headerlink" href="#testing-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="1-single-image-upload">1. Single Image Upload<a class="headerlink" href="#1-single-image-upload" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Show 0% initially</li>
+<li>✅ Progress increases smoothly 0% → 100%</li>
+<li>✅ Image displays after upload</li>
+<li>✅ Placeholder removed</li>
+</ul>
+<h3 id="2-multiple-images-upload">2. Multiple Images Upload<a class="headerlink" href="#2-multiple-images-upload" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ All show 0% initially</li>
+<li>✅ Grid overlay shows average progress</li>
+<li>✅ Individual items show per-file progress</li>
+<li>✅ All placeholders removed after upload</li>
+</ul>
+<h3 id="3-upload-failure">3. Upload Failure<a class="headerlink" href="#3-upload-failure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>⚠️ TODO: Handle error state</li>
+<li>⚠️ TODO: Show retry option</li>
+<li>⚠️ TODO: Remove failed placeholders</li>
+</ul>
+<h3 id="4-network-interruption">4. Network Interruption<a class="headerlink" href="#4-network-interruption" title="Permanent link">&para;</a></h3>
+<ul>
+<li>⚠️ TODO: Pause/resume support</li>
+<li>⚠️ TODO: Retry mechanism</li>
+</ul>
+<h2 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="1-setstate-frequency">1. setState Frequency<a class="headerlink" href="#1-setstate-frequency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Progress callback fires frequently (every chunk uploaded)</li>
+<li>Each call triggers <code>setState()</code> → rebuild</li>
+<li><strong>Optimization</strong>: Consider throttling updates (e.g., every 5%)</li>
+</ul>
+<pre><code class="language-dart">double _lastReportedProgress = 0.0;
+onUploadProgress: (sent, total) {
+  final progress = sent / total;
+  if ((progress - _lastReportedProgress) &gt;= 0.05) { // 5% threshold
+    _lastReportedProgress = progress;
+    onUpdateUploadProgress(progress);
+  }
+}
+</code></pre>
+<h3 id="2-large-file-uploads">2. Large File Uploads<a class="headerlink" href="#2-large-file-uploads" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Watermark processing blocks UI</li>
+<li><strong>Optimization</strong>: Move to isolate</li>
+<li><strong>Optimization</strong>: Show watermark progress separately</li>
+</ul>
+<h3 id="3-memory-management">3. Memory Management<a class="headerlink" href="#3-memory-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>XFile paths held in memory during upload</li>
+<li><strong>Optimization</strong>: Release after watermark</li>
+<li><strong>Optimization</strong>: Stream-based upload for very large files</li>
+</ul>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<h3 id="enable-debug-logs">Enable Debug Logs<a class="headerlink" href="#enable-debug-logs" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// abstract_inspection_media_state.dart
+debugPrint('[ABSTRACT_MEDIA] 📊 Upload progress: ${(progress * 100).toStringAsFixed(1)}%');
+</code></pre>
+<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Issue 1: Progress stuck at 0%</strong></p>
+<ul>
+<li>Check: <code>onUpdateUploadProgress</code> được override?</li>
+<li>Check: <code>setState()</code> được gọi?</li>
+<li>Check: <code>mounted</code> check passed?</li>
+</ul>
+<p><strong>Issue 2: Images không hiển thị sau upload</strong></p>
+<ul>
+<li>Check: <code>onNewAttachmentAdded</code> có remove placeholders?</li>
+<li>Check: <code>imageId</code> được set &gt; 0?</li>
+<li>Check: Conversion logic trong widget có đúng?</li>
+</ul>
+<p><strong>Issue 3: "Uploaded 0 images"</strong></p>
+<ul>
+<li>Check: FormData format (key phải là <code>"files"</code>)</li>
+<li>Check: Backend endpoint</li>
+<li>Check: Response parsing</li>
+</ul>
+<h2 id="future-improvements">Future Improvements<a class="headerlink" href="#future-improvements" title="Permanent link">&para;</a></h2>
+<h3 id="1-unified-progress-system">1. Unified Progress System<a class="headerlink" href="#1-unified-progress-system" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Create shared progress manager
+class UploadProgressManager {
+  final Map&lt;String, double&gt; _progress = {};
+
+  void updateProgress(String fileId, double progress) { }
+  double getProgress(String fileId) { }
+  double getAverageProgress(List&lt;String&gt; fileIds) { }
+}
+</code></pre>
+<h3 id="2-upload-queue">2. Upload Queue<a class="headerlink" href="#2-upload-queue" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Handle multiple uploads gracefully
+class UploadQueue {
+  final Queue&lt;UploadTask&gt; _queue = Queue();
+  int maxConcurrent = 3;
+
+  Future&lt;void&gt; enqueue(UploadTask task) { }
+  void cancel(String taskId) { }
+  void pause(String taskId) { }
+  void resume(String taskId) { }
+}
+</code></pre>
+<h3 id="3-offline-support">3. Offline Support<a class="headerlink" href="#3-offline-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cache failed uploads</li>
+<li>Retry when online</li>
+<li>Sync progress across app restarts</li>
+</ul>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../media_picker_plus_integration/">Media Picker Plus Integration</a></li>
+<li><a href="../inspection_offline/">Inspection Offline Architecture</a></li>
+<li><a href="../widgets/media-view-widget.md">UI Components - Media View Widget</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "evaluation.evaluating": "Đang đánh giá",
+  "evaluation.notEvaluate": "Chưa đánh giá",
+  "evaluation.notPassed": "Chưa đạt",
+  "evaluation.passed": "Đạt",
+  "validation.noPermission": "Không có quyền finish inspection này",
+  "validation.requireAction": "Bạn được yêu cầu tạo công việc để hoàn thành mục này",
+  "validation.requireEvidenceAttachment": "Bạn được yêu cầu thêm bằng chứng hình ảnh để hoàn thành mục này",
+  "validation.requireEvidenceAttachmentAndNote": "Bạn được yêu cầu thêm ghi chú và bằng chứng hình ảnh để hoàn thành mục này",
+  "validation.requireEvidenceNote": "Bạn được yêu cầu thêm ghi chú để hoàn thành mục này",
+  "validation.surveyNotExisted": "Survey không tồn tại",
+  "validation.pageHasError": "Trang có lỗi, vui lòng kiểm tra lại",
+  "validation.questionNotAnswered": "Câu hỏi chưa được trả lời",
+  "empty.title": "Bắt đầu kiểm tra ngay!",
+  "empty.description": "Chưa có checklist nào hôm nay. Hãy chọn biểu mẫu từ thư viện để bắt đầu thực hiện kiểm tra.",
+  "empty.action": "Bắt đầu ngay",
+  "empty.hint": "Thư viện biểu mẫu",
+  "preview.finish.title": "Hoàn thành",
+  "preview.finish.description": "Bạn đã hoàn thành xem trước mẫu kiểm tra"
+}

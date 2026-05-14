@@ -1,0 +1,24 @@
+{
+  "unversionedId": "styling-rules",
+  "id": "styling-rules",
+  "title": "Quy tắc Styling",
+  "description": "Tài liệu này mô tả các quy tắc styling cho dự án SupaMobileApp, bao gồm thông tin về kích thước font, border radius, màu sắc, spacing và typography.",
+  "source": "@site/docs/styling-rules.md",
+  "sourceDirName": ".",
+  "slug": "/styling-rules",
+  "permalink": "/docs/styling-rules",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/styling-rules.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+    "permalink": "/docs/search_tab_usage"
+  },
+  "next": {
+    "title": "Phát triển Sub-App",
+    "permalink": "/docs/sub-app-development"
+  }
+}

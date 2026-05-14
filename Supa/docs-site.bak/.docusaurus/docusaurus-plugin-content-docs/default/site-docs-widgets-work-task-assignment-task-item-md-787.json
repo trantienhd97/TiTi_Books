@@ -1,0 +1,20 @@
+{
+  "unversionedId": "widgets/work/task_assignment/task_item",
+  "id": "widgets/work/task_assignment/task_item",
+  "title": "Task Assignment Items",
+  "description": "Thành phần hiển thị danh sách nhiệm vụ (Tasks) trong module Work.",
+  "source": "@site/docs/widgets/work/task_assignment/task_item.md",
+  "sourceDirName": "widgets/work/task_assignment",
+  "slug": "/widgets/work/task_assignment/task_item",
+  "permalink": "/docs/widgets/work/task_assignment/task_item",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/work/task_assignment/task_item.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Inspection & Checklist Items",
+    "permalink": "/docs/widgets/work/inspection/checklist_item"
+  }
+}

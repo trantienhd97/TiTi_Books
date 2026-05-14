@@ -1,0 +1,24 @@
+{
+  "unversionedId": "TaskAssignment/visibility-and-filtering-logic",
+  "id": "TaskAssignment/visibility-and-filtering-logic",
+  "title": "Visibility and Filtering Logic",
+  "description": "Tài liệu mô tả các quy tắc hiển thị và phương pháp tối ưu hóa danh sách công việc (Task Assignment) trên Dashboard và các trang danh sách cá nhân.",
+  "source": "@site/docs/TaskAssignment/visibility-and-filtering-logic.md",
+  "sourceDirName": "TaskAssignment",
+  "slug": "/TaskAssignment/visibility-and-filtering-logic",
+  "permalink": "/docs/TaskAssignment/visibility-and-filtering-logic",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/visibility-and-filtering-logic.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Trang HOME",
+    "permalink": "/docs/TaskAssignment/trang-home"
+  },
+  "next": {
+    "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+    "permalink": "/docs/ai-workflow-image-compression"
+  }
+}

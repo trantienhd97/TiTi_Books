@@ -1,0 +1,24 @@
+{
+  "unversionedId": "supa_communication_chat",
+  "id": "supa_communication_chat",
+  "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+  "description": "Tổng quan kiến trúc",
+  "source": "@site/docs/supa_communication_chat.md",
+  "sourceDirName": ".",
+  "slug": "/supa_communication_chat",
+  "permalink": "/docs/supa_communication_chat",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/supa_communication_chat.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PushNotificationBloc Subscription Points in supa_bibs",
+    "permalink": "/docs/supa_bibs_push_notification_subscription_points"
+  },
+  "next": {
+    "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+    "permalink": "/docs/supa_communication_integration"
+  }
+}

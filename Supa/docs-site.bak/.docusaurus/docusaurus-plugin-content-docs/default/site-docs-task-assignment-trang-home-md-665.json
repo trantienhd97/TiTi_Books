@@ -1,0 +1,24 @@
+{
+  "unversionedId": "TaskAssignment/trang-home",
+  "id": "TaskAssignment/trang-home",
+  "title": "Trang HOME",
+  "description": "Link thiết kế https://www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17332-9867&amp;t=dP7ebSyjPiKduZBj-4",
+  "source": "@site/docs/TaskAssignment/trang-home.md",
+  "sourceDirName": "TaskAssignment",
+  "slug": "/TaskAssignment/trang-home",
+  "permalink": "/docs/TaskAssignment/trang-home",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/trang-home.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Task Assignment Status Change Flow",
+    "permalink": "/docs/TaskAssignment/task-assignment-status-change-flow"
+  },
+  "next": {
+    "title": "Visibility and Filtering Logic",
+    "permalink": "/docs/TaskAssignment/visibility-and-filtering-logic"
+  }
+}

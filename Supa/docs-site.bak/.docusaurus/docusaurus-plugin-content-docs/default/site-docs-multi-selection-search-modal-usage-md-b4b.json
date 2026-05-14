@@ -1,0 +1,24 @@
+{
+  "unversionedId": "multi_selection_search_modal_usage",
+  "id": "multi_selection_search_modal_usage",
+  "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+  "description": "MultiSelectionSearchModal là một widget Generic dùng để tạo modal tìm kiếm và chọn nhiều phần tử. Đây là giải pháp tiêu chuẩn trong ứng dụng cho các danh sách chọn như Người dùng, Địa điểm, Tags, hoặc loại thiết bị.",
+  "source": "@site/docs/multi_selection_search_modal_usage.md",
+  "sourceDirName": ".",
+  "slug": "/multi_selection_search_modal_usage",
+  "permalink": "/docs/multi_selection_search_modal_usage",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/multi_selection_search_modal_usage.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "media_picker_plus Integration Guide",
+    "permalink": "/docs/media_picker_plus_integration"
+  },
+  "next": {
+    "title": "Notification Handler System",
+    "permalink": "/docs/notification-handlers"
+  }
+}

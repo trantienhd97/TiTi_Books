@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspections/upload-progress-implementation",
+  "id": "inspections/upload-progress-implementation",
+  "title": "Upload Progress Implementation - Inspection Media",
+  "description": "Overview",
+  "source": "@site/docs/inspections/upload-progress-implementation.md",
+  "sourceDirName": "inspections",
+  "slug": "/inspections/upload-progress-implementation",
+  "permalink": "/docs/inspections/upload-progress-implementation",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/upload-progress-implementation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Inspection Architecture Overview",
+    "permalink": "/docs/inspections/architecture-overview"
+  },
+  "next": {
+    "title": "Localization",
+    "permalink": "/docs/localization"
+  }
+}

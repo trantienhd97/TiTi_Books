@@ -1,0 +1,24 @@
+{
+  "unversionedId": "widgets/dashboard/dashboard_frame",
+  "id": "widgets/dashboard/dashboard_frame",
+  "title": "DashboardFrame",
+  "description": "DashboardFrame là một component khung (frame) được thiết kế để hiển thị các danh sách item trên Dashboard với hỗ trợ phân trang ngang (horizontal paging) và tự động điều chỉnh chiều cao.",
+  "source": "@site/docs/widgets/dashboard/dashboard_frame.md",
+  "sourceDirName": "widgets/dashboard",
+  "slug": "/widgets/dashboard/dashboard_frame",
+  "permalink": "/docs/widgets/dashboard/dashboard_frame",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/dashboard/dashboard_frame.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Widgets",
+    "permalink": "/docs/widgets/"
+  },
+  "next": {
+    "title": "Supa Attendance Widgets",
+    "permalink": "/docs/widgets/supa_attendance_widgets"
+  }
+}

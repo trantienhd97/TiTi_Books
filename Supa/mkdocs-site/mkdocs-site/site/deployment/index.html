@@ -1,0 +1,840 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hướng dẫn Triển khai Ứng dụng - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#huong-dan-trien-khai-ung-dung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hướng dẫn Triển khai Ứng dụng
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="huong-dan-trien-khai-ung-dung">Hướng dẫn Triển khai Ứng dụng<a class="headerlink" href="#huong-dan-trien-khai-ung-dung" title="Permanent link">&para;</a></h1>
+<h2 id="1-tong-quan">1. Tổng quan<a class="headerlink" href="#1-tong-quan" title="Permanent link">&para;</a></h2>
+<p>Tài liệu này mô tả cách triển khai SupaMobileApp cho các nền tảng khác nhau:
+- <strong>Web</strong>: Sử dụng Docker và Nginx
+- <strong>iOS/macOS</strong>: Sử dụng Flutter build và Xcode Archive
+- <strong>Android</strong>: Sử dụng script build AAB/APK và upload symbols
+- <strong>Firebase App Distribution</strong>: Deploy APK lên AppTester</p>
+<h2 id="2-trien-khai-web-docker-nginx">2. Triển khai Web (Docker + Nginx)<a class="headerlink" href="#2-trien-khai-web-docker-nginx" title="Permanent link">&para;</a></h2>
+<h3 id="21-build-ung-dung-web">2.1. Build ứng dụng Web<a class="headerlink" href="#21-build-ung-dung-web" title="Permanent link">&para;</a></h3>
+<p>Trước tiên, build ứng dụng Flutter cho web:</p>
+<pre><code class="language-bash">flutter build web --release
+</code></pre>
+<p>Output sẽ được tạo trong thư mục <code>build/web/</code>.</p>
+<h3 id="22-dockerfile">2.2. Dockerfile<a class="headerlink" href="#22-dockerfile" title="Permanent link">&para;</a></h3>
+<p>File <code>Dockerfile</code> sử dụng nginx:alpine image:</p>
+<pre><code class="language-dockerfile">FROM nginx:alpine
+
+EXPOSE 8080
+
+WORKDIR /var/www/html
+
+USER root
+RUN chmod -R g+w /var/cache/
+RUN chmod -R g+w /var/run/
+
+# Copy built artifacts
+COPY ./build/web/ /var/www/html/
+
+# Copy nginx configuration folder
+COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+</code></pre>
+<h3 id="23-nginx-configuration">2.3. Nginx Configuration<a class="headerlink" href="#23-nginx-configuration" title="Permanent link">&para;</a></h3>
+<p>File <code>nginx/conf.d/default.conf</code> cấu hình nginx:</p>
+<pre><code class="language-nginx">server {
+    listen 8080;
+    server_name _ default_server;
+
+    # Serve iOS web credentials file
+    location /.well-known/apple-app-site-association {
+        root /var/www/html;
+        default_type application/json;
+        add_header Content-Type application/json;
+        add_header Access-Control-Allow-Origin *;
+    }
+
+    # Serve Android Digital Asset Links file
+    location /.well-known/assetlinks.json {
+        root /var/www/html;
+        default_type application/json;
+        add_header Content-Type application/json;
+        add_header Access-Control-Allow-Origin *;
+    }
+
+    location / {
+        root /var/www/html;
+        index index.html;
+        autoindex off;
+        try_files $uri $uri/ /index.html;
+    }
+}
+</code></pre>
+<p><strong>Giải thích:</strong>
+- Port 8080: Nginx lắng nghe trên port 8080
+- Apple App Site Association: Phục vụ file cho iOS Universal Links
+- Android Asset Links: Phục vụ file cho Android App Links
+- SPA routing: <code>try_files</code> đảm bảo tất cả routes được redirect về <code>index.html</code> (cho Flutter web routing)</p>
+<h3 id="24-build-docker-image">2.4. Build Docker Image<a class="headerlink" href="#24-build-docker-image" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash"># Build image
+docker build -t supa-web:latest .
+
+# Hoặc với tag version
+docker build -t supa-web:v1.0.0 .
+</code></pre>
+<h3 id="25-chay-docker-container">2.5. Chạy Docker Container<a class="headerlink" href="#25-chay-docker-container" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash"># Chạy container
+docker run -d -p 8080:8080 --name supa-web supa-web:latest
+
+# Hoặc với volume mount (nếu cần)
+docker run -d -p 8080:8080 -v $(pwd)/build/web:/var/www/html --name supa-web supa-web:latest
+</code></pre>
+<h3 id="26-kiem-tra">2.6. Kiểm tra<a class="headerlink" href="#26-kiem-tra" title="Permanent link">&para;</a></h3>
+<p>Mở browser và truy cập: <code>http://localhost:8080</code></p>
+<h3 id="27-deploy-len-production">2.7. Deploy lên Production<a class="headerlink" href="#27-deploy-len-production" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash"># Tag image cho registry
+docker tag supa-web:latest your-registry/supa-web:v1.0.0
+
+# Push lên registry
+docker push your-registry/supa-web:v1.0.0
+
+# Deploy trên server
+docker pull your-registry/supa-web:v1.0.0
+docker run -d -p 8080:8080 --name supa-web your-registry/supa-web:v1.0.0
+</code></pre>
+<h2 id="3-trien-khai-ios">3. Triển khai iOS<a class="headerlink" href="#3-trien-khai-ios" title="Permanent link">&para;</a></h2>
+<h3 id="31-build-ung-dung">3.1. Build ứng dụng<a class="headerlink" href="#31-build-ung-dung" title="Permanent link">&para;</a></h3>
+<p>Build ứng dụng Flutter cho iOS ở chế độ release:</p>
+<pre><code class="language-bash">flutter build ios --release
+</code></pre>
+<p><strong>Lưu ý:</strong> 
+- Đảm bảo đã cấu hình đúng signing certificates và provisioning profiles
+- Kiểm tra <code>ios/Runner.xcodeproj</code> có đúng team và bundle identifier</p>
+<h3 id="32-mo-xcode">3.2. Mở Xcode<a class="headerlink" href="#32-mo-xcode" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">open ios/Runner.xcworkspace
+</code></pre>
+<p><strong>Lưu ý:</strong> Sử dụng <code>.xcworkspace</code>, không phải <code>.xcodeproj</code></p>
+<h3 id="33-archive-trong-xcode">3.3. Archive trong Xcode<a class="headerlink" href="#33-archive-trong-xcode" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Chọn scheme</strong>: Chọn "Runner" từ scheme dropdown</li>
+<li><strong>Chọn device</strong>: Chọn "Any iOS Device" (không chọn simulator)</li>
+<li><strong>Archive</strong>: </li>
+<li>Menu: <code>Product</code> → <code>Archive</code></li>
+<li>Hoặc phím tắt: <code>Cmd + B</code> (build) rồi <code>Product</code> → <code>Archive</code></li>
+<li><strong>Chờ build</strong>: Xcode sẽ build và tạo archive</li>
+<li><strong>Organizer</strong>: Sau khi archive xong, Xcode sẽ mở Organizer window</li>
+</ol>
+<h3 id="34-distribute-app">3.4. Distribute App<a class="headerlink" href="#34-distribute-app" title="Permanent link">&para;</a></h3>
+<p>Trong Organizer window:</p>
+<ol>
+<li><strong>Chọn archive</strong> vừa tạo</li>
+<li><strong>Click "Distribute App"</strong></li>
+<li><strong>Chọn distribution method</strong>:</li>
+<li><strong>App Store Connect</strong>: Upload lên App Store</li>
+<li><strong>Ad Hoc</strong>: Phân phối cho testers cụ thể</li>
+<li><strong>Enterprise</strong>: Phân phối nội bộ (cần Enterprise account)</li>
+<li><strong>Development</strong>: Development build</li>
+<li><strong>Chọn options</strong>: </li>
+<li>Upload symbols (nếu có)</li>
+<li>Include bitcode (thường là NO cho Flutter)</li>
+<li><strong>Review và upload</strong></li>
+</ol>
+<h3 id="35-upload-len-testflight">3.5. Upload lên TestFlight<a class="headerlink" href="#35-upload-len-testflight" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Sau khi upload thành công, vào <a href="https://appstoreconnect.apple.com">App Store Connect</a></li>
+<li>Chọn app → TestFlight tab</li>
+<li>Chờ processing (thường 10-30 phút)</li>
+<li>Thêm testers và groups</li>
+<li>Submit for review (nếu cần)</li>
+</ol>
+<h3 id="36-luu-y">3.6. Lưu ý<a class="headerlink" href="#36-luu-y" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Version và Build Number</strong>: Đảm bảo version và build number đã được update trong <code>pubspec.yaml</code></li>
+<li><strong>Signing</strong>: Kiểm tra signing trong Xcode project settings</li>
+<li><strong>Capabilities</strong>: Kiểm tra các capabilities cần thiết (Push Notifications, Background Modes, etc.)</li>
+<li><strong>Info.plist</strong>: Kiểm tra các permissions và settings trong <code>Info.plist</code></li>
+</ul>
+<h2 id="4-trien-khai-macos">4. Triển khai macOS<a class="headerlink" href="#4-trien-khai-macos" title="Permanent link">&para;</a></h2>
+<h3 id="41-muc-ich">4.1. Mục đích<a class="headerlink" href="#41-muc-ich" title="Permanent link">&para;</a></h3>
+<p>Bản macOS chủ yếu dùng cho <strong>admin chạy trên macOS để reset mật khẩu cho user khi cần</strong>.</p>
+<h3 id="42-build-ung-dung">4.2. Build ứng dụng<a class="headerlink" href="#42-build-ung-dung" title="Permanent link">&para;</a></h3>
+<p>Build ứng dụng Flutter cho macOS ở chế độ release:</p>
+<pre><code class="language-bash">flutter build macos --release
+</code></pre>
+<h3 id="43-archive-trong-xcode">4.3. Archive trong Xcode<a class="headerlink" href="#43-archive-trong-xcode" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Mở Xcode</strong>:
+   <code>bash
+   open macos/Runner.xcworkspace</code></p>
+</li>
+<li>
+<p><strong>Chọn scheme</strong>: Chọn "Runner" từ scheme dropdown</p>
+</li>
+<li>
+<p><strong>Chọn "My Mac"</strong> làm destination</p>
+</li>
+<li>
+<p><strong>Archive</strong>:</p>
+</li>
+<li>Menu: <code>Product</code> → <code>Archive</code></li>
+<li>
+<p>Chờ build và archive hoàn tất</p>
+</li>
+<li>
+<p><strong>Distribute App</strong>:</p>
+</li>
+<li>Trong Organizer, chọn archive vừa tạo</li>
+<li>Click "Distribute App"</li>
+<li>Chọn distribution method phù hợp:<ul>
+<li><strong>Developer ID</strong>: Để phân phối bên ngoài App Store (khuyến nghị)</li>
+<li><strong>Mac App Store</strong>: Để upload lên Mac App Store</li>
+<li><strong>Direct Distribution</strong>: Phân phối trực tiếp</li>
+</ul>
+</li>
+</ol>
+<h3 id="44-export-app-hoac-dmg">4.4. Export .app hoặc .dmg<a class="headerlink" href="#44-export-app-hoac-dmg" title="Permanent link">&para;</a></h3>
+<p>Sau khi distribute, bạn có thể:
+- Export <code>.app</code> bundle
+- Tạo <code>.dmg</code> file để phân phối dễ dàng hơn</p>
+<h3 id="45-luu-y">4.5. Lưu ý<a class="headerlink" href="#45-luu-y" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Notarization</strong>: Nếu distribute bên ngoài App Store, cần notarize app với Apple</li>
+<li><strong>Gatekeeper</strong>: User có thể cần allow app trong System Preferences → Security &amp; Privacy</li>
+<li><strong>Permissions</strong>: Đảm bảo các permissions cần thiết đã được khai báo trong entitlements</li>
+</ul>
+<h2 id="5-trien-khai-android">5. Triển khai Android<a class="headerlink" href="#5-trien-khai-android" title="Permanent link">&para;</a></h2>
+<h3 id="51-script-build">5.1. Script Build<a class="headerlink" href="#51-script-build" title="Permanent link">&para;</a></h3>
+<p>Sử dụng script <code>scripts/release-android</code> để build AAB hoặc APK:</p>
+<pre><code class="language-bash"># Build AAB (App Bundle) - khuyến nghị cho Play Store
+./scripts/release-android appbundle
+
+# Build APK
+./scripts/release-android apk
+</code></pre>
+<h3 id="52-script-lam-gi">5.2. Script làm gì?<a class="headerlink" href="#52-script-lam-gi" title="Permanent link">&para;</a></h3>
+<p>Script <code>scripts/release-android</code>:</p>
+<ol>
+<li>
+<p><strong>Build ứng dụng</strong> với obfuscation và split debug info:
+   <code>bash
+   flutter build "$1" --obfuscate --split-debug-info=build/symbols --release</code></p>
+</li>
+<li>
+<p><strong>Tạo symbols cho các architectures</strong>:</p>
+</li>
+<li><code>arm64-v8a</code> (64-bit ARM)</li>
+<li><code>armeabi-v7a</code> (32-bit ARM)</li>
+<li>
+<p><code>x86_64</code> (64-bit x86)</p>
+</li>
+<li>
+<p><strong>Tạo file <code>symbols-upload.zip</code></strong>:</p>
+</li>
+<li>Package tất cả symbols vào một file zip</li>
+<li>File này cần upload lên Play Store để track lỗi tốt hơn</li>
+</ol>
+<h3 id="53-output-files">5.3. Output Files<a class="headerlink" href="#53-output-files" title="Permanent link">&para;</a></h3>
+<p>Sau khi chạy script:</p>
+<p><strong>AAB (App Bundle):</strong>
+- <code>build/app/outputs/bundle/release/app-release.aab</code></p>
+<p><strong>APK:</strong>
+- <code>build/app/outputs/flutter-apk/app-release.apk</code></p>
+<p><strong>Symbols:</strong>
+- <code>build/symbols/</code> - Thư mục chứa symbols files
+- <code>symbols-upload.zip</code> - File zip chứa tất cả symbols, sẵn sàng upload</p>
+<h3 id="54-upload-len-google-play-store">5.4. Upload lên Google Play Store<a class="headerlink" href="#54-upload-len-google-play-store" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Đăng nhập</strong> vào <a href="https://play.google.com/console">Google Play Console</a></p>
+</li>
+<li>
+<p><strong>Chọn app</strong> và version cần upload</p>
+</li>
+<li>
+<p><strong>Upload AAB</strong>:</p>
+</li>
+<li>Vào "Production" hoặc "Internal testing" → "Create new release"</li>
+<li>
+<p>Upload file <code>app-release.aab</code></p>
+</li>
+<li>
+<p><strong>Upload Symbols</strong> (quan trọng):</p>
+</li>
+<li>Trong "App bundle explorer" hoặc "Release" page</li>
+<li>Tìm section "Android App Bundle and APK to deobfuscate"</li>
+<li>Upload file <code>symbols-upload.zip</code></li>
+<li>
+<p><strong>Lý do</strong>: Symbols giúp Google Play Console và Firebase Crashlytics deobfuscate crash reports, giúp debug lỗi trên production dễ dàng hơn</p>
+</li>
+<li>
+<p><strong>Review và publish</strong></p>
+</li>
+</ol>
+<h3 id="55-tai-sao-can-symbols">5.5. Tại sao cần Symbols?<a class="headerlink" href="#55-tai-sao-can-symbols" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Obfuscation</strong>: Code đã được obfuscate để bảo vệ source code</li>
+<li><strong>Crash Reports</strong>: Khi app crash trên production, stack traces sẽ bị obfuscate</li>
+<li><strong>Deobfuscation</strong>: Symbols file giúp convert stack traces obfuscated về readable format</li>
+<li><strong>Debugging</strong>: Giúp developers xác định chính xác dòng code gây lỗi</li>
+</ul>
+<h3 id="56-luu-y">5.6. Lưu ý<a class="headerlink" href="#56-luu-y" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Keystore</strong>: Đảm bảo đã cấu hình đúng keystore file và password</li>
+<li><strong>Version Code</strong>: Tăng version code trong <code>pubspec.yaml</code> hoặc <code>android/app/build.gradle</code></li>
+<li><strong>Signing</strong>: AAB/APK phải được sign với release keystore</li>
+<li><strong>Permissions</strong>: Kiểm tra các permissions trong <code>AndroidManifest.xml</code></li>
+</ul>
+<h2 id="6-firebase-app-distribution-apptester">6. Firebase App Distribution (AppTester)<a class="headerlink" href="#6-firebase-app-distribution-apptester" title="Permanent link">&para;</a></h2>
+<h3 id="61-muc-ich">6.1. Mục đích<a class="headerlink" href="#61-muc-ich" title="Permanent link">&para;</a></h3>
+<p>Firebase App Distribution tương tự TestFlight của Apple, cho phép distribute APK cho testers trước khi release lên Play Store.</p>
+<h3 id="62-script-deploy">6.2. Script Deploy<a class="headerlink" href="#62-script-deploy" title="Permanent link">&para;</a></h3>
+<p>Sử dụng script <code>scripts/firebase-publish</code>:</p>
+<pre><code class="language-bash">./scripts/firebase-publish
+</code></pre>
+<h3 id="63-script-lam-gi">6.3. Script làm gì?<a class="headerlink" href="#63-script-lam-gi" title="Permanent link">&para;</a></h3>
+<p>Script <code>scripts/firebase-publish</code>:</p>
+<ol>
+<li><strong>Tìm APK file</strong>:</li>
+<li>Ưu tiên: <code>android/app/release/app-universal-release.apk</code></li>
+<li>
+<p>Fallback: <code>build/app/outputs/flutter-apk/app-release.apk</code></p>
+</li>
+<li>
+<p><strong>Upload lên Firebase App Distribution</strong>:
+   <code>bash
+   firebase appdistribution:distribute \
+     "$APK_PATH" \
+     --app "1:826136080579:android:846f14f42c4b772bcfb276" \
+     --groups supa \
+     --release-notes-file RELEASE_NOTES.md</code></p>
+</li>
+</ol>
+<h3 id="64-prerequisites">6.4. Prerequisites<a class="headerlink" href="#64-prerequisites" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Firebase CLI</strong>: Cài đặt Firebase CLI
+   <code>bash
+   npm install -g firebase-tools</code></p>
+</li>
+<li>
+<p><strong>Login Firebase</strong>:
+   <code>bash
+   firebase login</code></p>
+</li>
+<li>
+<p><strong>File RELEASE_NOTES.md</strong>: Tạo file <code>RELEASE_NOTES.md</code> ở root project với nội dung release notes</p>
+</li>
+</ol>
+<h3 id="65-release_notesmd">6.5. RELEASE_NOTES.md<a class="headerlink" href="#65-release_notesmd" title="Permanent link">&para;</a></h3>
+<p>Tạo file <code>RELEASE_NOTES.md</code> với nội dung:</p>
+<pre><code class="language-markdown"># Release Notes - v1.0.0
+
+## New Features
+- Feature 1
+- Feature 2
+
+## Bug Fixes
+- Fix 1
+- Fix 2
+
+## Improvements
+- Improvement 1
+</code></pre>
+<h3 id="66-firebase-groups">6.6. Firebase Groups<a class="headerlink" href="#66-firebase-groups" title="Permanent link">&para;</a></h3>
+<p>Script sử dụng group <code>supa</code>. Đảm bảo:
+- Group đã được tạo trong Firebase Console
+- Testers đã được thêm vào group</p>
+<p><strong>Cách tạo group:</strong>
+1. Vào <a href="https://console.firebase.google.com">Firebase Console</a>
+2. Chọn project
+3. Vào "App Distribution" → "Testers &amp; Groups"
+4. Tạo group "supa" và thêm testers</p>
+<h3 id="67-testers-nhan-apk">6.7. Testers nhận APK<a class="headerlink" href="#67-testers-nhan-apk" title="Permanent link">&para;</a></h3>
+<p>Sau khi upload thành công:
+1. Testers sẽ nhận email từ Firebase
+2. Click link trong email để download APK
+3. Install APK trên device Android</p>
+<h3 id="68-luu-y">6.8. Lưu ý<a class="headerlink" href="#68-luu-y" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>APK phải được build trước</strong>: Chạy <code>./scripts/release-android apk</code> trước khi deploy</li>
+<li><strong>Release notes</strong>: Cập nhật <code>RELEASE_NOTES.md</code> trước mỗi lần deploy</li>
+<li><strong>Firebase project</strong>: Đảm bảo đã cấu hình đúng Firebase project ID</li>
+</ul>
+<h2 id="7-quy-trinh-trien-khai-hoan-chinh">7. Quy trình Triển khai Hoàn chỉnh<a class="headerlink" href="#7-quy-trinh-trien-khai-hoan-chinh" title="Permanent link">&para;</a></h2>
+<h3 id="71-pre-release-checklist">7.1. Pre-release Checklist<a class="headerlink" href="#71-pre-release-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Update version và build number trong <code>pubspec.yaml</code></li>
+<li>[ ] Update <code>RELEASE_NOTES.md</code> (nếu dùng Firebase)</li>
+<li>[ ] Test app trên các platforms</li>
+<li>[ ] Kiểm tra signing certificates và keystores</li>
+<li>[ ] Review permissions và capabilities</li>
+<li>[ ] Test notifications và deep links</li>
+</ul>
+<h3 id="72-build-va-deploy">7.2. Build và Deploy<a class="headerlink" href="#72-build-va-deploy" title="Permanent link">&para;</a></h3>
+<p><strong>Android:</strong></p>
+<pre><code class="language-bash"># 1. Build AAB và symbols
+./scripts/release-android appbundle
+
+# 2. Upload AAB lên Play Store
+# 3. Upload symbols-upload.zip lên Play Store
+
+# 4. (Optional) Deploy lên Firebase App Distribution
+./scripts/firebase-publish
+</code></pre>
+<p><strong>iOS:</strong></p>
+<pre><code class="language-bash"># 1. Build
+flutter build ios --release
+
+# 2. Mở Xcode và Archive
+open ios/Runner.xcworkspace
+# Product → Archive
+
+# 3. Distribute qua Xcode Organizer
+</code></pre>
+<p><strong>macOS:</strong></p>
+<pre><code class="language-bash"># 1. Build
+flutter build macos --release
+
+# 2. Mở Xcode và Archive
+open macos/Runner.xcworkspace
+# Product → Archive
+
+# 3. Distribute qua Xcode Organizer
+</code></pre>
+<p><strong>Web:</strong></p>
+<pre><code class="language-bash"># 1. Build
+flutter build web --release
+
+# 2. Build Docker image
+docker build -t supa-web:latest .
+
+# 3. Deploy container
+docker run -d -p 8080:8080 supa-web:latest
+</code></pre>
+<h3 id="73-post-release">7.3. Post-release<a class="headerlink" href="#73-post-release" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Monitor crash reports (Firebase Crashlytics)</li>
+<li>[ ] Check analytics (Firebase Analytics)</li>
+<li>[ ] Review user feedback</li>
+<li>[ ] Plan hotfix nếu cần</li>
+</ul>
+<h2 id="8-troubleshooting">8. Troubleshooting<a class="headerlink" href="#8-troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="81-android-build-issues">8.1. Android Build Issues<a class="headerlink" href="#81-android-build-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Lỗi: "Keystore not found"</strong>
+- Kiểm tra keystore file path trong <code>android/key.properties</code>
+- Đảm bảo keystore file tồn tại</p>
+<p><strong>Lỗi: "Signing config not found"</strong>
+- Kiểm tra <code>android/app/build.gradle</code> có reference đúng signing config</p>
+<p><strong>Lỗi: "Version code already used"</strong>
+- Tăng version code trong <code>pubspec.yaml</code> hoặc <code>android/app/build.gradle</code></p>
+<h3 id="82-ios-build-issues">8.2. iOS Build Issues<a class="headerlink" href="#82-ios-build-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Lỗi: "No signing certificate"</strong>
+- Kiểm tra Xcode → Preferences → Accounts
+- Download certificates và provisioning profiles</p>
+<p><strong>Lỗi: "Provisioning profile mismatch"</strong>
+- Kiểm tra bundle identifier và team trong Xcode
+- Update provisioning profile</p>
+<p><strong>Lỗi: "Archive failed"</strong>
+- Đảm bảo đã chọn "Any iOS Device" (không phải simulator)
+- Clean build folder: <code>Product</code> → <code>Clean Build Folder</code></p>
+<h3 id="83-web-build-issues">8.3. Web Build Issues<a class="headerlink" href="#83-web-build-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Lỗi: "Docker build failed"</strong>
+- Kiểm tra <code>build/web/</code> có tồn tại không
+- Đảm bảo đã chạy <code>flutter build web --release</code> trước</p>
+<p><strong>Lỗi: "Nginx not serving files"</strong>
+- Kiểm tra nginx config file
+- Kiểm tra file permissions trong container</p>
+<h3 id="84-firebase-distribution-issues">8.4. Firebase Distribution Issues<a class="headerlink" href="#84-firebase-distribution-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Lỗi: "APK not found"</strong>
+- Đảm bảo đã build APK trước: <code>./scripts/release-android apk</code>
+- Kiểm tra APK path trong script</p>
+<p><strong>Lỗi: "Firebase not authenticated"</strong>
+- Chạy <code>firebase login</code> để authenticate
+- Kiểm tra Firebase project ID</p>
+<h2 id="9-best-practices">9. Best Practices<a class="headerlink" href="#9-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="91-version-management">9.1. Version Management<a class="headerlink" href="#91-version-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Semantic Versioning</strong>: Sử dụng format <code>MAJOR.MINOR.PATCH</code> (ví dụ: <code>1.2.3</code>)</li>
+<li><strong>Build Number</strong>: Tăng build number mỗi lần build</li>
+<li><strong>Changelog</strong>: Giữ changelog chi tiết cho mỗi version</li>
+</ul>
+<h3 id="92-security">9.2. Security<a class="headerlink" href="#92-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Obfuscation</strong>: Luôn enable obfuscation cho Android release builds</li>
+<li><strong>Signing</strong>: Không commit keystore files vào git</li>
+<li><strong>Environment Variables</strong>: Sử dụng environment variables cho sensitive data</li>
+</ul>
+<h3 id="93-testing">9.3. Testing<a class="headerlink" href="#93-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Internal Testing</strong>: Test trên internal testing tracks trước</li>
+<li><strong>Beta Testing</strong>: Sử dụng TestFlight và Firebase App Distribution</li>
+<li><strong>Staging</strong>: Có staging environment để test trước production</li>
+</ul>
+<h3 id="94-monitoring">9.4. Monitoring<a class="headerlink" href="#94-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Crash Reporting</strong>: Sử dụng Firebase Crashlytics</li>
+<li><strong>Analytics</strong>: Track user behavior với Firebase Analytics</li>
+<li><strong>Performance</strong>: Monitor app performance metrics</li>
+</ul>
+<h3 id="95-documentation">9.5. Documentation<a class="headerlink" href="#95-documentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Release Notes</strong>: Viết release notes chi tiết</li>
+<li><strong>Changelog</strong>: Maintain changelog file</li>
+<li><strong>Migration Guides</strong>: Cung cấp migration guides cho breaking changes</li>
+</ul>
+<h2 id="10-tom-tat">10. Tóm tắt<a class="headerlink" href="#10-tom-tat" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Web</strong>: Build → Docker image → Deploy container với Nginx</li>
+<li><strong>iOS</strong>: Build → Xcode Archive → Distribute qua Organizer</li>
+<li><strong>macOS</strong>: Build → Xcode Archive → Distribute (chủ yếu cho admin tools)</li>
+<li><strong>Android</strong>: Script build AAB/APK + symbols → Upload lên Play Store</li>
+<li><strong>Firebase</strong>: Script deploy APK lên App Distribution cho testers</li>
+</ol>
+<hr />
+<p><strong>Lưu ý quan trọng:</strong>
+- Luôn test trên staging/internal testing trước production
+- Upload symbols file lên Play Store để track lỗi tốt hơn
+- Maintain release notes và changelog
+- Monitor crash reports và analytics sau mỗi release</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

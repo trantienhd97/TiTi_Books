@@ -1,0 +1,640 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Supa Communication Chat — Tài liệu kỹ thuật - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supa-communication-chat-tai-lieu-ky-thuat" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Supa Communication Chat — Tài liệu kỹ thuật
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="supa-communication-chat-tai-lieu-ky-thuat">Supa Communication Chat — Tài liệu kỹ thuật<a class="headerlink" href="#supa-communication-chat-tai-lieu-ky-thuat" title="Permanent link">&para;</a></h1>
+<h2 id="tong-quan-kien-truc">Tổng quan kiến trúc<a class="headerlink" href="#tong-quan-kien-truc" title="Permanent link">&para;</a></h2>
+<pre><code>CommunicationConversationsPage       ← Danh sách hội thoại
+    └── _onChannelTap()
+        └── MessageOpenerRegistry.open()
+            └── DefaultMessageOpener (hoặc custom opener từ module khác)
+                └── CommunicationConversationChatPage  ← Trang chat
+                    ├── ConversationChatBloc           ← State management
+                    ├── JiffySafeMessageListView       ← Message list (custom)
+                    └── CustomChatInput                ← Input (custom)
+</code></pre>
+<hr />
+<h2 id="luong-mo-chat">Luồng mở chat<a class="headerlink" href="#luong-mo-chat" title="Permanent link">&para;</a></h2>
+<h3 id="1-bam-vao-channel-a-co-trong-danh-sach">1. Bấm vào channel đã có trong danh sách<a class="headerlink" href="#1-bam-vao-channel-a-co-trong-danh-sach" title="Permanent link">&para;</a></h3>
+<pre><code>_onChannelTap(channel)
+  → MessageOpenerRegistry.open()
+    → DefaultMessageOpener.open()
+      → router.push(locationForChannel(channel))
+        → ConversationChatBloc._onChatOpened()
+          → resolveAndWatchChannel()  ← lấy từ client.state.channels[cid]
+            → channel.watch()         ← SDK (không gọi BE)
+              → emit ConversationChatReady
+</code></pre>
+<h3 id="2-tao-dm-moi-tu-search-danh-ba">2. Tạo DM mới (từ search / danh bạ)<a class="headerlink" href="#2-tao-dm-moi-tu-search-danh-ba" title="Permanent link">&para;</a></h3>
+<pre><code>CommunicationConversationService.createConversationWithUser()
+  → push isPendingConversation: true
+    → ConversationChatBloc._onChatOpened()
+      → emit ConversationChatPending (hiện UI ngay)
+      → add ConversationChatEnsureInitialized
+        → _channelService.createConversation()
+          → BE API: POST /api/v1/get-stream/conversations  ✅ (idempotent)
+            → channel.watch()
+              → emit ConversationChatReady
+</code></pre>
+<h3 id="3-bam-vao-thong-bao-push-notification">3. Bấm vào thông báo push notification<a class="headerlink" href="#3-bam-vao-thong-bao-push-notification" title="Permanent link">&para;</a></h3>
+<pre><code>CommunicationNotificationHandler.handle()
+  → _openConversationFromUri(uri)
+    → _tryBuildChannelFromUri()   ← parse cid từ URL
+      → channel.watch()            ← SDK (không gọi BE)
+        → router.push(locationForChannelWithMessage(channel, messageId))
+          → StreamChannel(initialMessageId: messageId)  ← SDK scroll đúng vị trí
+</code></pre>
+<h3 id="4-mo-entity-chat-taskassignment-inspection">4. Mở entity chat (TaskAssignment, Inspection...)<a class="headerlink" href="#4-mo-entity-chat-taskassignment-inspection" title="Permanent link">&para;</a></h3>
+<pre><code>AbstractEntityChat._createChannelOrData()
+  → {getStreamRequest: 'TaskAssignment:123'}
+    → ConversationChatBloc._onChatOpened()
+      → resolveAndWatchChannel()
+        → _resolveConversationByRequest()
+          → BE API: GET /api/v1/get-stream/conversations?request=TaskAssignment:123
+            → nếu chưa có: BE API POST /api/v1/get-stream/conversations
+              → channel.watch()
+</code></pre>
+<hr />
+<h2 id="communicationconversationchatpage">CommunicationConversationChatPage<a class="headerlink" href="#communicationconversationchatpage" title="Permanent link">&para;</a></h2>
+<p><strong>File:</strong> <code>lib/pages/chat/communication_conversation_chat_page.dart</code></p>
+<h3 id="cac-phan-custom-so-voi-sdk-mac-inh">Các phần custom so với SDK mặc định<a class="headerlink" href="#cac-phan-custom-so-voi-sdk-mac-inh" title="Permanent link">&para;</a></h3>
+<h4 id="appbar">AppBar<a class="headerlink" href="#appbar" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Dùng <code>StreamChannelHeader</code> custom</strong> thay vì mặc định</li>
+<li>Hỗ trợ hiển thị ảnh relative URL từ BE (không phải http) qua <code>AppImage</code></li>
+<li>Hiển thị <code>StreamChannelName</code> + <code>StreamChannelInfo</code> (online status)</li>
+<li>Bot conversation: hiển thị <code>EnumStatusBadge</code> thay vì online status</li>
+<li>Nút <strong>Info</strong> (→ <code>CommunicationConversationDetailPage</code>)</li>
+<li><strong>Pending AppBar</strong> riêng khi channel chưa được tạo — hiển thị icon person/people</li>
+</ul>
+<h4 id="feedback-khi-nhan-tin-nhan-moi">Feedback khi nhận tin nhắn mới<a class="headerlink" href="#feedback-khi-nhan-tin-nhan-moi" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// Âm thanh (Telegram notification sound)
+_audioPlayer.play(AssetSource('sounds/telegram_notification.mp3'), volume: 0.5)
+
+// Haptic
+HapticFeedback.lightImpact()
+</code></pre>
+<ul>
+<li>Chỉ kích hoạt khi: tin nhắn từ người khác + channel không bị mute</li>
+</ul>
+<h4 id="tracking-trang-thai-ang-xem">Tracking trạng thái đang xem<a class="headerlink" href="#tracking-trang-thai-ang-xem" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>ActiveChatTracker</code></strong>: lưu <code>channelCid</code> đang xem → dùng để không hiện in-app notification khi user đang trong chat đó</li>
+<li><strong><code>ActiveNotificationTracker</code></strong>: dismiss notification đã hiển thị khi user mở đúng channel</li>
+</ul>
+<h4 id="pending-conversation-flow">Pending conversation flow<a class="headerlink" href="#pending-conversation-flow" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Khi gõ tin đầu tiên → chặn gửi → gọi BE tạo channel → sau đó mới gửi</li>
+<li>Tương tự khi mở attachment picker</li>
+</ul>
+<h4 id="optimization-tranh-redundant-work">Optimization (tránh redundant work)<a class="headerlink" href="#optimization-tranh-redundant-work" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>_subscribedChannelCid</code>: chỉ re-subscribe message events khi đổi channel</li>
+<li><code>_preloadedMetadataCid</code>: chỉ preload metadata 1 lần per channel</li>
+</ul>
+<hr />
+<h2 id="jiffysafemessagelistview">JiffySafeMessageListView<a class="headerlink" href="#jiffysafemessagelistview" title="Permanent link">&para;</a></h2>
+<p><strong>File:</strong> <code>lib/pages/chat/widgets/jiffy_safe_message_list_view.dart</code></p>
+<h3 id="cac-phan-custom">Các phần custom<a class="headerlink" href="#cac-phan-custom" title="Permanent link">&para;</a></h3>
+<h4 id="1-date-header-noi-floating-date">1. Date header nổi (floating date)<a class="headerlink" href="#1-date-header-noi-floating-date" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Overlay ở phía trên list, hiện khi scroll, tự ẩn sau 3 giây</li>
+<li>Debounce update: chỉ update 1 lần/frame (<code>addPostFrameCallback</code>)</li>
+<li>Format: "Hôm nay", "Hôm qua", ngày trong tuần, hoặc dd/MM/yyyy</li>
+</ul>
+<h4 id="2-scroll-to-bottom-button">2. Scroll to bottom button<a class="headerlink" href="#2-scroll-to-bottom-button" title="Permanent link">&para;</a></h4>
+<ul>
+<li>FAB nhỏ hiện khi <code>extentBefore &gt; 200px</code></li>
+<li>Scroll về index 0 (tin nhắn mới nhất)</li>
+</ul>
+<h4 id="3-double-tap-reaction">3. Double-tap reaction ❤️<a class="headerlink" href="#3-double-tap-reaction" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Double tap vào tin nhắn → toggle reaction <code>love</code></li>
+<li>Nếu đã có → xóa; nếu chưa → thêm</li>
+</ul>
+<h4 id="4-swipe-to-reply-_swipetoreply">4. Swipe to reply (<code>_SwipeToReply</code>)<a class="headerlink" href="#4-swipe-to-reply-_swipetoreply" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Vuốt trái → trigger reply (LTR layout)</li>
+<li>Trigger khi: kéo &gt; 72px hoặc velocity &gt; 650</li>
+<li>Animation: icon reply xuất hiện dần, tin nhắn dịch tối đa 10px</li>
+<li>Chỉ hiển thị icon reply cho tin nhắn của người khác</li>
+</ul>
+<h4 id="5-pin-unpin-message">5. Pin / Unpin message<a class="headerlink" href="#5-pin-unpin-message" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Custom action trong context menu (giữ tin nhắn)</li>
+<li>Toast notification khi thành công/thất bại</li>
+</ul>
+<h4 id="6-forward-message">6. Forward message<a class="headerlink" href="#6-forward-message" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Custom action trong context menu</li>
+<li>Mở search delegate để chọn channel đích</li>
+</ul>
+<h4 id="7-html-renderer">7. HTML renderer<a class="headerlink" href="#7-html-renderer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Detect HTML bằng regex <code>&lt;[a-zA-Z][^&gt;]*&gt;</code></li>
+<li>Render bằng <code>HtmlWidget</code> nếu có HTML, dùng text thuần nếu không</li>
+<li>Cache kết quả detect per <code>message.id</code> → tránh re-run regex</li>
+</ul>
+<h4 id="8-bot-message-handling">8. Bot message handling<a class="headerlink" href="#8-bot-message-handling" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Detect bot qua <code>channel.extraData['botId']</code> hoặc <code>user.extraData['isBot']</code></li>
+<li>Text: qua <code>resolveMessageText()</code> — có thể dịch/transform nội dung bot</li>
+<li>Tap: gọi <code>handleBotMessage()</code> thay vì default behavior</li>
+</ul>
+<h4 id="9-custom-attachment-builders">9. Custom attachment builders<a class="headerlink" href="#9-custom-attachment-builders" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Builder</th>
+<th>Mô tả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LocationAttachmentBuilder</code></td>
+<td>Hiển thị bản đồ/địa điểm</td>
+</tr>
+<tr>
+<td><code>PollAttachmentBuilder</code></td>
+<td>Hiển thị bình chọn</td>
+</tr>
+</tbody>
+</table>
+<h4 id="10-quoted-message-reply-preview">10. Quoted message (Reply preview)<a class="headerlink" href="#10-quoted-message-reply-preview" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>SupaQuotedMessageWidget</code> — UI custom cho tin nhắn được quote khi reply</li>
+</ul>
+<h4 id="11-mark-as-read">11. Mark as read<a class="headerlink" href="#11-mark-as-read" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tự động <code>channel.markRead()</code> khi vào chat</li>
+<li>Tự động mark read khi có tin nhắn mới (<code>EventType.messageNew</code>)</li>
+</ul>
+<h4 id="12-translated-username">12. Translated username<a class="headerlink" href="#12-translated-username" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>resolveUserName(user, context)</code> — dịch tên user theo locale hiện tại</li>
+</ul>
+<h4 id="13-full-screen-media-_jiffyguardedfullscreenmedia">13. Full-screen media (<code>_JiffyGuardedFullScreenMedia</code>)<a class="headerlink" href="#13-full-screen-media-_jiffyguardedfullscreenmedia" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Wrap <code>StreamFullScreenMediaBuilder</code> với Jiffy locale guard</li>
+<li>Tránh crash khi mở media trước khi Jiffy locale được init</li>
+</ul>
+<hr />
+<h2 id="customchatinput">CustomChatInput<a class="headerlink" href="#customchatinput" title="Permanent link">&para;</a></h2>
+<p><strong>File:</strong> <code>lib/widgets/custom_chat_input.dart</code></p>
+<p>Wrap <code>StreamMessageInput</code> với:</p>
+<ul>
+<li><code>preMessageSending</code>: callback trước khi gửi — dùng để ensure channel được tạo (pending flow)</li>
+<li><code>preAttachmentPickerOpen</code>: callback trước khi mở picker — tương tự</li>
+</ul>
+<hr />
+<h2 id="conversationchatbloc">ConversationChatBloc<a class="headerlink" href="#conversationchatbloc" title="Permanent link">&para;</a></h2>
+<p><strong>File:</strong> <code>lib/blocs/conversation_chat/conversation_chat_bloc.dart</code></p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Xử lý</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ConversationChatOpened</code></td>
+<td>Resolve channel từ nhiều loại data khác nhau</td>
+</tr>
+<tr>
+<td><code>ConversationChatEnsureInitialized</code></td>
+<td>Tạo pending channel qua BE, emit Ready</td>
+</tr>
+<tr>
+<td><code>ConversationChatRetryRequested</code></td>
+<td>Retry khi lỗi</td>
+</tr>
+<tr>
+<td><code>ConversationChatHighlightMessageRequested</code></td>
+<td>Cập nhật highlightMessageId trong state</td>
+</tr>
+<tr>
+<td><code>ConversationChatChannelInvalidated</code></td>
+<td>User bị kick hoặc channel bị xóa → về danh sách</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="messageopenerregistry">MessageOpenerRegistry<a class="headerlink" href="#messageopenerregistry" title="Permanent link">&para;</a></h2>
+<p><strong>File:</strong> <code>lib/message_openers/message_opener_registry.dart</code></p>
+<p>Pattern chain-of-responsibility: các module khác (TaskAssignment, Checklist...) có thể đăng ký <code>MessageOpener</code> riêng để override behavior mặc định khi tap vào channel.</p>
+<pre><code class="language-dart">// Đăng ký (trong module init)
+MessageOpenerRegistry.instance.register(TaskAssignmentMessageOpener());
+
+// Fallback mặc định (luôn xử lý)
+class DefaultMessageOpener implements MessageOpener {
+  bool canOpen(Channel channel) =&gt; true;  // Luôn true
+  Future&lt;void&gt; open(BuildContext context, Channel channel) async {
+    router.push(CommunicationConversationChatPage.locationForChannel(channel));
+  }
+}
+</code></pre>
+<hr />
+<h2 id="cac-file-lien-quan">Các file liên quan<a class="headerlink" href="#cac-file-lien-quan" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lib/pages/conversations/communication_conversations_page.dart</code></td>
+<td>Danh sách hội thoại, badge, filter chips</td>
+</tr>
+<tr>
+<td><code>lib/pages/chat/communication_conversation_chat_page.dart</code></td>
+<td>Trang chat chính</td>
+</tr>
+<tr>
+<td><code>lib/pages/chat/widgets/jiffy_safe_message_list_view.dart</code></td>
+<td>Message list có custom features</td>
+</tr>
+<tr>
+<td><code>lib/widgets/custom_chat_input.dart</code></td>
+<td>Input bar custom</td>
+</tr>
+<tr>
+<td><code>lib/blocs/conversation_chat/conversation_chat_bloc.dart</code></td>
+<td>State management cho chat page</td>
+</tr>
+<tr>
+<td><code>lib/services/conversation_channel_service.dart</code></td>
+<td>Resolve / tạo channel</td>
+</tr>
+<tr>
+<td><code>lib/services/communication_conversation_service.dart</code></td>
+<td>Navigation + tạo conversation</td>
+</tr>
+<tr>
+<td><code>lib/notification/communication_notification_handler.dart</code></td>
+<td>Xử lý bấm vào push notification</td>
+</tr>
+<tr>
+<td><code>lib/cubits/chat_client/communication_chat_client_cubit.dart</code></td>
+<td>Lifecycle StreamChatClient</td>
+</tr>
+<tr>
+<td><code>lib/message_openers/</code></td>
+<td>Registry pattern để mở channel</td>
+</tr>
+<tr>
+<td><code>lib/widgets/abstract_entity_chat.dart</code></td>
+<td>Base class cho entity chat (TaskAssignment...)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3447 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>UI Components - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ui-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI Components
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ui-components">UI Components<a class="headerlink" href="#ui-components" title="Permanent link">&para;</a></h1>
+<p>Tài liệu này cung cấp tổng quan về các UI components được sử dụng trong dự án SupaMobileApp. Dự án tuân theo các nguyên tắc của <strong>Atomic Design</strong> để tạo ra một thư viện component có thể mở rộng và dễ bảo trì.</p>
+<h2 id="cau-truc-atomic-design">Cấu trúc Atomic Design<a class="headerlink" href="#cau-truc-atomic-design" title="Permanent link">&para;</a></h2>
+<p>Các UI components được tổ chức theo các cấp độ sau của hệ thống phân cấp atomic design:</p>
+<ul>
+<li><strong>Atoms:</strong> Các khối xây dựng cơ bản của UI. Đây là các components nhỏ nhất, không thể chia nhỏ.</li>
+<li><strong>Molecules:</strong> Các nhóm đơn giản của atoms tạo thành các components phức tạp hơn.</li>
+<li><strong>Organisms:</strong> Các UI components phức tạp được tạo thành từ molecules và atoms.</li>
+<li><strong>Templates:</strong> Các đối tượng cấp page đặt components vào layout.</li>
+<li><strong>Pages:</strong> Các instance cụ thể của templates hiển thị những gì người dùng sẽ thấy.</li>
+</ul>
+<p>Các UI components có thể tái sử dụng được đặt trong thư mục <code>packages/supa_foundation/lib/widgets</code>.</p>
+<h2 id="component-library">Component Library<a class="headerlink" href="#component-library" title="Permanent link">&para;</a></h2>
+<h3 id="atoms">Atoms<a class="headerlink" href="#atoms" title="Permanent link">&para;</a></h3>
+<h4 id="appbadge">AppBadge<a class="headerlink" href="#appbadge" title="Permanent link">&para;</a></h4>
+<p>Badge để hiển thị thông báo hoặc số đếm. Tự động định dạng số đếm trên 99 thành "99+".</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppBadge({
+  super.key,
+  required this.count,
+  this.containerPadding = 0,
+  this.color,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>count</code> (num, required): Số đếm để hiển thị. Giá trị &gt;= 100 sẽ hiển thị là "99+".
+- <code>containerPadding</code> (double?, optional): Padding xung quanh container của badge. Mặc định: 0.
+- <code>color</code> (Color?, optional): Màu nền của badge. Mặc định: màu lỗi của theme.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppBadge(
+  count: 5,
+  color: Colors.blue,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Hiển thị số đếm thông báo, chỉ báo tin nhắn chưa đọc, hoặc số lượng items.</p>
+<hr />
+<h4 id="appbadgeicon">AppBadgeIcon<a class="headerlink" href="#appbadgeicon" title="Permanent link">&para;</a></h4>
+<p>Icon với badge overlay tùy chọn để hiển thị số đếm hoặc thông báo.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppBadgeIcon({
+  super.key,
+  required this.icon,
+  this.badgeCount,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>icon</code> (Widget, required): Widget icon để hiển thị.
+- <code>badgeCount</code> (int?, optional): Số đếm để hiển thị trong badge. null sẽ ẩn badge.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppBadgeIcon(
+  icon: Icon(Icons.notifications),
+  badgeCount: 5,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Icon navigation với số đếm thông báo, menu items với chỉ báo.</p>
+<hr />
+<h4 id="appfilledbutton">AppFilledButton<a class="headerlink" href="#appfilledbutton" title="Permanent link">&para;</a></h4>
+<p>Button filled với nhiều biến thể và styles. Hỗ trợ trạng thái loading, icons, và các loại button khác nhau.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">AppFilledButton({
+  super.key,
+  required this.onPressed,
+  this.isLoading = false,
+  this.child,
+  this.label = '',
+  this.style,
+  this.icon,
+  this.rounded = false,
+  this.isDisabled = false,
+  this.compactMode = false,
+  this.type = AppFilledButtonType.primary,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>onPressed</code> (VoidCallback, required): Callback khi button được nhấn.
+- <code>isLoading</code> (bool, optional): Hiển thị loading indicator. Mặc định: false.
+- <code>child</code> (Widget?, optional): Nội dung widget tùy chỉnh. Nếu được cung cấp, <code>label</code> sẽ bị bỏ qua.
+- <code>label</code> (String, optional): Text label của button. Mặc định: ''.
+- <code>style</code> (ButtonStyle?, optional): Style tùy chỉnh cho button.
+- <code>icon</code> (IconData?, optional): Icon để hiển thị trước label.
+- <code>rounded</code> (bool, optional): Sử dụng góc bo tròn. Mặc định: false.
+- <code>isDisabled</code> (bool, optional): Vô hiệu hóa button. Mặc định: false.
+- <code>compactMode</code> (bool, optional): Sử dụng kích thước compact. Mặc định: false.
+- <code>type</code> (AppFilledButtonType, optional): Biến thể loại button. Mặc định: primary.</p>
+<p><strong>Các loại Button:</strong>
+- <code>primary</code> - Button hành động chính
+- <code>secondary</code> - Hành động phụ
+- <code>tertiary</code> - Hành động bậc ba
+- <code>danger</code> - Các hành động phá hủy
+- <code>warning</code> - Các hành động cảnh báo
+- <code>success</code> - Các hành động thành công/xác nhận
+- <code>info</code> - Các hành động thông tin
+- <code>primaryContainer</code> - Biến thể primary container
+- <code>secondaryContainer</code> - Biến thể secondary container
+- <code>tertiaryContainer</code> - Biến thể tertiary container
+- <code>errorContainer</code> - Biến thể error container</p>
+<p><strong>Factory Constructors:</strong></p>
+<pre><code class="language-dart">AppFilledButton.primary({...})
+AppFilledButton.secondary({...})
+AppFilledButton.tertiary({...})
+AppFilledButton.danger({...})
+AppFilledButton.warning({...})
+AppFilledButton.success({...})
+AppFilledButton.info({...})
+</code></pre>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppFilledButton.primary(
+  label: 'Submit',
+  icon: Icons.check,
+  onPressed: () {
+    // Handle submit
+  },
+  isLoading: isSubmitting,
+)
+
+AppFilledButton.danger(
+  label: 'Delete',
+  onPressed: () {
+    // Handle delete
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Các hành động chính, submit form, xác nhận, hoặc bất kỳ hành động nào cần nhấn mạnh.</p>
+<hr />
+<h4 id="appnetworkimage">AppNetworkImage<a class="headerlink" href="#appnetworkimage" title="Permanent link">&para;</a></h4>
+<p>Widget hiển thị ảnh từ network với xử lý loading và lỗi.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppNetworkImage({
+  super.key,
+  required this.url,
+  this.fit = BoxFit.cover,
+  this.width,
+  this.height,
+  this.errorWidget,
+  this.placeholderWidget,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>url</code> (String, required): URL của ảnh cần load
+- <code>fit</code> (BoxFit, optional): Cách ghi ảnh vào không gian
+- <code>width</code> (double?, optional): Ràng buộc chiều rộng
+- <code>height</code> (double?, optional): Ràng buộc chiều cao
+- <code>errorWidget</code> (Widget?, optional): Widget hiển thị khi ảnh load thất bại
+- <code>placeholderWidget</code> (Widget?, optional): Widget hiển thị khi ảnh đang load</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppNetworkImage(
+  url: 'https://example.com/image.jpg',
+  fit: BoxFit.cover,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị ảnh từ nguồn network với các trạng thái loading phù hợp.</p>
+<hr />
+<h4 id="appnetworkimagefit">AppNetworkImageFit<a class="headerlink" href="#appnetworkimagefit" title="Permanent link">&para;</a></h4>
+<p>Widget hiển thị ảnh từ network tự động fit vào container với xử lý loading và lỗi.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppNetworkImageFit({
+  super.key,
+  required this.url,
+  this.fit = BoxFit.cover,
+  this.errorWidget,
+  this.placeholderWidget,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>url</code> (String, required): URL của ảnh cần load
+- <code>fit</code> (BoxFit, optional): Cách ghi ảnh vào không gian
+- <code>errorWidget</code> (Widget?, optional): Widget hiển thị khi ảnh load thất bại
+- <code>placeholderWidget</code> (Widget?, optional): Widget hiển thị khi ảnh đang load</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppNetworkImageFit(
+  url: 'https://example.com/image.jpg',
+  fit: BoxFit.cover,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị ảnh từ network cần tự động fit vào container.</p>
+<hr />
+<h4 id="appbarbottomborder">AppbarBottomBorder<a class="headerlink" href="#appbarbottomborder" title="Permanent link">&para;</a></h4>
+<p>Border dưới tùy chỉnh cho app bar để styling nhất quán.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppbarBottomBorder({
+  super.key,
+  this.borderWidth = 1.0,
+  this.borderColor,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>borderWidth</code> (double, optional): Độ rộng của border. Mặc định: 1.0
+- <code>borderColor</code> (Color?, optional): Màu của border. Mặc định: màu divider của theme</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppBar(
+  bottom: PreferredSize(
+    preferredSize: const Size.fromHeight(1.0),
+    child: AppbarBottomBorder(),
+  ),
+  ...
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Để thêm border dưới nhất quán cho các AppBar widgets.</p>
+<hr />
+<h4 id="customslider">CustomSlider<a class="headerlink" href="#customslider" title="Permanent link">&para;</a></h4>
+<p>Widget slider tùy chỉnh với styling và chức năng nâng cao.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">CustomSlider({
+  super.key,
+  required this.value,
+  required this.onChanged,
+  this.min = 0.0,
+  this.max = 1.0,
+  this.divisions,
+  this.activeColor,
+  this.inactiveColor,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>value</code> (double, required): Giá trị hiện tại của slider
+- <code>onChanged</code> (ValueChanged<double>, required): Được gọi khi người dùng thay đổi giá trị
+- <code>min</code> (double, optional): Giá trị tối thiểu. Mặc định: 0.0
+- <code>max</code> (double, optional): Giá trị tối đa. Mặc định: 1.0
+- <code>divisions</code> (int?, optional): Số lượng phân chia rời rạc
+- <code>activeColor</code> (Color?, optional): Màu của track đang active
+- <code>inactiveColor</code> (Color?, optional): Màu của track không active</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">CustomSlider(
+  value: _sliderValue,
+  onChanged: (value) {
+    setState(() {
+      _sliderValue = value;
+    });
+  },
+  min: 0,
+  max: 100,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi cần một slider với giao diện và chức năng tùy chỉnh.</p>
+<hr />
+<h4 id="dropdownchip">DropdownChip<a class="headerlink" href="#dropdownchip" title="Permanent link">&para;</a></h4>
+<p>Chip hiển thị label và mũi tên dropdown, thường được sử dụng cho filtering hoặc selection.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const DropdownChip({
+  super.key,
+  required this.label,
+  required this.isSelected,
+  required this.onTap,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>label</code> (String, required): Text để hiển thị trong chip.
+- <code>isSelected</code> (bool, required): Chip có đang ở trạng thái được chọn không.
+- <code>onTap</code> (VoidCallback, required): Callback khi chip được tap.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">DropdownChip(
+  label: 'Status',
+  isSelected: isStatusFilterActive,
+  onTap: () {
+    // Show filter options
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Filter chips, dropdown triggers, hoặc selection indicators.</p>
+<hr />
+<h4 id="elevatediconbutton">ElevatedIconButton<a class="headerlink" href="#elevatediconbutton" title="Permanent link">&para;</a></h4>
+<p>Button elevated với icon và text tùy chọn.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const ElevatedIconButton({
+  super.key,
+  required this.icon,
+  this.text,
+  required this.onPressed,
+  this.color,
+  this.borderColor,
+  this.textStyle,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>icon</code> (IconData, required): Icon để hiển thị
+- <code>text</code> (String?, optional): Text label tùy chọn
+- <code>onPressed</code> (VoidCallback?, required): Callback khi button được nhấn
+- <code>color</code> (Color?, optional): Màu nền của button
+- <code>borderColor</code> (Color?, optional): Màu border của button
+- <code>textStyle</code> (TextStyle?, optional): Style cho text label</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">ElevatedIconButton(
+  icon: Icons.add,
+  text: 'Add',
+  onPressed: () {
+    // Handle add action
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi cần một elevated button với icon và text tùy chọn.</p>
+<hr />
+<h4 id="ellipsistext">EllipsisText<a class="headerlink" href="#ellipsistext" title="Permanent link">&para;</a></h4>
+<p>Widget text cắt ngắn text dài với ellipsis và tooltip tùy chọn.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const EllipsisText({
+  super.key,
+  required this.data,
+  this.style,
+  this.tooltip,
+  this.maxLines = 1,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>data</code> (String, required): Text để hiển thị
+- <code>style</code> (TextStyle?, optional): Style cho text
+- <code>tooltip</code> (String?, optional): Tooltip để hiển thị khi text bị cắt ngắn
+- <code>maxLines</code> (int, optional): Số dòng tối đa. Mặc định: 1</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">EllipsisText(
+  data: 'This is a very long text that will be truncated',
+  tooltip: 'This is a very long text that will be truncated',
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị text có thể dài cần được cắt ngắn.</p>
+<hr />
+<h4 id="firstpageindicator">FirstPageIndicator<a class="headerlink" href="#firstpageindicator" title="Permanent link">&para;</a></h4>
+<p>Widget để chỉ báo nếu người dùng đang ở trang đầu tiên của danh sách.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const FirstPageIndicator({
+  super.key,
+  this.showIndicator = true,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>showIndicator</code> (bool, optional): Có hiển thị chỉ báo không. Mặc định: true</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">FirstPageIndicator(
+  showIndicator: true,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Để chỉ báo trang đầu tiên trong các danh sách có phân trang.</p>
+<hr />
+<h4 id="fullscreenimage">FullScreenImage<a class="headerlink" href="#fullscreenimage" title="Permanent link">&para;</a></h4>
+<p>Widget để hiển thị ảnh ở chế độ toàn màn hình với chức năng đóng.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const FullScreenImage({
+  super.key,
+  required this.imageUrl,
+  this.onClose,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>imageUrl</code> (String, required): URL của ảnh để hiển thị
+- <code>onClose</code> (VoidCallback?, optional): Callback khi ảnh được đóng</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">FullScreenImage(
+  imageUrl: 'https://example.com/image.jpg',
+  onClose: () {
+    Navigator.pop(context);
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị ảnh ở chế độ toàn màn hình để trải nghiệm xem tốt hơn.</p>
+<hr />
+<h4 id="genericbottomsheetselector">GenericBottomSheetSelector<a class="headerlink" href="#genericbottomsheetselector" title="Permanent link">&para;</a></h4>
+<p>Bottom sheet selector generic cho việc chọn một item.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const GenericBottomSheetSelector({
+  super.key,
+  required this.items,
+  required this.onSelected,
+  this.title = 'Select an option',
+  this.selectedId,
+  this.itemBuilder,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>items</code> (List<T>, required): Danh sách items để chọn
+- <code>onSelected</code> (Function(T), required): Callback khi item được chọn
+- <code>title</code> (String, optional): Tiêu đề cho bottom sheet. Mặc định: 'Select an option'
+- <code>selectedId</code> (dynamic, optional): ID của item hiện đang được chọn
+- <code>itemBuilder</code> (Widget Function(T)?, optional): Function để build widget item tùy chỉnh</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">GenericBottomSheetSelector&lt;String&gt;(
+  items: ['Option 1', 'Option 2', 'Option 3'],
+  title: 'Choose an option',
+  onSelected: (selected) {
+    print('Selected: $selected');
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi cần một bottom sheet selector cho việc chọn một item.</p>
+<hr />
+<h4 id="genericbottomsheetselectoriosstyle">GenericBottomSheetSelectorIosStyle<a class="headerlink" href="#genericbottomsheetselectoriosstyle" title="Permanent link">&para;</a></h4>
+<p>Bottom sheet selector generic kiểu iOS cho việc chọn một item.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const GenericBottomSheetSelectorIosStyle({
+  super.key,
+  required this.items,
+  required this.onSelected,
+  this.title = 'Select an option',
+  this.selectedId,
+  this.itemBuilder,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>items</code> (List<T>, required): Danh sách items để chọn
+- <code>onSelected</code> (Function(T), required): Callback khi item được chọn
+- <code>title</code> (String, optional): Tiêu đề cho bottom sheet. Mặc định: 'Select an option'
+- <code>selectedId</code> (dynamic, optional): ID của item hiện đang được chọn
+- <code>itemBuilder</code> (Widget Function(T)?, optional): Function để build widget item tùy chỉnh</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">GenericBottomSheetSelectorIosStyle&lt;String&gt;(
+  items: ['Option 1', 'Option 2', 'Option 3'],
+  title: 'Choose an option',
+  onSelected: (selected) {
+    print('Selected: $selected');
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi cần một bottom sheet selector kiểu iOS cho việc chọn một item.</p>
+<hr />
+<h4 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h4>
+<p>Trường nhập text có thể tùy chỉnh với label, xử lý lỗi, và nhiều tùy chọn styling.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const Input({
+  super.key,
+  required this.controller,
+  required this.label,
+  this.errorText,
+  this.isBorder = true,
+  this.paddingLeft = 0,
+  this.maxLines = 1,
+  this.onChanged,
+  this.readOnly = false,
+  this.keyboardType,
+  this.suffix,
+  this.textInputAction,
+  this.focusNode,
+  this.hintText,
+  this.isRequired,
+  this.onUpdate,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>controller</code> (TextEditingController, required): Controller cho text field.
+- <code>label</code> (String, required): Text label hiển thị phía trên input.
+- <code>errorText</code> (String?, optional): Thông báo lỗi hiển thị phía dưới input.
+- <code>isBorder</code> (bool, optional): Hiển thị border xung quanh input. Mặc định: true.
+- <code>paddingLeft</code> (double, optional): Padding trái cho input. Mặc định: 0.
+- <code>maxLines</code> (int?, optional): Số dòng tối đa. null cho không giới hạn. Mặc định: 1.
+- <code>onChanged</code> (Function(String)?, optional): Callback khi text thay đổi.
+- <code>readOnly</code> (bool, optional): Làm cho field chỉ đọc. Mặc định: false.
+- <code>keyboardType</code> (TextInputType?, optional): Loại bàn phím (email, number, etc.).
+- <code>suffix</code> (Widget?, optional): Widget suffix tùy chỉnh. Mặc định: nút clear khi có text.
+- <code>textInputAction</code> (TextInputAction?, optional): Nút hành động trên bàn phím.
+- <code>focusNode</code> (FocusNode?, optional): Focus node cho quản lý focus.
+- <code>hintText</code> (String?, optional): Text gợi ý. Mặc định: sử dụng label.
+- <code>isRequired</code> (bool?, optional): Hiển thị chỉ báo bắt buộc (*). Mặc định: null.
+- <code>onUpdate</code> (Function(String)?, optional): Callback khi field mất focus.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">final _controller = TextEditingController();
+
+Input(
+  controller: _controller,
+  label: 'Email',
+  keyboardType: TextInputType.emailAddress,
+  isRequired: true,
+  errorText: emailError,
+  onChanged: (value) {
+    // Handle text change
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Form inputs, text fields, search fields, hoặc bất kỳ nhu cầu nhập text nào.</p>
+<hr />
+<h4 id="lineitem">LineItem<a class="headerlink" href="#lineitem" title="Permanent link">&para;</a></h4>
+<p>Widget line item để hiển thị các items trong danh sách với styling nhất quán.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const LineItem({
+  super.key,
+  required this.child,
+  this.showTopBorder = false,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>child</code> (Widget, required): Widget con để hiển thị
+- <code>showTopBorder</code> (bool, optional): Có hiển thị border trên không. Mặc định: false</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">LineItem(
+  child: Text('Item content'),
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị các list items nhất quán với border tùy chọn.</p>
+<hr />
+<h4 id="linesingleselected">LineSingleSelected<a class="headerlink" href="#linesingleselected" title="Permanent link">&para;</a></h4>
+<p>Line item với dấu checkmark chỉ báo trạng thái được chọn.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const LineSingleSelected({
+  super.key,
+  required this.child,
+  this.isSelected = false,
+  this.showTopBorder = false,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>child</code> (Widget, required): Widget con để hiển thị
+- <code>isSelected</code> (bool, optional): Item có được chọn không. Mặc định: false
+- <code>showTopBorder</code> (bool, optional): Có hiển thị border trên không. Mặc định: false</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">LineSingleSelected(
+  child: Text('Item content'),
+  isSelected: true,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị các list items có thể chọn đơn với chỉ báo selection trực quan.</p>
+<hr />
+<h4 id="listtilewithbadge">ListTileWithBadge<a class="headerlink" href="#listtilewithbadge" title="Permanent link">&para;</a></h4>
+<p>List tile với badge để hiển thị thông báo hoặc số đếm.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const ListTileWithBadge({
+  super.key,
+  required this.title,
+  this.subtitle,
+  this.trailing,
+  this.badgeCount,
+  this.onTap,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>title</code> (Widget, required): Widget tiêu đề
+- <code>subtitle</code> (Widget?, optional): Widget phụ đề
+- <code>trailing</code> (Widget?, optional): Widget trailing
+- <code>badgeCount</code> (int?, optional): Số đếm để hiển thị trong badge
+- <code>onTap</code> (VoidCallback?, optional): Callback khi tile được tap</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">ListTileWithBadge(
+  title: Text('Messages'),
+  badgeCount: 5,
+  onTap: () {
+    // Handle tap
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị list tiles với notification badges.</p>
+<hr />
+<h4 id="moneytext">MoneyText<a class="headerlink" href="#moneytext" title="Permanent link">&para;</a></h4>
+<p>Widget để hiển thị giá trị tiền tệ với định dạng phù hợp.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const MoneyText({
+  super.key,
+  required this.amount,
+  required this.currency,
+  this.style,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>amount</code> (double, required): Số tiền để hiển thị
+- <code>currency</code> (String, required): Mã tiền tệ (ví dụ: USD, EUR)
+- <code>style</code> (TextStyle?, optional): Style cho text</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">MoneyText(
+  amount: 100.50,
+  currency: 'USD',
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị giá trị tiền tệ đã được định dạng.</p>
+<hr />
+<h4 id="multipleline">MultipleLine<a class="headerlink" href="#multipleline" title="Permanent link">&para;</a></h4>
+<p>Widget để hiển thị nhiều dòng text với styling nhất quán.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const MultipleLine({
+  super.key,
+  required this.children,
+  this.mainAxisAlignment = MainAxisAlignment.start,
+  this.crossAxisAlignment = CrossAxisAlignment.start,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>children</code> (List<Widget>, required): Danh sách các widget con
+- <code>mainAxisAlignment</code> (MainAxisAlignment, optional): Căn chỉnh trục chính. Mặc định: start
+- <code>crossAxisAlignment</code> (CrossAxisAlignment, optional): Căn chỉnh trục phụ. Mặc định: start</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">MultipleLine(
+  children: [
+    Text('Line 1'),
+    Text('Line 2'),
+  ],
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị nhiều dòng text với căn chỉnh nhất quán.</p>
+<hr />
+<h4 id="percentagebadge">PercentageBadge<a class="headerlink" href="#percentagebadge" title="Permanent link">&para;</a></h4>
+<p>Widget badge để hiển thị giá trị phần trăm.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const PercentageBadge({
+  super.key,
+  required this.percentage,
+  this.backgroundColor,
+  this.textColor,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>percentage</code> (double, required): Giá trị phần trăm để hiển thị
+- <code>backgroundColor</code> (Color?, optional): Màu nền của badge
+- <code>textColor</code> (Color?, optional): Màu text</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">PercentageBadge(
+  percentage: 75.5,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị giá trị phần trăm ở định dạng badge.</p>
+<hr />
+<h4 id="selectchip">SelectChip<a class="headerlink" href="#selectchip" title="Permanent link">&para;</a></h4>
+<p>Chip có thể được chọn/bỏ chọn với styling phù hợp.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const SelectChip({
+  super.key,
+  required this.label,
+  required this.isSelected,
+  required this.onPressed,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>label</code> (String, required): Text để hiển thị trong chip
+- <code>isSelected</code> (bool, required): Chip có đang được chọn không
+- <code>onPressed</code> (VoidCallback, required): Callback khi chip được nhấn</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">SelectChip(
+  label: 'Option',
+  isSelected: true,
+  onPressed: () {
+    // Handle selection
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi implement filter chips hoặc các tùy chọn selection.</p>
+<hr />
+<h4 id="supalogo">SupaLogo<a class="headerlink" href="#supalogo" title="Permanent link">&para;</a></h4>
+<p>Widget hiển thị logo Supa với kích thước có thể cấu hình.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const SupaLogo({
+  super.key,
+  this.size = 100,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>size</code> (double, optional): Kích thước của logo. Mặc định: 100</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">SupaLogo(
+  size: 150,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị logo Supa trong ứng dụng.</p>
+<hr />
+<h4 id="videothumbnail">VideoThumbnail<a class="headerlink" href="#videothumbnail" title="Permanent link">&para;</a></h4>
+<p>Widget hiển thị thumbnail video với overlay nút play.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const VideoThumbnail({
+  super.key,
+  required this.url,
+  this.width,
+  this.height,
+  this.onTap,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>url</code> (String, required): URL của video
+- <code>width</code> (double?, optional): Chiều rộng của thumbnail
+- <code>height</code> (double?, optional): Chiều cao của thumbnail
+- <code>onTap</code> (VoidCallback?, optional): Callback khi thumbnail được tap</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">VideoThumbnail(
+  url: 'https://example.com/video.mp4',
+  width: 200,
+  height: 150,
+  onTap: () {
+    // Play video
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị video thumbnails với chỉ báo play.</p>
+<hr />
+<h3 id="molecules">Molecules<a class="headerlink" href="#molecules" title="Permanent link">&para;</a></h3>
+<h4 id="actionline">ActionLine<a class="headerlink" href="#actionline" title="Permanent link">&para;</a></h4>
+<p>Hàng có thể tap với label và widget con tùy chọn, thường được sử dụng cho navigation hoặc actions.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const ActionLine({
+  super.key,
+  required this.label,
+  this.child,
+  this.onTap,
+  this.showTopBorder = false,
+  this.disabled = false,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>label</code> (String, required): Text label ở phía bên trái.
+- <code>child</code> (Widget?, optional): Widget để hiển thị ở phía bên phải.
+- <code>onTap</code> (VoidCallback?, optional): Callback khi hàng được tap.
+- <code>showTopBorder</code> (bool, optional): Hiển thị border trên. Mặc định: false.
+- <code>disabled</code> (bool, optional): Vô hiệu hóa action line. Mặc định: false.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">ActionLine(
+  label: 'Settings',
+  child: Switch(
+    value: isEnabled,
+    onChanged: (value) {},
+  ),
+  onTap: () {
+    // Navigate to settings
+  },
+)
+
+ActionLine(
+  label: 'Profile',
+  onTap: () {
+    // Navigate to profile
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Danh sách settings, navigation items, các tùy chọn có thể toggle, hoặc bất kỳ hành động dựa trên hàng nào.</p>
+<hr />
+<h4 id="appbarsearchfield">AppBarSearchField<a class="headerlink" href="#appbarsearchfield" title="Permanent link">&para;</a></h4>
+<p>Widget search field phù hợp để sử dụng trong app bars.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppBarSearchField({
+  super.key,
+  required this.controller,
+  required this.onChanged,
+  this.onSubmitted,
+  this.hintText = 'Search...',
+  this.onCancel,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>controller</code> (TextEditingController, required): Controller cho search field
+- <code>onChanged</code> (Function(String), required): Được gọi khi search text thay đổi
+- <code>onSubmitted</code> (Function(String)?, optional): Được gọi khi search được submit
+- <code>hintText</code> (String, optional): Text gợi ý cho search field. Mặc định: 'Search...'
+- <code>onCancel</code> (VoidCallback?, optional): Được gọi khi search bị hủy</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppBarSearchField(
+  controller: _searchController,
+  onChanged: (value) {
+    // Update search results
+  },
+  onCancel: () {
+    setState(() {
+      _searchController.clear();
+    });
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi implement chức năng search trong app bars.</p>
+<hr />
+<h4 id="appbartitle">AppBarTitle<a class="headerlink" href="#appbartitle" title="Permanent link">&para;</a></h4>
+<p>Widget tiêu đề app bar có style với typography nhất quán.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppBarTitle({
+  super.key,
+  required this.title,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>title</code> (String, required): Text tiêu đề để hiển thị</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppBar(
+  title: AppBarTitle(title: 'My Page'),
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị tiêu đề app bar nhất quán trong toàn bộ ứng dụng.</p>
+<hr />
+<h4 id="appcircleavatar">AppCircleAvatar<a class="headerlink" href="#appcircleavatar" title="Permanent link">&para;</a></h4>
+<p>Widget avatar tròn với khả năng load ảnh và fallback.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppCircleAvatar({
+  super.key,
+  this.imageUrl,
+  this.name,
+  this.radius = 20,
+  this.backgroundColor,
+  this.foregroundColor,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>imageUrl</code> (String?, optional): URL của ảnh avatar
+- <code>name</code> (String?, optional): Tên để sử dụng cho initials fallback
+- <code>radius</code> (double, optional): Bán kính của hình tròn. Mặc định: 20
+- <code>backgroundColor</code> (Color?, optional): Màu nền khi không có ảnh
+- <code>foregroundColor</code> (Color?, optional): Màu text cho initials</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppCircleAvatar(
+  imageUrl: 'https://example.com/avatar.jpg',
+  name: 'John Doe',
+  radius: 25,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị user avatars với styling tròn nhất quán.</p>
+<hr />
+<h4 id="appdrawerbutton">AppDrawerButton<a class="headerlink" href="#appdrawerbutton" title="Permanent link">&para;</a></h4>
+<p>Widget button được thiết kế để sử dụng trong app drawers với styling nhất quán.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppDrawerButton({
+  super.key,
+  required this.text,
+  required this.onPressed,
+  required this.icon,
+  this.isSelected = false,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>text</code> (String, required): Text để hiển thị trên button
+- <code>onPressed</code> (VoidCallback, required): Callback khi button được nhấn
+- <code>icon</code> (IconData, required): Icon để hiển thị trên button
+- <code>isSelected</code> (bool, optional): Button có đang được chọn không. Mặc định: false</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppDrawerButton(
+  text: 'Home',
+  icon: Icons.home,
+  isSelected: true,
+  onPressed: () {
+    // Navigate to home
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi tạo các navigation buttons trong app drawers.</p>
+<hr />
+<h4 id="appuseravatar">AppUserAvatar<a class="headerlink" href="#appuseravatar" title="Permanent link">&para;</a></h4>
+<p>Widget user avatar với khả năng load ảnh và fallback cho users.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const AppUserAvatar({
+  super.key,
+  this.imageUrl,
+  this.name,
+  this.size = 40,
+  this.backgroundColor,
+  this.foregroundColor,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>imageUrl</code> (String?, optional): URL của ảnh avatar của user
+- <code>name</code> (String?, optional): Tên của user cho initials fallback
+- <code>size</code> (double, optional): Kích thước của avatar. Mặc định: 40
+- <code>backgroundColor</code> (Color?, optional): Màu nền khi không có ảnh
+- <code>foregroundColor</code> (Color?, optional): Màu text cho initials</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">AppUserAvatar(
+  imageUrl: 'https://example.com/user.jpg',
+  name: 'John Doe',
+  size: 50,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị user avatars với styling nhất quán.</p>
+<hr />
+<h4 id="dataline">DataLine<a class="headerlink" href="#dataline" title="Permanent link">&para;</a></h4>
+<p>Hàng để hiển thị label và giá trị tương ứng, thường được sử dụng trong detail views.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const DataLine({
+  super.key,
+  required this.label,
+  this.labelStyle,
+  this.value,
+  this.child,
+  this.crossAxisAlignment = CrossAxisAlignment.start,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>label</code> (String, required): Text label ở bên trái.
+- <code>labelStyle</code> (TextStyle?, optional): Style tùy chỉnh cho label.
+- <code>value</code> (String?, optional): Text giá trị để hiển thị. Phải cung cấp <code>value</code> hoặc <code>child</code>.
+- <code>child</code> (Widget?, optional): Widget tùy chỉnh cho giá trị. Phải cung cấp <code>value</code> hoặc <code>child</code>.
+- <code>crossAxisAlignment</code> (CrossAxisAlignment, optional): Căn chỉnh trục phụ. Mặc định: start.</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">DataLine(
+  label: 'Email',
+  value: 'user@example.com',
+)
+
+DataLine(
+  label: 'Status',
+  child: Chip(label: Text('Active')),
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Detail pages, hiển thị thông tin, profile views, hoặc bất kỳ cặp label-value nào.</p>
+<hr />
+<h4 id="expansion">Expansion<a class="headerlink" href="#expansion" title="Permanent link">&para;</a></h4>
+<p>Widget expansion panel với header và body content.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const Expansion({
+  super.key,
+  required this.header,
+  required this.body,
+  this.initiallyExpanded = false,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>header</code> (Widget, required): Widget để sử dụng làm expansion header
+- <code>body</code> (Widget, required): Widget để sử dụng làm expansion body
+- <code>initiallyExpanded</code> (bool, optional): Expansion có được mở rộng ban đầu không. Mặc định: false</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">Expansion(
+  header: Text('More Information'),
+  body: Text('Detailed information here...'),
+  initiallyExpanded: true,
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi cung cấp các sections có thể thu gọn với thông tin chi tiết.</p>
+<hr />
+<h4 id="filelistwidget">FileListWidget<a class="headerlink" href="#filelistwidget" title="Permanent link">&para;</a></h4>
+<p>Widget để hiển thị danh sách files với các tùy chọn download/view.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const FileListWidget({
+  super.key,
+  required this.files,
+  this.onFileTap,
+  this.showTitle = true,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>files</code> (List<FileModel>, required): Danh sách files để hiển thị
+- <code>onFileTap</code> (Function(FileModel)?, optional): Callback khi một file được tap
+- <code>showTitle</code> (bool, optional): Có hiển thị tiêu đề 'Attachments' không. Mặc định: true</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">FileListWidget(
+  files: fileList,
+  onFileTap: (file) {
+    // Handle file tap
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị danh sách files với các hành động liên quan.</p>
+<hr />
+<h4 id="multipleselectchip">MultipleSelectChip<a class="headerlink" href="#multipleselectchip" title="Permanent link">&para;</a></h4>
+<p>Chip hiển thị các tùy chọn đã chọn, thường được sử dụng cho multi-select filters.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const MultipleSelectChip({
+  super.key,
+  required this.selectedOptions,
+  required this.defaultLabel,
+  required this.isSelected,
+  required this.onTap,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>selectedOptions</code> (List<String>, required): Danh sách labels của các tùy chọn đã chọn.
+- <code>defaultLabel</code> (String, required): Label để hiển thị khi không có tùy chọn nào được chọn.
+- <code>isSelected</code> (bool, required): Filter có đang active không.
+- <code>onTap</code> (VoidCallback, required): Callback khi chip được tap.</p>
+<p><strong>Logic hiển thị:</strong>
+- Không có selection: Hiển thị <code>defaultLabel</code>
+- Một selection: Hiển thị tùy chọn đã chọn
+- Nhiều selections: Hiển thị tùy chọn đầu tiên + định dạng "(+N)"</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">MultipleSelectChip(
+  selectedOptions: ['Active', 'Pending'],
+  defaultLabel: 'All Statuses',
+  isSelected: true,
+  onTap: () {
+    // Show multi-select modal
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Multi-select filters, tag selectors, hoặc category filters.</p>
+<hr />
+<h4 id="profilebutton">ProfileButton<a class="headerlink" href="#profilebutton" title="Permanent link">&para;</a></h4>
+<p>Widget button hiển thị thông tin user profile.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const ProfileButton({
+  super.key,
+  required this.name,
+  required this.email,
+  this.avatarUrl,
+  this.onPressed,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>name</code> (String, required): Tên của user
+- <code>email</code> (String, required): Email của user
+- <code>avatarUrl</code> (String?, optional): URL của ảnh avatar của user
+- <code>onPressed</code> (VoidCallback?, optional): Callback khi button được nhấn</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">ProfileButton(
+  name: 'John Doe',
+  email: 'john@example.com',
+  avatarUrl: 'https://example.com/avatar.jpg',
+  onPressed: () {
+    // Navigate to profile
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị thông tin user profile ở định dạng button.</p>
+<hr />
+<h4 id="settingtile">SettingTile<a class="headerlink" href="#settingtile" title="Permanent link">&para;</a></h4>
+<p>Widget tile cho settings với styling nhất quán và switch tùy chọn.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const SettingTile({
+  super.key,
+  required this.title,
+  this.subtitle,
+  this.trailing,
+  this.onTap,
+  this.showTopBorder = false,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>title</code> (String, required): Tiêu đề của setting
+- <code>subtitle</code> (String?, optional): Phụ đề tùy chọn
+- <code>trailing</code> (Widget?, optional): Widget để hiển thị ở cuối (ví dụ: switch)
+- <code>onTap</code> (VoidCallback?, optional): Callback khi tile được tap
+- <code>showTopBorder</code> (bool, optional): Có hiển thị border trên không. Mặc định: false</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">SettingTile(
+  title: 'Notifications',
+  subtitle: 'Allow notifications',
+  trailing: Switch(value: _notificationsEnabled, onChanged: _toggleNotifications),
+  onTap: () {
+    // Handle tap if no switch
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị settings với styling nhất quán.</p>
+<hr />
+<h4 id="tenantselectionitem">TenantSelectionItem<a class="headerlink" href="#tenantselectionitem" title="Permanent link">&para;</a></h4>
+<p>Widget để hiển thị một tenant trong màn hình chọn tenant.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const TenantSelectionItem({
+  super.key,
+  required this.tenant,
+  required this.onTap,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>tenant</code> (Tenant, required): Tenant để hiển thị
+- <code>onTap</code> (VoidCallback, required): Callback khi item được tap</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">TenantSelectionItem(
+  tenant: selectedTenant,
+  onTap: () {
+    // Handle tenant selection
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị các tùy chọn tenant trong màn hình chọn tenant.</p>
+<hr />
+<h4 id="userbutton">UserButton<a class="headerlink" href="#userbutton" title="Permanent link">&para;</a></h4>
+<p>Widget button hiển thị thông tin user với avatar tùy chọn.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const UserButton({
+  super.key,
+  required this.name,
+  required this.email,
+  this.avatarUrl,
+  this.onPressed,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>name</code> (String, required): Tên của user
+- <code>email</code> (String, required): Email của user
+- <code>avatarUrl</code> (String?, optional): URL của ảnh avatar của user
+- <code>onPressed</code> (VoidCallback?, optional): Callback khi button được nhấn</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">UserButton(
+  name: 'John Doe',
+  email: 'john@example.com',
+  avatarUrl: 'https://example.com/avatar.jpg',
+  onPressed: () {
+    // Handle user button tap
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi hiển thị thông tin user ở định dạng button.</p>
+<hr />
+<h3 id="organisms">Organisms<a class="headerlink" href="#organisms" title="Permanent link">&para;</a></h3>
+<h4 id="containercard">ContainerCard<a class="headerlink" href="#containercard" title="Permanent link">&para;</a></h4>
+<p>Widget container với styling nhất quán để nhóm nội dung liên quan.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const ContainerCard({
+  super.key,
+  required this.child,
+  this.padding = const EdgeInsets.all(16),
+  this.margin = const EdgeInsets.all(8),
+  this.decoration,
+  this.clipBehavior = Clip.none,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>child</code> (Widget, required): Widget con để hiển thị bên trong container
+- <code>padding</code> (EdgeInsetsGeometry, optional): Padding bên trong container. Mặc định: all(16)
+- <code>margin</code> (EdgeInsetsGeometry, optional): Margin bên ngoài container. Mặc định: all(8)
+- <code>decoration</code> (BoxDecoration?, optional): Decoration cho container
+- <code>clipBehavior</code> (Clip, optional): Hành vi clip của container. Mặc định: none</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">ContainerCard(
+  child: Text('Content'),
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi nhóm nội dung liên quan với styling nhất quán.</p>
+<hr />
+<h4 id="datefilterbottomsheet">DateFilterBottomSheet<a class="headerlink" href="#datefilterbottomsheet" title="Permanent link">&para;</a></h4>
+<p>Bottom sheet để chọn date filters.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const DateFilterBottomSheet({
+  super.key,
+  required this.onDateSelected,
+  this.initialDate,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>onDateSelected</code> (Function(DateTime), required): Callback khi một ngày được chọn
+- <code>initialDate</code> (DateTime?, optional): Ngày ban đầu để hiển thị</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">DateFilterBottomSheet(
+  onDateSelected: (date) {
+    print('Selected date: $date');
+  },
+  initialDate: DateTime.now(),
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi chọn ngày trong giao diện bottom sheet.</p>
+<hr />
+<h4 id="daterangecustomsheet">DateRangeCustomSheet<a class="headerlink" href="#daterangecustomsheet" title="Permanent link">&para;</a></h4>
+<p>Bottom sheet tùy chỉnh để chọn date ranges.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const DateRangeCustomSheet({
+  super.key,
+  required this.onDateRangeSelected,
+  this.initialStartDate,
+  this.initialEndDate,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>onDateRangeSelected</code> (Function(DateTimeRange), required): Callback khi date range được chọn
+- <code>initialStartDate</code> (DateTime?, optional): Ngày bắt đầu ban đầu
+- <code>initialEndDate</code> (DateTime?, optional): Ngày kết thúc ban đầu</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">DateRangeCustomSheet(
+  onDateRangeSelected: (dateRange) {
+    print('Selected range: ${dateRange.start} to ${dateRange.end}');
+  },
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi chọn date ranges trong bottom sheet tùy chỉnh.</p>
+<hr />
+<h4 id="daterangefiltercustomsheet">DateRangeFilterCustomSheet<a class="headerlink" href="#daterangefiltercustomsheet" title="Permanent link">&para;</a></h4>
+<p>Bottom sheet tùy chỉnh đặc biệt cho date range filtering.</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const DateRangeFilterCustomSheet({
+  super.key,
+  required this.onApply,
+  this.initialDateRange,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>onApply</code> (Function(DateTimeRange), required): Callback khi range được áp dụng
+- <code>initialDateRange</code> (DateTimeRange?, optional): Date range ban đầu để hiển thị</p>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">DateRangeFilterCustomSheet(
+  onApply: (dateRange) {
+    // Apply the selected date range
+  },
+  initialDateRange: DateTimeRange(start: DateTime.now(), end: DateTime.now().add(Duration(days: 7))),
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Khi implement date range filtering trong bottom sheet tùy chỉnh.</p>
+<hr />
+<h4 id="genericfilterwidget">GenericFilterWidget<a class="headerlink" href="#genericfilterwidget" title="Permanent link">&para;</a></h4>
+<p>Widget có thể cuộn ngang để hiển thị nhiều filter chips (cả ID filters và date filters).</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">const GenericFilterWidget({
+  super.key,
+  required this.filters,
+  this.padding = const EdgeInsets.only(left: 16, right: 16, top: 8),
+  this.spacing = 8.0,
+});
+</code></pre>
+<p><strong>Tham số:</strong>
+- <code>filters</code> (List<FilterItem>, required): Danh sách filter items để hiển thị.
+- <code>padding</code> (EdgeInsetsGeometry?, optional): Padding cho scroll view.
+- <code>spacing</code> (double, optional): Khoảng cách giữa các filter chips. Mặc định: 8.0.</p>
+<p><strong>Các loại FilterItem:</strong></p>
+<ol>
+<li><strong>IdFilterItem</strong> - Cho multiple selection filters:</li>
+</ol>
+<pre><code class="language-dart">IdFilterItem(
+  selectedOptions: ['Option1', 'Option2'],
+  defaultLabel: 'All Options',
+  onTap: (context) {
+    // Show multi-select modal
+  },
+  isSelected: true,
+)
+</code></pre>
+<ol>
+<li><strong>DateFilterItem</strong> - Cho date range filters:</li>
+</ol>
+<pre><code class="language-dart">DateFilterItem(
+  label: 'Last 7 days',
+  onTap: (context) {
+    // Show date picker
+  },
+  isSelected: true,
+)
+</code></pre>
+<p><strong>Helper Builder:</strong></p>
+<pre><code class="language-dart">FilterItemBuilder.createIdFilter(
+  selectedOptions: selectedStatuses,
+  defaultLabel: 'All Statuses',
+  onTap: (context) =&gt; showStatusFilter(context),
+  isSelected: selectedStatuses.isNotEmpty,
+)
+
+FilterItemBuilder.createDateFilter(
+  label: formatDateRange(startDate, endDate),
+  onTap: (context) =&gt; showDatePicker(context),
+  isSelected: startDate != null,
+)
+</code></pre>
+<p><strong>Ví dụ:</strong></p>
+<pre><code class="language-dart">GenericFilterWidget(
+  filters: [
+    FilterItemBuilder.createIdFilter(
+      selectedOptions: selectedStatuses,
+      defaultLabel: 'All Statuses',
+      onTap: (context) =&gt; showStatusFilter(context),
+      isSelected: selectedStatuses.isNotEmpty,
+    ),
+    FilterItemBuilder.createDateFilter(
+      label: 'Date Range',
+      onTap: (context) =&gt; showDateRangePicker(context),
+      isSelected: dateRange != null,
+    ),
+  ],
+)
+</code></pre>
+<p><strong>Khi nào sử dụng:</strong> Filter bars, giao diện search, hoặc bất kỳ tình huống nào yêu cầu nhiều tùy chọn filter.</p>
+<hr />
+<h4 id="informationalbadge">InformationalBadge<a class="headerlink" href="#informationalbadge" title="Permanent link">&para;</a></h4>
+<p>A badge widget for displaying informational messages.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const InformationalBadge({
+  super.key,
+  required this.title,
+  required this.description,
+  this.backgroundColor,
+  this.foregroundColor,
+  this.icon,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>title</code> (String, required): Title of the informational badge
+- <code>description</code> (String, required): Description of the informational message
+- <code>backgroundColor</code> (Color?, optional): Background color of the badge
+- <code>foregroundColor</code> (Color?, optional): Foreground color of the badge
+- <code>icon</code> (Widget?, optional): Icon to display</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">InformationalBadge(
+  title: 'Information',
+  description: 'This is an informational message',
+)
+</code></pre>
+<p><strong>When to use:</strong> When displaying informational messages with consistent styling.</p>
+<hr />
+<h4 id="mediaviewhorizontal">MediaViewHorizontal<a class="headerlink" href="#mediaviewhorizontal" title="Permanent link">&para;</a></h4>
+<p>A widget for displaying media files horizontally with navigation.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MediaViewHorizontal({
+  super.key,
+  required this.files,
+  this.initialIndex = 0,
+  this.onFileTap,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>files</code> (List<MediaFile>, required): List of media files to display
+- <code>initialIndex</code> (int, optional): Index of the initially displayed file. Default: 0
+- <code>onFileTap</code> (Function(MediaFile)?, optional): Callback when a file is tapped</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">MediaViewHorizontal(
+  files: mediaFiles,
+  initialIndex: 1,
+  onFileTap: (file) {
+    // Handle file tap
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When displaying media files in a horizontal scrolling view.</p>
+<hr />
+<h4 id="mediaviewwidget">MediaViewWidget<a class="headerlink" href="#mediaviewwidget" title="Permanent link">&para;</a></h4>
+<p>A widget for displaying media files with navigation controls.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MediaViewWidget({
+  super.key,
+  required this.files,
+  this.initialIndex = 0,
+  this.onFileTap,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>files</code> (List<MediaFile>, required): List of media files to display
+- <code>initialIndex</code> (int, optional): Index of the initially displayed file. Default: 0
+- <code>onFileTap</code> (Function(MediaFile)?, optional): Callback when a file is tapped</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">MediaViewWidget(
+  files: mediaFiles,
+  initialIndex: 1,
+  onFileTap: (file) {
+    // Handle file tap
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When displaying media files with navigation controls.</p>
+<hr />
+<h4 id="multiselectionmodal">MultiSelectionModal<a class="headerlink" href="#multiselectionmodal" title="Permanent link">&para;</a></h4>
+<p>A bottom sheet modal for selecting multiple items from a list.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MultiSelectionModal({
+  super.key,
+  required this.title,
+  required this.items,
+  required this.selectedItems,
+  required this.getId,
+  required this.getName,
+  required this.onSelect,
+  this.getSubtitle,
+  this.getLeading,
+  this.getTrailing,
+  this.getEnabled,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>title</code> (String, required): Modal title
+- <code>items</code> (List<T>, required): List of items to select from
+- <code>selectedItems</code> (List<dynamic>, required): List of currently selected item IDs
+- <code>getId</code> (dynamic Function(T), required): Function to get item ID
+- <code>getName</code> (String Function(T), required): Function to get item display name
+- <code>onSelect</code> (Function(List<dynamic>), required): Callback when selection is changed
+- <code>getSubtitle</code> (String? Function(T)?, optional): Function to get item subtitle
+- <code>getLeading</code> (Widget? Function(T)?, optional): Function to get leading widget
+- <code>getTrailing</code> (Widget? Function(T)?, optional): Function to get trailing widget
+- <code>getEnabled</code> (bool Function(T)?, optional): Function to determine if item is enabled</p>
+<p><strong>Static Method:</strong></p>
+<pre><code class="language-dart">MultiSelectionModal.show&lt;T&gt;({
+  required BuildContext context,
+  required String title,
+  required List&lt;T&gt; items,
+  required List&lt;dynamic&gt; selectedItems,
+  required dynamic Function(T) getId,
+  required String Function(T) getName,
+  required Function(List&lt;dynamic&gt;) onSelect,
+  String? Function(T)? getSubtitle,
+  Widget? Function(T)? getLeading,
+  Widget? Function(T)? getTrailing,
+  bool Function(T)? getEnabled,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">MultiSelectionModal.show&lt;User&gt;(
+  context: context,
+  title: 'Select Users',
+  items: users,
+  selectedItems: selectedUserIds,
+  getId: (user) =&gt; user.id,
+  getName: (user) =&gt; user.name,
+  onSelect: (selectedIds) {
+    setState(() {
+      selectedUserIds = selectedIds;
+    });
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> Multiple selection from a list, multi-select filters, or multi-picker modals.</p>
+<hr />
+<h4 id="multiselectionsearchmodal">MultiSelectionSearchModal<a class="headerlink" href="#multiselectionsearchmodal" title="Permanent link">&para;</a></h4>
+<p>A bottom sheet modal with search functionality for selecting multiple items.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MultiSelectionSearchModal({
+  super.key,
+  required this.items,
+  required this.selectedItems,
+  required this.getId,
+  required this.getName,
+  required this.onSelect,
+  required this.fetchData,
+  this.getSubtitle,
+  this.getLeading,
+  this.getTrailing,
+  this.getEnabled,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- All parameters from <code>MultiSelectionModal</code> plus:
+- <code>fetchData</code> (Future<List\<T>> Function(String query), required): Function to fetch/search items based on query.</p>
+<p><strong>Static Method:</strong></p>
+<pre><code class="language-dart">MultiSelectionSearchModal.show&lt;T&gt;({
+  required BuildContext context,
+  required List&lt;T&gt; items,
+  required List&lt;dynamic&gt; selectedItems,
+  required dynamic Function(T) getId,
+  required String Function(T) getName,
+  required Function(List&lt;dynamic&gt;) onSelect,
+  required Future&lt;List&lt;T&gt;&gt; Function(String query) fetchData,
+  String? Function(T)? getSubtitle,
+  Widget? Function(T)? getLeading,
+  Widget? Function(T)? getTrailing,
+  bool Function(T)? getEnabled,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">MultiSelectionSearchModal.show&lt;User&gt;(
+  context: context,
+  items: initialUsers,
+  selectedItems: selectedUserIds,
+  getId: (user) =&gt; user.id,
+  getName: (user) =&gt; user.name,
+  onSelect: (selectedIds) {
+    // Handle selection
+  },
+  fetchData: (query) async {
+    return await userRepository.searchUsers(query);
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> Large lists requiring search for multiple selection, dynamic filtering, or remote data multiple selection.</p>
+<hr />
+<h4 id="selectionmodal">SelectionModal<a class="headerlink" href="#selectionmodal" title="Permanent link">&para;</a></h4>
+<p>A bottom sheet modal for selecting a single item from a list.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const SelectionModal({
+  super.key,
+  required this.title,
+  required this.items,
+  required this.selectedId,
+  required this.getId,
+  required this.getName,
+  required this.onSelect,
+  this.getSubtitle,
+  this.getLeading,
+  this.getTrailing,
+  this.getEnabled,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>title</code> (String, required): Modal title.
+- <code>items</code> (List<T>, required): List of items to select from.
+- <code>selectedId</code> (dynamic, required): ID of currently selected item.
+- <code>getId</code> (dynamic Function(T), required): Function to get item ID.
+- <code>getName</code> (String Function(T), required): Function to get item display name.
+- <code>onSelect</code> (Function(T), required): Callback when item is selected.
+- <code>getSubtitle</code> (String? Function(T)?, optional): Function to get item subtitle.
+- <code>getLeading</code> (Widget? Function(T)?, optional): Function to get leading widget.
+- <code>getTrailing</code> (Widget? Function(T)?, optional): Function to get trailing widget.
+- <code>getEnabled</code> (bool Function(T)?, optional): Function to determine if item is enabled.</p>
+<p><strong>Static Method:</strong></p>
+<pre><code class="language-dart">SelectionModal.show&lt;T&gt;({
+  required BuildContext context,
+  required String title,
+  required List&lt;T&gt; items,
+  required dynamic selectedId,
+  required dynamic Function(T) getId,
+  required String Function(T) getName,
+  required Function(T) onSelect,
+  String? Function(T)? getSubtitle,
+  Widget? Function(T)? getLeading,
+  Widget? Function(T)? getTrailing,
+  bool Function(T)? getEnabled,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">SelectionModal.show&lt;User&gt;(
+  context: context,
+  title: 'Select User',
+  items: users,
+  selectedId: currentUserId,
+  getId: (user) =&gt; user.id,
+  getName: (user) =&gt; user.name,
+  onSelect: (user) {
+    setState(() {
+      selectedUser = user;
+    });
+  },
+  getSubtitle: (user) =&gt; user.email,
+)
+</code></pre>
+<p><strong>When to use:</strong> Single selection from a list, dropdown alternatives, or picker modals.</p>
+<hr />
+<h4 id="selectionsearchmodal">SelectionSearchModal<a class="headerlink" href="#selectionsearchmodal" title="Permanent link">&para;</a></h4>
+<p>A bottom sheet modal with search functionality for selecting a single item.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const SelectionSearchModal({
+  super.key,
+  required this.items,
+  required this.selectedId,
+  required this.getId,
+  required this.getName,
+  required this.onSelect,
+  required this.fetchData,
+  this.getSubtitle,
+  this.getLeading,
+  this.getTrailing,
+  this.getEnabled,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- All parameters from <code>SelectionModal</code> plus:
+- <code>fetchData</code> (Future<List\<T>> Function(String query), required): Function to fetch/search items based on query.</p>
+<p><strong>Static Method:</strong></p>
+<pre><code class="language-dart">SelectionSearchModal.show&lt;T&gt;({
+  required BuildContext context,
+  required List&lt;T&gt; items,
+  required dynamic selectedId,
+  required dynamic Function(T) getId,
+  required String Function(T) getName,
+  required Function(T) onSelect,
+  required Future&lt;List&lt;T&gt;&gt; Function(String query) fetchData,
+  String? Function(T)? getSubtitle,
+  Widget? Function(T)? getLeading,
+  Widget? Function(T)? getTrailing,
+  bool Function(T)? getEnabled,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">SelectionSearchModal.show&lt;User&gt;(
+  context: context,
+  items: initialUsers,
+  selectedId: currentUserId,
+  getId: (user) =&gt; user.id,
+  getName: (user) =&gt; user.name,
+  onSelect: (user) {
+    // Handle selection
+  },
+  fetchData: (query) async {
+    return await userRepository.searchUsers(query);
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> Large lists requiring search, dynamic filtering, or remote data selection.</p>
+<hr />
+<h4 id="treeselectionsearchmodal">TreeSelectionSearchModal<a class="headerlink" href="#treeselectionsearchmodal" title="Permanent link">&para;</a></h4>
+<p>A bottom sheet modal with search functionality and tree structure for selecting an item.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const TreeSelectionSearchModal({
+  super.key,
+  required this.data,
+  required this.onSelect,
+  this.selectedId,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>data</code> (List<TreeItem>, required): Tree structured data to display
+- <code>onSelect</code> (Function(dynamic), required): Callback when item is selected
+- <code>selectedId</code> (dynamic, optional): ID of currently selected item</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">TreeSelectionSearchModal(
+  data: treeData,
+  selectedId: currentId,
+  onSelect: (selectedId) {
+    // Handle selection
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When selecting from hierarchical data with search functionality.</p>
+<hr />
+<h3 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h3>
+<h4 id="appthemewrapper">AppThemeWrapper<a class="headerlink" href="#appthemewrapper" title="Permanent link">&para;</a></h4>
+<p>A wrapper widget that applies the app theme to child widgets.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AppThemeWrapper({
+  super.key,
+  required this.child,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>child</code> (Widget, required): Child widget to wrap with the app theme</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AppThemeWrapper(
+  child: MyApp(),
+)
+</code></pre>
+<p><strong>When to use:</strong> When applying the app theme to the root of the application.</p>
+<hr />
+<h4 id="genericsearchdelegate">GenericSearchDelegate<a class="headerlink" href="#genericsearchdelegate" title="Permanent link">&para;</a></h4>
+<p>A generic search delegate for implementing search functionality in app bars.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">class MySearchDelegate extends GenericSearchDelegate&lt;T&gt; {
+  @override
+  Future&lt;List&lt;T&gt;&gt; searchResults(String query) async {
+    // Implement search logic
+  }
+
+  @override
+  Widget buildResultItem(BuildContext context, T item) {
+    // Build widget for each search result
+  }
+}
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">showSearch(
+  context: context,
+  delegate: MySearchDelegate(),
+);
+</code></pre>
+<p><strong>When to use:</strong> When implementing consistent search functionality across the app.</p>
+<hr />
+<h4 id="languageawarenavbar">LanguageAwareNavbar<a class="headerlink" href="#languageawarenavbar" title="Permanent link">&para;</a></h4>
+<p>A navigation bar that takes into account language direction for proper layout.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const LanguageAwareNavbar({
+  super.key,
+  required this.items,
+  required this.currentIndex,
+  required this.onTap,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>items</code> (List<BottomNavigationBarItem>, required): List of navigation items
+- <code>currentIndex</code> (int, required): Index of the currently selected item
+- <code>onTap</code> (Function(int), required): Callback when an item is tapped</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">LanguageAwareNavbar(
+  items: [
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+    BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+  ],
+  currentIndex: _selectedIndex,
+  onTap: _onItemTapped,
+)
+</code></pre>
+<p><strong>When to use:</strong> When implementing navigation bars with language direction awareness.</p>
+<hr />
+<h4 id="multiplesearchpage">MultipleSearchPage<a class="headerlink" href="#multiplesearchpage" title="Permanent link">&para;</a></h4>
+<p>A page template for multiple search functionality.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MultipleSearchPage({
+  super.key,
+  required this.title,
+  required this.items,
+  required this.selectedItems,
+  required this.getId,
+  required this.getName,
+  required this.onSelect,
+  this.onSearch,
+  this.onSave,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>title</code> (String, required): Title for the page
+- <code>items</code> (List<T>, required): List of items to search/selection from
+- <code>selectedItems</code> (List<dynamic>, required): Currently selected items
+- <code>getId</code> (dynamic Function(T), required): Function to get item ID
+- <code>getName</code> (String Function(T), required): Function to get item name
+- <code>onSelect</code> (Function(List<dynamic>), required): Callback when selection changes
+- <code>onSearch</code> (Function(String)?, optional): Callback when search is performed
+- <code>onSave</code> (Function()?, optional): Callback when save action is triggered</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">MultipleSearchPage&lt;User&gt;(
+  title: 'Select Users',
+  items: users,
+  selectedItems: selectedUserIds,
+  getId: (user) =&gt; user.id,
+  getName: (user) =&gt; user.name,
+  onSelect: (selectedIds) {
+    setState(() {
+      selectedUserIds = selectedIds;
+    });
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When implementing pages that require filtering and selection of multiple items.</p>
+<hr />
+<h4 id="pagedefault">PageDefault<a class="headerlink" href="#pagedefault" title="Permanent link">&para;</a></h4>
+<p>A standard page layout with app bar, back button, title, and optional actions.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const PageDefault({
+  super.key,
+  required this.body,
+  required this.title,
+  this.actions,
+  this.backgroundColor,
+  this.isCenterTitle,
+  this.bottomNavigationBar,
+  this.onGoBack,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>body</code> (Widget, required): Main content of the page.
+- <code>title</code> (String, required): Page title displayed in app bar.
+- <code>actions</code> (List<Widget>?, optional): Action buttons in app bar.
+- <code>backgroundColor</code> (Color?, optional): Background color. Default: theme surface color.
+- <code>isCenterTitle</code> (bool?, optional): Center the title. Default: false.
+- <code>bottomNavigationBar</code> (Widget?, optional): Bottom navigation bar.
+- <code>onGoBack</code> (VoidCallback?, optional): Custom back button handler.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">PageDefault(
+  title: 'User Profile',
+  actions: [
+    IconButton(
+      icon: Icon(Icons.edit),
+      onPressed: () {
+        // Edit action
+      },
+    ),
+  ],
+  body: ListView(
+    children: [
+      // Page content
+    ],
+  ),
+)
+</code></pre>
+<p><strong>When to use:</strong> Standard detail pages, forms, or any page requiring a consistent layout with app bar.</p>
+<hr />
+<h4 id="pagefooterbutton">PageFooterButton<a class="headerlink" href="#pagefooterbutton" title="Permanent link">&para;</a></h4>
+<p>A widget that provides a standard layout with a footer button.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const PageFooterButton({
+  super.key,
+  required this.body,
+  required this.buttonLabel,
+  required this.onButtonPressed,
+  this.buttonType = AppFilledButtonType.primary,
+  this.isLoading = false,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>body</code> (Widget, required): Main content of the page
+- <code>buttonLabel</code> (String, required): Label for the footer button
+- <code>onButtonPressed</code> (VoidCallback, required): Callback when button is pressed
+- <code>buttonType</code> (AppFilledButtonType, optional): Type of button. Default: primary
+- <code>isLoading</code> (bool, optional): Whether the button is in loading state. Default: false</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">PageFooterButton(
+  body: ListView(
+    children: [
+      // Page content
+    ],
+  ),
+  buttonLabel: 'Submit',
+  onButtonPressed: () {
+    // Handle submission
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When implementing pages with a consistent footer button layout.</p>
+<hr />
+<h4 id="pushnotificationwrapper">PushNotificationWrapper<a class="headerlink" href="#pushnotificationwrapper" title="Permanent link">&para;</a></h4>
+<p>A wrapper widget that handles push notifications in the app.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const PushNotificationWrapper({
+  super.key,
+  required this.child,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>child</code> (Widget, required): Child widget to wrap with push notification handling</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">PushNotificationWrapper(
+  child: MyApp(),
+)
+</code></pre>
+<p><strong>When to use:</strong> When implementing push notification handling at the app level.</p>
+<hr />
+<h4 id="scaffoldnavbar">ScaffoldNavbar<a class="headerlink" href="#scaffoldnavbar" title="Permanent link">&para;</a></h4>
+<p>A scaffold with bottom navigation bar that automatically highlights the current route.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ScaffoldNavbar({
+  super.key,
+  required this.child,
+  required this.buildItems,
+  required this.shouldShowNavbar,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>child</code> (Widget, required): Main content widget.
+- <code>buildItems</code> (List<ScaffoldNavbarItem> Function(), required): Function that returns navigation items.
+- <code>shouldShowNavbar</code> (bool, required): Whether to show the navigation bar.</p>
+<p><strong>ScaffoldNavbarItem:</strong></p>
+<pre><code class="language-dart">ScaffoldNavbarItem({
+  required this.path,
+  required this.icon,
+  required this.label,
+  this.activeIcon,
+  this.activeAssetImage,
+  this.badgeCount,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ScaffoldNavbar(
+  shouldShowNavbar: true,
+  buildItems: () =&gt; [
+    ScaffoldNavbarItem(
+      path: '/home',
+      icon: Icons.home,
+      label: 'Home',
+      badgeCount: 3,
+    ),
+    ScaffoldNavbarItem(
+      path: '/profile',
+      icon: Icons.person,
+      activeIcon: Icons.person_outline,
+      label: 'Profile',
+    ),
+  ],
+  child: YourPageContent(),
+)
+</code></pre>
+<p><strong>When to use:</strong> Main app navigation, tab-based navigation, or multi-section apps.</p>
+<hr />
+<h4 id="singlesearchpage">SingleSearchPage<a class="headerlink" href="#singlesearchpage" title="Permanent link">&para;</a></h4>
+<p>A page template for single search functionality.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const SingleSearchPage({
+  super.key,
+  required this.title,
+  required this.items,
+  required this.selectedId,
+  required this.getId,
+  required this.getName,
+  required this.onSelect,
+  this.onSearch,
+  this.onSave,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>title</code> (String, required): Title for the page
+- <code>items</code> (List<T>, required): List of items to search/select from
+- <code>selectedId</code> (dynamic, required): Currently selected item ID
+- <code>getId</code> (dynamic Function(T), required): Function to get item ID
+- <code>getName</code> (String Function(T), required): Function to get item name
+- <code>onSelect</code> (Function(dynamic), required): Callback when selection changes
+- <code>onSearch</code> (Function(String)?, optional): Callback when search is performed
+- <code>onSave</code> (Function()?, optional): Callback when save action is triggered</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">SingleSearchPage&lt;User&gt;(
+  title: 'Select User',
+  items: users,
+  selectedId: selectedUserId,
+  getId: (user) =&gt; user.id,
+  getName: (user) =&gt; user.name,
+  onSelect: (id) {
+    setState(() {
+      selectedUserId = id;
+    });
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When implementing pages that require filtering and selection of a single item.</p>
+<hr />
+<h4 id="supaupgradealert">SupaUpgradeAlert<a class="headerlink" href="#supaupgradealert" title="Permanent link">&para;</a></h4>
+<p>An alert widget to notify users about app upgrades.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const SupaUpgradeAlert({
+  super.key,
+  this.onUpdate,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>onUpdate</code> (VoidCallback?, optional): Callback when update is initiated</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">SupaUpgradeAlert(
+  onUpdate: () {
+    // Handle update
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When notifying users about available app updates.</p>
+<hr />
+<h4 id="workspacedrawer">WorkspaceDrawer<a class="headerlink" href="#workspacedrawer" title="Permanent link">&para;</a></h4>
+<p>A drawer widget for workspace navigation with tenant selection.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const WorkspaceDrawer({
+  super.key,
+  required this.currentTenant,
+  required this.onTenantChanged,
+  this.additionalItems = const [],
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>currentTenant</code> (Tenant, required): The currently selected tenant
+- <code>onTenantChanged</code> (Function(Tenant), required): Callback when tenant is changed
+- <code>additionalItems</code> (List<Widget>, optional): Additional items to include in the drawer</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">WorkspaceDrawer(
+  currentTenant: currentTenant,
+  onTenantChanged: (tenant) {
+    // Handle tenant change
+  },
+  additionalItems: [
+    DrawerItem(text: 'Settings', icon: Icons.settings, onPressed: () {}),
+  ],
+)
+</code></pre>
+<p><strong>When to use:</strong> When implementing workspace navigation with tenant switching.</p>
+<hr />
+<h3 id="sheets">Sheets<a class="headerlink" href="#sheets" title="Permanent link">&para;</a></h3>
+<h4 id="languagebottomsheet">LanguageBottomSheet<a class="headerlink" href="#languagebottomsheet" title="Permanent link">&para;</a></h4>
+<p>A bottom sheet for selecting the app's language.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const LanguageBottomSheet({
+  super.key,
+  required this.currentLanguage,
+  required this.onLanguageChanged,
+});
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>currentLanguage</code> (String, required): Currently selected language
+- <code>onLanguageChanged</code> (Function(String), required): Callback when language is changed</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">LanguageBottomSheet(
+  currentLanguage: 'en',
+  onLanguageChanged: (language) {
+    // Handle language change
+  },
+)
+</code></pre>
+<p><strong>When to use:</strong> When providing a language selection interface in a bottom sheet.</p>
+<hr />
+<h3 id="comment-system">Comment System<a class="headerlink" href="#comment-system" title="Permanent link">&para;</a></h3>
+<p>The <code>comment/</code> directory contains a comprehensive set of widgets for implementing a comment and discussion feature, including:</p>
+<h4 id="abstractcomment">AbstractComment<a class="headerlink" href="#abstractcomment" title="Permanent link">&para;</a></h4>
+<p>Base abstract comment widget providing common functionality.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">abstract class AbstractComment extends StatefulWidget {
+  final Comment comment;
+  final Function(Comment)? onCommentUpdate;
+  final Function(Comment)? onCommentDelete;
+
+  const AbstractComment({
+    super.key,
+    required this.comment,
+    this.onCommentUpdate,
+    this.onCommentDelete,
+  });
+}
+</code></pre>
+<h4 id="commentslistwidget">CommentsListWidget<a class="headerlink" href="#commentslistwidget" title="Permanent link">&para;</a></h4>
+<p>A widget that displays a list of comments with loading and error states.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const CommentsListWidget({
+  super.key,
+  required this.comments,
+  this.onCommentUpdate,
+  this.onCommentDelete,
+  this.onLoadMore,
+  this.hasMore = false,
+  this.isLoading = false,
+});
+</code></pre>
+<h4 id="commentinputwidget">CommentInputWidget<a class="headerlink" href="#commentinputwidget" title="Permanent link">&para;</a></h4>
+<p>A widget for inputting new comments with text, attachments, and mentions.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const CommentInputWidget({
+  super.key,
+  required this.onSubmit,
+  this.placeholder = 'Write a comment...',
+  this.initialText = '',
+});
+</code></pre>
+<h4 id="chatmessageitem">ChatMessageItem<a class="headerlink" href="#chatmessageitem" title="Permanent link">&para;</a></h4>
+<p>A widget that displays a single chat message with proper user identification.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ChatMessageItem({
+  super.key,
+  required this.message,
+  required this.isCurrentUser,
+  this.onMessageUpdate,
+  this.onMessageDelete,
+});
+</code></pre>
+<h4 id="emojireactionpicker">EmojiReactionPicker<a class="headerlink" href="#emojireactionpicker" title="Permanent link">&para;</a></h4>
+<p>A widget that allows users to pick emojis to react to comments or messages.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const EmojiReactionPicker({
+  super.key,
+  required this.onEmojiSelected,
+});
+</code></pre>
+<p>Additional components include:</p>
+<ul>
+<li><code>app_user_avatar_comment.dart</code> - User avatars for comment system</li>
+<li><code>attachment_picker_bottom_sheet.dart</code> - Attachment picker for comments</li>
+<li><code>audio_player_view.dart</code> - Audio player for comment attachments</li>
+<li><code>chat_message_item_current.dart</code> - Specialized chat message for current user</li>
+<li><code>comment_skeleton_loader.dart</code> - Loading skeleton for comments</li>
+<li><code>media_file_view.dart</code> - Media file viewer for comment attachments</li>
+<li><code>message_content_widget.dart</code> - Content renderer for messages</li>
+<li><code>message_reactions_display.dart</code> - Display reactions on messages</li>
+<li><code>reaction_users_bottom_sheet.dart</code> - Show users who reacted to a message</li>
+<li><code>text_avatar_comment.dart</code> - Text-based avatars for comments</li>
+<li><code>user_tag_overlay.dart</code> - Overlay for user tags in comments</li>
+<li><code>voice_recording_state.dart</code> - Voice recording state management</li>
+<li><code>helpers/tag_text_helper.dart</code> - Helper for tagging in comments</li>
+<li><code>mixins/comment_tag_mixin.dart</code> - Mixin for comment tagging</li>
+</ul>
+<h3 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">&para;</a></h3>
+<p>The <code>pages/</code> directory contains full-page implementations:</p>
+<h4 id="appsettingspage">AppSettingsPage<a class="headerlink" href="#appsettingspage" title="Permanent link">&para;</a></h4>
+<p>Application settings page with various configuration options.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AppSettingsPage({super.key});
+</code></pre>
+<h4 id="appinformationpage">AppInformationPage<a class="headerlink" href="#appinformationpage" title="Permanent link">&para;</a></h4>
+<p>Page displaying application information and about details.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AppInformationPage({super.key});
+</code></pre>
+<h4 id="filepreviewpage">FilePreviewPage<a class="headerlink" href="#filepreviewpage" title="Permanent link">&para;</a></h4>
+<p>Page for previewing files with download functionality.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const FilePreviewPage({
+  super.key,
+  required this.file,
+});
+</code></pre>
+<h4 id="tenantselectionpage">TenantSelectionPage<a class="headerlink" href="#tenantselectionpage" title="Permanent link">&para;</a></h4>
+<p>Page for selecting the active tenant in multi-tenant applications.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const TenantSelectionPage({
+  super.key,
+  this.onTenantSelected,
+});
+</code></pre>
+<h4 id="mediagalleryscreen">MediaGalleryScreen<a class="headerlink" href="#mediagalleryscreen" title="Permanent link">&para;</a></h4>
+<p>Screen for viewing and selecting media files from gallery.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MediaGalleryScreen({
+  super.key,
+  this.onFileSelected,
+});
+</code></pre>
+<h4 id="cameracapturepagenew">CameraCapturePageNew<a class="headerlink" href="#cameracapturepagenew" title="Permanent link">&para;</a></h4>
+<p>Enhanced camera capture page for taking photos.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const CameraCapturePageNew({
+  super.key,
+  this.onImageCaptured,
+});
+</code></pre>
+<p>Additional page components include:</p>
+<ul>
+<li><code>app_media_gallery_control_screen.dart</code></li>
+<li><code>camera_capture_page_new.dart</code></li>
+<li><code>device_camera_page.dart</code></li>
+<li><code>image_editor_local_screen.dart</code></li>
+<li><code>image_editor_screen.dart</code></li>
+<li><code>media_gallery_control_screen.dart</code></li>
+<li><code>media_gallery_local_screen.dart</code></li>
+<li><code>media_gallery_screen.dart</code></li>
+<li><code>media_navigation_controls.dart</code></li>
+<li><code>media_view_item.dart</code></li>
+<li><code>other_user_profile_page.dart</code></li>
+<li><code>simple_camera_capture_page.dart</code></li>
+<li><code>tenant_selection_page.dart</code></li>
+<li><code>theme_selection_page.dart</code></li>
+<li><code>video_capture_page.dart</code></li>
+</ul>
+<h2 id="additional-widgets-in-sub-projects">Additional Widgets in Sub-Projects<a class="headerlink" href="#additional-widgets-in-sub-projects" title="Permanent link">&para;</a></h2>
+<h3 id="supa-attendance-widgets">Supa Attendance Widgets<a class="headerlink" href="#supa-attendance-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="attendanceapptitle">AttendanceAppTitle<a class="headerlink" href="#attendanceapptitle" title="Permanent link">&para;</a></h4>
+<p>The <code>AttendanceAppTitle</code> widget displays the user's name as the title and a given subtitle. It is used in the app bar.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttendanceAppTitle({
+  super.key,
+  required this.subtitle,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">Scaffold(
+  appBar: AppBar(
+    title: const AttendanceAppTitle(subtitle: 'Today'),
+  ),
+  body: ...
+)
+</code></pre>
+<h4 id="attendancecurrenttime">AttendanceCurrentTime<a class="headerlink" href="#attendancecurrenttime" title="Permanent link">&para;</a></h4>
+<p>The <code>AttendanceCurrentTime</code> widget displays the current time, automatically updating every second.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttendanceCurrentTime({
+  super.key,
+  this.style,
+  this.textAlign = TextAlign.center,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">const Center(
+  child: AttendanceCurrentTime(
+    style: TextStyle(fontSize: 24),
+  ),
+)
+</code></pre>
+<h4 id="attendanceiconfield">AttendanceIconField<a class="headerlink" href="#attendanceiconfield" title="Permanent link">&para;</a></h4>
+<p>The <code>AttendanceIconField</code> widget displays a field with an icon, a label, and a value. It can be tappable.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttendanceIconField({
+  super.key,
+  required this.label,
+  required this.value,
+  required this.icon,
+  this.onTap,
+  this.color,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AttendanceIconField(
+  icon: FluentIcons.clock_24_regular,
+  label: 'Time',
+  value: '10:00 AM',
+  onTap: () {
+    // Handle tap
+  },
+)
+</code></pre>
+<h4 id="attendancesetuptitle">AttendanceSetupTitle<a class="headerlink" href="#attendancesetuptitle" title="Permanent link">&para;</a></h4>
+<p>The <code>AttendanceSetupTitle</code> widget displays the title of a time clock setup and an info button to show the attendance rules.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttendanceSetupTitle({
+  super.key,
+  required this.clockSetup,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AttendanceSetupTitle(
+  clockSetup: timeClockSetup,
+)
+</code></pre>
+<h4 id="attendanceshiftname">AttendanceShiftName<a class="headerlink" href="#attendanceshiftname" title="Permanent link">&para;</a></h4>
+<p>The <code>AttendanceShiftName</code> widget displays the name of a shift.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttendanceShiftName({
+  super.key,
+  required this.shift,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AttendanceShiftName(
+  shift: shift,
+)
+</code></pre>
+<h4 id="attendancestatusbanner">AttendanceStatusBanner<a class="headerlink" href="#attendancestatusbanner" title="Permanent link">&para;</a></h4>
+<p>The <code>AttendanceStatusBanner</code> widget displays a banner with a message and a status.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttendanceStatusBanner({
+  super.key,
+  required this.message,
+  required this.status,
+  this.onClose,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AttendanceStatusBanner(
+  message: 'This is an information message.',
+  status: AttendanceBannerStatus.info,
+  onClose: () {
+    // Handle close
+  },
+)
+</code></pre>
+<h3 id="supa-bibs-widgets">Supa Bibs Widgets<a class="headerlink" href="#supa-bibs-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="actionline-bibs">ActionLine (Bibs)<a class="headerlink" href="#actionline-bibs" title="Permanent link">&para;</a></h4>
+<p>The <code>ActionLine</code> widget is a tappable row, typically used for navigation or actions. It displays a label on the left, an optional value on the right, and a chevron icon to indicate it's tappable.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ActionLine({
+  super.key,
+  required this.label,
+  this.value,
+  this.onPressed,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ActionLine(
+  label: 'Profile',
+  value: 'View and edit',
+  onPressed: () {
+    // Navigate to profile page
+  },
+)
+</code></pre>
+<h4 id="dataline-bibs">DataLine (Bibs)<a class="headerlink" href="#dataline-bibs" title="Permanent link">&para;</a></h4>
+<p>The <code>DataLine</code> widget is a simple row for displaying a label and a corresponding value.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const DataLine({
+  super.key,
+  required this.label,
+  this.value,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">DataLine(
+  label: 'Email',
+  value: 'test@example.com',
+)
+</code></pre>
+<h4 id="filterselectionfield">FilterSelectionField<a class="headerlink" href="#filterselectionfield" title="Permanent link">&para;</a></h4>
+<p>The <code>FilterSelectionField</code> widget is a non-editable text field that is used to trigger a selection, typically for filtering. It displays a label, hint text, and a suffix icon. Tapping on it triggers the <code>onTap</code> callback.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const FilterSelectionField({
+  super.key,
+  required this.controller,
+  required this.labelText,
+  required this.hintText,
+  required this.suffixIcon,
+  required this.onTap,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">FilterSelectionField(
+  controller: _filterController,
+  labelText: 'Status',
+  hintText: 'Select a status',
+  suffixIcon: Icons.arrow_drop_down,
+  onTap: () {
+    // Show a dialog to select a status
+  },
+)
+</code></pre>
+<h4 id="masterlistitem">MasterListItem<a class="headerlink" href="#masterlistitem" title="Permanent link">&para;</a></h4>
+<p>The <code>MasterListItem</code> widget is a container for a list item that provides a consistent styling and a tappable area.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const MasterListItem({
+  super.key,
+  required this.onPressed,
+  required this.child,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">MasterListItem(
+  onPressed: () {
+    // Handle item tap
+  },
+  child: const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: Text('This is a list item'),
+  ),
+)
+</code></pre>
+<h4 id="searchmodal">SearchModal<a class="headerlink" href="#searchmodal" title="Permanent link">&para;</a></h4>
+<p>The <code>SearchModal</code> is a generic and reusable widget for searching and selecting an entity from a list. It provides a search field, handles fetching and filtering data, and displays the results in a list.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const SearchModal({
+  super.key,
+  required this.onSelected,
+  this.branchId,
+  required this.filterList,
+  required this.filter,
+  required this.renderTile,
+  required this.label,
+  required this.title,
+  this.floatingActionButton,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">SearchModal&lt;User, UserFilter&gt;(
+  title: 'Search User',
+  label: 'Search by name',
+  filter: UserFilter(),
+  filterList: (filter) =&gt; userRepository.getUsers(filter),
+  onSelected: (user) {
+    // Handle selected user
+  },
+  renderTile: (user) =&gt; Text(user.name),
+)
+</code></pre>
+<h3 id="supa-serving-widgets">Supa Serving Widgets<a class="headerlink" href="#supa-serving-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="servingbottomgroupactions">ServingBottomGroupActions<a class="headerlink" href="#servingbottomgroupactions" title="Permanent link">&para;</a></h4>
+<p>The <code>ServingBottomGroupActions</code> widget displays a group of actions at the bottom of the screen. It typically includes a primary "continue" button and an optional "cancel" button.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ServingBottomGroupActions({
+  super.key,
+  required this.onContinue,
+  required this.continueLabel,
+  this.continueIcon,
+  this.onCancel,
+  this.cancelLabel,
+  this.cancelIcon,
+  this.isLoading = false,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ServingBottomGroupActions(
+  onContinue: () {
+    // Handle continue action
+  },
+  continueLabel: 'Submit',
+  onCancel: () {
+    // Handle cancel action
+  },
+  cancelLabel: 'Cancel',
+)
+</code></pre>
+<h4 id="servingticketdetailview">ServingTicketDetailView<a class="headerlink" href="#servingticketdetailview" title="Permanent link">&para;</a></h4>
+<p>The <code>ServingTicketDetailView</code> widget is a comprehensive view for displaying the details of a serving ticket. It manages loading states, provides a refresh indicator, and shows various pieces of information related to the ticket. It also includes slots for custom bottom actions and extra content.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ServingTicketDetailView({
+  super.key,
+  required this.initialTicket,
+  this.bottomActions,
+  this.extraContent,
+  this.showRating = false,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ServingTicketDetailView(
+  initialTicket: ticket,
+  bottomActions: ServingBottomGroupActions(
+    onContinue: () {},
+    continueLabel: 'Confirm',
+  ),
+  extraContent: Text('Extra content here'),
+)
+</code></pre>
+<h4 id="servingforminfo">ServingFormInfo<a class="headerlink" href="#servingforminfo" title="Permanent link">&para;</a></h4>
+<p>The <code>ServingFormInfo</code> widget is a tappable field that displays an icon, a label, and a value. It's used to show information in a form-like structure.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ServingFormInfo({
+  super.key,
+  required this.label,
+  required this.value,
+  required this.icon,
+  required this.onTap,
+  this.color,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ServingFormInfo(
+  icon: FluentIcons.person_24_regular,
+  label: 'Customer',
+  value: 'John Doe',
+  onTap: () {
+    // Handle tap
+  },
+)
+</code></pre>
+<h4 id="servinginformationbadge">ServingInformationBadge<a class="headerlink" href="#servinginformationbadge" title="Permanent link">&para;</a></h4>
+<p>The <code>ServingInformationBadge</code> widget displays a badge with a title, a description, and a warning icon. It is used to highlight important information.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ServingInformationBadge({
+  super.key,
+  required this.title,
+  required this.description,
+  this.backgroundColor,
+  this.foregroundColor,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ServingInformationBadge(
+  title: 'Important Information',
+  description: 'Please read this before proceeding.',
+)
+</code></pre>
+<h4 id="servingticketrating">ServingTicketRating<a class="headerlink" href="#servingticketrating" title="Permanent link">&para;</a></h4>
+<p>The <code>ServingTicketRating</code> widget provides a star rating bar, allowing users to rate a serving ticket.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ServingTicketRating({
+  super.key,
+  required this.ticket,
+  this.rating,
+  this.onRatingChanged,
+  this.size = 40,
+  this.color,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ServingTicketRating(
+  ticket: ticket,
+  onRatingChanged: (rating) {
+    // Handle rating change
+  },
+)
+</code></pre>
+<h4 id="servingwarningbadge">ServingWarningBadge<a class="headerlink" href="#servingwarningbadge" title="Permanent link">&para;</a></h4>
+<p>The <code>ServingWarningBadge</code> widget displays a dismissible warning message.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ServingWarningBadge({
+  super.key,
+  required this.warning,
+  required this.onDismiss,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ServingWarningBadge(
+  warning: 'This is a warning message.',
+  onDismiss: () {
+    // Handle dismiss
+  },
+)
+</code></pre>
+<h4 id="ticketterminationdialog">TicketTerminationDialog<a class="headerlink" href="#ticketterminationdialog" title="Permanent link">&para;</a></h4>
+<p>The <code>TicketTerminationDialog</code> provides a static method <code>showCancelDialog</code> to display a dialog for confirming ticket termination.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">static Future&lt;void&gt; showCancelDialog(
+  BuildContext context, {
+  required Ticket ticket,
+  VoidCallback? onCancelSuccess,
+  VoidCallback? onCancelError,
+})
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">TicketTerminationDialog.showCancelDialog(
+  context,
+  ticket: ticket,
+  onCancelSuccess: () {
+    // Handle success
+  },
+  onCancelError: () {
+    // Handle error
+  },
+);
+</code></pre>
+<h3 id="supa-spend-widgets">Supa Spend Widgets<a class="headerlink" href="#supa-spend-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="approvalhistorywidget">ApprovalHistoryWidget<a class="headerlink" href="#approvalhistorywidget" title="Permanent link">&para;</a></h4>
+<p>The <code>ApprovalHistoryWidget</code> widget displays the approval history of a request, showing each step of the approval process.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ApprovalHistoryWidget({
+  super.key,
+  required this.history,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ApprovalHistoryWidget(
+  history: approvalHistory,
+)
+</code></pre>
+<h4 id="attachmentitem">AttachmentItem<a class="headerlink" href="#attachmentitem" title="Permanent link">&para;</a></h4>
+<p>The <code>AttachmentItem</code> widget displays a single attachment, which can be either a file or a link. It shows an appropriate icon, the attachment name, and for files, it displays the file size and a download/open button.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttachmentItem({
+  super.key,
+  required this.item,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AttachmentItem(
+  item: attachment,
+)
+</code></pre>
+<h4 id="attachmentlist">AttachmentList<a class="headerlink" href="#attachmentlist" title="Permanent link">&para;</a></h4>
+<p>The <code>AttachmentList</code> widget displays a list of attachments using the <code>AttachmentItem</code> widget for each item in the list.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AttachmentList({
+  super.key,
+  required this.files,
+  this.showTitle = true,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AttachmentList(
+  files: attachments,
+)
+</code></pre>
+<h4 id="catalogimage">CatalogImage<a class="headerlink" href="#catalogimage" title="Permanent link">&para;</a></h4>
+<p>The <code>CatalogImage</code> widget displays an image from a catalog, handling loading and error states gracefully.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const CatalogImage({
+  super.key,
+  required this.url,
+  this.height,
+  this.width,
+  this.boxFit,
+  this.alignment = Alignment.center,
+  this.errorWidget,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">CatalogImage(
+  url: 'https://example.com/image.jpg',
+  width: 100,
+  height: 100,
+  boxFit: BoxFit.cover,
+)
+</code></pre>
+<h4 id="formattachmenttab">FormAttachmentTab<a class="headerlink" href="#formattachmenttab" title="Permanent link">&para;</a></h4>
+<p>The <code>FormAttachmentTab</code> widget provides a user interface for managing attachments within a form. It allows users to add attachments by taking photos with the camera, selecting images from the gallery, or picking various file types, and then displays these attachments in an <code>AttachmentList</code>.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const FormAttachmentTab({
+  super.key,
+  required this.repository,
+  required this.attachments,
+  required this.onAddFiles,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">FormAttachmentTab(
+  repository: myApiClient,
+  attachments: myAttachmentsList,
+  onAddFiles: (files) {
+    // Handle adding new files
+)
+</code></pre>
+<h4 id="itemcontenttemplate">ItemContentTemplate<a class="headerlink" href="#itemcontenttemplate" title="Permanent link">&para;</a></h4>
+<p>The <code>ItemContentTemplate</code> widget is designed to display the content of an item in a standardized list format. It features an item image (or a text avatar if no image is available), the item's name and code, its total price, quantity, and unit of measure.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ItemContentTemplate({
+  super.key,
+  this.onPressed,
+  required this.catalogImageMappings,
+  required this.item,
+  this.itemName = '',
+  required this.total,
+  required this.quantity,
+  required this.unitOfMeasure,
+  required this.currency,
+  this.showTopBorder = false,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ItemContentTemplate(
+  item: item,
+  catalogImageMappings: item.catalogImageMappings.value,
+  total: 100.0,
+  quantity: 1,
+  unitOfMeasure: UnitOfMeasure(name: 'Each'),
+  currency: Currency(code: 'USD'),
+  onPressed: () {
+    // Handle item tap
+  },
+)
+</code></pre>
+<h4 id="quickslidableapprovalactions">QuickSlidableApprovalActions<a class="headerlink" href="#quickslidableapprovalactions" title="Permanent link">&para;</a></h4>
+<p>The <code>QuickSlidableApprovalActions</code> widget provides a slidable interface for performing quick approval or rejection actions on a document. It integrates with <code>flutter_slidable</code> to reveal "Approve" and "Reject" buttons.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const QuickSlidableApprovalActions({
+  super.key,
+  required this.child,
+  required this.onApprove,
+  required this.onReject,
+  this.onDissmissed,
+  required this.item,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">QuickSlidableApprovalActions(
+  item: approvableDocument,
+  onApprove: () async {
+    // Handle approval
+  },
+  onReject: () async {
+    // Handle rejection
+  },
+  child: ListTile(
+    title: Text('Document Title'),
+    subtitle: Text('Document Details'),
+  ),
+)
+</code></pre>
+<h4 id="rejectionmodal">RejectionModal<a class="headerlink" href="#rejectionmodal" title="Permanent link">&para;</a></h4>
+<p>The <code>RejectionModal</code> widget is a modal dialog that prompts the user to provide a reason for rejecting an item. It includes a text input field for the reason and action buttons for submission and cancellation.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const RejectionModal({
+  super.key,
+  required this.title,
+  this.description,
+  this.descriptionWidget,
+  required this.onReject,
+  this.onCancel,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">showDialog(
+  context: context,
+  builder: (context) =&gt; RejectionModal(
+    title: 'Reject Request',
+    description: 'Please provide a reason for rejecting this request.',
+    onReject: (reason) async {
+      // Handle rejection with reason
+    },
+    onCancel: () {
+      // Handle cancellation
+    },
+  ),
+);
+</code></pre>
+<h4 id="textareamodal">TextAreaModal<a class="headerlink" href="#textareamodal" title="Permanent link">&para;</a></h4>
+<p>The <code>TextAreaModal</code> widget provides a full-screen modal with a multi-line text input area. It includes a title, a "Cancel" button, and a "Done" button, and a callback for when the input is submitted.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const TextAreaModal({
+  super.key,
+  required this.title,
+  required this.onSubmit,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">showModalBottomSheet(
+  context: context,
+  isScrollControlled: true,
+  builder: (context) {
+    return TextAreaModal(
+      title: 'Enter Reason',
+      onSubmit: (value) {
+        // Handle submitted text
+      },
+    );
+  },
+);
+</code></pre>
+<h3 id="supa-training-widgets">Supa Training Widgets<a class="headerlink" href="#supa-training-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="audioplayerwidget">AudioPlayerWidget<a class="headerlink" href="#audioplayerwidget" title="Permanent link">&para;</a></h4>
+<p>The <code>AudioPlayerWidget</code> provides a robust audio player with play/pause functionality, a progress bar that allows seeking, and comprehensive handling for loading and error states. It is designed to play audio from a given URL.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AudioPlayerWidget({
+  super.key,
+  required this.audioUrl,
+  this.onPlaybackComplete,
+  required this.isProcessing,
+  this.audioName,
+  this.onPlayerCreated,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AudioPlayerWidget(
+  audioUrl: 'https://example.com/audio.mp3',
+  isProcessing: false,
+  audioName: 'My Audio Track',
+  onPlaybackComplete: () {
+    print('Playback completed!');
+  },
+)
+</code></pre>
+<h4 id="contentwidget">ContentWidget<a class="headerlink" href="#contentwidget" title="Permanent link">&para;</a></h4>
+<p>The <code>ContentWidget</code> is responsible for displaying HTML content fetched from a specified URL. It provides visual feedback for loading states and error conditions, with a retry mechanism.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ContentWidget({
+  super.key,
+  required this.title,
+  required this.fileUrl,
+  required this.fileName,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ContentWidget(
+  title: 'Lesson 1: Introduction',
+  fileUrl: 'https://example.com/lesson1.html',
+  fileName: 'lesson1.html',
+)
+</code></pre>
+<h4 id="coursecard">CourseCard<a class="headerlink" href="#coursecard" title="Permanent link">&para;</a></h4>
+<p>The <code>CourseCard</code> widget displays a compact overview of a training course, featuring its image, name, type, and (if applicable) end date. It's designed to be tappable for further interaction.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const CourseCard({
+  super.key,
+  required this.course,
+  required this.onTap,
+  this.itemHeight = 280,
+  this.isSmall,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">CourseCard(
+  course: course,
+  onTap: () {
+    // Navigate to course details
+  },
+)
+</code></pre>
+<h4 id="customselectiongroup">CustomSelectionGroup<a class="headerlink" href="#customselectiongroup" title="Permanent link">&para;</a></h4>
+<p>The <code>CustomSelectionGroup</code> widget allows users to select one or multiple options from a provided list of <code>QuestionAnswer</code> objects. It supports both single and multi-selection modes and provides visual feedback for correct answers once the question has been answered.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const CustomSelectionGroup({
+  super.key,
+  required this.options,
+  required this.onChanged,
+  required this.answered,
+  required this.answerMappings,
+  this.isMultiSelect = false,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">CustomSelectionGroup(
+  options: [
+    QuestionAnswer(id: 1, content: 'Option 1', isCorrectAnswer: false),
+    QuestionAnswer(id: 2, content: 'Option 2', isCorrectAnswer: true),
+  ],
+  onChanged: (selectedOptions) {
+    print('Selected options: $selectedOptions');
+  },
+  answered: false,
+  answerMappings: [],
+  isMultiSelect: false,
+)
+</code></pre>
+<h4 id="optionchoice">OptionChoice<a class="headerlink" href="#optionchoice" title="Permanent link">&para;</a></h4>
+<p>The <code>OptionChoice</code> widget is an interactive component designed for presenting multiple-choice or single-choice questions within training modules. It features a countdown timer, displays question content (including a title and an optional image), and allows users to select answers with visual feedback. It supports both single and multiple answer selections.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const OptionChoice({
+  super.key,
+  required this.contents,
+  this.file,
+  required this.title,
+  required this.time,
+  required this.selecteds,
+  this.onUpdateOption,
+  this.onTimeUp,
+  required this.courseSectionId,
+  required this.courseSectionContentId,
+  required this.isCompleted,
+  required this.isMultipleChoice,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">OptionChoice(
+  title: 'What is Flutter?',
+  time: 60,
+  contents: [
+    CourseSectionContentAnswerOption(id: 1, content: 'A bird', isCorrect: false),
+    CourseSectionContentAnswerOption(id: 2, content: 'A UI toolkit', isCorrect: true),
+  ],
+  selecteds: [],
+  courseSectionId: 1,
+  courseSectionContentId: 1,
+  isCompleted: false,
+  isMultipleChoice: false,
+  onUpdateOption: (selected) {
+    print('Selected: $selected');
+  },
+  onTimeUp: (timeUp) {
+    print('Time up: $timeUp');
+  },
+)
+</code></pre>
+<h4 id="pathcard">PathCard<a class="headerlink" href="#pathcard" title="Permanent link">&para;</a></h4>
+<p>The <code>PathCard</code> widget displays a card representing a training path, showcasing its image, name, and the total number of courses it encompasses. It is designed to be tappable for user interaction.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const PathCard({
+  super.key,
+  required this.trainingPath,
+  required this.onTap,
+  this.itemHeight = 132,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">PathCard(
+  trainingPath: trainingPath,
+  onTap: () {
+    // Navigate to training path details
+  },
+)
+</code></pre>
+<h4 id="questionanswerresult">QuestionAnswerResult<a class="headerlink" href="#questionanswerresult" title="Permanent link">&para;</a></h4>
+<p>The <code>QuestionAnswerResult</code> widget displays the outcome of a question and answer, visually indicating whether the answer was correct or incorrect through an icon and corresponding text.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const QuestionAnswerResult({
+  super.key,
+  required this.isCorrect,
+  required this.content,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">QuestionAnswerResult(
+  isCorrect: true,
+)
+</code></pre>
+<h4 id="quizcard">QuizCard<a class="headerlink" href="#quizcard" title="Permanent link">&para;</a></h4>
+<p>The <code>QuizCard</code> widget displays a quiz entry, showing its name, deadline, and a visual indicator (lock icon) if prerequisite courses are not completed. It handles user interaction, including navigation to course previews when required.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const QuizCard({
+  super.key,
+  required this.quiz,
+  required this.onTap,
+  this.itemHeight = 240,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">QuizCard(
+  quiz: quizPartition,
+  onTap: () {
+    // Navigate to quiz details
+  },
+)
+</code></pre>
+<h4 id="responsivegridview">ResponsiveGridView<a class="headerlink" href="#responsivegridview" title="Permanent link">&para;</a></h4>
+<p>The <code>ResponsiveGridView</code> widget arranges a list of items in a grid layout, dynamically adjusting the number of columns based on the available screen width to provide a responsive user interface.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const ResponsiveGridView({
+  super.key,
+  required this.items,
+  required this.itemHeight,
+  this.padding,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">ResponsiveGridView(
+  items: const [
+    Card(child: Center(child: Text('Item 1'))),
+    Card(child: Center(child: Text('Item 2'))),
+    Card(child: Center(child: Text('Item 3'))),
+  ],
+  itemHeight: 150,
+)
+</code></pre>
+<h4 id="sidleimage">SidleImage<a class="headerlink" href="#sidleimage" title="Permanent link">&para;</a></h4>
+<p>The <code>SidleImage</code> widget presents a series of images as slides, optionally accompanied by notes. It provides a <code>PageView</code> for navigation, a page indicator, and functionality for full-screen image viewing, suitable for step-by-step training content.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const SidleImage({
+  super.key,
+  required this.contents,
+  required this.hasAudioFile,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">SidleImage(
+  contents: [
+    CourseSectionContentSlide(
+      image: File(url: 'https://example.com/slide1.jpg'),
+      note: 'This is the first slide.',
+    ),
+    CourseSectionContentSlide(
+      image: File(url: 'https://example.com/slide2.jpg'),
+      note: 'This is the second slide.',
+    ),
+  ],
+)
+</code></pre>
+<h4 id="textborderbutton">TextBorderButton<a class="headerlink" href="#textborderbutton" title="Permanent link">&para;</a></h4>
+<p>The <code>TextBorderButton</code> widget provides a customizable button with a text label, a border, and optional features like an icon and a loading indicator.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const TextBorderButton({
+  super.key,
+  required this.text,
+  required this.onPressed,
+  this.isLoading = false,
+  this.mainAxisAlignment = MainAxisAlignment.start,
+  this.icon,
+  this.textStyle,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">TextBorderButton(
+  text: 'Submit',
+  onPressed: () {
+    // Handle button press
+  },
+)
+</code></pre>
+<h4 id="trainingattachmentitem">TrainingAttachmentItem<a class="headerlink" href="#trainingattachmentitem" title="Permanent link">&para;</a></h4>
+<p>The <code>TrainingAttachmentItem</code> widget displays a single attachment, which can be either a file or a link. It shows an appropriate icon, the attachment name, and for files, it displays the file size and a download/open button. This widget is functionally identical to <code>AttachmentItem</code> in <code>supa_spend</code>.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const TrainingAttachmentItem({
+  super.key,
+  required this.item,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">TrainingAttachmentItem(
+  item: attachment,
+)
+</code></pre>
+<h4 id="truefalsechoice">TrueFalseChoice<a class="headerlink" href="#truefalsechoice" title="Permanent link">&para;</a></h4>
+<p>The <code>TrueFalseChoice</code> widget is a specialized interactive component designed for presenting true/false questions within training modules. It shares similar functionalities with <code>OptionChoice</code> but is optimized for binary answer selections. It includes a timer, displays content (title, optional image), and allows users to make true/false selections.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const TrueFalseChoice({
+  super.key,
+  required this.contents,
+  this.file,
+  required this.title,
+  required this.time,
+  required this.selecteds,
+  this.onUpdateOption,
+  this.onTimeUp,
+  required this.courseSectionId,
+  required this.courseSectionContentId,
+  required this.isCompleted,
+  required this.isMultipleChoice,
+  required this.content,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">TrueFalseChoice(
+  title: 'Is Flutter a UI framework?',
+  time: 30,
+  contents: [
+    CourseSectionContentAnswerOption(id: 1, content: 'True', isCorrect: true),
+    CourseSectionContentAnswerOption(id: 2, content: 'False', isCorrect: false),
+  ],
+  selecteds: [],
+  courseSectionId: 1,
+  courseSectionContentId: 1,
+  isCompleted: false,
+  isMultipleChoice: false,
+  content: 'Select true or false.',
+  onUpdateOption: (selected) {
+    print('Selected: $selected');
+  },
+)
+</code></pre>
+<h4 id="youtubevideoplayerwidget">YoutubeVideoPlayerWidget<a class="headerlink" href="#youtubevideoplayerwidget" title="Permanent link">&para;</a></h4>
+<p>The <code>YoutubeVideoPlayerWidget</code> embeds and plays YouTube videos, providing playback controls and handling various video states.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const YoutubeVideoPlayerWidget({
+  super.key,
+  required this.videoUrl,
+  this.onVideoComplete,
+  this.isAutoplay = true,
+  this.isRewind = false,
+  this.isLandscape = false,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">YoutubeVideoPlayerWidget(
+  videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Rick Astley - Never Gonna Give You Up
+  isAutoplay: true,
+  onVideoComplete: () {
+    print('Video playback completed!');
+  },
+)
+</code></pre>
+<h3 id="supa-work-widgets">Supa Work Widgets<a class="headerlink" href="#supa-work-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="atoms_1">Atoms<a class="headerlink" href="#atoms_1" title="Permanent link">&para;</a></h4>
+<h5 id="enumbadge">EnumBadge<a class="headerlink" href="#enumbadge" title="Permanent link">&para;</a></h5>
+<p>The <code>EnumBadge</code> widget displays a status badge based on an <code>EnumModel</code>. It uses <code>TextStatusBadge</code> internally to render the badge with appropriate colors and text.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const EnumBadge({
+  super.key,
+  required this.status,
+  this.backgroundColor,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">EnumBadge(
+  status: someEnumValue,
+)
+</code></pre>
+<h5 id="locationrichtext">LocationRichText<a class="headerlink" href="#locationrichtext" title="Permanent link">&para;</a></h5>
+<p>The <code>LocationRichText</code> widget displays a rich text string, highlighting a specific portion of the text. It is typically used for presenting location-related information.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const LocationRichText({
+  super.key,
+  required this.firstText,
+  required this.highlightedText,
+  this.lastText,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">LocationRichText(
+  firstText: 'You are currently at ',
+  highlightedText: 'Building A',
+  lastText: ', Floor 3.',
+)
+</code></pre>
+<h5 id="outofrangewarning">OutOfRangeWarning<a class="headerlink" href="#outofrangewarning" title="Permanent link">&para;</a></h5>
+<p>The <code>OutOfRangeWarning</code> widget displays a warning message indicating that the user is outside a predefined geographical range. It shows the current distance, the maximum allowed distance, and provides an option to navigate to Google Maps.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const OutOfRangeWarning({
+  super.key,
+  required this.distance,
+  required this.maxAllowedDistance,
+  required this.onNavigateToGoogleMaps,
+  required this.formattedDistance,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">OutOfRangeWarning(
+  distance: 150.0,
+  maxAllowedDistance: 100.0,
+  formattedDistance: '150 meters',
+  onNavigateToGoogleMaps: () {
+    // Navigate to Google Maps
+  },
+)
+</code></pre>
+<h4 id="molecules_1">Molecules<a class="headerlink" href="#molecules_1" title="Permanent link">&para;</a></h4>
+<h5 id="analyticsiconbutton">AnalyticsIconButton<a class="headerlink" href="#analyticsiconbutton" title="Permanent link">&para;</a></h5>
+<p>The <code>AnalyticsIconButton</code> widget is an icon button that, when tapped, navigates the user to the analytics page associated with a specific board ID.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const AnalyticsIconButton({
+  super.key,
+  required this.boardId,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AnalyticsIconButton(
+  boardId: 123,
+)
+</code></pre>
+<h5 id="workcalendarswitchviewbutton">WorkCalendarSwitchViewButton<a class="headerlink" href="#workcalendarswitchviewbutton" title="Permanent link">&para;</a></h5>
+<p>The <code>WorkCalendarSwitchViewButton</code> widget is an icon button used to toggle between a calendar view and a list view. The icon changes dynamically based on the current view.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const WorkCalendarSwitchViewButton({
+  super.key,
+  required this.isCalendar,
+  required this.onPressed,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">WorkCalendarSwitchViewButton(
+  isCalendar: true, // Assuming current view is calendar
+  onPressed: () {
+    // Toggle view
+  },
+)
+</code></pre>
+<h4 id="organisms_1">Organisms<a class="headerlink" href="#organisms_1" title="Permanent link">&para;</a></h4>
+<h5 id="appsearchbaranalytics">AppSearchBarAnalytics<a class="headerlink" href="#appsearchbaranalytics" title="Permanent link">&para;</a></h5>
+<p>The <code>AppSearchBarAnalytics</code> widget is a custom <code>AppBar</code> that integrates an analytics icon button, a search field, and a profile button. It provides a consistent header for pages requiring these functionalities.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">AppSearchBarAnalytics({
+  super.key,
+  required this.searchHint,
+  this.onProfilePressed,
+  this.onSearch,
+  required this.boardId,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">AppSearchBarAnalytics(
+  searchHint: 'Search tasks',
+  boardId: 123,
+  onSearch: () {
+    // Handle search action
+  },
+  onProfilePressed: () {
+    // Handle profile button press
+  },
+)
+</code></pre>
+<h5 id="workinspectionemptystate">WorkInspectionEmptyState<a class="headerlink" href="#workinspectionemptystate" title="Permanent link">&para;</a></h5>
+<p>The <code>WorkInspectionEmptyState</code> widget displays a clear message and a relevant SVG illustration when there are no inspection tasks to show. It includes a title and a subtitle to inform the user.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const WorkInspectionEmptyState({super.key});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">WorkInspectionEmptyState()
+</code></pre>
+<h5 id="worktaskassignmentemptystate">WorkTaskAssignmentEmptyState<a class="headerlink" href="#worktaskassignmentemptystate" title="Permanent link">&para;</a></h5>
+<p>The <code>WorkTaskAssignmentEmptyState</code> widget provides a visual indication with an SVG image and a subtitle when there are no task assignments to display, guiding the user in an empty state.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const WorkTaskAssignmentEmptyState({super.key});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">WorkTaskAssignmentEmptyState()
+</code></pre>
+<h4 id="templates_1">Templates<a class="headerlink" href="#templates_1" title="Permanent link">&para;</a></h4>
+<h5 id="pageactionsdefault">PageActionsDefault<a class="headerlink" href="#pageactionsdefault" title="Permanent link">&para;</a></h5>
+<p>The <code>PageActionsDefault</code> widget provides a standard page layout with a customizable app bar. This app bar includes a back button, a title, and an optional list of actions. The main content of the page is provided through its <code>body</code> property and is scrollable.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">const PageActionsDefault({
+  super.key,
+  required this.body,
+  required this.title,
+  this.actions,
+  this.onGoBack,
+  this.backgroundColor,
+  this.controller,
+});
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="language-dart">PageActionsDefault(
+  title: 'My Page',
+  onGoBack: () {
+    // Handle custom back action
+  },
+  actions: [
+    IconButton(
+      icon: Icon(Icons.settings),
+      onPressed: () {
+        // Handle settings action
+      },
+    ),
+  ],
+  body: Center(
+    child: Text('Page Content'),
+  ),
+)
+</code></pre>
+<h2 id="component-relationships">Component Relationships<a class="headerlink" href="#component-relationships" title="Permanent link">&para;</a></h2>
+<h3 id="filter-components">Filter Components<a class="headerlink" href="#filter-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GenericFilterWidget</code> uses <code>DropdownChip</code> and <code>MultipleSelectChip</code></li>
+<li><code>MultipleSelectChip</code> uses <code>DropdownChip</code> internally</li>
+<li>Filter modals (<code>SelectionModal</code>, <code>SelectionSearchModal</code>) are used by filter chips</li>
+</ul>
+<h3 id="navigation-components">Navigation Components<a class="headerlink" href="#navigation-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>ScaffoldNavbar</code> uses <code>AppBadgeIcon</code> for navigation items with badges</li>
+<li><code>PageDefault</code> provides standard page layout used throughout the app</li>
+</ul>
+<h3 id="form-components">Form Components<a class="headerlink" href="#form-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Input</code> is the primary text input component</li>
+<li><code>AppFilledButton</code> is used for form submissions</li>
+<li><code>ActionLine</code> can be used for form settings or options</li>
+</ul>
+<h2 id="component-selection-guide">Component Selection Guide<a class="headerlink" href="#component-selection-guide" title="Permanent link">&para;</a></h2>
+<h3 id="when-to-use-atoms-vs-molecules-vs-organisms">When to use Atoms vs Molecules vs Organisms<a class="headerlink" href="#when-to-use-atoms-vs-molecules-vs-organisms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atoms</strong>: Use for simple, single-purpose components (buttons, inputs, badges)</li>
+<li><strong>Molecules</strong>: Use for combinations of atoms that form a functional unit (label + value, icon + badge)</li>
+<li><strong>Organisms</strong>: Use for complex, feature-complete components (modals, filters, navigation)</li>
+</ul>
+<h3 id="common-patterns">Common Patterns<a class="headerlink" href="#common-patterns" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Form Input</strong>: Use <code>Input</code> atom</li>
+<li><strong>Form Submission</strong>: Use <code>AppFilledButton</code> atom</li>
+<li><strong>Data Display</strong>: Use <code>DataLine</code> molecule</li>
+<li><strong>Navigation</strong>: Use <code>ActionLine</code> molecule or <code>ScaffoldNavbar</code> template</li>
+<li><strong>Selection</strong>: Use <code>SelectionModal</code> or <code>SelectionSearchModal</code> organisms</li>
+<li><strong>Filtering</strong>: Use <code>GenericFilterWidget</code> organism with appropriate filter items</li>
+</ol>
+<h2 id="sub-project-component-libraries">Sub-Project Component Libraries<a class="headerlink" href="#sub-project-component-libraries" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="supa_attendance_widgets.md">Supa Attendance Widgets</a></li>
+<li><a href="supa_bibs_widgets.md">Supa Bibs Widgets</a></li>
+<li><a href="supa_serving_widgets.md">Supa Serving Widgets</a></li>
+<li><a href="supa_spend_widgets.md">Supa Spend Widgets</a></li>
+<li><a href="supa_training_widgets.md">Supa Training Widgets</a></li>
+<li><a href="supa_work_widgets.md">Supa Work Widgets</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

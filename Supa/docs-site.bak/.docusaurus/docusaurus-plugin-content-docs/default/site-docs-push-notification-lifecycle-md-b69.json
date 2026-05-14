@@ -1,0 +1,24 @@
+{
+  "unversionedId": "push_notification_lifecycle",
+  "id": "push_notification_lifecycle",
+  "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+  "description": "Tài liệu này mô tả luồng hoạt động của hệ thống thông báo đẩy (FCM) trong ứng dụng, bao gồm quá trình đăng ký khi người dùng đăng nhập và xóa token khi người dùng đăng xuất.",
+  "source": "@site/docs/push_notification_lifecycle.md",
+  "sourceDirName": ".",
+  "slug": "/push_notification_lifecycle",
+  "permalink": "/docs/push_notification_lifecycle",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/push_notification_lifecycle.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Notification Handler System",
+    "permalink": "/docs/notification-handlers"
+  },
+  "next": {
+    "title": "ai_gennerate",
+    "permalink": "/docs/questionnair/ai_gennerate"
+  }
+}

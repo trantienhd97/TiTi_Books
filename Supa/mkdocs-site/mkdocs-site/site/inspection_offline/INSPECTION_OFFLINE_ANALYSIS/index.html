@@ -1,0 +1,2531 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inspection-offline-phan-tich-va-e-xuat-giai-phap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inspection-offline-phan-tich-va-e-xuat-giai-phap">INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP<a class="headerlink" href="#inspection-offline-phan-tich-va-e-xuat-giai-phap" title="Permanent link">&para;</a></h1>
+<h2 id="muc-tieu">📋 MỤC TIÊU<a class="headerlink" href="#muc-tieu" title="Permanent link">&para;</a></h2>
+<p>Chuyển đổi hệ thống Inspection hiện tại từ việc phụ thuộc Backend để tính toán điểm (scoring) và logic sang việc xử lý locally trên client, cho phép tính toán điểm và cảnh báo ngay lập tức mà không cần chờ response từ Backend.</p>
+<h2 id="phan-tich-he-thong-hien-tai">🔍 PHÂN TÍCH HỆ THỐNG HIỆN TẠI<a class="headerlink" href="#phan-tich-he-thong-hien-tai" title="Permanent link">&para;</a></h2>
+<h3 id="1-cau-truc-trang-inspection-answer">1. Cấu Trúc Trang Inspection Answer<a class="headerlink" href="#1-cau-truc-trang-inspection-answer" title="Permanent link">&para;</a></h3>
+<h4 id="11-cau-truc-file-chinh">1.1. Cấu Trúc File Chính<a class="headerlink" href="#11-cau-truc-file-chinh" title="Permanent link">&para;</a></h4>
+<p><strong>File:</strong> <code>inspection_answer_page.dart</code> (~2034 dòng)</p>
+<p><strong>Chức năng chính:</strong>
+- Hiển thị và quản lý các câu hỏi inspection
+- Auto-save câu trả lời lên Backend
+- Nhận điểm số và logic validation từ Backend sau mỗi lần update
+- Quản lý navigation giữa các trang/sections</p>
+<h4 id="12-cau-truc-du-lieu">1.2. Cấu Trúc Dữ Liệu<a class="headerlink" href="#12-cau-truc-du-lieu" title="Permanent link">&para;</a></h4>
+<p><strong>Model chính:</strong></p>
+<pre><code class="language-dart">class InspectionQuestion extends JsonModel {
+  // Thông tin cơ bản
+  JsonInteger id;
+  JsonInteger inspectionId;
+  JsonInteger inspectionPageId;
+  JsonInteger questionId;
+  JsonInteger parentId;
+  JsonInteger questionTypeId;
+  JsonInteger answerTypeId;
+
+  // Cấu hình scoring
+  JsonBoolean useScore;
+  JsonBoolean useFlag;
+  JsonBoolean isRequired;
+  JsonDouble score;           // Điểm hiện tại (từ BE)
+  JsonDouble maxScore;        // Điểm tối đa (từ BE)
+  JsonBoolean isDeductedPageScore;
+  JsonBoolean isDeductedSectionScore;
+  JsonBoolean isDeductedInspectionScore;
+
+  // Dữ liệu câu trả lời
+  JsonList&lt;InspectionQuestionAnswer&gt; inspectionQuestionAnswers;
+  JsonList&lt;InspectionAnswerOption&gt; inspectionAnswerOptions;
+  JsonList&lt;InspectionQuestionResponseContent&gt; inspectionQuestionResponseContents;
+
+  // Logic conditionals
+  JsonList&lt;InspectionQuestionConditional&gt; inspectionQuestionConditionals;
+
+  // Nested questions (sections)
+  JsonList&lt;InspectionQuestion&gt; inspectionQuestions;
+
+  // Cấu hình khác
+  JsonInteger numberUnitId;
+  JsonBoolean useLoop;
+  JsonBoolean useDate;
+  JsonBoolean useTime;
+  JsonString content;
+  JsonString description;
+  JsonString note;
+
+  // Files
+  JsonList&lt;InspectionQuestionFileMapping&gt; inspectionQuestionFileMappings;
+
+  // Task assignments
+  JsonList&lt;TaskAssignment&gt; taskAssignments;
+
+  // Errors &amp; Warnings từ BE
+  Map&lt;String, String&gt; errors;
+  Map&lt;String, String&gt; warnings;
+}
+</code></pre>
+<p><strong>Các Model Liên Quan:</strong>
+- <code>Inspection</code> - Chứa thông tin tổng thể inspection
+- <code>InspectionPage</code> - Trang/section
+- <code>InspectionQuestionAnswer</code> - Câu trả lời
+- <code>InspectionAnswerOption</code> - Lựa chọn cho single/multiple choice
+- <code>InspectionQuestionConditional</code> - Logic điều kiện
+- <code>InspectionQuestionScore</code> - Chi tiết điểm số (page, section, total)</p>
+<h3 id="2-cac-trang-chinh-trong-inspection">2. Các Trang Chính Trong Inspection<a class="headerlink" href="#2-cac-trang-chinh-trong-inspection" title="Permanent link">&para;</a></h3>
+<h4 id="21-information-page-optional">2.1. Information Page (Optional)<a class="headerlink" href="#21-information-page-optional" title="Permanent link">&para;</a></h4>
+<p><strong>File:</strong> <code>widgets/information_answer/information_answer_page.dart</code></p>
+<p><strong>Chức năng:</strong>
+- Hiển thị thông tin chung: Site, Date, Creator, Code
+- Có thể ẩn/hiện dựa trên <code>isHideGeneralInformation</code>
+- Cho phép chọn site, user, date
+- Upload media với watermark</p>
+<p><strong>Đặc điểm:</strong>
+- Không có scoring
+- Có validation cơ bản (required fields)
+- Auto-save lên BE</p>
+<h4 id="22-question-pages">2.2. Question Pages<a class="headerlink" href="#22-question-pages" title="Permanent link">&para;</a></h4>
+<p><strong>Phân loại theo Answer Type:</strong></p>
+<ol>
+<li><strong>TEXT &amp; NUMBER</strong> (<code>inspection_question_type_text_and_number.dart</code>)</li>
+<li>Input text/số</li>
+<li>Có thể có đơn vị (numberUnit)</li>
+<li>Upload files đi kèm</li>
+<li>
+<p>Note field</p>
+</li>
+<li>
+<p><strong>DATE_TIME</strong> (<code>inspection_question_type_date_time.dart</code>)</p>
+</li>
+<li>Chọn ngày/giờ</li>
+<li>Có thể chỉ ngày hoặc cả giờ (useTime)</li>
+<li>Upload files đi kèm</li>
+<li>
+<p>Note field</p>
+</li>
+<li>
+<p><strong>SINGLE_CHOICE / MULTIPLE_CHOICE</strong> </p>
+</li>
+<li>2 loại: ResponseSet (<code>inspection_question_response_set_type_select_options.dart</code>) hoặc AnswerOptions (<code>inspection_question_type_select_options.dart</code>)</li>
+<li>Mỗi option có thể có:<ul>
+<li>Scoring khác nhau</li>
+<li>Conditional logic</li>
+<li>Task assignment trigger</li>
+</ul>
+</li>
+<li>Upload files đi kèm</li>
+<li>
+<p>Note field</p>
+</li>
+<li>
+<p><strong>INSTRUCTION</strong> (<code>inspection_question_type_instruction.dart</code>)</p>
+</li>
+<li>Hiển thị hướng dẫn</li>
+<li>Upload proof files (InsoectionQuestionAnswer)</li>
+<li>Upload reference files (InspectionQuestion)</li>
+<li>
+<p>Note field</p>
+</li>
+<li>
+<p><strong>IMAGE</strong> (<code>inspection_question_type_media.dart</code>)</p>
+</li>
+<li>Bắt buộc upload ảnh/video</li>
+<li>Upload proof files</li>
+<li>Upload reference files</li>
+<li>
+<p>Note field</p>
+</li>
+<li>
+<p><strong>LOCATION</strong> (<code>inspection_question_type_location.dart</code>)</p>
+</li>
+<li>Lấy GPS coordinates</li>
+<li>Upload files</li>
+<li>Note field</li>
+</ol>
+<h3 id="3-phan-oan-sections">3. Phân Đoạn (Sections)<a class="headerlink" href="#3-phan-oan-sections" title="Permanent link">&para;</a></h3>
+<p><strong>Cấu trúc:</strong>
+- Questions có thể có nested questions thông qua <code>inspectionQuestions</code> list
+- Parent question có thể là một section
+- Section có thể có điểm riêng (aggregated từ child questions)</p>
+<p><strong>Widget:</strong> <code>InspectionQuestionAnswerWidget</code>
+- Quản lý expand/collapse state
+- Build tất cả child questions</p>
+<h3 id="4-scoring-system-hien-tai">4. Scoring System (Hiện Tại)<a class="headerlink" href="#4-scoring-system-hien-tai" title="Permanent link">&para;</a></h3>
+<h4 id="41-flow-hien-tai">4.1. Flow Hiện Tại<a class="headerlink" href="#41-flow-hien-tai" title="Permanent link">&para;</a></h4>
+<pre><code>User nhập liệu
+    ↓
+Auto-save lên BE (_handleUpdateInspectionQuestionAnswer)
+    ↓
+BE tính toán:
+    - Score cho question
+    - Score cho parent (nếu có)
+    - Score cho page/section
+    - Score cho toàn bộ inspection
+    - Validation (errors)
+    - Warnings
+    - Task assignment triggers
+    ↓
+Response trả về InspectionQuestion với:
+    - inspectionQuestionScore (chứa tất cả scores)
+    - errors map
+    - warnings map
+    - taskAssignments list
+    ↓
+Client cập nhật UI (updateInspectionQuestion)
+</code></pre>
+<h4 id="42-cac-ham-scoring-chinh">4.2. Các Hàm Scoring Chính<a class="headerlink" href="#42-cac-ham-scoring-chinh" title="Permanent link">&para;</a></h4>
+<p><strong><code>updateInspectionQuestion(InspectionQuestion inspectionQuestionAnswer)</code></strong>
+- Update score cho question
+- Update score cho parent question (nếu có)
+- Update score cho page
+- Update score cho inspection
+- Update errors, warnings
+- Update task assignments</p>
+<p><strong><code>_handleUpdateInspectionQuestionAnswer()</code></strong>
+- Call API update answer
+- Nhận response với scores
+- Gọi <code>updateInspectionQuestion()</code> để update UI</p>
+<h3 id="5-logic-conditionals">5. Logic Conditionals<a class="headerlink" href="#5-logic-conditionals" title="Permanent link">&para;</a></h3>
+<p><strong><code>InspectionQuestionConditional</code>:</strong>
+- Chứa logic điều kiện để:
+  - Hiển thị/ẩn questions
+  - Trigger task assignments
+  - Apply specific scoring rules
+  - Show warnings</p>
+<p><strong>Hiện tại:</strong>
+- Logic được BE quản lý
+- Client chỉ hiển thị kết quả từ BE</p>
+<h3 id="6-validation-errors">6. Validation &amp; Errors<a class="headerlink" href="#6-validation-errors" title="Permanent link">&para;</a></h3>
+<p><strong>2 loại:</strong></p>
+<ol>
+<li><strong>Field-level errors</strong> (<code>errors</code> map)</li>
+<li>Key-value pairs: fieldName → errorMessage</li>
+<li>Hiển thị dưới input field</li>
+<li>
+<p>Ví dụ: required field, invalid format</p>
+</li>
+<li>
+<p><strong>General errors</strong> (<code>generalErrors</code> array)</p>
+</li>
+<li>Errors không thuộc về field cụ thể</li>
+<li>Hiển thị trong toast notification</li>
+</ol>
+<p><strong>Scroll to Error:</strong>
+- Khi submit/validate, tự động scroll đến question có error đầu tiên
+- Expand parent section nếu error ở child question</p>
+<h3 id="7-auto-save-mechanism">7. Auto-save Mechanism<a class="headerlink" href="#7-auto-save-mechanism" title="Permanent link">&para;</a></h3>
+<p><strong>Các điểm trigger auto-save:</strong>
+- Text/Number input (onSubmit)
+- Date/Time selection
+- Option selection (Single/Multiple choice)
+- Location capture
+- Note update
+- File upload/delete</p>
+<p><strong>Vấn đề:</strong>
+- Phải chờ BE response để có score
+- Network lag gây UX không mượt
+- Không thể offline</p>
+<h2 id="yeu-cau-moi">🎯 YÊU CẦU MỚI<a class="headerlink" href="#yeu-cau-moi" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Local Scoring:</strong> Tính điểm ngay lập tức trên client</li>
+<li><strong>Local Validation:</strong> Validate và hiển thị warnings mà không cần BE</li>
+<li><strong>Offline Support:</strong> Có thể làm việc offline, sync sau</li>
+<li><strong>Giữ nguyên hệ thống cũ:</strong> Clone thành InspectionOffline/InspectionLocal</li>
+<li><strong>Config-based:</strong> Nhận config từ đầu để có đầy đủ logic</li>
+</ol>
+<h2 id="e-xuat-giai-phap">📐 ĐỀ XUẤT GIẢI PHÁP<a class="headerlink" href="#e-xuat-giai-phap" title="Permanent link">&para;</a></h2>
+<h3 id="1-kien-truc-tong-the">1. Kiến Trúc Tổng Thể<a class="headerlink" href="#1-kien-truc-tong-the" title="Permanent link">&para;</a></h3>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│           INSPECTION SYSTEMS                         │
+├─────────────────────────────────────────────────────┤
+│                                                      │
+│  ┌──────────────────┐      ┌───────────────────┐   │
+│  │   Inspection     │      │  InspectionLocal  │   │
+│  │   (Current)      │      │  (New - Offline)  │   │
+│  │                  │      │                   │   │
+│  │  - BE Scoring    │      │  - Local Scoring  │   │
+│  │  - Online Only   │      │  - Offline Ready  │   │
+│  │  - Auto-save     │      │  - Batch Save     │   │
+│  └──────────────────┘      └───────────────────┘   │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="2-cau-truc-thu-muc-e-xuat">2. Cấu Trúc Thư Mục Đề Xuất<a class="headerlink" href="#2-cau-truc-thu-muc-e-xuat" title="Permanent link">&para;</a></h3>
+<pre><code>packages/supa_work/lib/pages/inspection_local/
+├── inspection_local_answer_page.dart          # Clone của inspection_answer_page
+├── blocs/
+│   ├── inspection_local_bloc.dart             # State management
+│   ├── inspection_local_event.dart
+│   └── inspection_local_state.dart
+├── services/
+│   ├── inspection_local_scoring_service.dart  # Local scoring engine
+│   ├── inspection_local_validation_service.dart
+│   ├── inspection_local_conditional_service.dart
+│   └── inspection_local_sync_service.dart     # Sync với BE
+├── models/
+│   ├── inspection_local_config.dart           # Config từ BE
+│   ├── inspection_local_scoring_rule.dart
+│   ├── inspection_local_validation_rule.dart
+│   └── inspection_local_conditional_rule.dart
+└── widgets/
+    ├── information_answer_local/              # Clone widgets
+    │   ├── information_answer_page_local.dart
+    │   └── information_type_item_local.dart
+    ├── inspection_answer_local/
+    │   ├── inspection_question_answer_widget_local.dart
+    │   └── inspection_question_types_local/
+    │       ├── inspection_question_type_text_and_number_local.dart
+    │       ├── inspection_question_type_date_time_local.dart
+    │       ├── inspection_question_type_select_options_local.dart
+    │       ├── inspection_question_type_response_set_local.dart
+    │       ├── inspection_question_type_instruction_local.dart
+    │       ├── inspection_question_type_media_local.dart
+    │       └── inspection_question_type_location_local.dart
+    └── inspection_local_score_display.dart    # Hiển thị real-time score
+</code></pre>
+<h3 id="3-model-moi-config-structure">3. Model Mới: Config Structure<a class="headerlink" href="#3-model-moi-config-structure" title="Permanent link">&para;</a></h3>
+<h4 id="31-inspectionlocalconfig">3.1. InspectionLocalConfig<a class="headerlink" href="#31-inspectionlocalconfig" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">class InspectionLocalConfig extends JsonModel {
+  // Metadata
+  JsonInteger inspectionId;
+  JsonInteger questionnaireId;
+  JsonString version;
+  JsonDateTime lastUpdated;
+
+  // Scoring Rules
+  JsonList&lt;ScoringRule&gt; scoringRules;
+
+  // Validation Rules
+  JsonList&lt;ValidationRule&gt; validationRules;
+
+  // Conditional Rules
+  JsonList&lt;ConditionalRule&gt; conditionalRules;
+
+  // Task Assignment Rules
+  JsonList&lt;TaskAssignmentRule&gt; taskAssignmentRules;
+}
+</code></pre>
+<h4 id="32-scoringrule">3.2. ScoringRule<a class="headerlink" href="#32-scoringrule" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">class ScoringRule extends JsonModel {
+  JsonInteger questionId;
+  JsonString scoringType; // 'option_based', 'range_based', 'formula_based'
+
+  // Option-based scoring
+  JsonList&lt;OptionScore&gt; optionScores; // answerOptionId → score
+
+  // Range-based scoring (for numbers)
+  JsonList&lt;RangeScore&gt; rangeScores;
+
+  // Formula-based scoring
+  JsonString formula; // Expression string: &quot;Q1 + Q2 * 0.5&quot;
+
+  // Score aggregation
+  JsonString aggregationType; // 'sum', 'average', 'max', 'min', 'weighted'
+  JsonDouble weight; // For weighted average
+
+  // Deduction settings
+  JsonBoolean isDeductedPageScore;
+  JsonBoolean isDeductedSectionScore;
+  JsonBoolean isDeductedInspectionScore;
+
+  JsonDouble maxScore;
+}
+</code></pre>
+<h4 id="33-validationrule">3.3. ValidationRule<a class="headerlink" href="#33-validationrule" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">class ValidationRule extends JsonModel {
+  JsonInteger questionId;
+  JsonString validationType; // 'required', 'range', 'pattern', 'custom'
+
+  // Required validation
+  JsonBoolean isRequired;
+  JsonString requiredMessage;
+
+  // Range validation (for numbers)
+  JsonDouble minValue;
+  JsonDouble maxValue;
+  JsonString rangeMessage;
+
+  // Pattern validation (for text)
+  JsonString pattern; // Regex pattern
+  JsonString patternMessage;
+
+  // Custom validation
+  JsonString customExpression; // Boolean expression
+  JsonString customMessage;
+
+  // Severity
+  JsonString severity; // 'error', 'warning'
+}
+</code></pre>
+<h4 id="34-conditionalrule">3.4. ConditionalRule<a class="headerlink" href="#34-conditionalrule" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">class ConditionalRule extends JsonModel {
+  JsonInteger questionId;
+  JsonString conditionType; // 'visibility', 'required', 'scoring', 'task'
+
+  // Condition expression
+  JsonString conditionExpression; // Boolean: &quot;Q1 == 'Yes' &amp;&amp; Q2 &gt; 10&quot;
+
+  // Actions
+  JsonList&lt;Integer&gt; targetQuestionIds; // Questions affected
+  JsonString action; // 'show', 'hide', 'enable', 'disable', 'set_required'
+
+  // For scoring conditionals
+  JsonDouble conditionalScore;
+  JsonString conditionalFormula;
+
+  // For task conditionals
+  JsonInteger taskTemplateId;
+  JsonObject taskParams;
+}
+</code></pre>
+<h3 id="4-services-core-logic">4. Services - Core Logic<a class="headerlink" href="#4-services-core-logic" title="Permanent link">&para;</a></h3>
+<h4 id="41-inspectionlocalscoringservice">4.1. InspectionLocalScoringService<a class="headerlink" href="#41-inspectionlocalscoringservice" title="Permanent link">&para;</a></h4>
+<p><strong>Chức năng:</strong>
+- Tính điểm cho từng question dựa vào answer và scoring rules
+- Aggregate scores cho sections/pages/inspection
+- Apply deduction rules
+- Real-time score updates</p>
+<p><strong>Key Methods:</strong></p>
+<pre><code class="language-dart">class InspectionLocalScoringService {
+  // Tính điểm cho 1 question
+  double calculateQuestionScore(
+    InspectionQuestion question,
+    List&lt;InspectionQuestionAnswer&gt; answers,
+    ScoringRule rule,
+  );
+
+  // Tính điểm cho section (parent question)
+  double calculateSectionScore(
+    InspectionQuestion section,
+    List&lt;ScoringRule&gt; rules,
+  );
+
+  // Tính điểm cho page
+  double calculatePageScore(
+    InspectionPage page,
+    List&lt;ScoringRule&gt; rules,
+  );
+
+  // Tính tổng điểm inspection
+  double calculateInspectionScore(
+    Inspection inspection,
+    List&lt;ScoringRule&gt; rules,
+  );
+
+  // Evaluate formula-based scoring
+  double evaluateFormula(
+    String formula,
+    Map&lt;String, double&gt; questionScores,
+  );
+
+  // Apply score weights
+  double applyWeightedScoring(
+    List&lt;double&gt; scores,
+    List&lt;double&gt; weights,
+  );
+}
+</code></pre>
+<p><strong>Implementation Notes:</strong>
+- Sử dụng expression parser cho formulas (package: <code>expressions</code>)
+- Cache scores để tránh tính lại
+- Emit events khi score thay đổi</p>
+<h4 id="42-inspectionlocalvalidationservice">4.2. InspectionLocalValidationService<a class="headerlink" href="#42-inspectionlocalvalidationservice" title="Permanent link">&para;</a></h4>
+<p><strong>Chức năng:</strong>
+- Validate answers theo rules
+- Generate errors/warnings
+- Real-time validation feedback</p>
+<p><strong>Key Methods:</strong></p>
+<pre><code class="language-dart">class InspectionLocalValidationService {
+  // Validate 1 question
+  ValidationResult validateQuestion(
+    InspectionQuestion question,
+    List&lt;InspectionQuestionAnswer&gt; answers,
+    List&lt;ValidationRule&gt; rules,
+  );
+
+  // Validate toàn bộ inspection
+  Map&lt;int, ValidationResult&gt; validateInspection(
+    Inspection inspection,
+    List&lt;ValidationRule&gt; rules,
+  );
+
+  // Check required fields
+  bool checkRequired(
+    InspectionQuestion question,
+    List&lt;InspectionQuestionAnswer&gt; answers,
+  );
+
+  // Validate range
+  bool validateRange(
+    double value,
+    double? min,
+    double? max,
+  );
+
+  // Validate pattern
+  bool validatePattern(
+    String value,
+    String pattern,
+  );
+
+  // Evaluate custom expression
+  bool evaluateCustomValidation(
+    String expression,
+    Map&lt;String, dynamic&gt; context,
+  );
+}
+
+class ValidationResult {
+  bool isValid;
+  Map&lt;String, String&gt; errors;      // fieldName → errorMessage
+  Map&lt;String, String&gt; warnings;    // fieldName → warningMessage
+  List&lt;String&gt; generalErrors;
+  List&lt;String&gt; generalWarnings;
+}
+</code></pre>
+<h4 id="43-inspectionlocalconditionalservice">4.3. InspectionLocalConditionalService<a class="headerlink" href="#43-inspectionlocalconditionalservice" title="Permanent link">&para;</a></h4>
+<p><strong>Chức năng:</strong>
+- Evaluate conditional rules
+- Quản lý visibility/required state
+- Trigger task assignments
+- Apply conditional scoring</p>
+<p><strong>Key Methods:</strong></p>
+<pre><code class="language-dart">class InspectionLocalConditionalService {
+  // Evaluate conditions
+  Map&lt;int, ConditionalAction&gt; evaluateConditionals(
+    Inspection inspection,
+    List&lt;ConditionalRule&gt; rules,
+  );
+
+  // Check if question should be visible
+  bool isQuestionVisible(
+    int questionId,
+    Map&lt;int, ConditionalAction&gt; actions,
+  );
+
+  // Check if question is required
+  bool isQuestionRequired(
+    int questionId,
+    Map&lt;int, ConditionalAction&gt; actions,
+  );
+
+  // Get conditional score
+  double? getConditionalScore(
+    int questionId,
+    Map&lt;int, ConditionalAction&gt; actions,
+  );
+
+  // Get triggered tasks
+  List&lt;TaskTemplate&gt; getTriggeredTasks(
+    Map&lt;int, ConditionalAction&gt; actions,
+  );
+
+  // Evaluate expression
+  bool evaluateExpression(
+    String expression,
+    Map&lt;String, dynamic&gt; context,
+  );
+}
+
+class ConditionalAction {
+  bool? isVisible;
+  bool? isRequired;
+  double? overrideScore;
+  List&lt;TaskTemplate&gt; triggeredTasks;
+}
+</code></pre>
+<h4 id="44-inspectionlocalsyncservice">4.4. InspectionLocalSyncService<a class="headerlink" href="#44-inspectionlocalsyncservice" title="Permanent link">&para;</a></h4>
+<p><strong>Chức năng:</strong>
+- Quản lý offline/online state
+- Queue changes khi offline
+- Batch sync lên BE khi online
+- Conflict resolution</p>
+<p><strong>Key Methods:</strong></p>
+<pre><code class="language-dart">class InspectionLocalSyncService {
+  // Lưu change vào queue
+  Future&lt;void&gt; queueChange(InspectionChange change);
+
+  // Sync tất cả changes lên BE
+  Future&lt;SyncResult&gt; syncAll();
+
+  // Sync 1 inspection
+  Future&lt;void&gt; syncInspection(int inspectionId);
+
+  // Load config từ BE
+  Future&lt;InspectionLocalConfig&gt; loadConfig(int questionnaireId);
+
+  // Check online status
+  bool isOnline();
+
+  // Handle conflicts
+  Future&lt;Inspection&gt; resolveConflict(
+    Inspection local,
+    Inspection remote,
+  );
+}
+
+class InspectionChange {
+  int inspectionId;
+  int questionId;
+  DateTime timestamp;
+  String changeType; // 'answer', 'file', 'note'
+  Map&lt;String, dynamic&gt; data;
+  bool synced;
+}
+</code></pre>
+<h3 id="5-bloc-pattern-cho-state-management">5. Bloc Pattern cho State Management<a class="headerlink" href="#5-bloc-pattern-cho-state-management" title="Permanent link">&para;</a></h3>
+<h4 id="51-inspectionlocalbloc">5.1. InspectionLocalBloc<a class="headerlink" href="#51-inspectionlocalbloc" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">// Events
+abstract class InspectionLocalEvent {}
+
+class LoadInspectionLocal extends InspectionLocalEvent {
+  final int inspectionId;
+}
+
+class LoadConfigLocal extends InspectionLocalEvent {
+  final int questionnaireId;
+}
+
+class UpdateAnswerLocal extends InspectionLocalEvent {
+  final int questionId;
+  final List&lt;InspectionQuestionAnswer&gt; answers;
+}
+
+class UpdateNoteLocal extends InspectionLocalEvent {
+  final int questionId;
+  final String note;
+}
+
+class UploadFileLocal extends InspectionLocalEvent {
+  final int questionId;
+  final List&lt;File&gt; files;
+}
+
+class DeleteFileLocal extends InspectionLocalEvent {
+  final int questionId;
+  final int fileId;
+}
+
+class CalculateScoresLocal extends InspectionLocalEvent {}
+
+class ValidateInspectionLocal extends InspectionLocalEvent {}
+
+class SyncInspectionLocal extends InspectionLocalEvent {}
+
+// States
+abstract class InspectionLocalState {}
+
+class InspectionLocalInitial extends InspectionLocalState {}
+
+class InspectionLocalLoading extends InspectionLocalState {}
+
+class InspectionLocalLoaded extends InspectionLocalState {
+  final Inspection inspection;
+  final InspectionLocalConfig config;
+  final Map&lt;int, double&gt; questionScores;   // questionId → score
+  final Map&lt;int, ValidationResult&gt; validations;
+  final Map&lt;int, ConditionalAction&gt; conditionals;
+  final bool hasUnsyncedChanges;
+}
+
+class InspectionLocalError extends InspectionLocalState {
+  final String message;
+}
+
+class InspectionLocalSyncing extends InspectionLocalState {}
+
+class InspectionLocalSynced extends InspectionLocalState {
+  final SyncResult result;
+}
+
+// Bloc
+class InspectionLocalBloc extends Bloc&lt;InspectionLocalEvent, InspectionLocalState&gt; {
+  final InspectionLocalScoringService scoringService;
+  final InspectionLocalValidationService validationService;
+  final InspectionLocalConditionalService conditionalService;
+  final InspectionLocalSyncService syncService;
+
+  InspectionLocalBloc({
+    required this.scoringService,
+    required this.validationService,
+    required this.conditionalService,
+    required this.syncService,
+  }) : super(InspectionLocalInitial()) {
+    on&lt;LoadInspectionLocal&gt;(_onLoadInspection);
+    on&lt;LoadConfigLocal&gt;(_onLoadConfig);
+    on&lt;UpdateAnswerLocal&gt;(_onUpdateAnswer);
+    on&lt;UpdateNoteLocal&gt;(_onUpdateNote);
+    on&lt;UploadFileLocal&gt;(_onUploadFile);
+    on&lt;DeleteFileLocal&gt;(_onDeleteFile);
+    on&lt;CalculateScoresLocal&gt;(_onCalculateScores);
+    on&lt;ValidateInspectionLocal&gt;(_onValidate);
+    on&lt;SyncInspectionLocal&gt;(_onSync);
+  }
+
+  Future&lt;void&gt; _onLoadInspection(
+    LoadInspectionLocal event,
+    Emitter&lt;InspectionLocalState&gt; emit,
+  ) async {
+    emit(InspectionLocalLoading());
+    try {
+      final inspection = await loadInspection(event.inspectionId);
+      final config = await syncService.loadConfig(inspection.questionnaireId.value);
+
+      // Initial calculations
+      final scores = await _calculateAllScores(inspection, config);
+      final validations = await _validateAll(inspection, config);
+      final conditionals = await _evaluateAllConditionals(inspection, config);
+
+      emit(InspectionLocalLoaded(
+        inspection: inspection,
+        config: config,
+        questionScores: scores,
+        validations: validations,
+        conditionals: conditionals,
+        hasUnsyncedChanges: false,
+      ));
+    } catch (e) {
+      emit(InspectionLocalError(e.toString()));
+    }
+  }
+
+  Future&lt;void&gt; _onUpdateAnswer(
+    UpdateAnswerLocal event,
+    Emitter&lt;InspectionLocalState&gt; emit,
+  ) async {
+    if (state is! InspectionLocalLoaded) return;
+
+    final currentState = state as InspectionLocalLoaded;
+
+    // Update answer in inspection
+    final updatedInspection = _updateQuestionAnswer(
+      currentState.inspection,
+      event.questionId,
+      event.answers,
+    );
+
+    // Recalculate affected scores
+    final updatedScores = await _recalculateScores(
+      updatedInspection,
+      currentState.config,
+      event.questionId,
+    );
+
+    // Revalidate
+    final updatedValidations = await _revalidate(
+      updatedInspection,
+      currentState.config,
+      event.questionId,
+    );
+
+    // Re-evaluate conditionals
+    final updatedConditionals = await _reevaluateConditionals(
+      updatedInspection,
+      currentState.config,
+    );
+
+    // Queue change for sync
+    await syncService.queueChange(InspectionChange(
+      inspectionId: updatedInspection.id.value,
+      questionId: event.questionId,
+      timestamp: DateTime.now(),
+      changeType: 'answer',
+      data: {'answers': event.answers.map((a) =&gt; a.toJson()).toList()},
+      synced: false,
+    ));
+
+    emit(InspectionLocalLoaded(
+      inspection: updatedInspection,
+      config: currentState.config,
+      questionScores: updatedScores,
+      validations: updatedValidations,
+      conditionals: updatedConditionals,
+      hasUnsyncedChanges: true,
+    ));
+  }
+
+  // ... các handlers khác
+}
+</code></pre>
+<h3 id="6-widgets-ui-components">6. Widgets - UI Components<a class="headerlink" href="#6-widgets-ui-components" title="Permanent link">&para;</a></h3>
+<h4 id="61-thay-oi-chinh">6.1. Thay Đổi Chính<a class="headerlink" href="#61-thay-oi-chinh" title="Permanent link">&para;</a></h4>
+<p><strong>Từ:</strong></p>
+<pre><code class="language-dart">// Current: Wait for BE response
+await _handleUpdateInspectionQuestionAnswer();
+// Score updated from BE response
+</code></pre>
+<p><strong>Sang:</strong></p>
+<pre><code class="language-dart">// New: Immediate local update
+context.read&lt;InspectionLocalBloc&gt;().add(UpdateAnswerLocal(
+  questionId: question.id.value,
+  answers: [answer],
+));
+// Score updated immediately from bloc state
+</code></pre>
+<h4 id="62-score-display-widget-new">6.2. Score Display Widget (New)<a class="headerlink" href="#62-score-display-widget-new" title="Permanent link">&para;</a></h4>
+<pre><code class="language-dart">class InspectionLocalScoreDisplay extends StatelessWidget {
+  final InspectionQuestion question;
+  final double? currentScore;
+  final double? maxScore;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder&lt;InspectionLocalBloc, InspectionLocalState&gt;(
+      builder: (context, state) {
+        if (state is! InspectionLocalLoaded) return SizedBox.shrink();
+
+        final score = state.questionScores[question.id.value];
+        final validationResult = state.validations[question.id.value];
+
+        return Container(
+          padding: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: _getScoreColor(score, maxScore),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            children: [
+              Icon(_getScoreIcon(score, maxScore)),
+              SizedBox(width: 8),
+              Text('${score?.toStringAsFixed(1) ?? '0'} / ${maxScore?.toStringAsFixed(1) ?? '0'}'),
+              if (validationResult?.warnings.isNotEmpty ?? false)
+                Icon(Icons.warning, color: Colors.orange),
+              if (validationResult?.errors.isNotEmpty ?? false)
+                Icon(Icons.error, color: Colors.red),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+</code></pre>
+<h3 id="7-migration-strategy-2-phases">7. Migration Strategy - 2 Phases<a class="headerlink" href="#7-migration-strategy-2-phases" title="Permanent link">&para;</a></h3>
+<h4 id="phase-1-local-logic-fire-and-forget-api-2-3-weeks">📌 Phase 1: Local Logic + Fire-and-Forget API (2-3 Weeks)<a class="headerlink" href="#phase-1-local-logic-fire-and-forget-api-2-3-weeks" title="Permanent link">&para;</a></h4>
+<p><strong>Mục tiêu:</strong> 
+- Instant feedback cho user (tính điểm, validation ngay lập tức)
+- Lưu data vào local database
+- Call API lưu lên BE nhưng KHÔNG CHỜ response
+- User có thể thoát ra/vào lại mà không mất data</p>
+<p><strong>Architecture Overview:</strong></p>
+<pre><code>User Input
+    ↓
+Local Calculation (Instant)
+    ↓
+├─ Update UI (Real-time)
+├─ Save to Local DB
+└─ Fire-and-Forget API Call (không chờ response)
+</code></pre>
+<h5 id="711-database-setup">7.1.1. Database Setup<a class="headerlink" href="#711-database-setup" title="Permanent link">&para;</a></h5>
+<p><strong>Package:</strong> <code>drift</code> (SQLite cho Flutter)</p>
+<p><strong>Tables:</strong></p>
+<pre><code class="language-sql">-- Inspection cache
+CREATE TABLE inspections (
+  id INTEGER PRIMARY KEY,
+  questionnaire_id INTEGER,
+  data TEXT,  -- JSON serialized
+  last_updated INTEGER,
+  synced_at INTEGER
+);
+
+-- Config cache
+CREATE TABLE inspection_configs (
+  questionnaire_id INTEGER PRIMARY KEY,
+  version TEXT,
+  config_data TEXT,  -- JSON serialized
+  last_updated INTEGER
+);
+
+-- Pending changes (for fire-and-forget tracking)
+CREATE TABLE pending_api_calls (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  inspection_id INTEGER,
+  question_id INTEGER,
+  api_endpoint TEXT,
+  payload TEXT,
+  timestamp INTEGER,
+  retry_count INTEGER DEFAULT 0,
+  last_error TEXT
+);
+</code></pre>
+<h5 id="712-implementation-steps">7.1.2. Implementation Steps<a class="headerlink" href="#712-implementation-steps" title="Permanent link">&para;</a></h5>
+<p><strong>Week 1: Infrastructure</strong>
+1. ✅ Setup drift database
+   <code>dart
+   // database.dart
+   @DriftDatabase(
+     tables: [Inspections, InspectionConfigs, PendingApiCalls],
+     daos: [InspectionDao, ConfigDao, ApiCallDao]
+   )
+   class AppDatabase extends _$AppDatabase {
+     AppDatabase() : super(_openConnection());
+   }</code></p>
+<ol>
+<li>✅ Create config models</li>
+<li><code>InspectionLocalConfig</code></li>
+<li><code>ScoringRule</code></li>
+<li><code>ValidationRule</code></li>
+<li>
+<p><code>ConditionalRule</code></p>
+</li>
+<li>
+<p>✅ Implement core services</p>
+</li>
+<li><code>InspectionLocalScoringService</code> - Tính điểm local</li>
+<li><code>InspectionLocalValidationService</code> - Validate local</li>
+<li><code>InspectionLocalConditionalService</code> - Logic điều kiện</li>
+<li><code>InspectionLocalPersistenceService</code> - Lưu/load từ DB</li>
+<li>
+<p><code>InspectionFireAndForgetService</code> - Fire-and-forget API calls</p>
+</li>
+<li>
+<p>✅ Setup Bloc pattern</p>
+</li>
+<li>Events: UpdateAnswer, UpdateNote, UploadFile, etc.</li>
+<li>States: Loaded với real-time scores/validations</li>
+<li>Side effects: Save to DB, Fire API call</li>
+</ol>
+<p><strong>Week 2: Widgets &amp; Integration</strong>
+1. ✅ Clone &amp; adapt main page
+   - <code>inspection_local_answer_page.dart</code>
+   - Load data from DB on init
+   - Use Bloc for state management
+   - Real-time score display</p>
+<ol>
+<li>✅ Clone question type widgets</li>
+<li>Each widget type với local logic</li>
+<li>Immediate UI updates</li>
+<li>
+<p>No loading spinners for scoring</p>
+</li>
+<li>
+<p>✅ Implement auto-save to DB</p>
+</li>
+<li>Save on every change</li>
+<li>Throttle/debounce nếu cần</li>
+<li>
+<p>Background save (không block UI)</p>
+</li>
+<li>
+<p>✅ Implement fire-and-forget API
+   ```dart
+   Future<void> fireAndForgetUpdate(
+     InspectionQuestion question,
+     List<InspectionQuestionAnswer> answers,
+   ) async {
+     // Log pending call
+     await _apiCallDao.insert(PendingApiCall(
+       inspectionId: question.inspectionId.value,
+       questionId: question.id.value,
+       apiEndpoint: '/api/inspections/update-answer',
+       payload: jsonEncode({
+         'question': question.toJson(),
+         'answers': answers.map((a) =&gt; a.toJson()).toList(),
+       }),
+       timestamp: DateTime.now().millisecondsSinceEpoch,
+     ));</p>
+<p>// Fire API (don't wait)
+ unawaited(
+   <em>apiClient.updateAnswer(question, answers)
+     .then((</em>) {
+       // Success: remove from pending
+       _apiCallDao.deleteByQuestionId(question.id.value);
+     })
+     .catchError((error) {
+       // Error: keep in pending for retry
+       _apiCallDao.incrementRetryCount(question.id.value);
+     }),
+ );
+   }
+   ```</p>
+</li>
+</ol>
+<p><strong>Week 3: Testing &amp; Polish</strong>
+1. ✅ Unit tests
+   - Test scoring calculations
+   - Test validation logic
+   - Test conditional logic
+   - Test DB operations</p>
+<ol>
+<li>✅ Integration tests</li>
+<li>Test complete user flow</li>
+<li>Test data persistence (thoát/vào lại)</li>
+<li>
+<p>Test API failures (data vẫn safe)</p>
+</li>
+<li>
+<p>✅ Background retry mechanism
+   ```dart
+   class BackgroundApiRetryService {
+     Timer? _retryTimer;</p>
+<p>void startPeriodicRetry() {
+   <em>retryTimer = Timer.periodic(Duration(minutes: 5), (</em>) async {
+     final pendingCalls = await _apiCallDao.getAll();
+     for (final call in pendingCalls) {
+       if (call.retryCount &lt; 3) {
+         await _retryApiCall(call);
+       } else {
+         // Too many retries, log error
+         logger.error('Failed to sync: ${call.payload}');
+       }
+     }
+   });
+ }
+   }
+   ```</p>
+</li>
+<li>
+<p>✅ UI/UX enhancements</p>
+</li>
+<li>Loading indicator khi load từ DB</li>
+<li>Success toast khi save to DB</li>
+<li>Small indicator khi API call pending</li>
+<li>Error indicator nếu API fail nhiều lần</li>
+</ol>
+<h5 id="713-phase-1-deliverables">7.1.3. Phase 1 Deliverables<a class="headerlink" href="#713-phase-1-deliverables" title="Permanent link">&para;</a></h5>
+<p>✅ <strong>Functional:</strong>
+- Instant score calculation
+- Real-time validation feedback
+- Data persisted to local DB
+- Fire-and-forget API calls
+- Auto-retry failed API calls
+- User có thể thoát/vào lại không mất data</p>
+<p>✅ <strong>Technical:</strong>
+- Drift database setup
+- All services implemented
+- Bloc pattern integrated
+- All widgets cloned &amp; adapted
+- Unit &amp; integration tests</p>
+<p>✅ <strong>UX:</strong>
+- Zero loading time cho scoring
+- Smooth real-time updates
+- Data safety guaranteed
+- Transparent API state</p>
+<hr />
+<h4 id="phase-2-full-offline-batch-sync-2-3-weeks">📌 Phase 2: Full Offline + Batch Sync (2-3 Weeks)<a class="headerlink" href="#phase-2-full-offline-batch-sync-2-3-weeks" title="Permanent link">&para;</a></h4>
+<p><strong>Mục tiêu:</strong>
+- Hoàn toàn offline-capable
+- Smart sync strategy
+- Conflict resolution
+- Network-aware behavior</p>
+<p><strong>Architecture Overview:</strong></p>
+<pre><code>Offline Mode
+    ↓
+All changes queued locally
+    ↓
+Detect network availability
+    ↓
+Batch sync to BE
+    ↓
+Conflict resolution
+    ↓
+Update local state
+</code></pre>
+<h5 id="721-enhanced-database-schema">7.2.1. Enhanced Database Schema<a class="headerlink" href="#721-enhanced-database-schema" title="Permanent link">&para;</a></h5>
+<p><strong>New Tables:</strong></p>
+<pre><code class="language-sql">-- Change queue for batch sync
+CREATE TABLE change_queue (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  inspection_id INTEGER,
+  question_id INTEGER,
+  change_type TEXT,  -- 'answer', 'note', 'file', 'delete'
+  data TEXT,
+  timestamp INTEGER,
+  synced BOOLEAN DEFAULT FALSE,
+  sync_error TEXT
+);
+
+-- Sync metadata
+CREATE TABLE sync_metadata (
+  inspection_id INTEGER PRIMARY KEY,
+  last_sync_timestamp INTEGER,
+  pending_changes_count INTEGER,
+  last_conflict_timestamp INTEGER
+);
+
+-- File upload queue
+CREATE TABLE file_upload_queue (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  inspection_id INTEGER,
+  question_id INTEGER,
+  file_path TEXT,
+  file_type TEXT,
+  uploaded BOOLEAN DEFAULT FALSE,
+  remote_file_id INTEGER
+);
+</code></pre>
+<h5 id="722-implementation-steps">7.2.2. Implementation Steps<a class="headerlink" href="#722-implementation-steps" title="Permanent link">&para;</a></h5>
+<p><strong>Week 1: Sync Infrastructure</strong>
+1. ✅ Implement <code>InspectionSyncService</code>
+   ```dart
+   class InspectionSyncService {
+     Future<SyncResult> syncInspection(int inspectionId) async {
+       // 1. Check network
+       if (!await _isOnline()) {
+         return SyncResult.offline();
+       }</p>
+<pre><code>   // 2. Get all pending changes
+   final changes = await _changeQueueDao.getPending(inspectionId);
+
+   // 3. Batch sync to BE
+   final response = await _apiClient.batchSync(
+     inspectionId: inspectionId,
+     changes: changes,
+   );
+
+   // 4. Handle response
+   if (response.hasConflicts) {
+     return await _resolveConflicts(response.conflicts);
+   }
+
+   // 5. Mark as synced
+   await _changeQueueDao.markSynced(changes);
+
+   // 6. Update local data with BE response
+   await _updateLocalData(response.updatedInspection);
+
+   return SyncResult.success();
+ }
+</code></pre>
+<p>}
+   ```</p>
+<ol>
+<li>
+<p>✅ Network connectivity monitoring
+   ```dart
+   class NetworkMonitor {
+     final _connectivity = Connectivity();
+     StreamSubscription? _subscription;</p>
+<p>void startMonitoring(Function(bool isOnline) onStatusChanged) {
+   _subscription = _connectivity.onConnectivityChanged.listen((result) {
+     final isOnline = result != ConnectivityResult.none;
+     onStatusChanged(isOnline);</p>
+<pre><code> if (isOnline) {
+   // Auto-sync when back online
+   _syncService.syncAll();
+ }
+</code></pre>
+<p>});
+ }
+   }
+   ```</p>
+</li>
+<li>
+<p>✅ Conflict resolution strategy
+   ```dart
+   enum ConflictResolution {
+     useLocal,    // Keep local changes
+     useRemote,   // Discard local, use remote
+     merge,       // Merge both (if possible)
+     askUser,     // Show UI to let user decide
+   }</p>
+</li>
+</ol>
+<p>class ConflictResolver {
+     Future<Inspection> resolve(
+       Inspection local,
+       Inspection remote,
+       List<ConflictDetail> conflicts,
+     ) async {
+       // Default: Last Write Wins (by timestamp)
+       for (final conflict in conflicts) {
+         if (conflict.localTimestamp &gt; conflict.remoteTimestamp) {
+           // Keep local
+           continue;
+         } else {
+           // Use remote
+           _applyRemoteChange(conflict);
+         }
+       }</p>
+<pre><code>   // For critical conflicts, ask user
+   if (conflicts.any((c) =&gt; c.isCritical)) {
+     return await _showConflictDialog(local, remote, conflicts);
+   }
+
+   return local;
+ }
+</code></pre>
+<p>}
+   ```</p>
+<p><strong>Week 2: UI &amp; User Experience</strong>
+1. ✅ Offline indicator
+   ```dart
+   class OfflineIndicator extends StatelessWidget {
+     @override
+     Widget build(BuildContext context) {
+       return StreamBuilder<bool>(
+         stream: networkMonitor.isOnlineStream,
+         builder: (context, snapshot) {
+           final isOnline = snapshot.data ?? true;
+           if (isOnline) return SizedBox.shrink();</p>
+<pre><code>       return Container(
+         color: Colors.orange,
+         padding: EdgeInsets.all(8),
+         child: Row(
+           children: [
+             Icon(Icons.cloud_off, color: Colors.white),
+             SizedBox(width: 8),
+             Text('Offline - Changes will sync when connected'),
+           ],
+         ),
+       );
+     },
+   );
+ }
+</code></pre>
+<p>}
+   ```</p>
+<ol>
+<li>
+<p>✅ Sync status widget
+   ```dart
+   class SyncStatusWidget extends StatelessWidget {
+     @override
+     Widget build(BuildContext context) {
+       return BlocBuilder<SyncBloc, SyncState>(
+         builder: (context, state) {
+           if (state is Syncing) {
+             return LinearProgressIndicator();
+           }</p>
+<pre><code>   if (state is SyncCompleted) {
+     return Text(
+       'Last synced: ${_formatTime(state.timestamp)}',
+       style: TextStyle(color: Colors.green),
+     );
+   }
+
+   if (state is SyncError) {
+     return TextButton(
+       onPressed: () =&gt; context.read&lt;SyncBloc&gt;().add(RetrySync()),
+       child: Text('Sync failed - Tap to retry'),
+     );
+   }
+
+   return SizedBox.shrink();
+ },
+</code></pre>
+<p>);
+ }
+   }
+   ```</p>
+</li>
+<li>
+<p>✅ Conflict resolution UI
+   ```dart
+   class ConflictResolutionDialog extends StatelessWidget {
+     final List<ConflictDetail> conflicts;</p>
+<p>@override
+ Widget build(BuildContext context) {
+   return AlertDialog(
+     title: Text('Sync Conflicts Detected'),
+     content: Column(
+       children: conflicts.map((conflict) {
+         return ConflictItem(
+           question: conflict.questionContent,
+           localValue: conflict.localValue,
+           remoteValue: conflict.remoteValue,
+           onResolve: (resolution) {
+             // Apply resolution
+           },
+         );
+       }).toList(),
+     ),
+   );
+ }
+   }
+   ```</p>
+</li>
+</ol>
+<p><strong>Week 3: Advanced Features &amp; Testing</strong>
+1. ✅ Intelligent sync strategy
+   ```dart
+   class SmartSyncStrategy {
+     Future<void> sync() async {
+       // Sync priority queue
+       final criticalChanges = await _getCriticalChanges();
+       final normalChanges = await _getNormalChanges();</p>
+<pre><code>   // Sync critical changes first
+   if (criticalChanges.isNotEmpty) {
+     await _syncBatch(criticalChanges);
+   }
+
+   // Batch normal changes (every 5 minutes or 10 changes)
+   if (normalChanges.length &gt;= 10 || _timeSinceLastSync &gt; 5.minutes) {
+     await _syncBatch(normalChanges);
+   }
+ }
+</code></pre>
+<p>}
+   ```</p>
+<ol>
+<li>
+<p>✅ File upload optimization
+   ```dart
+   class FileUploadService {
+     Future<void> uploadPendingFiles() async {
+       final queue = await _fileUploadQueueDao.getPending();</p>
+<p>// Upload in background with progress
+   for (final item in queue) {
+     try {
+       final fileId = await _apiClient.uploadFile(
+         filePath: item.filePath,
+         onProgress: (progress) {
+           _progressController.add(progress);
+         },
+       );</p>
+<pre><code>   await _fileUploadQueueDao.markUploaded(item.id, fileId);
+ } catch (e) {
+   // Retry later
+   logger.error('File upload failed: ${item.filePath}');
+ }
+</code></pre>
+<p>}
+ }
+   }
+   ```</p>
+</li>
+<li>
+<p>✅ Comprehensive testing</p>
+</li>
+<li>Unit tests for sync logic</li>
+<li>Integration tests for offline flow</li>
+<li>E2E tests for conflict resolution</li>
+<li>Performance tests for large datasets</li>
+</ol>
+<h5 id="723-phase-2-deliverables">7.2.3. Phase 2 Deliverables<a class="headerlink" href="#723-phase-2-deliverables" title="Permanent link">&para;</a></h5>
+<p>✅ <strong>Functional:</strong>
+- Full offline capability
+- Smart batch sync
+- Conflict resolution
+- Automatic retry
+- File upload queue
+- Network-aware behavior</p>
+<p>✅ <strong>Technical:</strong>
+- Enhanced database schema
+- Sync service implemented
+- Network monitoring
+- Conflict resolver
+- Background workers</p>
+<p>✅ <strong>UX:</strong>
+- Offline indicator
+- Sync status display
+- Conflict resolution UI
+- Smooth online/offline transitions
+- Transparent sync process</p>
+<hr />
+<h4 id="comparison-phase-1-vs-phase-2">📊 Comparison: Phase 1 vs Phase 2<a class="headerlink" href="#comparison-phase-1-vs-phase-2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Phase 1</th>
+<th>Phase 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Network Required</strong></td>
+<td>Yes (for API calls)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Data Persistence</strong></td>
+<td>✅ Local DB</td>
+<td>✅ Local DB</td>
+</tr>
+<tr>
+<td><strong>Instant Feedback</strong></td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>API Strategy</strong></td>
+<td>Fire-and-forget</td>
+<td>Queued batch sync</td>
+</tr>
+<tr>
+<td><strong>Conflict Handling</strong></td>
+<td>Auto-retry</td>
+<td>Smart resolution</td>
+</tr>
+<tr>
+<td><strong>Offline Support</strong></td>
+<td>Partial (data saved)</td>
+<td>Full</td>
+</tr>
+<tr>
+<td><strong>File Uploads</strong></td>
+<td>Immediate attempt</td>
+<td>Queued</td>
+</tr>
+<tr>
+<td><strong>Network Monitoring</strong></td>
+<td>Basic</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td><strong>Sync UI</strong></td>
+<td>Simple indicators</td>
+<td>Full status &amp; controls</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Development Time</strong></td>
+<td>2-3 weeks</td>
+<td>2-3 weeks</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="recommended-rollout-strategy">🎯 Recommended Rollout Strategy<a class="headerlink" href="#recommended-rollout-strategy" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Phase 1 First</strong></li>
+<li>Ship to production</li>
+<li>Gather user feedback</li>
+<li>Monitor API success/failure rates</li>
+<li>
+<p>Tune retry logic</p>
+</li>
+<li>
+<p><strong>Evaluate Need for Phase 2</strong></p>
+</li>
+<li>If Phase 1 works well (high API success rate), Phase 2 may not be urgent</li>
+<li>
+<p>If users frequently lose network, Phase 2 becomes critical</p>
+</li>
+<li>
+<p><strong>Phase 2 as Enhancement</strong></p>
+</li>
+<li>Can be developed in parallel with other features</li>
+<li>Non-breaking upgrade from Phase 1</li>
+<li>Existing Phase 1 users automatically benefit</li>
+</ol>
+<h3 id="8-su-khac-biet-chinh">8. Sự Khác Biệt Chính<a class="headerlink" href="#8-su-khac-biet-chinh" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Inspection (Current)</th>
+<th>InspectionLocal (New)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scoring</strong></td>
+<td>BE calculates</td>
+<td>Local calculates</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>BE validates</td>
+<td>Local validates</td>
+</tr>
+<tr>
+<td><strong>Auto-save</strong></td>
+<td>Each change → API call</td>
+<td>Queue changes</td>
+</tr>
+<tr>
+<td><strong>Sync</strong></td>
+<td>Real-time</td>
+<td>Batch sync</td>
+</tr>
+<tr>
+<td><strong>Offline</strong></td>
+<td>❌ Không hỗ trợ</td>
+<td>✅ Full support</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Network dependent</td>
+<td>Instant feedback</td>
+</tr>
+<tr>
+<td><strong>Config</strong></td>
+<td>Implicit in BE</td>
+<td>Explicit local config</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>setState()</td>
+<td>Bloc pattern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-api-changes-required">9. API Changes Required<a class="headerlink" href="#9-api-changes-required" title="Permanent link">&para;</a></h3>
+<h4 id="91-get-config-api">9.1. Get Config API<a class="headerlink" href="#91-get-config-api" title="Permanent link">&para;</a></h4>
+<p>Sử dụng API lấy chi tiết Questionnaire hiện tại và thêm tham số <code>isIncludeConditional=true</code> để Backend trả về đầy đủ các quy tắc cấu hình.</p>
+<pre><code>GET /api/v1/questionnaires/{questionnaireId}?isIncludeConditional=true
+
+Response:
+{
+  &quot;inspectionId&quot;: 123,
+  &quot;questionnaireId&quot;: 456,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;lastUpdated&quot;: &quot;2026-01-26T10:00:00Z&quot;,
+  &quot;scoringRules&quot;: [...],
+  &quot;validationRules&quot;: [...],
+  &quot;conditionalRules&quot;: [...],
+  &quot;taskAssignmentRules&quot;: [...]
+}
+</code></pre>
+<h4 id="92-modified-endpoint-batch-sync">9.2. Modified Endpoint: Batch Sync<a class="headerlink" href="#92-modified-endpoint-batch-sync" title="Permanent link">&para;</a></h4>
+<pre><code>POST /api/v1/inspections/{inspectionId}/sync
+
+Request:
+{
+  &quot;changes&quot;: [
+    {
+      &quot;questionId&quot;: 1,
+      &quot;timestamp&quot;: &quot;2026-01-26T09:30:00Z&quot;,
+      &quot;changeType&quot;: &quot;answer&quot;,
+      &quot;data&quot;: {...}
+    },
+    ...
+  ],
+  &quot;localScores&quot;: {
+    &quot;questionScores&quot;: {...},
+    &quot;pageScores&quot;: {...},
+    &quot;inspectionScore&quot;: 85.5
+  }
+}
+
+Response:
+{
+  &quot;synced&quot;: true,
+  &quot;conflicts&quot;: [],
+  &quot;updatedInspection&quot;: {...}
+}
+</code></pre>
+<h2 id="implementation-notes">🔧 IMPLEMENTATION NOTES<a class="headerlink" href="#implementation-notes" title="Permanent link">&para;</a></h2>
+<h3 id="1-expression-parser">1. Expression Parser<a class="headerlink" href="#1-expression-parser" title="Permanent link">&para;</a></h3>
+<p><strong>Package:</strong> <code>expressions</code> or <code>math_expressions</code></p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-dart">// Scoring formula: &quot;Q1 + Q2 * 0.5&quot;
+final expression = Expression.parse(&quot;Q1 + Q2 * 0.5&quot;);
+final context = {
+  'Q1': 10.0,
+  'Q2': 20.0,
+};
+final result = expression.evaluate(context); // 20.0
+</code></pre>
+<h3 id="2-local-storage">2. Local Storage<a class="headerlink" href="#2-local-storage" title="Permanent link">&para;</a></h3>
+<p><strong>Package:</strong> <code>hive</code> or <code>drift</code></p>
+<p><strong>Usage:</strong>
+- Cache inspection data
+- Store config locally
+- Queue unsynced changes
+- Offline data persistence</p>
+<h3 id="3-network-connectivity">3. Network Connectivity<a class="headerlink" href="#3-network-connectivity" title="Permanent link">&para;</a></h3>
+<p><strong>Package:</strong> <code>connectivity_plus</code></p>
+<p><strong>Usage:</strong>
+- Detect online/offline
+- Auto-sync when back online
+- Show network status</p>
+<h3 id="4-conflict-resolution-strategy">4. Conflict Resolution Strategy<a class="headerlink" href="#4-conflict-resolution-strategy" title="Permanent link">&para;</a></h3>
+<p><strong>Approach:</strong> Last Write Wins (LWW) với timestamp
+- Client timestamp cho mỗi change
+- BE so sánh timestamp
+- Nếu conflict, BE wins (có thể customize)
+- Notify user về conflicts</p>
+<h2 id="checklist-implementation">📝 CHECKLIST IMPLEMENTATION<a class="headerlink" href="#checklist-implementation" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-local-logic-fire-and-forget-api">✅ Phase 1: Local Logic + Fire-and-Forget API<a class="headerlink" href="#phase-1-local-logic-fire-and-forget-api" title="Permanent link">&para;</a></h3>
+<h4 id="week-1-infrastructure">Week 1: Infrastructure<a class="headerlink" href="#week-1-infrastructure" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Database Setup</strong></li>
+<li>[ ] Add drift dependency</li>
+<li>[ ] Create database.dart</li>
+<li>[ ] Define Inspections table</li>
+<li>[ ] Define InspectionConfigs table</li>
+<li>[ ] Define PendingApiCalls table</li>
+<li>[ ] Create DAOs (Data Access Objects)</li>
+<li>
+<p>[ ] Test database operations</p>
+</li>
+<li>
+<p>[ ] <strong>Models &amp; Config</strong></p>
+</li>
+<li>[ ] Create InspectionLocalConfig model</li>
+<li>[ ] Create ScoringRule model</li>
+<li>[ ] Create ValidationRule model</li>
+<li>[ ] Create ConditionalRule model</li>
+<li>
+<p>[ ] Add JSON serialization/deserialization</p>
+</li>
+<li>
+<p>[ ] <strong>Core Services</strong></p>
+</li>
+<li>[ ] Implement InspectionLocalScoringService<ul>
+<li>[ ] Option-based scoring</li>
+<li>[ ] Range-based scoring</li>
+<li>[ ] Formula-based scoring</li>
+<li>[ ] Section aggregation</li>
+</ul>
+</li>
+<li>[ ] Implement InspectionLocalValidationService<ul>
+<li>[ ] Required field validation</li>
+<li>[ ] Range validation</li>
+<li>[ ] Pattern validation</li>
+<li>[ ] Custom expression validation</li>
+</ul>
+</li>
+<li>[ ] Implement InspectionLocalConditionalService<ul>
+<li>[ ] Expression parser integration</li>
+<li>[ ] Visibility rules</li>
+<li>[ ] Required rules</li>
+<li>[ ] Scoring conditionals</li>
+<li>[ ] Task triggers</li>
+</ul>
+</li>
+<li>[ ] Implement InspectionLocalPersistenceService<ul>
+<li>[ ] Save inspection to DB</li>
+<li>[ ] Load inspection from DB</li>
+<li>[ ] Update inspection in DB</li>
+<li>[ ] Cache config in DB</li>
+</ul>
+</li>
+<li>
+<p>[ ] Implement InspectionFireAndForgetService</p>
+<ul>
+<li>[ ] Log API calls to pending table</li>
+<li>[ ] Fire API without waiting</li>
+<li>[ ] Handle success (remove from pending)</li>
+<li>[ ] Handle error (keep for retry)</li>
+</ul>
+</li>
+<li>
+<p>[ ] <strong>Bloc Pattern</strong></p>
+</li>
+<li>[ ] Define events (UpdateAnswer, UpdateNote, etc.)</li>
+<li>[ ] Define states (Loading, Loaded, Error)</li>
+<li>[ ] Implement bloc logic</li>
+<li>[ ] Add side effects (DB save, API fire)</li>
+</ul>
+<h4 id="week-2-widgets-integration">Week 2: Widgets &amp; Integration<a class="headerlink" href="#week-2-widgets-integration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Main Page</strong></li>
+<li>[ ] Clone inspection_answer_page → inspection_local_answer_page</li>
+<li>[ ] Load data from DB on init</li>
+<li>[ ] Integrate with Bloc</li>
+<li>[ ] Add real-time score display</li>
+<li>[ ] Remove loading spinners for scoring</li>
+<li>
+<p>[ ] Add DB save indicators</p>
+</li>
+<li>
+<p>[ ] <strong>Question Type Widgets</strong></p>
+</li>
+<li>[ ] Clone Text/Number widget</li>
+<li>[ ] Clone DateTime widget</li>
+<li>[ ] Clone Single Choice widget</li>
+<li>[ ] Clone Multiple Choice widget</li>
+<li>[ ] Clone ResponseSet widgets</li>
+<li>[ ] Clone Instruction widget</li>
+<li>[ ] Clone Media widget</li>
+<li>[ ] Clone Location widget</li>
+<li>
+<p>[ ] Update all to use Bloc events</p>
+</li>
+<li>
+<p>[ ] <strong>Supporting Widgets</strong></p>
+</li>
+<li>[ ] Clone information answer widgets</li>
+<li>[ ] Clone question answer widget</li>
+<li>[ ] Create score display widget</li>
+<li>
+<p>[ ] Create validation feedback widget</p>
+</li>
+<li>
+<p>[ ] <strong>Auto-save Implementation</strong></p>
+</li>
+<li>[ ] Save on answer change</li>
+<li>[ ] Save on note change</li>
+<li>[ ] Save on file upload</li>
+<li>[ ] Debounce/throttle if needed</li>
+<li>
+<p>[ ] Background save (non-blocking)</p>
+</li>
+<li>
+<p>[ ] <strong>Fire-and-Forget API</strong></p>
+</li>
+<li>[ ] Integrate with all update points</li>
+<li>[ ] Add to pending_api_calls table</li>
+<li>[ ] Fire asynchronously</li>
+<li>[ ] Handle success/error callbacks</li>
+</ul>
+<h4 id="week-3-testing-polish">Week 3: Testing &amp; Polish<a class="headerlink" href="#week-3-testing-polish" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Unit Tests</strong></li>
+<li>[ ] Test scoring calculations</li>
+<li>[ ] Test validation logic</li>
+<li>[ ] Test conditional evaluation</li>
+<li>[ ] Test DB operations</li>
+<li>
+<p>[ ] Test fire-and-forget logic</p>
+</li>
+<li>
+<p>[ ] <strong>Integration Tests</strong></p>
+</li>
+<li>[ ] Test complete user flow</li>
+<li>[ ] Test data persistence (exit/reenter)</li>
+<li>[ ] Test API failure scenarios</li>
+<li>
+<p>[ ] Test config loading</p>
+</li>
+<li>
+<p>[ ] <strong>Background Services</strong></p>
+</li>
+<li>[ ] Implement periodic retry service</li>
+<li>[ ] Test retry logic (max 3 attempts)</li>
+<li>
+<p>[ ] Add logging for failed syncs</p>
+</li>
+<li>
+<p>[ ] <strong>UI/UX Polish</strong></p>
+</li>
+<li>[ ] Loading indicator for DB operations</li>
+<li>[ ] Success feedback on save</li>
+<li>[ ] Small indicator for pending API calls</li>
+<li>[ ] Error indicator for failed syncs</li>
+<li>
+<p>[ ] Smooth transitions</p>
+</li>
+<li>
+<p>[ ] <strong>QA &amp; Bug Fixes</strong></p>
+</li>
+<li>[ ] Test on multiple devices</li>
+<li>[ ] Test with poor network</li>
+<li>[ ] Test with large datasets</li>
+<li>[ ] Performance optimization</li>
+<li>[ ] Memory leak checks</li>
+</ul>
+<hr />
+<h3 id="phase-2-full-offline-batch-sync">✅ Phase 2: Full Offline + Batch Sync<a class="headerlink" href="#phase-2-full-offline-batch-sync" title="Permanent link">&para;</a></h3>
+<h4 id="week-1-sync-infrastructure">Week 1: Sync Infrastructure<a class="headerlink" href="#week-1-sync-infrastructure" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Enhanced Database</strong></li>
+<li>[ ] Add change_queue table</li>
+<li>[ ] Add sync_metadata table</li>
+<li>[ ] Add file_upload_queue table</li>
+<li>[ ] Create migration scripts</li>
+<li>
+<p>[ ] Test new tables</p>
+</li>
+<li>
+<p>[ ] <strong>Sync Service</strong></p>
+</li>
+<li>[ ] Implement InspectionSyncService</li>
+<li>[ ] Batch sync logic</li>
+<li>[ ] Conflict detection</li>
+<li>[ ] Conflict resolution</li>
+<li>[ ] Update local from remote</li>
+<li>
+<p>[ ] Mark changes as synced</p>
+</li>
+<li>
+<p>[ ] <strong>Network Monitoring</strong></p>
+</li>
+<li>[ ] Add connectivity_plus dependency</li>
+<li>[ ] Implement NetworkMonitor</li>
+<li>[ ] Stream online/offline status</li>
+<li>
+<p>[ ] Auto-sync when back online</p>
+</li>
+<li>
+<p>[ ] <strong>Conflict Resolution</strong></p>
+</li>
+<li>[ ] Define ConflictResolution enum</li>
+<li>[ ] Implement ConflictResolver</li>
+<li>[ ] Last Write Wins logic</li>
+<li>[ ] User decision UI (for critical conflicts)</li>
+</ul>
+<h4 id="week-2-ui-user-experience">Week 2: UI &amp; User Experience<a class="headerlink" href="#week-2-ui-user-experience" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Offline Indicator</strong></li>
+<li>[ ] Create OfflineIndicator widget</li>
+<li>[ ] Show when offline</li>
+<li>
+<p>[ ] Position in app bar or top of page</p>
+</li>
+<li>
+<p>[ ] <strong>Sync Status Widget</strong></p>
+</li>
+<li>[ ] Show sync progress</li>
+<li>[ ] Show last sync time</li>
+<li>[ ] Show pending changes count</li>
+<li>
+<p>[ ] Retry button for failed syncs</p>
+</li>
+<li>
+<p>[ ] <strong>Conflict Resolution UI</strong></p>
+</li>
+<li>[ ] Create ConflictResolutionDialog</li>
+<li>[ ] Show local vs remote values</li>
+<li>[ ] Allow user to choose</li>
+<li>
+<p>[ ] Apply resolution</p>
+</li>
+<li>
+<p>[ ] <strong>Sync Controls</strong></p>
+</li>
+<li>[ ] Manual sync button</li>
+<li>[ ] Sync all button</li>
+<li>[ ] Sync settings page</li>
+</ul>
+<h4 id="week-3-advanced-features-testing">Week 3: Advanced Features &amp; Testing<a class="headerlink" href="#week-3-advanced-features-testing" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] <strong>Smart Sync Strategy</strong></li>
+<li>[ ] Priority queue for critical changes</li>
+<li>[ ] Batch changes (10 items or 5 minutes)</li>
+<li>
+<p>[ ] Optimize network usage</p>
+</li>
+<li>
+<p>[ ] <strong>File Upload Queue</strong></p>
+</li>
+<li>[ ] Implement FileUploadService</li>
+<li>[ ] Queue files when offline</li>
+<li>[ ] Background upload with progress</li>
+<li>
+<p>[ ] Retry failed uploads</p>
+</li>
+<li>
+<p>[ ] <strong>Testing</strong></p>
+</li>
+<li>[ ] Unit tests for sync logic</li>
+<li>[ ] Integration tests for offline flow</li>
+<li>[ ] E2E tests for conflict resolution</li>
+<li>[ ] Performance tests with large data</li>
+<li>
+<p>[ ] Network transition tests</p>
+</li>
+<li>
+<p>[ ] <strong>Performance Optimization</strong></p>
+</li>
+<li>[ ] Optimize DB queries</li>
+<li>[ ] Batch DB operations</li>
+<li>[ ] Background processing</li>
+<li>
+<p>[ ] Memory optimization</p>
+</li>
+<li>
+<p>[ ] <strong>Documentation</strong></p>
+</li>
+<li>[ ] Update user guide</li>
+<li>[ ] Document sync behavior</li>
+<li>[ ] Document conflict resolution</li>
+<li>[ ] API documentation for BE team</li>
+</ul>
+<hr />
+<h2 id="faq-database-persistence">❓ FAQ - Database Persistence<a class="headerlink" href="#faq-database-persistence" title="Permanent link">&para;</a></h2>
+<h3 id="q1-tai-sao-can-luu-vao-database-local">Q1: Tại sao cần lưu vào database local?<a class="headerlink" href="#q1-tai-sao-can-luu-vao-database-local" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Có 4 lý do chính:</p>
+<ol>
+<li><strong>User Experience:</strong> </li>
+<li>User có thể thoát app bất cứ lúc nào (phone call, switch app, etc.)</li>
+<li>Khi quay lại, data vẫn còn đó, không phải nhập lại</li>
+<li>
+<p>Giống như draft email</p>
+</li>
+<li>
+<p><strong>Data Safety:</strong></p>
+</li>
+<li>App có thể crash (memory issue, OS kill)</li>
+<li>Network có thể fail</li>
+<li>Device có thể reboot</li>
+<li>
+<p>Data trong memory sẽ mất, nhưng DB vẫn an toàn</p>
+</li>
+<li>
+<p><strong>Network Resilience:</strong></p>
+</li>
+<li>API call có thể fail</li>
+<li>Network có thể chậm hoặc mất hoàn toàn</li>
+<li>
+<p>DB đảm bảo data không bao giờ mất</p>
+</li>
+<li>
+<p><strong>Foundation for Phase 2:</strong></p>
+</li>
+<li>Database structure sẵn sàng</li>
+<li>Không cần refactor lớn</li>
+<li>Smooth transition sang full offline</li>
+</ol>
+<h3 id="q2-khi-nao-thi-save-vao-db">Q2: Khi nào thì save vào DB?<a class="headerlink" href="#q2-khi-nao-thi-save-vao-db" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Save sau <strong>MỖI</strong> thay đổi:</p>
+<pre><code class="language-dart">// Sau khi user nhập answer
+bloc.add(UpdateAnswerLocal(...));
+  ↓
+Bloc handler:
+  1. Calculate score locally (instant)
+  2. Update UI immediately
+  3. Save to DB (background)
+  4. Fire API call (don't wait)
+</code></pre>
+<p><strong>Debouncing:</strong>
+- Nếu user đang gõ text liên tục → debounce 500ms
+- Nếu user chọn option → save ngay lập tức
+- Nếu user upload file → save ngay lập tức</p>
+<h3 id="q3-db-co-lam-cham-app-khong">Q3: DB có làm chậm app không?<a class="headerlink" href="#q3-db-co-lam-cham-app-khong" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> <strong>KHÔNG</strong> nếu implement đúng cách:</p>
+<p><strong>Good Practices:</strong></p>
+<pre><code class="language-dart">// ✅ Save in background, don't block UI
+Future&lt;void&gt; saveToDb(Inspection inspection) async {
+  // Run in isolate or with compute()
+  await compute(_saveInBackground, inspection);
+  // Or use Drift's background executor
+}
+
+// ✅ Batch operations
+await db.batch((batch) {
+  batch.insert(inspections, inspection);
+  batch.insertAll(answers, answersList);
+  batch.update(config, newConfig);
+});
+
+// ✅ Use indexes for fast queries
+CREATE INDEX idx_inspection_id ON inspections(id);
+CREATE INDEX idx_questionnaire_id ON inspection_configs(questionnaire_id);
+</code></pre>
+<p><strong>Performance:</strong>
+- Drift/SQLite rất nhanh: ~1-2ms cho simple insert
+- Batch operations: ~5-10ms cho 100 records
+- Queries với index: ~1ms
+- <strong>So với network call (100-500ms)</strong> → DB nhanh hơn 100x</p>
+<h3 id="q4-co-can-clean-up-db-khong">Q4: Có cần clean up DB không?<a class="headerlink" href="#q4-co-can-clean-up-db-khong" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> <strong>CÓ</strong>, nên có strategy:</p>
+<p><strong>Option 1: Keep for 30 days</strong></p>
+<pre><code class="language-dart">// Clean old completed inspections
+await db.delete(inspections)
+  .where((tbl) =&gt; tbl.syncedAt.isSmallerThan(
+    DateTime.now().subtract(Duration(days: 30))
+  ));
+</code></pre>
+<p><strong>Option 2: Keep only incomplete</strong></p>
+<pre><code class="language-dart">// Only keep inspections that are:
+// 1. Not yet completed, OR
+// 2. Completed but not synced
+await db.delete(inspections)
+  .where((tbl) =&gt; 
+    tbl.isCompleted.equals(true) &amp; 
+    tbl.synced.equals(true)
+  );
+</code></pre>
+<p><strong>Option 3: User-controlled</strong></p>
+<pre><code class="language-dart">// Let user decide in settings
+Settings:
+  - Keep data for: 7 days / 30 days / Forever
+  - Clear cache button
+</code></pre>
+<h3 id="q5-conflict-giua-db-va-memory-state">Q5: Conflict giữa DB và Memory state?<a class="headerlink" href="#q5-conflict-giua-db-va-memory-state" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> <strong>Bloc pattern</strong> giải quyết vấn đề này:</p>
+<p><strong>Single Source of Truth:</strong></p>
+<pre><code>Database (Persistent)
+    ↓
+Load into Bloc State (Memory)
+    ↓
+UI reads from Bloc State
+    ↓
+User makes changes
+    ↓
+Bloc State updates (immediate)
+    ↓
+Save to DB (background)
+</code></pre>
+<p><strong>Rule:</strong>
+- <strong>UI ALWAYS reads from Bloc State</strong> (memory)
+- <strong>Bloc State ALWAYS syncs to DB</strong> (persistent)
+- On app restart: Load DB → Bloc State</p>
+<h3 id="q6-size-cua-db-co-van-e-khong">Q6: Size của DB có vấn đề không?<a class="headerlink" href="#q6-size-cua-db-co-van-e-khong" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Phụ thuộc vào data size:</p>
+<p><strong>Typical Sizes:</strong>
+- 1 inspection với 50 questions: ~50KB
+- Config cho 1 questionnaire: ~20KB
+- 100 inspections: ~5MB
+- Với 1000 files (chỉ metadata): ~10MB</p>
+<p><strong>Management:</strong></p>
+<pre><code class="language-dart">// Monitor DB size
+final dbFile = File(dbPath);
+final sizeInMB = dbFile.lengthSync() / (1024 * 1024);
+
+if (sizeInMB &gt; 100) {
+  // Show warning, suggest cleanup
+  showCleanupDialog();
+}
+
+// Media files stored separately (not in DB)
+// Only store file paths and metadata
+</code></pre>
+<p><strong>Best Practices:</strong>
+- Store file paths, not file content
+- Store JSON strings compressed if needed
+- Regular cleanup of old data
+- Monitor size and warn user</p>
+<h3 id="q7-migrations-khi-schema-changes">Q7: Migrations khi schema changes?<a class="headerlink" href="#q7-migrations-khi-schema-changes" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Drift handles này rất tốt:</p>
+<pre><code class="language-dart">@DriftDatabase(
+  tables: [...],
+  version: 2,  // Increment version
+)
+class AppDatabase extends _$AppDatabase {
+  @override
+  MigrationStrategy get migration {
+    return MigrationStrategy(
+      onUpgrade: (m, from, to) async {
+        if (from == 1) {
+          // Add new column in version 2
+          await m.addColumn(inspections, inspections.syncedAt);
+        }
+      },
+    );
+  }
+}
+</code></pre>
+<p><strong>Version Control:</strong>
+- v1: Initial schema
+- v2: Add synced_at, change_queue
+- v3: Add file_upload_queue
+- etc.</p>
+<h3 id="q8-phase-1-vs-phase-2-db-khac-nhau-gi">Q8: Phase 1 vs Phase 2 - DB khác nhau gì?<a class="headerlink" href="#q8-phase-1-vs-phase-2-db-khac-nhau-gi" title="Permanent link">&para;</a></h3>
+<p><strong>A:</strong> Phase 2 thêm tables cho sync:</p>
+<p><strong>Phase 1:</strong></p>
+<pre><code>inspections
+inspection_configs  
+pending_api_calls
+</code></pre>
+<p><strong>Phase 2 adds:</strong></p>
+<pre><code>change_queue         ← Queue all changes for batch sync
+sync_metadata        ← Track sync status
+file_upload_queue    ← Queue file uploads
+</code></pre>
+<p><strong>Migration:</strong>
+- Phase 1 → Phase 2: Chỉ cần add tables mới
+- Existing data vẫn giữ nguyên
+- Zero downtime migration</p>
+<hr />
+<h2 id="best-practices-database">💡 BEST PRACTICES - Database<a class="headerlink" href="#best-practices-database" title="Permanent link">&para;</a></h2>
+<h3 id="1-transaction-for-related-operations">1. Transaction for Related Operations<a class="headerlink" href="#1-transaction-for-related-operations" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">await db.transaction(() async {
+  // All or nothing
+  await db.inspectionDao.insert(inspection);
+  await db.answersDao.insertAll(answers);
+  await db.filesDao.insertAll(files);
+});
+</code></pre>
+<h3 id="2-optimistic-updates">2. Optimistic Updates<a class="headerlink" href="#2-optimistic-updates" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Update UI immediately
+state = state.copyWith(score: newScore);
+
+// Save to DB in background
+unawaited(db.save(inspection));
+
+// Fire API (don't wait)
+unawaited(api.update(inspection));
+</code></pre>
+<h3 id="3-error-recovery">3. Error Recovery<a class="headerlink" href="#3-error-recovery" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">try {
+  await db.save(inspection);
+} catch (e) {
+  // Log error
+  logger.error('DB save failed: $e');
+
+  // Retry once
+  await Future.delayed(Duration(seconds: 1));
+  await db.save(inspection);
+}
+</code></pre>
+<h3 id="4-background-operations">4. Background Operations<a class="headerlink" href="#4-background-operations" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Use Dart isolates for heavy operations
+await compute(_heavyDbOperation, data);
+
+// Or use Drift's background executor
+final db = AppDatabase.background();
+await db.heavyQuery();
+</code></pre>
+<h3 id="5-testing">5. Testing<a class="headerlink" href="#5-testing" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">test('DB persistence', () async {
+  // Save to DB
+  await db.save(inspection);
+
+  // Clear memory
+  inspection = null;
+
+  // Load from DB
+  final loaded = await db.load(inspectionId);
+
+  // Verify data intact
+  expect(loaded.score, equals(expectedScore));
+});
+</code></pre>
+<h2 id="example-use-cases">🎓 EXAMPLE USE CASES<a class="headerlink" href="#example-use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="use-case-1-simple-option-based-scoring">Use Case 1: Simple Option-Based Scoring<a class="headerlink" href="#use-case-1-simple-option-based-scoring" title="Permanent link">&para;</a></h3>
+<p><strong>Question:</strong> "Chất lượng sản phẩm?"
+<strong>Options:</strong>
+- Tốt → 10 điểm
+- Trung bình → 5 điểm
+- Kém → 0 điểm</p>
+<p><strong>Config:</strong></p>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 1,
+  &quot;scoringType&quot;: &quot;option_based&quot;,
+  &quot;optionScores&quot;: [
+    {&quot;answerOptionId&quot;: 101, &quot;score&quot;: 10},
+    {&quot;answerOptionId&quot;: 102, &quot;score&quot;: 5},
+    {&quot;answerOptionId&quot;: 103, &quot;score&quot;: 0}
+  ],
+  &quot;maxScore&quot;: 10
+}
+</code></pre>
+<h3 id="use-case-2-range-based-scoring">Use Case 2: Range-Based Scoring<a class="headerlink" href="#use-case-2-range-based-scoring" title="Permanent link">&para;</a></h3>
+<p><strong>Question:</strong> "Nhiệt độ (°C)?"
+<strong>Ranges:</strong>
+- 18-22°C → 10 điểm
+- 15-18°C hoặc 22-25°C → 5 điểm
+- &lt; 15°C hoặc &gt; 25°C → 0 điểm</p>
+<p><strong>Config:</strong></p>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 2,
+  &quot;scoringType&quot;: &quot;range_based&quot;,
+  &quot;rangeScores&quot;: [
+    {&quot;minValue&quot;: 18, &quot;maxValue&quot;: 22, &quot;score&quot;: 10},
+    {&quot;minValue&quot;: 15, &quot;maxValue&quot;: 18, &quot;score&quot;: 5},
+    {&quot;minValue&quot;: 22, &quot;maxValue&quot;: 25, &quot;score&quot;: 5},
+    {&quot;minValue&quot;: null, &quot;maxValue&quot;: 15, &quot;score&quot;: 0},
+    {&quot;minValue&quot;: 25, &quot;maxValue&quot;: null, &quot;score&quot;: 0}
+  ],
+  &quot;maxScore&quot;: 10
+}
+</code></pre>
+<h3 id="use-case-3-conditional-with-task-trigger">Use Case 3: Conditional with Task Trigger<a class="headerlink" href="#use-case-3-conditional-with-task-trigger" title="Permanent link">&para;</a></h3>
+<p><strong>Logic:</strong>
+- Nếu chọn "Kém" → Hiển thị câu hỏi "Nguyên nhân?"
+- Nếu chọn "Kém" → Tạo task assignment "Khắc phục"</p>
+<p><strong>Config:</strong></p>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 1,
+  &quot;conditionType&quot;: &quot;task&quot;,
+  &quot;conditionExpression&quot;: &quot;Q1.answer == 'Kém'&quot;,
+  &quot;targetQuestionIds&quot;: [5],
+  &quot;action&quot;: &quot;show&quot;,
+  &quot;taskTemplateId&quot;: 200,
+  &quot;taskParams&quot;: {
+    &quot;priority&quot;: &quot;high&quot;,
+    &quot;dueInHours&quot;: 24
+  }
+}
+</code></pre>
+<h3 id="use-case-4-formula-based-section-score">Use Case 4: Formula-Based Section Score<a class="headerlink" href="#use-case-4-formula-based-section-score" title="Permanent link">&para;</a></h3>
+<p><strong>Section:</strong> "An toàn"
+<strong>Questions:</strong>
+- Q1: Đội bảo hộ (10 điểm)
+- Q2: Biển cảnh báo (10 điểm)
+- Q3: Lối thoát hiểm (10 điểm)</p>
+<p><strong>Formula:</strong> Average with Q3 weighted 2x
+<strong>Score = (Q1 + Q2 + Q3*2) / 4</strong></p>
+<p><strong>Config:</strong></p>
+<pre><code class="language-json">{
+  &quot;questionId&quot;: 100,
+  &quot;scoringType&quot;: &quot;formula_based&quot;,
+  &quot;formula&quot;: &quot;(Q1 + Q2 + Q3*2) / 4&quot;,
+  &quot;maxScore&quot;: 10
+}
+</code></pre>
+<h2 id="next-steps">🚀 NEXT STEPS<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Review &amp; Approval</strong></li>
+<li>Đọc kỹ document</li>
+<li>Thảo luận với team</li>
+<li>
+<p>Approve approach</p>
+</li>
+<li>
+<p><strong>Backend Support</strong></p>
+</li>
+<li>Design config structure</li>
+<li>Implement config endpoint</li>
+<li>Implement batch sync endpoint</li>
+<li>
+<p>Document API changes</p>
+</li>
+<li>
+<p><strong>Frontend Implementation</strong></p>
+</li>
+<li>Bắt đầu Phase 1</li>
+<li>Tạo models và services</li>
+<li>
+<p>Setup infrastructure</p>
+</li>
+<li>
+<p><strong>Iterative Development</strong></p>
+</li>
+<li>Implement từng widget type</li>
+<li>Test riêng biệt</li>
+<li>Integrate dần dần</li>
+</ol>
+<h2 id="references">📚 REFERENCES<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Current Inspection Page: <code>packages/supa_work/lib/pages/inspection/inspection_answer_page.dart</code></li>
+<li>Models: <code>packages/supa_work/lib/core/models/</code></li>
+<li>Question Types: <code>packages/supa_work/lib/pages/inspection/widgets/inspection_answer/inspection_question_types/</code></li>
+<li>Expression Parser: https://pub.dev/packages/expressions</li>
+<li>Bloc Pattern: https://bloclibrary.dev/</li>
+</ul>
+<hr />
+<p><strong>Tài liệu được tạo bởi:</strong> Antigravity AI<br />
+<strong>Ngày tạo:</strong> 2026-01-26<br />
+<strong>Phiên bản:</strong> 1.0<br />
+<strong>Trạng thái:</strong> Draft - Chờ review và phê duyệt</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

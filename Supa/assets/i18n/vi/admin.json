@@ -1,0 +1,12 @@
+{
+  "home.password": "Mật khẩu",
+  "home.title": "Quản trị",
+  "resetPassword.completed": "Đã hoàn thành",
+  "resetPassword.emailList": "Danh sách email",
+  "resetPassword.emailListExcelNotes": "Có thể sao chép danh sách mail từ Excel để dán vào đây",
+  "resetPassword.emailListHint": "Nhập danh sách email, mỗi email trên một dòng",
+  "resetPassword.emailListRequired": "Danh sách email không được để trống",
+  "resetPassword.processing": "Đang xử lý",
+  "resetPassword.resetPassword": "Đặt lại mật khẩu",
+  "resetPassword.title": "Đặt lại mật khẩu"
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "ROUTE_MIGRATION_GUIDE",
+  "id": "ROUTE_MIGRATION_GUIDE",
+  "title": "Route Migration Documentation (Supa Work)",
+  "description": "Tài liệu chi tiết về việc thay đổi cấu trúc đường dẫn (route) từ /work sang /work-new và làm phẳng các sub-paths.",
+  "source": "@site/docs/ROUTE_MIGRATION_GUIDE.md",
+  "sourceDirName": ".",
+  "slug": "/ROUTE_MIGRATION_GUIDE",
+  "permalink": "/docs/ROUTE_MIGRATION_GUIDE",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ROUTE_MIGRATION_GUIDE.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Changelog & Release Notes Management",
+    "permalink": "/docs/RELEASE_NOTES_GUIDE"
+  },
+  "next": {
+    "title": "Stream Chat Localization Configuration",
+    "permalink": "/docs/STREAM_CHAT_LOCALIZATION"
+  }
+}

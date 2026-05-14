@@ -1,0 +1,24 @@
+{
+  "unversionedId": "sub-app-development",
+  "id": "sub-app-development",
+  "title": "Phát triển Sub-App",
+  "description": "1. Tổng quan",
+  "source": "@site/docs/sub-app-development.md",
+  "sourceDirName": ".",
+  "slug": "/sub-app-development",
+  "permalink": "/docs/sub-app-development",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/sub-app-development.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quy tắc Styling",
+    "permalink": "/docs/styling-rules"
+  },
+  "next": {
+    "title": "PushNotificationBloc Subscription Points in supa_bibs",
+    "permalink": "/docs/supa_bibs_push_notification_subscription_points"
+  }
+}

@@ -1,0 +1,451 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Form Tạo Lịch (Schedule Creation Form) - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#form-tao-lich-schedule-creation-form" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Form Tạo Lịch (Schedule Creation Form)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="form-tao-lich-schedule-creation-form">Form Tạo Lịch (Schedule Creation Form)<a class="headerlink" href="#form-tao-lich-schedule-creation-form" title="Permanent link">&para;</a></h1>
+<h2 id="muc-ich">Mục đích<a class="headerlink" href="#muc-ich" title="Permanent link">&para;</a></h2>
+<p>Tính năng <strong>Tạo Lịch (Schedule)</strong> cung cấp giao diện trực quan cho phép người dùng cấu hình chi tiết tần suất và vòng đời của công việc/lịch trình. Mục đích cốt lõi là tạo ra sự linh hoạt khi đặt lịch lặp lại (Hàng ngày, hàng tuần, hàng tháng, v.v...) đi kèm với cách thức kết thúc lặp minh bạch (Không bao giờ, vào một ngày cố định, hoặc sau một số vòng lặp nhất định).</p>
+<h2 id="bao-gom-cac-truong-nao-va-mapping-tinh-voi-backend-be">Bao gồm các trường nào và Mapping tĩnh với Backend (BE)<a class="headerlink" href="#bao-gom-cac-truong-nao-va-mapping-tinh-voi-backend-be" title="Permanent link">&para;</a></h2>
+<p>Form Tạo Lịch hoạt động xoay quanh Model <code>Schedule</code> (kế thừa <code>JsonModel</code>). Dưới đây là danh sách đầy đủ tất cả các trường dữ liệu trên UI và cách ánh xạ sang Backend từ trên xuống dưới dạng form:</p>
+<h3 id="1-thong-tin-co-ban">1. Thông tin cơ bản<a class="headerlink" href="#1-thong-tin-co-ban" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tên lịch checklist</strong>: Text Input bắt buộc. -&gt; Map với <code>name</code>.</li>
+<li><strong>Chọn biểu mẫu sử dụng (Questionnaire)</strong>: Modal chọn form checklist. -&gt; Map với <code>questionnaireId</code> và chứa object tại <code>questionnaire</code>.</li>
+</ul>
+<h3 id="2-thuc-hien-execution">2. Thực hiện (Execution)<a class="headerlink" href="#2-thuc-hien-execution" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Chọn người thực hiện</strong>: Modal multi-selection cho phép phân công công việc. -&gt; Map với Array <code>scheduleParticipants</code> (Gồm danh sách <code>AppUser</code> hoặc <code>AppUserGroup</code> tùy vào <code>participantTypeId</code>).</li>
+<li><strong>Loại báo cáo/Hoàn thành (Schedule Report Type)</strong>: Có 2 tuỳ chọn Radio Button:</li>
+<li><em>"Chỉ cần một người hoàn thành"</em>: -&gt; Map với <code>scheduleReportTypeId = 1</code>.</li>
+<li><em>"Tất cả cần hoàn thành"</em>: -&gt; Map với <code>scheduleReportTypeId = 2</code>.</li>
+<li><strong>Tự lấy người theo địa điểm</strong>: Lọc user động theo site. Dạng Checkbox. -&gt; Map với <code>isValidateSite</code> (Boolean).</li>
+<li><strong>Chọn địa điểm (Site)</strong>: Modal search các địa điểm (chi nhánh). -&gt; Map mảng với <code>scheduleSiteMappings</code>.</li>
+</ul>
+<h3 id="3-thoi-gian-time-frequency">3. Thời gian (Time &amp; Frequency)<a class="headerlink" href="#3-thoi-gian-time-frequency" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Múi giờ (Group Timezone)</strong>: Mặc định là <code>Indochina Time (Vietnam)</code> có <code>id=269</code>. Lấy qua API <code>single-list-group-time-zone</code> có search. -&gt; Map với <code>groupTimeZoneId</code> &amp; object <code>groupTimeZone</code>.</li>
+<li><strong>Ngày bắt đầu / Ngày kết thúc</strong>: Mở Calendar picker. Gắn vào <code>startDateAt</code> và <code>endDateAt</code>. Trường hợp <em>"Hàng Tần"</em> sẽ thay bằng <strong>Thứ bắt đầu / kết thúc</strong> (<code>startWeekDay</code>/<code>endWeekDay</code>).</li>
+<li><strong>Giờ bắt đầu / Giờ kết thúc</strong>: Chọn giờ/phút. -&gt; Map với <code>startTimeUnitId</code> và <code>endTimeUnitId</code>.</li>
+<li><strong>Tần suất lặp (Frequency Type)</strong>: Ví dụ "Một Lần", "Hàng Tuần", <em>"Tùy biến"</em>. -&gt; Map với <code>frequencyTypeId</code>.</li>
+<li>Nếu là <strong>Tuỳ biến (Custom)</strong>, sẽ có modal riêng cấu hình đơn vị độ dài (Ngày/Tuần) ở <code>subFrequencyTypeId</code> và <code>repeatTime</code>, cùng mảng <code>scheduleDays</code>.</li>
+<li><strong>Kết thúc lặp (Finish Type)</strong>: Chỉ hiển thị khi chọn tần suất lớn hơn/Tuỳ biến. Có "Không bao giờ", "Sau số lần", "Vào ngày". -&gt; Map với <code>scheduleFinishTypeId</code> và các trường phụ đi kèm (vd <code>finishedAfterRepeat</code>, <code>finishedAt</code>).</li>
+<li><strong>Cho phép thực hiện sau khi hết thời gian</strong>: Switch bật/tắt quyền nộp muộn. -&gt; Map với <code>hasValidatedTime</code> (Boolean).</li>
+</ul>
+<h3 id="4-phan-loai-categorization">4. Phân loại (Categorization)<a class="headerlink" href="#4-phan-loai-categorization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Danh mục lịch (Category)</strong>: Phân loại theo business. -&gt; Map với <code>scheduleCategory</code>.</li>
+<li><strong>Nhãn dán (Tag)</strong>: Thêm tag multiple selection. -&gt; Map array với <code>scheduleTags</code>.</li>
+</ul>
+<h2 id="logic-xu-ly-khi-chon-tan-suat-va-ket-thuc-lap">Logic xử lý khi Chọn Tần Suất và Kết Thúc Lặp<a class="headerlink" href="#logic-xu-ly-khi-chon-tan-suat-va-ket-thuc-lap" title="Permanent link">&para;</a></h2>
+<h3 id="1-phan-luong-logic-tan-suat-modal-customtype">1. Phân luồng Logic Tần Suất (Modal: CustomType)<a class="headerlink" href="#1-phan-luong-logic-tan-suat-modal-customtype" title="Permanent link">&para;</a></h3>
+<p>Nơi tiếp nhận tương tác cho Tần suất "Tuỳ Biến":
+- <strong>Khi Chọn Đơn vị lặp = Tuần (Sub-frequency Weekly)</strong>:
+  - Giao diện cung cấp Component để người dùng chọn trực tiếp các <strong>Ngày trong tuần</strong> (Từ Thứ 2 đến Chủ nhật) mà lịch sẽ xảy ra trong tuần đó.
+  - Kết quả các ngày được chọn sẽ convert thành list <code>ScheduleDay</code> và nạp vào mảng <code>scheduleDays</code>.
+- <strong>Khi Chọn Đơn vị lặp = Ngày (Sub-frequency Daily)</strong>:
+  - Ẩn chọn "Ngày trong tuần".
+  - Chỉ yêu cầu cấu hình <strong>Chu kỳ vòng lặp</strong> thông thường (Ví dụ: lặp lại mỗi <code>x</code> ngày).
+- <strong>Chu kỳ lặp (<code>repeatTime</code>)</strong>:
+  - Sử dụng Component <code>DropdownMenu</code> kết hợp tìm kiếm Local (Search Type) và chọn List (Dropdown List).
+  - Tích hợp logic cảnh báo ngay khi người dùng gõ phím quá giới hạn hoặc sai định dạng.
+  - Tùy vào đơn vị lặp, giới hạn tuỳ chỉnh sẽ thay đổi linh hoạt:
+    - <strong>Ngày (Daily)</strong>: Cho phép nhập/chọn từ 1 đến 45.
+    - <strong>Tuần (Weekly)</strong>: Cho phép nhập/chọn từ 1 đến 52.
+    - <strong>Tháng (Monthly)</strong>: Cho phép nhập/chọn từ 1 đến 12.
+    - <strong>Năm (Yearly)</strong>: Khóa hoàn toàn chức năng gõ nhập, bắt buộc màn hình trở thành DDL tĩnh chỉ cho phép click chọn giá trị <code>1</code> hoặc <code>2</code>.</p>
+<h3 id="2-phan-luong-ket-thuc-lap-modal-schedulefinishtypemodal">2. Phân luồng Kết Thúc Lặp (Modal: ScheduleFinishTypeModal)<a class="headerlink" href="#2-phan-luong-ket-thuc-lap-modal-schedulefinishtypemodal" title="Permanent link">&para;</a></h3>
+<p>Phụ trách điểm cuối điều kiện dừng của Schedule:
+- <strong>Dạng "Không bao giờ"</strong>: Tự xóa sạch các cấu hình kết thúc trước đó.
+- <strong>Dạng "Vào ngày"</strong>: Kích hoạt bộ chọn DatePicker cơ bản từ Material. Tự động cast giá trị thành ISO String tiêu chuẩn qua biến <code>_finishedAt</code> khi chọn.
+- <strong>Dạng "Sau số vòng lặp"</strong>: 
+  - Hiển thị TextField nhập liệu trực tiếp dành cho số.
+  - Tích hợp logic <strong>Validation Threshold</strong>: Số tự động chốt nhỏ nhất về 1. Ở mức trần (500), UI cung cấp thông báo đỏ (errorText) cảnh báo "Chỉ được tối đa 500 lần" đối với input từ người dùng lớn hơn 500, nhưng lớp Data đằng sau vẫn được tự động truncate lại chính xác là <code>500</code> để đảm bảo hệ thống không bị lỗi crash payload.
+- <strong>Tự động lưu (Auto-save instant)</strong>: Kỹ thuật Reactive State. Mỗi thay đổi RadioButton/TextBox được <code>_notifyChanged()</code> ghi nhận, parse số, rồi truyền thẳng vào callback <code>onChanged</code> bắn ngược lên Entity cha thay vì chờ nút "Save". Trình duyệt modal tự do lướt và đóng bằng kéo thả (Pull-to-dismiss) hoặc focus ra phần tử bên ngoài, tối giản hóa trải nghiệm nhập liệu (User Experience).</p>
+<h3 id="5-logic-text-hien-thi-display-string-builders">5. Logic Text Hiển Thị (Display String Builders)<a class="headerlink" href="#5-logic-text-hien-thi-display-string-builders" title="Permanent link">&para;</a></h3>
+<p>Để người dùng có góc nhìn trực quan về những lựa chọn phức tạp như Tần suất kép hay thời điểm kết thúc, giao diện xử lý parse Data hiển thị ra Text thuần theo các quy định sau:</p>
+<ul>
+<li><strong>Logic hiển thị Tần suất Tùy biến (<code>_buildFrequencyString</code>)</strong>:</li>
+<li>Dựa trên công thức gốc <code>Hằng {repeatTime} {subFrequencyType.name}</code> (Ví dụ: "Hằng 3 ngày", "Hằng 2 tuần").</li>
+<li>Nếu <code>subFrequencyTypeId</code> là <strong>Tuần (EVERY_WEEK)</strong> VÀ mảng <code>scheduleDays</code> <strong>có ngày</strong>, hệ thống sẽ nối danh sách toàn bộ các ngày được chọn vào sau công thức gốc.<ul>
+<li><em>Ví dụ 1</em>: Lặp mỗi 2 tuần vào Thứ 2 và Thứ 4 -&gt; UI hiển thị <strong>"Hằng 2 tuần vào các ngày Thứ 2, Thứ 4"</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Nếu không thuộc dạng Lặp theo Tuần có chứa ngày (ví dụ lặp theo Ngày, Tháng, Năm hoặc lặp theo Tuần nhưng chưa chọn ngày), giao diện trả về công thức gốc.</p>
+<ul>
+<li><em>Ví dụ 2</em>: Chọn Tùy biến -&gt; Lặp theo Ngày -&gt; Chu kỳ lặp 3 -&gt; Hiển thị trên UI là <strong>"Hằng 3 ngày"</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Logic hiển thị Kết thúc lặp (<code>_buildFinishTypeString</code>)</strong>:</p>
+</li>
+<li><code>scheduleFinishTypeId = 1</code> hoặc <code>0</code> (Mặc định không dừng): Luôn trả về <code>Không bao giờ</code>.</li>
+<li><code>scheduleFinishTypeId = 2</code> (Vào ngày cụ thể): Lấy giá trị chuỗi ISO8601 String trong biến <code>finishedAt</code>, tự động <code>tryParse</code> an toàn nhằm tránh exception khi runtime, convert về Local time và format lại định dạng <code>dd/MM/yyyy</code>. (Ví dụ: <em>"20/11/2026"</em>). Nếu chưa có dữ liệu hợp lệ thì trả về <em>"Chọn ngày"</em>.</li>
+<li>Các loại khác (Id 3 - Lặp theo số lần cố định): Trả về chuỗi <code>Sau {finishedAfterRepeat} lần</code>. <ul>
+<li><em>Ví dụ</em>: Chọn kết thúc sau 10 vòng lặp -&gt; UI hiển thị <strong>"Sau 10 lần"</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="quan-ly-data-giao-tiep-api">Quản lý Data &amp; Giao tiếp API<a class="headerlink" href="#quan-ly-data-giao-tiep-api" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Khởi tạo dữ liệu ban đầu (Draft / Initial State)</strong></li>
+<li>Hiện tại, luồng <strong>Get Draft</strong> từ server (<code>_service.getDraft()</code>) đang được khóa (comment out). </li>
+<li>
+<p>Thay vào đó, Object <code>Schedule</code> được <strong>khởi tạo nội bộ (Local Initialization)</strong> hoàn toàn thông qua các giá trị default trực tiếp trên code (ví dụ: <code>defaultSystemTimeZone</code>, Tần suất mặc định là <code>ONE_TIME</code> "Một lần", <code>startTimeUnit</code> là 08:00, v.v...). Điều này giúp form tải tức thời ngay lập tức khi mở.</p>
+</li>
+<li>
+<p><strong>Gửi dữ liệu lên BE (API Create)</strong></p>
+</li>
+<li>Hàm <code>_onCreateSchedule</code> sẽ được gọi khi bấm nút <strong>Tạo</strong>.</li>
+<li>Input Object: Truyền trực tiếp state Object <code>Schedule</code> (đã tổng hợp tên, cấu hình vòng lặp, người tham gia...).</li>
+<li>Action: Thông qua Base Repository gọi hàm <code>MobileScheduleRepository().create(input)</code>. Request HTTP Post sẽ mang payload là danh sách các field được parse qua model <code>JsonModel</code> đẩy về URL create của hệ thống SupaMobile.</li>
+<li>Bắt lỗi: Error Handler tiêu chuẩn của dự án hỗ trợ đọc mã <code>DioException</code>, đổ Field-level errors đỏ màn hình nếu BE báo valid fails (vd: Trùng tên, cấu hình chưa đúng yêu cầu). Mọi thông báo lỗi sẽ hiển thị trực tiếp bằng Toastification.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

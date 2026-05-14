@@ -1,0 +1,24 @@
+{
+  "unversionedId": "analytics/README",
+  "id": "analytics/README",
+  "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+  "description": "1. Mục đích là gì?",
+  "source": "@site/docs/analytics/README.md",
+  "sourceDirName": "analytics",
+  "slug": "/analytics/",
+  "permalink": "/docs/analytics/",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+    "permalink": "/docs/ai-workflow-image-compression"
+  },
+  "next": {
+    "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+    "permalink": "/docs/analytics/learning_overview_summary_by_site"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+  "id": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+  "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+  "description": "1.\tSyncInspectionInformation:",
+  "source": "@site/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE.md",
+  "sourceDirName": "inspection_offline/client_side",
+  "slug": "/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+  "permalink": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+    "permalink": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE"
+  },
+  "next": {
+    "title": "Biểu mẫu",
+    "permalink": "/docs/inspection_offline/client_side/bieu_mau"
+  }
+}

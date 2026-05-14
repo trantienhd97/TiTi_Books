@@ -1,0 +1,24 @@
+{
+  "unversionedId": "ai-workflow-image-compression",
+  "id": "ai-workflow-image-compression",
+  "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+  "description": "Tài liệu này dùng để AI (Antigravity) hoặc lập trình viên đọc tham khảo và thực thi tự động khi chuyển sang một nhánh (branch) mới cần áp dụng lại cơ chế Nén Ảnh Bằng Base Dart (Isolate) (Bỏ qua lỗi văng RAM OutOfMemory từ thư viện).",
+  "source": "@site/docs/ai-workflow-image-compression.md",
+  "sourceDirName": ".",
+  "slug": "/ai-workflow-image-compression",
+  "permalink": "/docs/ai-workflow-image-compression",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ai-workflow-image-compression.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Visibility and Filtering Logic",
+    "permalink": "/docs/TaskAssignment/visibility-and-filtering-logic"
+  },
+  "next": {
+    "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+    "permalink": "/docs/analytics/"
+  }
+}

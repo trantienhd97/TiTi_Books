@@ -1,0 +1,24 @@
+{
+  "unversionedId": "gitnexus-usage",
+  "id": "gitnexus-usage",
+  "title": "Hướng dẫn sử dụng GitNexus",
+  "description": "GitNexus là công cụ tạo knowledge graph cho codebase, giúp AI agents hiểu sâu về kiến trúc, call chain và execution flow của project.",
+  "source": "@site/docs/gitnexus-usage.md",
+  "sourceDirName": ".",
+  "slug": "/gitnexus-usage",
+  "permalink": "/docs/gitnexus-usage",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/gitnexus-usage.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hướng dẫn kiểm tra GA4 Analytics",
+    "permalink": "/docs/ga4-analytics-guide"
+  },
+  "next": {
+    "title": "Create Announcement (Heads Up) Feature",
+    "permalink": "/docs/head_up/create_announcement_feature"
+  }
+}

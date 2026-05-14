@@ -1,0 +1,24 @@
+{
+  "unversionedId": "questionnair/ai_gennerate",
+  "id": "questionnair/ai_gennerate",
+  "title": "ai_gennerate",
+  "description": "Dưới đây là tài liệu final để gửi team frontend, đã cập nhật theo bản bạn sửa: SignalR gửi theo Clients.User($\".{GlobalUserId}\") và event name mới ReceiveQuestionnaireAIGenerated.",
+  "source": "@site/docs/questionnair/ai_gennerate.md",
+  "sourceDirName": "questionnair",
+  "slug": "/questionnair/ai_gennerate",
+  "permalink": "/docs/questionnair/ai_gennerate",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/questionnair/ai_gennerate.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+    "permalink": "/docs/push_notification_lifecycle"
+  },
+  "next": {
+    "title": "ĐẶT LỊCH",
+    "permalink": "/docs/schedule/dat-lich"
+  }
+}

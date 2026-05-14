@@ -1,0 +1,20 @@
+{
+  "unversionedId": "Animations/celebration-animation",
+  "id": "Animations/celebration-animation",
+  "title": "Celebration Animation Guide",
+  "description": "This document describes the implementation and usage of the full-screen celebration animation within the Super App.",
+  "source": "@site/docs/Animations/celebration-animation.md",
+  "sourceDirName": "Animations",
+  "slug": "/Animations/celebration-animation",
+  "permalink": "/docs/Animations/celebration-animation",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/Animations/celebration-animation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Streak Animation Guide",
+    "permalink": "/docs/Animations/streak-animation"
+  }
+}

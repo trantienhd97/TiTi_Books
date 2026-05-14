@@ -1,0 +1,1226 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Core Packages: supa_architecture và supa_foundation - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#core-packages-supa_architecture-va-supa_foundation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Core Packages: supa_architecture và supa_foundation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="core-packages-supa_architecture-va-supa_foundation">Core Packages: supa_architecture và supa_foundation<a class="headerlink" href="#core-packages-supa_architecture-va-supa_foundation" title="Permanent link">&para;</a></h1>
+<h2 id="1-tong-quan">1. Tổng quan<a class="headerlink" href="#1-tong-quan" title="Permanent link">&para;</a></h2>
+<p>Dự án SupaMobileApp sử dụng 2 core packages quan trọng:
+- <strong><code>supa_architecture</code></strong>: Thư viện core chứa các class và object cơ bản cho tất cả Flutter apps thuộc hệ sinh thái Supa
+- <strong><code>supa_foundation</code></strong>: Package chứa các pages, utilities và widgets dùng chung cho tất cả sub-apps</p>
+<h2 id="2-supa_architecture">2. supa_architecture<a class="headerlink" href="#2-supa_architecture" title="Permanent link">&para;</a></h2>
+<h3 id="21-muc-ich">2.1. Mục đích<a class="headerlink" href="#21-muc-ich" title="Permanent link">&para;</a></h3>
+<p><code>supa_architecture</code> là thư viện core cung cấp:
+- Các loại storage (persistent, cookie, secure)
+- API client với repository pattern
+- Models dùng chung
+- Widgets dùng chung
+- JSON serialization system tối ưu
+- Data filter system</p>
+<h3 id="22-storage-systems">2.2. Storage Systems<a class="headerlink" href="#22-storage-systems" title="Permanent link">&para;</a></h3>
+<h4 id="221-persistentstorage">2.2.1. PersistentStorage<a class="headerlink" href="#221-persistentstorage" title="Permanent link">&para;</a></h4>
+<p><strong>Mục đích</strong>: Lưu trữ dữ liệu không nhạy cảm (key-value pairs)</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+// Lưu giá trị
+persistentStorage.setValue('key', 'value');
+
+// Lấy giá trị
+final value = persistentStorage.getValue('key');
+
+// Xóa giá trị
+persistentStorage.removeValue('key');
+
+// Xóa tất cả
+persistentStorage.clear();
+
+// Base API URL
+persistentStorage.baseApiUrl = 'https://api.example.com';
+
+// Tenant và AppUser
+persistentStorage.tenant = currentTenant;
+persistentStorage.appUser = appUser;
+</code></pre>
+<p><strong>Lưu trữ:</strong>
+- <strong>Web</strong>: LocalStorage
+- <strong>Mobile</strong>: SharedPreferences (Android) / UserDefaults (iOS)</p>
+<h4 id="222-securestorage">2.2.2. SecureStorage<a class="headerlink" href="#222-securestorage" title="Permanent link">&para;</a></h4>
+<p><strong>Mục đích</strong>: Lưu trữ dữ liệu nhạy cảm (tokens, credentials)</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+// Lưu authentication info
+await secureStorage.saveAuthenticationInfo(
+  SecureAuthenticationInfo(
+    refreshToken: 'refresh_token',
+    accessToken: 'access_token',
+    tenantId: 123,
+  ),
+);
+
+// Lấy authentication info
+final authInfo = await secureStorage.getSavedAuthenticationInfo();
+
+// Xóa authentication info
+await secureStorage.deleteAuthenticationInfo();
+</code></pre>
+<p><strong>Lưu trữ:</strong>
+- Sử dụng <code>flutter_secure_storage</code> package
+- Encrypted storage trên cả web và mobile</p>
+<h4 id="223-cookiemanager">2.2.3. CookieManager<a class="headerlink" href="#223-cookiemanager" title="Permanent link">&para;</a></h4>
+<p><strong>Mục đích</strong>: Quản lý cookies cho HTTP requests</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+// Lấy interceptor để thêm vào Dio
+final interceptor = cookieManager.interceptor;
+
+// Load cookies cho URI
+final cookies = cookieManager.loadCookies(uri);
+
+// Lấy single cookie
+final cookie = cookieManager.getSingleCookie(uri, 'cookieName');
+
+// Lưu cookies
+cookieManager.saveCookies(uri, cookies);
+
+// Xóa cookies
+cookieManager.deleteCookies(uri);
+cookieManager.deleteAllCookies();
+
+// Build URL với token (mobile only)
+final urlWithToken = cookieManager.buildUrlWithToken('https://api.example.com');
+</code></pre>
+<p><strong>Platform behavior:</strong>
+- <strong>Web</strong>: Sử dụng browser cookie handling
+- <strong>Mobile</strong>: Custom cookie management với token-in-URL support</p>
+<h3 id="23-apiclient">2.3. ApiClient<a class="headerlink" href="#23-apiclient" title="Permanent link">&para;</a></h3>
+<h4 id="231-inh-nghia">2.3.1. Định nghĩa<a class="headerlink" href="#231-inh-nghia" title="Permanent link">&para;</a></h4>
+<p><code>ApiClient</code> là abstract class extends từ Dio, cung cấp:
+- Repository pattern
+- Sẵn có các interceptors quan trọng
+- File upload/download support
+- Cross-platform compatibility</p>
+<h4 id="232-cach-su-dung">2.3.2. Cách sử dụng<a class="headerlink" href="#232-cach-su-dung" title="Permanent link">&para;</a></h4>
+<p><strong>Tạo Repository:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+class MyRepository extends ApiClient {
+  @override
+  String get baseUrl =&gt; '${persistentStorage.baseApiUrl}/rpc/my-app';
+
+  // Custom methods
+  Future&lt;List&lt;MyEntity&gt;&gt; getMyData() async {
+    return dio.post('/get-data', data: {}).then(
+      (response) =&gt; response.bodyAsList&lt;MyEntity&gt;(),
+    );
+  }
+}
+</code></pre>
+<p><strong>Với BaseRepository (CRUD operations):</strong></p>
+<pre><code class="language-dart">class MyEntityRepository extends BaseRepository&lt;MyEntity, MyEntityFilter&gt; {
+  @override
+  String get baseUrl =&gt; '${persistentStorage.baseApiUrl}/rpc/my-app/entity';
+
+  // BaseRepository cung cấp sẵn:
+  // - list(filter)
+  // - count(filter)
+  // - getById(id)
+  // - create(entity)
+  // - update(entity)
+  // - deleteByEntity(entity)
+  // - deleteById(id)
+  // - approve(entity)
+  // - reject(entity)
+}
+</code></pre>
+<h4 id="233-interceptors">2.3.3. Interceptors<a class="headerlink" href="#233-interceptors" title="Permanent link">&para;</a></h4>
+<p>ApiClient tự động thêm các interceptors:</p>
+<ol>
+<li><strong>DeviceInfoInterceptor</strong> (nếu <code>shouldUseDeviceInfo: true</code>)</li>
+<li>
+<p>Thêm device information vào headers</p>
+</li>
+<li>
+<p><strong>LanguageInterceptor</strong> (mặc định: enabled)</p>
+</li>
+<li>
+<p>Thêm language header từ user preferences</p>
+</li>
+<li>
+<p><strong>Cookie Storage Interceptor</strong> (native platforms)</p>
+</li>
+<li>
+<p>Tự động quản lý cookies</p>
+</li>
+<li>
+<p><strong>Base URL Interceptor</strong> (nếu <code>shouldUsePersistentUrl: true</code>)</p>
+</li>
+<li>
+<p>Dynamic base URL switching</p>
+</li>
+<li>
+<p><strong>TimezoneInterceptor</strong> (luôn enabled)</p>
+</li>
+<li>
+<p>Thêm timezone và timestamp headers</p>
+</li>
+<li>
+<p><strong>GeneralErrorLogInterceptor</strong> (luôn enabled)</p>
+</li>
+<li>
+<p>Log errors cho debugging</p>
+</li>
+<li>
+<p><strong>RefreshInterceptor</strong> (luôn enabled)</p>
+</li>
+<li>Tự động refresh token khi nhận 401</li>
+</ol>
+<h4 id="234-file-uploaddownload">2.3.4. File Upload/Download<a class="headerlink" href="#234-file-uploaddownload" title="Permanent link">&para;</a></h4>
+<p><strong>Upload single file:</strong></p>
+<pre><code class="language-dart">// Native: sử dụng filePath
+final file = await repository.uploadFile(
+  filePath: '/path/to/file.jpg',
+  uploadUrl: '/upload',
+);
+
+// Web: sử dụng bytes
+final file = await repository.uploadFile(
+  bytes: fileBytes,
+  filename: 'file.jpg',
+  uploadUrl: '/upload',
+);
+</code></pre>
+<p><strong>Upload multiple files:</strong></p>
+<pre><code class="language-dart">// Native
+final files = await repository.uploadFiles(
+  filePaths: ['/path/to/file1.jpg', '/path/to/file2.jpg'],
+);
+
+// Web
+final files = await repository.uploadFiles(
+  filesBytes: [bytes1, bytes2],
+  filenames: ['file1.jpg', 'file2.jpg'],
+);
+</code></pre>
+<p><strong>Download:</strong></p>
+<pre><code class="language-dart">// Download as bytes
+final bytes = await repository.downloadBytes('/files/document.pdf');
+
+// Download to file
+final file = await repository.downloadFile(
+  url: '/files/document.pdf',
+  savePath: '/Downloads',
+  filename: 'document.pdf',
+);
+</code></pre>
+<h3 id="24-models-dung-chung">2.4. Models dùng chung<a class="headerlink" href="#24-models-dung-chung" title="Permanent link">&para;</a></h3>
+<h4 id="241-appuser">2.4.1. AppUser<a class="headerlink" href="#241-appuser" title="Permanent link">&para;</a></h4>
+<p>Model đại diện cho user trong hệ thống:</p>
+<pre><code class="language-dart">class AppUser extends JsonModel {
+  JsonInteger id = JsonInteger(&quot;id&quot;);
+  JsonString email = JsonString(&quot;email&quot;);
+  JsonString username = JsonString(&quot;username&quot;);
+  JsonString displayName = JsonString(&quot;displayName&quot;);
+  JsonString name = JsonString(&quot;name&quot;);
+  JsonString phone = JsonString(&quot;phone&quot;);
+  JsonString avatar = JsonString(&quot;avatar&quot;);
+  // ... các fields khác
+}
+</code></pre>
+<h4 id="242-tenant">2.4.2. Tenant<a class="headerlink" href="#242-tenant" title="Permanent link">&para;</a></h4>
+<p>Model đại diện cho tenant (organization):</p>
+<pre><code class="language-dart">class Tenant extends JsonModel {
+  JsonInteger id = JsonInteger(&quot;id&quot;);
+  JsonString name = JsonString(&quot;name&quot;);
+  JsonString code = JsonString(&quot;code&quot;);
+  // ...
+}
+</code></pre>
+<h4 id="243-currenttenant">2.4.3. CurrentTenant<a class="headerlink" href="#243-currenttenant" title="Permanent link">&para;</a></h4>
+<p>Model chứa thông tin tenant hiện tại:</p>
+<pre><code class="language-dart">class CurrentTenant extends JsonModel {
+  JsonObject&lt;Tenant&gt; tenant = JsonObject&lt;Tenant&gt;(&quot;tenant&quot;);
+  JsonInteger tenantId = JsonInteger(&quot;tenantId&quot;);
+  // ...
+}
+</code></pre>
+<h4 id="244-cac-models-khac">2.4.4. Các models khác<a class="headerlink" href="#244-cac-models-khac" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>AppUserGroup</code>: User groups</li>
+<li><code>File</code>: File metadata</li>
+<li><code>Image</code>: Image metadata</li>
+<li><code>Discussion</code>: Discussion/comment</li>
+<li><code>UserNotification</code>: Push notification</li>
+<li><code>EnumModel</code>: Base class cho enum models</li>
+<li>Và nhiều models khác...</li>
+</ul>
+<h3 id="25-json-model-va-data-filter">2.5. JSON Model và Data Filter<a class="headerlink" href="#25-json-model-va-data-filter" title="Permanent link">&para;</a></h3>
+<h4 id="251-jsonmodel">2.5.1. JsonModel<a class="headerlink" href="#251-jsonmodel" title="Permanent link">&para;</a></h4>
+<p><strong>Mục đích</strong>: 
+- Chuẩn hóa JSON serialization
+- Tối ưu code generation
+- Giảm thiểu code generation làm pollute source code
+- Hỗ trợ error/warning/information messages từ server</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+class MyModel extends JsonModel {
+  @override
+  List&lt;JsonField&gt; get fields =&gt; [
+    name,
+    age,
+    email,
+  ];
+
+  JsonString name = JsonString('name');
+  JsonInteger age = JsonInteger('age');
+  JsonString email = JsonString('email');
+}
+
+// Sử dụng
+final model = MyModel();
+model.fromJson({
+  'name': 'John Doe',
+  'age': 30,
+  'email': 'john@example.com',
+});
+
+// Access values
+print(model.name.value); // 'John Doe'
+print(model['name']); // 'John Doe' (bracket notation)
+
+// Serialize
+final json = model.toJson();
+</code></pre>
+<p><strong>JsonField Types:</strong>
+- <code>JsonString</code>: String fields
+- <code>JsonInteger</code>: Integer fields
+- <code>JsonNumber</code>: Number fields (int/double)
+- <code>JsonDouble</code>: Double fields
+- <code>JsonBoolean</code>: Boolean fields
+- <code>JsonDate</code>: DateTime fields
+- <code>JsonObject&lt;T&gt;</code>: Nested objects
+- <code>JsonList&lt;T&gt;</code>: Lists</p>
+<p><strong>Error/Warning/Information:</strong></p>
+<pre><code class="language-dart">// Từ server response
+model.fromJson({
+  'name': 'John',
+  'errors': {'email': 'Invalid email'},
+  'warnings': {'age': 'Age seems unusual'},
+  'generalErrors': ['Account verification required'],
+});
+
+// Kiểm tra errors
+if (model.name.hasError) {
+  print(model.name.error);
+}
+
+if (model.hasError) {
+  print(model.error); // First general error
+}
+</code></pre>
+<h4 id="252-datafilter">2.5.2. DataFilter<a class="headerlink" href="#252-datafilter" title="Permanent link">&para;</a></h4>
+<p><strong>Mục đích</strong>:
+- Chuẩn hóa filter structure cho API calls
+- Hỗ trợ pagination, sorting, search
+- Type-safe filter fields</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+class MyEntityFilter extends DataFilter {
+  @override
+  List&lt;FilterField&gt; get fields =&gt; [
+    nameFilter,
+    statusFilter,
+  ];
+
+  StringFilter nameFilter = StringFilter('name');
+  IntFilter statusFilter = IntFilter('statusId');
+}
+
+// Sử dụng
+final filter = MyEntityFilter()
+  ..skip = 0
+  ..take = 20
+  ..orderBy = 'name'
+  ..orderType = DataFilter.orderAsc
+  ..search = 'John'
+  ..nameFilter.contain = 'Doe'
+  ..statusFilter.equal = 1;
+
+// Serialize
+final json = filter.toJson();
+</code></pre>
+<p><strong>FilterField Types:</strong>
+- <code>StringFilter</code>: String operations (equal, contain, startWith, etc.)
+- <code>IntFilter</code>: Integer operations (equal, greater, less, inList, etc.)
+- <code>DoubleFilter</code>: Double operations
+- <code>IdFilter</code>: ID operations
+- <code>DateFilter</code>: Date operations
+- <code>EnumModelFilter</code>: Enum model operations</p>
+<p><strong>Operations:</strong>
+- <code>equal</code>, <code>notEqual</code>
+- <code>greater</code>, <code>greaterEqual</code>, <code>less</code>, <code>lessEqual</code>
+- <code>contain</code>, <code>notContain</code>
+- <code>startWith</code>, <code>notStartWith</code>
+- <code>endWith</code>, <code>notEndWith</code>
+- <code>inList</code>, <code>notInList</code>
+- <code>search</code></p>
+<h3 id="26-dioimageprovider">2.6. DioImageProvider<a class="headerlink" href="#26-dioimageprovider" title="Permanent link">&para;</a></h3>
+<p><strong>Mục đích</strong>: Custom ImageProvider sử dụng Dio và Supa token để load private images</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+import 'package:flutter/material.dart';
+
+Image(
+  image: DioImageProvider(
+    imageUrl: Uri.parse('https://api.example.com/private/image.jpg'),
+    fallbackAssetPath: 'assets/images/image_placeholder.png',
+  ),
+)
+</code></pre>
+<p><strong>Features:</strong>
+- Tự động thêm Supa token vào request
+- Fallback to asset image nếu load fail
+- Sử dụng Dio interceptors (device info, timezone, refresh token)
+- Cookie support (native platforms)</p>
+<h3 id="27-widgets-dung-chung">2.7. Widgets dùng chung<a class="headerlink" href="#27-widgets-dung-chung" title="Permanent link">&para;</a></h3>
+<h4 id="271-statusbadge">2.7.1. StatusBadge<a class="headerlink" href="#271-statusbadge" title="Permanent link">&para;</a></h4>
+<p><strong>TextStatusBadge</strong>: Badge hiển thị status text với màu tự động</p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+TextStatusBadge(
+  status: 'Active',
+  backgroundColorKey: 'success', // Theme token
+  textColorKey: 'onSuccess',
+)
+
+// Hoặc với hex colors
+TextStatusBadge(
+  status: 'Pending',
+  backgroundColorKey: '#FFA500',
+)
+</code></pre>
+<p><strong>EnumStatusBadge</strong>: Badge từ EnumModel</p>
+<pre><code class="language-dart">EnumStatusBadge(
+  status: statusEnumModel, // EnumModel với color và backgroundColor
+)
+</code></pre>
+<h4 id="272-confirmationdialog">2.7.2. ConfirmationDialog<a class="headerlink" href="#272-confirmationdialog" title="Permanent link">&para;</a></h4>
+<p>Dialog xác nhận với icon, title, content:</p>
+<pre><code class="language-dart">import 'package:supa_architecture/supa_architecture.dart';
+
+showDialog(
+  context: context,
+  builder: (context) =&gt; ConfirmationDialog(
+    title: 'Delete Item',
+    content: 'Are you sure you want to delete this item?',
+    onConfirm: () {
+      // Handle confirmation
+    },
+    onCancel: () {
+      // Handle cancellation (optional)
+    },
+    okText: 'Delete', // Optional
+    cancelText: 'Cancel', // Optional
+  ),
+)
+</code></pre>
+<h4 id="273-cac-widgets-khac">2.7.3. Các widgets khác<a class="headerlink" href="#273-cac-widgets-khac" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>EmptyComponent</code>: Empty state widget</li>
+<li><code>ForbiddenComponent</code>: 403 Forbidden widget</li>
+<li><code>LoadingIndicator</code>: Loading indicator</li>
+<li><code>AppImage</code>: Network image với error handling</li>
+<li>Và nhiều widgets khác...</li>
+</ul>
+<h2 id="3-supa_foundation">3. supa_foundation<a class="headerlink" href="#3-supa_foundation" title="Permanent link">&para;</a></h2>
+<h3 id="31-muc-ich">3.1. Mục đích<a class="headerlink" href="#31-muc-ich" title="Permanent link">&para;</a></h3>
+<p><code>supa_foundation</code> cung cấp:
+- Các pages quan trọng dùng chung
+- Utilities và services
+- Widgets templates
+- Router configuration
+- Theme và localization setup</p>
+<h3 id="32-apploader">3.2. AppLoader<a class="headerlink" href="#32-apploader" title="Permanent link">&para;</a></h3>
+<p><strong>Mục đích</strong>: Bootstrap app với initialization sequence chuẩn</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_foundation/app_loader.dart';
+
+final loader = AppLoader(
+  configureDependencies: configureDependencies,
+  firebaseOptionsProvider: () =&gt; DefaultFirebaseOptions.currentPlatform,
+);
+
+await loader.bootstrap();
+</code></pre>
+<p><strong>Loader làm gì:</strong>
+1. Initialize Flutter binding
+2. Set URL strategy (web)
+3. Load environment variables (.env)
+4. Initialize Hive
+5. Clear temp directory
+6. Initialize Firebase (nếu có)
+7. Initialize SupaArchitecturePlatform
+8. Configure dependencies (GetIt)
+9. Initialize ErrorHandlingBloc
+10. Load saved theme
+11. Register LoginApp
+12. Configure Azure AD (nếu enabled)
+13. Handle authentication initialization</p>
+<h3 id="33-supaapp">3.3. SupaApp<a class="headerlink" href="#33-supaapp" title="Permanent link">&para;</a></h3>
+<p><strong>Mục đích</strong>: Main app widget với theme, localization, và BLoC providers</p>
+<p><strong>Cách sử dụng:</strong></p>
+<pre><code class="language-dart">import 'package:supa_foundation/supa_app.dart';
+
+runApp(
+  SupaApp(
+    routerConfig: createRouterConfig(
+      homePage: HomePage.location,
+      errorBuilder: (context, state) =&gt; const PageNotFound(),
+    ),
+  ),
+);
+</code></pre>
+<p><strong>Features:</strong>
+- Theme management (light/dark)
+- Localization (4 languages: vi, en, ko, id)
+- BLoC providers (Authentication, Tenant, PushNotification, ErrorHandling)
+- Toastification wrapper
+- System UI overlay style</p>
+<h3 id="34-router-configuration">3.4. Router Configuration<a class="headerlink" href="#34-router-configuration" title="Permanent link">&para;</a></h3>
+<h4 id="341-createrouterconfig">3.4.1. createRouterConfig<a class="headerlink" href="#341-createrouterconfig" title="Permanent link">&para;</a></h4>
+<p>Tạo router config với authentication awareness:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/router/create_router_config.dart';
+
+final routerConfig = createRouterConfig(
+  homePage: HomePage.location,
+  specificRoutes: adminRoutes, // Optional
+  errorBuilder: (context, state) =&gt; const PageNotFound(),
+);
+</code></pre>
+<p><strong>Features:</strong>
+- Tự động redirect dựa trên authentication state
+- Map routes từ AppRegistry
+- Error handling với logging
+- Router observers</p>
+<h4 id="342-appregistry">3.4.2. AppRegistry<a class="headerlink" href="#342-appregistry" title="Permanent link">&para;</a></h4>
+<p>Quản lý đăng ký sub-apps:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/router/app_registry.dart';
+
+// Đăng ký app
+AppRegistry.registerApp('/work', WorkApp());
+
+// Lấy app theo prefix
+final app = AppRegistry.getAppByPrefix('/work/some-page');
+
+// Lấy tất cả routes
+final routes = AppRegistry.getAllRoutes();
+</code></pre>
+<h3 id="35-pages-quan-trong">3.5. Pages quan trọng<a class="headerlink" href="#35-pages-quan-trong" title="Permanent link">&para;</a></h3>
+<h4 id="351-login-pages">3.5.1. Login Pages<a class="headerlink" href="#351-login-pages" title="Permanent link">&para;</a></h4>
+<p>Trong <code>packages/supa_foundation/lib/modules/login/pages/</code>:
+- <code>LoginPage</code>: Trang đăng nhập chính
+- <code>LoginServerPage</code>: Chọn server
+- <code>LoginTenantList</code>: Chọn tenant
+- <code>PasswordForgotPage</code>: Quên mật khẩu
+- <code>PasswordResetPage</code>: Reset mật khẩu</p>
+<h4 id="352-common-pages">3.5.2. Common Pages<a class="headerlink" href="#352-common-pages" title="Permanent link">&para;</a></h4>
+<p>Trong <code>packages/supa_foundation/lib/widgets/pages/</code>:
+- <code>TenantSelectionPage</code>: Chọn tenant
+- <code>ThemeSelectionPage</code>: Chọn theme
+- <code>AppSettingsPage</code>: Settings page
+- <code>AppInformationPage</code>: App info page
+- <code>OtherUserProfilePage</code>: User profile page
+- <code>FilePreviewPage</code>: Preview files
+- <code>MediaGalleryScreen</code>: Media gallery
+- <code>ImageEditorScreen</code>: Image editor
+- <code>CameraCapturePage</code>: Camera capture
+- Và nhiều pages khác...</p>
+<h3 id="36-widget-templates">3.6. Widget Templates<a class="headerlink" href="#36-widget-templates" title="Permanent link">&para;</a></h3>
+<h4 id="361-scaffoldnavbar">3.6.1. ScaffoldNavbar<a class="headerlink" href="#361-scaffoldnavbar" title="Permanent link">&para;</a></h4>
+<p>Bottom navigation bar template (đã được mô tả trong sub-app development)</p>
+<h4 id="362-pagedefault">3.6.2. PageDefault<a class="headerlink" href="#362-pagedefault" title="Permanent link">&para;</a></h4>
+<p>Template page với AppBar và body:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/widgets/templates/page_default.dart';
+
+PageDefault(
+  title: 'My Page',
+  body: MyContent(),
+  actions: [
+    IconButton(icon: Icon(Icons.add), onPressed: () {}),
+  ],
+  onGoBack: () {
+    // Custom back handler
+  },
+)
+</code></pre>
+<h4 id="363-languageawarenavbar">3.6.3. LanguageAwareNavbar<a class="headerlink" href="#363-languageawarenavbar" title="Permanent link">&para;</a></h4>
+<p>Wrapper để rebuild navbar khi language thay đổi:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/widgets/templates/language_aware_navbar.dart';
+
+LanguageAwareNavbar(
+  child: MyNavbar(child: child),
+)
+</code></pre>
+<h4 id="364-appthemewrapper">3.6.4. AppThemeWrapper<a class="headerlink" href="#364-appthemewrapper" title="Permanent link">&para;</a></h4>
+<p>Wrapper để apply theme cho sub-app:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/widgets/templates/app_theme_wrapper.dart';
+
+AppThemeWrapper(
+  appConfig: subApp,
+  child: MyPage(),
+)
+</code></pre>
+<h4 id="365-pushnotificationwrapper">3.6.5. PushNotificationWrapper<a class="headerlink" href="#365-pushnotificationwrapper" title="Permanent link">&para;</a></h4>
+<p>Wrapper để handle push notifications:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/widgets/templates/push_notification_wrapper.dart';
+
+PushNotificationWrapper(
+  onNotificationTap: (notification) {
+    // Handle notification tap
+  },
+  child: MyApp(),
+)
+</code></pre>
+<h3 id="37-services">3.7. Services<a class="headerlink" href="#37-services" title="Permanent link">&para;</a></h3>
+<h4 id="371-themeservice">3.7.1. ThemeService<a class="headerlink" href="#371-themeservice" title="Permanent link">&para;</a></h4>
+<p>Quản lý theme (light/dark mode):</p>
+<pre><code class="language-dart">import 'package:supa_foundation/services/theme_service.dart';
+
+// Load saved theme
+await ThemeService.loadSavedTheme();
+
+// Change theme
+ThemeService().changeTheme(ThemeMode.dark);
+
+// Listen to theme changes
+ThemeService.listenable.addListener(() {
+  // Theme changed
+});
+</code></pre>
+<h4 id="372-mediaservice">3.7.2. MediaService<a class="headerlink" href="#372-mediaservice" title="Permanent link">&para;</a></h4>
+<p>Quản lý media (images, videos, files):</p>
+<pre><code class="language-dart">import 'package:supa_foundation/services/media_service.dart';
+
+final mediaService = getIt.get&lt;MediaService&gt;();
+
+// Pick image
+final image = await mediaService.pickImage();
+
+// Pick multiple images
+final images = await mediaService.pickImages();
+
+// Capture photo
+final photo = await mediaService.capturePhoto();
+</code></pre>
+<h4 id="373-geolocationservice">3.7.3. GeoLocationService<a class="headerlink" href="#373-geolocationservice" title="Permanent link">&para;</a></h4>
+<p>Quản lý location:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/services/geolocation_service.dart';
+
+final geoService = getIt.get&lt;GeoLocationService&gt;();
+
+// Request permission
+final hasPermission = await geoService.requestLocationPermission();
+
+// Get current position
+final position = await geoService.getCurrentPosition();
+
+// Calculate distance
+final distance = geoService.calculateDistance(point1, point2);
+</code></pre>
+<h4 id="374-badgeservice">3.7.4. BadgeService<a class="headerlink" href="#374-badgeservice" title="Permanent link">&para;</a></h4>
+<p>Quản lý app badge count:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/services/badge_service.dart';
+
+final badgeService = getIt.get&lt;BadgeService&gt;();
+
+// Update badge count
+await badgeService.updateBadgeCount();
+</code></pre>
+<h3 id="38-utilities">3.8. Utilities<a class="headerlink" href="#38-utilities" title="Permanent link">&para;</a></h3>
+<h4 id="381-error-handler">3.8.1. Error Handler<a class="headerlink" href="#381-error-handler" title="Permanent link">&para;</a></h4>
+<p>Xử lý errors một cách tập trung:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/error_handler.dart';
+
+// Handle error
+ErrorHandler.handleError(context, error);
+</code></pre>
+<h4 id="382-file-utils">3.8.2. File Utils<a class="headerlink" href="#382-file-utils" title="Permanent link">&para;</a></h4>
+<p>Utilities cho file operations:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/file_utils.dart';
+
+// Get file extension
+final ext = FileUtils.getExtension('file.pdf');
+
+// Format file size
+final size = FileUtils.formatFileSize(1024);
+</code></pre>
+<h4 id="383-number-format-utils">3.8.3. Number Format Utils<a class="headerlink" href="#383-number-format-utils" title="Permanent link">&para;</a></h4>
+<p>Format numbers:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/number_format_utils.dart';
+
+// Format currency
+final formatted = NumberFormatUtils.formatCurrency(1000000);
+
+// Format number
+final formatted = NumberFormatUtils.formatNumber(1234.56);
+</code></pre>
+<h4 id="384-time-format-utils">3.8.4. Time Format Utils<a class="headerlink" href="#384-time-format-utils" title="Permanent link">&para;</a></h4>
+<p>Format time:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/time_format_utils.dart';
+
+// Format duration
+final formatted = TimeFormatUtils.formatDuration(Duration(minutes: 90));
+</code></pre>
+<h4 id="385-color-utils">3.8.5. Color Utils<a class="headerlink" href="#385-color-utils" title="Permanent link">&para;</a></h4>
+<p>Utilities cho colors:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/utils/color_utils.dart';
+
+// Parse hex color
+final color = ColorUtils.fromHex('#FF0000');
+</code></pre>
+<h3 id="39-widgets">3.9. Widgets<a class="headerlink" href="#39-widgets" title="Permanent link">&para;</a></h3>
+<h4 id="391-atoms">3.9.1. Atoms<a class="headerlink" href="#391-atoms" title="Permanent link">&para;</a></h4>
+<p>Các atomic components:
+- <code>AppFilledButton</code>: Filled button
+- <code>Input</code>: Text input field
+- <code>AppNetworkImage</code>: Network image với error handling
+- <code>AppBadge</code>: Badge widget
+- <code>MoneyText</code>: Money display
+- Và nhiều components khác...</p>
+<h4 id="392-molecules">3.9.2. Molecules<a class="headerlink" href="#392-molecules" title="Permanent link">&para;</a></h4>
+<p>Composite components:
+- <code>AppBarSearchField</code>: Search field trong AppBar
+- <code>AppUserAvatar</code>: User avatar
+- <code>ProfileButton</code>: Profile button
+- <code>SettingTile</code>: Setting tile
+- Và nhiều components khác...</p>
+<h4 id="393-organisms">3.9.3. Organisms<a class="headerlink" href="#393-organisms" title="Permanent link">&para;</a></h4>
+<p>Complex components:
+- <code>GenericFilterWidget</code>: Generic filter widget
+- <code>DateFilterBottomSheet</code>: Date filter bottom sheet
+- <code>MultiSelectionModal</code>: Multi-selection modal
+- <code>SelectionSearchModal</code>: Selection với search
+- <code>MediaViewWidget</code>: Media viewer
+- Và nhiều components khác...</p>
+<h4 id="394-comment-system">3.9.4. Comment System<a class="headerlink" href="#394-comment-system" title="Permanent link">&para;</a></h4>
+<p>Widgets cho comment/discussion system:
+- <code>CommentInputWidget</code>: Input cho comments
+- <code>CommentsListWidget</code>: List comments
+- <code>ChatMessageItem</code>: Chat message item
+- <code>EmojiReactionPicker</code>: Emoji picker
+- Và nhiều components khác...</p>
+<h3 id="310-repositories">3.10. Repositories<a class="headerlink" href="#310-repositories" title="Permanent link">&para;</a></h3>
+<h4 id="3101-mobileportalrepository">3.10.1. MobilePortalRepository<a class="headerlink" href="#3101-mobileportalrepository" title="Permanent link">&para;</a></h4>
+<p>Repository cho portal operations:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/repositories/mobile_portal_repository.dart';
+
+final repo = getIt.get&lt;MobilePortalRepository&gt;();
+
+// Get app version
+final version = await repo.getAppVersion();
+</code></pre>
+<h4 id="3102-mobilecommentrepository">3.10.2. MobileCommentRepository<a class="headerlink" href="#3102-mobilecommentrepository" title="Permanent link">&para;</a></h4>
+<p>Repository cho comments:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/repositories/mobile_comment_repository.dart';
+
+final repo = getIt.get&lt;MobileCommentRepository&gt;();
+
+// Get comments
+final comments = await repo.getComments(discussionId);
+</code></pre>
+<h4 id="3103-utilsdiscussionrepository">3.10.3. UtilsDiscussionRepository<a class="headerlink" href="#3103-utilsdiscussionrepository" title="Permanent link">&para;</a></h4>
+<p>Repository cho discussion utilities:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/repositories/utils_discussion_repository.dart';
+
+final repo = getIt.get&lt;UtilsDiscussionRepository&gt;();
+
+// Get discussions
+final discussions = await repo.getDiscussions(filter);
+</code></pre>
+<h3 id="311-config">3.11. Config<a class="headerlink" href="#311-config" title="Permanent link">&para;</a></h3>
+<h4 id="3111-appsubsystem">3.11.1. AppSubSystem<a class="headerlink" href="#3111-appsubsystem" title="Permanent link">&para;</a></h4>
+<p>Enum định nghĩa các subsystems:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/config/sub_system.dart';
+
+enum AppSubSystem {
+  work(id: 5, code: 'WORK'),
+  project(id: 8, code: 'PROJECT'),
+  training(id: 7, code: 'TRAINING'),
+  // ...
+}
+</code></pre>
+<h4 id="3112-navigation-key">3.11.2. Navigation Key<a class="headerlink" href="#3112-navigation-key" title="Permanent link">&para;</a></h4>
+<p>Global navigation key:</p>
+<pre><code class="language-dart">import 'package:supa_foundation/config/navigation_key.dart';
+
+// Sử dụng trong code
+final navigator = supaNavigationKey.currentState;
+</code></pre>
+<h2 id="4-so-sanh-va-phan-biet">4. So sánh và Phân biệt<a class="headerlink" href="#4-so-sanh-va-phan-biet" title="Permanent link">&para;</a></h2>
+<h3 id="41-supa_architecture-vs-supa_foundation">4.1. supa_architecture vs supa_foundation<a class="headerlink" href="#41-supa_architecture-vs-supa_foundation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>supa_architecture</th>
+<th>supa_foundation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mục đích</strong></td>
+<td>Core library cho tất cả Supa apps</td>
+<td>Shared components cho SupaMobileApp</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Rộng hơn (có thể dùng cho apps khác)</td>
+<td>Cụ thể cho SupaMobileApp</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>PersistentStorage, SecureStorage, CookieManager</td>
+<td>Sử dụng storage từ supa_architecture</td>
+</tr>
+<tr>
+<td><strong>API Client</strong></td>
+<td>ApiClient, BaseRepository</td>
+<td>Sử dụng ApiClient từ supa_architecture</td>
+</tr>
+<tr>
+<td><strong>Models</strong></td>
+<td>AppUser, Tenant, File, etc.</td>
+<td>Sử dụng models từ supa_architecture</td>
+</tr>
+<tr>
+<td><strong>Widgets</strong></td>
+<td>Basic widgets (StatusBadge, ConfirmationDialog)</td>
+<td>Complex widgets (Pages, Templates)</td>
+</tr>
+<tr>
+<td><strong>Pages</strong></td>
+<td>Không có</td>
+<td>Login pages, Common pages</td>
+</tr>
+<tr>
+<td><strong>Services</strong></td>
+<td>Basic services</td>
+<td>App-specific services (Theme, Media, etc.)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-khi-nao-dung-gi">4.2. Khi nào dùng gì?<a class="headerlink" href="#42-khi-nao-dung-gi" title="Permanent link">&para;</a></h3>
+<p><strong>Dùng supa_architecture khi:</strong>
+- Cần storage (persistent, secure, cookie)
+- Cần tạo repository mới
+- Cần tạo model mới (extend JsonModel)
+- Cần tạo filter mới (extend DataFilter)
+- Cần basic widgets (StatusBadge, ConfirmationDialog)
+- Cần load private images (DioImageProvider)</p>
+<p><strong>Dùng supa_foundation khi:</strong>
+- Cần pages dùng chung (Login, Settings, etc.)
+- Cần widgets templates (PageDefault, ScaffoldNavbar)
+- Cần services (Theme, Media, GeoLocation)
+- Cần utilities (ErrorHandler, FileUtils, etc.)
+- Cần router configuration
+- Cần AppLoader để bootstrap</p>
+<h2 id="5-best-practices">5. Best Practices<a class="headerlink" href="#5-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="51-storage">5.1. Storage<a class="headerlink" href="#51-storage" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PersistentStorage</strong>: Dùng cho data không nhạy cảm (preferences, settings)</li>
+<li><strong>SecureStorage</strong>: Dùng cho tokens, credentials, sensitive data</li>
+<li><strong>CookieManager</strong>: Tự động được sử dụng bởi ApiClient, không cần gọi trực tiếp</li>
+</ul>
+<h3 id="52-models">5.2. Models<a class="headerlink" href="#52-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Luôn extend JsonModel</strong>: Không tạo model từ scratch</li>
+<li><strong>Sử dụng JsonField types</strong>: Sử dụng JsonString, JsonInteger, etc.</li>
+<li><strong>Handle errors</strong>: Kiểm tra <code>hasError</code>, <code>hasWarning</code> sau khi deserialize</li>
+</ul>
+<h3 id="53-filters">5.3. Filters<a class="headerlink" href="#53-filters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Extend DataFilter</strong>: Không tạo filter từ scratch</li>
+<li><strong>Sử dụng FilterField types</strong>: StringFilter, IntFilter, etc.</li>
+<li><strong>Pagination</strong>: Sử dụng <code>skip</code>, <code>take</code>, <code>nextPage()</code></li>
+</ul>
+<h3 id="54-repositories">5.4. Repositories<a class="headerlink" href="#54-repositories" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Extend BaseRepository</strong>: Nếu cần CRUD operations</li>
+<li><strong>Extend ApiClient</strong>: Nếu cần custom operations</li>
+<li><strong>Sử dụng interceptors</strong>: ApiClient tự động thêm interceptors cần thiết</li>
+</ul>
+<h3 id="55-widgets">5.5. Widgets<a class="headerlink" href="#55-widgets" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sử dụng widgets từ supa_architecture</strong>: Cho basic components</li>
+<li><strong>Sử dụng widgets từ supa_foundation</strong>: Cho complex components và templates</li>
+<li><strong>Tái sử dụng</strong>: Không tạo lại widgets đã có</li>
+</ul>
+<h2 id="6-tom-tat">6. Tóm tắt<a class="headerlink" href="#6-tom-tat" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>supa_architecture</strong>: Core library với storage, API client, models, JSON system, basic widgets</li>
+<li><strong>supa_foundation</strong>: Shared package với pages, services, utilities, templates cho SupaMobileApp</li>
+<li><strong>Storage</strong>: PersistentStorage (non-sensitive), SecureStorage (sensitive), CookieManager (HTTP)</li>
+<li><strong>ApiClient</strong>: Repository pattern với interceptors tự động</li>
+<li><strong>JsonModel</strong>: JSON serialization system tối ưu với error handling</li>
+<li><strong>DataFilter</strong>: Filter system chuẩn hóa cho API calls</li>
+<li><strong>DioImageProvider</strong>: Load private images với Supa token</li>
+<li><strong>Widgets</strong>: StatusBadge, ConfirmationDialog từ supa_architecture; Templates từ supa_foundation</li>
+</ol>
+<hr />
+<p><strong>Lưu ý quan trọng:</strong>
+- supa_architecture là core library, có thể dùng cho apps khác
+- supa_foundation là app-specific, chỉ dùng trong SupaMobileApp
+- Luôn sử dụng JsonModel và DataFilter thay vì json_serializable trực tiếp
+- ApiClient tự động handle interceptors, không cần config thủ công
+- Sử dụng widgets và services từ foundation thay vì tạo mới</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "analytics/learning_overview_summary_by_site",
+  "id": "analytics/learning_overview_summary_by_site",
+  "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+  "description": "Tài liệu này giải thích cấu trúc dữ liệu trả về từ API summary-by-site của backend và cách thiết kế Model tại các module liên quan (supatraining và supawork/analytics).",
+  "source": "@site/docs/analytics/learning_overview_summary_by_site.md",
+  "sourceDirName": "analytics",
+  "slug": "/analytics/learning_overview_summary_by_site",
+  "permalink": "/docs/analytics/learning_overview_summary_by_site",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics/learning_overview_summary_by_site.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+    "permalink": "/docs/analytics/"
+  },
+  "next": {
+    "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+    "permalink": "/docs/analytics/site_report_api_docs"
+  }
+}

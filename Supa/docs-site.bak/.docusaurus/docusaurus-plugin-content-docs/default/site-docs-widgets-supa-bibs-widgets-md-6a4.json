@@ -1,0 +1,24 @@
+{
+  "unversionedId": "widgets/supa_bibs_widgets",
+  "id": "widgets/supa_bibs_widgets",
+  "title": "Supa Bibs Widgets",
+  "description": "This document provides an overview of the reusable widgets in the supa_bibs package, following an atomic design structure.",
+  "source": "@site/docs/widgets/supa_bibs_widgets.md",
+  "sourceDirName": "widgets",
+  "slug": "/widgets/supa_bibs_widgets",
+  "permalink": "/docs/widgets/supa_bibs_widgets",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_bibs_widgets.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Supa Attendance Widgets",
+    "permalink": "/docs/widgets/supa_attendance_widgets"
+  },
+  "next": {
+    "title": "Supa Serving Widgets",
+    "permalink": "/docs/widgets/supa_serving_widgets"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "CHANGELOG_QUICK_REF",
+  "id": "CHANGELOG_QUICK_REF",
+  "title": "Quick Reference: Changelog Generation",
+  "description": "🚀 Quick Start",
+  "source": "@site/docs/CHANGELOG_QUICK_REF.md",
+  "sourceDirName": ".",
+  "slug": "/CHANGELOG_QUICK_REF",
+  "permalink": "/docs/CHANGELOG_QUICK_REF",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/CHANGELOG_QUICK_REF.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Streak Animation Guide",
+    "permalink": "/docs/Animations/streak-animation"
+  },
+  "next": {
+    "title": "Changelog Generation System - Summary",
+    "permalink": "/docs/CHANGELOG_SUMMARY"
+  }
+}

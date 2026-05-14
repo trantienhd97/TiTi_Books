@@ -1,0 +1,712 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>supa_communication Integration: v1.24-safe Re-wiring Guide - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supa_communication-integration-v124-safe-re-wiring-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              supa_communication Integration: v1.24-safe Re-wiring Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="supa_communication-integration-v124-safe-re-wiring-guide">supa_communication Integration: v1.24-safe Re-wiring Guide<a class="headerlink" href="#supa_communication-integration-v124-safe-re-wiring-guide" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Scope</strong>: Cherry-pick only <code>supa_communication</code> wiring. Excludes unreleased <code>supa_work</code>/<code>supa_project</code> route changes. <code>packages/supa_communication/</code> is copied verbatim.</p>
+<p><strong>Applies to</strong>: <code>packages/supa_foundation/</code> + root <code>lib/</code> + <code>android/</code> + <code>assets/</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-pubspecyaml-dependencies-assets">1. <code>pubspec.yaml</code> — Dependencies &amp; Assets<a class="headerlink" href="#1-pubspecyaml-dependencies-assets" title="Permanent link">&para;</a></h2>
+<h3 id="add-under-dependencies">Add under <code>dependencies:</code><a class="headerlink" href="#add-under-dependencies" title="Permanent link">&para;</a></h3>
+<pre><code class="language-yaml">  supa_communication:
+    path: packages/supa_communication
+
+  # Stream Chat SDK
+  stream_chat_flutter: ^9.23.0
+  stream_chat_persistence: ^9.22.0
+  stream_chat_localizations: ^9.22.0
+  stream_video: ^1.2.2
+  stream_video_flutter: ^1.2.2
+
+  # Media (needed by supa_communication video player)
+  media_kit: ^1.1.10+1
+  media_kit_video: ^2.0.0
+  media_kit_libs_video: ^1.0.4
+
+  # Utilities required by supa_communication
+  cross_file: ^0.3.5+2
+  collection: ^1.19.1
+  firebase_analytics: ^12.1.1
+  flutter_map: ^8.2.2
+  latlong2: ^0.9.1
+</code></pre>
+<p>Upgrade: <code>media_picker_plus: ^1.1.0-rc.10</code> → <code>^1.1.0-rc.15</code></p>
+<h3 id="add-under-flutter-assets">Add under <code>flutter: assets:</code><a class="headerlink" href="#add-under-flutter-assets" title="Permanent link">&para;</a></h3>
+<pre><code class="language-yaml">    - assets/sounds/telegram_notification.mp3
+    - assets/images/announcement_camera.svg
+    - assets/images/announcement_video.svg
+    - assets/images/announcement_document.svg
+    - assets/images/face-id.svg
+    - assets/images/check.svg
+    - assets/images/quizz_default.jpg
+    - assets/images/course_default.jpg
+    - assets/images/headup_default.jpg
+    - assets/images/welcome-slide-01.png
+    - assets/images/welcome-slide-02.png
+    - assets/images/welcome-slide-03.png
+    - assets/images/welcome-slide-04.png
+</code></pre>
+<p>Also add <code>flutter_local_notifications</code> to <code>supa_foundation/pubspec.yaml</code> if not already present.</p>
+<hr />
+<h2 id="2-libmaindart-bootstrap">2. <code>lib/main.dart</code> — Bootstrap<a class="headerlink" href="#2-libmaindart-bootstrap" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">// Add imports
+import 'package:media_kit/media_kit.dart';
+import 'package:supa_communication/communication_app.dart';
+
+Future&lt;void&gt; main() async {
+  WidgetsFlutterBinding.ensureInitialized();  // ADD before AppLoader
+  MediaKit.ensureInitialized();               // ADD
+
+  final loader = AppLoader(...);
+  // rest unchanged
+}
+
+void _registerApps() {
+  // ... existing ...
+  AppRegistry.registerApp('/communication', CommunicationApp()); // ADD
+  // Keep /project and /work registrations unchanged from v1.24
+}
+</code></pre>
+<hr />
+<h2 id="3-libconfigget_itdart-dependency-injection">3. <code>lib/config/get_it.dart</code> — Dependency Injection<a class="headerlink" href="#3-libconfigget_itdart-dependency-injection" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">import 'package:supa_communication/config/get_it.dart'; // ADD
+
+Future&lt;void&gt; configureDependencies() async {
+  // ... existing calls ...
+  configureCommunicationDependencies(); // ADD (alphabetically after configureBibsDependencies)
+}
+</code></pre>
+<hr />
+<h2 id="4-libconfignotification_handlersdart-notification-prefix-registration">4. <code>lib/config/notification_handlers.dart</code> — Notification Prefix Registration<a class="headerlink" href="#4-libconfignotification_handlersdart-notification-prefix-registration" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">import 'package:supa_communication/notification/communication_notification_handler.dart'; // ADD
+
+void registerNotificationHandlers() {
+  // ... existing prefixes ...
+
+  NotificationHandlerFactory.registerPrefix(   // ADD
+    '/communication',
+    (context) =&gt; CommunicationNotificationHandler(context),
+  );
+}
+</code></pre>
+<hr />
+<h2 id="5-libmodulesgeneralrouterrouterdart-add-communication-route-only">5. <code>lib/modules/general/router/router.dart</code> — Add Communication Route Only<a class="headerlink" href="#5-libmodulesgeneralrouterrouterdart-add-communication-route-only" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Do NOT</strong> import or register <code>supa_work</code>/<code>supa_project</code> routes — those are unreleased.</p>
+</blockquote>
+<p>Add only the communication conversations route:</p>
+<pre><code class="language-dart">// ADD import
+import 'package:supa_communication/pages/conversations/communication_conversations_page.dart';
+
+// ADD route definition
+final GoRoute _generalCommunicationRoute = GoRoute(
+  path: CommunicationConversationsPage.location,
+  builder: (context, state) =&gt; const CommunicationConversationsPage(),
+);
+
+// ADD to ShellRoute routes list (alongside existing _generalDashboardRoute etc.)
+ShellRoute(
+  routes: [
+    _generalAppsRoute,
+    _generalDashboardRoute,
+    _generalDiscussionRoute,
+    _generalNotificationRoute,
+    _generalCommunicationRoute, // ADD
+  ],
+  builder: ...
+)
+</code></pre>
+<p>Also add <code>CustomizeNavbarPage</code> route to <code>_generalRootRoutes</code>:</p>
+<pre><code class="language-dart">// ADD import
+import 'package:supa/modules/general/pages/customize_navbar/customize_navbar_page.dart';
+
+// ADD to _generalRootRoutes
+GoRoute(
+  path: CustomizeNavbarPage.location,
+  builder: (context, state) =&gt; const CustomizeNavbarPage(),
+),
+</code></pre>
+<hr />
+<h2 id="6-libmodulesgeneralpagescustomize_navbarcustomize_navbar_pagedart-new-file">6. <code>lib/modules/general/pages/customize_navbar/customize_navbar_page.dart</code> — New File<a class="headerlink" href="#6-libmodulesgeneralpagescustomize_navbarcustomize_navbar_pagedart-new-file" title="Permanent link">&para;</a></h2>
+<p><strong>Copy verbatim from current branch.</strong> This is a new file not present in v1.24.</p>
+<p>Key details:
+- Route: <code>resolveSupaPath('/customize-navbar')</code>
+- Reads/writes <code>pinned_navbar_tabs</code> and <code>hidden_navbar_tabs</code> keys in <code>persistentStorage</code>
+- Limits pinned items to 2; shows all tabs from <code>buildDefaultMainTabs()</code></p>
+<hr />
+<h2 id="7-libmodulesgeneralpagesgeneral_navbardart-navbar-overhaul">7. <code>lib/modules/general/pages/general_navbar.dart</code> — Navbar Overhaul<a class="headerlink" href="#7-libmodulesgeneralpagesgeneral_navbardart-navbar-overhaul" title="Permanent link">&para;</a></h2>
+<p><strong>Copy verbatim from current branch.</strong></p>
+<p>This replaces <code>DiscussionPage</code> with <code>CommunicationConversationsPage</code> (Messages tab), adds real-time unread count badge via <code>CommunicationChatClientCubit</code>, and supports customizable pinned tabs.</p>
+<p>Key dependencies from <code>supa_communication</code> that must be present:
+- <code>package:supa_communication/config/dotenv.dart</code> → <code>dotenv.streamApiKey</code>
+- <code>package:supa_communication/cubits/chat_client/communication_chat_client_cubit.dart</code>
+- <code>package:supa_communication/cubits/chat_client/communication_chat_client_state.dart</code>
+- <code>package:supa_communication/pages/conversations/communication_conversations_page.dart</code></p>
+<blockquote>
+<p><strong>Note</strong>: <code>ScaffoldNavbar</code> in <code>supa_foundation</code> must be patched first (§11) or this file will not compile.</p>
+</blockquote>
+<hr />
+<h2 id="8-libmodulesgeneralpagesmain_tabs_bottom_sheetdart-refactor">8. <code>lib/modules/general/pages/main_tabs_bottom_sheet.dart</code> — Refactor<a class="headerlink" href="#8-libmodulesgeneralpagesmain_tabs_bottom_sheetdart-refactor" title="Permanent link">&para;</a></h2>
+<p><strong>Copy verbatim from current branch.</strong></p>
+<p>Key changes from v1.24:
+- Now reads <code>pinned_navbar_tabs</code> and <code>hidden_navbar_tabs</code> to filter tabs displayed
+- "Customize Navbar" button now navigates to <code>CustomizeNavbarPage</code> (was a TODO)
+- Requires <code>hiddenSubsystemIdsInMainTabsBottomSheet</code> from <code>supa_foundation/config/sub_system.dart</code> (§14)
+- <code>_MainTabItem</code> renamed to <code>_MainTabDestinationItem</code> with active state</p>
+<hr />
+<h2 id="9-libconfigmain_tabsdart-add-activeicon-field">9. <code>lib/config/main_tabs.dart</code> — Add activeIcon Field<a class="headerlink" href="#9-libconfigmain_tabsdart-add-activeicon-field" title="Permanent link">&para;</a></h2>
+<p>Add the optional <code>activeIcon</code> field to <code>MainTab</code> and populate each tab:</p>
+<pre><code class="language-dart">class MainTab {
+  const MainTab({
+    required this.title,
+    required this.icon,
+    this.activeIcon,        // ADD
+    required this.path,
+  });
+
+  final String title;
+  final IconData icon;
+  final IconData? activeIcon;  // ADD
+  final String path;
+}
+</code></pre>
+<p>Add <code>activeIcon</code> to each tab definition (filled variant of each icon, e.g.,
+<code>FluentIcons.clipboard_task_list_ltr_24_filled</code>). <strong>Do NOT</strong> change the page routes —
+keep all existing v1.24 page references unchanged.</p>
+<hr />
+<h2 id="10-androidappsrcmainandroidmanifestxml-post_notifications-permission">10. <code>android/app/src/main/AndroidManifest.xml</code> — POST_NOTIFICATIONS Permission<a class="headerlink" href="#10-androidappsrcmainandroidmanifestxml-post_notifications-permission" title="Permanent link">&para;</a></h2>
+<pre><code class="language-xml">&lt;uses-permission android:name=&quot;android.permission.POST_NOTIFICATIONS&quot; /&gt;
+</code></pre>
+<p>Add after existing <code>&lt;uses-permission&gt;</code> entries.</p>
+<hr />
+<h2 id="11-packagessupa_foundationlibwidgetstemplatesscaffold_navbardart-api-extension">11. <code>packages/supa_foundation/lib/widgets/templates/scaffold_navbar.dart</code> — API Extension<a class="headerlink" href="#11-packagessupa_foundationlibwidgetstemplatesscaffold_navbardart-api-extension" title="Permanent link">&para;</a></h2>
+<p><code>general_navbar.dart</code> uses two new named parameters that must be added:</p>
+<pre><code class="language-dart">class ScaffoldNavbar extends StatelessWidget {
+  // ADD these two fields:
+  final int? Function(List&lt;ScaffoldNavbarItem&gt; items, String currentLocation)?
+      selectedIndexBuilder;
+  final void Function(BuildContext bodyContext)? onBodyContextReady;
+
+  const ScaffoldNavbar({
+    // ... existing params ...
+    this.selectedIndexBuilder,   // ADD
+    this.onBodyContextReady,     // ADD
+  });
+</code></pre>
+<p><strong><code>build</code> changes:</strong>
+1. Replace <code>_getCurrentIndex(items, currentLocation)</code> with:
+   <code>dart
+   final currentIndex = selectedIndexBuilder?.call(items, currentLocation)
+       ?? _getCurrentIndex(items, currentLocation);</code>
+2. Wrap <code>child</code> in an inner <code>Navigator</code> when <code>onBodyContextReady</code> is set:
+   <code>dart
+   final Widget bodyContent = onBodyContextReady != null
+       ? Navigator(
+           pages: [MaterialPage&lt;void&gt;(child: Builder(builder: (bodyCtx) {
+             WidgetsBinding.instance.addPostFrameCallback((_) {
+               onBodyContextReady!(bodyCtx);
+             });
+             return child;
+           }))],
+           onDidRemovePage: (_) {},
+         )
+       : child;
+   // use bodyContent in Scaffold body:
+   body: bodyContent,</code>
+3. Extract <code>onDestinationSelected</code> logic into a private method <code>_onDestinationSelected</code> to keep <code>build</code> readable (see diff).</p>
+<hr />
+<h2 id="12-packagessupa_foundationlibrouterapp_registrydart-recursive-child-route-mapping">12. <code>packages/supa_foundation/lib/router/app_registry.dart</code> — Recursive Child Route Mapping<a class="headerlink" href="#12-packagessupa_foundationlibrouterapp_registrydart-recursive-child-route-mapping" title="Permanent link">&para;</a></h2>
+<p>Required so nested communication routes (chat detail, files, links, members, search) are correctly wrapped with <code>AppThemeWrapper</code>.</p>
+<p><strong>Two places in <code>mapRoute</code></strong> — add recursive child mapping:</p>
+<pre><code class="language-dart">// In the GoRoute branch (line ~55):
+GoRoute(
+  path: appConfig.prefix + route.path,
+  builder: (context, state) { ... },
+  routes: route.routes.map((child) =&gt; mapRoute(child)).toList(), // ADD
+);
+
+// In the ShellRoute sub-routes loop (line ~79):
+GoRoute(
+  path: subRoute.path,
+  builder: (context, state) { ... },
+  routes: subRoute.routes.map((child) =&gt; mapRoute(child)).toList(), // ADD
+);
+</code></pre>
+<p>Also remove the <code>ModuleRouteCollection</code>/<code>ModuleRouteProvider</code> references that are now gone:
+- Remove <code>static final Map&lt;String, ModuleRouteCollection&gt; _moduleCollections = {};</code>
+- Remove <code>moduleRouteCollections</code> getter
+- Remove <code>excludeModuleProviders</code> parameter from <code>getRoutes()</code>
+- Remove <code>ModuleRouteProvider</code> check in <code>registerApp</code></p>
+<p>Replace <code>state.data.toUserNotification()</code> with <code>resolveUserNotificationForRouting(state.data)</code> in <code>PushNotificationOpened</code> handler, and add the <code>PushNotificationDataOnlyOpened</code> branch (see §13).</p>
+<hr />
+<h2 id="13-push-notification-pipeline-four-files-in-supa_foundation">13. Push Notification Pipeline — Four Files in <code>supa_foundation</code><a class="headerlink" href="#13-push-notification-pipeline-four-files-in-supa_foundation" title="Permanent link">&para;</a></h2>
+<p>These four files must all be updated together for GetStream data-only notifications to work.</p>
+<h3 id="13a-new-packagessupa_foundationlibutilspush_notification_user_notification_resolverdart">13a. NEW: <code>packages/supa_foundation/lib/utils/push_notification_user_notification_resolver.dart</code><a class="headerlink" href="#13a-new-packagessupa_foundationlibutilspush_notification_user_notification_resolverdart" title="Permanent link">&para;</a></h3>
+<p><strong>Copy verbatim from current branch.</strong> This new file provides:
+- <code>resolveUserNotificationForRouting(NotificationData)</code> — builds <code>linkMobile</code> for GetStream chat notifications
+- <code>resolveUserNotificationForDataOnlyPayload(PushNotificationPayload, String?)</code> — handles Android FCM data-only payloads</p>
+<h3 id="13b-new-packagessupa_foundationlibserviceslocal_notification_servicedart">13b. NEW: <code>packages/supa_foundation/lib/services/local_notification_service.dart</code><a class="headerlink" href="#13b-new-packagessupa_foundationlibserviceslocal_notification_servicedart" title="Permanent link">&para;</a></h3>
+<p><strong>Copy verbatim from current branch.</strong> This new file:
+- Shows local notifications for data-only FCM messages (GetStream on Android)
+- Handles notification tap → emits <code>DidUserOpenedDataOnlyNotificationEvent</code>
+- Requires <code>flutter_local_notifications</code> package in <code>supa_foundation/pubspec.yaml</code></p>
+<h3 id="13c-update-packagessupa_foundationlibapp_loaderdart">13c. UPDATE: <code>packages/supa_foundation/lib/app_loader.dart</code><a class="headerlink" href="#13c-update-packagessupa_foundationlibapp_loaderdart" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// Change import:
+// OLD: import 'package:supa_foundation/services/badge_service.dart';
+// NEW:
+import 'package:supa_foundation/services/local_notification_service.dart';
+
+// Add @pragma annotation to class:
+@pragma('vm:entry-point')
+class AppLoader { ... }
+
+// In _initializeCommon(), after Firebase init:
+if (firebaseOptionsProvider != null) {
+  initializers.add(LocalNotificationService.initialize());
+}
+
+// Replace _firebaseMessagingBackgroundHandler body:
+@pragma('vm:entry-point')
+static Future&lt;void&gt; _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await LocalNotificationService.initialize();
+  await LocalNotificationService.showNotificationForDataMessage(message);
+}
+</code></pre>
+<h3 id="13d-update-packagessupa_foundationlibwidgetstemplatespush_notification_wrapperdart">13d. UPDATE: <code>packages/supa_foundation/lib/widgets/templates/push_notification_wrapper.dart</code><a class="headerlink" href="#13d-update-packagessupa_foundationlibwidgetstemplatespush_notification_wrapperdart" title="Permanent link">&para;</a></h3>
+<p><strong>Copy verbatim from current branch.</strong> Key additions:
+- Import <code>ActiveChatTracker</code> and <code>push_notification_user_notification_resolver.dart</code>
+- In <code>PushNotificationReceived</code> handler: suppress toast when <code>ActiveChatTracker.isActiveChannel(incomingCid)</code> is true (user is already viewing that chat)
+- Use <code>resolveUserNotificationForRouting</code> instead of <code>.toUserNotification()</code>
+- Add handler for <code>PushNotificationDataOnlyReceived</code> state</p>
+<p>Also update <code>app_registry.dart</code>'s <code>PushNotificationOpened</code> handler to use <code>resolveUserNotificationForRouting</code>, and add <code>PushNotificationDataOnlyOpened</code> handling (see §12).</p>
+<hr />
+<h2 id="14-packagessupa_foundationlibconfigsub_systemdart-hidden-subsystem-ids">14. <code>packages/supa_foundation/lib/config/sub_system.dart</code> — Hidden Subsystem IDs<a class="headerlink" href="#14-packagessupa_foundationlibconfigsub_systemdart-hidden-subsystem-ids" title="Permanent link">&para;</a></h2>
+<p>Add at the end of the file:</p>
+<pre><code class="language-dart">/// Subsystems hidden from MainTabsBottomSheet (shown in dedicated navbar tabs).
+final Set&lt;int&gt; hiddenSubsystemIdsInMainTabsBottomSheet = {
+  AppSubSystem.work.id,
+  AppSubSystem.training.id,
+  AppSubSystem.project.id,
+};
+</code></pre>
+<hr />
+<h2 id="15-new-foundation-files-compile-blockers-for-supa_communication">15. New Foundation Files (Compile Blockers for <code>supa_communication</code>)<a class="headerlink" href="#15-new-foundation-files-compile-blockers-for-supa_communication" title="Permanent link">&para;</a></h2>
+<h3 id="15a-new-packagessupa_foundationlibconfiglogout_hookdart">15a. NEW: <code>packages/supa_foundation/lib/config/logout_hook.dart</code><a class="headerlink" href="#15a-new-packagessupa_foundationlibconfiglogout_hookdart" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">/// Hook invoked before user logout so features (e.g. chat client) can clean up.
+abstract class ILogoutHook {
+  Future&lt;void&gt; onBeforeLogout();
+}
+</code></pre>
+<h3 id="15b-new-packagessupa_foundationlibservicesactive_chat_trackerdart">15b. NEW: <code>packages/supa_foundation/lib/services/active_chat_tracker.dart</code><a class="headerlink" href="#15b-new-packagessupa_foundationlibservicesactive_chat_trackerdart" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">class ActiveChatTracker {
+  String? _activeChannelCid;
+
+  bool isActiveChannel(String? cid) {
+    if (cid == null || cid.isEmpty) return false;
+    return _activeChannelCid == cid;
+  }
+
+  void setActiveChannelCid(String? cid) {
+    _activeChannelCid = cid;
+  }
+}
+</code></pre>
+<h3 id="15c-update-packagessupa_foundationlibconfigget_itdart">15c. UPDATE: <code>packages/supa_foundation/lib/config/get_it.dart</code><a class="headerlink" href="#15c-update-packagessupa_foundationlibconfigget_itdart" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">import 'package:supa_foundation/services/active_chat_tracker.dart'; // ADD
+
+Future&lt;void&gt; configureFoundationDependencies() async {
+  getIt.registerLazySingleton&lt;FileHandler&gt;(() =&gt; FileHandler());
+  getIt.registerLazySingleton&lt;ActiveChatTracker&gt;(() =&gt; ActiveChatTracker()); // ADD
+  getIt.init();
+}
+</code></pre>
+<hr />
+<h2 id="16-translation-files">16. Translation Files<a class="headerlink" href="#16-translation-files" title="Permanent link">&para;</a></h2>
+<p><code>assets/i18n/*/communication.json</code> <strong>already exist in v1.24</strong> but need to be updated with new keys added in this branch. Copy the content from the current branch for all 4 locales:
+- <code>assets/i18n/en/communication.json</code>
+- <code>assets/i18n/vi/communication.json</code>
+- <code>assets/i18n/ko/communication.json</code>
+- <code>assets/i18n/id/communication.json</code></p>
+<p>Update <code>assets/i18n/*/general.json</code> partial files — add missing keys (copy translated values from current branch for each locale):</p>
+<pre><code class="language-json">&quot;mainTabs.actionHide&quot;: &quot;...&quot;,
+&quot;mainTabs.actionPin&quot;: &quot;...&quot;,
+&quot;mainTabs.actionShow&quot;: &quot;...&quot;,
+&quot;mainTabs.actionUpdate&quot;: &quot;...&quot;,
+&quot;mainTabs.customizeNavbarPageTitle&quot;: &quot;...&quot;,
+&quot;mainTabs.hiddenSection&quot;: &quot;...&quot;,
+&quot;mainTabs.maxPinnedReached&quot;: &quot;...&quot;,
+&quot;mainTabs.othersSection&quot;: &quot;...&quot;,
+&quot;mainTabs.pinnedSection&quot;: &quot;...&quot;,
+&quot;tabs.messages&quot;: &quot;...&quot;,
+&quot;tabs.mytasks&quot;: &quot;...&quot;
+</code></pre>
+<p>After editing partial files, regenerate merged files:</p>
+<pre><code class="language-sh">dart run supa_l10n_manager merge
+</code></pre>
+<hr />
+<h2 id="17-verification-checklist">17. Verification Checklist<a class="headerlink" href="#17-verification-checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[ ] <code>flutter pub get</code> succeeds in root and <code>packages/supa_foundation</code></li>
+<li>[ ] <code>flutter analyze</code> passes (no new errors)</li>
+<li>[ ] <code>dart format lib/ packages/supa_foundation/lib/</code> passes</li>
+<li>[ ] App builds for Android and iOS</li>
+<li>[ ] Messages tab appears in bottom navbar with unread badge counter</li>
+<li>[ ] Tapping "Others" opens <code>MainTabsBottomSheet</code></li>
+<li>[ ] "Customize Navbar" → <code>CustomizeNavbarPage</code> opens and saves preferences</li>
+<li>[ ] Pinning tabs updates navbar on next hot-restart / didChangeDependencies</li>
+<li>[ ] Push notification from GetStream routes to correct chat page</li>
+<li>[ ] GetStream data-only notification (Android) shows local notification</li>
+<li>[ ] Chat client initializes on login; logs out on sign-out / tenant switch</li>
+<li>[ ] <code>CommunicationConversationsPage</code> loads and navigation to chat detail works</li>
+<li>[ ] No route errors for nested chat routes (detail, files, links, members)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

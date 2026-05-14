@@ -1,0 +1,983 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Answer Types System - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#answer-types-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Answer Types System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="answer-types-system">Answer Types System<a class="headerlink" href="#answer-types-system" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Inspection system hỗ trợ 12 loại câu trả lời khác nhau, mỗi loại có UI và logic xử lý riêng. Mỗi <code>InspectionQuestion</code> có <code>answerTypeId</code> quyết định widget type được render.</p>
+<h2 id="answer-type-enum">Answer Type Enum<a class="headerlink" href="#answer-type-enum" title="Permanent link">&para;</a></h2>
+<p><strong>Path</strong>: <code>lib/models/enums/answer_type_enum.dart</code></p>
+<pre><code class="language-dart">enum AnswerTypeEnum {
+  TEXT,             // 1 - Nhập text tự do
+  NUMBER,           // 2 - Nhập số với format
+  IMAGE,            // 3 - Upload ảnh/video
+  DATETIME,         // 4 - Chọn ngày/giờ
+  SINGLE_CHOICE,    // 5 - Chọn 1 đáp án
+  MULTIPLE_CHOICE,  // 6 - Chọn nhiều đáp án
+  INSTRUCTION,      // 7 - Hiển thị hướng dẫn (không có answer)
+  LOCATION,         // 8 - Chọn/nhập location
+  SITE,             // 9 - Chọn site từ danh sách
+  DATE_DEFAULT,     // 10 - Date picker mặc định
+  USER_DEFAULT,     // 11 - Chọn user từ danh sách
+  CODE_DEFAULT,     // 12 - Nhập code
+}
+</code></pre>
+<h2 id="type-details">Type Details<a class="headerlink" href="#type-details" title="Permanent link">&para;</a></h2>
+<h3 id="1-text-answertypeid-1">1. TEXT (answerTypeId = 1)<a class="headerlink" href="#1-text-answertypeid-1" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeTextAndNumber</code> → <code>AnswerField</code></p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">TextField(
+  controller: _textController,
+  onChanged: widget.onChanged,
+  decoration: InputDecoration(
+    hintText: translate.general.pleaseInput,
+    border: OutlineInputBorder(),
+  ),
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  textValue: String  // User input
+}
+</code></pre>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Nhập tên, mô tả, ghi chú</li>
+<li>Câu trả lời dạng văn bản tự do</li>
+<li>Comments, observations</li>
+</ul>
+<p><strong>Validation</strong>:</p>
+<ul>
+<li>Required check</li>
+<li>Min/max length (nếu có config)</li>
+</ul>
+<hr />
+<h3 id="2-number-answertypeid-2">2. NUMBER (answerTypeId = 2)<a class="headerlink" href="#2-number-answertypeid-2" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeTextAndNumber</code> → <code>AnswerField</code></p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">TextField(
+  controller: _textController,
+  keyboardType: TextInputType.number,
+  inputFormatters: [
+    FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]'))
+  ],
+  onChanged: (value) {
+    // Parse và format number
+    final raw = value.replaceAll(',', '');
+    final number = double.tryParse(raw);
+    if (number != null) {
+      // Format: #,##0.#####
+      widget.onChanged!(numberFormat.format(number));
+    }
+  },
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  numberValue: double  // Parsed number
+}
+</code></pre>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Auto-format với dấu phẩy (1,000,000)</li>
+<li>Khi focus: remove format để dễ edit</li>
+<li>Khi unfocus: apply format lại</li>
+<li>Hỗ trợ số thập phân (tối đa 5 chữ số)</li>
+<li>Optional unit display (numberUnit)</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Đo đạc (nhiệt độ, kích thước, khối lượng)</li>
+<li>Đếm số lượng</li>
+<li>Tính toán điểm số</li>
+</ul>
+<p><strong>Validation</strong>:</p>
+<ul>
+<li>Required check</li>
+<li>Min/max value (nếu có config)</li>
+<li>Number format</li>
+</ul>
+<hr />
+<h3 id="3-image-answertypeid-3">3. IMAGE (answerTypeId = 3)<a class="headerlink" href="#3-image-answertypeid-3" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeMedia</code> → <code>AnswerField</code> → <code>MediaViewWidgetControl</code></p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">MediaViewWidgetControl(
+  files: fileMappings,
+  onAdd: () =&gt; pickImages(),
+  onDelete: (file) =&gt; deleteFile(file),
+  allowUploadFromLibrary: true,
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  imageId: int         // -1: placeholder, &gt;0: uploaded
+  image: File          // Full file object
+  uploadProgress: double  // 0.0 - 1.0
+}
+</code></pre>
+<p><strong>Upload Flow</strong>:</p>
+<ol>
+<li>User picks images → Create placeholders (<code>imageId = -1</code>)</li>
+<li>Start upload → Progress callback updates <code>uploadProgress</code></li>
+<li>Upload complete → Replace placeholders với real files</li>
+<li>Sync to server → <code>syncQuestionAnswer()</code></li>
+</ol>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Multi-image upload</li>
+<li>Real-time progress display (%)</li>
+<li>Watermark support</li>
+<li>Gallery preview</li>
+<li>Delete confirmation</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Photo evidence của công việc</li>
+<li>Before/after photos</li>
+<li>Damage reports</li>
+<li>Progress tracking</li>
+</ul>
+<p><strong>Validation</strong>:</p>
+<ul>
+<li>Required check (at least 1 image)</li>
+<li>File size limits</li>
+<li>Image format check</li>
+</ul>
+<p><strong>See Also</strong>: <a href="../upload-progress-implementation/">Upload Progress Implementation</a></p>
+<hr />
+<h3 id="4-datetime-answertypeid-4">4. DATETIME (answerTypeId = 4)<a class="headerlink" href="#4-datetime-answertypeid-4" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeDateTime</code> → <code>AnswerField</code></p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">InkWell(
+  onTap: widget.onTapDate,
+  child: Container(
+    padding: EdgeInsets.all(12),
+    decoration: BoxDecoration(
+      border: Border.all(color: Colors.grey),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Text(
+      formattedDate,  // dd/MM/yyyy HH:mm or dd/MM/yyyy
+      style: TextStyle(fontSize: 16),
+    ),
+  ),
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  date: DateTime  // Selected date/time
+}
+
+InspectionQuestion {
+  useTime: bool   // Include time picker or date only
+}
+</code></pre>
+<p><strong>Date Picker</strong>:</p>
+<pre><code class="language-dart">// Date only
+final date = await showDatePicker(
+  context: context,
+  initialDate: DateTime.now(),
+  firstDate: DateTime(2000),
+  lastDate: DateTime(2100),
+);
+
+// With time
+final time = await showTimePicker(
+  context: context,
+  initialTime: TimeOfDay.now(),
+);
+
+final dateTime = DateTime(
+  date.year, date.month, date.day,
+  time.hour, time.minute,
+);
+</code></pre>
+<p><strong>Format Display</strong>:</p>
+<ul>
+<li><code>useTime = true</code>: <code>dd/MM/yyyy HH:mm</code></li>
+<li><code>useTime = false</code>: <code>dd/MM/yyyy</code></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Scheduled inspections</li>
+<li>Deadline tracking</li>
+<li>Event logging</li>
+<li>Time-sensitive checks</li>
+</ul>
+<hr />
+<h3 id="5-single_choice-answertypeid-5">5. SINGLE_CHOICE (answerTypeId = 5)<a class="headerlink" href="#5-single_choice-answertypeid-5" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeSelectOptions</code> hoặc <code>InspectionQuestionResponseSetTypeSelectOptions</code></p>
+<p><strong>Decision</strong>:</p>
+<pre><code class="language-dart">if (question.questionnaireResponseSetId.value != 0) {
+  // Use ResponseSet widget
+  return InspectionQuestionResponseSetTypeSelectOptions(...);
+} else {
+  // Use Options widget
+  return InspectionQuestionTypeSelectOptions(...);
+}
+</code></pre>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">// Display selected option
+InkWell(
+  onTap: () =&gt; _selectOptions(),
+  child: Container(
+    child: Text(
+      selectedOption?.content ?? translate.general.pleaseSelect,
+    ),
+  ),
+)
+
+// Selection modal
+InpectionSelectOptions(
+  options: widget.options,
+  answerTypeId: AnswerTypeEnum.SINGLE_CHOICE.value,
+  onSelectOption: (option, selectedIndexes) {
+    // Save selection
+  },
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  inspectionAnswerOptionId: int
+  inspectionAnswerOption: InspectionAnswerOption {
+    id: int
+    content: String
+    score: double?        // For scoring
+    answerOptionId: int
+  }
+}
+</code></pre>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Radio button selection</li>
+<li>Clear selection option</li>
+<li>Score-based options</li>
+<li>Conditional logic trigger</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Yes/No questions</li>
+<li>Quality ratings (Good/Fair/Poor)</li>
+<li>Status selection (Pass/Fail)</li>
+<li>Single choice surveys</li>
+</ul>
+<hr />
+<h3 id="6-multiple_choice-answertypeid-6">6. MULTIPLE_CHOICE (answerTypeId = 6)<a class="headerlink" href="#6-multiple_choice-answertypeid-6" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: Same as SINGLE_CHOICE (logic handles multiple selection)</p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">// Display selected count
+InkWell(
+  onTap: () =&gt; _selectOptions(),
+  child: Text(
+    '${selectedOptions.length} ${translate.general.itemsSelected}',
+  ),
+)
+
+// Selection modal with checkboxes
+InpectionSelectOptions(
+  options: widget.options,
+  answerTypeId: AnswerTypeEnum.MULTIPLE_CHOICE.value,
+  onSelectOption: (option, selectedIndexes) {
+    // Save multiple selections
+  },
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">List&lt;InspectionQuestionAnswer&gt; [
+  {
+    inspectionAnswerOptionId: int
+    inspectionAnswerOption: InspectionAnswerOption
+  },
+  // ... more selections
+]
+</code></pre>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Checkbox selection</li>
+<li>Select all/none</li>
+<li>Score aggregation</li>
+<li>Complex conditional logic</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Checklist items</li>
+<li>Multi-select surveys</li>
+<li>Feature selection</li>
+<li>Inspection categories</li>
+</ul>
+<hr />
+<h3 id="7-instruction-answertypeid-7">7. INSTRUCTION (answerTypeId = 7)<a class="headerlink" href="#7-instruction-answertypeid-7" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeInstruction</code></p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">// No input field - just display content
+InstructionContentType(
+  file: widget.inspectionQuestion.instructionFile.value,
+)
+</code></pre>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Không có answer data</li>
+<li>Hiển thị text/media instructions</li>
+<li>Optional attached file (PDF, image)</li>
+<li>Can have note/attachments cho question</li>
+</ul>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestion {
+  instructionFile: File?  // Optional attachment
+}
+
+// No InspectionQuestionAnswer needed
+</code></pre>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Safety instructions</li>
+<li>Procedure steps</li>
+<li>Guidelines</li>
+<li>Reference material</li>
+</ul>
+<hr />
+<h3 id="8-location-answertypeid-8">8. LOCATION (answerTypeId = 8)<a class="headerlink" href="#8-location-answertypeid-8" title="Permanent link">&para;</a></h3>
+<p><strong>Widget</strong>: <code>InspectionQuestionTypeLocation</code> → <code>AnswerField</code></p>
+<p><strong>UI Component</strong>:</p>
+<pre><code class="language-dart">InkWell(
+  onTap: () =&gt; _showLocationPicker(),
+  child: Container(
+    child: Text(
+      displayValue,  // Address or coordinates
+    ),
+  ),
+)
+</code></pre>
+<p><strong>Data Storage</strong>:</p>
+<pre><code class="language-dart">InspectionQuestionAnswer {
+  latitude: double
+  longitude: double
+  address: String      // Geocoded address
+}
+</code></pre>
+<p><strong>Location Picker</strong>:</p>
+<pre><code class="language-dart">LocationPickerBottomSheet(
+  initialLocation: LatLng(lat, lng),
+  onLocationSelected: (LatLng location, String address) {
+    // Update answer
+  },
+)
+</code></pre>
+<p><strong>Display Logic</strong>:</p>
+<pre><code class="language-dart">String _getDisplayValue() {
+  final answer = question.inspectionQuestionAnswers.value.first;
+  if (answer.address.value.isNotEmpty) {
+    return answer.address.value;
+  } else if (answer.latitude.value != 0 &amp;&amp; answer.longitude.value != 0) {
+    return '${answer.latitude.value.toStringAsFixed(6)}, ${answer.longitude.value.toStringAsFixed(6)}';
+  }
+  return '';
+}
+</code></pre>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Map picker</li>
+<li>GPS auto-detect</li>
+<li>Address search</li>
+<li>Geocoding/reverse geocoding</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Site location verification</li>
+<li>Asset tracking</li>
+<li>Route inspection</li>
+<li>Incident reporting</li>
+</ul>
+<hr />
+<h3 id="9-12-other-types">9-12. Other Types<a class="headerlink" href="#9-12-other-types" title="Permanent link">&para;</a></h3>
+<p><strong>SITE (9)</strong>, <strong>DATE_DEFAULT (10)</strong>, <strong>USER_DEFAULT (11)</strong>, <strong>CODE_DEFAULT (12)</strong> - Similar pattern với TEXT type nhưng có specialized pickers.</p>
+<hr />
+<h2 id="widget-mapping-table">Widget Mapping Table<a class="headerlink" href="#widget-mapping-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Answer Type</th>
+<th>Value</th>
+<th>Widget Class</th>
+<th>Input Component</th>
+<th>Data Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEXT</td>
+<td>1</td>
+<td>InspectionQuestionTypeTextAndNumber</td>
+<td>TextField</td>
+<td>textValue</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>2</td>
+<td>InspectionQuestionTypeTextAndNumber</td>
+<td>TextField (number)</td>
+<td>numberValue</td>
+</tr>
+<tr>
+<td>IMAGE</td>
+<td>3</td>
+<td>InspectionQuestionTypeMedia</td>
+<td>MediaViewWidget</td>
+<td>imageId, image</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>4</td>
+<td>InspectionQuestionTypeDateTime</td>
+<td>DatePicker</td>
+<td>date</td>
+</tr>
+<tr>
+<td>SINGLE_CHOICE</td>
+<td>5</td>
+<td>InspectionQuestionTypeSelectOptions</td>
+<td>Modal picker</td>
+<td>inspectionAnswerOptionId</td>
+</tr>
+<tr>
+<td>MULTIPLE_CHOICE</td>
+<td>6</td>
+<td>InspectionQuestionTypeSelectOptions</td>
+<td>Modal picker</td>
+<td>List<Answer></td>
+</tr>
+<tr>
+<td>INSTRUCTION</td>
+<td>7</td>
+<td>InspectionQuestionTypeInstruction</td>
+<td>Read-only</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td>LOCATION</td>
+<td>8</td>
+<td>InspectionQuestionTypeLocation</td>
+<td>Map picker</td>
+<td>latitude, longitude</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-props-pattern">Common Props Pattern<a class="headerlink" href="#common-props-pattern" title="Permanent link">&para;</a></h2>
+<p>Tất cả InspectionQuestionType widgets nhận common props:</p>
+<pre><code class="language-dart">class InspectionQuestionType[X] extends StatefulWidget {
+  // Question data
+  final InspectionQuestion inspectionQuestion;
+  final Inspection inspectionDetail;
+  final int answerTypeId;
+
+  // Callbacks
+  final Future&lt;void&gt; Function(InspectionQuestion) updateInspectionQuestion;
+  final Future&lt;void&gt; Function(InspectionQuestion) onUpdateInspectionFileMapping;
+  final Future&lt;void&gt; Function(List&lt;File&gt;) updateFiles;
+  final Future&lt;void&gt; Function(InspectionQuestionFileMapping) onDelete;
+  final Future&lt;void&gt; Function() onReload;
+  final ValueChanged&lt;String&gt; onChangedNote;
+  final Future&lt;void&gt; Function() onUpdateNote;
+
+  // UI state
+  final String nameImageCustom;  // Unique key for media
+}
+</code></pre>
+<h2 id="answer-data-access-pattern">Answer Data Access Pattern<a class="headerlink" href="#answer-data-access-pattern" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">// Get answer based on type
+if (answerTypeId == AnswerTypeEnum.TEXT.value) {
+  final answer = question.inspectionQuestionAnswers.value[0];
+  final text = answer.textValue.value;
+}
+
+if (answerTypeId == AnswerTypeEnum.NUMBER.value) {
+  final answer = question.inspectionQuestionAnswers.value[0];
+  final number = answer.numberValue.value;
+}
+
+if (answerTypeId == AnswerTypeEnum.IMAGE.value) {
+  // Multiple answers (multiple images)
+  for (var answer in question.inspectionQuestionAnswers.value) {
+    final imageId = answer.imageId.value;
+    final file = answer.image.value;
+  }
+}
+
+if (answerTypeId == AnswerTypeEnum.SINGLE_CHOICE.value) {
+  final answer = question.inspectionQuestionAnswers.value[0];
+  final option = answer.inspectionAnswerOption.value;
+  final score = option.score.value;
+}
+
+if (answerTypeId == AnswerTypeEnum.MULTIPLE_CHOICE.value) {
+  // Multiple answers
+  for (var answer in question.inspectionQuestionAnswers.value) {
+    final option = answer.inspectionAnswerOption.value;
+  }
+}
+</code></pre>
+<h2 id="validation-rules-by-type">Validation Rules by Type<a class="headerlink" href="#validation-rules-by-type" title="Permanent link">&para;</a></h2>
+<pre><code class="language-dart">// TEXT
+- Required: textValue.isNotEmpty
+- MaxLength: textValue.length &lt;= maxLength
+
+// NUMBER
+- Required: numberValue != null
+- Range: numberValue &gt;= min &amp;&amp; numberValue &lt;= max
+
+// IMAGE
+- Required: inspectionQuestionAnswers.length &gt; 0
+- Uploaded: all imageId &gt; 0 (no placeholders)
+
+// DATETIME
+- Required: date != null
+- Range: date &gt;= startDate &amp;&amp; date &lt;= endDate
+
+// SINGLE_CHOICE
+- Required: inspectionQuestionAnswers.length == 1
+
+// MULTIPLE_CHOICE
+- Required: inspectionQuestionAnswers.length &gt; 0
+- MinSelect: length &gt;= minSelect
+- MaxSelect: length &lt;= maxSelect
+
+// LOCATION
+- Required: latitude != 0 &amp;&amp; longitude != 0
+</code></pre>
+<h2 id="adding-new-answer-type">Adding New Answer Type<a class="headerlink" href="#adding-new-answer-type" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-add-to-enum">Step 1: Add to Enum<a class="headerlink" href="#step-1-add-to-enum" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// lib/models/enums/answer_type_enum.dart
+enum AnswerTypeEnum {
+  // ... existing
+  NEW_TYPE;  // 13
+
+  int get value {
+    switch (this) {
+      // ... existing
+      case AnswerTypeEnum.NEW_TYPE:
+        return 13;
+    }
+  }
+}
+</code></pre>
+<h3 id="step-2-create-widget">Step 2: Create Widget<a class="headerlink" href="#step-2-create-widget" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// lib/pages/inspection/widgets/inspection_answer/inspection_question_types/
+// inspection_question_type_new_type.dart
+
+class InspectionQuestionTypeNewType extends StatefulWidget {
+  // Common props
+  final InspectionQuestion inspectionQuestion;
+  // ... all standard props
+}
+
+class _InspectionQuestionTypeNewTypeState extends State&lt;...&gt; {
+  @override
+  Widget build(BuildContext context) {
+    return AnswerTypeItem(
+      // Wrapper props
+      title: widget.inspectionQuestion.content.value,
+      isRequired: widget.inspectionQuestion.isRequired.value,
+      // ...
+
+      child: AnswerField(
+        answerTypeId: widget.answerTypeId,
+        // Custom props for this type
+        onChanged: (value) {
+          // Handle input
+        },
+      ),
+    );
+  }
+}
+</code></pre>
+<h3 id="step-3-add-to-buildinspectionquestion">Step 3: Add to buildInspectionQuestion<a class="headerlink" href="#step-3-add-to-buildinspectionquestion" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// lib/pages/inspection/inspection_answer_page.dart
+Widget buildInspectionQuestion(InspectionQuestion question) {
+  final answerTypeId = question.answerTypeId.value;
+
+  // ... existing types
+
+  if (answerTypeId == AnswerTypeEnum.NEW_TYPE.value) {
+    return InspectionQuestionTypeNewType(
+      inspectionQuestion: question,
+      // ... props
+    );
+  }
+}
+</code></pre>
+<h3 id="step-4-add-data-field-if-needed">Step 4: Add Data Field (if needed)<a class="headerlink" href="#step-4-add-data-field-if-needed" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// lib/core/models/inspection_question_answer.dart
+class InspectionQuestionAnswer extends JsonModel {
+  @override
+  List&lt;JsonField&gt; get fields =&gt; [
+    // ... existing
+    newTypeValue,
+  ];
+
+  JsonString newTypeValue = JsonString('newTypeValue');
+}
+</code></pre>
+<h3 id="step-5-add-validation">Step 5: Add Validation<a class="headerlink" href="#step-5-add-validation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-dart">// lib/services/inspection_validator.dart
+ValidationResult validateQuestionAnswer(InspectionQuestion question) {
+  if (question.answerTypeId.value == AnswerTypeEnum.NEW_TYPE.value) {
+    if (question.isRequired.value) {
+      // Check if answered
+    }
+  }
+}
+</code></pre>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../architecture-overview/">Architecture Overview</a></li>
+<li><a href="./models-overview.md">Models Overview</a></li>
+<li><a href="./answer-field.md">Answer Field Component</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

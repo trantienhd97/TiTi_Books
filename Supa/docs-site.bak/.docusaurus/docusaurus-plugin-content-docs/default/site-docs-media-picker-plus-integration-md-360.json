@@ -1,0 +1,24 @@
+{
+  "unversionedId": "media_picker_plus_integration",
+  "id": "media_picker_plus_integration",
+  "title": "media_picker_plus Integration Guide",
+  "description": "Overview",
+  "source": "@site/docs/media_picker_plus_integration.md",
+  "sourceDirName": ".",
+  "slug": "/media_picker_plus_integration",
+  "permalink": "/docs/media_picker_plus_integration",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/media_picker_plus_integration.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Localization",
+    "permalink": "/docs/localization"
+  },
+  "next": {
+    "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+    "permalink": "/docs/multi_selection_search_modal_usage"
+  }
+}

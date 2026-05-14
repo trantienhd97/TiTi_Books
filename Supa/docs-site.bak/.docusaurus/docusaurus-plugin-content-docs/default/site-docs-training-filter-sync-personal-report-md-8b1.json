@@ -1,0 +1,24 @@
+{
+  "unversionedId": "training/filter_sync_personal_report",
+  "id": "training/filter_sync_personal_report",
+  "title": "Filter Synchronization for Personal Report Pages",
+  "description": "Summary",
+  "source": "@site/docs/training/filter_sync_personal_report.md",
+  "sourceDirName": "training",
+  "slug": "/training/filter_sync_personal_report",
+  "permalink": "/docs/training/filter_sync_personal_report",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/training/filter_sync_personal_report.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+    "permalink": "/docs/supa_communication_integration"
+  },
+  "next": {
+    "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+    "permalink": "/docs/training/location_answer_implementation"
+  }
+}

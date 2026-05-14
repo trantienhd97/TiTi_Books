@@ -1,0 +1,1384 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Phát triển Sub-App - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phat-trien-sub-app" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phát triển Sub-App
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="phat-trien-sub-app">Phát triển Sub-App<a class="headerlink" href="#phat-trien-sub-app" title="Permanent link">&para;</a></h1>
+<h2 id="1-tong-quan">1. Tổng quan<a class="headerlink" href="#1-tong-quan" title="Permanent link">&para;</a></h2>
+<p>Tài liệu này mô tả cách phát triển một sub-app hoàn chỉnh trong SupaMobileApp, bao gồm:
+- Tạo SubApp class
+- Cấu hình dependencies với Get It
+- Tạo navbar tùy chỉnh
+- Tạo bộ routing
+- Đăng ký routing và login
+- Đăng ký discussion adapters
+- Đăng ký notification handlers
+- Cấu trúc thư mục</p>
+<h2 id="2-cau-truc-thu-muc-sub-app">2. Cấu trúc thư mục Sub-App<a class="headerlink" href="#2-cau-truc-thu-muc-sub-app" title="Permanent link">&para;</a></h2>
+<h3 id="21-cau-truc-chuan">2.1. Cấu trúc chuẩn<a class="headerlink" href="#21-cau-truc-chuan" title="Permanent link">&para;</a></h3>
+<pre><code>packages/supa_&lt;app_name&gt;/lib/
+├── &lt;app_name&gt;_app.dart              # SubApp implementation
+├── config/
+│   └── get_it.dart                  # Dependency injection config
+├── router/
+│   └── router.dart                  # Routing configuration
+├── pages/
+│   ├── home/
+│   │   └── &lt;app_name&gt;_home_page.dart
+│   ├── &lt;feature&gt;/
+│   │   └── &lt;feature&gt;_page.dart
+│   └── &lt;app_name&gt;_navbar.dart      # Navbar widget
+├── widgets/
+│   ├── atoms/                       # Atomic components
+│   ├── molecules/                   # Composite components
+│   └── organisms/                   # Complex components
+├── repositories/
+│   └── &lt;entity&gt;_repository.dart
+├── blocs/                           # State management
+│   └── &lt;feature&gt;_bloc/
+├── core/
+│   ├── models/                      # Models generated from backend
+│   │   └── models.dart
+│   └── filters/                     # Filter classes
+├── models/                          # Custom models
+│   └── &lt;model&gt;.dart
+├── filters/                         # Additional filters
+│   └── &lt;filter&gt;.dart
+├── notification/                    # Notification handlers
+│   └── &lt;app_name&gt;_notification_handler.dart
+└── utils/                           # Utility functions
+    └── &lt;utility&gt;.dart
+</code></pre>
+<h3 id="22-giai-thich-cac-thu-muc">2.2. Giải thích các thư mục<a class="headerlink" href="#22-giai-thich-cac-thu-muc" title="Permanent link">&para;</a></h3>
+<p><strong><code>config/</code></strong>: Cấu hình dependencies injection (GetIt)</p>
+<p><strong><code>router/</code></strong>: Định nghĩa tất cả routes của sub-app</p>
+<p><strong><code>pages/</code></strong>: Tất cả các pages/screens của app
+- <code>home/</code>: Trang chủ của sub-app
+- <code>&lt;feature&gt;/</code>: Các pages theo feature
+- <code>&lt;app_name&gt;_navbar.dart</code>: Navbar widget</p>
+<p><strong><code>widgets/</code></strong>: Reusable widgets, tổ chức theo Atomic Design
+- <code>atoms/</code>: Components nhỏ nhất (buttons, inputs, etc.)
+- <code>molecules/</code>: Components kết hợp từ atoms
+- <code>organisms/</code>: Components phức tạp kết hợp từ molecules</p>
+<p><strong><code>repositories/</code></strong>: Data access layer, giao tiếp với API</p>
+<p><strong><code>blocs/</code></strong>: State management (BLoC pattern)</p>
+<p><strong><code>core/</code></strong>: Core functionality
+- <code>models/</code>: Models được generate từ backend
+- <code>filters/</code>: Filter classes cho API calls</p>
+<p><strong><code>models/</code></strong>: Custom models không được generate từ backend</p>
+<p><strong><code>filters/</code></strong>: Additional filter classes</p>
+<p><strong><code>notification/</code></strong>: Notification handlers cho push notifications</p>
+<p><strong><code>utils/</code></strong>: Utility functions và helpers</p>
+<h2 id="3-tao-subapp-class">3. Tạo SubApp Class<a class="headerlink" href="#3-tao-subapp-class" title="Permanent link">&para;</a></h2>
+<h3 id="31-implement-subapp-class">3.1. Implement SubApp Class<a class="headerlink" href="#31-implement-subapp-class" title="Permanent link">&para;</a></h3>
+<p>Tạo file <code>packages/supa_&lt;app_name&gt;/lib/&lt;app_name&gt;_app.dart</code>:</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_foundation/config/sub_system.dart';
+import 'package:supa_foundation/theme/supa_material_theme.dart' as supa_theme;
+import 'package:supa_foundation/theme/supa_theme_extension.dart';
+import 'package:supa_&lt;app_name&gt;/pages/home/&lt;app_name&gt;_home_page.dart';
+import 'package:supa_&lt;app_name&gt;/router/router.dart';
+
+class &lt;AppName&gt;App extends SubApp {
+  @override
+  String get homePage =&gt; &lt;AppName&gt;HomePage.location;
+
+  @override
+  String get label =&gt; '&lt;App Name&gt;';
+
+  @override
+  String? get appIcon =&gt; 'assets/images/&lt;app_name&gt;-icon.png';
+
+  @override
+  final List&lt;RouteBase&gt; routes = &lt;appName&gt;Routes;
+
+  @override
+  int? get subsystemId =&gt; AppSubSystem.&lt;app_name&gt;.id;
+
+  @override
+  String get routePrefix =&gt; '/&lt;app_name&gt;';
+
+  @override
+  final ThemeData lightTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.lightColorScheme,
+    extendedColorScheme: supa_theme.lightExtendedColorScheme,
+  );
+
+  @override
+  final ThemeData darkTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.darkColorScheme,
+    extendedColorScheme: supa_theme.darkExtendedColorScheme,
+  );
+}
+</code></pre>
+<h3 id="32-inh-nghia-sub-system-id">3.2. Định nghĩa Sub-System ID<a class="headerlink" href="#32-inh-nghia-sub-system-id" title="Permanent link">&para;</a></h3>
+<p>Thêm sub-system mới vào enum <code>AppSubSystem</code> trong <code>packages/supa_foundation/lib/config/sub_system.dart</code>:</p>
+<pre><code class="language-dart">enum AppSubSystem {
+  portal(
+    id: 1,
+    code: 'PORTAL',
+  ),
+  // ... existing systems
+  &lt;app_name&gt;(
+    id: &lt;new_id&gt;,
+    code: '&lt;APP_NAME_UPPERCASE&gt;',
+  ),
+}
+</code></pre>
+<h3 id="33-giai-thich-cac-thuoc-tinh">3.3. Giải thích các thuộc tính<a class="headerlink" href="#33-giai-thich-cac-thuoc-tinh" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>homePage</code></strong>: Route path của trang chủ (ví dụ: <code>'/&lt;app_name&gt;/home'</code>)</li>
+<li><strong><code>label</code></strong>: Tên hiển thị của app (dùng trong UI)</li>
+<li><strong><code>appIcon</code></strong>: Đường dẫn đến icon của app (optional)</li>
+<li><strong><code>routes</code></strong>: Danh sách routes của sub-app</li>
+<li><strong><code>subsystemId</code></strong>: ID của subsystem (từ <code>AppSubSystem</code> enum)</li>
+<li><strong><code>routePrefix</code></strong>: Prefix cho tất cả routes (ví dụ: <code>'/work'</code>, <code>'/project'</code>)</li>
+<li><strong><code>lightTheme</code></strong> và <strong><code>darkTheme</code></strong>: Theme cho app (light và dark mode)</li>
+</ul>
+<h2 id="4-cau-hinh-dependencies-voi-get-it">4. Cấu hình Dependencies với Get It<a class="headerlink" href="#4-cau-hinh-dependencies-voi-get-it" title="Permanent link">&para;</a></h2>
+<h3 id="41-tao-get-it-configuration">4.1. Tạo Get It Configuration<a class="headerlink" href="#41-tao-get-it-configuration" title="Permanent link">&para;</a></h3>
+<p>Tạo file <code>packages/supa_&lt;app_name&gt;/lib/config/get_it.dart</code>:</p>
+<pre><code class="language-dart">import 'package:get_it/get_it.dart';
+import 'package:injectable/injectable.dart';
+import 'package:supa_&lt;app_name&gt;/core/models/models.dart';
+
+import 'get_it.config.dart';
+
+final getIt = GetIt.instance;
+
+@InjectableInit()
+Future&lt;void&gt; configure&lt;AppName&gt;Dependencies() async {
+  registerGenerated&lt;AppName&gt;Models();
+  getIt.init();
+}
+</code></pre>
+<h3 id="42-them-dependencies-vao-main-configuration">4.2. Thêm Dependencies vào Main Configuration<a class="headerlink" href="#42-them-dependencies-vao-main-configuration" title="Permanent link">&para;</a></h3>
+<p>Trong file <code>lib/config/get_it.dart</code> của main app, import và gọi hàm configuration:</p>
+<pre><code class="language-dart">import 'package:supa_&lt;app_name&gt;/config/get_it.dart';
+
+// Trong hàm configureDependencies:
+Future&lt;void&gt; configureDependencies() async {
+  // ... existing code ...
+
+  /// Business-specific dependencies
+  // ... existing dependencies ...
+  await configure&lt;AppName&gt;Dependencies();  // Thêm dòng này
+
+  getIt.init();
+}
+</code></pre>
+<h3 id="43-inh-nghia-models">4.3. Định nghĩa Models<a class="headerlink" href="#43-inh-nghia-models" title="Permanent link">&para;</a></h3>
+<p>Tạo models trong thư mục <code>core/models</code>. Sử dụng <code>JsonModel</code> và <code>JsonField</code> từ architecture package:</p>
+<pre><code class="language-dart">// Trong supa_&lt;app_name&gt;/core/models/models.dart
+export 'models.g.dart'; // Generated file
+
+// Trong supa_&lt;app_name&gt;/core/models/&lt;model_name&gt;.dart
+import 'package:supa_architecture/supa_architecture.dart';
+
+part 'models.g.dart';
+
+@jsonModel
+class &lt;ModelName&gt; extends JsonModel&lt;&lt;ModelName&gt;&gt; {
+  &lt;ModelName&gt;({super.rawValue});
+
+  @jsonField
+  late final JsonField&lt;String&gt; name = createField&lt;String&gt;('name', '');
+
+  @jsonField
+  late final JsonField&lt;int&gt; count = createField&lt;int&gt;('count', 0);
+}
+</code></pre>
+<h2 id="5-ang-ky-sub-app-trong-main-app">5. Đăng ký Sub-App trong Main App<a class="headerlink" href="#5-ang-ky-sub-app-trong-main-app" title="Permanent link">&para;</a></h2>
+<h3 id="51-import-sub-app">5.1. Import Sub-App<a class="headerlink" href="#51-import-sub-app" title="Permanent link">&para;</a></h3>
+<p>Trong file <code>lib/main.dart</code>, thêm import:</p>
+<pre><code class="language-dart">import 'package:supa_&lt;app_name&gt;/&lt;app_name&gt;_app.dart';
+</code></pre>
+<h3 id="52-ang-ky-sub-app">5.2. Đăng ký Sub-App<a class="headerlink" href="#52-ang-ky-sub-app" title="Permanent link">&para;</a></h3>
+<p>Trong hàm <code>_registerApps()</code> trong <code>lib/main.dart</code>:</p>
+<pre><code class="language-dart">void _registerApps() {
+  AppRegistry.registerApp('/supa', MainApp());
+
+  // ... existing registrations ...
+  AppRegistry.registerApp('/&lt;app_name&gt;', &lt;AppName&gt;App());  // Thêm dòng này
+}
+</code></pre>
+<h2 id="6-tao-navbar">6. Tạo Navbar<a class="headerlink" href="#6-tao-navbar" title="Permanent link">&para;</a></h2>
+<h3 id="31-scaffoldnavbar">3.1. ScaffoldNavbar<a class="headerlink" href="#31-scaffoldnavbar" title="Permanent link">&para;</a></h3>
+<p><code>ScaffoldNavbar</code> là widget template từ <code>supa_foundation</code> cung cấp bottom navigation bar. Bạn cần tạo một widget wrapper để customize navbar cho sub-app.</p>
+<h3 id="32-tao-navbar-widget">3.2. Tạo Navbar Widget<a class="headerlink" href="#32-tao-navbar-widget" title="Permanent link">&para;</a></h3>
+<p>Tạo file <code>packages/supa_&lt;app_name&gt;/lib/pages/&lt;app_name&gt;_navbar.dart</code>:</p>
+<pre><code class="language-dart">import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:supa_foundation/widgets/templates/scaffold_navbar.dart';
+import 'package:supa_l10n_manager/translator.dart';
+import 'package:supa_&lt;app_name&gt;/pages/home/&lt;app_name&gt;_home_page.dart';
+import 'package:supa_&lt;app_name&gt;/pages/&lt;feature&gt;/&lt;feature&gt;_page.dart';
+
+class &lt;AppName&gt;Navbar extends StatelessWidget {
+  const &lt;AppName&gt;Navbar({
+    super.key,
+    required this.child,
+  });
+
+  final Widget child;
+
+  List&lt;ScaffoldNavbarItem&gt; _buildNavbarItems() {
+    return [
+      ScaffoldNavbarItem(
+        path: &lt;AppName&gt;HomePage.location,
+        icon: FluentIcons.home_24_regular,
+        activeIcon: FluentIcons.home_24_filled,
+        label: translate('&lt;app_name&gt;.navbar.home'),
+      ),
+      ScaffoldNavbarItem(
+        path: &lt;Feature&gt;Page.location,
+        icon: FluentIcons.&lt;icon&gt;_24_regular,
+        activeIcon: FluentIcons.&lt;icon&gt;_24_filled,
+        label: translate('&lt;app_name&gt;.navbar.&lt;feature&gt;'),
+      ),
+      // Thêm các items khác...
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ScaffoldNavbar(
+      shouldShowNavbar: true,
+      buildItems: _buildNavbarItems,
+      child: child,
+    );
+  }
+}
+</code></pre>
+<h3 id="33-navbar-voi-dynamic-items-permission-based">3.3. Navbar với Dynamic Items (Permission-based)<a class="headerlink" href="#33-navbar-voi-dynamic-items-permission-based" title="Permanent link">&para;</a></h3>
+<p>Nếu navbar items phụ thuộc vào permissions, sử dụng StatefulWidget với BlocBuilder:</p>
+<pre><code class="language-dart">import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:supa_foundation/widgets/templates/scaffold_navbar.dart';
+import 'package:supa_l10n_manager/supa_l10n_manager.dart';
+import 'package:supa_&lt;app_name&gt;/blocs/&lt;app_name&gt;_profile_bloc/&lt;app_name&gt;_profile_bloc.dart';
+import 'package:supa_&lt;app_name&gt;/pages/home/&lt;app_name&gt;_home_page.dart';
+import 'package:supa_&lt;app_name&gt;/pages/&lt;feature&gt;/&lt;feature&gt;_page.dart';
+
+class &lt;AppName&gt;Navbar extends StatefulWidget {
+  const &lt;AppName&gt;Navbar({
+    super.key,
+    required this.child,
+  });
+
+  final Widget child;
+
+  @override
+  State&lt;&lt;AppName&gt;Navbar&gt; createState() =&gt; _&lt;AppName&gt;NavbarState();
+}
+
+class _&lt;AppName&gt;NavbarState extends State&lt;&lt;AppName&gt;Navbar&gt; {
+  final &lt;AppName&gt;ProfileBloc _bloc = &lt;AppName&gt;ProfileBloc();
+
+  @override
+  void initState() {
+    super.initState();
+    _bloc.add(const Fetch&lt;AppName&gt;ProfileEvent());
+  }
+
+  List&lt;ScaffoldNavbarItem&gt; _buildNavbarItems(&lt;AppName&gt;ProfileState state) {
+    // Kiểm tra permissions
+    final hasFeaturePermission = state is &lt;AppName&gt;ProfileLoaded &amp;&amp;
+        state.paths.any((path) =&gt; path == '&lt;app_name&gt;/&lt;feature&gt;/&lt;path&gt;');
+
+    final items = List&lt;ScaffoldNavbarItem&gt;.from(_buildBaseNavbarItems());
+
+    // Thêm items dựa trên permissions
+    if (hasFeaturePermission) {
+      items.add(
+        ScaffoldNavbarItem(
+          path: &lt;Feature&gt;Page.location,
+          icon: FluentIcons.&lt;icon&gt;_24_regular,
+          activeIcon: FluentIcons.&lt;icon&gt;_24_filled,
+          label: translate('&lt;app_name&gt;.navbar.&lt;feature&gt;'),
+        ),
+      );
+    }
+
+    return items;
+  }
+
+  List&lt;ScaffoldNavbarItem&gt; _buildBaseNavbarItems() {
+    return [
+      ScaffoldNavbarItem(
+        path: &lt;AppName&gt;HomePage.location,
+        icon: FluentIcons.home_24_regular,
+        activeIcon: FluentIcons.home_24_filled,
+        label: translate('&lt;app_name&gt;.navbar.home'),
+      ),
+      // Các items luôn hiển thị...
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider&lt;&lt;AppName&gt;ProfileBloc&gt;(
+      create: (context) =&gt; _bloc,
+      child: BlocBuilder&lt;&lt;AppName&gt;ProfileBloc, &lt;AppName&gt;ProfileState&gt;(
+        bloc: _bloc,
+        builder: (context, state) {
+          return ScaffoldNavbar(
+            shouldShowNavbar: true,
+            buildItems: () =&gt; _buildNavbarItems(state),
+            child: widget.child,
+          );
+        },
+      ),
+    );
+  }
+}
+</code></pre>
+<h3 id="34-scaffoldnavbaritem-properties">3.4. ScaffoldNavbarItem Properties<a class="headerlink" href="#34-scaffoldnavbaritem-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>path</code></strong>: Route path của page (ví dụ: <code>HomePage.location</code>)</li>
+<li><strong><code>icon</code></strong>: Icon hiển thị khi không active</li>
+<li><strong><code>activeIcon</code></strong>: Icon hiển thị khi active (optional, mặc định dùng <code>icon</code>)</li>
+<li><strong><code>activeAssetImage</code></strong>: Asset image cho active state (optional)</li>
+<li><strong><code>label</code></strong>: Text label hiển thị dưới icon</li>
+<li><strong><code>badgeCount</code></strong>: Số badge hiển thị trên icon (optional)</li>
+</ul>
+<h2 id="7-tao-bo-routing">7. Tạo Bộ Routing<a class="headerlink" href="#7-tao-bo-routing" title="Permanent link">&para;</a></h2>
+<h3 id="41-file-router">4.1. File Router<a class="headerlink" href="#41-file-router" title="Permanent link">&para;</a></h3>
+<p>Tạo file <code>packages/supa_&lt;app_name&gt;/lib/router/router.dart</code>:</p>
+<pre><code class="language-dart">import 'package:go_router/go_router.dart';
+import 'package:supa_foundation/widgets/templates/language_aware_navbar.dart';
+import 'package:supa_&lt;app_name&gt;/pages/home/&lt;app_name&gt;_home_page.dart';
+import 'package:supa_&lt;app_name&gt;/pages/&lt;app_name&gt;_navbar.dart';
+import 'package:supa_&lt;app_name&gt;/pages/&lt;feature&gt;/&lt;feature&gt;_page.dart';
+import 'package:supa_&lt;app_name&gt;/pages/&lt;feature&gt;/&lt;feature&gt;_detail_page.dart';
+
+final List&lt;RouteBase&gt; &lt;appName&gt;Routes = [
+  // Shell route với navbar
+  ShellRoute(
+    builder: (context, state, child) {
+      return LanguageAwareNavbar(
+        child: &lt;AppName&gt;Navbar(child: child),
+      );
+    },
+    routes: [
+      // Home page
+      GoRoute(
+        path: &lt;AppName&gt;HomePage.location,
+        builder: (context, state) =&gt; const &lt;AppName&gt;HomePage(),
+      ),
+
+      // Feature pages trong navbar
+      GoRoute(
+        path: &lt;Feature&gt;Page.location,
+        builder: (context, state) =&gt; const &lt;Feature&gt;Page(),
+      ),
+
+      // Redirect từ prefix về home page
+      GoRoute(
+        path: '/&lt;app_name&gt;',
+        redirect: (context, state) =&gt; &lt;AppName&gt;HomePage.location,
+      ),
+    ],
+  ),
+
+  // Các routes ngoài navbar (detail pages, modals, etc.)
+  GoRoute(
+    path: &lt;Feature&gt;DetailPage.location,
+    builder: (context, state) {
+      final id = state.id; // Lấy ID từ path parameter
+      return &lt;Feature&gt;DetailPage(id: id);
+    },
+  ),
+
+  // Routes với query parameters
+  GoRoute(
+    path: &lt;AnotherFeature&gt;Page.location,
+    builder: (context, state) {
+      final param1 = state.uri.queryParameters['param1'];
+      final param2 = state.uri.queryParameters['param2'];
+      return &lt;AnotherFeature&gt;Page(
+        param1: param1,
+        param2: param2,
+      );
+    },
+  ),
+
+  // Routes với extra data
+  GoRoute(
+    path: &lt;Feature&gt;EditPage.location,
+    builder: (context, state) {
+      final id = state.id;
+      final entity = state.extra as &lt;Entity&gt;?;
+      return &lt;Feature&gt;EditPage(
+        id: id,
+        entity: entity,
+      );
+    },
+  ),
+];
+</code></pre>
+<h3 id="42-route-redirect-tu-prefix">4.2. Route Redirect từ Prefix<a class="headerlink" href="#42-route-redirect-tu-prefix" title="Permanent link">&para;</a></h3>
+<p><strong>Quan trọng</strong>: Mỗi sub-app router nên có một route redirect từ prefix của sub-app về home page mặc định:</p>
+<pre><code class="language-dart">GoRoute(
+  path: '/&lt;app_name&gt;',  // Prefix của sub-app
+  redirect: (context, state) =&gt; &lt;AppName&gt;HomePage.location,
+),
+</code></pre>
+<p><strong>Ví dụ từ Training app:</strong></p>
+<pre><code class="language-dart">GoRoute(
+  path: '/training',
+  redirect: (context, state) =&gt; TrainingHomePage.location,
+),
+</code></pre>
+<p><strong>Ví dụ từ Chat app:</strong></p>
+<pre><code class="language-dart">GoRoute(
+  path: '/chat',
+  redirect: (context, state) =&gt; MessagesPage.location,
+),
+</code></pre>
+<h3 id="43-shellroute-voi-navbar">4.3. ShellRoute với Navbar<a class="headerlink" href="#43-shellroute-voi-navbar" title="Permanent link">&para;</a></h3>
+<p>Sử dụng <code>ShellRoute</code> để wrap các routes cần navbar:</p>
+<pre><code class="language-dart">ShellRoute(
+  builder: (context, state, child) {
+    return LanguageAwareNavbar(
+      child: &lt;AppName&gt;Navbar(child: child),
+    );
+  },
+  routes: [
+    // Các routes trong navbar
+  ],
+)
+</code></pre>
+<p><strong><code>LanguageAwareNavbar</code></strong>: Wrapper để rebuild navbar khi language thay đổi (từ <code>supa_foundation</code>)</p>
+<h3 id="44-route-types">4.4. Route Types<a class="headerlink" href="#44-route-types" title="Permanent link">&para;</a></h3>
+<p><strong>Simple Route:</strong></p>
+<pre><code class="language-dart">GoRoute(
+  path: HomePage.location,
+  builder: (context, state) =&gt; const HomePage(),
+)
+</code></pre>
+<p><strong>Route với Path Parameters:</strong></p>
+<pre><code class="language-dart">GoRoute(
+  path: '/&lt;app_name&gt;/feature/:id',
+  builder: (context, state) {
+    final id = state.pathParameters['id'];
+    // Hoặc sử dụng state.id nếu path kết thúc bằng :id
+    return FeatureDetailPage(id: int.parse(id!));
+  },
+)
+</code></pre>
+<p><strong>Route với Query Parameters:</strong></p>
+<pre><code class="language-dart">GoRoute(
+  path: FeaturePage.location,
+  builder: (context, state) {
+    final filter = state.uri.queryParameters['filter'];
+    return FeaturePage(filter: filter);
+  },
+)
+</code></pre>
+<p><strong>Route với Extra Data:</strong></p>
+<pre><code class="language-dart">GoRoute(
+  path: EditPage.location,
+  builder: (context, state) {
+    final entity = state.extra as Entity;
+    return EditPage(entity: entity);
+  },
+)
+</code></pre>
+<h3 id="45-location-constants">4.5. Location Constants<a class="headerlink" href="#45-location-constants" title="Permanent link">&para;</a></h3>
+<p>Mỗi page nên có constant <code>location</code>:</p>
+<pre><code class="language-dart">class &lt;AppName&gt;HomePage extends StatelessWidget {
+  static const location = '/&lt;app_name&gt;/home';
+
+  // ...
+}
+</code></pre>
+<h2 id="8-ang-ky-routing-va-login-trong-main-file">8. Đăng ký Routing và Login trong Main File<a class="headerlink" href="#8-ang-ky-routing-va-login-trong-main-file" title="Permanent link">&para;</a></h2>
+<h3 id="51-main-file-cho-sub-app">5.1. Main File cho Sub-App<a class="headerlink" href="#51-main-file-cho-sub-app" title="Permanent link">&para;</a></h3>
+<p>Tạo file <code>lib/main_&lt;app_name&gt;.dart</code>:</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:supa/config/get_it.dart';
+import 'package:supa/config/notification_handlers.dart';
+import 'package:supa/firebase_options.dart';
+import 'package:supa_&lt;app_name&gt;/&lt;app_name&gt;_app.dart';
+import 'package:supa_foundation/app_loader.dart';
+import 'package:supa_foundation/router/app_registry.dart';
+import 'package:supa_foundation/router/create_router_config.dart';
+import 'package:supa_foundation/router/page_not_found.dart';
+import 'package:supa_foundation/supa_app.dart';
+
+Future&lt;void&gt; main() async {
+  // 1. Tạo AppLoader với configureDependencies
+  final loader = AppLoader(
+    configureDependencies: configureDependencies,
+    firebaseOptionsProvider: () =&gt; DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // 2. Bootstrap app (initialize dependencies, Firebase, etc.)
+  await loader.bootstrap();
+
+  // 3. Tạo và đăng ký sub-app
+  final &lt;appName&gt;App = &lt;AppName&gt;App();
+  AppRegistry.registerApp(&lt;appName&gt;App.routePrefix, &lt;appName&gt;App);
+
+  // 4. Đăng ký notification handlers
+  registerNotificationHandlers();
+
+  // 5. Run app với router config
+  runApp(
+    SupaApp(
+      routerConfig: createRouterConfig(
+        homePage: &lt;appName&gt;App.homePage,  // Home page của sub-app
+        errorBuilder: (context, state) =&gt; const PageNotFound(),
+      ),
+    ),
+  );
+}
+</code></pre>
+<h3 id="52-giai-thich">5.2. Giải thích<a class="headerlink" href="#52-giai-thich" title="Permanent link">&para;</a></h3>
+<p><strong>1. AppLoader:</strong>
+- Khởi tạo dependencies (GetIt)
+- Khởi tạo Firebase
+- Các setup khác cần thiết</p>
+<p><strong>2. Bootstrap:</strong>
+- Chờ tất cả initialization hoàn tất</p>
+<p><strong>3. Đăng ký Sub-App:</strong>
+- Tạo instance của SubApp
+- Đăng ký vào AppRegistry với routePrefix</p>
+<p><strong>4. Notification Handlers:</strong>
+- Đăng ký handlers cho push notifications</p>
+<p><strong>5. Router Config:</strong>
+- <code>homePage</code>: Route của home page (sẽ được redirect khi authenticated)
+- <code>errorBuilder</code>: Widget hiển thị khi có lỗi routing (404, etc.)</p>
+<h3 id="53-login-routes">5.3. Login Routes<a class="headerlink" href="#53-login-routes" title="Permanent link">&para;</a></h3>
+<p>Login routes được tự động thêm vào router thông qua <code>commonRoutes</code> trong <code>createRouterConfig()</code>. Các routes login bao gồm:
+- <code>/supa/login</code> - Login page
+- <code>/supa/login/server</code> - Server selection
+- <code>/supa/login/tenant</code> - Tenant selection
+- <code>/supa/login/password-forgot</code> - Forgot password
+- <code>/supa/login/password-reset</code> - Reset password</p>
+<h3 id="54-authentication-flow">5.4. Authentication Flow<a class="headerlink" href="#54-authentication-flow" title="Permanent link">&para;</a></h3>
+<p>Router tự động redirect dựa trên authentication state:</p>
+<pre><code class="language-dart">// Trong create_router_config()
+GoRoute(
+  path: '/',
+  redirect: (context, state) {
+    final target = getIt.get&lt;AuthenticationBloc&gt;().state.isAuthenticated
+        ? homePage  // Home page của sub-app nếu đã login
+        : LoginPage.location;  // Login page nếu chưa login
+    return target;
+  },
+),
+</code></pre>
+<h3 id="55-vi-du-hoan-chinh">5.5. Ví dụ hoàn chỉnh<a class="headerlink" href="#55-vi-du-hoan-chinh" title="Permanent link">&para;</a></h3>
+<p><strong>File: <code>lib/main_work.dart</code></strong></p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:supa/config/get_it.dart';
+import 'package:supa/config/notification_handlers.dart';
+import 'package:supa/firebase_options.dart';
+import 'package:supa_foundation/app_loader.dart';
+import 'package:supa_foundation/router/app_registry.dart';
+import 'package:supa_foundation/router/create_router_config.dart';
+import 'package:supa_foundation/router/page_not_found.dart';
+import 'package:supa_foundation/supa_app.dart';
+import 'package:supa_work/work_app.dart';
+
+Future&lt;void&gt; main() async {
+  final loader = AppLoader(
+    configureDependencies: configureDependencies,
+    firebaseOptionsProvider: () =&gt; DefaultFirebaseOptions.currentPlatform,
+  );
+
+  await loader.bootstrap();
+
+  final workApp = WorkApp();
+  AppRegistry.registerApp(workApp.routePrefix, workApp);
+
+  registerNotificationHandlers();
+
+  runApp(
+    SupaApp(
+      routerConfig: createRouterConfig(
+        homePage: workApp.homePage,
+        errorBuilder: (context, state) {
+          return const PageNotFound();
+        },
+      ),
+    ),
+  );
+}
+</code></pre>
+<h2 id="9-ang-ky-discussion-adapters">9. Đăng ký Discussion Adapters<a class="headerlink" href="#9-ang-ky-discussion-adapters" title="Permanent link">&para;</a></h2>
+<h3 id="91-tao-discussion-adapter">9.1. Tạo Discussion Adapter<a class="headerlink" href="#91-tao-discussion-adapter" title="Permanent link">&para;</a></h3>
+<p>Nếu sub-app của bạn có discussion feature, bạn cần tạo một adapter để xử lý navigation đến detail page của entity.</p>
+<p>Tạo file adapter trong sub-app hoặc trong discussion module:</p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_&lt;app_name&gt;/pages/detail/&lt;detail_page&gt;.dart'; // Detail page của bạn
+import 'package:supa_foundation/blocs/unread_comment/unread_comment_bloc.dart';
+import 'package:supa_foundation/config/get_it.dart';
+import 'package:supa_l10n_manager/translator.dart';
+
+import '../discussion_entity_adapter.dart';
+
+/// Adapter cho xử lý discussions của [App Name]
+class &lt;AppName&gt;Adapter extends DiscussionEntityAdapter {
+  @override
+  String get entityCode =&gt; '&lt;EntityCode&gt;'; // Code cho entity type của bạn
+
+  @override
+  Future&lt;void&gt; navigateToDetail(
+    BuildContext context,
+    Discussion discussion,
+  ) async {
+    // Tạo entity instance từ discussion data (nếu cần)
+    final entity = &lt;EntityName&gt;()
+      ..id.value = discussion.requestId.value
+      ..isScroll.value = true; // Optional: để scroll đến comment khi mở page
+
+    // Navigate đến detail page
+    await GoRouter.of(context).push(
+      &lt;DetailPage&gt;.location.withId(discussion.requestId.value),
+      extra: entity,  // Pass entity data nếu cần
+    );
+
+    // Update unread comments sau khi navigate
+    getIt.get&lt;UnreadCommentCubit&gt;().loadUnreadComment();
+  }
+
+  @override
+  String getEntityDisplayName(Discussion discussion) {
+    // Trả về tên hiển thị cho discussion type này
+    return discussion.requisitionEntity.value.code.value.isNotEmpty &amp;&amp;
+            discussion.requisitionEntity.value.code.value == '&lt;EntityCode&gt;'
+        ? translate('&lt;app_name&gt;.navbar.&lt;entity_name&gt;') // Key translation
+        : '&lt;EntityName&gt;'; // Fallback
+  }
+}
+</code></pre>
+<h3 id="92-ang-ky-adapter">9.2. Đăng ký Adapter<a class="headerlink" href="#92-ang-ky-adapter" title="Permanent link">&para;</a></h3>
+<p>Thêm adapter vào <code>DiscussionEntityFactory</code> trong discussion module:</p>
+<pre><code class="language-dart">// Trong lib/modules/discussion/discussion_entity_factory.dart
+import 'package:supa_&lt;app_name&gt;/adapters/&lt;app_name&gt;_adapter.dart'; // Import adapter của bạn
+
+class DiscussionEntityFactory {
+  // ... existing code ...
+
+  /// Danh sách tất cả các adapters đã đăng ký
+  static final List&lt;DiscussionEntityAdapter&gt; _adapters = [
+    WorkTaskAdapter(),
+    InspectionAdapter(),
+    &lt;AppName&gt;Adapter(),  // Thêm adapter của bạn vào danh sách
+  ];
+
+  // ... rest of the code ...
+}
+</code></pre>
+<p><strong>Lưu ý</strong>: Nếu bạn muốn đăng ký adapter tại runtime, có thể sử dụng:</p>
+<pre><code class="language-dart">DiscussionEntityFactory.registerAdapter(&lt;AppName&gt;Adapter());
+</code></pre>
+<h2 id="10-ang-ky-notification-handlers">10. Đăng ký Notification Handlers<a class="headerlink" href="#10-ang-ky-notification-handlers" title="Permanent link">&para;</a></h2>
+<h3 id="101-tao-notification-handler">10.1. Tạo Notification Handler<a class="headerlink" href="#101-tao-notification-handler" title="Permanent link">&para;</a></h3>
+<p>Tạo notification handler trong thư mục <code>notification</code> của sub-app:</p>
+<pre><code class="language-dart">import 'dart:async';
+
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_&lt;app_name&gt;/pages/detail/&lt;detail_page&gt;.dart'; // Detail page của bạn
+
+class &lt;AppName&gt;NotificationHandler extends NotificationHandler {
+  &lt;AppName&gt;NotificationHandler(super.context);
+
+  @override
+  FutureOr&lt;void&gt; handle(UserNotification userNotification) {
+    final uri = Uri.parse(userNotification.linkMobile.value);
+
+    // Xử lý các paths cụ thể cho app của bạn
+    if (uri.path.startsWith('/&lt;app_name&gt;')) {
+      if (uri.path.contains('detail')) {
+        // Navigate đến detail page
+        return GoRouter.of(context).push(
+          &lt;DetailPage&gt;.location.withId(uri.pathSegments.last),
+        );
+      }
+      // Thêm các loại notification khác cho app của bạn
+    }
+
+    // Fallback về default link navigation
+    return _goToLink(userNotification.linkMobile.value);
+  }
+
+  _goToLink(String uri) {
+    return GoRouter.of(context).push(uri);
+  }
+}
+</code></pre>
+<h3 id="102-ang-ky-notification-handler">10.2. Đăng ký Notification Handler<a class="headerlink" href="#102-ang-ky-notification-handler" title="Permanent link">&para;</a></h3>
+<p>Thêm notification handler vào main notification registration trong <code>lib/config/notification_handlers.dart</code>:</p>
+<pre><code class="language-dart">import 'package:supa_&lt;app_name&gt;/notification/&lt;app_name&gt;_notification_handler.dart';
+
+void registerNotificationHandlers() {
+  // ... existing registrations ...
+
+  NotificationHandlerFactory.registerPrefix(
+    '/&lt;app_name&gt;',
+    (context) =&gt; &lt;AppName&gt;NotificationHandler(context),
+  );
+}
+</code></pre>
+<h2 id="11-vi-du-hoan-chinh">11. Ví dụ Hoàn chỉnh<a class="headerlink" href="#11-vi-du-hoan-chinh" title="Permanent link">&para;</a></h2>
+<h3 id="111-vi-du-chat-app">11.1. Ví dụ: Chat App<a class="headerlink" href="#111-vi-du-chat-app" title="Permanent link">&para;</a></h3>
+<p><strong>Navbar: <code>packages/supa_chat/lib/pages/chat_navbar.dart</code></strong></p>
+<pre><code class="language-dart">import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:supa_chat/pages/contacts/contacts_page.dart';
+import 'package:supa_chat/pages/messages/messages_page.dart';
+import 'package:supa_foundation/widgets/templates/scaffold_navbar.dart';
+import 'package:supa_l10n_manager/translator.dart';
+
+class ChatNavbar extends StatelessWidget {
+  final Widget child;
+
+  const ChatNavbar({
+    super.key,
+    required this.child,
+  });
+
+  List&lt;ScaffoldNavbarItem&gt; _buildNavbarItems() {
+    return [
+      ScaffoldNavbarItem(
+        path: MessagesPage.location,
+        icon: FluentIcons.chat_24_regular,
+        activeIcon: FluentIcons.chat_24_filled,
+        label: translate('chat.navbar.messages'),
+      ),
+      ScaffoldNavbarItem(
+        path: ContactsPage.location,
+        icon: FluentIcons.people_24_regular,
+        activeIcon: FluentIcons.people_24_filled,
+        label: translate('chat.navbar.contacts'),
+      ),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ScaffoldNavbar(
+      shouldShowNavbar: true,
+      buildItems: _buildNavbarItems,
+      child: child,
+    );
+  }
+}
+</code></pre>
+<p><strong>Router: <code>packages/supa_chat/lib/router/router.dart</code></strong></p>
+<pre><code class="language-dart">import 'package:go_router/go_router.dart';
+import 'package:supa_chat/pages/chat/chat_page.dart';
+import 'package:supa_chat/pages/chat_navbar.dart';
+import 'package:supa_chat/pages/contacts/contacts_page.dart';
+import 'package:supa_chat/pages/conversation_info/conversation_information_page.dart';
+import 'package:supa_chat/pages/home/chat_home_page.dart';
+import 'package:supa_chat/pages/messages/messages_page.dart';
+import 'package:supa_foundation/widgets/templates/language_aware_navbar.dart';
+
+final List&lt;RouteBase&gt; chatRoutes = [
+  // Shell routes for navbar
+  ShellRoute(
+    builder: (context, state, child) {
+      return LanguageAwareNavbar(
+        child: ChatNavbar(child: child),
+      );
+    },
+    routes: [
+      GoRoute(
+        path: ChatHomePage.location,
+        builder: (context, state) =&gt; const ChatHomePage(),
+      ),
+      GoRoute(
+        path: MessagesPage.location,
+        builder: (context, state) =&gt; const MessagesPage(),
+      ),
+      GoRoute(
+        path: ContactsPage.location,
+        builder: (context, state) =&gt; const ContactsPage(),
+      ),
+    ],
+  ),
+  // Routes ngoài navbar
+  GoRoute(
+    path: ChatPage.location,
+    builder: (context, state) {
+      final conversationId = state.uri.queryParameters['conversationId'];
+      final conversationName = state.uri.queryParameters['name'];
+      return ChatPage(
+        conversationId: conversationId,
+        conversationName: conversationName,
+      );
+    },
+  ),
+  GoRoute(
+    path: ConversationInformationPage.location,
+    builder: (context, state) =&gt; const ConversationInformationPage(),
+  ),
+  // Redirect từ prefix về home
+  GoRoute(
+    path: '/chat',
+    redirect: (context, state) =&gt; MessagesPage.location,
+  ),
+];
+</code></pre>
+<h3 id="112-vi-du-training-app-voi-permissions">11.2. Ví dụ: Training App với Permissions<a class="headerlink" href="#112-vi-du-training-app-voi-permissions" title="Permanent link">&para;</a></h3>
+<p><strong>Router: <code>packages/supa_training/lib/router/router.dart</code></strong></p>
+<pre><code class="language-dart">// ... imports ...
+
+final List&lt;RouteBase&gt; trainingRoutes = [
+  // ... các routes khác ...
+
+  // Shell route với navbar
+  ShellRoute(
+    builder: (context, state, child) {
+      return LanguageAwareNavbar(
+        child: TrainingNavbar(child: child),
+      );
+    },
+    routes: [
+      GoRoute(
+        path: TrainingHomePage.location,
+        builder: (context, state) {
+          final idStr = state.uri.queryParameters['id'];
+          final id = idStr != null ? int.tryParse(idStr) : null;
+          return TrainingHomePage(id: id);
+        },
+      ),
+      GoRoute(
+        path: CourseAssignmentEvaluationPage.location,
+        builder: (context, state) =&gt; const CourseAssignmentEvaluationPage(),
+      ),
+      GoRoute(
+        path: RankingPage.location,
+        builder: (context, state) =&gt; const RankingPage(),
+      ),
+      // Redirect từ prefix về home
+      GoRoute(
+        path: '/training',
+        redirect: (context, state) =&gt; TrainingHomePage.location,
+      ),
+    ],
+  ),
+];
+</code></pre>
+<h3 id="113-vi-du-documents-app-complete-example">11.3. Ví dụ: Documents App (Complete Example)<a class="headerlink" href="#113-vi-du-documents-app-complete-example" title="Permanent link">&para;</a></h3>
+<p><strong>1. Tạo package structure:</strong></p>
+<pre><code>packages/supa_documents/
+├── lib/
+│   ├── config/
+│   │   ├── get_it.dart
+│   │   └── get_it.config.dart
+│   ├── core/
+│   │   └── models/
+│   │       ├── models.dart
+│   │       └── document.dart
+│   ├── notification/
+│   │   └── documents_notification_handler.dart
+│   ├── pages/
+│   │   └── documents_home/
+│   │       ├── documents_home_page.dart
+│   │       └── documents_home_controller.dart
+│   └── router/
+│       └── router.dart
+└── documents_app.dart
+</code></pre>
+<p><strong>2. Tạo DocumentsApp class:</strong></p>
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:supa_architecture/supa_architecture.dart';
+import 'package:supa_foundation/config/sub_system.dart';
+import 'package:supa_foundation/theme/supa_material_theme.dart' as supa_theme;
+import 'package:supa_foundation/theme/supa_theme_extension.dart';
+import 'package:supa_documents/pages/documents_home/documents_home_page.dart';
+import 'package:supa_documents/router/router.dart';
+
+class DocumentsApp extends SubApp {
+  @override
+  String get homePage =&gt; DocumentsHomePage.location;
+
+  @override
+  String get label =&gt; 'Documents';
+
+  @override
+  String? get appIcon =&gt; 'assets/images/documents-icon.png';
+
+  @override
+  final List&lt;RouteBase&gt; routes = documentsRoutes;
+
+  @override
+  int? get subsystemId =&gt; AppSubSystem.documents.id;
+
+  @override
+  String get routePrefix =&gt; '/documents';
+
+  @override
+  final ThemeData lightTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.lightColorScheme,
+    extendedColorScheme: supa_theme.lightExtendedColorScheme,
+  );
+
+  @override
+  final ThemeData darkTheme = SupaThemeExtension.withValues(
+    colorScheme: supa_theme.darkColorScheme,
+    extendedColorScheme: supa_theme.darkExtendedColorScheme,
+  );
+}
+</code></pre>
+<p><strong>3. Đăng ký trong main app:</strong></p>
+<pre><code class="language-dart">// Trong lib/main.dart
+import 'package:supa_documents/documents_app.dart';
+
+void _registerApps() {
+  AppRegistry.registerApp('/supa', MainApp());
+  // ... existing apps ...
+  AppRegistry.registerApp('/documents', DocumentsApp()); // Thêm dòng này
+}
+</code></pre>
+<p><strong>4. Cấu hình dependencies:</strong></p>
+<pre><code class="language-dart">// Thêm vào AppSubSystem enum
+documents(
+  id: 13,
+  code: 'DOCUMENTS',
+),
+
+// Trong lib/config/get_it.dart
+import 'package:supa_documents/config/get_it.dart';
+
+// Trong configureDependencies():
+await configureDocumentsDependencies(); // Thêm dòng này
+</code></pre>
+<h2 id="12-best-practices">12. Best Practices<a class="headerlink" href="#12-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="121-subapp-class">12.1. SubApp Class<a class="headerlink" href="#121-subapp-class" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Subsystem ID</strong>: Luôn định nghĩa subsystem ID trong <code>AppSubSystem</code> enum</li>
+<li><strong>Theme</strong>: Sử dụng <code>SupaThemeExtension.withValues()</code> để tạo theme nhất quán</li>
+<li><strong>Route Prefix</strong>: Prefix nên match với tên app (ví dụ: <code>/work</code>, <code>/project</code>)</li>
+<li><strong>Home Page</strong>: Home page nên là route đầu tiên trong navbar</li>
+</ul>
+<h3 id="122-dependencies">12.2. Dependencies<a class="headerlink" href="#122-dependencies" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Get It Config</strong>: Tạo file <code>get_it.dart</code> riêng cho mỗi sub-app</li>
+<li><strong>Models</strong>: Sử dụng <code>JsonModel</code> và <code>JsonField</code> cho tất cả models từ backend</li>
+<li><strong>Registration</strong>: Luôn gọi <code>configure&lt;AppName&gt;Dependencies()</code> trong main <code>configureDependencies()</code></li>
+</ul>
+<h3 id="123-navbar">12.3. Navbar<a class="headerlink" href="#123-navbar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sử dụng <code>LanguageAwareNavbar</code></strong>: Wrap navbar để rebuild khi language thay đổi</li>
+<li><strong>Dynamic Items</strong>: Sử dụng StatefulWidget + BlocBuilder nếu items phụ thuộc permissions</li>
+<li><strong>Translation Keys</strong>: Luôn sử dụng translation keys cho labels</li>
+<li><strong>Icons</strong>: Sử dụng FluentIcons từ <code>fluentui_system_icons</code> package</li>
+</ul>
+<h3 id="124-routing">12.4. Routing<a class="headerlink" href="#124-routing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Location Constants</strong>: Mỗi page nên có <code>static const location</code></li>
+<li><strong>Path Prefix</strong>: Routes nên bắt đầu bằng prefix của sub-app (ví dụ: <code>/work/...</code>)</li>
+<li><strong>Redirect Route</strong>: Luôn có redirect từ prefix về home page</li>
+<li><strong>ShellRoute</strong>: Sử dụng ShellRoute cho routes cần navbar</li>
+<li><strong>Type Safety</strong>: Sử dụng <code>state.id</code>, <code>state.pathParameters</code>, <code>state.uri.queryParameters</code> thay vì string parsing</li>
+</ul>
+<h3 id="125-main-file">12.5. Main File<a class="headerlink" href="#125-main-file" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bootstrap</strong>: Luôn chờ <code>bootstrap()</code> hoàn tất</li>
+<li><strong>Register App</strong>: Đăng ký app trước khi tạo router</li>
+<li><strong>Notification Handlers</strong>: Đăng ký handlers sau khi register app</li>
+<li><strong>Error Builder</strong>: Luôn cung cấp error builder cho router</li>
+</ul>
+<h3 id="126-discussion-adapters">12.6. Discussion Adapters<a class="headerlink" href="#126-discussion-adapters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Entity Code</strong>: Sử dụng entity code chính xác từ backend</li>
+<li><strong>Navigation</strong>: Luôn update unread comments sau khi navigate</li>
+<li><strong>Display Name</strong>: Sử dụng translation keys cho display names</li>
+<li><strong>Registration</strong>: Đăng ký adapter trong <code>DiscussionEntityFactory._adapters</code></li>
+</ul>
+<h3 id="127-notification-handlers">12.7. Notification Handlers<a class="headerlink" href="#127-notification-handlers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Prefix Matching</strong>: Sử dụng <code>registerPrefix()</code> để match routes theo prefix</li>
+<li><strong>Error Handling</strong>: Luôn có fallback về default link navigation</li>
+<li><strong>Context Safety</strong>: Kiểm tra <code>context.mounted</code> trước khi navigate</li>
+</ul>
+<h3 id="128-cau-truc-thu-muc">12.8. Cấu trúc thư mục<a class="headerlink" href="#128-cau-truc-thu-muc" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tổ chức theo feature</strong>: Nhóm các files liên quan lại với nhau</li>
+<li><strong>Atomic Design</strong>: Tổ chức widgets theo atoms/molecules/organisms</li>
+<li><strong>Separation of Concerns</strong>: Tách biệt pages, widgets, repositories, blocs</li>
+</ul>
+<h2 id="13-tom-tat">13. Tóm tắt<a class="headerlink" href="#13-tom-tat" title="Permanent link">&para;</a></h2>
+<p>Quy trình phát triển sub-app hoàn chỉnh:</p>
+<ol>
+<li><strong>Tạo SubApp Class</strong>: Implement <code>SubApp</code> với các thuộc tính cần thiết</li>
+<li><strong>Định nghĩa Sub-System</strong>: Thêm vào <code>AppSubSystem</code> enum</li>
+<li><strong>Cấu hình Dependencies</strong>: Tạo <code>get_it.dart</code> và đăng ký trong main config</li>
+<li><strong>Đăng ký Sub-App</strong>: Đăng ký trong <code>main.dart</code> với <code>AppRegistry</code></li>
+<li><strong>Navbar</strong>: Tạo widget extend <code>ScaffoldNavbar</code>, sử dụng <code>ScaffoldNavbarItem</code></li>
+<li><strong>Routing</strong>: Tạo router với <code>ShellRoute</code> cho navbar routes, có redirect từ prefix</li>
+<li><strong>Main File</strong>: Bootstrap → Register app → Register handlers → Create router</li>
+<li><strong>Discussion Adapters</strong>: Tạo và đăng ký adapter nếu có discussion feature</li>
+<li><strong>Notification Handlers</strong>: Tạo và đăng ký handler cho push notifications</li>
+<li><strong>Cấu trúc</strong>: Tổ chức theo feature với các thư mục chuẩn (pages, widgets, repositories, etc.)</li>
+</ol>
+<hr />
+<p><strong>Lưu ý quan trọng:</strong>
+- Luôn có redirect route từ prefix về home page
+- Sử dụng <code>LanguageAwareNavbar</code> để wrap navbar
+- Đăng ký app trong AppRegistry trước khi tạo router
+- Routes nên có location constants
+- Tổ chức code theo cấu trúc thư mục chuẩn
+- Định nghĩa subsystem ID trong <code>AppSubSystem</code> enum
+- Cấu hình dependencies với Get It cho mỗi sub-app</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

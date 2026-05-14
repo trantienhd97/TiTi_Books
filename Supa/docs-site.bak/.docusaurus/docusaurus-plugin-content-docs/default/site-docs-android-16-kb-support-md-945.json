@@ -1,0 +1,24 @@
+{
+  "unversionedId": "android-16kb-support",
+  "id": "android-16kb-support",
+  "title": "Android 16KB Page Size Support",
+  "description": "🎯 Status: CONFIGURED & READY",
+  "source": "@site/docs/android-16kb-support.md",
+  "sourceDirName": ".",
+  "slug": "/android-16kb-support",
+  "permalink": "/docs/android-16kb-support",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/android-16kb-support.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+    "permalink": "/docs/analytics_permissions_docs"
+  },
+  "next": {
+    "title": "Cấu trúc dự án và hướng dẫn phát triển",
+    "permalink": "/docs/cau-truc-du-an-va-huong-dan"
+  }
+}

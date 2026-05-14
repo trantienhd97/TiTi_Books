@@ -1,0 +1,24 @@
+{
+  "unversionedId": "inspection_offline/client_side/bieu_mau",
+  "id": "inspection_offline/client_side/bieu_mau",
+  "title": "Biểu mẫu",
+  "description": "Link thiết kế//www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17609-14177&amp;t=TZBwrrKSgFKbTvZw-4",
+  "source": "@site/docs/inspection_offline/client_side/bieu_mau.md",
+  "sourceDirName": "inspection_offline/client_side",
+  "slug": "/inspection_offline/client_side/bieu_mau",
+  "permalink": "/docs/inspection_offline/client_side/bieu_mau",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/bieu_mau.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+    "permalink": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE"
+  },
+  "next": {
+    "title": "score",
+    "permalink": "/docs/inspection_offline/client_side/score"
+  }
+}

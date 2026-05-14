@@ -1,0 +1,24 @@
+{
+  "unversionedId": "core-packages",
+  "id": "core-packages",
+  "title": "Core Packages: supa_architecture và supa_foundation",
+  "description": "1. Tổng quan",
+  "source": "@site/docs/core-packages.md",
+  "sourceDirName": ".",
+  "slug": "/core-packages",
+  "permalink": "/docs/core-packages",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/core-packages.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cấu trúc dự án và hướng dẫn phát triển",
+    "permalink": "/docs/cau-truc-du-an-va-huong-dan"
+  },
+  "next": {
+    "title": "Dependency Injection với GetIt và Injectable",
+    "permalink": "/docs/dependency-injection"
+  }
+}

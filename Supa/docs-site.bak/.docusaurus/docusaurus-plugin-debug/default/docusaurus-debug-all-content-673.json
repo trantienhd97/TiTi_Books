@@ -1,0 +1,2121 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs",
+          "editUrlLocalized": "https://github.com/your-org/your-repo/edit/main/docs-site/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/tientv/Development/tientv/TiTiBooks/Supa/docs-site/sidebars.js",
+          "contentPath": "/Users/tientv/Development/tientv/TiTiBooks/Supa/docs-site/docs",
+          "contentPathLocalized": "/Users/tientv/Development/tientv/TiTiBooks/Supa/docs-site/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "ai-workflow-image-compression",
+              "id": "ai-workflow-image-compression",
+              "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+              "description": "Tài liệu này dùng để AI (Antigravity) hoặc lập trình viên đọc tham khảo và thực thi tự động khi chuyển sang một nhánh (branch) mới cần áp dụng lại cơ chế Nén Ảnh Bằng Base Dart (Isolate) (Bỏ qua lỗi văng RAM OutOfMemory từ thư viện).",
+              "source": "@site/docs/ai-workflow-image-compression.md",
+              "sourceDirName": ".",
+              "slug": "/ai-workflow-image-compression",
+              "permalink": "/docs/ai-workflow-image-compression",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ai-workflow-image-compression.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Visibility and Filtering Logic",
+                "permalink": "/docs/TaskAssignment/visibility-and-filtering-logic"
+              },
+              "next": {
+                "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+                "permalink": "/docs/analytics/"
+              }
+            },
+            {
+              "unversionedId": "analytics_permissions_docs",
+              "id": "analytics_permissions_docs",
+              "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+              "description": "Hệ thống phân quyền cho module Báo cáo được thiết kế dựa trên danh sách các đường dẫn (paths) được trả về từ Backend.",
+              "source": "@site/docs/analytics_permissions_docs.md",
+              "sourceDirName": ".",
+              "slug": "/analytics_permissions_docs",
+              "permalink": "/docs/analytics_permissions_docs",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics_permissions_docs.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+                "permalink": "/docs/analytics/site_report_api_docs"
+              },
+              "next": {
+                "title": "Android 16KB Page Size Support",
+                "permalink": "/docs/android-16kb-support"
+              }
+            },
+            {
+              "unversionedId": "analytics/learning_overview_summary_by_site",
+              "id": "analytics/learning_overview_summary_by_site",
+              "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+              "description": "Tài liệu này giải thích cấu trúc dữ liệu trả về từ API summary-by-site của backend và cách thiết kế Model tại các module liên quan (supatraining và supawork/analytics).",
+              "source": "@site/docs/analytics/learning_overview_summary_by_site.md",
+              "sourceDirName": "analytics",
+              "slug": "/analytics/learning_overview_summary_by_site",
+              "permalink": "/docs/analytics/learning_overview_summary_by_site",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics/learning_overview_summary_by_site.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+                "permalink": "/docs/analytics/"
+              },
+              "next": {
+                "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+                "permalink": "/docs/analytics/site_report_api_docs"
+              }
+            },
+            {
+              "unversionedId": "analytics/README",
+              "id": "analytics/README",
+              "title": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+              "description": "1. Mục đích là gì?",
+              "source": "@site/docs/analytics/README.md",
+              "sourceDirName": "analytics",
+              "slug": "/analytics/",
+              "permalink": "/docs/analytics/",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+                "permalink": "/docs/ai-workflow-image-compression"
+              },
+              "next": {
+                "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+                "permalink": "/docs/analytics/learning_overview_summary_by_site"
+              }
+            },
+            {
+              "unversionedId": "analytics/site_report_api_docs",
+              "id": "analytics/site_report_api_docs",
+              "title": "Tài liệu Tích hợp Báo cáo Địa điểm (Site Report Analytics API)",
+              "description": "Tài liệu này mô tả chi tiết quá trình nâng cấp hệ thống báo cáo (Site Report) từ việc sử dụng một danh sách địa điểm cố định (flat array) sang Cấu trúc dữ liệu cây dẹt (Flat tree data structure). Điều này cho phép ứng dụng hỗ trợ tính năng nhóm địa điểm và hiển thị dữ liệu drill-down (khoan lồng) nhiều cấp bậc.",
+              "source": "@site/docs/analytics/site_report_api_docs.md",
+              "sourceDirName": "analytics",
+              "slug": "/analytics/site_report_api_docs",
+              "permalink": "/docs/analytics/site_report_api_docs",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/analytics/site_report_api_docs.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng Dẫn Cấu Trúc Dữ Liệu Learning Overview: Summary By Site",
+                "permalink": "/docs/analytics/learning_overview_summary_by_site"
+              },
+              "next": {
+                "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+                "permalink": "/docs/analytics_permissions_docs"
+              }
+            },
+            {
+              "unversionedId": "android-16kb-support",
+              "id": "android-16kb-support",
+              "title": "Android 16KB Page Size Support",
+              "description": "🎯 Status: CONFIGURED & READY",
+              "source": "@site/docs/android-16kb-support.md",
+              "sourceDirName": ".",
+              "slug": "/android-16kb-support",
+              "permalink": "/docs/android-16kb-support",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/android-16kb-support.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Tài liệu Phân quyền Module Báo cáo (Analytics)",
+                "permalink": "/docs/analytics_permissions_docs"
+              },
+              "next": {
+                "title": "Cấu trúc dự án và hướng dẫn phát triển",
+                "permalink": "/docs/cau-truc-du-an-va-huong-dan"
+              }
+            },
+            {
+              "unversionedId": "Animations/celebration-animation",
+              "id": "Animations/celebration-animation",
+              "title": "Celebration Animation Guide",
+              "description": "This document describes the implementation and usage of the full-screen celebration animation within the Super App.",
+              "source": "@site/docs/Animations/celebration-animation.md",
+              "sourceDirName": "Animations",
+              "slug": "/Animations/celebration-animation",
+              "permalink": "/docs/Animations/celebration-animation",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/Animations/celebration-animation.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Streak Animation Guide",
+                "permalink": "/docs/Animations/streak-animation"
+              }
+            },
+            {
+              "unversionedId": "Animations/streak-animation",
+              "id": "Animations/streak-animation",
+              "title": "Streak Animation Guide",
+              "description": "This document describes the implementation and usage of the SupaStreakAnimation widget, used for providing visual feedback during state updates (e.g., successful task status changes).",
+              "source": "@site/docs/Animations/streak-animation.md",
+              "sourceDirName": "Animations",
+              "slug": "/Animations/streak-animation",
+              "permalink": "/docs/Animations/streak-animation",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/Animations/streak-animation.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Celebration Animation Guide",
+                "permalink": "/docs/Animations/celebration-animation"
+              },
+              "next": {
+                "title": "Quick Reference: Changelog Generation",
+                "permalink": "/docs/CHANGELOG_QUICK_REF"
+              }
+            },
+            {
+              "unversionedId": "cau-truc-du-an-va-huong-dan",
+              "id": "cau-truc-du-an-va-huong-dan",
+              "title": "Cấu trúc dự án và hướng dẫn phát triển",
+              "description": "1. Cấu trúc chung của dự án",
+              "source": "@site/docs/cau-truc-du-an-va-huong-dan.md",
+              "sourceDirName": ".",
+              "slug": "/cau-truc-du-an-va-huong-dan",
+              "permalink": "/docs/cau-truc-du-an-va-huong-dan",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/cau-truc-du-an-va-huong-dan.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Android 16KB Page Size Support",
+                "permalink": "/docs/android-16kb-support"
+              },
+              "next": {
+                "title": "Core Packages: supa_architecture và supa_foundation",
+                "permalink": "/docs/core-packages"
+              }
+            },
+            {
+              "unversionedId": "CHANGELOG_QUICK_REF",
+              "id": "CHANGELOG_QUICK_REF",
+              "title": "Quick Reference: Changelog Generation",
+              "description": "🚀 Quick Start",
+              "source": "@site/docs/CHANGELOG_QUICK_REF.md",
+              "sourceDirName": ".",
+              "slug": "/CHANGELOG_QUICK_REF",
+              "permalink": "/docs/CHANGELOG_QUICK_REF",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/CHANGELOG_QUICK_REF.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Streak Animation Guide",
+                "permalink": "/docs/Animations/streak-animation"
+              },
+              "next": {
+                "title": "Changelog Generation System - Summary",
+                "permalink": "/docs/CHANGELOG_SUMMARY"
+              }
+            },
+            {
+              "unversionedId": "CHANGELOG_SUMMARY",
+              "id": "CHANGELOG_SUMMARY",
+              "title": "Changelog Generation System - Summary",
+              "description": "✅ What Was Created",
+              "source": "@site/docs/CHANGELOG_SUMMARY.md",
+              "sourceDirName": ".",
+              "slug": "/CHANGELOG_SUMMARY",
+              "permalink": "/docs/CHANGELOG_SUMMARY",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/CHANGELOG_SUMMARY.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Quick Reference: Changelog Generation",
+                "permalink": "/docs/CHANGELOG_QUICK_REF"
+              },
+              "next": {
+                "title": "Changelog & Release Notes Management",
+                "permalink": "/docs/RELEASE_NOTES_GUIDE"
+              }
+            },
+            {
+              "unversionedId": "core-packages",
+              "id": "core-packages",
+              "title": "Core Packages: supa_architecture và supa_foundation",
+              "description": "1. Tổng quan",
+              "source": "@site/docs/core-packages.md",
+              "sourceDirName": ".",
+              "slug": "/core-packages",
+              "permalink": "/docs/core-packages",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/core-packages.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Cấu trúc dự án và hướng dẫn phát triển",
+                "permalink": "/docs/cau-truc-du-an-va-huong-dan"
+              },
+              "next": {
+                "title": "Dependency Injection với GetIt và Injectable",
+                "permalink": "/docs/dependency-injection"
+              }
+            },
+            {
+              "unversionedId": "dependency-injection",
+              "id": "dependency-injection",
+              "title": "Dependency Injection với GetIt và Injectable",
+              "description": "1. Tổng quan",
+              "source": "@site/docs/dependency-injection.md",
+              "sourceDirName": ".",
+              "slug": "/dependency-injection",
+              "permalink": "/docs/dependency-injection",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/dependency-injection.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Core Packages: supa_architecture và supa_foundation",
+                "permalink": "/docs/core-packages"
+              },
+              "next": {
+                "title": "Hướng dẫn Triển khai Ứng dụng",
+                "permalink": "/docs/deployment"
+              }
+            },
+            {
+              "unversionedId": "deployment",
+              "id": "deployment",
+              "title": "Hướng dẫn Triển khai Ứng dụng",
+              "description": "1. Tổng quan",
+              "source": "@site/docs/deployment.md",
+              "sourceDirName": ".",
+              "slug": "/deployment",
+              "permalink": "/docs/deployment",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/deployment.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Dependency Injection với GetIt và Injectable",
+                "permalink": "/docs/dependency-injection"
+              },
+              "next": {
+                "title": "Discussion Entity Adapter System",
+                "permalink": "/docs/discussion-entity-adapters"
+              }
+            },
+            {
+              "unversionedId": "discussion-entity-adapters",
+              "id": "discussion-entity-adapters",
+              "title": "Discussion Entity Adapter System",
+              "description": "1. Tổng quan",
+              "source": "@site/docs/discussion-entity-adapters.md",
+              "sourceDirName": ".",
+              "slug": "/discussion-entity-adapters",
+              "permalink": "/docs/discussion-entity-adapters",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/discussion-entity-adapters.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng dẫn Triển khai Ứng dụng",
+                "permalink": "/docs/deployment"
+              },
+              "next": {
+                "title": "Entity Chat UI/UX Integration Guide",
+                "permalink": "/docs/entity-chat-integration-guide"
+              }
+            },
+            {
+              "unversionedId": "entity-chat-integration-guide",
+              "id": "entity-chat-integration-guide",
+              "title": "Entity Chat UI/UX Integration Guide",
+              "description": "This guide explains how to replace legacy comment UI with the Stream-based entity chat UI for any business entity page (for example TaskAssignment, Inspection).",
+              "source": "@site/docs/entity-chat-integration-guide.md",
+              "sourceDirName": ".",
+              "slug": "/entity-chat-integration-guide",
+              "permalink": "/docs/entity-chat-integration-guide",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/entity-chat-integration-guide.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Discussion Entity Adapter System",
+                "permalink": "/docs/discussion-entity-adapters"
+              },
+              "next": {
+                "title": "Hướng dẫn kiểm tra GA4 Analytics",
+                "permalink": "/docs/ga4-analytics-guide"
+              }
+            },
+            {
+              "unversionedId": "ga4-analytics-guide",
+              "id": "ga4-analytics-guide",
+              "title": "Hướng dẫn kiểm tra GA4 Analytics",
+              "description": "⚠️ QUAN TRỌNG: Automatic Screen Tracking đã bị TẮT",
+              "source": "@site/docs/ga4-analytics-guide.md",
+              "sourceDirName": ".",
+              "slug": "/ga4-analytics-guide",
+              "permalink": "/docs/ga4-analytics-guide",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ga4-analytics-guide.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Entity Chat UI/UX Integration Guide",
+                "permalink": "/docs/entity-chat-integration-guide"
+              },
+              "next": {
+                "title": "Hướng dẫn sử dụng GitNexus",
+                "permalink": "/docs/gitnexus-usage"
+              }
+            },
+            {
+              "unversionedId": "gitnexus-usage",
+              "id": "gitnexus-usage",
+              "title": "Hướng dẫn sử dụng GitNexus",
+              "description": "GitNexus là công cụ tạo knowledge graph cho codebase, giúp AI agents hiểu sâu về kiến trúc, call chain và execution flow của project.",
+              "source": "@site/docs/gitnexus-usage.md",
+              "sourceDirName": ".",
+              "slug": "/gitnexus-usage",
+              "permalink": "/docs/gitnexus-usage",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/gitnexus-usage.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng dẫn kiểm tra GA4 Analytics",
+                "permalink": "/docs/ga4-analytics-guide"
+              },
+              "next": {
+                "title": "Create Announcement (Heads Up) Feature",
+                "permalink": "/docs/head_up/create_announcement_feature"
+              }
+            },
+            {
+              "unversionedId": "head_up/create_announcement_feature",
+              "id": "head_up/create_announcement_feature",
+              "title": "Create Announcement (Heads Up) Feature",
+              "description": "1. Overview",
+              "source": "@site/docs/head_up/create_announcement_feature.md",
+              "sourceDirName": "head_up",
+              "slug": "/head_up/create_announcement_feature",
+              "permalink": "/docs/head_up/create_announcement_feature",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/head_up/create_announcement_feature.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng dẫn sử dụng GitNexus",
+                "permalink": "/docs/gitnexus-usage"
+              },
+              "next": {
+                "title": "Getting started",
+                "permalink": "/docs/"
+              }
+            },
+            {
+              "unversionedId": "index",
+              "id": "index",
+              "title": "Getting started",
+              "description": "",
+              "source": "@site/docs/index.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/docs/",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "layout": "default"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Create Announcement (Heads Up) Feature",
+                "permalink": "/docs/head_up/create_announcement_feature"
+              },
+              "next": {
+                "title": "INSPECTION OFFLINE - DOCUMENTATION",
+                "permalink": "/docs/inspection_offline/"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/client_side/bieu_mau",
+              "id": "inspection_offline/client_side/bieu_mau",
+              "title": "Biểu mẫu",
+              "description": "Link thiết kế//www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17609-14177&amp;t=TZBwrrKSgFKbTvZw-4",
+              "source": "@site/docs/inspection_offline/client_side/bieu_mau.md",
+              "sourceDirName": "inspection_offline/client_side",
+              "slug": "/inspection_offline/client_side/bieu_mau",
+              "permalink": "/docs/inspection_offline/client_side/bieu_mau",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/bieu_mau.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+                "permalink": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE"
+              },
+              "next": {
+                "title": "score",
+                "permalink": "/docs/inspection_offline/client_side/score"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+              "id": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+              "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+              "description": "I. T?NG QUAN",
+              "source": "@site/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE.md",
+              "sourceDirName": "inspection_offline/client_side",
+              "slug": "/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+              "permalink": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+                "permalink": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS"
+              },
+              "next": {
+                "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+                "permalink": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "id": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "title": "INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "description": "1.\tSyncInspectionInformation:",
+              "source": "@site/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE.md",
+              "sourceDirName": "inspection_offline/client_side",
+              "slug": "/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "permalink": "/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+                "permalink": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE"
+              },
+              "next": {
+                "title": "Biểu mẫu",
+                "permalink": "/docs/inspection_offline/client_side/bieu_mau"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/client_side/score",
+              "id": "inspection_offline/client_side/score",
+              "title": "score",
+              "description": "| STT | Loại câu trả lời  | Logic thì                                         | Hành động khi thực hiện check list                                                                                                                                            | Nội dung Cảnh báo dưới từng câu hỏi                                                                                                                                                                                                                                |",
+              "source": "@site/docs/inspection_offline/client_side/score.md",
+              "sourceDirName": "inspection_offline/client_side",
+              "slug": "/inspection_offline/client_side/score",
+              "permalink": "/docs/inspection_offline/client_side/score",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/client_side/score.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Biểu mẫu",
+                "permalink": "/docs/inspection_offline/client_side/bieu_mau"
+              },
+              "next": {
+                "title": "Inspection System Documentation",
+                "permalink": "/docs/inspections/"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+              "id": "inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+              "title": "INSPECTION LOGIC - QUICK REFERENCE",
+              "description": "📊 8 LOẠI LOGIC",
+              "source": "@site/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF.md",
+              "sourceDirName": "inspection_offline",
+              "slug": "/inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+              "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "INSPECTION OFFLINE - DOCUMENTATION",
+                "permalink": "/docs/inspection_offline/"
+              },
+              "next": {
+                "title": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+                "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/INSPECTION_LOGIC_SYSTEM",
+              "id": "inspection_offline/INSPECTION_LOGIC_SYSTEM",
+              "title": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+              "description": "📋 NGUỒN DỮ LIỆU",
+              "source": "@site/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM.md",
+              "sourceDirName": "inspection_offline",
+              "slug": "/inspection_offline/INSPECTION_LOGIC_SYSTEM",
+              "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "INSPECTION LOGIC - QUICK REFERENCE",
+                "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF"
+              },
+              "next": {
+                "title": "INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP",
+                "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+              "id": "inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+              "title": "INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP",
+              "description": "📋 MỤC TIÊU",
+              "source": "@site/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS.md",
+              "sourceDirName": "inspection_offline",
+              "slug": "/inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+              "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "INSPECTION LOGIC SYSTEM - PHÂN TÍCH CHI TIẾT",
+                "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_SYSTEM"
+              },
+              "next": {
+                "title": "INSPECTION OFFLINE - QUICK SUMMARY",
+                "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+              "id": "inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+              "title": "INSPECTION OFFLINE - QUICK SUMMARY",
+              "description": "🎯 2 PHASES STRATEGY",
+              "source": "@site/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY.md",
+              "sourceDirName": "inspection_offline",
+              "slug": "/inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+              "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "INSPECTION OFFLINE - PHÂN TÍCH VÀ ĐỀ XUẤT GIẢI PHÁP",
+                "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_ANALYSIS"
+              },
+              "next": {
+                "title": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+                "permalink": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/README",
+              "id": "inspection_offline/README",
+              "title": "INSPECTION OFFLINE - DOCUMENTATION",
+              "description": "This folder contains complete documentation for the Inspection Offline/Local feature implementation.",
+              "source": "@site/docs/inspection_offline/README.md",
+              "sourceDirName": "inspection_offline",
+              "slug": "/inspection_offline/",
+              "permalink": "/docs/inspection_offline/",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Getting started",
+                "permalink": "/docs/"
+              },
+              "next": {
+                "title": "INSPECTION LOGIC - QUICK REFERENCE",
+                "permalink": "/docs/inspection_offline/INSPECTION_LOGIC_QUICK_REF"
+              }
+            },
+            {
+              "unversionedId": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+              "id": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+              "title": "TASK ASSIGNMENT AUTO-TRIGGER - PHÂN TÍCH CHI TIẾT",
+              "description": "📋 TÓM TẮT",
+              "source": "@site/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS.md",
+              "sourceDirName": "inspection_offline",
+              "slug": "/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+              "permalink": "/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "INSPECTION OFFLINE - QUICK SUMMARY",
+                "permalink": "/docs/inspection_offline/INSPECTION_OFFLINE_SUMMARY"
+              },
+              "next": {
+                "title": "T�I LI?U T�NH ?I?M INSPECTION CLIENT-SIDE",
+                "permalink": "/docs/inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE"
+              }
+            },
+            {
+              "unversionedId": "inspections/answer-types-system",
+              "id": "inspections/answer-types-system",
+              "title": "Answer Types System",
+              "description": "Overview",
+              "source": "@site/docs/inspections/answer-types-system.md",
+              "sourceDirName": "inspections",
+              "slug": "/inspections/answer-types-system",
+              "permalink": "/docs/inspections/answer-types-system",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/answer-types-system.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Inspection System Documentation",
+                "permalink": "/docs/inspections/"
+              },
+              "next": {
+                "title": "Inspection Architecture Overview",
+                "permalink": "/docs/inspections/architecture-overview"
+              }
+            },
+            {
+              "unversionedId": "inspections/architecture-overview",
+              "id": "inspections/architecture-overview",
+              "title": "Inspection Architecture Overview",
+              "description": "Component Hierarchy",
+              "source": "@site/docs/inspections/architecture-overview.md",
+              "sourceDirName": "inspections",
+              "slug": "/inspections/architecture-overview",
+              "permalink": "/docs/inspections/architecture-overview",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/architecture-overview.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Answer Types System",
+                "permalink": "/docs/inspections/answer-types-system"
+              },
+              "next": {
+                "title": "Upload Progress Implementation - Inspection Media",
+                "permalink": "/docs/inspections/upload-progress-implementation"
+              }
+            },
+            {
+              "unversionedId": "inspections/README",
+              "id": "inspections/README",
+              "title": "Inspection System Documentation",
+              "description": "Overview",
+              "source": "@site/docs/inspections/README.md",
+              "sourceDirName": "inspections",
+              "slug": "/inspections/",
+              "permalink": "/docs/inspections/",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "score",
+                "permalink": "/docs/inspection_offline/client_side/score"
+              },
+              "next": {
+                "title": "Answer Types System",
+                "permalink": "/docs/inspections/answer-types-system"
+              }
+            },
+            {
+              "unversionedId": "inspections/upload-progress-implementation",
+              "id": "inspections/upload-progress-implementation",
+              "title": "Upload Progress Implementation - Inspection Media",
+              "description": "Overview",
+              "source": "@site/docs/inspections/upload-progress-implementation.md",
+              "sourceDirName": "inspections",
+              "slug": "/inspections/upload-progress-implementation",
+              "permalink": "/docs/inspections/upload-progress-implementation",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/inspections/upload-progress-implementation.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Inspection Architecture Overview",
+                "permalink": "/docs/inspections/architecture-overview"
+              },
+              "next": {
+                "title": "Localization",
+                "permalink": "/docs/localization"
+              }
+            },
+            {
+              "unversionedId": "localization",
+              "id": "localization",
+              "title": "Localization",
+              "description": "Dự án này sử dụng supal10nmanager cho localization. Quy trình làm việc là \"code-first\", nghĩa là bạn định nghĩa translation keys trong code, sau đó extract chúng ra các file JSON.",
+              "source": "@site/docs/localization.md",
+              "sourceDirName": ".",
+              "slug": "/localization",
+              "permalink": "/docs/localization",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/localization.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Upload Progress Implementation - Inspection Media",
+                "permalink": "/docs/inspections/upload-progress-implementation"
+              },
+              "next": {
+                "title": "media_picker_plus Integration Guide",
+                "permalink": "/docs/media_picker_plus_integration"
+              }
+            },
+            {
+              "unversionedId": "media_picker_plus_integration",
+              "id": "media_picker_plus_integration",
+              "title": "media_picker_plus Integration Guide",
+              "description": "Overview",
+              "source": "@site/docs/media_picker_plus_integration.md",
+              "sourceDirName": ".",
+              "slug": "/media_picker_plus_integration",
+              "permalink": "/docs/media_picker_plus_integration",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/media_picker_plus_integration.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Localization",
+                "permalink": "/docs/localization"
+              },
+              "next": {
+                "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+                "permalink": "/docs/multi_selection_search_modal_usage"
+              }
+            },
+            {
+              "unversionedId": "multi_selection_search_modal_usage",
+              "id": "multi_selection_search_modal_usage",
+              "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+              "description": "MultiSelectionSearchModal là một widget Generic dùng để tạo modal tìm kiếm và chọn nhiều phần tử. Đây là giải pháp tiêu chuẩn trong ứng dụng cho các danh sách chọn như Người dùng, Địa điểm, Tags, hoặc loại thiết bị.",
+              "source": "@site/docs/multi_selection_search_modal_usage.md",
+              "sourceDirName": ".",
+              "slug": "/multi_selection_search_modal_usage",
+              "permalink": "/docs/multi_selection_search_modal_usage",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/multi_selection_search_modal_usage.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "media_picker_plus Integration Guide",
+                "permalink": "/docs/media_picker_plus_integration"
+              },
+              "next": {
+                "title": "Notification Handler System",
+                "permalink": "/docs/notification-handlers"
+              }
+            },
+            {
+              "unversionedId": "notification-handlers",
+              "id": "notification-handlers",
+              "title": "Notification Handler System",
+              "description": "1. Tổng quan",
+              "source": "@site/docs/notification-handlers.md",
+              "sourceDirName": ".",
+              "slug": "/notification-handlers",
+              "permalink": "/docs/notification-handlers",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/notification-handlers.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng dẫn sử dụng MultiSelectionSearchModal",
+                "permalink": "/docs/multi_selection_search_modal_usage"
+              },
+              "next": {
+                "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+                "permalink": "/docs/push_notification_lifecycle"
+              }
+            },
+            {
+              "unversionedId": "push_notification_lifecycle",
+              "id": "push_notification_lifecycle",
+              "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+              "description": "Tài liệu này mô tả luồng hoạt động của hệ thống thông báo đẩy (FCM) trong ứng dụng, bao gồm quá trình đăng ký khi người dùng đăng nhập và xóa token khi người dùng đăng xuất.",
+              "source": "@site/docs/push_notification_lifecycle.md",
+              "sourceDirName": ".",
+              "slug": "/push_notification_lifecycle",
+              "permalink": "/docs/push_notification_lifecycle",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/push_notification_lifecycle.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Notification Handler System",
+                "permalink": "/docs/notification-handlers"
+              },
+              "next": {
+                "title": "ai_gennerate",
+                "permalink": "/docs/questionnair/ai_gennerate"
+              }
+            },
+            {
+              "unversionedId": "questionnair/ai_gennerate",
+              "id": "questionnair/ai_gennerate",
+              "title": "ai_gennerate",
+              "description": "Dưới đây là tài liệu final để gửi team frontend, đã cập nhật theo bản bạn sửa: SignalR gửi theo Clients.User($\".{GlobalUserId}\") và event name mới ReceiveQuestionnaireAIGenerated.",
+              "source": "@site/docs/questionnair/ai_gennerate.md",
+              "sourceDirName": "questionnair",
+              "slug": "/questionnair/ai_gennerate",
+              "permalink": "/docs/questionnair/ai_gennerate",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/questionnair/ai_gennerate.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Vòng đời của Thông báo đẩy (Push Notification Lifecycle)",
+                "permalink": "/docs/push_notification_lifecycle"
+              },
+              "next": {
+                "title": "ĐẶT LỊCH",
+                "permalink": "/docs/schedule/dat-lich"
+              }
+            },
+            {
+              "unversionedId": "RELEASE_NOTES_GUIDE",
+              "id": "RELEASE_NOTES_GUIDE",
+              "title": "Changelog & Release Notes Management",
+              "description": "This directory contains tools and workflows for managing release notes and changelogs.",
+              "source": "@site/docs/RELEASE_NOTES_GUIDE.md",
+              "sourceDirName": ".",
+              "slug": "/RELEASE_NOTES_GUIDE",
+              "permalink": "/docs/RELEASE_NOTES_GUIDE",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/RELEASE_NOTES_GUIDE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Changelog Generation System - Summary",
+                "permalink": "/docs/CHANGELOG_SUMMARY"
+              },
+              "next": {
+                "title": "Route Migration Documentation (Supa Work)",
+                "permalink": "/docs/ROUTE_MIGRATION_GUIDE"
+              }
+            },
+            {
+              "unversionedId": "ROUTE_MIGRATION_GUIDE",
+              "id": "ROUTE_MIGRATION_GUIDE",
+              "title": "Route Migration Documentation (Supa Work)",
+              "description": "Tài liệu chi tiết về việc thay đổi cấu trúc đường dẫn (route) từ /work sang /work-new và làm phẳng các sub-paths.",
+              "source": "@site/docs/ROUTE_MIGRATION_GUIDE.md",
+              "sourceDirName": ".",
+              "slug": "/ROUTE_MIGRATION_GUIDE",
+              "permalink": "/docs/ROUTE_MIGRATION_GUIDE",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ROUTE_MIGRATION_GUIDE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Changelog & Release Notes Management",
+                "permalink": "/docs/RELEASE_NOTES_GUIDE"
+              },
+              "next": {
+                "title": "Stream Chat Localization Configuration",
+                "permalink": "/docs/STREAM_CHAT_LOCALIZATION"
+              }
+            },
+            {
+              "unversionedId": "schedule/dat-lich",
+              "id": "schedule/dat-lich",
+              "title": "ĐẶT LỊCH",
+              "description": "https://www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17609-14166&amp;p=f&amp;t=HbmhJyk4P6KSO4pP-0",
+              "source": "@site/docs/schedule/dat-lich.md",
+              "sourceDirName": "schedule",
+              "slug": "/schedule/dat-lich",
+              "permalink": "/docs/schedule/dat-lich",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/schedule/dat-lich.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ai_gennerate",
+                "permalink": "/docs/questionnair/ai_gennerate"
+              },
+              "next": {
+                "title": "Form Tạo Lịch (Schedule Creation Form)",
+                "permalink": "/docs/schedule/schedule_creation_form"
+              }
+            },
+            {
+              "unversionedId": "schedule/schedule_creation_form",
+              "id": "schedule/schedule_creation_form",
+              "title": "Form Tạo Lịch (Schedule Creation Form)",
+              "description": "Mục đích",
+              "source": "@site/docs/schedule/schedule_creation_form.md",
+              "sourceDirName": "schedule",
+              "slug": "/schedule/schedule_creation_form",
+              "permalink": "/docs/schedule/schedule_creation_form",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/schedule/schedule_creation_form.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "ĐẶT LỊCH",
+                "permalink": "/docs/schedule/dat-lich"
+              },
+              "next": {
+                "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+                "permalink": "/docs/search_tab_usage"
+              }
+            },
+            {
+              "unversionedId": "search_tab_usage",
+              "id": "search_tab_usage",
+              "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+              "description": "SearchTab và TabContent là bộ đôi widget mạnh mẽ dùng để tạo giao diện chọn nhiều đối tượng (Multi-selection) phân theo từng Tab dữ liệu khác nhau (ví dụ: Cá nhân, Nhóm, Địa điểm).",
+              "source": "@site/docs/search_tab_usage.md",
+              "sourceDirName": ".",
+              "slug": "/search_tab_usage",
+              "permalink": "/docs/search_tab_usage",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/search_tab_usage.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Form Tạo Lịch (Schedule Creation Form)",
+                "permalink": "/docs/schedule/schedule_creation_form"
+              },
+              "next": {
+                "title": "Quy tắc Styling",
+                "permalink": "/docs/styling-rules"
+              }
+            },
+            {
+              "unversionedId": "STREAM_CHAT_LOCALIZATION",
+              "id": "STREAM_CHAT_LOCALIZATION",
+              "title": "Stream Chat Localization Configuration",
+              "description": "Overview",
+              "source": "@site/docs/STREAM_CHAT_LOCALIZATION.md",
+              "sourceDirName": ".",
+              "slug": "/STREAM_CHAT_LOCALIZATION",
+              "permalink": "/docs/STREAM_CHAT_LOCALIZATION",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/STREAM_CHAT_LOCALIZATION.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Route Migration Documentation (Supa Work)",
+                "permalink": "/docs/ROUTE_MIGRATION_GUIDE"
+              },
+              "next": {
+                "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+                "permalink": "/docs/TaskAssignment/quick-status-change-implementation"
+              }
+            },
+            {
+              "unversionedId": "styling-rules",
+              "id": "styling-rules",
+              "title": "Quy tắc Styling",
+              "description": "Tài liệu này mô tả các quy tắc styling cho dự án SupaMobileApp, bao gồm thông tin về kích thước font, border radius, màu sắc, spacing và typography.",
+              "source": "@site/docs/styling-rules.md",
+              "sourceDirName": ".",
+              "slug": "/styling-rules",
+              "permalink": "/docs/styling-rules",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/styling-rules.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hướng dẫn sử dụng SearchTab và TabContent",
+                "permalink": "/docs/search_tab_usage"
+              },
+              "next": {
+                "title": "Phát triển Sub-App",
+                "permalink": "/docs/sub-app-development"
+              }
+            },
+            {
+              "unversionedId": "sub-app-development",
+              "id": "sub-app-development",
+              "title": "Phát triển Sub-App",
+              "description": "1. Tổng quan",
+              "source": "@site/docs/sub-app-development.md",
+              "sourceDirName": ".",
+              "slug": "/sub-app-development",
+              "permalink": "/docs/sub-app-development",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/sub-app-development.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Quy tắc Styling",
+                "permalink": "/docs/styling-rules"
+              },
+              "next": {
+                "title": "PushNotificationBloc Subscription Points in supa_bibs",
+                "permalink": "/docs/supa_bibs_push_notification_subscription_points"
+              }
+            },
+            {
+              "unversionedId": "supa_bibs_push_notification_subscription_points",
+              "id": "supa_bibs_push_notification_subscription_points",
+              "title": "PushNotificationBloc Subscription Points in supa_bibs",
+              "description": "This document lists all the places in the supa_bibs sub-application where the PushNotificationBloc is subscribed to reload data when notifications are received.",
+              "source": "@site/docs/supa_bibs_push_notification_subscription_points.md",
+              "sourceDirName": ".",
+              "slug": "/supa_bibs_push_notification_subscription_points",
+              "permalink": "/docs/supa_bibs_push_notification_subscription_points",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/supa_bibs_push_notification_subscription_points.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Phát triển Sub-App",
+                "permalink": "/docs/sub-app-development"
+              },
+              "next": {
+                "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+                "permalink": "/docs/supa_communication_chat"
+              }
+            },
+            {
+              "unversionedId": "supa_communication_chat",
+              "id": "supa_communication_chat",
+              "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+              "description": "Tổng quan kiến trúc",
+              "source": "@site/docs/supa_communication_chat.md",
+              "sourceDirName": ".",
+              "slug": "/supa_communication_chat",
+              "permalink": "/docs/supa_communication_chat",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/supa_communication_chat.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "PushNotificationBloc Subscription Points in supa_bibs",
+                "permalink": "/docs/supa_bibs_push_notification_subscription_points"
+              },
+              "next": {
+                "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+                "permalink": "/docs/supa_communication_integration"
+              }
+            },
+            {
+              "unversionedId": "supa_communication_integration",
+              "id": "supa_communication_integration",
+              "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+              "description": "Scope: Cherry-pick only supacommunication wiring. Excludes unreleased supawork/supaproject route changes. packages/supacommunication/ is copied verbatim.",
+              "source": "@site/docs/supa_communication_integration.md",
+              "sourceDirName": ".",
+              "slug": "/supa_communication_integration",
+              "permalink": "/docs/supa_communication_integration",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/supa_communication_integration.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Communication Chat — Tài liệu kỹ thuật",
+                "permalink": "/docs/supa_communication_chat"
+              },
+              "next": {
+                "title": "Filter Synchronization for Personal Report Pages",
+                "permalink": "/docs/training/filter_sync_personal_report"
+              }
+            },
+            {
+              "unversionedId": "TaskAssignment/quick-status-change-implementation",
+              "id": "TaskAssignment/quick-status-change-implementation",
+              "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+              "description": "Tài liệu hướng dẫn implementation cho tính năng chuyển trạng thái nhanh ở TaskAssignmentItem trong trang Home và danh sách công việc",
+              "source": "@site/docs/TaskAssignment/quick-status-change-implementation.md",
+              "sourceDirName": "TaskAssignment",
+              "slug": "/TaskAssignment/quick-status-change-implementation",
+              "permalink": "/docs/TaskAssignment/quick-status-change-implementation",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/quick-status-change-implementation.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Stream Chat Localization Configuration",
+                "permalink": "/docs/STREAM_CHAT_LOCALIZATION"
+              },
+              "next": {
+                "title": "Task Assignment Status Change Flow",
+                "permalink": "/docs/TaskAssignment/task-assignment-status-change-flow"
+              }
+            },
+            {
+              "unversionedId": "TaskAssignment/task-assignment-status-change-flow",
+              "id": "TaskAssignment/task-assignment-status-change-flow",
+              "title": "Task Assignment Status Change Flow",
+              "description": "Tài liệu mô tả luồng chuyển trạng thái nhanh (Quick Status Change) cho Task Assignment.",
+              "source": "@site/docs/TaskAssignment/task-assignment-status-change-flow.md",
+              "sourceDirName": "TaskAssignment",
+              "slug": "/TaskAssignment/task-assignment-status-change-flow",
+              "permalink": "/docs/TaskAssignment/task-assignment-status-change-flow",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/task-assignment-status-change-flow.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "HƯỚNG DẪN THỰC HIỆN CHUYỂN TRẠNG THÁI NHANH - TASK ASSIGNMENT",
+                "permalink": "/docs/TaskAssignment/quick-status-change-implementation"
+              },
+              "next": {
+                "title": "Trang HOME",
+                "permalink": "/docs/TaskAssignment/trang-home"
+              }
+            },
+            {
+              "unversionedId": "TaskAssignment/trang-home",
+              "id": "TaskAssignment/trang-home",
+              "title": "Trang HOME",
+              "description": "Link thiết kế https://www.figma.com/design/jM4Xopoh41pK1UhYEnxWUq/Workplace-Home?node-id=17332-9867&amp;t=dP7ebSyjPiKduZBj-4",
+              "source": "@site/docs/TaskAssignment/trang-home.md",
+              "sourceDirName": "TaskAssignment",
+              "slug": "/TaskAssignment/trang-home",
+              "permalink": "/docs/TaskAssignment/trang-home",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/trang-home.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Task Assignment Status Change Flow",
+                "permalink": "/docs/TaskAssignment/task-assignment-status-change-flow"
+              },
+              "next": {
+                "title": "Visibility and Filtering Logic",
+                "permalink": "/docs/TaskAssignment/visibility-and-filtering-logic"
+              }
+            },
+            {
+              "unversionedId": "TaskAssignment/visibility-and-filtering-logic",
+              "id": "TaskAssignment/visibility-and-filtering-logic",
+              "title": "Visibility and Filtering Logic",
+              "description": "Tài liệu mô tả các quy tắc hiển thị và phương pháp tối ưu hóa danh sách công việc (Task Assignment) trên Dashboard và các trang danh sách cá nhân.",
+              "source": "@site/docs/TaskAssignment/visibility-and-filtering-logic.md",
+              "sourceDirName": "TaskAssignment",
+              "slug": "/TaskAssignment/visibility-and-filtering-logic",
+              "permalink": "/docs/TaskAssignment/visibility-and-filtering-logic",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/TaskAssignment/visibility-and-filtering-logic.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Trang HOME",
+                "permalink": "/docs/TaskAssignment/trang-home"
+              },
+              "next": {
+                "title": "Hướng Dẫn Kích Hoạt Nén Ảnh (Isolate)",
+                "permalink": "/docs/ai-workflow-image-compression"
+              }
+            },
+            {
+              "unversionedId": "training/filter_sync_personal_report",
+              "id": "training/filter_sync_personal_report",
+              "title": "Filter Synchronization for Personal Report Pages",
+              "description": "Summary",
+              "source": "@site/docs/training/filter_sync_personal_report.md",
+              "sourceDirName": "training",
+              "slug": "/training/filter_sync_personal_report",
+              "permalink": "/docs/training/filter_sync_personal_report",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/training/filter_sync_personal_report.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "supa_communication Integration: v1.24-safe Re-wiring Guide",
+                "permalink": "/docs/supa_communication_integration"
+              },
+              "next": {
+                "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+                "permalink": "/docs/training/location_answer_implementation"
+              }
+            },
+            {
+              "unversionedId": "training/location_answer_implementation",
+              "id": "training/location_answer_implementation",
+              "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+              "description": "Tổng quan",
+              "source": "@site/docs/training/location_answer_implementation.md",
+              "sourceDirName": "training",
+              "slug": "/training/location_answer_implementation",
+              "permalink": "/docs/training/location_answer_implementation",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/training/location_answer_implementation.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Filter Synchronization for Personal Report Pages",
+                "permalink": "/docs/training/filter_sync_personal_report"
+              },
+              "next": {
+                "title": "Personal Report - Default Filter & Label Display",
+                "permalink": "/docs/training/personal_report_default_filter"
+              }
+            },
+            {
+              "unversionedId": "training/personal_report_default_filter",
+              "id": "training/personal_report_default_filter",
+              "title": "Personal Report - Default Filter & Label Display",
+              "description": "Tóm Tắt Thay Đổi",
+              "source": "@site/docs/training/personal_report_default_filter.md",
+              "sourceDirName": "training",
+              "slug": "/training/personal_report_default_filter",
+              "permalink": "/docs/training/personal_report_default_filter",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/training/personal_report_default_filter.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Thêm Loại Câu Hỏi \"Lấy vị trí\" (LOCATION) vào AnswerInformationDetailPage",
+                "permalink": "/docs/training/location_answer_implementation"
+              },
+              "next": {
+                "title": "UI Components",
+                "permalink": "/docs/ui-components"
+              }
+            },
+            {
+              "unversionedId": "ui-components",
+              "id": "ui-components",
+              "title": "UI Components",
+              "description": "Tài liệu này cung cấp tổng quan về các UI components được sử dụng trong dự án SupaMobileApp. Dự án tuân theo các nguyên tắc của Atomic Design để tạo ra một thư viện component có thể mở rộng và dễ bảo trì.",
+              "source": "@site/docs/ui-components.md",
+              "sourceDirName": ".",
+              "slug": "/ui-components",
+              "permalink": "/docs/ui-components",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ui-components.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Personal Report - Default Filter & Label Display",
+                "permalink": "/docs/training/personal_report_default_filter"
+              },
+              "next": {
+                "title": "Widgets",
+                "permalink": "/docs/widgets/"
+              }
+            },
+            {
+              "unversionedId": "widgets/dashboard/dashboard_frame",
+              "id": "widgets/dashboard/dashboard_frame",
+              "title": "DashboardFrame",
+              "description": "DashboardFrame là một component khung (frame) được thiết kế để hiển thị các danh sách item trên Dashboard với hỗ trợ phân trang ngang (horizontal paging) và tự động điều chỉnh chiều cao.",
+              "source": "@site/docs/widgets/dashboard/dashboard_frame.md",
+              "sourceDirName": "widgets/dashboard",
+              "slug": "/widgets/dashboard/dashboard_frame",
+              "permalink": "/docs/widgets/dashboard/dashboard_frame",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/dashboard/dashboard_frame.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Widgets",
+                "permalink": "/docs/widgets/"
+              },
+              "next": {
+                "title": "Supa Attendance Widgets",
+                "permalink": "/docs/widgets/supa_attendance_widgets"
+              }
+            },
+            {
+              "unversionedId": "widgets/index",
+              "id": "widgets/index",
+              "title": "Widgets",
+              "description": "- Dashboard Components",
+              "source": "@site/docs/widgets/index.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/",
+              "permalink": "/docs/widgets/",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "layout": "default"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "UI Components",
+                "permalink": "/docs/ui-components"
+              },
+              "next": {
+                "title": "DashboardFrame",
+                "permalink": "/docs/widgets/dashboard/dashboard_frame"
+              }
+            },
+            {
+              "unversionedId": "widgets/supa_attendance_widgets",
+              "id": "widgets/supa_attendance_widgets",
+              "title": "Supa Attendance Widgets",
+              "description": "This document provides an overview of the reusable widgets in the supa_attendance package.",
+              "source": "@site/docs/widgets/supa_attendance_widgets.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/supa_attendance_widgets",
+              "permalink": "/docs/widgets/supa_attendance_widgets",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_attendance_widgets.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "DashboardFrame",
+                "permalink": "/docs/widgets/dashboard/dashboard_frame"
+              },
+              "next": {
+                "title": "Supa Bibs Widgets",
+                "permalink": "/docs/widgets/supa_bibs_widgets"
+              }
+            },
+            {
+              "unversionedId": "widgets/supa_bibs_widgets",
+              "id": "widgets/supa_bibs_widgets",
+              "title": "Supa Bibs Widgets",
+              "description": "This document provides an overview of the reusable widgets in the supa_bibs package, following an atomic design structure.",
+              "source": "@site/docs/widgets/supa_bibs_widgets.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/supa_bibs_widgets",
+              "permalink": "/docs/widgets/supa_bibs_widgets",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_bibs_widgets.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Attendance Widgets",
+                "permalink": "/docs/widgets/supa_attendance_widgets"
+              },
+              "next": {
+                "title": "Supa Serving Widgets",
+                "permalink": "/docs/widgets/supa_serving_widgets"
+              }
+            },
+            {
+              "unversionedId": "widgets/supa_serving_widgets",
+              "id": "widgets/supa_serving_widgets",
+              "title": "Supa Serving Widgets",
+              "description": "This document provides an overview of the reusable widgets in the supa_serving package.",
+              "source": "@site/docs/widgets/supa_serving_widgets.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/supa_serving_widgets",
+              "permalink": "/docs/widgets/supa_serving_widgets",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_serving_widgets.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Bibs Widgets",
+                "permalink": "/docs/widgets/supa_bibs_widgets"
+              },
+              "next": {
+                "title": "Supa Spend Widgets",
+                "permalink": "/docs/widgets/supa_spend_widgets"
+              }
+            },
+            {
+              "unversionedId": "widgets/supa_spend_widgets",
+              "id": "widgets/supa_spend_widgets",
+              "title": "Supa Spend Widgets",
+              "description": "This document provides an overview of the reusable widgets in the supa_spend package.",
+              "source": "@site/docs/widgets/supa_spend_widgets.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/supa_spend_widgets",
+              "permalink": "/docs/widgets/supa_spend_widgets",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_spend_widgets.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Serving Widgets",
+                "permalink": "/docs/widgets/supa_serving_widgets"
+              },
+              "next": {
+                "title": "Supa Training Widgets",
+                "permalink": "/docs/widgets/supa_training_widgets"
+              }
+            },
+            {
+              "unversionedId": "widgets/supa_training_widgets",
+              "id": "widgets/supa_training_widgets",
+              "title": "Supa Training Widgets",
+              "description": "This document provides an overview of the reusable widgets in the supa_training package.",
+              "source": "@site/docs/widgets/supa_training_widgets.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/supa_training_widgets",
+              "permalink": "/docs/widgets/supa_training_widgets",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_training_widgets.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Spend Widgets",
+                "permalink": "/docs/widgets/supa_spend_widgets"
+              },
+              "next": {
+                "title": "Supa Work Widgets",
+                "permalink": "/docs/widgets/supa_work_widgets"
+              }
+            },
+            {
+              "unversionedId": "widgets/supa_work_widgets",
+              "id": "widgets/supa_work_widgets",
+              "title": "Supa Work Widgets",
+              "description": "This document provides an overview of the reusable widgets in the supa_work package, following an atomic design structure.",
+              "source": "@site/docs/widgets/supa_work_widgets.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/supa_work_widgets",
+              "permalink": "/docs/widgets/supa_work_widgets",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/supa_work_widgets.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Training Widgets",
+                "permalink": "/docs/widgets/supa_training_widgets"
+              },
+              "next": {
+                "title": "VideoStreamingScreen",
+                "permalink": "/docs/widgets/video_streaming_screen"
+              }
+            },
+            {
+              "unversionedId": "widgets/video_streaming_screen",
+              "id": "widgets/video_streaming_screen",
+              "title": "VideoStreamingScreen",
+              "description": "Widget để stream video trực tiếp với authentication, sử dụng thư viện media_kit.",
+              "source": "@site/docs/widgets/video_streaming_screen.md",
+              "sourceDirName": "widgets",
+              "slug": "/widgets/video_streaming_screen",
+              "permalink": "/docs/widgets/video_streaming_screen",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/video_streaming_screen.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Supa Work Widgets",
+                "permalink": "/docs/widgets/supa_work_widgets"
+              },
+              "next": {
+                "title": "Inspection & Checklist Items",
+                "permalink": "/docs/widgets/work/inspection/checklist_item"
+              }
+            },
+            {
+              "unversionedId": "widgets/work/inspection/checklist_item",
+              "id": "widgets/work/inspection/checklist_item",
+              "title": "Inspection & Checklist Items",
+              "description": "Thành phần hiển thị danh sách kiểm tra (Checklist) trong module Work.",
+              "source": "@site/docs/widgets/work/inspection/checklist_item.md",
+              "sourceDirName": "widgets/work/inspection",
+              "slug": "/widgets/work/inspection/checklist_item",
+              "permalink": "/docs/widgets/work/inspection/checklist_item",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/work/inspection/checklist_item.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "VideoStreamingScreen",
+                "permalink": "/docs/widgets/video_streaming_screen"
+              },
+              "next": {
+                "title": "Task Assignment Items",
+                "permalink": "/docs/widgets/work/task_assignment/task_item"
+              }
+            },
+            {
+              "unversionedId": "widgets/work/task_assignment/task_item",
+              "id": "widgets/work/task_assignment/task_item",
+              "title": "Task Assignment Items",
+              "description": "Thành phần hiển thị danh sách nhiệm vụ (Tasks) trong module Work.",
+              "source": "@site/docs/widgets/work/task_assignment/task_item.md",
+              "sourceDirName": "widgets/work/task_assignment",
+              "slug": "/widgets/work/task_assignment/task_item",
+              "permalink": "/docs/widgets/work/task_assignment/task_item",
+              "draft": false,
+              "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/widgets/work/task_assignment/task_item.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Inspection & Checklist Items",
+                "permalink": "/docs/widgets/work/inspection/checklist_item"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "category",
+                "label": "Animations",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Animations/celebration-animation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Animations/streak-animation"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "CHANGELOG_QUICK_REF"
+              },
+              {
+                "type": "doc",
+                "id": "CHANGELOG_SUMMARY"
+              },
+              {
+                "type": "doc",
+                "id": "RELEASE_NOTES_GUIDE"
+              },
+              {
+                "type": "doc",
+                "id": "ROUTE_MIGRATION_GUIDE"
+              },
+              {
+                "type": "doc",
+                "id": "STREAM_CHAT_LOCALIZATION"
+              },
+              {
+                "type": "category",
+                "label": "TaskAssignment",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "TaskAssignment/quick-status-change-implementation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "TaskAssignment/task-assignment-status-change-flow"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "TaskAssignment/trang-home"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "TaskAssignment/visibility-and-filtering-logic"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "ai-workflow-image-compression"
+              },
+              {
+                "type": "category",
+                "label": "Tài Liệu Cấu Trúc Báo Cáo Analytics (Manager Dashboard)",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "analytics/learning_overview_summary_by_site"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "analytics/site_report_api_docs"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "analytics/README"
+                }
+              },
+              {
+                "type": "doc",
+                "id": "analytics_permissions_docs"
+              },
+              {
+                "type": "doc",
+                "id": "android-16kb-support"
+              },
+              {
+                "type": "doc",
+                "id": "cau-truc-du-an-va-huong-dan"
+              },
+              {
+                "type": "doc",
+                "id": "core-packages"
+              },
+              {
+                "type": "doc",
+                "id": "dependency-injection"
+              },
+              {
+                "type": "doc",
+                "id": "deployment"
+              },
+              {
+                "type": "doc",
+                "id": "discussion-entity-adapters"
+              },
+              {
+                "type": "doc",
+                "id": "entity-chat-integration-guide"
+              },
+              {
+                "type": "doc",
+                "id": "ga4-analytics-guide"
+              },
+              {
+                "type": "doc",
+                "id": "gitnexus-usage"
+              },
+              {
+                "type": "category",
+                "label": "head_up",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "head_up/create_announcement_feature"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "index"
+              },
+              {
+                "type": "category",
+                "label": "INSPECTION OFFLINE - DOCUMENTATION",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "inspection_offline/INSPECTION_LOGIC_QUICK_REF"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inspection_offline/INSPECTION_LOGIC_SYSTEM"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inspection_offline/INSPECTION_OFFLINE_ANALYSIS"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inspection_offline/INSPECTION_OFFLINE_SUMMARY"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS"
+                  },
+                  {
+                    "type": "category",
+                    "label": "client_side",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "inspection_offline/client_side/bieu_mau"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "inspection_offline/client_side/score"
+                      }
+                    ]
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "inspection_offline/README"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Inspection System Documentation",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "inspections/answer-types-system"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inspections/architecture-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inspections/upload-progress-implementation"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "inspections/README"
+                }
+              },
+              {
+                "type": "doc",
+                "id": "localization"
+              },
+              {
+                "type": "doc",
+                "id": "media_picker_plus_integration"
+              },
+              {
+                "type": "doc",
+                "id": "multi_selection_search_modal_usage"
+              },
+              {
+                "type": "doc",
+                "id": "notification-handlers"
+              },
+              {
+                "type": "doc",
+                "id": "push_notification_lifecycle"
+              },
+              {
+                "type": "category",
+                "label": "questionnair",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "questionnair/ai_gennerate"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "schedule",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "schedule/dat-lich"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "schedule/schedule_creation_form"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "search_tab_usage"
+              },
+              {
+                "type": "doc",
+                "id": "styling-rules"
+              },
+              {
+                "type": "doc",
+                "id": "sub-app-development"
+              },
+              {
+                "type": "doc",
+                "id": "supa_bibs_push_notification_subscription_points"
+              },
+              {
+                "type": "doc",
+                "id": "supa_communication_chat"
+              },
+              {
+                "type": "doc",
+                "id": "supa_communication_integration"
+              },
+              {
+                "type": "category",
+                "label": "training",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "training/filter_sync_personal_report"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "training/location_answer_implementation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "training/personal_report_default_filter"
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "ui-components"
+              },
+              {
+                "type": "category",
+                "label": "Widgets",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "dashboard",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "widgets/dashboard/dashboard_frame"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/supa_attendance_widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/supa_bibs_widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/supa_serving_widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/supa_spend_widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/supa_training_widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/supa_work_widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "widgets/video_streaming_screen"
+                  },
+                  {
+                    "type": "category",
+                    "label": "work",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "category",
+                        "label": "inspection",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "widgets/work/inspection/checklist_item"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "category",
+                        "label": "task_assignment",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "widgets/work/task_assignment/task_item"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "widgets/index"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "ui-components",
+  "id": "ui-components",
+  "title": "UI Components",
+  "description": "Tài liệu này cung cấp tổng quan về các UI components được sử dụng trong dự án SupaMobileApp. Dự án tuân theo các nguyên tắc của Atomic Design để tạo ra một thư viện component có thể mở rộng và dễ bảo trì.",
+  "source": "@site/docs/ui-components.md",
+  "sourceDirName": ".",
+  "slug": "/ui-components",
+  "permalink": "/docs/ui-components",
+  "draft": false,
+  "editUrl": "https://github.com/your-org/your-repo/edit/main/docs-site/docs/ui-components.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Personal Report - Default Filter & Label Display",
+    "permalink": "/docs/training/personal_report_default_filter"
+  },
+  "next": {
+    "title": "Widgets",
+    "permalink": "/docs/widgets/"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "errors.fetchingBotsError": "봇 목록을 가져올 수 없습니다",
+  "errors.fetchingBotsErrorDescription": "인터넷 연결을 확인하고 다시 시도해 주세요",
+  "search.searchHint": "봇 검색"
+}
