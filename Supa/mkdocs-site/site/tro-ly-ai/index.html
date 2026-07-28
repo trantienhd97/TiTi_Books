@@ -1,0 +1,2999 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+        <link rel="prev" href="../tra-loi-checklist-offline/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Trợ lý AI (AI Assistant Bottom Sheet) - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tro-ly-ai-ai-assistant-bottom-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Trợ lý AI (AI Assistant Bottom Sheet)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tài liệu màn hình — Supa Mobile App
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../HUONG-DAN-VIET-DOC/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn viết tài liệu màn hình
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../automated-ui-testing/" class="md-tabs__link">
+          
+  
+  
+  Automated ui testing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../checklist/" class="md-tabs__link">
+          
+  
+  
+  Checklist
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chi-tiet-checklist/" class="md-tabs__link">
+          
+  
+  
+  Chi tiet checklist
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chi-tiet-cong-viec/" class="md-tabs__link">
+          
+  
+  
+  Chi tiet cong viec
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cong-viec/" class="md-tabs__link">
+          
+  
+  
+  Cong viec
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cua-toi/" class="md-tabs__link">
+          
+  
+  
+  Cua toi
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dang-ky-tai-khoan/" class="md-tabs__link">
+          
+  
+  
+  Dang ky tai khoan
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ho-so-nguoi-dung/" class="md-tabs__link">
+          
+  
+  
+  Ho so nguoi dung
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hoc-khoa-hoc/" class="md-tabs__link">
+          
+  
+  
+  Hoc khoa hoc
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../task-progress-report/" class="md-tabs__link">
+          
+  
+  
+  Task progress report
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tin-nhan/" class="md-tabs__link">
+          
+  
+  
+  Tin nhan
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tra-loi-checklist/" class="md-tabs__link">
+          
+  
+  
+  Tra loi checklist
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tra-loi-checklist-offline/" class="md-tabs__link">
+          
+  
+  
+  Tra loi checklist offline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Tro ly ai
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tài liệu màn hình — Supa Mobile App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HUONG-DAN-VIET-DOC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn viết tài liệu màn hình
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated ui testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automated ui testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-ui-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated UI Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-ui-testing/test_case_ba_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Test Case Cho BA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Checklist
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist — Inspection (navbar tab)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiet checklist
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chi tiet checklist
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chi-tiet-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiết checklist (Inspection detail)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiet cong viec
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chi tiet cong viec
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chi-tiet-cong-viec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiết / sửa công việc — Task Assignment Edit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cong viec
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cong viec
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cong-viec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Công việc — Task Assignment (navbar tab)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cua toi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cua toi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cua-toi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Của tôi — General Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dang ky tai khoan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dang ky tai khoan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dang-ky-tai-khoan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Đăng ký tài khoản
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ho so nguoi dung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ho so nguoi dung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ho-so-nguoi-dung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hồ sơ người dùng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoc khoa hoc
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hoc khoa hoc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hoc-khoa-hoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Học khoá học
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Task progress report
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Task progress report
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task-progress-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Báo cáo tiến độ công việc — Task Progress Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tin nhan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tin nhan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tin-nhan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tin nhắn — Conversations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tra loi checklist
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tra loi checklist
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tra-loi-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trả lời checklist (Inspection answer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tra loi checklist offline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tra loi checklist offline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tra-loi-checklist-offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trả lời checklist — Chế độ offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tro ly ai
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tro ly ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trợ lý AI (AI Assistant Bottom Sheet)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trợ lý AI (AI Assistant Bottom Sheet)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#22-gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Giới thiệu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-cay-thu-muc-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Cây thư mục source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-route-ieu-huong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Route &amp; điều hướng
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-widget-component-su-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Widget &amp; component sử dụng
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-state-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. State &amp; data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6. State &amp; data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLoC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository / Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asset-bundling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asset bundling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .env
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-logic-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Logic chính
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7. Logic chính">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persona-system-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persona &amp; system prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tap-link-mo-trang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tap link → mở trang
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-chao-greeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lời chào (greeting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-gui-cau-hoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow gửi câu hỏi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tra-cuu-bao-cao-qua-function-calling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tra cứu báo cáo qua Function Calling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-model-failover-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-model failover chain
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi-model failover chain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cau-truc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cấu trúc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponential-backoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exponential backoff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phan-biet-loai-loi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phân biệt loại lỗi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mo-rong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mở rộng
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-state-danh-sach-tinh-nang-suggestion-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empty state &amp; danh sách tính năng (suggestion list)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-scroll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto scroll
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. i18n
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-theme-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9. Theme &amp; UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29b-ux-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9b. UX details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9b. UX details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubble-noi-chat-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bubble nổi (chat head)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ong-ban-phim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đóng bàn phím
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error message
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-luu-y-cho-maintainer-todo-truoc-khi-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10. Lưu ý cho maintainer / TODO trước khi production
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tro-ly-ai-ai-assistant-bottom-sheet">Trợ lý AI (AI Assistant Bottom Sheet)<a class="headerlink" href="#tro-ly-ai-ai-assistant-bottom-sheet" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Giá trị</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên màn (UI)</strong></td>
+<td>SuSu — trợ lý ảo (bottom sheet mở từ Dashboard)</td>
+</tr>
+<tr>
+<td><strong>Tên class / file chính</strong></td>
+<td><code>AiAssistantBottomSheet</code>, <code>FloatingAiAssistantBubble</code></td>
+</tr>
+<tr>
+<td><strong>Package / module</strong></td>
+<td><code>supa</code> → <code>lib/modules/ai_assistant/</code></td>
+</tr>
+<tr>
+<td><strong>Route</strong></td>
+<td>Không có route riêng — mở qua <code>AiAssistantBottomSheet.show(context)</code></td>
+</tr>
+<tr>
+<td><strong>Số dòng code</strong></td>
+<td>2141 dòng (13 file, xem mục 2.3)</td>
+</tr>
+<tr>
+<td><strong>Cập nhật lần cuối</strong></td>
+<td>2026-06-02 (<strong>Rút gọn 3 chip starter — nhấn mạnh feature báo cáo</strong>: trước đây 7 chip (checklist/task/issue/headsUp/training/report/faq) hướng dẫn tài liệu → giờ còn 3 chip nhấn mạnh feature báo cáo realtime: <code>Báo cáo hôm nay</code> (→ <code>get_overall_report</code>), <code>Site nào tệ nhất</code> (→ <code>get_compliance_by_site</code>), <code>Tiến độ Task</code> (→ <code>get_task_progress_summary</code>). Cập nhật greeting (4 ngôn ngữ): thêm bullet "Tra cứu báo cáo nhanh (Compliance / Task / Quality)". Đổi <code>empty.suggestionsTitle</code> "Danh sách chức năng" → "Gợi ý nhanh". Xoá 14 key i18n cũ (<code>suggestion.label/query.{checklist,task,issue,headsUp,training,report,faq}</code>). <strong>Format câu trả lời báo cáo bằng markdown chuẩn</strong>: trước đây dùng prefix <code>•</code> + <code>\n</code> đơn → <code>MarkdownBody</code> (CommonMark) collapse <code>\n</code> thành dấu cách, bullet bị nối liền. Chuyển sang markdown chuẩn: section heading <code>### 📊 ...</code> (h3 đã được style trong bubble), bullet <code>- **Label**: value</code>, ordered list <code>1. **Name** — ...</code>, divider <code>---</code> thay cho <code>━━━</code>. Tool tổng quan dùng h2 (<code>## 📈 ...</code>) tạo hierarchy với sub-section h3. Bubble bổ sung styleSheet cho <code>h2</code>, <code>blockSpacing</code>, <code>listIndent</code>, <code>horizontalRuleDecoration</code>. <strong>Thêm <code>GetOverallReportTool</code> cho câu hỏi tổng quan</strong>: query mơ hồ kiểu "báo cáo hôm nay" / "tình hình tuần này" / "tổng quan" → 1 tool duy nhất gọi parallel 3 tool con (Compliance + Task + Quality Index) rồi gộp format <code>📈 Tổng quan báo cáo — [Mốc]</code> + 3 section ngăn cách bằng <code>━━━</code>. Tool đặt đầu <code>buildDefaultReportTools</code> để Gemini ưu tiên chọn khi user hỏi mơ hồ. System prompt section G viết lại quy tắc chọn tool dạng 2 nhóm: "câu mơ hồ → overall" / "câu gọi đích danh → tool riêng". Thêm i18n key <code>aiAssistant.tool.lookup.overall</code> (4 ngôn ngữ). <strong>Single-turn function calling — bỏ hẳn turn 2 gọi lại Gemini</strong>: theo yêu cầu user, chuyển sang luồng "Gemini chọn API → app gọi → app format text trả lời", <strong>không gửi function response về Gemini turn 2</strong>. (1) <code>AiAssistantTool</code> interface thêm <code>String formatAnswer(Map&lt;String, Object?&gt; result)</code> — mỗi tool tự render text VN bằng template <code>📊 [Tên báo cáo] — [Mốc]</code> từ data Map mà <code>execute()</code> trả về. (2) <code>streamReply</code> đơn giản còn 1 turn: nếu Gemini trả text → stream chữ; nếu trả function call → execute tool + <code>tool.formatAnswer(...)</code> → yield text. (3) System prompt bỏ phần dạy Gemini cách "diễn đạt số liệu / CTA" — chỉ còn quy tắc chọn tool + <code>dateType</code>. (4) Xoá const <code>_kMaxFunctionCallTurns</code>, fallback path khi Gemini trả empty (<code>STOP</code> mà không có parts) bằng câu xin lỗi mềm. Lợi: tiết kiệm ~20k token/câu, không còn dính bug empty turn 2, số liệu deterministic. <strong>Bugfix function-call turn 2 fail im lặng</strong>: (1) chuyển system prompt từ <code>Content.text(...)</code> (role='user') ở đầu <code>contents</code> sang <code>systemInstruction</code> của <code>GenerativeModel</code> — Gemini 2.5+ kiểm tra strict alternation user/model trong contents khi có function calling, system prompt ở contents gây reject im lặng turn 2. (2) Function response role: thay <code>Content.functionResponses(responses)</code> (SDK 0.4.7 hard-code <code>role='function'</code> — deprecated bởi Gemini 2.5+) bằng <code>Content('user', responses)</code> theo official Python SDK convention. (3) Model cache key đổi thành <code>'$name|$systemPromptHash'</code> vì <code>systemInstruction</code> đính ở constructor không thể override per-request. (4) Thêm <code>developer.log</code> cho non-rate-limit error trong cả 2 failover helpers để dễ debug. <strong>Multi-model failover chain</strong>: thêm <code>AiAssistantModelChain</code> (services/) lưu danh sách model theo priority + cooldown per-model (exponential backoff 60s/2m/4m/.../30m). Repository cache <code>GenerativeModel</code> theo name, dùng <code>_generateContentWithFailover</code> / <code>_generateContentStreamWithFailover</code> để rotate model khi hit quota/429/<code>RESOURCE_EXHAUSTED</code>. Env mới <code>GEMINI_MODELS</code> (comma-separated, priority cao→thấp); backward-compat với <code>GEMINI_MODEL</code> single. Default chain: <code>gemini-2.5-flash-lite,gemini-2.5-flash,gemini-1.5-flash</code>. Bloc <code>_humanError</code> mở rộng nhận diện "rate-limited" / "resource exhausted" / "429". Cùng ngày: <strong>Function calling — SuSu tra cứu báo cáo real-time</strong>: thêm thư mục <code>tools/</code> với <code>AiAssistantTool</code> / <code>AiAssistantToolRegistry</code> + 4 tool báo cáo (<code>get_compliance_summary</code>, <code>get_compliance_by_site</code>, <code>get_task_progress_summary</code>, <code>get_quality_index</code>) gọi thẳng repository <code>WorkHomeReportRepository</code>. Repository chuyển <code>streamReply</code> từ <code>Stream&lt;String&gt;</code> sang <code>Stream&lt;AiAssistantReplyEvent&gt;</code> (sealed: <code>AiAssistantTextDelta</code> + <code>AiAssistantStatusUpdate</code>) để UI hiển thị tạm "🔍 Đang tra cứu …" trong khi tool chạy, tự overwrite khi text delta đầu tiên về. Vòng lặp function-call tối đa 4 turn để chống loop. System prompt thêm section <strong>G. TRA CỨU SỐ LIỆU BÁO CÁO</strong> kèm cấu trúc câu trả lời <code>📊 [Tên báo cáo] — [Mốc thời gian]</code>. Trước đó (2026-05-22): Bubble SuSu ẩn theo bottom sheet &amp; limit level-1 — thêm <code>BottomSheetVisibilityObserver</code>; tap bubble mở action sheet "Hành động nhanh"; <code>SupaAssistantLauncher</code> ở <code>supa_foundation</code>; setting <code>Hiển thị trợ lý SuSu</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="22-gioi-thieu">2.2. Giới thiệu<a class="headerlink" href="#22-gioi-thieu" title="Permanent link">&para;</a></h2>
+<p><strong>SuSu</strong> là trợ lý ảo của Supa, hướng dẫn end-user cách dùng app. Knowledge
+base là toàn bộ thư mục <code>UserManual/</code> (đã bundle vào assets). Khi user mở,
+SuSu chào theo tên đăng nhập (đọc từ <code>AuthenticationBloc</code>).</p>
+<ul>
+<li><strong>Entry point</strong>: <strong>Bubble tròn nổi</strong> xuyên suốt mọi route (overlay đặt ở
+  <code>MaterialApp.builder</code> qua <code>withFloatingAiAssistant</code>). User có thể <strong>kéo
+  thả</strong> bubble tự do trong vùng safe-area, <strong>snap về mép trái/phải</strong> khi
+  thả tay (chat-head behavior kiểu FB Messenger). Có pulse glow nhẹ và
+  scale-up shadow khi đang drag. Bubble chỉ hiển thị khi user đã đăng nhập,
+  sheet SuSu đang đóng, và preference <code>ai_assistant_bubble_visible</code> đang bật.</li>
+<li><strong>Tap bubble hiện mở action sheet "Hành động nhanh"</strong> (không còn mở thẳng
+  chat AI). Chat AI nằm trong tile <strong>"Trợ lý SuSu"</strong> ở action sheet, mở qua
+  <code>SupaAssistantLauncher</code> (xem mục 2.4).</li>
+<li><strong>Preference</strong>: App Settings có switch <code>Hiển thị trợ lý SuSu</code>, dùng
+  <code>AiAssistantVisibilityService</code> để lưu local storage và notify bubble global.</li>
+<li><strong>UI</strong>: <code>showModalBottomSheet</code> với <code>DraggableScrollableSheet</code> (85% chiều cao,
+  kéo lên 95% / xuống 50%).</li>
+<li><strong>Backend</strong>: gọi thẳng Google Gemini API (<code>gemini-2.5-flash</code>) từ Flutter —
+  KHÔNG QUA SERVER. API key đọc từ <code>.env</code> (<code>GEMINI_API_KEY</code>).</li>
+<li><strong>Phạm vi trả lời (strict)</strong>: chỉ trả lời về <strong>cách dùng Supa</strong> dựa trên
+  <code>UserManual/</code>. Từ chối tuyệt đối câu hỏi kỹ thuật/cấu trúc app/code/chủ đề
+  ngoài Supa — xem mục 2.7.</li>
+<li><strong>Trạng thái dự án</strong>: bản demo. Khi đưa ra production cần thêm 1 proxy
+  server để giữ API key + rate limit (xem mục 2.10).</li>
+</ul>
+<h2 id="23-cay-thu-muc-source">2.3. Cây thư mục source<a class="headerlink" href="#23-cay-thu-muc-source" title="Permanent link">&para;</a></h2>
+<pre><code class="language-text">lib/modules/ai_assistant/
+├── models/
+│   ├── ai_chat_message.dart                 (50)
+│   └── ai_assistant_reply_event.dart        ← Sealed event TextDelta + StatusUpdate (stream từ repo)
+├── services/
+│   ├── ai_assistant_docs_loader.dart        (73)  ← Load UserManual files
+│   ├── ai_assistant_link_handler.dart       (~80) ← Tap link: GoRouter / url_launcher
+│   └── ai_assistant_model_chain.dart        ← Model rotation + per-model cooldown (exponential backoff)
+├── repositories/
+│   └── ai_assistant_repository.dart         ← Gemini gateway + function-calling loop
+├── tools/
+│   ├── ai_assistant_tool.dart               ← Interface tool (name + declaration + executor)
+│   ├── ai_assistant_tool_registry.dart      ← Tập hợp tool, dispatch theo name
+│   └── report_tools.dart                    ← 4 tool báo cáo (compliance summary/by site, task progress, quality index)
+├── blocs/ai_assistant_bloc/
+│   ├── ai_assistant_bloc.dart               ← Xử lý TextDelta (append / replace) + StatusUpdate
+│   ├── ai_assistant_event.dart              ← Thêm _AiAssistantStatusReceived + flag `replace` trong _AiAssistantChunkReceived
+│   └── ai_assistant_state.dart              (53)
+└── widgets/
+    ├── floating_ai_assistant_bubble.dart    ← Bubble nổi + drag/snap + withFloatingAiAssistant
+    ├── ai_assistant_bottom_sheet.dart       ← Bottom sheet + isOpenNotifier
+    ├── ai_assistant_chat_view.dart          ← Header + list + input + 7 suggestion chips
+    ├── ai_assistant_message_bubble.dart     ← 1 tin nhắn + typing dots + onTapLink
+    └── ai_assistant_input_bar.dart          ← TextField + Send (unfocus khi Send)
+
+packages/supa_foundation/lib/services/
+└── ai_assistant_visibility_service.dart     ← Preference + ValueNotifier ẩn/hiện bubble
+</code></pre>
+<h2 id="24-route-ieu-huong">2.4. Route &amp; điều hướng<a class="headerlink" href="#24-route-ieu-huong" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Không</strong> đăng ký route trong <code>go_router</code> — bottom sheet hiển thị qua
+  <code>showModalBottomSheet(useRootNavigator: true)</code>.</li>
+<li>Mở: <code>AiAssistantBottomSheet.show(context)</code>. Hiện có 2 entry chính:</li>
+<li><strong>Tile "Trợ lý SuSu"</strong> trong action sheet (mở từ bubble SuSu hoặc FAB
+    <code>DashboardFloatingActions</code> ở work_home/inspection) — gọi qua
+    <code>SupaAssistantLauncher.open(context)</code>.</li>
+<li>Programmatic — bất kỳ widget nào cần (gọi trực tiếp
+    <code>AiAssistantBottomSheet.show(context)</code>).</li>
+<li><strong><code>SupaAssistantLauncher</code></strong> (<code>packages/supa_foundation/lib/services/supa_assistant_launcher.dart</code>):
+  service tĩnh nhận một opener callback. App chính đăng ký 1 lần ở
+  <code>lib/main.dart</code> (<code>SupaAssistantLauncher.register((ctx) =&gt; AiAssistantBottomSheet.show(ctx))</code>).
+  Các package khác (<code>supa_work</code>, <code>supa_foundation</code>) mở SuSu chỉ cần
+  <code>SupaAssistantLauncher.open(ctx)</code> — không phải import module <code>ai_assistant</code>.
+  <code>isAvailable</code> cho phép action sheet ẩn tile khi opener chưa register
+  (vd. cold-start trước <code>runApp</code>).</li>
+<li><strong>Tile SuSu Assistant trong action sheet</strong> đi kèm pill badge
+  <code>general.dashboard.susuAssistantBadge</code> (vi: "Thử nghiệm", en/id: "Beta",
+  ko: "베타") — gradient <code>primary → tertiary</code> + sparkle icon, đồng bộ tông
+  với bubble. Báo hiệu tính năng còn ở giai đoạn thử nghiệm (chưa qua proxy
+  server, quota giới hạn, system prompt vẫn đang tinh chỉnh). Render trong
+  <code>_SusuBetaBadge</code> ở <code>packages/supa_work/lib/widgets/dashboard_floating_actions.dart</code>.</li>
+<li>Đóng: drag down, tap nút <strong>×</strong> trong header, hoặc back gesture hệ thống.</li>
+<li><code>AiAssistantBottomSheet.show()</code> set <code>isOpenNotifier=true</code> trước khi mở, reset
+  về <code>false</code> trong <code>finally</code> → bubble ẩn ngay khi sheet hiện ra, hiện lại khi
+  sheet đóng (tránh đè 2 UI cùng lúc).</li>
+<li>Bật/tắt bubble: <code>AppSettingsPage</code> → switch <code>general.settings.aiAssistantBubbleVisible</code>.
+  Khi tắt, <code>FloatingAiAssistantBubble</code> trả <code>SizedBox.shrink()</code> nhưng vẫn giữ
+  vị trí kéo thả cuối cùng trong static <code>_persistedTopLeft</code>.</li>
+</ul>
+<h2 id="25-widget-component-su-dung">2.5. Widget &amp; component sử dụng<a class="headerlink" href="#25-widget-component-su-dung" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Widget / component</th>
+<th>File</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FloatingAiAssistantBubble</code></td>
+<td><code>widgets/floating_ai_assistant_bubble.dart</code></td>
+<td>Bubble tròn nổi global (mọi route), drag + snap mép, tap để mở sheet</td>
+</tr>
+<tr>
+<td><code>withFloatingAiAssistant</code></td>
+<td><code>widgets/floating_ai_assistant_bubble.dart</code></td>
+<td>Builder helper compose bubble vào <code>MaterialApp.builder</code> của <code>SupaApp</code></td>
+</tr>
+<tr>
+<td><code>AiAssistantVisibilityService</code></td>
+<td><code>packages/supa_foundation/lib/services/ai_assistant_visibility_service.dart</code></td>
+<td>Lưu preference <code>ai_assistant_bubble_visible</code>, expose <code>ValueNotifier&lt;bool&gt;</code> để Settings và bubble sync tức thì</td>
+</tr>
+<tr>
+<td><code>AiAssistantBottomSheet</code></td>
+<td><code>widgets/ai_assistant_bottom_sheet.dart</code></td>
+<td><code>DraggableScrollableSheet</code> host BlocProvider + ChatView; expose <code>isOpenNotifier</code> cho bubble lắng nghe</td>
+</tr>
+<tr>
+<td><code>AiAssistantChatView</code></td>
+<td><code>widgets/ai_assistant_chat_view.dart</code></td>
+<td>Header + list tin nhắn + input + empty state + banner cảnh báo</td>
+</tr>
+<tr>
+<td><code>AiAssistantMessageBubble</code></td>
+<td><code>widgets/ai_assistant_message_bubble.dart</code></td>
+<td>Render 1 message; assistant dùng <code>MarkdownBody</code></td>
+</tr>
+<tr>
+<td><code>AiAssistantInputBar</code></td>
+<td><code>widgets/ai_assistant_input_bar.dart</code></td>
+<td><code>TextField</code> multiline + nút Send (đổi sang spinner khi busy)</td>
+</tr>
+<tr>
+<td><code>MarkdownBody</code> (shared)</td>
+<td><code>flutter_markdown</code></td>
+<td>Render câu trả lời assistant</td>
+</tr>
+</tbody>
+</table>
+<h2 id="26-state-data">2.6. State &amp; data<a class="headerlink" href="#26-state-data" title="Permanent link">&para;</a></h2>
+<h3 id="bloc">BLoC<a class="headerlink" href="#bloc" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>AiAssistantBloc</code> — single-class state (<code>AiAssistantState</code>), không dùng
+  sealed vì UI render cùng 1 layout, chỉ flag thay đổi.</li>
+<li>Vòng đời: tạo trong <code>BlocProvider</code> của <code>AiAssistantBottomSheet</code>. Đóng sheet
+  → bloc bị huỷ → reset hội thoại cho lần mở sau.</li>
+</ul>
+<h3 id="repository-services">Repository / Services<a class="headerlink" href="#repository-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>AiAssistantRepository</code> — wrapper quanh <code>GenerativeModel</code> của
+  <code>google_generative_ai</code>. Đọc <code>GEMINI_API_KEY</code> + <code>GEMINI_MODEL</code> từ <code>dotenv</code>.
+  Lazy khởi tạo model.</li>
+<li><code>AiAssistantDocsLoader</code> — đọc các file <code>docs/*.md</code> đã bundle vào assets,
+  cache trong RAM (1 lần / phiên). Trả về toàn bộ docs dưới dạng plain text
+  để nhồi vào prompt (không RAG, vì docs hiện chỉ ~56KB).</li>
+</ul>
+<h3 id="asset-bundling">Asset bundling<a class="headerlink" href="#asset-bundling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>pubspec.yaml</code> → <code>flutter.assets</code>:
+  ```yaml</li>
+<li>UserManual/
+  ```</li>
+<li>Danh sách file md được nạp khai báo cứng trong
+  <code>AiAssistantDocsLoader._docAssetPaths</code>. Cố tình <strong>bỏ qua</strong>:</li>
+<li><code>UserManual/README.md</code> (chỉ là index).</li>
+<li><code>UserManual/TinhNang_Codebase.md</code> (thông tin kỹ thuật — SuSu không trả
+    lời câu hỏi kỹ thuật, không cần load).</li>
+<li>Khi thêm file UserManual end-user mới: chỉ cần thêm vào <code>_docAssetPaths</code>
+  (pubspec đã trỏ cả folder).</li>
+</ul>
+<h3 id="env">.env<a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GEMINI_API_KEY</code> — bắt buộc, lấy free tại https://aistudio.google.com/app/apikey</li>
+<li><code>GEMINI_MODELS</code> — <strong>mới (2026-06-02)</strong>: comma-separated list các model
+  theo thứ tự <strong>priority cao → thấp</strong>. Khi hit quota, repository tự cool
+  model + rotate sang model kế. Tất cả model PHẢI hỗ trợ function calling
+  (Gemini family). Default chain khi env trống:
+  <code>gemini-2.5-flash-lite,gemini-2.5-flash,gemini-1.5-flash</code>. Trong <code>.env</code>
+  thực tế hiện đặt full chain 6 model để tận dụng max quota free.</li>
+<li><code>GEMINI_MODEL</code> — backward-compat khi chỉ muốn dùng 1 model. Bị <strong>ghi đè</strong>
+  bởi <code>GEMINI_MODELS</code> nếu cả 2 cùng set.</li>
+<li>Bảng quota tham khảo (free tier 2026, kiểm tra mới nhất tại
+  https://aistudio.google.com/app/rate-limit):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>RPD</th>
+<th>RPM</th>
+<th>TPM</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gemini-2.5-flash-lite</code></td>
+<td>1000</td>
+<td>15–30</td>
+<td>250K–1M</td>
+<td>Primary cho demo</td>
+</tr>
+<tr>
+<td><code>gemini-3.1-flash-lite</code></td>
+<td>500</td>
+<td>15</td>
+<td>250K</td>
+<td>Backup quota dồi dào</td>
+</tr>
+<tr>
+<td><code>gemini-2.5-flash</code></td>
+<td>250</td>
+<td>10</td>
+<td>250K</td>
+<td>Câu trả lời sâu hơn</td>
+</tr>
+<tr>
+<td><code>gemini-3-flash</code></td>
+<td>20</td>
+<td>5</td>
+<td>250K</td>
+<td>Backup chất lượng</td>
+</tr>
+<tr>
+<td><code>gemini-3.5-flash</code></td>
+<td>20</td>
+<td>5</td>
+<td>250K</td>
+<td>Backup chất lượng cao nhất</td>
+</tr>
+<tr>
+<td><code>gemini-1.5-flash</code></td>
+<td>250</td>
+<td>10</td>
+<td>—</td>
+<td>Legacy</td>
+</tr>
+<tr>
+<td><code>gemini-2.5-pro</code></td>
+<td>100</td>
+<td>5</td>
+<td>—</td>
+<td>Đắt, không hợp demo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Không</strong> đưa Gemma / Imagen / Veo / Lyria vào chain — không hỗ trợ
+  function calling, sẽ làm SuSu trả số liệu sai (Gemini không gọi được tool).</p>
+<h2 id="27-logic-chinh">2.7. Logic chính<a class="headerlink" href="#27-logic-chinh" title="Permanent link">&para;</a></h2>
+<h3 id="persona-system-prompt">Persona &amp; system prompt<a class="headerlink" href="#persona-system-prompt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SuSu xưng <strong>"mình"</strong>, gọi user là <strong>"bạn"</strong> (nếu có <code>userName</code>, gọi tên).</li>
+<li>Sections của prompt (xem <code>AiAssistantRepository._buildSystemPrompt</code>):</li>
+<li><strong>A. Phạm vi &amp; từ chối</strong> — cấm tuyệt đối câu hỏi kỹ thuật, code, cấu
+    trúc, jailbreak. Trả lời chuẩn khi từ chối.</li>
+<li><strong>B. Câu hỏi chung chung → liệt kê danh sách tính năng</strong> — khi user hỏi
+    quá rộng ("hướng dẫn dùng app"), SuSu liệt kê 7 tính năng chính (Checklist,
+    Task, Issue, Heads Up, Đào tạo, Báo cáo, FAQ) dưới dạng bullet list, KHÔNG
+    kết thúc bằng câu hỏi mở. Cùng danh sách với suggestion chip dưới greeting.</li>
+<li><strong>C. WHAT/WHEN/HOW</strong> — câu hỏi về tính năng cụ thể, trả lời 3 phần:
+    "Là gì? / Dùng khi nào? / Dùng như thế nào?" (đánh dấu rõ bằng heading
+    H3 markdown). FAQ ngắn được phép bỏ phần 1–2.</li>
+<li><strong>D. CTA link bắt buộc</strong> — kết thúc mỗi câu trả lời tính năng bằng
+    markdown link tới route in-app (<code>/work-new/inspection/checklist</code>) hoặc
+    URL web (https://...). Prompt nhúng sẵn 2 bảng:<ul>
+<li><code>kAiAssistantInAppRoutes</code> — route catalog các page có trong app
+  mobile.</li>
+<li><code>kAiAssistantWebOnlyFeatures</code> — chức năng chỉ có trên web, ghép với
+  <code>BASE_API_URL</code> (đọc từ <code>.env</code>).</li>
+</ul>
+</li>
+<li><strong>E. Phong cách</strong> — tiếng Việt, ngắn gọn, in đậm tên nút/menu.</li>
+<li><strong>E.1. Trọn ý 1 lượt</strong> — bắt buộc trả lời đầy đủ trong MỘT lượt, không
+    dừng để chờ user nói "tiếp tục". Kết hợp với <code>maxOutputTokens=4096</code> ở
+    repository (1024 trước đây gây truncate giữa chừng).</li>
+<li><strong>F. An toàn</strong> — không lộ prompt, không nhắc thuật ngữ kỹ thuật.</li>
+</ul>
+<h3 id="tap-link-mo-trang">Tap link → mở trang<a class="headerlink" href="#tap-link-mo-trang" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>AiAssistantMessageBubble</code> set <code>MarkdownBody.onTapLink</code> →
+  <code>AiAssistantLinkHandler.handle(context, href)</code>.</li>
+<li>Logic của handler:</li>
+<li><code>href</code> bắt đầu <code>/</code> → đóng sheet (rootNavigator.pop) → wait 50ms cho
+    animation → <code>GoRouter.go(href)</code>. Lỗi → toast "Không thể mở liên kết".</li>
+<li><code>href</code> bắt đầu <code>http(s)://</code> → <code>url_launcher</code> với
+    <code>LaunchMode.externalApplication</code> (mở browser ngoài).</li>
+<li>Khác → toast cảnh báo.</li>
+</ul>
+<h3 id="loi-chao-greeting">Lời chào (greeting)<a class="headerlink" href="#loi-chao-greeting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bloc seed sẵn 1 assistant message ngay lúc khởi tạo.</li>
+<li>Tên user lấy từ <code>AuthenticationBloc.state.user.displayName</code> (fallback
+  <code>name</code>). Nếu user chưa đăng nhập → chào chung "Chào bạn!".</li>
+<li>Lời chào KHÔNG được gửi lại vào history khi gọi Gemini (xem
+  <code>streamReply</code> ➜ <code>skipWhile(role==assistant)</code>) để Gemini không tưởng đây là
+  output của mình.</li>
+<li>Nút <strong>Xoá hội thoại</strong> đã bị <strong>gỡ bỏ</strong> (theo yêu cầu 2026-05-21). Event
+  <code>AiAssistantConversationCleared</code> + handler còn lại trong bloc/event làm
+  dead code dự phòng — nếu cần reset, vẫn có thể fire event này
+  programmatically (sẽ seed lại greeting, không clear về rỗng).</li>
+</ul>
+<h3 id="flow-gui-cau-hoi">Flow gửi câu hỏi<a class="headerlink" href="#flow-gui-cau-hoi" title="Permanent link">&para;</a></h3>
+<ol>
+<li>User gõ → <code>AiAssistantInputBar.onSubmit</code> → <code>AiAssistantMessageSubmitted</code> event.</li>
+<li>Bloc push 2 message: <code>user</code> (nội dung user) + <code>assistant</code> (placeholder
+   <code>isStreaming=true</code>, content rỗng) → emit state mới với
+   <code>isWaitingFirstChunk=true</code>.</li>
+<li>Bloc gọi <code>_repository.streamReply(history, userMessage, userName)</code>:</li>
+<li>History = các message ĐÃ HOÀN TẤT trước khi gửi (không gồm placeholder).
+     Repository skip greeting (assistant message đầu tiên không phải do
+     Gemini sinh ra).</li>
+<li>Prompt = <code>[system prompt (SuSu persona + UserManual + REPORT TOOLS)]</code> +
+     history (map sang <code>Content.text/Content.model</code>) + câu hỏi mới.</li>
+<li>Stream <code>AiAssistantReplyEvent</code> trả về (sealed, xem mục "Tra cứu báo cáo
+   qua Function Calling"):</li>
+<li><code>AiAssistantTextDelta(text, replace)</code> → <code>_AiAssistantChunkReceived</code> →
+     bloc REPLACE hoặc append vào content tin nhắn assistant cuối.</li>
+<li><code>AiAssistantStatusUpdate(label)</code> → <code>_AiAssistantStatusReceived</code> → bloc
+     gán content = label (vd. "🔍 Đang tra cứu báo cáo Checklist…"). Khi
+     text delta đầu sau tool về với <code>replace=true</code>, label tự bị overwrite.</li>
+<li>Set <code>isWaitingFirstChunk=false</code> ngay sau event đầu.</li>
+<li>Stream hoàn tất → <code>_AiAssistantStreamCompleted</code> → set <code>isStreaming=false</code>.
+   Nếu content rỗng → mark <code>isError=true</code> + fallback message.</li>
+<li>Stream lỗi → <code>_AiAssistantStreamFailed</code> → set <code>isError=true</code>. Hàm
+   <code>_humanError</code> parse các lỗi Gemini phổ biến (quota, key sai, network,
+   model not found) thành message thân thiện thay vì dump stack.</li>
+</ol>
+<h3 id="tra-cuu-bao-cao-qua-function-calling">Tra cứu báo cáo qua Function Calling<a class="headerlink" href="#tra-cuu-bao-cao-qua-function-calling" title="Permanent link">&para;</a></h3>
+<p>SuSu được trao 4 function (tool) để <strong>tra cứu số liệu real-time</strong> từ
+backend report — gọi thẳng các repository ở <code>supa_work</code>, <strong>KHÔNG qua BE
+trung gian</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Tool name</th>
+<th>Repository</th>
+<th>Trả lời câu hỏi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_compliance_summary</code></td>
+<td><code>WorkHomeReportRepository.complianceSummary</code></td>
+<td>"Tỉ lệ checklist hoàn thành hôm nay?"</td>
+</tr>
+<tr>
+<td><code>get_compliance_by_site</code></td>
+<td><code>WorkHomeReportRepository.complianceList</code> (lọc leaf, sort, top 10)</td>
+<td>"Site nào hoàn thành thấp nhất?"</td>
+</tr>
+<tr>
+<td><code>get_task_progress_summary</code></td>
+<td><code>WorkHomeReportRepository.taskProgressSummary</code></td>
+<td>"Tiến độ công việc tuần này?"</td>
+</tr>
+<tr>
+<td><code>get_quality_index</code></td>
+<td><code>WorkHomeReportRepository.qualityIndexList</code></td>
+<td>"Quality index tháng này?"</td>
+</tr>
+</tbody>
+</table>
+<p>Cả 4 tool nhận tham số <code>dateType</code> (<code>today</code> / <code>thisWeek</code> / <code>thisMonth</code> /
+<code>thisQuarter</code>) → map sang <code>HomeReportFilter.dateTypeId.equal</code> qua
+<code>DateTypeEnum</code>. Tool <code>get_compliance_by_site</code> còn nhận <code>order</code>
+(<code>asc</code> mặc định / <code>desc</code>).</p>
+<p><strong>Vòng lặp function-call (<code>_kMaxFunctionCallTurns = 4</code>)</strong>:</p>
+<ol>
+<li>Repository gọi <code>model.generateContent(contents)</code> <strong>non-stream</strong> để bắt
+   được <code>FunctionCall</code> (streaming SSE sẽ chèn function call rải rác, parse
+   phức tạp).</li>
+<li>Nếu <code>response.functionCalls</code> không rỗng:</li>
+<li>Append <code>response.candidates.first.content</code> (function-call output) vào
+     <code>contents</code>.</li>
+<li>Yield <code>AiAssistantStatusUpdate(tool.displayLabel)</code> cho mỗi tool.</li>
+<li>Gọi <code>tool.execute(args)</code> (qua <code>_safeExecute</code> để bọc try/catch). Nếu
+     repository throw, kết quả là <code>{"error": "..."}</code> để Gemini diễn giải
+     cho user.</li>
+<li>Append <code>Content.functionResponses([...FunctionResponse])</code> vào
+     <code>contents</code>. Loop tiếp.</li>
+<li>Nếu <code>functionCalls</code> rỗng:</li>
+<li>Có <code>response.text</code> → yield 1 <code>AiAssistantTextDelta(replace=streamedTool)</code>
+     và return (đã có full text).</li>
+<li>Text rỗng (hiếm) → fallback <code>model.generateContentStream(contents)</code>,
+     yield chunk-by-chunk với <code>replace=true</code> cho chunk đầu để xoá nhãn
+     tool còn sót lại.</li>
+<li>Vượt 4 turn → yield error message thân thiện (chống loop).</li>
+</ol>
+<p><strong>Vì sao non-stream cho intermediate turns?</strong> SDK
+<code>google_generative_ai 0.4.7</code> cho phép cả 2 mode, nhưng function call có
+thể nằm rải trong nhiều chunk SSE — non-stream gom 1 lần đáng tin cậy
+hơn. Trade-off: lượt <strong>không</strong> có tool call vẫn chạy non-stream nên user
+thấy response "bùm" 1 phát; chấp nhận để code đơn giản, sau này có thể
+tối ưu nếu cần streaming thật.</p>
+<p><strong>Sealed event vs raw string</strong>: <code>streamReply</code> đổi return type từ
+<code>Stream&lt;String&gt;</code> sang <code>Stream&lt;AiAssistantReplyEvent&gt;</code>. Lý do: bloc cần
+phân biệt 2 loại tín hiệu (text delta vs status update tool) và biết khi
+nào REPLACE content (chunk đầu sau status) thay vì append. Dùng sealed
+class giúp bloc switch exhaustive, không lo miss case.</p>
+<p><strong>Persona prompt — mục G</strong>: System prompt thêm section <strong>"G. TRA CỨU SỐ
+LIỆU BÁO CÁO"</strong> dạy Gemini:
+- Chỉ gọi tool khi câu hỏi có "bao nhiêu", "tỉ lệ", "rate", "site nào tệ
+  nhất"... — không gọi cho câu hỏi how-to.
+- Suy <code>dateType</code> từ ngữ cảnh ("hôm nay" → <code>today</code>, default <code>today</code>).
+- Có thể gọi nhiều tool song song nếu đan xen.
+- KHÔNG bịa số, KHÔNG in raw JSON, KHÔNG nhắc tên function.
+- Câu trả lời số liệu theo mẫu <code>### 📊 [Tên báo cáo] — [Mốc thời gian]</code>
+  + bullet list + insight + CTA <code>/supa/dashboard</code>.</p>
+<p><strong>Tool failure handling</strong>: Mỗi tool <code>execute(args)</code> tự bắt exception,
+trả <code>{"error": "Không tra cứu được ..."}</code> để Gemini đọc và nói cho user.
+Tool <strong>không bao giờ throw</strong> ra ngoài (làm vỡ vòng lặp function call).</p>
+<p><strong>Mở rộng</strong>: Thêm tool mới chỉ cần:
+1. Tạo class extends <code>AiAssistantTool</code> (override <code>name</code>, <code>declaration</code>,
+   <code>displayLabel</code>, <code>execute</code>).
+2. Append vào <code>buildDefaultReportTools()</code> trong <code>tools/report_tools.dart</code>.
+3. Thêm i18n key <code>aiAssistant.tool.lookup.&lt;key&gt;</code>.
+4. Cập nhật prompt section G với tên function + use case.</p>
+<h3 id="multi-model-failover-chain">Multi-model failover chain<a class="headerlink" href="#multi-model-failover-chain" title="Permanent link">&para;</a></h3>
+<p>SuSu support nhiều Gemini model fallback để né rate-limit free tier (mỗi
+model có RPM / RPD / TPM riêng — vd. <code>gemini-2.5-flash-lite</code> 1000 RPD,
+<code>gemini-3-flash</code> 20 RPD). Khi user dùng nhiều, primary model dễ hết quota
+trong ngày → cần auto rotate.</p>
+<h4 id="cau-truc">Cấu trúc<a class="headerlink" href="#cau-truc" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>AiAssistantModelChain</code> (<code>services/</code>) lưu danh sách model name +
+  trạng thái cooldown per-model. <strong>Không có lock</strong> — chấp nhận race nhỏ
+  vì cooldown là heuristic, request thứ 2 hit limit cũng tự rotate.</li>
+<li><code>AiAssistantRepository</code> giữ:</li>
+<li><code>_modelChain</code> — chuỗi model.</li>
+<li><code>_modelCache: Map&lt;String, GenerativeModel&gt;</code> — lazy instantiate +
+    reuse instance cho mỗi tên model.</li>
+<li><code>_pickModelName()</code> — trả model <strong>priority cao nhất đang available</strong>;
+    throw <code>GenerativeAIException('All Gemini models in chain are
+    rate-limited.')</code> khi tất cả còn cooldown.</li>
+<li><code>_generateContentWithFailover(contents)</code> — wrap <code>generateContent</code> với
+    vòng <code>while (true)</code>: hit <code>RESOURCE_EXHAUSTED</code> / 429 / quota →
+    <code>markRateLimited</code> → loop lại pick model khác.</li>
+<li><code>_generateContentStreamWithFailover(contents)</code> — tương tự nhưng cho
+    stream. <strong>Failover chỉ áp dụng trước chunk đầu tiên</strong>; sau khi đã
+    nhận chunk, lỗi tiếp propagate ra consumer (không thể đổi model
+    giữa chừng).</li>
+</ul>
+<h4 id="exponential-backoff">Exponential backoff<a class="headerlink" href="#exponential-backoff" title="Permanent link">&para;</a></h4>
+<pre><code>fail #1 → cooldown 60s
+fail #2 → cooldown 120s
+fail #3 → cooldown 240s
+...
+fail #6+ → cooldown 30 min (cap)
+</code></pre>
+<p><code>markSuccess(name)</code> reset counter về 0 — lần fail tiếp theo bắt đầu lại
+từ 60s. Cap 30min đủ để window quota (vd. RPD) dịch chuyển.</p>
+<h4 id="phan-biet-loai-loi">Phân biệt loại lỗi<a class="headerlink" href="#phan-biet-loai-loi" title="Permanent link">&para;</a></h4>
+<p><code>_isHardError(e)</code> (KHÔNG rotate, throw thẳng):
+- <code>InvalidApiKey</code> — sai key → rotate cũng vô ích.
+- <code>UnsupportedUserLocation</code> — vùng địa lý chặn → mọi model đều fail.</p>
+<p><code>_isRateLimitError(e)</code> (rotate model):
+- Message chứa <code>quota</code>, <code>exceeded</code>, <code>429</code>, <code>rate limit</code>,
+  <code>resource_exhausted</code>, <code>resource exhausted</code>.</p>
+<p>Lỗi khác (network, model not found, parse error) → throw thẳng cho bloc
+hiển thị message phù hợp.</p>
+<h4 id="mo-rong">Mở rộng<a class="headerlink" href="#mo-rong" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Thêm model: chỉ cần thêm tên vào <code>GEMINI_MODELS</code> trong <code>.env</code>. Không
+  cần code change.</li>
+<li>Đổi default chain: sửa hằng <code>_kDefaultModelChain</code> trong
+  <code>ai_assistant_repository.dart</code>.</li>
+<li>Tinh chỉnh cooldown: sửa <code>_initialCooldown</code> / <code>_maxCooldown</code> trong
+  <code>ai_assistant_model_chain.dart</code>.</li>
+<li>Debug: gọi <code>_modelChain.debugSnapshot()</code> để xem cooldown còn lại của
+  từng model — hữu ích nếu thêm devtools panel sau này.</li>
+</ul>
+<h3 id="lifecycle">Lifecycle<a class="headerlink" href="#lifecycle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Bloc subscription bị <code>cancel()</code> trong <code>close()</code> → an toàn khi user đóng sheet
+  giữa lúc streaming.</li>
+<li><code>_replySubscription</code> cũng bị cancel khi user nhấn <strong>xoá hội thoại</strong>.</li>
+</ul>
+<h3 id="empty-state-danh-sach-tinh-nang-suggestion-list">Empty state &amp; danh sách tính năng (suggestion list)<a class="headerlink" href="#empty-state-danh-sach-tinh-nang-suggestion-list" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Khi <code>messages.length == 1</code> (chỉ có greeting), SuSu render <code>_StarterSuggestions</code>
+  ngay dưới greeting — list 7 tính năng với icon Material:
+  <code>checklist | task_alt | report_problem | campaign | school | bar_chart |
+  help_outline</code>. Tap chip → fire <code>AiAssistantMessageSubmitted</code> với câu hỏi
+  i18n <code>suggestion.query.&lt;key&gt;</code> (vd. <code>"Tìm hiểu về Checklist"</code>).</li>
+<li>Sau tin nhắn user đầu tiên, list này biến mất; user dùng input bar bình
+  thường.</li>
+<li>Nếu <code>dotenv</code> chưa có <code>GEMINI_API_KEY</code> → <code>state.isConfigured = false</code>:</li>
+<li>Banner đỏ "AI Assistant chưa cấu hình".</li>
+<li>Input bị disable.</li>
+<li>Suggestion list không hiển thị.</li>
+</ul>
+<h3 id="auto-scroll">Auto scroll<a class="headerlink" href="#auto-scroll" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>BlocConsumer.listenWhen</code> so sánh <code>messages.length</code> và nội dung tin cuối
+  để trigger <code>_scrollToBottom()</code> mỗi khi có chunk mới.</li>
+</ul>
+<h2 id="28-i18n">2.8. i18n<a class="headerlink" href="#28-i18n" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prefix: <code>aiAssistant.*</code> — partial files tại
+  <code>assets/i18n/&lt;lang&gt;/aiAssistant.json</code> (vi/en/ko/id).</li>
+<li>~29 key / mỗi ngôn ngữ (greeting + 7 suggestion label + 7 suggestion query</li>
+<li>6 error + 4 <code>tool.lookup.*</code> cho status function-calling + còn lại UI).
+  Sau khi sửa → <code>dart run supa_l10n_manager merge</code>.</li>
+<li>System prompt + fallback error message hiện hard-code tiếng Việt trong
+  <code>AiAssistantRepository._buildSystemPrompt</code> và <code>AiAssistantBloc._humanError</code>
+  — chấp nhận cho demo, sẽ i18n sau nếu mở rộng.</li>
+</ul>
+<h2 id="29-theme-ux">2.9. Theme &amp; UX<a class="headerlink" href="#29-theme-ux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Toàn bộ màu dùng <code>theme.colorScheme</code> (không có hard-coded).</li>
+<li>Bubble user: <code>primary</code>/<code>onPrimary</code>, bo góc lệch về phải.</li>
+<li>Bubble assistant: <code>surfaceContainerHighest</code>/<code>onSurface</code>, có avatar tròn
+  sparkle bên trái, bo góc lệch về trái.</li>
+<li>Bubble lỗi: <code>errorContainer</code>/<code>onErrorContainer</code>, icon warning.</li>
+<li>Typing indicator: 3 dots animation 900ms loop.</li>
+<li>Launcher card: gradient <code>primaryContainer</code> → <code>secondaryContainer</code>.</li>
+</ul>
+<h2 id="29b-ux-details">2.9b. UX details<a class="headerlink" href="#29b-ux-details" title="Permanent link">&para;</a></h2>
+<h3 id="bubble-noi-chat-head">Bubble nổi (chat head)<a class="headerlink" href="#bubble-noi-chat-head" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Vị trí mặc định</strong>: mép phải, sát phía trên bottom-nav
+  (<code>screen.width - 68</code>, <code>screen.height - 166 - safeBottom</code>) — bubble đáy cách
+  safe-area-bottom 110px (<code>_defaultBottomOffset</code>), chừa khoảng cho FAB ở
+  <code>work_home_page</code>/<code>inspection_page</code> (~72px) và dễ với tay trên màn lớn.</li>
+<li><strong>Drag</strong>: <code>GestureDetector(onPanUpdate)</code> cập nhật offset theo <code>details.delta</code>,
+  clamp trong safe-area (top: status bar + 12, bottom: home-indicator + 12,
+  trái/phải: 12). <code>onPanEnd/onPanCancel</code> → <code>_snapToEdge</code>: tính tâm bubble so
+  với midline screen → animate về <code>_edgeMargin</code> (trái) hoặc
+  <code>screen.width - bubbleSize - _edgeMargin</code> (phải).</li>
+<li><strong>Persist vị trí</strong>: <code>_persistedTopLeft</code> (static) lưu vị trí cuối khi widget
+  dispose (root rebuild do đổi theme/locale), restore khi initState.</li>
+<li><strong>Animation</strong>:</li>
+<li><code>AnimatedPositioned</code> 260ms easeOutCubic cho snap; duration 0 trong lúc
+    drag để follow tay user trơn tru.</li>
+<li>Pulse glow: 1600ms loop reverse, shadow alpha 0.28 → 0.50.</li>
+<li>Khi đang drag: shadow alpha boost lên 0.45 + blurRadius 18 → 24.</li>
+<li><strong>Tap</strong>: <code>onTap</code> mở <code>showSupaActionSheet(context)</code> (helper trong <code>supa_work</code>)
+  — action sheet bao gồm tile "Trợ lý SuSu" để vào chat AI. Trước đó tap mở
+  thẳng <code>AiAssistantBottomSheet.show(context)</code>. GestureDetector tự phân biệt
+  tap (movement &lt; kPanSlop) với pan, không cần threshold thủ công.</li>
+<li><strong>Ẩn</strong>: <code>BlocBuilder&lt;AuthenticationBloc&gt;</code> — chỉ render khi state là
+  <code>UserAuthenticatedWithSelectedTenantState</code>. <code>ListenableBuilder</code> merge 4
+  notifier:</li>
+<li><code>AiAssistantBottomSheet.isOpenNotifier</code> — fire SYNC khi chat SuSu mở,
+    sớm hơn navigator push.</li>
+<li><code>supaActionSheetOpenNotifier</code> — fire SYNC khi action sheet mở.</li>
+<li><code>BottomSheetVisibilityObserver.isAnyOpenNotifier</code> — catch-all cho MỌI
+    <code>ModalBottomSheetRoute</code> push vào root hoặc shell navigator (kể cả sheet
+    bên thứ 3 không expose notifier riêng). 2 notifier trên là safety net
+    để tránh 1 frame nhấp nháy giữa lúc gọi <code>show</code> và lúc route được push.</li>
+<li><code>_level1Notifier</code> — ẩn khi đang ở <strong>deeper screen</strong> (root navigator
+    <code>canPop() == true</code>) hoặc ở màn level-1 có FAB riêng
+    (<code>_excludedLevel1Paths</code>).</li>
+<li><strong>Detect level-1</strong>: state attach <code>routerDelegate.addListener</code> sau frame
+  đầu (retry nếu <code>supaNavigationKey</code> chưa attach trong cold start). Mỗi
+  notify → <code>addPostFrameCallback</code> rồi đọc <code>supaNavigationKey.currentState!</code>
+  <code>.canPop()</code> + <code>routerDelegate.currentConfiguration.uri.path</code>. Post-frame
+  cần thiết vì GoRouter notify TRƯỚC khi Navigator rebuild stack — đọc
+  <code>canPop</code> ngay sẽ ra giá trị cũ. Set <code>_excludedLevel1Paths</code> hiện chứa
+  <code>InspectionQuestionnairePage.location</code> — bổ sung path khi mọc thêm FAB
+  level-1.</li>
+<li><strong>Compose</strong>: <code>withFloatingAiAssistant(context, child)</code> wrap child trong
+  <code>Stack(children: [child, Positioned.fill(child: bubble)])</code>. Gọi tại
+  <code>lib/main.dart</code> chồng lên <code>withStreamChatTheme</code> ⇒ bubble nằm trên cùng
+  toàn app, mọi route đều thấy.</li>
+</ul>
+<h3 id="ong-ban-phim">Đóng bàn phím<a class="headerlink" href="#ong-ban-phim" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>TextField.onTapOutside</code> → <code>FocusManager.instance.primaryFocus?.unfocus()</code>:
+  tap bất kỳ chỗ nào ngoài input (header, message bubble, suggestion chip,
+  banner cảnh báo) đều đóng keyboard.</li>
+<li><code>ListView.keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag</code>:
+  vuốt danh sách chat cũng đóng keyboard.</li>
+<li><strong>Bấm Send</strong> (<code>_handleSubmit</code>): sau khi submit + clear, gọi
+  <code>_focusNode.unfocus()</code> + <code>FocusManager.instance.primaryFocus?.unfocus()</code>
+  để chắc chắn keyboard đóng (trước đây dùng <code>requestFocus</code> giữ focus → giờ
+  đảo ngược: user thường muốn xem response thay vì gõ tiếp).</li>
+<li>Drag handle ở đầu sheet vẫn kéo xuống đóng sheet hoàn toàn.</li>
+</ul>
+<h3 id="error-message">Error message<a class="headerlink" href="#error-message" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tất cả lỗi LLM hiển thị qua i18n keys <code>aiAssistant.error.*</code> với tông giọng
+  "SuSu đang thử nghiệm, xin lỗi, mời quay lại sau".</li>
+<li>Chi tiết kỹ thuật (<code>.env</code>, model name, stack trace) chỉ log ra console
+  bằng <code>developer.log</code> ở repository, KHÔNG hiện ra UI.</li>
+<li>Phân loại:</li>
+<li><code>error.notConfigured</code> — <code>.env</code> chưa có key.</li>
+<li><code>error.quota</code> — <code>Quota exceeded</code>.</li>
+<li><code>error.unauthorized</code> — API key sai / hết quyền.</li>
+<li><code>error.network</code> — <code>SocketException</code>, <code>Failed host lookup</code>, timeout.</li>
+<li><code>error.modelNotFound</code> — model name trong <code>.env</code> sai.</li>
+<li><code>error.generic</code> — fallback cho mọi lỗi khác.</li>
+</ul>
+<h2 id="210-luu-y-cho-maintainer-todo-truoc-khi-production">2.10. Lưu ý cho maintainer / TODO trước khi production<a class="headerlink" href="#210-luu-y-cho-maintainer-todo-truoc-khi-production" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Bảo mật API key</strong>: hiện key nằm trong <code>.env</code> được bundle vào app — ai
+   decompile cũng đọc được. Trước khi mở rộng cho user cuối:</li>
+<li>Dựng 1 proxy mỏng (Cloudflare Worker / Supabase Edge Function) giữ key.</li>
+<li>Đổi <code>AiAssistantRepository.streamReply</code> sang gọi endpoint proxy.</li>
+<li><strong>Rate limit &amp; abuse</strong>: chưa có. Proxy nên thêm rate-limit theo
+   <code>appUser.id</code> hoặc IP.</li>
+<li><strong>Khi docs phình to</strong> (&gt; 500KB): chuyển sang RAG (chunk + embedding +
+   vector search local) — <code>AiAssistantDocsLoader</code> thiết kế sẵn để swap.</li>
+<li><strong>Đa ngôn ngữ trong câu trả lời</strong>: hiện system prompt yêu cầu trả lời tiếng
+   Việt. Nên detect <code>Localizations.localeOf(context)</code> và truyền vào prompt.</li>
+<li><strong>Lưu lịch sử hội thoại</strong>: hiện reset mỗi lần mở sheet. Có thể persist
+   vào <code>persistentStorage</code> nếu cần.</li>
+<li><strong>Toastification khi lỗi</strong>: hiện chỉ in lỗi vào bubble. Có thể thêm
+   <code>toastification.show</code> cho lỗi network để rõ ràng hơn.</li>
+<li><strong>Function calling — permission FE-side</strong>: hiện tool báo cáo dựa hoàn toàn
+   vào BE check permission (RoleContentType <code>REPORT_ALL</code> / <code>REPORT_BY_SITE</code>).
+   Nếu user không có quyền, BE trả 0/empty → tool trả <code>hasData=false</code>, Gemini
+   sẽ nói "không có dữ liệu". Cân nhắc thêm check FE-side để fail-fast (không
+   tốn HTTP call) khi mở rộng.</li>
+<li><strong>Function calling — thêm tool write?</strong>: hiện tool <strong>chỉ read</strong> để tránh
+   prompt injection mutate data. Nếu sau này muốn cho SuSu tạo task / issue,
+   cần thêm flow <strong>xác nhận user trước khi execute</strong> (vd. preview + confirm
+   button), KHÔNG để Gemini fire-and-forget.</li>
+<li><strong>Quan trắc usage tool</strong>: log mỗi <code>tool.execute(args)</code> qua <code>developer.log</code>
+   để debug, nhưng chưa có metric. Khi production nên ship qua proxy server
+   để track theo <code>appUser.id</code> + <code>tool.name</code> để tối ưu prompt.</li>
+<li><strong>Mở rộng chain xa hơn rate-limit</strong>: hiện cooldown chỉ là client-side
+    heuristic. Khi có proxy server, nên đẩy chain logic + đếm token thật
+    về proxy (Redis bucket per appUser + per model) — failover lúc đó
+    chính xác hơn (vd. weighted round-robin theo quota còn lại).</li>
+<li><strong>Stream failover sau chunk đầu</strong>: <code>_generateContentStreamWithFailover</code>
+    KHÔNG rotate được khi đã có chunk đầu (Gemini streaming chunked, không
+    có cơ chế resume). Nếu tương lai cần resilient hơn, cân nhắc fallback
+    về <code>generateContent</code> non-stream cho turn cuối khi hit lỗi mid-stream.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

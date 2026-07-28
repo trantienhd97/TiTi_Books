@@ -29,8 +29,8 @@ markdown_extensions:
   - toc:
       permalink: true
 
-nav:
-  - Home: index.md
+# Nav is auto-discovered from docs/ after sync (README.md → index.md).
+# Run: ../scripts/sync_docs_to_mkdocs.sh
 
 extra_css:
   - "stylesheets/extra.css"

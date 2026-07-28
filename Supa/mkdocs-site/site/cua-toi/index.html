@@ -1,0 +1,3576 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Supa mobile modules">
+      
+      
+        <meta name="author" content="Supa Team">
+      
+      
+      
+        <link rel="prev" href="../cong-viec/">
+      
+      
+        <link rel="next" href="../dang-ky-tai-khoan/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Của tôi — General Dashboard - Supa Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cua-toi-general-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Supa Docs" class="md-header__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supa Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Của tôi — General Dashboard
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tài liệu màn hình — Supa Mobile App
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../HUONG-DAN-VIET-DOC/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn viết tài liệu màn hình
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../automated-ui-testing/" class="md-tabs__link">
+          
+  
+  
+  Automated ui testing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../checklist/" class="md-tabs__link">
+          
+  
+  
+  Checklist
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chi-tiet-checklist/" class="md-tabs__link">
+          
+  
+  
+  Chi tiet checklist
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chi-tiet-cong-viec/" class="md-tabs__link">
+          
+  
+  
+  Chi tiet cong viec
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../cong-viec/" class="md-tabs__link">
+          
+  
+  
+  Cong viec
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Cua toi
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dang-ky-tai-khoan/" class="md-tabs__link">
+          
+  
+  
+  Dang ky tai khoan
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ho-so-nguoi-dung/" class="md-tabs__link">
+          
+  
+  
+  Ho so nguoi dung
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hoc-khoa-hoc/" class="md-tabs__link">
+          
+  
+  
+  Hoc khoa hoc
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../task-progress-report/" class="md-tabs__link">
+          
+  
+  
+  Task progress report
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tin-nhan/" class="md-tabs__link">
+          
+  
+  
+  Tin nhan
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tra-loi-checklist/" class="md-tabs__link">
+          
+  
+  
+  Tra loi checklist
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tra-loi-checklist-offline/" class="md-tabs__link">
+          
+  
+  
+  Tra loi checklist offline
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tro-ly-ai/" class="md-tabs__link">
+          
+  
+  
+  Tro ly ai
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Supa Docs" class="md-nav__button md-logo" aria-label="Supa Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supa Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tài liệu màn hình — Supa Mobile App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HUONG-DAN-VIET-DOC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn viết tài liệu màn hình
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated ui testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automated ui testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-ui-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated UI Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automated-ui-testing/test_case_ba_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Test Case Cho BA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Checklist
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist — Inspection (navbar tab)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiet checklist
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chi tiet checklist
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chi-tiet-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiết checklist (Inspection detail)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiet cong viec
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chi tiet cong viec
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chi-tiet-cong-viec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chi tiết / sửa công việc — Task Assignment Edit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cong viec
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cong viec
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cong-viec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Công việc — Task Assignment (navbar tab)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cua toi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cua toi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Của tôi — General Dashboard
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Của tôi — General Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thong-tin-chung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thông tin chung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thông tin chung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trang-ang-lam-nhung-nhiem-vu-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trang đang làm những nhiệm vụ gì
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khi-nao-getdata-uoc-goi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Khi nào getData() được gọi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ben-trong-getdata-lam-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bên trong getData() làm gì
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem-kien-truc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đặc điểm kiến trúc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cay-thu-muc-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cây thư mục source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route-ieu-huong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route &amp; điều hướng
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Route &amp; điều hướng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#khai-bao-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Khai báo route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell &amp; navbar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieu-huong-ra-tu-man" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Điều hướng ra từ màn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widget-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget &amp; component
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widget &amp; component">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cau-truc-widget-tree-tom-tat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cấu trúc widget tree (tóm tắt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bang-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bảng component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloc-cubit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLoC / Cubit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-thuc-hien-operational" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phần "Thực hiện" (Operational)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phần &#34;Thực hiện&#34; (Operational)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bang-api-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bảng API &amp; filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visibility-cua-section-thuc-hien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visibility của section (Thực hiện)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-local-lien-quan-phan-thuc-hien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State local liên quan (phần Thực hiện)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-bao-cao-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phần "Báo cáo" (Report)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phần &#34;Báo cáo&#34; (Report)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bang-api-filter_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bảng API &amp; filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visibility-cua-section-bao-cao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visibility của section (Báo cáo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-rate-quy-tac-hien-thi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance rate — quy tắc hiển thị %
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-local-lien-quan-phan-bao-cao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State local liên quan (phần Báo cáo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logic-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logic chính
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logic chính">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle-cold-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lifecycle (cold start)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xu-ly-loi-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xử lý lỗi API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skeleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skeleton
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luong-ac-biet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Luồng đặc biệt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Luồng đặc biệt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-tuy-chinh-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Tuỳ chỉnh section
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-pull-to-refresh-dedupe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pull-to-refresh (dedupe)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-chuyen-tab-navbar-shellroute-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Chuyển tab navbar (ShellRoute + go)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cold-start-kill-app-tu-ang-nhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cold start — kill app + tự đăng nhập
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-bang-tin-count-vs-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Bảng tin — count vs list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ca-lam-attendance-reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ca làm — attendance reload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tutorial-lan-au" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tutorial lần đầu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-timezone-mismatch-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Timezone mismatch dialog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-checklist-tap-cta-startcontinue-fast-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Checklist — Tap CTA Start/Continue (fast path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-tao-heads-up-task-tu-bubble-susu-action-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Tạo Heads Up / Task từ bubble SuSu (action sheet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luu-y-khi-sua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lưu ý khi sửa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lien-ket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liên kết
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dang ky tai khoan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dang ky tai khoan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dang-ky-tai-khoan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Đăng ký tài khoản
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ho so nguoi dung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ho so nguoi dung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ho-so-nguoi-dung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hồ sơ người dùng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoc khoa hoc
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hoc khoa hoc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hoc-khoa-hoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Học khoá học
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Task progress report
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Task progress report
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task-progress-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Báo cáo tiến độ công việc — Task Progress Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tin nhan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tin nhan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tin-nhan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tin nhắn — Conversations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tra loi checklist
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tra loi checklist
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tra-loi-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trả lời checklist (Inspection answer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tra loi checklist offline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tra loi checklist offline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tra-loi-checklist-offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trả lời checklist — Chế độ offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tro ly ai
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tro ly ai
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tro-ly-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trợ lý AI (AI Assistant Bottom Sheet)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cua-toi-general-dashboard">Của tôi — General Dashboard<a class="headerlink" href="#cua-toi-general-dashboard" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Giá trị</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên màn (UI)</strong></td>
+<td>Của tôi (<code>general.tabs.mytasks</code>)</td>
+</tr>
+<tr>
+<td><strong>Class chính</strong></td>
+<td><code>GeneralDashboardPage</code> → <code>_GeneralDashboardView</code></td>
+</tr>
+<tr>
+<td><strong>Package / module</strong></td>
+<td><code>supa</code> — <code>lib/modules/general/pages/general_dashboard/</code></td>
+</tr>
+<tr>
+<td><strong>Route</strong></td>
+<td><code>/supa/dashboard</code> (<code>GeneralDashboardPage.location</code>)</td>
+</tr>
+<tr>
+<td><strong>Tổng số dòng (module)</strong></td>
+<td><strong>12.670</strong> dòng (toàn bộ folder <code>general_dashboard/</code>)</td>
+</tr>
+<tr>
+<td><strong>File page chính</strong></td>
+<td><code>general_dashboard_page.dart</code> — <strong>1.418</strong> dòng; <code>dashboard_compliance_today_section.dart</code> — <strong>1.423</strong> dòng; <code>packages/supa_work/lib/utils/compliance_site_rate_utils.dart</code> — <strong>246</strong> dòng; <code>dashboard_quality_index_section.dart</code> — <strong>705</strong> dòng; <code>quality_index_detail_page.dart</code> — <strong>1.197</strong> dòng; <code>training_report_detail_page.dart</code> — <strong>1.362</strong> dòng; <code>dashboard_training_report_section.dart</code> — <strong>874</strong> dòng; <code>dashboard_home_report_filter.dart</code> — <strong>114</strong> dòng; <code>packages/supa_work/lib/pages/analytics/widgets/home_report_filter_sheet.dart</code> — <strong>498</strong> dòng; <code>site_compliance_details_list_page.dart</code> — <strong>1.911</strong> dòng; <code>packages/supa_work/lib/pages/analytics/site_report/widgets/compliance_site_detail_sheet.dart</code></td>
+</tr>
+<tr>
+<td><strong>Cập nhật bổ sung</strong></td>
+<td><strong>2026-06-16 (v61)</strong> — Force update popup chỉ hiện khi <code>/rpc/portal/list-app-version</code> trả <code>forceUpdate</code>/<code>isForceUpdate</code> cho version mới hơn app hiện tại; bỏ optional <code>SupaUpgradeAlert</code> theo App Store để không tự hiện popup khi BE không yêu cầu.</td>
+</tr>
+<tr>
+<td><strong>Cập nhật lần cuối</strong></td>
+<td><strong>2026-06-24 (v79)</strong> — Trial banner: chỉ hiển thị khi tài khoản thuộc tenant admin / sub admin (trường <code>isAdmin</code> trong <code>get-info</code> API / <code>persistentStorage.appUser?.isAdmin</code>). Trước đó: <strong>2026-06-22 (v78)</strong> — Task progress detail: bấm user mở bottom sheet <code>TaskProgressUserTasksSheet</code> (thay expand/collapse inline); danh sách task dùng <code>TaskAssignmentItem</code>, tap → <code>TaskAssignmentEditPage</code>. Trước đó: <strong>2026-06-22 (v77)</strong> — Task progress detail: task trong expand user dùng <code>TaskAssignmentItem</code>; tap mở <code>TaskAssignmentEditPage</code>; map DTO qua <code>task_progress_task_assignment_mapper.dart</code>; reload list sau khi quay lại. Trước đó: <strong>2026-06-22 (v76)</strong> — <code>TaskProgressDetailsListPage</code>: bấm user expand/collapse danh sách <code>taskAssignments</code> từ <code>/task-overal-progress/list</code> (code, tên, site, hạn <code>dueAt</code>, badge trạng thái); model <code>HomeReportTaskOveralProgressTaskAssignment</code>. Trước đó: <strong>2026-06-22 (v75)</strong> — <code>TrainingReportDetailPage</code>: filter UI giống compliance/quality/task progress — icon filter + badge trên AppBar, chip active <code>WorkAppliedFilterChip</code> (ngày + địa điểm), mở <code>DashboardHomeReportFilterSheet</code> (ẩn tag/biểu mẫu); bỏ hàng chip ngang <code>MultipleSelectChip</code> cũ. Logic filter/API giữ nguyên. Trước đó: <strong>2026-06-22 (v74)</strong> — <code>TaskProgressDetailsListPage</code>: sửa empty state (hiện summary khi <code>totalTask &gt; 0</code> dù list user rỗng); dùng <code>general.common.noData</code> thay key lỗi <code>work.analytics.noData</code>; filter UI giống compliance/quality (icon + badge AppBar, chip active <code>WorkAppliedFilterChip</code>); truyền filter từ dashboard qua <code>GoRouter.extra</code>. Trước đó: <strong>2026-06-22 (v73)</strong> — Tab <strong>Chất lượng theo địa điểm</strong> (<code>QualityBySiteTab</code>): drill-down cây site theo <code>parentId</code>/<code>hasChildren</code>; điểm site cha = trung bình điểm các con (<code>quality_index_site_tree_utils.dart</code>). Trước đó: <strong>2026-06-22 (v72)</strong> — <code>QualityIndexDetailPage</code>: filter UI giống báo cáo tuân thủ (icon filter + badge trên AppBar, chip active <code>WorkAppliedFilterChip</code>); tab con nhận <code>parentFilter</code>, không có UI filter riêng; mở từ dashboard truyền <code>initialFilter</code> qua <code>GoRouter.extra</code>. Trước đó: <strong>2026-06-22 (v71)</strong> — Tab <strong>Đánh giá</strong> đọc trực tiếp <code>data.countTotal</code> / <code>countPassed</code> / <code>countFailed</code> / <code>countRemaining</code> từ <code>/compliance-report/list</code> (BE đã aggregate cả site cha); bỏ tổng hợp đệ quy từ <code>contents[]</code>. Model <code>HomeReportSiteReportData</code> parse thêm các field evaluation. Fallback <code>contents[]</code> chỉ khi BE chưa trả count trên <code>data</code>. Trước đó: <strong>2026-06-22 (v70)</strong> — Tab <strong>Đánh giá</strong> card site/region: khi list API không gửi <code>countPassed</code>/<code>countFailed</code>/<code>countNotEvaluate</code> trên <code>contents[]</code>, suy <strong>Còn lại</strong> từ schedule đã hoàn thành tuân thủ nhưng chưa có kết quả Đạt/Không đạt (<code>leafNotEvaluateCountFromContentsFallback</code>) — khớp sheet chi tiết (<code>/compliance-report/summary</code> theo site). Trước đó: <strong>2026-06-22 (v69)</strong> — Tab <strong>Đánh giá</strong>: dùng <code>countPassed</code>/<code>countFailed</code>/<code>countNotEvaluate</code> từ summary (thay legacy <code>numberOfEvaluated</code> gây CÒN LẠI = countTotal); card site aggregate evaluation từ <code>contents[]</code> (không còn nhầm <code>completed</code>/<code>incompleted</code>). Trước đó: <strong>2026-06-22 (v68)</strong> — <code>HomeReportComplianceSummary</code> parse <code>lastInspectedAt</code> + <code>siteCreatedAt</code> từ <code>/compliance-report/summary</code>; hiển thị card <strong>Lần kiểm cuối</strong> / <strong>Tạo địa điểm</strong> trên <code>SiteComplianceDetailsListPage</code> và <code>ComplianceSiteDetailSheet</code> (<code>_homeSummary</code>). Trước đó: <strong>2026-06-22 (v67)</strong> — Card site/region trong tab Danh sách: aggregate <code>trễ hạn</code>/<code>đang làm</code>/<code>bỏ lỡ</code> từ <code>contents[]</code> (<code>leafLateCount</code>, <code>leafDoingCount</code>, <code>leafIncompletedCount</code>) thay vị hardcode <code>late=0</code> và <code>missed = total - completed</code> (gây Region 01 hiển thị trễ=0, bỏ lỡ=6). Trước đó: <strong>2026-06-22 (v66)</strong> — <code>SiteComplianceDetailsListPage</code> + <code>ComplianceSiteDetailSheet</code>: <strong>Tỷ lệ tuân thủ tổng</strong> = <code>(hoàn thành + trễ hạn) / tổng × 100</code> (trước chỉ tính hoàn thành); dùng <code>compliancePercentFromCounts</code>. Trước đó: <strong>2026-06-22 (v65)</strong> — Filter <code>SiteComplianceDetailsListPage</code> truyền xuống <code>ComplianceSiteDetailSheet</code> (<code>parentFilter</code>) và <code>_ScheduleDetailSheet</code> (qua <code>AnalyticSiteReportFilter</code>); màn con ẩn hết UI filter. Helper <code>toAnalyticSiteReportFilterForLeafSite</code> / <code>toHomeReportFilterForLeafSite</code> trong <code>home_report_filter.dart</code>. Dashboard mở sheet không <code>parentFilter</code> → vẫn giữ filter local. Trước đó: <strong>2026-06-22 (v64)</strong> — <code>SiteComplianceDetailsListPage</code>: sau khi apply filter, hiển thị chip active ngang (<code>WorkAppliedFilterChip</code>, pattern <code>inspection_page</code>) — <code>Ngày</code>, <code>Địa điểm</code>, <code>Nhãn dán</code>, <code>Biểu mẫu</code>; tap X xóa từng filter và re-fetch. Trước đó: <strong>2026-06-22 (v63)</strong> — Bỏ hàng chip filter ngang cũ; thêm icon filter ở header AppBar → mở <code>DashboardHomeReportFilterSheet</code>. Logic filter/API giữ nguyên. Widget sheet chuyển sang <code>home_report_filter_sheet.dart</code>. Trước đó: <strong>2026-06-21 (v62)</strong> — Compliance tile grid (<code>_HierarchicalSitesSection</code>, <code>SiteComplianceDetailsListPage</code> heatmap) dùng <code>compliance_site_rate_utils.dart</code>: % tính từ <code>contents[]</code> counts <code>(completed + late) / total × 100</code> (scale 0–100, <code>1.0</code> = 1%); site cha aggregate volume-weighted từ leaf; không tin <code>data.complianceRate</code> khi có count (BE hack floor 1%). Model <code>HomeReportSiteReportData</code> parse thêm <code>contents</code>, <code>completedRate</code>, <code>doingRate</code>, <code>lateRate</code>. Trước đó: <strong>2026-06-16 (v60)</strong> — <code>FetchWorkProfileEvent</code> force refresh <code>/rpc/auth/profile/get-info</code> thay vì dùng cache <code>_cachedPaths</code>, tránh dashboard/menu còn giữ quyền báo cáo cũ sau khi quyền bị thu hồi. Trước đó: <strong>2026-06-12 (v59)</strong> — Nút Excel của Quality Index detail gọi <code>POST /rpc/work/report/quality-index-report/export</code> bằng filter hiện tại, tải binary <code>.xlsx</code> về temp với tên <code>quality-index-report.xlsx</code> rồi mở bằng app hệ thống. Trước đó: <strong>2026-06-12 (v58)</strong> — Quality by site trong Quality Index detail chuyển sang field BE mới <code>qualityBySites</code>; mỗi site đọc <code>data.qualityIndex</code> và <code>data.numberOfInspection</code> (fallback root field cũ nếu BE không trả data). Trước đó: <strong>2026-06-12 (v57)</strong> — Metric cards của Quality Index detail đổi theo mock: card bo lớn, value rich text, diff badge; Avg score dùng màu threshold <code>[0,30)/[30,80)/[80,100]</code> theo logic Quality/Compliance hiện có. Trước đó: <strong>2026-06-12 (v56)</strong> — Quality Index detail bỏ <code>SizedBox(height: 420)</code>/<code>TabBarView</code> cố định; tab content render trong <code>ListView</code> cha nên danh sách flagged/site không bị cắt khung và kéo được hết trang. Trước đó: <strong>2026-06-12 (v55)</strong> — Quality Index detail bỏ title trong nội dung tab <strong>Flagged list</strong> / <strong>Quality by site</strong>; danh sách flagged và site không còn cap FE, render toàn bộ items API trả về. Trước đó: <strong>2026-06-12 (v54)</strong> — Quality Index detail dùng các field BE mới: <code>qualityIndexDiff</code>, <code>flagRate</code>, <code>flagRateDiff</code>, <code>repeatIssueCount</code>, <code>repeatIssueDiff</code>, <code>scoreDistributions</code>, <code>totalMostFlaggedItem</code>; <code>mostFlaggedItems</code> paging bằng <code>skip=0/take=20</code>, dashboard card dùng <code>take=5</code>. Trước đó: <strong>2026-06-12 (v53)</strong> — Màn chi tiết Quality Index render tab <strong>Flagged list</strong> từ <code>mostFlaggedItems</code>: rank, nội dung câu hỏi, chip <code>questionnaireName</code> một dòng có ellipsis, số site và <code>numberOfTimes</code>. Trước đó: <strong>2026-06-11 (v52)</strong> — Quality Index dashboard đổi sang API <code>POST /rpc/work/report/quality-index-report/list</code>, bổ sung DTO <code>mostFlaggedItems</code> và render block <strong>MOST FLAGGED ITEM</strong> từ BE thay cho ranked list site giả lập. Trước đó: <strong>2026-06-10 (v51)</strong> — Default selected chip của <code>DashboardClockListWidget</code> đổi sang ca có <code>expectedClockAt</code> mới nhất trong danh sách. Trước đó: <strong>2026-06-10 (v50)</strong> — Chip ca làm trên dashboard có state được chọn: tap chip nào thì border primary chuyển sang chip đó; action bên dưới đổi theo setup được chọn, gồm chấm công nhanh khi <code>canClock</code>, hoặc <code>Cập nhật</code> / <code>Đính chính</code> theo flow trang Chấm công. Trước đó: <strong>2026-06-10 (v49)</strong> — <code>DashboardClockListWidget</code> chỉ hiển thị nút chấm công nhanh khi setup hiện tại có <code>canClock == true</code>, tránh fallback thừa label <code>Clock out</code> khi user đã chấm công hoặc chưa tới mốc chấm. Trước đó: <strong>2026-05-28 (v48)</strong> — Heads Up trên dashboard không còn bọc bằng <code>DashboardFrame</code>; chỉ render header trong suốt + <code>AppBadge</code> + horizontal list, bỏ nền/card trắng riêng cho section này. Trước đó: <strong>2026-05-28 (v47)</strong> — Header <strong>Của tôi</strong> lấy số <strong>cần chú ý</strong> từ cùng logic banner Compliance: đếm leaf site có <code>data.complianceRate == 0</code> trong <code>/rpc/work/report/home-report/compliance/list</code>. <code>DashboardComplianceTodaySection</code> emit count lên parent qua <code>onNeedAttentionCountChanged</code>, parent truyền vào <code>DashboardHeader.needAttentionCount</code>. Trước đó: <strong>2026-05-28 (v46)</strong> — Dashboard refresh <code>/rpc/portal/profile/get-info</code> một lần khi saved auth state đã authenticated nhưng <code>AppUser.sites</code> còn rỗng, rồi emit <code>UpdateAppUserProfileEvent</code> để <code>DashboardHeader</code> rebuild số site. Trước đó: <strong>2026-05-28 (v45)</strong> — Header <strong>Của tôi</strong> lấy số site từ <code>AuthenticationBloc</code>/<code>AppUser.sites.value.length</code> (field <code>sites</code> đã được expose trong <code>supa_architecture 1.15.18</code> từ <code>/rpc/portal/profile/get-info</code> đã lưu), không gọi thêm API riêng ở dashboard. Trước đó: <strong>2026-05-28 (v44)</strong> — Header <strong>Của tôi</strong> thử lấy số site từ response <code>/rpc/portal/profile/get-info</code> trong <code>_loadStats()</code> và truyền vào <code>DashboardHeader.sitesCount</code> nhưng đã thay bằng dữ liệu auth đã lưu.</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Cập nhật bổ sung</strong> | <strong>2026-05-28 (v42)</strong> — Tab <strong>Sites</strong> của <strong>Training Report Detail</strong> hiển thị theo cây cha-con dựa trên <code>parentId/hasChildren</code>: root → child drill-down bằng chevron; leaf giữ action <strong>Chi tiết</strong>. Parent dùng rate BE nếu có data, nếu không aggregate từ descendants. Trước đó: <strong>2026-05-28 (v41)</strong> — Filter của <strong>Training Report Detail</strong> đổi sang cùng pattern với trang chi tiết Compliance: <code>DropdownChip</code> cho date, <code>MultipleSelectChip</code> cho Sites/Courses/Groups; Date mở <code>DateFilterBottomSheet</code>, Sites mở <code>HomeReportSiteSearchModal</code>, Courses/Groups tạm toast đang phát triển. Trước đó: <strong>2026-05-28 (v40)</strong> — Chuẩn lại màu hệ thống cho <strong>Training Report Detail</strong>: nền page/appbar/tab dùng <code>theme.colorScheme.surface</code>; card/panel dùng <code>surfaceContainerLowest</code>; progress placeholder vẫn dùng token container của theme. Trước đó: <strong>2026-05-28 (v39)</strong> — Thêm màn <strong>Training Report Detail</strong> (<code>/supa/dashboard/training-report</code>) theo mock 5 tab Sites/Courses/Quizzes/Paths/Rankings. Header có Excel toast "đang phát triển"; filter chip dùng <code>DashboardHomeReportFilterSheet</code> cho thời gian + site, Course/Group tạm toast. Card Training Report trên dashboard bấm <strong>Xem</strong> mở route mới. Trước đó: <strong>2026-05-28 (v38)</strong> — Sửa điều kiện inline schedule của Compliance single-leaf: chỉ inline khi item root đang hiển thị là leaf thật sự. Payload có 1 leaf nhưng vẫn kèm chuỗi node cha sẽ tiếp tục render cây phân cấp để user drill-down đúng cấp. Trước đó: <strong>2026-05-28 (v37)</strong> — Single-leaf Compliance render inline schedule list để user không phải bấm leaf rồi mở bottom sheet. Trước đó: <strong>2026-05-27 (v36)</strong> — Thêm màn chi tiết Quality Index 2 tab theo mock mobile; route nằm ngoài ShellRoute để không kèm bottom navbar. Trước đó: <strong>2026-05-27 (v35)</strong> — Bổ sung lưu thứ tự section và render dashboard theo thứ tự user kéo thả trong Settings. Trước đó: <strong>2026-05-27 (v34)</strong> — Gỡ tile <strong>Chế độ trang Của tôi</strong> và các key i18n liên quan (<code>dashboardDisplayMode</code>, <code>fullDisplay</code>, <code>reportsOnly</code>); Settings chỉ còn nhóm <strong>Phần hiển thị trên Của tôi</strong>. Trước đó: <strong>2026-05-27 (v33)</strong> — Settings thêm nhóm <strong>Phần hiển thị trên Của tôi</strong> để bật/tắt từng section; report option chỉ hiện theo quyền menu Báo cáo. Trước đó: <strong>2026-05-27 (v32)</strong> — Chuẩn hoá spacing của block Chấm công bằng <code>_DashboardSectionWithGap</code>: skeleton và trạng thái có dữ liệu đều có gap dưới 12dp; trạng thái rỗng không sinh khoảng trắng. Trước đó: <strong>v31</strong> — Sắp xếp lại thứ tự dashboard "Của tôi": Heads Up → Chấm công → Compliance → Quality Index → Task Progress → Training Report → Checklist → Công việc → Training section (Lộ trình → Khoá học → Quiz). Trial banner chuyển xuống sau Heads Up để Heads Up luôn là section đầu trong chế độ đầy đủ. Trước đó: <strong>v30</strong> — Các report dùng cùng điều kiện với menu <strong>Báo cáo</strong>: <code>AnalyticsPermissions.hasAnyReportPermission(paths)</code>. Nếu user thấy được menu báo cáo thì Compliance, Task Progress, Quality Index và Training Report đều được mount; nếu không có bất kỳ quyền report nào thì ẩn toàn bộ report dashboard. Trước đó: <strong>v29</strong> — Chuẩn hoá ẩn/hiện các report trên dashboard theo quyền FE: Compliance, Task Progress và Quality Index đều chỉ mount khi <code>AnalyticsPermissions.workReportHomeReport</code>; Training Report chỉ mount khi user có <code>trainingReportSummary</code> hoặc <code>trainingReportStaffRanking</code>. Trước đó: <strong>v28</strong> — Ép root <code>DashboardHomeReportFilterSheet</code> full-size (<code>SizedBox.expand</code>) và dùng <code>Spacer</code> trong <code>_FilterRow</code> để cụm value + chevron thật sự nằm sát mép phải, tránh sheet/content bị co ngang theo nội dung. Trước đó: <strong>v27</strong> — Căn lại hàng trong <code>DashboardHomeReportFilterSheet</code>: <code>_FilterRow</code> ép full width và gom cụm value + chevron thành trailing group để giá trị lọc và dấu <code>&gt;</code> bám sát mép phải sheet. Trước đó: <strong>v26</strong> — Tách filter báo cáo dashboard thành <code>DashboardHomeReportFilterSheet</code> + <code>DashboardReportFilterAction</code> dùng chung; Compliance, Task Progress, Quality Index và Training Report đều mở được filter tại chỗ, có badge số filter active và re-fetch sau khi bấm <strong>Áp dụng</strong>. Training Report chỉ map thời gian + địa điểm vì DTO training không hỗ trợ tag/biểu mẫu. Trước đó: <strong>v25</strong> — Quality Index không còn tự ẩn khi API lỗi hoặc BE trả rỗng; <code>DashboardQualityIndexSection</code> render card với các thông số mặc định 0. |</p>
+<hr />
+<h2 id="thong-tin-chung">Thông tin chung<a class="headerlink" href="#thong-tin-chung" title="Permanent link">&para;</a></h2>
+<p><strong>Của tôi</strong> là màn <strong>home dashboard</strong> của super app, tab đầu tiên trên bottom navbar (<code>GeneralNavbar</code>). Tích hợp dữ liệu từ nhiều sub-package (<code>supa_work</code>, <code>supa_attendance</code>, <code>supa_training</code>, <code>supa_foundation</code>) trong cùng <code>CustomScrollView</code> có pull-to-refresh.</p>
+<h3 id="trang-ang-lam-nhung-nhiem-vu-gi">Trang đang làm những nhiệm vụ gì<a class="headerlink" href="#trang-ang-lam-nhung-nhiem-vu-gi" title="Permanent link">&para;</a></h3>
+<p>Page chia rõ <strong>2 phần</strong> tách biệt theo mục đích sử dụng. User có thể cấu hình từng section muốn hiển thị ở <code>AppSettingsPage</code> (xem mục <a href="#0-tuỳ-chỉnh-section">Tuỳ chỉnh section</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Phần</th>
+<th>Mục đích</th>
+<th>Section thuộc phần</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🟢 Thực hiện</strong> (Operational)</td>
+<td>User cá nhân làm việc trong ngày — xem việc cần làm + thao tác nhanh</td>
+<td>Bảng tin (Heads Up), Ca làm hôm nay, Checklist hôm nay, Công việc của tôi, Đào tạo (lộ trình + khoá học + quiz)</td>
+</tr>
+<tr>
+<td><strong>🔵 Báo cáo</strong> (Report)</td>
+<td>Manager / supervisor theo dõi chỉ số hiệu suất theo site &amp; tháng</td>
+<td>Compliance Today, Task Progress, Quality Index, Training Report</td>
+</tr>
+</tbody>
+</table>
+<p>Cả 2 phần đều render trong cùng 1 dashboard; <strong>phần Báo cáo</strong> có gating quyền — section không đủ quyền sẽ tự ẩn (xem chi tiết ở <a href="#phần-báo-cáo-report">§ Phần Báo cáo</a>).</p>
+<h3 id="khi-nao-getdata-uoc-goi">Khi nào <code>getData()</code> được gọi<a class="headerlink" href="#khi-nao-getdata-uoc-goi" title="Permanent link">&para;</a></h3>
+<p><code>getData()</code> là điểm vào duy nhất để refresh toàn bộ data của phần <strong>Thực hiện</strong> + dispatch refresh cho phần <strong>Báo cáo</strong> (gọi <code>*.refresh()</code> lên 4 section báo cáo). Hàm này <strong>deduplicate</strong>: nhiều caller gọi đồng thời sẽ share cùng 1 <code>Future</code> qua <code>_getDataFuture</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Đoạn code</th>
+<th>Lý do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cold start</strong> (app vừa mở)</td>
+<td><code>initState</code> → <code>addPostFrameCallback</code> → <code>_tryStartInitialDataLoad()</code> → <code>_startInitialDataLoad()</code> → <code>getData()</code></td>
+<td>Chờ <code>AuthenticationBloc.isAuthenticated &amp;&amp; !isLoading</code> rồi mới gọi để không race với <code>refreshToken</code></td>
+</tr>
+<tr>
+<td><strong>Auth state đổi</strong></td>
+<td><code>BlocListener&lt;AuthenticationBloc&gt;</code> ở <code>build()</code> (chỉ chạy 1 lần nhờ <code>!_initialDataLoadStarted</code>)</td>
+<td>Fallback nếu cold start chưa kịp authenticate khi <code>initState</code> chạy</td>
+</tr>
+<tr>
+<td><strong>Quay lại tab</strong></td>
+<td><code>didChangeDependencies()</code> → khi <code>ModalRoute.isCurrent &amp;&amp; !_hasRefreshedOnReturn</code></td>
+<td>User đổi tab navbar — <code>ShellRoute + go()</code> dispose page; lần quay lại tab <strong>Của tôi</strong> sẽ tự reload</td>
+</tr>
+<tr>
+<td><strong>Pull-to-refresh</strong></td>
+<td><code>RefreshIndicator.onRefresh</code></td>
+<td>Trong cùng callback cũng dispatch <code>AttendanceHomeReloadRequested</code> để đồng bộ ca làm</td>
+</tr>
+<tr>
+<td><strong>Section yêu cầu reload</strong></td>
+<td><code>DashboardHeadsUpSection.fetchData</code>, <code>DashboardTrainingSection.fetchData</code> (callback props nhận <code>getData</code>)</td>
+<td>Section con cần reload tổng nhưng vẫn dedupe qua cùng <code>_getDataFuture</code></td>
+</tr>
+<tr>
+<td><strong>Sau khi update timezone</strong></td>
+<td><code>_updateTimezoneToDevice</code> thành công → <code>getData()</code></td>
+<td>Profile đổi → reload data đồng bộ</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <code>getData()</code> <strong>không</strong> chạy trong <code>didChangeAppLifecycleState.resumed</code> — chỉ refresh <code>WorkProfileBloc</code> paths. Lý do: tránh phá data đang hiện khi user vô tình background app vài giây.</p>
+</blockquote>
+<h3 id="ben-trong-getdata-lam-gi">Bên trong <code>getData()</code> làm gì<a class="headerlink" href="#ben-trong-getdata-lam-gi" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+  A[getData] --&gt; B{_getDataFuture đang chạy?}
+  B --&gt;|Có| C[Return same Future]
+  B --&gt;|Không| D[_doGetData]
+  D --&gt; E[Future.wait]
+  E --&gt; F[_loadWorkData&lt;br/&gt;parallel: inspections + tasks + taskCount]
+  E --&gt; G[_loadTrainingData&lt;br/&gt;parallel: quizzes + courses + paths + 3 counts]
+  E --&gt; H[_loadStats&lt;br/&gt;parallel: homeStats + tenantProfile + headsUpCount]
+  F --&gt; I[Dispatch refresh&lt;br/&gt;báo cáo]
+  G --&gt; I
+  H --&gt; I
+  I --&gt; J[_complianceSectionKey.refresh]
+  I --&gt; K[_taskProgressSectionKey.refresh]
+  I --&gt; L[_qualityIndexSectionKey.refresh]
+  I --&gt; M[_trainingReportSectionKey.refresh]
+</code></pre>
+<ul>
+<li><strong>3 nhóm chạy song song</strong> qua <code>Future.wait</code>; mỗi nhóm bên trong cũng <code>Future.wait</code> các API con.</li>
+<li><strong>Mỗi API con</strong> dùng <code>_tryFetch&lt;T&gt;()</code> — fail trả <code>null</code>, không throw → 1 API hỏng <strong>không</strong> ảnh hưởng section khác.</li>
+<li><strong>Setstate ngay khi mỗi API xong</strong>, không đợi cả nhóm → user thấy data hiện dần.</li>
+<li>Sau khi 3 nhóm xong, gọi <code>refresh()</code> lên 4 GlobalKey của section báo cáo (chúng tự fetch repo riêng — không nằm trong <code>Future.wait</code> chính).</li>
+</ul>
+<h3 id="ac-iem-kien-truc">Đặc điểm kiến trúc<a class="headerlink" href="#ac-iem-kien-truc" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>ShellRoute</code> + <code>go()</code></strong> → widget <strong>dispose</strong> khi đổi tab, tạo lại khi quay lại → <strong>luôn fetch API mới</strong> (không restore cache cross-tab).</li>
+<li><strong>Không cache cross-navigation</strong> — đã gỡ <code>dashboard_data_cache.dart</code> và <code>DashboardLogoutHook</code>.</li>
+<li><strong><code>_tryFetch</code> giữ stale state</strong>: chỉ ghi đè khi result <code>!= null</code> → 1 API fail vẫn giữ data cũ trong cùng phiên.</li>
+<li><strong>Section báo cáo có state local riêng</strong> (<code>_isLoading</code>, <code>_summary</code>, <code>_sites</code>...) — không chia sẻ với state <code>getData()</code>. Parent chỉ dispatch <code>refresh()</code> qua GlobalKey.</li>
+</ul>
+<hr />
+<h2 id="cay-thu-muc-source">Cây thư mục source<a class="headerlink" href="#cay-thu-muc-source" title="Permanent link">&para;</a></h2>
+<pre><code class="language-text">lib/modules/general/pages/general_dashboard/
+├── general_dashboard_page.dart      (page + state + fetch logic)
+└── widgets/
+    ├── dashboard_header.dart                     — Header: icon Settings + Welcome + Avatar 40
+    ├── dashboard_heads_up_section.dart
+    ├── dashboard_heads_up_list_widget.dart
+    ├── dashboard_clock_list_widget.dart
+    ├── dashboard_clock_list_tile.dart
+    ├── dashboard_checklist_section.dart
+    ├── dashboard_inspection_list_widget.dart
+    ├── dashboard_compliance_today_section.dart  — Section &quot;Compliance&quot; (report-menu-gated)
+    ├── quality_index_detail_page.dart            — Màn chi tiết Quality Index
+    ├── training_report_detail_page.dart          — Màn chi tiết Training Report
+    ├── dashboard_quality_index_section.dart      — Section &quot;Quality Index&quot; (report-menu-gated)
+    ├── dashboard_task_progress_section.dart      — Section &quot;Task Progress&quot; (report-menu-gated)
+    ├── dashboard_training_report_section.dart    — Section &quot;Training Report&quot; (report-menu-gated)
+    ├── dashboard_home_report_filter.dart         — Filter sheet + filter action dùng chung cho các report
+    ├── dashboard_task_section.dart
+    ├── dashboard_task_assignment_list_widget.dart
+    ├── dashboard_training_section.dart
+    ├── dashboard_training_path_list_widget.dart
+    ├── dashboard_course_list_widget.dart
+    ├── dashboard_quiz_list_widget.dart
+    ├── dashboard_loading_view.dart
+    ├── dashboard_frame.dart                      — shared frame (package foundation cũng có)
+    ├── dashboard_guide_item.dart
+    ├── dashboard_empty.dart
+    ├── dashboard_skeleton.dart
+    ├── tenant_trial_banner.dart
+    └── workplace_check_list_item.dart
+</code></pre>
+<p><strong>Tổng module:</strong> 10.863 dòng.</p>
+<hr />
+<h2 id="route-ieu-huong">Route &amp; điều hướng<a class="headerlink" href="#route-ieu-huong" title="Permanent link">&para;</a></h2>
+<h3 id="khai-bao-route">Khai báo route<a class="headerlink" href="#khai-bao-route" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lib/modules/general/pages/general_dashboard/general_dashboard_page.dart</code></td>
+<td><code>static final location = resolveSupaPath('/dashboard')</code> → <strong><code>/supa/dashboard</code></strong></td>
+</tr>
+<tr>
+<td><code>lib/modules/general/pages/general_dashboard/quality_index_detail_page.dart</code></td>
+<td><code>static final location = resolveSupaPath('/dashboard/quality-index')</code> → <strong><code>/supa/dashboard/quality-index</code></strong></td>
+</tr>
+<tr>
+<td><code>lib/modules/general/pages/general_dashboard/training_report_detail_page.dart</code></td>
+<td><code>static final location = resolveSupaPath('/dashboard/training-report')</code> → <strong><code>/supa/dashboard/training-report</code></strong></td>
+</tr>
+<tr>
+<td><code>lib/modules/general/router/router.dart</code></td>
+<td><code>_generalDashboardRoute</code> trong <code>ShellRoute</code>; <code>_qualityIndexDetailRoute</code> và <code>_trainingReportDetailRoute</code> nằm trong <code>_generalRootRoutes</code> để mở full page không kèm bottom navbar</td>
+</tr>
+<tr>
+<td><code>lib/modules/general/pages/general_navbar.dart</code></td>
+<td>Tab đầu: <code>GeneralDashboardPage.location</code>, label <code>translate('general.tabs.mytasks')</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="shell-navbar">Shell &amp; navbar<a class="headerlink" href="#shell-navbar" title="Permanent link">&para;</a></h3>
+<pre><code class="language-text">generalRoutes
+├── GoRoute path: /supa/dashboard/quality-index → QualityIndexDetailPage
+├── GoRoute path: /supa/dashboard/training-report → TrainingReportDetailPage
+└── ShellRoute
+    ├── builder: LanguageAwareNavbar → GeneralNavbar(child)
+    └── routes
+        └── GoRoute path: /supa/dashboard → GeneralDashboardPage
+</code></pre>
+<ul>
+<li>Navigation tab: <code>GoRouter.of(context).go(path)</code> — <strong>không</strong> giữ state page khi đổi tab (recreate).</li>
+<li><code>didChangeDependencies</code> trên dashboard: khi route <code>isCurrent</code> lại → <code>FetchWorkProfileEvent</code> (paths/permissions).</li>
+</ul>
+<h3 id="ieu-huong-ra-tu-man">Điều hướng ra từ màn<a class="headerlink" href="#ieu-huong-ra-tu-man" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Thao tác UI</th>
+<th>Đích</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bảng tin — tap card</td>
+<td><code>HeadsUpDetailBottomSheet</code></td>
+</tr>
+<tr>
+<td>Ca làm — Xem tất cả</td>
+<td><code>AttendanceHomePage</code></td>
+</tr>
+<tr>
+<td>Checklist — Xem tất cả / item</td>
+<td><code>HomeInspectionTodayPage</code>, <code>InspectionChecklistPage</code>, <code>InspectionQuestionnairePage</code></td>
+</tr>
+<tr>
+<td>Task — Xem tất cả / item</td>
+<td><code>TaskAssignmentPage</code>, <code>TaskAssignmentFormPage</code></td>
+</tr>
+<tr>
+<td>Training — các section</td>
+<td><code>HomeTrainingPathTodoPage</code>, <code>HomeCourseTodoPage</code>, <code>HomeQuizPartitionsPage</code>, …</td>
+</tr>
+<tr>
+<td>Training Report — Xem</td>
+<td><code>TrainingReportDetailPage.location</code> (<code>/supa/dashboard/training-report</code>)</td>
+</tr>
+<tr>
+<td>Avatar (header)</td>
+<td><code>showProfileBottomSheet(context)</code> (foundation)</td>
+</tr>
+<tr>
+<td>Icon Settings (header)</td>
+<td><code>AppSettingsPage.location</code> (<code>/settings/app</code>)</td>
+</tr>
+<tr>
+<td>Bubble SuSu (overlay global)</td>
+<td><code>showSupaActionSheet</code> → checklist / heads up / lịch / task / <strong>Trợ lý SuSu</strong> (chat AI)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="widget-component">Widget &amp; component<a class="headerlink" href="#widget-component" title="Permanent link">&para;</a></h2>
+<h3 id="cau-truc-widget-tree-tom-tat">Cấu trúc widget tree (tóm tắt)<a class="headerlink" href="#cau-truc-widget-tree-tom-tat" title="Permanent link">&para;</a></h3>
+<pre><code class="language-text">Scaffold (backgroundColor: surface)
+├── RefreshIndicator
+│   └── CustomScrollView
+│       ├── SliverAppBar (pinned, surface bg, no leading)
+│       │   └── DashboardHeader
+│       │       ├── IconButton (Icons.settings_outlined → AppSettingsPage)
+│       │       ├── Column: Welcome, &lt;displayName&gt; / &lt;sites&gt; Sites • &lt;attention&gt; need attention
+│       │       └── AppUserAvatar (size 40, tap → showProfileBottomSheet)
+│       └── SliverToBoxAdapter
+│           └── ValueListenableBuilder&lt;int&gt;(DashboardDisplayModeService.sectionVisibilityRevision)
+│               └── _buildContentSection()
+│                   ├── DashboardHeadsUpSection? (theo setting)
+│                   ├── TenantTrialBanner? (trial)
+│                   ├── BlocBuilder AttendanceHomeBloc → DashboardClockListWidget? (theo setting)
+│                   ├── BlocBuilder WorkProfileBloc → DashboardComplianceTodaySection? (report-menu-gated)
+│                   ├── BlocBuilder WorkProfileBloc → DashboardQualityIndexSection? (report-menu-gated)
+│                   ├── BlocBuilder WorkProfileBloc → DashboardTaskProgressSection? (report-menu-gated)
+│                   ├── BlocBuilder WorkProfileBloc → DashboardTrainingReportSection? (report-menu-gated)
+│                   ├── DashboardChecklistSection? (theo setting)
+│                   ├── DashboardTaskSection? (theo setting)
+│                   ├── DashboardTrainingSection? (theo setting)
+└── (no FAB) — SuSu bubble overlay (MaterialApp.builder) đảm nhiệm action sheet
+</code></pre>
+<h3 id="bang-component">Bảng component<a class="headerlink" href="#bang-component" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Widget</th>
+<th>File</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GeneralDashboardPage</code></td>
+<td><code>general_dashboard_page.dart</code></td>
+<td>Own <code>AttendanceHomeBloc</code>, provide <code>_GeneralDashboardView</code></td>
+</tr>
+<tr>
+<td><code>_GeneralDashboardView</code></td>
+<td>同上</td>
+<td>State chính: data, refresh, tutorial, timezone</td>
+</tr>
+<tr>
+<td><code>DashboardLoadingView</code></td>
+<td><code>dashboard_loading_view.dart</code></td>
+<td>Full loading trước lần load work đầu tiên</td>
+</tr>
+<tr>
+<td><code>TenantTrialBanner</code></td>
+<td><code>tenant_trial_banner.dart</code></td>
+<td>Banner trial + checkout Lemon</td>
+</tr>
+<tr>
+<td><code>DashboardHeadsUpSection</code></td>
+<td><code>dashboard_heads_up_section.dart</code></td>
+<td>Bảng tin + badge count. Section này cố ý không dùng <code>DashboardFrame</code> để không có nền/card trắng bao quanh danh sách Heads Up.</td>
+</tr>
+<tr>
+<td><code>DashboardHeadsUpListWidget</code></td>
+<td><code>dashboard_heads_up_list_widget.dart</code></td>
+<td>Horizontal <code>PagedListView</code>, cache list</td>
+</tr>
+<tr>
+<td><code>DashboardClockListWidget</code></td>
+<td><code>dashboard_clock_list_widget.dart</code></td>
+<td>List ca làm (cached); chip được chọn có border primary, action bên dưới theo setup đang chọn (<code>canClock</code>, <code>canUpdate</code>, <code>canResolve</code>)</td>
+</tr>
+<tr>
+<td><code>DashboardChecklistSection</code></td>
+<td><code>dashboard_checklist_section.dart</code></td>
+<td>Checklist / empty guide. Truyền <code>leadingIcon</code> (clipboard) + <code>badgeText</code> (<code>{count} hôm nay</code>) cho <code>DashboardFrame</code></td>
+</tr>
+<tr>
+<td><code>DashboardHomeReportFilterSheet</code> / <code>DashboardReportFilterAction</code></td>
+<td><code>dashboard_home_report_filter.dart</code></td>
+<td>Filter dùng chung cho các report ở trang Của tôi. Sheet clone <code>HomeReportFilter</code> hiện tại, cho user chỉnh thời gian / địa điểm / tag / biểu mẫu rồi chỉ apply khi bấm <strong>Áp dụng</strong>. <code>DashboardReportFilterAction</code> hiển thị badge số nhóm filter active. Training Report dùng cùng sheet nhưng ẩn tag + biểu mẫu vì <code>PersonalReportMobileSummaryFilterDTO</code> chỉ map được thời gian + địa điểm.</td>
+</tr>
+<tr>
+<td><code>DashboardComplianceTodaySection</code></td>
+<td><code>dashboard_compliance_today_section.dart</code></td>
+<td><strong>Compliance</strong> (report-menu-gated qua <code>AnalyticsPermissions.hasAnyReportPermission</code>). Fetch song song <code>WorkComplianceReportRepository.summary</code> + <code>.list</code> (<code>/rpc/work/report/compliance-report/*</code>). Header: icon + title "Compliance", <strong>Filter</strong> action (<code>onTapFilter</code>), link <strong>Full report &gt;</strong> (<code>onTapDetail</code>). Body: (1) metric row 4 ô Completed/Lated/InProgress/Missed từ summary counts; (2) <code>_SegmentedProgressBar</code> 4 màu; (3) <strong>COMPLIANCE BY SHIFT - TODAY</strong> — <code>_HierarchicalSitesSection</code> grid 4 cột drill-down; % tile qua <code>compliance_site_rate_utils.dart</code> (leaf từ <code>contents[]</code> counts <code>(completed+late)/total</code>; cha aggregate volume-weighted). Tap leaf → <code>ComplianceSiteDetailSheet</code>; tap schedule → <code>_ScheduleDetailSheet</code>. Ngưỡng màu <code>[0,30)/[30,80)/[80,100]</code>. (4) <strong>EVALUATION</strong> 3 pill. Link <strong>Xem</strong> → <code>SiteComplianceDetailsListPage</code> (heatmap dùng cùng utility %).</td>
+</tr>
+<tr>
+<td><code>DashboardQualityIndexSection</code></td>
+<td><code>dashboard_quality_index_section.dart</code></td>
+<td><strong>Quality Index</strong> (report-menu-gated qua <code>AnalyticsPermissions.hasAnyReportPermission</code>; BE vẫn scope dữ liệu bằng UserController + RoleContentType <code>REPORT_ALL</code> / <code>REPORT_BY_SITE</code>). Fetch 1 endpoint <code>WorkQualityIndexReportRepository.list</code>. Header: icon <code>shield_checkmark_24_filled</code> + title "Quality Index", <strong>Filter</strong> action, link <strong>Full report &gt;</strong>. Body: (1) <code>_OverallSummary</code> — <code>_CircularGauge</code> 96dp (color theo ngưỡng <code>[0,30)/[30,80)/[80,100]</code>) + tiêu đề (tên site đơn / fallback <code>All company average</code>) + <code>_ScoringPill</code> (Partial vs No score theo <code>hasAnyScore</code>) + caption <code>Calculated from {scored} of {total} templates · {excluded} excluded (N/A)</code>. (2) Khi <code>mostFlaggedItems</code> có dữ liệu → <code>_MostFlaggedItemsList</code>: mỗi row = <code>_RankBadge</code> 24dp + nội dung câu hỏi + chip <code>questionnaireName</code> + số site + <code>numberOfTimes</code> ở cột phải. Sort theo <code>rank</code>, fallback theo <code>numberOfTimes</code>, cap 5. Khi API lỗi hoặc BE trả rỗng, section vẫn render card với thông số mặc định 0. Expose <code>refresh()</code>. Stub handler dùng toast <code>general.featureInDevelopment</code>.</td>
+</tr>
+<tr>
+<td><code>QualityIndexDetailPage</code></td>
+<td><code>quality_index_detail_page.dart</code></td>
+<td>Màn chi tiết Quality Index route <code>/supa/dashboard/quality-index</code>, dùng <code>WorkQualityIndexReportRepository.list/export</code> và filter chung <code>DashboardHomeReportFilterSheet</code>. <strong>Filter</strong>: icon + badge trên AppBar, chip active ngang (<code>WorkAppliedFilterChip</code>); tab <strong>Flagged list</strong> / <strong>Quality by site</strong> nhận <code>parentFilter</code> từ parent, không render filter. Mở từ dashboard card truyền filter qua <code>GoRouter.extra</code> → <code>initialFilter</code>. Metric row bind trực tiếp <code>qualityIndexDiff</code>, <code>flagRate</code>, <code>flagRateDiff</code>, <code>repeatIssueCount</code>, <code>repeatIssueDiff</code>; chart bind <code>scoreDistributions</code> từ BE (fallback client-side từ <code>sites</code> nếu rỗng). Tab <strong>Flagged list</strong> render <code>mostFlaggedItems</code> sorted theo <code>rank</code>/<code>numberOfTimes</code>, tối đa 20 dòng theo paging <code>skip=0/take=20</code>; chip <code>questionnaireName</code> luôn một dòng với ellipsis và nằm cùng hàng với số site. Tab <strong>Quality by site</strong> dùng <code>qualityBySites</code>. Header Excel gọi export bằng filter hiện tại, lưu <code>quality-index-report.xlsx</code> và mở file bằng <code>OpenFilex</code>.</td>
+</tr>
+<tr>
+<td><code>DashboardTrainingReportSection</code></td>
+<td><code>dashboard_training_report_section.dart</code></td>
+<td><strong>Training Report</strong> (report-menu-gated qua <code>AnalyticsPermissions.hasAnyReportPermission</code>; ranking vẫn BE-gated). Fetch 3 nhóm song song: (a) <strong>3 progress bar</strong> lấy từ <code>TrainingSiteReportRepository.summary()</code> (<code>/rpc/training/site-report/summary</code>) — cùng nguồn với card <strong>Learning Overview</strong> nên số liệu Course / Path / Quiz khớp trang báo cáo tổng quan học tập; (b) <code>TrainingManagerDashboardRepository.listAppUserRanking</code> (<code>/rpc/training/report/manager-dashboard/list-app-user-ranking</code>) — top 5 learner (<code>take=5</code>, <code>orderDesc</code>); (c) <code>TrainingManagerDashboardRepository.listByCourse</code> (<code>/rpc/training/report/manager-dashboard/list-by-course</code>) — top 5 course (<code>take=5</code>, <code>orderAsc</code> đồng bộ với <code>TopBestCoursesCubit</code>). 3 call try-catch độc lập + <code>_logApiError</code> log <code>status/content-type/dioType/body sample</code>. Header: icon <code>hat_graduation_24_filled</code> + title "Training", <strong>Filter</strong> + <strong>Full report &gt;</strong>. Body 3 phần: (1) 3 progress bar <code>_CompletionBar</code> dùng <code>courseCompletedRate / trainingPathCompletedRate / quizCompletedRate</code> từ <code>PersonalReportMobileSummary</code>; target hardcode <strong>80%</strong> (<code>_defaultTarget</code>). (2) <strong>TOP LEARNERS THIS MONTH</strong> — list 5 <code>_LearnerRow</code> + <code>_CongratsBanner</code>. (3) <strong>TOP PERFORMANCE COURSE</strong> — list 5 <code>_CourseRow</code>. Threshold completion: <code>&lt;50 → error</code>, <code>50–79 → warning</code>, <code>≥80 → success</code>. Always-render — không self-hide. Expose <code>refresh()</code>. Header link <strong>Xem</strong> mở <code>TrainingReportDetailPage.location</code>; filter/send-recognition vẫn toast <code>general.featureInDevelopment</code>.</td>
+</tr>
+<tr>
+<td><code>TrainingReportDetailPage</code></td>
+<td><code>training_report_detail_page.dart</code></td>
+<td>Màn chi tiết Training Report theo mock mobile, route <code>/supa/dashboard/training-report</code> nằm ngoài ShellRoute. Default filter <strong>Năm nay</strong> (<code>DateTypeEnum.custom</code>, từ 01/01 đến 31/12 năm hiện tại). Header có back + title + Excel action; Excel/Course/Group/detail-site dùng toast <code>general.featureInDevelopment</code>. UI gồm chip row (date/site/course/group), 3 metric cards Paths/Courses/Quizzes, và 5 tab: <strong>Sites</strong> (<code>PersonalReportRepository.summaryBySite</code> → card site + 3 progress bar), <strong>Courses</strong> (<code>TrainingManagerDashboardRepository.listByCourse</code>, fallback <code>TrainingHomePageRepository.listCourses</code>), <strong>Quizzes</strong> (<code>TrainingHomePageRepository.listQuizPartition</code>), <strong>Paths</strong> (<code>TrainingHomePageRepository.listTrainingPath</code>), <strong>Rankings</strong> (<code>TrainingManagerDashboardRepository.listAppUserRanking</code>).</td>
+</tr>
+<tr>
+<td><code>WorkplaceCheckListItem</code></td>
+<td><code>widgets/workplace_check_list_item.dart</code></td>
+<td>Item checklist 2 state: <strong>Active</strong> (<code>DOING</code>, hoặc <code>TO_DO</code> đã tới <code>startedAt</code>) → bordered card + <code>_DeadlinePill</code> + CTA Start/Continue. <strong>Compact</strong> (upcoming <code>TO_DO</code> chưa tới giờ / đã hoàn thành) → bullet + tên + giờ HH:mm hoặc <code>EnumBadge</code>. Hỗ trợ 2 callback: <code>onTap</code> (tap toàn dòng → bottom sheet detail) và <code>onCtaTap</code> (tap CTA pill → flow nhanh trong <code>DashboardInspectionListWidget.onContinueDirectly</code>).</td>
+</tr>
+<tr>
+<td><code>DashboardTaskSection</code></td>
+<td><code>dashboard_task_section.dart</code></td>
+<td>Tasks / empty guide</td>
+</tr>
+<tr>
+<td><code>DashboardTrainingSection</code></td>
+<td><code>dashboard_training_section.dart</code></td>
+<td>Training path + course + quiz</td>
+</tr>
+<tr>
+<td><code>showSupaActionSheet</code></td>
+<td><code>supa_work/widgets/dashboard_floating_actions.dart</code></td>
+<td>Helper top-level mở action sheet — gọi từ SuSu bubble (dashboard) hoặc FAB <code>DashboardFloatingActions</code> (work_home, inspection). Tự cấp <code>WorkProfileBloc</code> để filter tile theo permission</td>
+</tr>
+<tr>
+<td>Tile <strong>Trợ lý SuSu</strong></td>
+<td>trong action sheet</td>
+<td>Hiện khi <code>SupaAssistantLauncher.isAvailable</code> = main app đã đăng ký opener (xem <code>lib/main.dart</code>); tap mở <code>AiAssistantBottomSheet</code></td>
+</tr>
+<tr>
+<td><code>DashboardFrame</code></td>
+<td>foundation / local</td>
+<td><strong>Outer card</strong> <code>surfaceContainerLowest</code> + viền <code>outlineVariant @ 0.4</code> + radius <code>AppRadius.value</code> (12). Hỗ trợ <strong>optional</strong>: <code>leadingIcon</code>+<code>leadingIconBackgroundColor</code>/<code>Color</code> (icon 36×36 trước title), <code>badgeText</code>+<code>badgeBackgroundColor</code>/<code>ForegroundColor</code> (pill text thay <code>AppBadge</code> số), chevron tự động cạnh <code>View all</code>. Hầu hết section dashboard dùng frame này; riêng Heads Up bỏ frame để list nằm trực tiếp trên nền page.</td>
+</tr>
+<tr>
+<td><code>DashboardHeader</code></td>
+<td><code>widgets/dashboard_header.dart</code></td>
+<td>Header trên cùng: icon Settings mở <code>AppSettingsPage</code>, <code>Welcome, &lt;name&gt;</code>, <code>Avatar 40</code>. Lấy user từ <code>AuthenticationBloc</code> → <code>UserAuthenticatedWithSelectedTenantState</code>; site count lấy từ <code>user.sites.value.length</code>. Số <strong>cần chú ý</strong> lấy từ Compliance: parent truyền <code>needAttentionCount</code> sau khi <code>DashboardComplianceTodaySection</code> đếm leaf qua <code>isLowComplianceLeaf()</code> (<code>complianceRatePercentFromData &lt; 30</code> từ <code>contents[]</code> counts).</td>
+</tr>
+<tr>
+<td><code>AppUserAvatar</code></td>
+<td><code>supa_foundation</code></td>
+<td>Avatar 40px ở header (tap → <code>showProfileBottomSheet</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bloc-cubit">BLoC / Cubit<a class="headerlink" href="#bloc-cubit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>BLoC</th>
+<th>Tạo ở đâu</th>
+<th>Mục đích</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AttendanceHomeBloc</code></td>
+<td><code>_GeneralDashboardPageState.initState</code></td>
+<td>Load clock today/yesterday; <strong>dispose</strong> trong <code>dispose()</code></td>
+</tr>
+<tr>
+<td><code>WorkProfileBloc</code></td>
+<td><code>_GeneralDashboardViewState</code> (field)</td>
+<td>Permissions / paths; refresh khi resume / route current</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="phan-thuc-hien-operational">Phần "Thực hiện" (Operational)<a class="headerlink" href="#phan-thuc-hien-operational" title="Permanent link">&para;</a></h2>
+<p>Các section dành cho user cá nhân thao tác hằng ngày. Toàn bộ load qua <code>_loadWorkData()</code> / <code>_loadTrainingData()</code> / <code>_loadStats()</code> trong <code>getData()</code>. Mỗi API qua <code>_tryFetch&lt;T&gt;()</code> → fail trả <code>null</code>, giữ state cũ.</p>
+<h3 id="bang-api-filter">Bảng API &amp; filter<a class="headerlink" href="#bang-api-filter" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Section</th>
+<th>Repository · Method</th>
+<th>Endpoint</th>
+<th>Filter (giá trị thực tế)</th>
+<th>Trigger refresh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Bảng tin</strong> (badge count)</td>
+<td><code>MobileHeadsUpRepository.countMine</code></td>
+<td><code>POST /rpc/work/heads-up/count-mine</code></td>
+<td><code>HeadsUpFilter</code><br/>• <code>isRead = false</code><br/>• <code>headsUpStatusId.equal = 2</code> (Published)</td>
+<td><code>_loadStats()</code> qua <code>getData()</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Bảng tin</strong> (list paginated)</td>
+<td><code>MobileHeadsUpRepository.listMine</code></td>
+<td><code>POST /rpc/work/heads-up/list-mine</code></td>
+<td><code>HeadsUpFilter</code><br/>• <code>skip = pageKey</code><br/>• <code>take = _pageSize</code><br/>• <code>isRead = false</code><br/>• <code>headsUpStatusId.equal = 2</code></td>
+<td><code>DashboardHeadsUpListWidget._fetchPage</code> (gọi từ paging controller + sau khi countMine &gt; 0)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Ca làm hôm nay</strong></td>
+<td><code>MobileClockRepository</code> (qua <code>AttendanceHomeBloc</code>)</td>
+<td><code>POST /rpc/work/clock/list-day</code> (today + previous day)</td>
+<td>Bloc tự quản lý — không filter từ view</td>
+<td><code>AttendanceHomeStarted</code> (initState) · <code>AttendanceHomeReloadRequested</code> (route current + pull-to-refresh)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Checklist hôm nay</strong></td>
+<td><code>MobileHomeRepository.listTodayInspectionNew</code></td>
+<td><code>POST /rpc/work/home/list-inspection-today</code></td>
+<td><code>ScheduleTimelineFilter</code><br/>• <code>take = 20</code> (preview)</td>
+<td><code>_loadWorkData()</code> qua <code>getData()</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Công việc của tôi</strong> (list)</td>
+<td><code>MobileTaskAssignmentRepository.list</code></td>
+<td><code>POST /rpc/work/task-assignment/list</code></td>
+<td><code>TaskAssignmentFilter</code><br/>• <code>take = 20</code><br/>• <code>viewCode = 'TASK_MASTER_DEFAULT'</code><br/>• <code>assigneeOrSupporterId = &lt;currentUserId&gt;</code><br/>• <code>taskAssignmentStatusId.inList = [NEW.id, DOING.id]</code></td>
+<td><code>_loadWorkData()</code> qua <code>getData()</code> · <code>_refillTasks()</code> khi list sparse (&lt;15)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Công việc của tôi</strong> (count)</td>
+<td><code>MobileTaskAssignmentRepository.count</code></td>
+<td><code>POST /rpc/work/task-assignment/count</code></td>
+<td>Cùng <code>TaskAssignmentFilter</code> như trên (trừ <code>take</code>)</td>
+<td><code>_loadWorkData()</code> · <code>_refillTasks()</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Đào tạo — Quiz</strong> (list)</td>
+<td><code>TrainingHomePageRepository.listQuizPartition</code></td>
+<td><code>POST /rpc/training/homepage/list-quiz-partition</code></td>
+<td><code>QuizPartitionFilter</code><br/>• <code>take = 20</code></td>
+<td><code>_loadTrainingData()</code> qua <code>getData()</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Đào tạo — Quiz</strong> (count)</td>
+<td><code>TrainingHomePageRepository.countQuizPartition</code></td>
+<td><code>POST /rpc/training/homepage/count-quiz-partition</code></td>
+<td><code>QuizPartitionFilter</code> rỗng</td>
+<td><code>_loadTrainingData()</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Đào tạo — Khoá học</strong> (list)</td>
+<td><code>TrainingHomePageRepository.listCourses</code></td>
+<td><code>POST /rpc/training/homepage/list-courses</code></td>
+<td><code>CourseFilter</code><br/>• <code>take = 20</code></td>
+<td><code>_loadTrainingData()</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Đào tạo — Khoá học</strong> (count)</td>
+<td><code>TrainingHomePageRepository.countCourses</code></td>
+<td><code>POST /rpc/training/homepage/count-courses</code></td>
+<td><code>CourseFilter</code> rỗng</td>
+<td><code>_loadTrainingData()</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Đào tạo — Lộ trình</strong></td>
+<td><code>TrainingHomePageRepository.listTrainingPath</code></td>
+<td><code>POST /rpc/training/homepage/list-training-path</code></td>
+<td><code>TrainingPathFilter</code><br/>• <code>take = 20</code></td>
+<td><code>_loadTrainingData()</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>HomeStats</strong> (số dùng cho header + checklist badge)</td>
+<td><code>MobileHomeRepository.get</code></td>
+<td><code>POST /rpc/work/home/get</code></td>
+<td><code>{}</code> (rỗng)</td>
+<td><code>_loadStats()</code></td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Tenant profile</strong> (trial banner)</td>
+<td><code>MobileTenantProfileRepository.get</code> (<code>getIt</code>)</td>
+<td><code>POST /rpc/work/tenant-profile/get</code> (foundation)</td>
+<td><code>{}</code></td>
+<td><code>_loadStats()</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="visibility-cua-section-thuc-hien">Visibility của section (Thực hiện)<a class="headerlink" href="#visibility-cua-section-thuc-hien" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Hiển thị khi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trial banner</strong></td>
+<td><code>_tenantProfile.trialEndAt</code> có, <code>remainingDays &gt; 0</code>, và user là admin (<code>persistentStorage.appUser?.isAdmin.value == true</code>)</td>
+</tr>
+<tr>
+<td><strong>Bảng tin</strong></td>
+<td><code>!_headsUpCountResolved || _headsUpCount &gt; 0</code> (skeleton khi đang load, ẩn khi resolved + count = 0)</td>
+</tr>
+<tr>
+<td><strong>Ca làm</strong></td>
+<td><code>AttendanceHomeBloc</code> trả clockList <strong>không rỗng</strong>; loading có skeleton riêng</td>
+</tr>
+<tr>
+<td><strong>Checklist</strong></td>
+<td>Luôn render; rỗng → guide</td>
+</tr>
+<tr>
+<td><strong>Công việc</strong></td>
+<td>Luôn render; rỗng → guide</td>
+</tr>
+<tr>
+<td><strong>Đào tạo</strong></td>
+<td>Luôn render; mỗi sub-block (path / course / quiz) rỗng → guide riêng</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>User có thể bật/tắt từng section trong <code>AppSettingsPage</code>; các option báo cáo chỉ hiện khi user có quyền menu Báo cáo.</p>
+</blockquote>
+<h3 id="state-local-lien-quan-phan-thuc-hien">State local liên quan (phần Thực hiện)<a class="headerlink" href="#state-local-lien-quan-phan-thuc-hien" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Biến</th>
+<th>Ý nghĩa</th>
+<th>Set ở</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>checkList</code>, <code>checkListCount</code></td>
+<td>Inspection hôm nay</td>
+<td><code>_loadWorkData</code></td>
+</tr>
+<tr>
+<td><code>taskList</code>, <code>taskListCount</code></td>
+<td>Task NEW/DOING của user</td>
+<td><code>_loadWorkData</code> / <code>_refillTasks</code></td>
+</tr>
+<tr>
+<td><code>quizList</code>, <code>quizListCount</code></td>
+<td>Quiz preview</td>
+<td><code>_loadTrainingData</code></td>
+</tr>
+<tr>
+<td><code>courseSectionList</code>, <code>courseSectionListCount</code></td>
+<td>Course preview</td>
+<td><code>_loadTrainingData</code></td>
+</tr>
+<tr>
+<td><code>trainingPathList</code>, <code>trainingPathListCount</code></td>
+<td>Path preview</td>
+<td><code>_loadTrainingData</code></td>
+</tr>
+<tr>
+<td><code>_homeStats</code>, <code>_tenantProfile</code>, <code>_headsUpCount</code></td>
+<td>Stats / trial / badge</td>
+<td><code>_loadStats</code></td>
+</tr>
+<tr>
+<td><code>_*Resolved</code> (6 cờ)</td>
+<td>Mỗi section đã resolve ít nhất 1 lần → skeleton off</td>
+<td><code>_loadWorkData</code> / <code>_loadTrainingData</code> / <code>_loadStats</code></td>
+</tr>
+<tr>
+<td><code>_getDataFuture</code></td>
+<td>Dedupe concurrent <code>getData()</code></td>
+<td><code>getData()</code></td>
+</tr>
+<tr>
+<td><code>_initialDataLoadStarted</code></td>
+<td>Chỉ gọi <code>getData()</code> sau khi auth hydrate</td>
+<td><code>_tryStartInitialDataLoad</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="phan-bao-cao-report">Phần "Báo cáo" (Report)<a class="headerlink" href="#phan-bao-cao-report" title="Permanent link">&para;</a></h2>
+<p>4 section báo cáo, mỗi section là 1 <code>StatefulWidget</code> riêng, có state local + repo riêng, fetch độc lập với <code>_loadWorkData/_loadTrainingData/_loadStats</code>. Parent dispatch refresh qua <strong>GlobalKey</strong> trong <code>_doGetData()</code> (<code>_complianceSectionKey.currentState?.refresh()</code> ...).</p>
+<h3 id="bang-api-filter_1">Bảng API &amp; filter<a class="headerlink" href="#bang-api-filter_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Section</th>
+<th>Repository · Method</th>
+<th>Endpoint</th>
+<th>Filter (giá trị thực tế)</th>
+<th>Gating quyền</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Compliance Today</strong> (summary)</td>
+<td><code>WorkComplianceReportRepository.summary</code></td>
+<td><code>POST /rpc/work/report/compliance-report/summary</code></td>
+<td><code>HomeReportFilter()</code> lưu trong <code>DashboardComplianceTodaySectionState._filter</code> (mặc định <code>dateTypeId.equal = DateTypeEnum.today.id</code>, <code>dateLabel = "Hôm nay"</code>). User mở <code>DashboardHomeReportFilterSheet</code> (header "Lọc") apply tường minh → state reset + re-fetch. Filter giờ kèm <code>siteId/tagId/questionnaireId/date</code> (tag + questionnaire BE chưa support, sẽ ignore). <strong>Response</strong>: <code>{countTotal, countCompleted, countLate, countDoing, countIncompleted}</code> — bind thẳng vào 4 metric ô (Completed/Lated/InProgress/Missed). Field legacy <code>complianceRate / numberOfEvaluated / evaluationRate / numberOfFlagged</code> còn trong model để EVALUATION section không crash nếu BE trả thêm.</td>
+<td><strong>FE report-menu-gate</strong>: <code>AnalyticsPermissions.hasAnyReportPermission(paths)</code> qua <code>BlocBuilder&lt;WorkProfileBloc&gt;</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Compliance Today</strong> (sites list)</td>
+<td><code>WorkComplianceReportRepository.list</code></td>
+<td><code>POST /rpc/work/report/compliance-report/list</code></td>
+<td>Cùng <code>_filter</code> của section (1). Leaf <code>data.contents[]</code> chứa <code>countTotal/countCompleted/countLate/...</code> — FE dùng để tính % tile (xem mục <a href="#compliance-rate--quy-tắc-hiển-thị-">Compliance rate</a>). <strong>Không</strong> có <code>numberOfCompleted</code>/<code>numberOfSchedule</code> (schema <code>/home-report/</code> cũ).</td>
+<td>Cùng (1)</td>
+</tr>
+<tr>
+<td>2a</td>
+<td><strong>Compliance leaf detail</strong> (bottom sheet summary, <strong>gọi khi tap leaf</strong> trong COMPLIANCE BY SHIFT)</td>
+<td><code>WorkSiteReportRepository.summary</code></td>
+<td><code>POST /rpc/work/report/site-report/summary</code></td>
+<td><code>AnalyticSiteReportFilter(siteId.inList=[leaf.id], dateTypeId.equal=DateTypeEnum.today.id)</code> — response <code>AnalyticSiteReportSummary{countTotal, countCompleted, countDoing, countLate, countIncompleted}</code> bind vào 4 metric cell của bottom sheet</td>
+<td>Bottom sheet chỉ mở từ leaf tile → đã pass FE report-menu-gate ở level dashboard</td>
+</tr>
+<tr>
+<td>2b</td>
+<td><strong>Compliance leaf detail</strong> (bottom sheet schedules, song song với 2a)</td>
+<td><code>WorkSiteReportRepository.list</code></td>
+<td><code>POST /rpc/work/report/site-report/list</code></td>
+<td>Cùng filter 2a — pick site có <code>id == leaf.id</code> (fallback site đầu có <code>contents.isNotEmpty</code>), lấy <code>data.value.contents: List&lt;AnalyticSiteReportContent&gt;</code> cho section <strong>COMPLIANCE BY SCHEDULE</strong> (grid 2 cột)</td>
+<td>Cùng (2a)</td>
+</tr>
+<tr>
+<td>2c</td>
+<td><strong>Compliance leaf detail</strong> (EVALUATION card, song song với 2a/2b)</td>
+<td><code>WorkHomeReportRepository.complianceSummary</code></td>
+<td><code>POST /rpc/work/report/home-report/compliance/summary</code></td>
+<td><code>HomeReportFilter(siteId.inList = filter.siteId.inList)</code> — dùng riêng để có 3 field legacy <code>numberOfEvaluated / numberOfFlagged / evaluationRate</code> cho EVALUATION (site-report/summary không trả). BE không hỗ trợ filter siteId → fallback 0.</td>
+<td>Cùng (2a)</td>
+</tr>
+<tr>
+<td>2d</td>
+<td><strong>Compliance schedule detail</strong> (bottom sheet khi tap 1 schedule trong COMPLIANCE BY SCHEDULE)</td>
+<td><code>WorkSiteReportRepository.detail</code></td>
+<td><code>POST /rpc/work/report/site-report/detail</code></td>
+<td><code>SiteReportDetailFilter(id = content.scheduleId.value, dateTypeId = leafFilter.dateTypeId, date = leafFilter.date)</code> — response <code>SiteReportDetail</code> dùng cho gauge/metrics, performers, <code>lastInspected</code> (client-side từ completed <code>detailByDays</code>) và <strong>COMPLIANCE BY DAY</strong> (rate mỗi ngày = completed/total trong <code>detailLines[*].detailByDays</code>)</td>
+<td>Cùng (2a); mở dạng stack bottom sheet để back về sheet site trước</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Task Progress</strong> (summary)</td>
+<td><code>WorkHomeReportRepository.taskProgressSummary</code></td>
+<td><code>POST /rpc/work/report/home-report/task-overal-progress/summary</code></td>
+<td><code>HomeReportFilter()</code> lưu trong <code>DashboardTaskProgressSectionState._filter</code>, mặc định <code>Hôm nay</code>; user mở <code>DashboardHomeReportFilterSheet</code> rồi apply → re-fetch.</td>
+<td>Cùng report-menu-gate (1); BE thêm manager-logic phân biệt manager vs có report-scope</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Task Progress</strong> (most overdue users)</td>
+<td><code>WorkHomeReportRepository.taskProgressList</code></td>
+<td><code>POST /rpc/work/report/home-report/task-overal-progress/list</code></td>
+<td>Cùng <code>_filter</code> của section (3).</td>
+<td>Cùng (3)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Quality Index</strong></td>
+<td><code>WorkQualityIndexReportRepository.list</code></td>
+<td><code>POST /rpc/work/report/quality-index-report/list</code></td>
+<td><code>HomeReportFilter()</code> lưu trong <code>DashboardQualityIndexSectionState._filter</code>, mặc định <code>Hôm nay</code>; user mở <code>DashboardHomeReportFilterSheet</code> rồi apply → re-fetch. Response mới gồm <code>qualityIndex</code>, <code>numberOfInspection</code>, <code>numberOfQuestionnare*</code>, <code>sites</code>, <code>mostFlaggedItems[]</code>.</td>
+<td>Cùng report-menu-gate (1); BE vẫn scope dữ liệu bằng UserController + RoleContentType <code>REPORT_ALL</code> / <code>REPORT_BY_SITE</code>; nếu API lỗi hoặc response rỗng thì render card với số 0</td>
+</tr>
+<tr>
+<td>5a</td>
+<td><strong>Quality Index Detail — Excel export</strong></td>
+<td><code>WorkQualityIndexReportRepository.export</code></td>
+<td><code>POST /rpc/work/report/quality-index-report/export</code></td>
+<td>Dùng đúng <code>HomeReportFilter</code> hiện tại của màn detail (<code>date/siteId/tagId/questionnaireId/dateTypeId</code>, <code>skip=0</code>, <code>take=20</code>). Response là binary <code>.xlsx</code>, không parse JSON; FE lưu file temp <code>quality-index-report.xlsx</code> rồi mở bằng <code>OpenFilex</code>. BE export toàn bộ flagged list, không phụ thuộc paging.</td>
+<td>Route chỉ mở từ report-menu-gated section; BE vẫn enforce quyền</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Training Report</strong> (top learners)</td>
+<td><code>TrainingManagerDashboardRepository.listAppUserRanking</code></td>
+<td><code>POST /rpc/training/report/manager-dashboard/list-app-user-ranking</code></td>
+<td><code>PersonalReportMobileSummaryFilterDTO</code> được build từ <code>HomeReportFilter</code> của <code>DashboardTrainingReportSectionState._filter</code>: map <code>dateTypeId/date/siteId</code>, <code>take = 5</code>, <code>orderType = DataFilter.orderDesc</code>. Tag/biểu mẫu không map vì DTO training không có field tương ứng.</td>
+<td>Cùng report-menu-gate (1); endpoint ranking vẫn BE-gated</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Training Report</strong> (top courses)</td>
+<td><code>TrainingManagerDashboardRepository.listByCourse</code></td>
+<td><code>POST /rpc/training/report/manager-dashboard/list-by-course</code></td>
+<td>Cùng filter trên,<br/>• <code>take = 5</code><br/>• <code>orderType = DataFilter.orderAsc</code> (theo <code>TopBestCoursesCubit</code> pattern)</td>
+<td>Cùng (6)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Training Report — 3 progress bar</strong> (Courses / Paths / Quizzes completion)</td>
+<td><code>TrainingSiteReportRepository.summary</code></td>
+<td><code>POST /rpc/training/site-report/summary</code></td>
+<td>Request <code>{}</code> giống <code>LearningOverviewCard</code>; response <code>PersonalReportMobileSummary</code> dùng <code>courseCompletedRate</code>, <code>trainingPathCompletedRate</code>, <code>quizCompletedRate</code></td>
+<td>Hiển thị theo gating của Training Report (chung)</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Training Report Detail</strong> (summary + sites)</td>
+<td><code>PersonalReportRepository.summary</code>, <code>summaryBySite</code></td>
+<td><code>POST /rpc/training/personal-report/mobile/summary</code>, <code>/mobile/summary-by-site</code></td>
+<td><code>PersonalReportMobileSummaryFilterDTO</code> build từ filter của detail page: default <strong>Năm nay</strong>, map <code>dateTypeId/date/siteId</code>, <code>take=20</code>.</td>
+<td>Route chỉ mở từ report-menu-gated section; BE vẫn enforce quyền</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Training Report Detail</strong> (courses/rankings/lists)</td>
+<td><code>TrainingManagerDashboardRepository</code>, <code>TrainingHomePageRepository</code></td>
+<td><code>/list-by-course</code>, <code>/list-app-user-ranking</code>, <code>/list-course</code>, <code>/list-training-path</code>, <code>/list-quiz-partition</code></td>
+<td>Course/ranking dùng <code>PersonalReportMobileSummaryFilterDTO</code>; home lists dùng deadline range từ filter để render tab Courses/Paths/Quizzes. Course/Group chip chưa có DTO filter tương ứng trong repo nên hiện toast đang phát triển.</td>
+<td>Cùng (9)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Filter báo cáo dashboard</strong> dùng chung <code>DashboardHomeReportFilterSheet</code>: mặc định <code>dateTypeId.equal = DateTypeEnum.today.id</code>, label <code>Hôm nay</code>, và apply tường minh sau khi bấm <strong>Áp dụng</strong>. Compliance / Task Progress / Quality Index gửi <code>HomeReportFilter</code> với <code>date/siteId/tagId/questionnaireId</code> (BE có thể ignore field chưa hỗ trợ). Training Report dùng cùng draft filter nhưng chỉ map <code>dateTypeId/date/siteId</code> sang <code>PersonalReportMobileSummaryFilterDTO</code> cho 2 ranking API; 3 progress bar của Training dùng <code>TrainingSiteReportRepository.summary()</code> giống Learning Overview nên hiện không chịu tác động bởi filter này.</p>
+</blockquote>
+<h3 id="visibility-cua-section-bao-cao">Visibility của section (Báo cáo)<a class="headerlink" href="#visibility-cua-section-bao-cao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Hiển thị khi</th>
+<th>Self-hide logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compliance Today</strong></td>
+<td>User có bất kỳ quyền report nào (<code>hasAnyReportPermission</code>) — cùng điều kiện hiện menu Báo cáo</td>
+<td><code>summary == null</code> → hide; <code>countTotal == 0</code> → vẫn show shell 0/0/0/0</td>
+</tr>
+<tr>
+<td><strong>Quality Index</strong></td>
+<td>User có bất kỳ quyền report nào (<code>hasAnyReportPermission</code>)</td>
+<td>API lỗi / <code>numberOfInspection == 0 &amp;&amp; sites.isEmpty</code> → vẫn show card 0</td>
+</tr>
+<tr>
+<td><strong>Task Progress</strong></td>
+<td>User có bất kỳ quyền report nào (<code>hasAnyReportPermission</code>)</td>
+<td>API lỗi / tổng task = 0 → vẫn show card 0</td>
+</tr>
+<tr>
+<td><strong>Training Report</strong></td>
+<td>User có bất kỳ quyền report nào (<code>hasAnyReportPermission</code>)</td>
+<td>Always render — 3 bar về 0% khi rỗng; sub-section "Top learners" / "Top courses" tự ẩn nếu list rỗng</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compliance-rate-quy-tac-hien-thi">Compliance rate — quy tắc hiển thị %<a class="headerlink" href="#compliance-rate-quy-tac-hien-thi" title="Permanent link">&para;</a></h3>
+<p>Utility chung: <code>packages/supa_work/lib/utils/compliance_site_rate_utils.dart</code> — dùng bởi <code>DashboardComplianceTodaySection</code> (<code>_HierarchicalSitesSection</code>) và <code>SiteComplianceDetailsListPage</code> (tab Heatmap).</p>
+<table>
+<thead>
+<tr>
+<th>Nguồn dữ liệu</th>
+<th>Độ ưu tiên</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contents[].countCompleted</code> + <code>countLate</code> / <code>countTotal</code></td>
+<td><strong>Cao nhất</strong></td>
+<td>Leaf tile + aggregate parent volume-weighted</td>
+</tr>
+<tr>
+<td>Summary <code>countCompleted</code> / <code>countTotal</code> (+ <code>countLate</code> nếu cần compliance)</td>
+<td><strong>Cao</strong></td>
+<td>Metric row header dashboard (không dùng cho tile grid)</td>
+</tr>
+<tr>
+<td><code>data.complianceRate</code> (site/region)</td>
+<td><strong>Thấp</strong></td>
+<td>Chỉ fallback khi leaf không có <code>contents</code>; BE có hack <code>completedRate 0 → 1</code> (floor tối thiểu 1%)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Công thức compliance %:</strong> <code>(countCompleted + countLate) / countTotal × 100</code></p>
+<p><strong>Scale BE:</strong> <code>0–100</code> (<code>1.0</code> = <strong>1%</strong>, không nhân 100 thêm khi hiển thị).</p>
+<p><strong>Site cha (region):</strong> FE aggregate count từ toàn bộ leaf <code>contents[]</code> trong subtree — <strong>không</strong> dùng <code>data.complianceRate</code> cha (BE tính average rate unweighted + vẫn chịu hack).</p>
+<p><strong>Cần chú ý (header):</strong> <code>isLowComplianceLeaf()</code> — leaf có % &lt; 30 tính từ counts thật.</p>
+<p><strong>Anti-pattern:</strong> Không parse <code>numberOfCompleted</code> / <code>numberOfSchedule</code> cho endpoint <code>/compliance-report/list</code> — field thuộc schema <code>/home-report/</code> cũ (<code>HomeReport_SiteDTO</code>).</p>
+<h3 id="state-local-lien-quan-phan-bao-cao">State local liên quan (phần Báo cáo)<a class="headerlink" href="#state-local-lien-quan-phan-bao-cao" title="Permanent link">&para;</a></h3>
+<p>Mỗi section báo cáo tự quản lý:
+- <code>_isLoading</code> (bool) — skeleton flag
+- <code>_summary</code> / <code>_sites</code> / <code>_users</code> / <code>_topLearners</code> / <code>_topCourses</code> — data từng API
+- Method <code>refresh()</code> public — parent dashboard gọi qua GlobalKey</p>
+<p>Parent <strong>không</strong> lưu data báo cáo trong <code>_GeneralDashboardViewState</code> — chỉ giữ 4 GlobalKey để dispatch refresh.</p>
+<hr />
+<h2 id="logic-chinh">Logic chính<a class="headerlink" href="#logic-chinh" title="Permanent link">&para;</a></h2>
+<h3 id="lifecycle-cold-start">Lifecycle (cold start)<a class="headerlink" href="#lifecycle-cold-start" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">sequenceDiagram
+  participant Boot as AppLoader.bootstrap
+  participant Auth as AuthenticationBloc
+  participant View as _GeneralDashboardView
+  participant API as Repositories
+
+  Boot-&gt;&gt;Auth: handleInitialize (cold start)
+  Auth-&gt;&gt;Auth: refreshToken + getProfileInfo
+  Auth-&gt;&gt;View: authenticated (router → dashboard)
+  View-&gt;&gt;View: _tryStartInitialDataLoad when !isLoading
+  View-&gt;&gt;API: getData() deduped (Thực hiện) + refresh GlobalKey (Báo cáo)
+  View-&gt;&gt;View: WorkProfileBloc FetchWorkProfile (paths/permissions)
+</code></pre>
+<blockquote>
+<p>Chi tiết các trigger khác (<code>didChangeDependencies</code>, pull-to-refresh, app resumed...) xem bảng <a href="#khi-nào-getdata-được-gọi">§ Khi nào <code>getData()</code> được gọi</a>.</p>
+</blockquote>
+<h3 id="xu-ly-loi-api">Xử lý lỗi API<a class="headerlink" href="#xu-ly-loi-api" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Phần Thực hiện</strong>: dùng <code>_tryFetch&lt;T&gt;()</code> → fail trả <code>null</code>, <strong>không</strong> ghi đè state. Lý do: phân biệt rõ "API fail" vs "không có data" — fail thì giữ stale, empty thì hiện guide.</li>
+<li><strong>Phần Báo cáo</strong>: mỗi section có <code>try-catch</code> riêng cho từng API; 1 API hỏng không phá API kia trong cùng section. Training Report có thêm <code>_logApiError</code> log chi tiết <code>status / content-type / dioType / body</code> để dễ debug.</li>
+</ul>
+<h3 id="skeleton">Skeleton<a class="headerlink" href="#skeleton" title="Permanent link">&para;</a></h3>
+<p>Widget: <code>DashboardSectionSkeleton</code>. <strong>Mỗi section quản lý skeleton riêng</strong> (không có loading che cả trang).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Skeleton khi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bảng tin</td>
+<td><code>!_headsUpCountResolved</code></td>
+</tr>
+<tr>
+<td>Ca làm</td>
+<td><code>AttendanceHomeInitial</code> hoặc <code>Loading</code> chưa có <code>previousClock</code></td>
+</tr>
+<tr>
+<td>Checklist</td>
+<td><code>!_checklistResolved</code></td>
+</tr>
+<tr>
+<td>Công việc</td>
+<td><code>!_tasksResolved</code></td>
+</tr>
+<tr>
+<td>Lộ trình / Khoá / Quiz</td>
+<td><code>!_trainingPathsResolved</code> / <code>!_coursesResolved</code> / <code>!_quizzesResolved</code></td>
+</tr>
+<tr>
+<td>Compliance / Task Progress / Quality Index / Training Report</td>
+<td><code>_isLoading</code> của state riêng từng section</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quan trọng:</strong> <code>*_resolved</code> chỉ chuyển <code>false → true</code> lần đầu, <strong>không reset</strong> khi pull-to-refresh → không nháy skeleton ở các lần refresh sau, giữ data cũ đến khi API mới về.</p>
+<hr />
+<h2 id="luong-ac-biet">Luồng đặc biệt<a class="headerlink" href="#luong-ac-biet" title="Permanent link">&para;</a></h2>
+<h3 id="0-tuy-chinh-section">0. Tuỳ chỉnh section<a class="headerlink" href="#0-tuy-chinh-section" title="Permanent link">&para;</a></h3>
+<p>User chọn ở <code>AppSettingsPage</code> nhóm <strong>Phần hiển thị trên Của tôi</strong> để bật/tắt từng section và giữ icon kéo để đổi thứ tự:</p>
+<table>
+<thead>
+<tr>
+<th>Nhóm</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Thực hiện</strong></td>
+<td>Heads Up, Chấm công, Checklist, Công việc, Lộ trình, Khoá học, Quiz</td>
+</tr>
+<tr>
+<td><strong>Báo cáo</strong></td>
+<td>Compliance, Quality Index, Task Progress, Training Report</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-mermaid">flowchart LR
+  A[AppSettingsPage switch toggle / drag reorder] --&gt; B[DashboardDisplayModeService setSectionVisible / setSectionOrder]
+  B --&gt; C[persistentStorage hidden_sections / section_order]
+  B --&gt; D[sectionVisibilityRevision updated]
+  D --&gt; E[ValueListenableBuilder ở _buildContentSection rebuild]
+  E --&gt; F[Section tương ứng bị ẩn / hiện / đổi vị trí]
+</code></pre>
+<ul>
+<li><strong>Service</strong>: <code>packages/supa_foundation/lib/services/dashboard_display_mode_service.dart</code> (pattern y hệt <code>AiAssistantVisibilityService</code>).</li>
+<li><strong>Persist</strong>: key <code>general_dashboard_hidden_sections</code> qua <code>persistentStorage</code>, lưu danh sách section đang ẩn.</li>
+<li><strong>Order persist</strong>: key <code>general_dashboard_section_order</code> qua <code>persistentStorage</code>, lưu thứ tự <code>DashboardSectionPreference</code>.</li>
+<li><strong>Notifier</strong>: static <code>DashboardDisplayModeService.sectionVisibilityRevision</code> (ValueNotifier<int>).</li>
+<li><strong>Subscribe</strong>: <code>_buildContentSection()</code> wrap bằng <code>ValueListenableBuilder&lt;int&gt;</code> → toggle xong dashboard rebuild ngay (không cần restart app, không cần pull-to-refresh).</li>
+<li><strong>Quyền báo cáo</strong>: 4 tuỳ chọn báo cáo trong Settings chỉ hiện khi user có quyền menu Báo cáo (<code>AnalyticsPermissions.hasAnyReportPermission(paths)</code>). Dù user bật trong setting, từng report trên dashboard vẫn bị ẩn nếu thiếu quyền report tương ứng.</li>
+<li><code>FetchWorkProfileEvent</code> luôn gọi API mới để tránh dùng <code>_cachedPaths</code> cũ khi quyền báo cáo vừa bị thay đổi.</li>
+</ul>
+<h3 id="1-pull-to-refresh-dedupe">1. Pull-to-refresh (dedupe)<a class="headerlink" href="#1-pull-to-refresh-dedupe" title="Permanent link">&para;</a></h3>
+<p><code>getData()</code> được dedupe qua <code>_getDataFuture</code> — xem flowchart ở <a href="#bên-trong-getdata-làm-gì">§ Bên trong <code>getData()</code> làm gì</a> và danh sách trigger ở <a href="#khi-nào-getdata-được-gọi">§ Khi nào <code>getData()</code> được gọi</a>.</p>
+<p>Riêng <code>RefreshIndicator.onRefresh</code> còn dispatch thêm <code>AttendanceHomeReloadRequested</code> để Ca làm được reload qua bloc (<code>AttendanceHomeBloc</code> không nằm trong <code>getData()</code>).</p>
+<h3 id="2-chuyen-tab-navbar-shellroute-go">2. Chuyển tab navbar (ShellRoute + go)<a class="headerlink" href="#2-chuyen-tab-navbar-shellroute-go" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">flowchart LR
+  A[Tab Của tôi] --&gt; B[GeneralDashboardPage mounted]
+  B --&gt; C[User sang tab khác]
+  C --&gt; D[Widget disposed]
+  D --&gt; E[User quay lại Của tôi]
+  E --&gt; F[Widget mới initState]
+  F --&gt; G[getData + AttendanceHomeStarted]
+  G --&gt; H[Loading rồi hiện data mới từ API]
+</code></pre>
+<p>Không restore data cũ từ singleton — user thấy loading/empty ngắn rồi data mới.</p>
+<h3 id="3-cold-start-kill-app-tu-ang-nhap">3. Cold start — kill app + tự đăng nhập<a class="headerlink" href="#3-cold-start-kill-app-tu-ang-nhap" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">flowchart TD
+  A[Kill app] --&gt; B[Mở lại app]
+  B --&gt; C[handleInitialize]
+  C --&gt; D{Hive có session?}
+  D --&gt;|Không| E[Màn login]
+  D --&gt;|Có| F[refreshToken + getProfileInfo]
+  F --&gt;|OK| G[saveAuthentication + vào dashboard]
+  F --&gt;|Lỗi| E
+  G --&gt; H[_tryStartInitialDataLoad]
+  H --&gt; I[getData với cookie mới]
+</code></pre>
+<p>RAM cache <strong>mất</strong> sau kill; không dùng data in-memory cũ. Hive cookies + <code>refreshToken</code> tạo session hợp lệ trước API dashboard.</p>
+<h3 id="4-bang-tin-count-vs-list">4. Bảng tin — count vs list<a class="headerlink" href="#4-bang-tin-count-vs-list" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Header badge:</strong> <code>_headsUpCount</code> từ <code>countMine</code>.</li>
+<li><strong>List ngang:</strong> <code>DashboardHeadsUpListWidget</code> → <code>listMine</code> + filter creator (ẩn bài tự tạo không target self).</li>
+</ul>
+<p><strong>Lỗi đã xử lý:</strong> list API fail → <code>PagingController.error</code> → default error widget <strong>overflow</strong> trong khung 188px (“Something went wrong”).</p>
+<p><strong>Hiện tại:</strong></p>
+<ul>
+<li><code>_lastSuccessfulItems</code> chỉ trong memory của widget (không persist qua tab).</li>
+<li>Fail nhưng đã có data trong cùng phiên → giữ list, clear error.</li>
+<li>Chưa có data → compact error + nút Retry.</li>
+</ul>
+<p>Chi tiết quy tắc Heads Up dashboard: <a href="../../../packages/supa_work/lib/pages/heads_up/DOCS.md"><code>packages/supa_work/lib/pages/heads_up/DOCS.md</code></a>.</p>
+<h3 id="5-ca-lam-attendance-reload">5. Ca làm — attendance reload<a class="headerlink" href="#5-ca-lam-attendance-reload" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dashboard dùng cùng dữ liệu <code>TimeClockSetup</code> với trang Chấm công. Chip ca làm vẫn hiển thị theo danh sách setup; mặc định chọn setup có <code>expectedClockAt</code> mới nhất trong danh sách, user tap chip nào thì setup đó được chọn và nhận border primary.</li>
+<li>Action bên dưới chạy theo setup đang chọn: <code>canClock</code> hiển thị nút chấm công nhanh; nếu không clock được nhưng có <code>canUpdate</code> hoặc <code>canResolve</code> thì dùng <code>AttendanceClockedButton</code> để mở flow cập nhật draft hoặc màn đính chính giống trang Chấm công; các trạng thái còn lại không hiển thị fallback <code>Clock out</code>.</li>
+</ul>
+<pre><code class="language-mermaid">stateDiagram-v2
+  [*] --&gt; Loaded: AttendanceHomeLoaded
+  Loaded --&gt; Loading: ReloadRequested
+  Loading --&gt; Loaded: success
+  Loading --&gt; Failure: error
+  note right of Loading: UI dùng previousClock từ bloc
+</code></pre>
+<h3 id="6-tutorial-lan-au">6. Tutorial lần đầu<a class="headerlink" href="#6-tutorial-lan-au" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Key: <code>has_seen_dashboard_tutorial</code> trong <code>persistentStorage</code>.</li>
+<li>Delay + scroll alignment trước <code>SupaTutorialHelper.show</code>.</li>
+<li>Steps: trial, checklist, task, training (tùy widget visible). Step FAB cũ đã bỏ cùng FAB; nếu sau này thêm tour cho bubble SuSu, đặt step gắn vào widget bubble (key tương ứng) thay vì lại nhúng key vào dashboard.</li>
+<li><code>onFinish</code> / <code>onSkip</code> → <code>_checkTimezoneRequirement</code>.</li>
+</ul>
+<h3 id="7-timezone-mismatch-dialog">7. Timezone mismatch dialog<a class="headerlink" href="#7-timezone-mismatch-dialog" title="Permanent link">&para;</a></h3>
+<p>Sau tutorial (hoặc nếu đã xem): so sánh <code>tenantProfile.groupTimeZone</code> với device → <code>ConfirmationDialog</code> → optional <code>updateProfile</code> → <code>getData()</code>.</p>
+<h3 id="8-checklist-tap-cta-startcontinue-fast-path">8. Checklist — Tap CTA Start/Continue (fast path)<a class="headerlink" href="#8-checklist-tap-cta-startcontinue-fast-path" title="Permanent link">&para;</a></h3>
+<p><code>WorkplaceCheckListItem</code> (Active variant) expose 2 callback riêng:</p>
+<ul>
+<li><strong>Tap toàn dòng</strong> → <code>onTap</code> → <code>DashboardInspectionListWidget.onGoToDetail</code> → mở bottom sheet <code>HomeInspectionDetailPage.show</code> (xem chi tiết / vị trí ngoài vùng / lý do không làm).</li>
+<li><strong>Tap CTA pill</strong> → <code>onCtaTap</code> → <code>DashboardInspectionListWidget.onContinueDirectly</code> → bỏ qua bottom sheet ở happy path.</li>
+</ul>
+<pre><code class="language-mermaid">flowchart TD
+  A[Tap CTA Start/Continue] --&gt; B[SupaLoadingOverlay.show]
+  B --&gt; C[homeRepository.getInspection]
+  C --&gt; D[Đo distance + đọc&lt;br/&gt;canUpdate / startedByAnotherAssignee]
+  D --&gt; E{canUpdate &amp;&amp;&lt;br/&gt;!isOutOfRange &amp;&amp;&lt;br/&gt;!isBusy?}
+  E --&gt;|No| F[hide overlay + fallback&lt;br/&gt;HomeInspectionDetailPage.show]
+  E --&gt;|Yes| G{status == DOING?}
+  G --&gt;|No| H[homeRepository.createInspection&lt;br/&gt;→ DOING]
+  G --&gt;|Yes| I[Dùng inspection hiện có]
+  H --&gt; J[Sync status DOING vào&lt;br/&gt;ScheduleTimeline + setState]
+  I --&gt; J
+  J --&gt; K[push InspectionAnswerPage]
+  K --&gt; L{result is Inspection?}
+  L --&gt;|Yes| M[Sync status mới vào&lt;br/&gt;ScheduleTimeline + setState]
+  L --&gt;|No| N[Giữ status DOING]
+  M --&gt; O[widget.fetchData]
+  N --&gt; O
+  F --&gt; O
+</code></pre>
+<p><strong>Vì sao tách 2 callback thay vì gộp:</strong> bottom sheet vẫn cần cho out-of-range warning, nút mở Google Maps, nút <strong>Không thể làm</strong> (reject reason). Tap toàn dòng giữ entry point đó; CTA pill trở thành phím tắt ngang bằng với "Tiếp tục" trong bottom sheet.</p>
+<p><strong>Đồng bộ state khi quay lại:</strong></p>
+<ul>
+<li>Trước khi push answer page: nếu <code>TO_DO → DOING</code> thì update <code>inspectionStatus(Id)</code> của <code>ScheduleTimeline</code> ngay → dashboard hiển thị status mới kể cả khi user pop ngược về.</li>
+<li>Sau answer page: <code>InspectionAnswerPage</code> pop với <code>Inspection</code> (status có thể là <code>FINISHED</code> / <code>FINISHED_LATE</code> / <code>DOING</code>) → mirror sang <code>ScheduleTimeline.inspectionStatus(Id)</code> → item có thể chuyển sang variant Compact (completed) ngay.</li>
+<li><code>widget.fetchData()</code> được gọi cuối luồng (kể cả fallback) → refresh count + section khác.</li>
+</ul>
+<h3 id="9-tao-heads-up-task-tu-bubble-susu-action-sheet">9. Tạo Heads Up / Task từ bubble SuSu (action sheet)<a class="headerlink" href="#9-tao-heads-up-task-tu-bubble-susu-action-sheet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tap bubble SuSu → <code>showSupaActionSheet</code> (helper trong <code>supa_work</code>) → user chọn tile.</li>
+<li>Action sheet <strong>không</strong> có callback đặc biệt như FAB cũ (vì bubble nằm ngoài route navigator). Sau khi tạo:</li>
+<li><strong>Heads Up:</strong> dùng <code>AnnouncementFormBottomSheet</code> — không insert in-memory; user pull-to-refresh dashboard để thấy badge cập nhật.</li>
+<li><strong>Task assignment:</strong> push <code>TaskAssignmentFormPage</code> (real route) → <code>didChangeDependencies</code> ở dashboard fire khi route current lại → <code>getData()</code> reload tasks.</li>
+<li><strong>Schedule / Inspection:</strong> tương tự task — push route thật, dashboard tự reload qua <code>didChangeDependencies</code>.</li>
+<li><code>_onTaskItemRemoved</code> + <code>_refillTasks</code> vẫn giữ cho swipe-remove trong list (không liên quan FAB cũ).</li>
+</ul>
+<hr />
+<h2 id="luu-y-khi-sua">Lưu ý khi sửa<a class="headerlink" href="#luu-y-khi-sua" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Không</strong> tạo <code>AttendanceHomeBloc</code> trong <code>build()</code>.</li>
+<li><strong>Không</strong> <code>addPostFrameCallback</code> trong <code>build()</code> để gọi API (trừ <code>_tryStartInitialDataLoad</code> đã có guard auth).</li>
+<li>Mọi caller refresh dùng <strong><code>getData()</code></strong>, không gọi <code>_doGetData()</code> trực tiếp.</li>
+<li>API partial fail → giữ stale state; chỉ ghi đè khi fetch thành công.</li>
+<li><code>PagedListView</code> trong card cố định chiều cao → custom <code>firstPageErrorIndicatorBuilder</code> / không để default error.</li>
+<li><strong>Cold start:</strong> <code>_tryStartInitialDataLoad</code> chỉ khi <code>isAuthenticated &amp;&amp; !isLoading</code>.</li>
+<li><strong><code>DashboardHeader</code>:</strong></li>
+<li>Site count (<code>sitesCount</code>) và <code>needAttentionCount</code> đang <strong>hard-code</strong> trong constructor. Khi backend có field thật → bỏ default, truyền từ page (ưu tiên qua <code>HomeStats</code> hoặc field trên <code>AppUser</code>).</li>
+<li>Icon Settings mở <code>AppSettingsPage.location</code>; nếu đổi route Settings thì cập nhật handler này.</li>
+<li>Lấy user qua <code>AuthenticationBloc</code> → tránh <code>persistentStorage.appUser</code> để không lệch lúc đăng nhập lại.</li>
+<li><strong>Section visibility</strong> (<code>DashboardDisplayModeService</code>):</li>
+<li>Khi thêm section mới, thêm enum <code>DashboardSectionPreference</code>, thêm switch/reorder item trong <code>AppSettingsPage</code>, và render theo <code>DashboardDisplayModeService.orderedSections</code>.</li>
+<li>Service nằm ở <code>supa_foundation</code> — không phụ thuộc module sub-app khác.</li>
+<li>Không tự ý bỏ gating quyền — quyền báo cáo vẫn check qua <code>BlocBuilder&lt;WorkProfileBloc&gt;</code> (path) hoặc BE.</li>
+<li>Sau sửa chạy:</li>
+</ol>
+<pre><code class="language-bash">flutter analyze \
+  lib/modules/general/pages/general_dashboard/general_dashboard_page.dart \
+  lib/modules/general/pages/general_dashboard/widgets/dashboard_header.dart \
+  lib/modules/general/pages/general_dashboard/widgets/dashboard_heads_up_list_widget.dart
+</code></pre>
+<ol>
+<li>Cập nhật <strong>số dòng</strong> và <strong>Cập nhật lần cuối</strong> trong file doc này nếu thay đổi lớn.</li>
+<li><strong>Compliance tile %:</strong> mọi thay đổi logic % site/region phải sửa tại <code>compliance_site_rate_utils.dart</code> (dashboard + <code>SiteComplianceDetailsListPage</code> heatmap dùng chung). Không đọc thẳng <code>data.complianceRate</code> khi <code>contents[]</code> có count. Scale BE là <code>0–100</code>, không nhân 100.</li>
+</ol>
+<hr />
+<h2 id="lien-ket">Liên kết<a class="headerlink" href="#lien-ket" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../HUONG-DAN-VIET-DOC/">Hướng dẫn viết doc chung</a></li>
+<li><a href="../README.md">Index docs</a></li>
+<li><a href="../../../packages/supa_work/lib/pages/heads_up/DOCS.md">Heads Up — quy tắc hiển thị</a></li>
+<li>Utility compliance rate: <code>packages/supa_work/lib/utils/compliance_site_rate_utils.dart</code></li>
+<li>Source: <code>lib/modules/general/pages/general_dashboard/</code></li>
+<li>Auth cold start: <code>packages/supa_architecture/lib/blocs/authentication/authentication_bloc.dart</code> (<code>handleInitialize</code>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
