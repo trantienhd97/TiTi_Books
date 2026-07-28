@@ -5,5 +5,7 @@
   "update.updateLaterDescription": "Sepertinya Anda sedang sibuk. Harap perbarui aplikasi saat Anda punya waktu.",
   "update.updateLaterTitle": "Harap perbarui nanti",
   "update.updateNow": "Perbarui sekarang",
+  "update.storeOpenFailedTitle": "Tidak dapat membuka toko aplikasi",
+  "update.storeOpenFailedDescription": "Buka App Store atau Google Play dan cari Supa untuk memperbarui.",
   "work.title": "Supa Work"
 }

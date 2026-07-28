@@ -5,5 +5,7 @@
   "update.updateLaterDescription": "It looks like you are busy. Please update the app when you have time.",
   "update.updateLaterTitle": "Please update later",
   "update.updateNow": "Update now",
+  "update.storeOpenFailedTitle": "Cannot open store",
+  "update.storeOpenFailedDescription": "Please open the App Store or Google Play and search for Supa to update.",
   "work.title": "Supa Work"
 }

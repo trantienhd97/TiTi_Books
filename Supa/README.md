@@ -154,9 +154,20 @@ flutter build macos --release --target lib/main_chat.dart
 
 Then use XCode to archive the app.
 
-### build app 
-flutter build apk
-# hoặc
+### build app
+
+Release APK (cleans Gradle locks/cache before build):
+
+```sh
+./scripts/build_apk.sh
+# hoặc debug:
+./scripts/build_apk.sh --debug
+# nếu lỗi metadata.bin / kotlin-dsl:
+./scripts/build_apk.sh --deep-clean
+```
+
+```sh
 flutter build ios
 # hoặc
 flutter build aab
+```

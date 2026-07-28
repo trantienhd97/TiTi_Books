@@ -1,7 +1,7 @@
 site_name: Supa Docs
 site_description: Documentation for Supa mobile modules
 site_author: Supa Team
-repo_url: ''
+repo_url: ""
 theme:
   name: material
   language: en
@@ -33,4 +33,4 @@ nav:
   - Home: index.md
 
 extra_css:
-  - 'stylesheets/extra.css'
+  - "stylesheets/extra.css"

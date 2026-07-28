@@ -5,5 +5,7 @@
   "update.updateLaterDescription": "Hãy cập nhật ứng dụng ngay khi bạn rảnh nhé",
   "update.updateLaterTitle": "Có vẻ bạn đang bận",
   "update.updateNow": "Cập nhật",
+  "update.storeOpenFailedTitle": "Không mở được cửa hàng ứng dụng",
+  "update.storeOpenFailedDescription": "Vui lòng mở App Store hoặc CH Play và tìm Supa để cập nhật.",
   "work.title": "Supa Work"
 }

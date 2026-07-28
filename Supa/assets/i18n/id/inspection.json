@@ -11,6 +11,8 @@
   "validation.surveyNotExisted": "Survei tidak ada",
   "validation.pageHasError": "Halaman memiliki kesalahan, silakan periksa kembali",
   "validation.questionNotAnswered": "Pertanyaan belum dijawab",
+  "validation.cannotComplete": "Silakan lengkapi item berikut untuk menyelesaikannya",
+  "validation.pleaseFixFollowing": "Silakan perbaiki item berikut untuk melanjutkan",
   "inspection.empty.description": "Belum ada daftar periksa hari ini. Pilih templat dari pustaka untuk mulai melakukan inspeksi.",
   "inspection.empty.title": "Mulai Inspeksi Sekarang!",
   "inspection.empty.action": "Mulai Sekarang",

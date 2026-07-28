@@ -1,0 +1,100 @@
+# Đăng ký tài khoản
+
+| Mục | Giá trị |
+|-----|---------|
+| Tên màn (UI) | Đăng ký tài khoản / Thiết lập workspace |
+| Class chính | `SignupFlowPage`, `RegisterPage`, `WorkspaceSetupPage` |
+| Module | `packages/supa_foundation` |
+| Route | `/signup`, `/workspace-setup` |
+| Tổng số dòng | 4.669 dòng (`modules/signup/pages/*.dart`, `modules/signup/widgets/*.dart`, `app_language_service.dart`) |
+| Cập nhật lần cuối | 2026-06-17 - Step 2 đổi ngôn ngữ load bản dịch và đồng bộ `AuthenticationBloc` trước khi rebuild app |
+
+## Giới thiệu
+
+Flow đăng ký tài khoản tạo user mới và thiết lập workspace ban đầu. User đi qua các bước: tạo tài khoản, nhập thông tin workspace, chọn ngành, chọn mục đích sử dụng và chọn checklist mẫu.
+
+## Cây thư mục source
+
+```text
+packages/supa_foundation/lib/modules/signup/
+├── pages/
+│   ├── register_page.dart
+│   ├── signup_flow_page.dart
+│   ├── workspace_setup_page.dart
+│   ├── workspace_industry_page.dart
+│   ├── workspace_purpose_page.dart
+│   ├── checklist_library_page.dart
+│   └── checklist_template_detail_page.dart
+└── widgets/
+    ├── signup_app_bar.dart
+    ├── checklist_library_view.dart
+    ├── checklist_template_card.dart
+    └── purpose_card.dart
+
+packages/supa_foundation/lib/services/
+└── app_language_service.dart
+```
+
+## Route & điều hướng
+
+`SignupFlowPage` điều phối flow nhiều bước bằng `PageView`, bắt đầu từ `RegisterPage` rồi chuyển qua `WorkspaceSetupPage`. `WorkspaceSetupPage.location` là `/workspace-setup` khi mở độc lập; trong signup flow màn này được dùng dạng fragment.
+
+Các bước chính:
+
+- Step 1: `RegisterPage`
+- Step 2: `WorkspaceSetupPage`
+- Step 3: `WorkspaceIndustryPage`
+- Step 4: `WorkspacePurposePage`
+- Step 5: `ChecklistLibraryPage`
+
+## Widget & component
+
+| Widget / component | File | Vai trò |
+|--------------------|------|---------|
+| `SignupFlowPage` | `pages/signup_flow_page.dart` | Điều phối step, back confirmation và progress |
+| `RegisterPage` | `pages/register_page.dart` | Form tạo tài khoản |
+| `WorkspaceSetupPage` | `pages/workspace_setup_page.dart` | Form tên công ty, quốc gia, ngôn ngữ |
+| `SignupAppBar` | `widgets/signup_app_bar.dart` | Header progress theo step |
+| `SelectionSearchModal` | `widgets/organisms/selection_search_modal.dart` | Modal chọn ngôn ngữ có tìm kiếm |
+| `AppLanguageService` | `services/app_language_service.dart` | Lưu ngôn ngữ, sync cookie và notify app rebuild |
+
+## State & data
+
+`WorkspaceSetupPage` dùng `reactive_forms` cho `companyName`, `country`, `language`. Data tenant được load qua `MobileAuthenticationRepository.getTenant()` để prefill country/language nếu BE đã có.
+
+Khi user chọn ngôn ngữ ở step 2, form cập nhật `Language`, sau đó gọi `AppLanguageService.setLanguageCodeAndLoad`. Hàm này chuẩn hoá code ngôn ngữ, load JSON dịch bằng `Localization.load(languageCode)` trước, rồi mới gọi `setLanguageCode` để lưu `app_language`, notify `languageNotifier` và sync cookie `X-Language`.
+
+Nếu user đã authenticated sau bước đăng ký, `WorkspaceSetupPage` cũng cập nhật `AuthenticationBloc.user.language` và `languageId`. Việc này cần thiết vì `SupaApp.localeResolutionCallback` ưu tiên locale từ auth state trước `app_language`; nếu chỉ set storage/notifier, app có thể bị kéo lại ngôn ngữ cũ của user.
+
+## Logic chính
+
+- `initState` set default country là Việt Nam và default language theo `AppLanguageService.languageNotifier`.
+- `valueChanges` của field `language` đổi ngôn ngữ app ngay khi user chọn trong modal.
+- `_onNext` merge dữ liệu form vào `AuthenticationTenant`, gọi `updateTenant`, sau đó refresh `AuthenticationBloc` nếu user đã authenticated tenant.
+- `SupaApp` listen `AppLanguageService.languageNotifier` để rebuild `MaterialApp.router` với `Locale(currentLanguageCode)`.
+
+## Luồng đặc biệt
+
+```text
+User chọn language ở step 2
+  -> form language valueChanges
+  -> AppLanguageService.getAppLanguageFromLanguage(language)
+  -> AppLanguageService.setLanguageCodeAndLoad(appLanguage.code)
+  -> Localization.load(normalizedCode)
+  -> setLanguageCode(normalizedCode)
+  -> update AuthenticationBloc.user.language nếu đã authenticated
+  -> languageNotifier notify
+  -> SupaApp rebuild MaterialApp với locale mới
+```
+
+Lưu ý quan trọng: nếu chỉ gọi `setLanguageCode` mà không `Localization.load`, `MaterialApp` có thể rebuild locale mới nhưng text qua `translate()` vẫn dùng cache bản dịch cũ cho tới lần load sau. Nếu không cập nhật auth state, `SupaApp` có thể ưu tiên `user.language` cũ và đổi ngược locale.
+
+## Lưu ý khi sửa
+
+- Không sửa trực tiếp file merged i18n nếu thêm key mới; sửa partial `assets/i18n/<lang>/<prefix>.json` rồi chạy `dart run supa_l10n_manager merge`.
+- Không gọi API hoặc navigation trong `build`; side effect nên nằm trong handler hoặc listener.
+- Sau khi sửa flow này, chạy `dart analyze` cho `workspace_setup_page.dart` và `app_language_service.dart`.
+
+## Liên kết
+
+- [Hồ sơ người dùng](../ho-so-nguoi-dung/README.md) - flow đổi ngôn ngữ sau khi đã đăng nhập.

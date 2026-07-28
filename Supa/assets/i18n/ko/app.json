@@ -5,5 +5,7 @@
   "update.updateLaterDescription": "바쁘신 것 같습니다. 시간이 있을 때 앱을 업데이트해 주세요.",
   "update.updateLaterTitle": "나중에 업데이트",
   "update.updateNow": "지금 업데이트",
+  "update.storeOpenFailedTitle": "스토어를 열 수 없습니다",
+  "update.storeOpenFailedDescription": "App Store 또는 Google Play에서 Supa를 검색해 업데이트해 주세요.",
   "work.title": "Supa Work"
 }
