@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Row, Col, Typography, Button, Spin, Empty } from 'antd';
+import React from 'react';
+import { Row, Col, Typography, Button, Empty } from 'antd';
 import { Folder24Filled, ArrowLeft24Filled, DocumentText24Filled } from '@fluentui/react-icons';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { supaDocsManifest } from '../../generated/supaDocsManifest';
 import './SupaDocs.css';
 
 const { Title, Paragraph } = Typography;
-
-type ManifestFolder = {
-  id: string;
-  name: string;
-  files: string[];
-};
 
 const COLORS = [
   '#3b82f6', '#a855f7', '#f59e0b', '#ec4899', '#10b981', '#0ea5e9',
@@ -28,25 +23,9 @@ const itemVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-async function loadManifest(): Promise<ManifestFolder[]> {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-  const res = await fetch(`${base}/supa-docs/manifest.json`);
-  if (!res.ok) throw new Error('manifest not found');
-  const data = await res.json();
-  return (data.folders ?? []) as ManifestFolder[];
-}
-
 export const SupaDocs: React.FC = () => {
   const navigate = useNavigate();
-  const [folders, setFolders] = useState<ManifestFolder[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    loadManifest()
-      .then((list) => { setFolders(list); setLoading(false); })
-      .catch(() => { setError(true); setLoading(false); });
-  }, []);
+  const folders = supaDocsManifest.folders;
 
   return (
     <div className="supa-docs-container">
@@ -66,27 +45,12 @@ export const SupaDocs: React.FC = () => {
         </div>
       </div>
 
-      {loading && (
-        <div style={{ textAlign: 'center', marginTop: 80 }}>
-          <Spin size="large" />
-        </div>
-      )}
-
-      {error && !loading && (
+      {folders.length === 0 ? (
         <Empty
-          description="Không tải được danh sách docs. Chạy ./Supa/scripts/sync_docs_to_mkdocs.sh rồi build lại."
+          description="Chưa có folder docs. Chạy ./Supa/scripts/sync_docs_to_mkdocs.sh"
           style={{ color: 'rgba(255,255,255,0.4)', marginTop: 80 }}
         />
-      )}
-
-      {!loading && !error && folders.length === 0 && (
-        <Empty
-          description="Chưa có folder docs nào"
-          style={{ color: 'rgba(255,255,255,0.4)', marginTop: 80 }}
-        />
-      )}
-
-      {!loading && !error && folders.length > 0 && (
+      ) : (
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
           <Row gutter={[24, 24]}>
             {folders.map((folder, index) => {

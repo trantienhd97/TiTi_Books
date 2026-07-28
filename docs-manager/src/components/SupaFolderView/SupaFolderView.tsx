@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Typography, Empty, Button, Spin } from 'antd';
+import { Typography, Empty, Button } from 'antd';
 import {
   DocumentText24Filled,
   ArrowLeft24Filled,
@@ -8,24 +8,10 @@ import {
   ArrowRight24Filled,
 } from '@fluentui/react-icons';
 import { motion } from 'framer-motion';
+import { supaDocsManifest } from '../../generated/supaDocsManifest';
 import './SupaFolderView.css';
 
 const { Title, Text } = Typography;
-
-type ManifestFolder = {
-  id: string;
-  name: string;
-  files: string[];
-};
-
-async function loadFolder(folderId: string): Promise<ManifestFolder | undefined> {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-  const res = await fetch(`${base}/supa-docs/manifest.json`);
-  if (!res.ok) throw new Error('manifest not found');
-  const data = await res.json();
-  const folders = (data.folders ?? []) as ManifestFolder[];
-  return folders.find((f) => f.id === folderId);
-}
 
 function getDocTitle(filePath: string, folderName?: string) {
   const name = filePath.split('/').pop()?.replace('.md', '') ?? filePath;
@@ -45,29 +31,11 @@ const itemVariants = {
 export const SupaFolderView: React.FC = () => {
   const { folderId } = useParams<{ folderId: string }>();
   const navigate = useNavigate();
-  const [folder, setFolder] = useState<ManifestFolder | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    if (!folderId) {
-      setError(true);
-      setLoading(false);
-      return;
-    }
-    setLoading(true);
-    setError(false);
-    loadFolder(folderId)
-      .then((meta) => {
-        if (!meta) setError(true);
-        else setFolder(meta);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError(true);
-        setLoading(false);
-      });
-  }, [folderId]);
+  const folder = useMemo(
+    () => supaDocsManifest.folders.find((f) => f.id === folderId),
+    [folderId],
+  );
 
   const files = folder?.files ?? [];
   const folderName = folder?.name ?? folderId;
@@ -92,25 +60,17 @@ export const SupaFolderView: React.FC = () => {
           </Title>
           <span className="folder-badge">
             <DocumentText24Filled style={{ fontSize: 14 }} />
-            {loading ? '…' : `${files.length} tài liệu`}
+            {files.length} tài liệu
           </span>
         </div>
       </div>
 
-      {loading && (
-        <div style={{ textAlign: 'center', marginTop: 80 }}>
-          <Spin size="large" />
-        </div>
-      )}
-
-      {!loading && (error || files.length === 0) && (
+      {!folder || files.length === 0 ? (
         <Empty
           description="Không có tài liệu nào"
           style={{ color: 'rgba(255,255,255,0.4)', marginTop: 80 }}
         />
-      )}
-
-      {!loading && !error && files.length > 0 && (
+      ) : (
         <motion.div
           className="doc-cards-grid"
           variants={containerVariants}
@@ -122,13 +82,15 @@ export const SupaFolderView: React.FC = () => {
               key={file}
               variants={itemVariants}
               className="doc-card"
-              onClick={() => navigate(`/supa/${folderId}/doc`, { state: { file } })}
+              onClick={() =>
+                navigate(`/supa/${folderId}/doc?file=${encodeURIComponent(file)}`)
+              }
             >
               <div className="doc-card-icon">
                 <DocumentText24Filled primaryFill="#60a5fa" style={{ fontSize: 22 }} />
               </div>
 
-              <Text className="doc-card-title">{getDocTitle(file, folder?.name)}</Text>
+              <Text className="doc-card-title">{getDocTitle(file, folder.name)}</Text>
               <Text className="doc-card-path">{file}</Text>
 
               <ArrowRight24Filled
