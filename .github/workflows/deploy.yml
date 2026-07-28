@@ -28,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Sync Supa docs
-        run: rsync -av --delete --exclude '.DS_Store' ./Supa/docs/ ./docs-manager/public/supa-docs/
+        run: ./Supa/scripts/sync_docs_to_mkdocs.sh
 
       - name: Build
         working-directory: ./docs-manager
