@@ -12,7 +12,7 @@ export type SupaDocsManifest = {
 };
 
 export const supaDocsManifest: SupaDocsManifest = {
-  "generated_from": "Supa/docs",
+  "generated_from": "SupaMobileApp/docs",
   "folders": [
     {
       "id": "automated-ui-testing",
@@ -37,17 +37,23 @@ export const supaDocsManifest: SupaDocsManifest = {
       ]
     },
     {
-      "id": "chi-tiet-cong-viec",
-      "name": "Chi tiết / sửa công việc",
+      "id": "chi-tiet-tuan-thu-dia-diem",
+      "name": "Chi tiết tuân thủ địa điểm",
       "files": [
-        "chi-tiet-cong-viec/README.md"
+        "chi-tiet-tuan-thu-dia-diem/README.md"
       ]
     },
     {
       "id": "cong-viec",
       "name": "Công việc",
       "files": [
-        "cong-viec/README.md"
+        "cong-viec/README.md",
+        "cong-viec/binh-luan.md",
+        "cong-viec/chi-tiet.md",
+        "cong-viec/danh-sach.md",
+        "cong-viec/lich-su.md",
+        "cong-viec/tao-moi.md",
+        "cong-viec/tep-dinh-kem.md"
       ]
     },
     {
@@ -62,6 +68,13 @@ export const supaDocsManifest: SupaDocsManifest = {
       "name": "Đăng ký tài khoản / Thiết lập workspace",
       "files": [
         "dang-ky-tai-khoan/README.md"
+      ]
+    },
+    {
+      "id": "don-tu",
+      "name": "Đơn từ",
+      "files": [
+        "don-tu/README.md"
       ]
     },
     {

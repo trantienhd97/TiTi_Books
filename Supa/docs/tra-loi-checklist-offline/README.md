@@ -7,7 +7,7 @@
 | **Package**            | `supa_work` → `lib/pages/inspection/` + module mới `lib/offline/` |
 | **Route**              | `/work/inspection/answer` (cùng màn trả lời checklist)            |
 | **Trạng thái**         | **Đã implement (client v1)**                                        |
-| **Cập nhật lần cuối**  | 2026-07-02 — Ẩn SaveStatusIndicator khi offline trên InspectionAnswerPage |
+| **Cập nhật lần cuối**  | 2026-07-03 — Debug log `[InspectionOffline]`; fix so sánh baseline câu trả lời (optionId/answerOptionId, sort histories); skip sync echo khi đáp án đã có sẵn từ server |
 
 ## Giới thiệu
 
@@ -28,7 +28,7 @@ Tính năng cho phép user **tiếp tục trả lời checklist khi mất mạng
 
 | #   | Yêu cầu                     | Chi tiết                                                                                                |
 | --- | --------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 1   | Phát hiện mất mạng          | Khi vào trả lời hoặc đang trả lời mà mất mạng → toast; khi có mạng lại → toast back online; banner icon wifi off |
+| 1   | Phát hiện mất mạng          | Toast global (`NetworkStatusToastCoordinator`); banner wifi off trên màn trả lời; không toast trùng từ page listener |
 | 2   | Lưu câu trả lời local       | Mọi thay đổi cập nhật **snapshot inspection** trong Hive (`isDirty=true`) |
 | 3   | Ảnh/video không upload ngay | Chụp/chọn file → lưu file local + gắn `localFileId` âm vào snapshot      |
 | 4   | Chặn tạo task thủ công      | User không mở form `InspectionTaskAssignmentFormPage` khi offline       |
@@ -348,7 +348,7 @@ Màn chi tiết checklist (`InspectionDetailNewPage`): icon xoay tròn trên app
 |---------|-----------|
 | Online → Offline | Toast `general.network.offlineSwitched` (mọi màn) |
 | Offline → Online | Toast `general.network.backOnline` (mọi màn) |
-| Bắt đầu / xong sync bulk | Toast `work.inspection.offline.syncing` / `.syncComplete` |
+| Bắt đầu / xong sync bulk | Toast `work.inspection.offline.syncing` / `.syncComplete` — **chỉ khi** `OfflineInspectionSyncService.syncAll()` tìm thấy snapshot dirty (`needsSync`); reconnect online không có chỉnh sửa offline thì không toast |
 
 Banner offline màn trả lời: icon `wifi_off` trên `InspectionHeader`.
 
