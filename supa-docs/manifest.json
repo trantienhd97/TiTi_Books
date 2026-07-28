@@ -1,0 +1,104 @@
+{
+  "generated_from": "Supa/docs",
+  "folders": [
+    {
+      "id": "automated-ui-testing",
+      "name": "Khung Automated UI Testing",
+      "files": [
+        "automated-ui-testing/README.md",
+        "automated-ui-testing/test_case_ba_template.md"
+      ]
+    },
+    {
+      "id": "checklist",
+      "name": "Checklist",
+      "files": [
+        "checklist/README.md"
+      ]
+    },
+    {
+      "id": "chi-tiet-checklist",
+      "name": "Chi tiết checklist",
+      "files": [
+        "chi-tiet-checklist/README.md"
+      ]
+    },
+    {
+      "id": "chi-tiet-cong-viec",
+      "name": "Chi tiết / sửa công việc",
+      "files": [
+        "chi-tiet-cong-viec/README.md"
+      ]
+    },
+    {
+      "id": "cong-viec",
+      "name": "Công việc",
+      "files": [
+        "cong-viec/README.md"
+      ]
+    },
+    {
+      "id": "cua-toi",
+      "name": "Của tôi",
+      "files": [
+        "cua-toi/README.md"
+      ]
+    },
+    {
+      "id": "dang-ky-tai-khoan",
+      "name": "Đăng ký tài khoản / Thiết lập workspace",
+      "files": [
+        "dang-ky-tai-khoan/README.md"
+      ]
+    },
+    {
+      "id": "ho-so-nguoi-dung",
+      "name": "Hồ sơ người dùng / Profile",
+      "files": [
+        "ho-so-nguoi-dung/README.md"
+      ]
+    },
+    {
+      "id": "hoc-khoa-hoc",
+      "name": "Học khoá học",
+      "files": [
+        "hoc-khoa-hoc/README.md"
+      ]
+    },
+    {
+      "id": "task-progress-report",
+      "name": "Báo cáo tiến độ công việc",
+      "files": [
+        "task-progress-report/README.md"
+      ]
+    },
+    {
+      "id": "tin-nhan",
+      "name": "Tin nhắn",
+      "files": [
+        "tin-nhan/README.md"
+      ]
+    },
+    {
+      "id": "tra-loi-checklist",
+      "name": "Trả lời / đánh giá checklist",
+      "files": [
+        "tra-loi-checklist/README.md"
+      ]
+    },
+    {
+      "id": "tra-loi-checklist-offline",
+      "name": "Trả lời checklist — chế độ offline",
+      "files": [
+        "tra-loi-checklist-offline/README.md"
+      ]
+    },
+    {
+      "id": "tro-ly-ai",
+      "name": "SuSu — trợ lý ảo",
+      "files": [
+        "tro-ly-ai/README.md"
+      ]
+    }
+  ]
+}
