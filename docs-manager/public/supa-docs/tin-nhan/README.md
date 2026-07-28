@@ -1,0 +1,65 @@
+# Tin nhắn — Conversations
+
+| Mục | Giá trị |
+|-----|---------|
+| **Tên màn (UI)** | Tin nhắn |
+| **Class chính** | `CommunicationConversationsPage` |
+| **Package / module** | `supa_communication` — `packages/supa_communication/lib/pages/conversations/` |
+| **Route** | `resolveGeneralPath('/conversations')` |
+| **Tổng số dòng** | **1118** (`communication_conversations_page.dart`) |
+| **Cập nhật lần cuối** | **2026-06-12** — Avatar profile ở header danh sách chat đã bọc tap action để mở `showProfileBottomSheet`. Trước đó: **2026-06-10** — Đổi header danh sách chat sang layout title/subtitle + action buttons; giữ nguyên filter chips và logic lọc hội thoại. |
+
+---
+
+## Giới thiệu
+
+Màn **Tin nhắn** hiển thị danh sách conversation từ GetStream, hỗ trợ tạo chat mới, tìm kiếm tin nhắn, lọc theo subsystem, unread badge và các action trên từng conversation.
+
+## Cây thư mục source
+
+```text
+packages/supa_communication/lib/pages/conversations/
+├── communication_conversations_page.dart (1118) — header, filter chips, Stream channel list
+└── widgets/
+    ├── channel_list_item.dart
+    ├── conversation_search_delegate.dart
+    ├── new_conversation_dialog.dart
+    └── ...
+```
+
+## Header & Filter
+
+`CommunicationConversationsPage` dùng header private trong cùng file:
+
+| Widget | Vai trò |
+|--------|---------|
+| `_ConversationListHeader` | Header title `communication.messages.title`, subtitle số conversation |
+| `_ConversationHeaderActionButton` | Action tạo chat mới và search |
+| `_ConversationHeaderProfileButton` | Avatar profile, tap mở `showProfileBottomSheet` |
+
+Filter chips phía dưới header vẫn giữ nguyên logic cũ:
+
+- Chip **Tất cả** dùng tổng unread của toàn bộ conversation hợp lệ.
+- Các chip subsystem lấy từ `StreamChatConfig.getFilterChips(subsystems)`.
+- `_selectedTagIndex` quyết định lọc list; không đổi khi refactor header.
+
+## State & Data
+
+| Thành phần | Mô tả |
+|------------|-------|
+| Chat client | `CommunicationChatClientCubit` |
+| List controller | `StreamChannelListController` |
+| Filter chính | `StreamChatConfig.channelListFilter(memberUserId, tenantId)` |
+| Sort | `pinned_at`, `last_message_at`, `updated_at` |
+| Action BLoC | `ConversationActionsBloc` xử lý archive/mute/pin/delete/leave |
+
+## Lưu ý Khi Sửa
+
+- Không import widget từ `supa_work` vào `supa_communication` vì `supa_work` đang phụ thuộc `supa_communication`.
+- Header chỉ đổi UI; filter chips và `_buildChannelListView` là behavior chính của list, cần giữ riêng khi chỉnh layout.
+- `_showNewConversationMenu` cần `BuildContext` của chính action button để tính vị trí popup menu.
+
+## Liên kết
+
+- Package overview: [`packages/supa_communication/README.md`](../../packages/supa_communication/README.md)
+- Quy ước doc: [`docs/HUONG-DAN-VIET-DOC.md`](../HUONG-DAN-VIET-DOC.md)

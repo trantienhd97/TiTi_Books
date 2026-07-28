@@ -27,6 +27,9 @@ jobs:
         working-directory: ./docs-manager
         run: npm install
 
+      - name: Sync Supa docs
+        run: rsync -av --delete --exclude '.DS_Store' ./Supa/docs/ ./docs-manager/public/supa-docs/
+
       - name: Build
         working-directory: ./docs-manager
         run: npm run build

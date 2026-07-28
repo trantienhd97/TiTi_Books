@@ -12,72 +12,74 @@ import './SupaFolderView.css';
 
 const { Title, Text } = Typography;
 
-const FOLDER_FILES: Record<string, string[]> = {
-  analytics: [
-    'analytics/README.md',
-    'analytics/learning_overview_summary_by_site.md',
-    'analytics/site_report_api_docs.md',
-  ],
-  Animations: [
-    'Animations/celebration-animation.md',
-    'Animations/streak-animation.md',
-  ],
-  head_up: [
-    'head_up/create_announcement_feature.md',
-  ],
-  inspection_offline: [
-    'inspection_offline/README.md',
-    'inspection_offline/INSPECTION_LOGIC_QUICK_REF.md',
-    'inspection_offline/INSPECTION_LOGIC_SYSTEM.md',
-    'inspection_offline/INSPECTION_OFFLINE_ANALYSIS.md',
-    'inspection_offline/INSPECTION_OFFLINE_SUMMARY.md',
-    'inspection_offline/TASK_ASSIGNMENT_TRIGGER_ANALYSIS.md',
-    'inspection_offline/client_side/bieu_mau.md',
-    'inspection_offline/client_side/INSPECTION_CALCULATE_SCORE_CLIENT_GUIDE.md',
-    'inspection_offline/client_side/INSPECTION_CLIENT_VALIDATION_GUIDE.md',
-    'inspection_offline/client_side/score.md',
-  ],
-  inspections: [
-    'inspections/README.md',
-    'inspections/answer-types-system.md',
-    'inspections/architecture-overview.md',
-    'inspections/upload-progress-implementation.md',
-  ],
-  questionnair: [
-    'questionnair/ai_gennerate.md',
-  ],
-  schedule: [
-    'schedule/dat-lich.md',
-    'schedule/schedule_creation_form.md',
-  ],
-  TaskAssignment: [
-    'TaskAssignment/quick-status-change-implementation.md',
-    'TaskAssignment/task-assignment-status-change-flow.md',
-    'TaskAssignment/trang-home.md',
-    'TaskAssignment/visibility-and-filtering-logic.md',
-  ],
-  training: [
-    'training/filter_sync_personal_report.md',
-    'training/location_answer_implementation.md',
-    'training/personal_report_default_filter.md',
-  ],
-  widgets: [
-    'widgets/index.md',
-    'widgets/supa_attendance_widgets.md',
-    'widgets/supa_bibs_widgets.md',
-    'widgets/supa_serving_widgets.md',
-    'widgets/supa_spend_widgets.md',
-    'widgets/supa_training_widgets.md',
-    'widgets/supa_work_widgets.md',
-    'widgets/video_streaming_screen.md',
-    'widgets/dashboard/dashboard_frame.md',
-    'widgets/work/inspection/checklist_item.md',
-    'widgets/work/task_assignment/task_item.md',
-  ],
+const FOLDER_META: Record<string, { name: string; files: string[] }> = {
+  'cua-toi': {
+    name: 'Của tôi',
+    files: ['cua-toi/README.md'],
+  },
+  'dang-ky-tai-khoan': {
+    name: 'Đăng ký tài khoản',
+    files: ['dang-ky-tai-khoan/README.md'],
+  },
+  'hoc-khoa-hoc': {
+    name: 'Học khoá học',
+    files: ['hoc-khoa-hoc/README.md'],
+  },
+  'ho-so-nguoi-dung': {
+    name: 'Hồ sơ người dùng',
+    files: ['ho-so-nguoi-dung/README.md'],
+  },
+  'task-progress-report': {
+    name: 'Báo cáo tiến độ công việc',
+    files: ['task-progress-report/README.md'],
+  },
+  'tin-nhan': {
+    name: 'Tin nhắn',
+    files: ['tin-nhan/README.md'],
+  },
+  checklist: {
+    name: 'Checklist',
+    files: ['checklist/README.md'],
+  },
+  'chi-tiet-checklist': {
+    name: 'Chi tiết checklist',
+    files: ['chi-tiet-checklist/README.md'],
+  },
+  'tra-loi-checklist': {
+    name: 'Trả lời checklist',
+    files: ['tra-loi-checklist/README.md'],
+  },
+  'tra-loi-checklist-offline': {
+    name: 'Trả lời checklist offline',
+    files: ['tra-loi-checklist-offline/README.md'],
+  },
+  'cong-viec': {
+    name: 'Công việc',
+    files: ['cong-viec/README.md'],
+  },
+  'chi-tiet-cong-viec': {
+    name: 'Chi tiết công việc',
+    files: ['chi-tiet-cong-viec/README.md'],
+  },
+  'tro-ly-ai': {
+    name: 'Trợ lý AI (SuSu)',
+    files: ['tro-ly-ai/README.md'],
+  },
+  'automated-ui-testing': {
+    name: 'Automated UI Testing',
+    files: [
+      'automated-ui-testing/README.md',
+      'automated-ui-testing/test_case_ba_template.md',
+    ],
+  },
 };
 
 function getDocTitle(filePath: string) {
   const name = filePath.split('/').pop()?.replace('.md', '') ?? filePath;
+  if (name === 'README') {
+    const folder = filePath.split('/')[0] ?? name;
+    return FOLDER_META[folder]?.name ?? folder;
+  }
   return name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
@@ -94,7 +96,9 @@ export const SupaFolderView: React.FC = () => {
   const { folderId } = useParams<{ folderId: string }>();
   const navigate = useNavigate();
 
-  const files = folderId ? (FOLDER_FILES[folderId] ?? []) : [];
+  const meta = folderId ? FOLDER_META[folderId] : undefined;
+  const files = meta?.files ?? [];
+  const folderName = meta?.name ?? folderId;
 
   return (
     <div className="folder-view-container">
@@ -112,7 +116,7 @@ export const SupaFolderView: React.FC = () => {
             style={{ marginBottom: 4, display: 'flex', alignItems: 'center', gap: 10 }}
           >
             <Folder24Filled style={{ fontSize: 28 }} />
-            {folderId}
+            {folderName}
           </Title>
           <span className="folder-badge">
             <DocumentText24Filled style={{ fontSize: 14 }} />
